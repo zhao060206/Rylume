@@ -10,11 +10,11 @@ if(Get-Process Rylume -ErrorAction SilentlyContinue | Where-Object {$_.Path -eq 
 New-Item -ItemType Directory -Path $targetPath -Force | Out-Null
 Get-ChildItem -LiteralPath $buildPath | Copy-Item -Destination $targetPath -Recurse -Force
 @'
-理象 · Rylume 3.0
+理象 · Rylume 3.1
 双击 Rylume.exe 或桌面“理象 Rylume”快捷方式。
 历史任务与配置继续使用原数据目录 %LOCALAPPDATA%\CellFigureStudio。
 旧安装与数据保留；没有复制或迁移出第二份科研数据。
-本版改进画布操作、草稿恢复、版本历史、素材检索、批注对比及导出提示，场景和导出保持兼容。
+本版提供学科资源按需下载、软件版本提示、校验后重启更新和失败回退。场景、任务与原模型配置保持兼容。
 '@ | Set-Content -LiteralPath (Join-Path $targetPath 'README.txt') -Encoding utf8
 $shell=New-Object -ComObject WScript.Shell
 $link=$shell.CreateShortcut((Join-Path $desktopPath '理象 Rylume.lnk'))
