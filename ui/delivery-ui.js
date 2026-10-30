@@ -50,7 +50,7 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
         h.append(el('span','pack-installed','已安装 v'+p.installed_version));
         const use=el('button','button','素材'),templates=el('button','button','模板'),remove=el('button','text-button','卸载');
         use.onclick=()=>{dialog.close();openAssets(p.id);};templates.onclick=()=>{dialog.close();openTemplates(p.id);};
-        remove.onclick=async()=>{if(!confirm(`卸载「${p.title}」资源包？已保存图版中的素材快照会保留。`))return;await perform('/api/resources/uninstall',{id:p.id});await syncCatalog();};buttons.append(use,templates,remove);
+        remove.onclick=async()=>{if(!confirm(`卸载「${p.title}」资源包？已保存图版中的素材快照会保留。`))return;if(!await flush())return toast('当前图版尚未保存，已停止卸载素材包',true);await perform('/api/resources/uninstall',{id:p.id});await syncCatalog();};buttons.append(use,templates,remove);
       }else{
         const b=el('button','button'+(focused===p.id?' primary':''),action==='upgrade'?'先更新软件':action==='update'?'更新资源包':p.task?.state==='failed'?'重新下载':'下载');
         b.onclick=()=>action==='upgrade'?(showView('updates'),loadUpdate()):perform('/api/resources/install',{id:p.id});buttons.append(b);
@@ -94,11 +94,16 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   async function openResources(pid=''){focused=pid;showView('resources');if(!dialog.open)dialog.showModal();await loadPacks();schedule();if(pid)rows.querySelector(`[data-pack="${pid}"]`)?.scrollIntoView({block:'nearest'});}
   top.onclick=()=>{openResources();};assetOpen.onclick=()=>openResources();templateOpen.onclick=()=>openResources();
   dialog.addEventListener('close',()=>{if(!data?.packs.some(p=>packAction(p)==='cancel')&&!busyUpdate(update?.state))clearTimeout(timer);});
-  async function ready(){
-    try{await api('/api/updates/health',{});}catch{}
-    await loadUpdate();
+  async function checkWhenDue(){
+    if(busyUpdate(update?.state)||update?.state==='ready')return;
     let last=0;try{last=Number(localStorage.getItem('rylume-last-update-check')||0);}catch{}
     if(Date.now()-last>24*60*60*1000){try{localStorage.setItem('rylume-last-update-check',String(Date.now()));}catch{}await updateAction('/api/updates/check');}
+  }
+  async function ready(){
+    try{await api('/api/updates/health',{});}catch{}
+    await loadUpdate();await checkWhenDue();
+    setInterval(()=>{if(!document.hidden)checkWhenDue();},6*60*60*1000);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkWhenDue();});
   }
   return {openResources,ready};
 }
