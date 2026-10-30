@@ -58,7 +58,8 @@ def test_catalog_disciplines_preserve_all_assets_and_category_provenance(studio)
     assert status==200
     domains={d['id']:d for d in catalog['asset_domains']}
     assert domains['biology']['available']
-    assert domains['biology']['count']==len(catalog['assets'])==667
+    assert domains['biology']['count']==len(catalog['assets'])==668
+    assert any(a['type']=='cell' and a.get('state')=='plant_interphase' for a in catalog['assets'])
     assert all(not domains[k]['available'] and domains[k]['count']==0 for k in ('materials','chemistry','engineering'))
     assert all(a['domain']=='biology' and a['category_id'] for a in catalog['assets'])
     artwork=[a for a in catalog['assets'] if a.get('asset_id')]

@@ -173,6 +173,10 @@ def normalize_scene(value):
                "label_dx": _number(o.get("label_dx", 0), "label_dx"),
                "label_dy": _number(o.get("label_dy", 0), "label_dy"),
                "evidence": _text(o.get("evidence", ""), 1000)}
+        if o.get('visual_description'):
+            out['visual_description']=_text(o['visual_description'],1000)
+        if o.get('reference_object_id'):
+            out['reference_object_id']=_id(o['reference_object_id'])
         if o.get('evidence_source') in ('user_text','reference_image','canvas_sketch','knowledge'):
             out['evidence_source'] = o['evidence_source']
             out['evidence_ref'] = _text(o.get('evidence_ref',''),240)
@@ -275,7 +279,7 @@ def normalize_scene(value):
     if not isinstance(contract, dict):
         raise SceneError('生成需求基线格式无效')
     # Data only. Never retain provider credentials or executable markup here.
-    scene['generation_contract'] = {k: _text(contract[k], 8000) for k in (
+    scene['generation_contract'] = {k: _text(contract[k], 200000 if k in ('expected_objects','expected_relations') else 8000) for k in (
         'original_text', 'generation_brief', 'reference_id', 'reference_summary', 'reference_purpose',
         'layout', 'draft_source_id', 'draft_source_revision', 'source_kind', 'verification',
         'expected_objects', 'expected_relations') if k in contract}
@@ -383,10 +387,10 @@ def audit_scene(scene):
     objects = {o["id"]: o for o in scene["objects"]}
     relations = {r["id"]: r for r in scene["relations"]}
     if scene.get('generation_contract'):
-        from scientific_intent import intent_contract,canonical_phase,labeled_cell_phase
+        from scientific_intent import intent_contract,canonical_phase,labeled_cell_phase,excluded_object_evidence,contradicted_relation_evidence
         baseline=scene['generation_contract'].get('original_text') or scene['source_text']
         intent=intent_contract(baseline)
-        if intent['requires_mitosis']:
+        if intent['requires_mitosis'] and intent['depicts_phases']:
             actual={canonical_phase(o.get('state','')) or labeled_cell_phase(o['label'],biological_context=True) for o in objects.values() if o['visible'] and o['type']=='cell'}
             missing=[phase for phase in intent['explicit_phases'] if phase not in actual]
             if missing:
@@ -394,6 +398,17 @@ def audit_scene(scene):
             for o in objects.values():
                 if labeled_cell_phase(o['label'],biological_context=True) and o['type']!='cell':
                     add('phase-morphology','分期标签没有对应的细胞形态',[o['id']],'error')
+        if intent['domain']=='biology' and intent['excluded_phases']:
+            for o in objects.values():
+                phase=canonical_phase(o.get('state','')) or labeled_cell_phase(o['label'],biological_context=True)
+                if o['visible'] and o['type']=='cell' and phase in intent['excluded_phases']:
+                    add('excluded-scientific-state','出现作者明确排除的细胞分期：'+phase,[o['id']],'error',source_text=baseline)
+        for o in objects.values():
+            evidence=excluded_object_evidence(baseline,o['label'])
+            if o['visible'] and evidence:add('excluded-object','出现作者明确要求不添加的对象',[o['id']],'error',source_text=evidence)
+        for r in relations.values():
+            evidence=contradicted_relation_evidence(baseline,objects[r['source']]['label'],objects[r['target']]['label'],r['type'])
+            if evidence:add('contradicted-relation','关系与原文的否定要求冲突，请核对',[r['id']],'error',source_text=evidence)
         generated_text=' '.join([scene['title']]+[o['label']+' '+o.get('state','') for o in objects.values()]+[r['label'] for r in relations.values()])
         if intent['domain']=='biology':
             foreign=('latent','physical priors','感知阵列','潜变量','action dispatch','具身智能','u_mitosis')

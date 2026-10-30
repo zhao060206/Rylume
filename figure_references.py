@@ -56,7 +56,10 @@ def _png(data_url):
         with Image.open(io.BytesIO(raw)) as image:
             if image.width * image.height > 36_000_000:
                 raise SceneError("参考图像素过大，请缩小到 3600 万像素以内")
-            image = ImageOps.exif_transpose(image).convert("RGB")
+            rgba=ImageOps.exif_transpose(image).convert('RGBA')
+            paper=Image.new('RGBA',rgba.size,'white')
+            paper.alpha_composite(rgba)
+            image=paper.convert('RGB')
             image.thumbnail((2400, 2400))
             out = io.BytesIO()
             image.save(out, format="PNG")
@@ -74,13 +77,16 @@ def normalize_contract(value):
     if not isinstance(source, list) or len(source) > 60:
         raise SceneError("参考图对象过多，请选取需要的区域")
     remap = {}
+    ambiguous=set()
+    notes=[]
     for i, item in enumerate(source):
         if not isinstance(item, dict):
             continue
         raw_id = str(item.get("id") or f"n{i+1}")
         ident = raw_id if re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]{0,70}", raw_id) and raw_id not in ids else f"ref_n{i+1}"
-        ids.add(ident)
-        remap[raw_id] = ident
+        suffix=2
+        while ident in ids:
+            ident=f'ref_n{i+1}_{suffix}';suffix+=1
         try:
             x, y, w, h = [float(item.get(k, default)) for k, default in (("x", .1), ("y", .1), ("w", .2), ("h", .2))]
             if not all(__import__('math').isfinite(v) for v in (x, y, w, h)):
@@ -89,23 +95,35 @@ def normalize_contract(value):
             w, h = max(.015, min(1-x, w)), max(.015, min(1-y, h))
         except (ValueError, TypeError):
             continue
+        ids.add(ident)
+        if raw_id in remap or raw_id in ambiguous:
+            ambiguous.add(raw_id);remap.pop(raw_id,None)
+            notes.append('参考图出现重复对象标识，相关连线未自动认定，请核对对象与端点。')
+        else:remap[raw_id]=ident
+        kind=item.get('type')
         objects.append({"id": ident, "label": str(item.get("label") or "")[:240],
-                        "type": item.get("type") if item.get("type") in OBJECT_TYPES else "process",
+                        "type": kind if isinstance(kind,str) and kind in OBJECT_TYPES else "process",
                         "state": str(item.get("state") or "")[:80],
                         **{k: round(v, 5) for k, v in zip(("x", "y", "w", "h"), (x,y,w,h))}})
     relations = []
-    for item in (value.get("relations") or [])[:120]:
+    source_relations=value.get('relations') or []
+    if not isinstance(source_relations,list):raise SceneError('参考图连线必须是列表')
+    for item in source_relations[:120]:
         if not isinstance(item, dict):
             continue
         a, b = remap.get(str(item.get("source"))), remap.get(str(item.get("target")))
         if a and b and a != b:
-            relations.append({"source": a, "target": b, "type": item.get("type") if item.get("type") in RELATION_TYPES else "associates",
+            kind=item.get('type')
+            relations.append({"source": a, "target": b, "type": kind if isinstance(kind,str) and kind in RELATION_TYPES else "associates",
                               "label": str(item.get("label") or "")[:160]})
+    uncertainties=value.get('uncertainties') or []
+    if isinstance(uncertainties,str):uncertainties=[uncertainties]
+    if not isinstance(uncertainties,list):uncertainties=[]
     return {"coordinates": "normalized", "objects": objects, "relations": relations,
             "summary": str(value.get("summary") or "")[:1800],
             "composition": str(value.get("composition") or "free")[:50],
             "reading_order": str(value.get("reading_order") or "")[:1000],
-            "uncertainties": [str(x)[:400] for x in (value.get("uncertainties") or [])[:20]]}
+            "uncertainties": list(dict.fromkeys([str(x)[:400] for x in uncertainties[:20]]+notes))}
 
 
 def analyze(data_url, config, purpose):

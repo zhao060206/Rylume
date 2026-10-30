@@ -129,4 +129,4 @@ def test_planning_and_audit_do_not_treat_a_phase_regulator_as_a_cell(monkeypatch
     value['generation_contract']={'original_text':text}
     codes={f['code'] for f in audit_scene(value)['findings']}
     assert 'phase-morphology' not in codes
-    assert 'missing-scientific-state' in codes
+    assert 'missing-scientific-state' not in codes

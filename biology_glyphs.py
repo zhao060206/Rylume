@@ -51,6 +51,44 @@ def symbol(kind: str, color: str, state: str = '', stroke: str | None = None, st
         extra = (" " + " ".join(f'{k.replace("_", "-")}="{html.escape(str(v), quote=True)}"' for k, v in attrs.items())) if attrs else ""
         p.append(f'<rect x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}" rx="{rx:.2f}" fill="{fill}" stroke="{line}" stroke-width="{sw * stroke_scale:.3f}"{extra}/>')
 
+    if kind in ('cell','stem_cell') and state.startswith('plant_'):
+        phase=state[6:]
+        p.append('<g data-cell-profile="plant">')
+        rect(8,8,84,84,rx=4,fill=light,sw=2.4,data_feature='cell-wall')
+        rect(12,12,76,76,rx=3,fill='none',line=tint(color,.3),sw=.7)
+        def chromosome(x,y):
+            path(f'M {x-3} {y-4} L {x+3} {y+4} M {x+3} {y-4} L {x-3} {y+4}',line='#BE185D',sw=2.1)
+        if phase in ('interphase','prophase'):
+            ellipse(50,50,23,22,fill=mid,sw=1.1,data_feature='intact-nuclear-envelope')
+            if phase=='interphase':
+                circle(44,44,4,fill=deep,line='none',sw=0)
+                path('M 35 50 Q 43 42 55 51 T 64 48 M 38 59 Q 48 65 59 57',line=deep,sw=.9)
+            else:
+                for x,y in ((41,43),(57,43),(42,57),(58,57)):chromosome(x,y)
+        elif phase in ('prometaphase','metaphase','anaphase'):
+            p.append('<g data-feature="acentrosomal-spindle">')
+            for yy in (30,43,57,70):
+                path(f'M 19 50 Q 33 {yy} 48 {yy} M 81 50 Q 67 {yy} 52 {yy}',line='#279878',sw=.9)
+            p.append('</g>')
+            if phase=='metaphase':
+                for yy in (30,43,57,70):chromosome(50,yy)
+            elif phase=='prometaphase':
+                for x,y in ((42,39),(58,46),(44,60),(61,65)):chromosome(x,y)
+                path('M 32 31 L 38 28 M 62 28 L 68 32 M 31 66 L 37 70 M 64 69 L 69 64',sw=.8)
+            else:
+                for yy in (31,44,57,70):
+                    path(f'M 37 {yy-4} L 31 {yy} L 37 {yy+4} M 63 {yy-4} L 69 {yy} L 63 {yy+4}',line='#BE185D',sw=2)
+        elif phase in ('telophase','cytokinesis'):
+            for xx in (30,70):
+                ellipse(xx,50,13,15,fill=mid,sw=1)
+                path(f'M {xx-7} 46 Q {xx} 41 {xx+7} 48 M {xx-5} 55 Q {xx} 60 {xx+6} 54',line=deep,sw=.8)
+            if phase=='cytokinesis':
+                path('M 50 10 V 90',line='#B37A38',sw=2.1,data_feature='cell-plate')
+            else:
+                path('M 50 34 V 66',line='#B37A38',sw=1.5,stroke_dasharray='3 2',data_feature='forming-cell-plate')
+        else:ellipse(50,50,23,22,fill=mid,sw=1.1)
+        p.append('</g>')
+        return ''.join(p)
     if state.startswith('legend_') and state[7:] in ('activates','inhibits','binds','converts','transports','sequence','associates'):
         from relation_visuals import relation_parts
         p.append('<g transform="scale(4 10)">')
@@ -342,6 +380,10 @@ def symbol(kind: str, color: str, state: str = '', stroke: str | None = None, st
                 circle(gx, gy, 2.2, fill='#d9824c', line='none', sw=0)
         else:
             st = str(state or '').lower().strip()
+            from scientific_intent import labeled_cell_phase
+            aliases={'apoptotic':'apoptotic','apoptosis':'apoptotic','apoptotic cell':'apoptotic','凋亡':'apoptotic','凋亡细胞':'apoptotic',
+                     'g1':'interphase','s_phase':'interphase','g2':'interphase','quiescent':'interphase'}
+            st=labeled_cell_phase(st,biological_context=True) or aliases.get(st,'')
             if any(k in st for k in ('cytokinesis', '胞质分裂', 'daughter', 'cleavage')):
                 # Cytokinesis: deep equatorial furrow dividing cell into two daughter cells
                 path('M 50 46 C 45 32 30 18 16 26 C 2 34 2 66 16 74 C 30 82 45 68 50 54 C 55 68 70 82 84 74 C 98 66 98 34 84 26 C 70 18 55 32 50 46 Z', fill=light, line=stroke, sw=1.6)

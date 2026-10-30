@@ -195,6 +195,11 @@ def test_selected_redraw_preserves_other_objects_and_original_version(studio,mon
         ImageDraw.Draw(image).ellipse((50,35,100,90),fill='#a72640')
         out=io.BytesIO();image.save(out,'PNG');return out.getvalue()
     monkeypatch.setattr(pipeline,'generate_raw',changed)
+    import figure_assets
+    def edit_existing(prompt,config,image):
+        assert image==before['scene']['objects'][0]['illustration']['data']
+        return changed(prompt,config)
+    monkeypatch.setattr(figure_assets,'referenced_image',edit_existing)
     code,res=studio(f"/api/jobs/{original['id']}/redraw",{'base_revision':before['revision'],'target_ids':['a'],'instruction':'深红色细胞核'})
     assert code==200,res
     child=finished(studio,res['job_id']);assert child['status']=='completed',child

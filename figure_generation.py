@@ -4,6 +4,8 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import math
+import os
 import re
 import time
 import uuid
@@ -15,7 +17,12 @@ PREVIEW_ID = re.compile(r'^gp_[a-f0-9]{24}$')
 
 
 def prepare(app, body):
+    if not isinstance(body,dict):
+        raise SceneError('生成请求必须是对象')
     config = app.load_config()
+    for key in ('text','original_text','generation_brief'):
+        if key in body and not isinstance(body[key],str):
+            raise SceneError('研究描述必须是文字')
     original = str(body.get('original_text') or body.get('text') or '').strip()
     brief = str(body.get('generation_brief') or body.get('text') or original).strip()
     if len(original) > 8000 or len(brief) > 8000:
@@ -24,12 +31,19 @@ def prepare(app, body):
     if not isinstance(dimensions, list) or len(dimensions) != 2:
         raise SceneError('画布尺寸无效')
     checked = normalize_scene(empty_scene(width_mm=dimensions[0], height_mm=dimensions[1]))
+    mode=body.get('illustration_mode','vector')
+    if mode not in ('image','vector'):
+        raise SceneError('请选择矢量绘图或 AI 插画')
+    supplied_dpi=body.get('dpi',300)
+    try:
+        dpi=float(supplied_dpi)
+        if isinstance(supplied_dpi,bool) or not math.isfinite(dpi) or not dpi.is_integer() or not 72<=dpi<=1200:
+            raise ValueError()
+    except (ValueError,TypeError,OverflowError):
+        raise SceneError('DPI 必须是 72–1200 之间的整数') from None
     config.update(canvas_mm=[checked['canvas']['width_mm'], checked['canvas']['height_mm']],
                   original_text=original, generation_brief=brief, scene_engine='v2',
-                  illustration_mode='image' if body.get('illustration_mode') == 'image' else 'vector',
-                  dpi=int(body.get('dpi') or 300), style_dna=app.sanitize_style(body.get('style_dna') or {}))
-    if not 72 <= config['dpi'] <= 1200:
-        raise SceneError('DPI 必须在 72–1200 之间')
+                  illustration_mode=mode,dpi=int(dpi),style_dna=app.sanitize_style(body.get('style_dna') or {}))
     if body.get('reference_id'):
         import figure_references
         reference = figure_references.read(app.DATA_DIR, body['reference_id'])
@@ -38,7 +52,11 @@ def prepare(app, body):
                       reference_image_data_url=figure_references.image_data_url(app.DATA_DIR, reference['reference_id']))
         if config['reference_purpose'] not in figure_references.PURPOSES:
             raise SceneError('参考用途无效')
+        if config['reference_purpose'] in ('sketch','content') and not reference['reference_contract'].get('objects'):
+            raise SceneError('参考草稿尚未识别出对象，无法可靠保留位置与连接。请重新上传清晰草稿，或改用参考画风。')
         config['style_dna'] = app.sanitize_style(reference.get('style_dna') or {})
+    if 'draft_scene' in body and not isinstance(body['draft_scene'],dict):
+        raise SceneError('画布草稿必须是场景文档')
     if body.get('draft_scene') and isinstance(body['draft_scene'], dict):
         draft_scene = normalize_scene(body['draft_scene'])
         if draft_scene.get('objects'):
@@ -53,7 +71,7 @@ def prepare(app, body):
         if not source or source.get('scene_engine') != 'v2':
             raise SceneError('请先新建一张可编辑草稿')
         sketch = scene_service.repository(app, source['id']).read()
-        if body.get('base_revision') != sketch['revision']:
+        if scene_service._revision(body) != sketch['revision']:
             raise RevisionConflict('草稿已变化，请保存后重新生成')
         if not sketch['objects']:
             raise SceneError('请先在草稿中添加对象和标签')
@@ -78,7 +96,11 @@ def prepare(app, body):
 def fingerprint(config):
     values = {k: config.get(k) for k in ('original_text','generation_brief','canvas_mm','illustration_mode',
                                        'reference_id','reference_purpose','draft_source_id','draft_source_revision','style_dna',
-                                       'redraw_ids','redraw_instruction')}
+                                       'redraw_ids','redraw_instruction','dpi')}
+    for key in ('sketch_scene','prepared_scene'):
+        if config.get(key):
+            encoded=json.dumps(normalize_scene(config[key]),ensure_ascii=False,sort_keys=True,separators=(',',':'))
+            values[key+'_sha256']=hashlib.sha256(encoded.encode()).hexdigest()
     return hashlib.sha256(json.dumps(values, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 
@@ -91,40 +113,43 @@ def apply_constraints(scene, config):
     sketch = config.get('sketch_scene')
     reference = config.get('reference_contract') or {}
     if sketch:
-        from scientific_intent import intent_contract, labeled_cell_phase
+        from scientific_intent import intent_contract, labeled_cell_phase,classical_mitosis_compatible
         biological_context=intent_contract(config['original_text'])['domain']=='biology'
         by_id = {o['id']:o for o in scene['objects']}
         unused = set(by_id)
-        remap = {}
         kept = []
+        # Reserve stable IDs first, so a label match cannot consume another
+        # author's object. A list position is never scientific identity.
+        matched={o['id']:by_id[o['id']] for o in sketch['objects'] if o['id'] in by_id}
+        unused.difference_update(matched)
         for idx, original in enumerate(sketch['objects']):
-            candidate = by_id.get(original['id'])
-            if candidate and candidate['id'] not in unused:
-                candidate = None
+            if original.get('locked') or original['type']=='text' or original.get('role')=='context':
+                kept.append(copy.deepcopy(original))
+                continue
+            candidate = matched.get(original['id'])
             if candidate is None:
-                candidate = next((o for o in scene['objects'] if o['id'] in unused and _label(o['label']) == _label(original['label'])), None)
+                candidates=[o for o in scene['objects'] if o['id'] in unused and _label(o['label']) and _label(o['label']) == _label(original['label'])]
+                candidate=candidates[0] if len(candidates)==1 else None
             if candidate is None:
                 phase = labeled_cell_phase(original.get('label',''),biological_context=biological_context or original.get('type') in ('cell','stem_cell'))
                 if phase:
-                    candidate = next((o for o in scene['objects'] if o['id'] in unused and
-                        (phase == labeled_cell_phase(o.get('label',''),biological_context=True) or phase == o.get('state'))), None)
-            if candidate is None and len(sketch['objects']) == len(scene['objects']) and idx < len(scene['objects']):
-                candidate_by_idx = scene['objects'][idx]
-                if candidate_by_idx['id'] in unused:
-                    candidate = candidate_by_idx
+                    candidates=[o for o in scene['objects'] if o['id'] in unused and
+                        (phase == labeled_cell_phase(o.get('label',''),biological_context=True) or phase == o.get('state'))]
+                    candidate=candidates[0] if len(candidates)==1 else None
             if candidate is None:
-                candidate = copy.deepcopy(original)
+                kept.append(copy.deepcopy(original))
+                scene['unresolved'].append('未能确认草稿对象「'+original['label']+'」的对应关系，已保留作者对象，请核对后单独细化。')
+                continue
             else:
                 candidate = copy.deepcopy(candidate)
                 unused.discard(candidate['id'])
-            remap[candidate['id']] = original['id']
             candidate['id'] = original['id']
             candidate['entity_id'] = original.get('entity_id', original['id'])
-            for key in ('x','y','w','h','rotation','label_dx','label_dy','group_id','locked','visible'):
+            for key in ('x','y','w','h','rotation','label_dx','label_dy','group_id','locked','visible','fill','stroke','stroke_pt','font_size_pt'):
                 if key in original:
                     candidate[key] = original[key]
             # Infer biological state from label if missing or generic
-            if candidate.get('type') in ('cell', 'stem_cell', 'process'):
+            if candidate.get('type') in ('cell', 'stem_cell', 'process') and classical_mitosis_compatible(config['original_text']):
                 phase = labeled_cell_phase(original.get('label',''),biological_context=biological_context or candidate.get('type') in ('cell','stem_cell'))
                 if phase:
                     candidate['type'] = 'cell'
@@ -136,55 +161,74 @@ def apply_constraints(scene, config):
         scene['relations'] = copy.deepcopy(sketch['relations'])
         scene['compartments'] = copy.deepcopy(sketch['compartments'])
         scene['canvas'] = copy.deepcopy(sketch['canvas'])
-        scene['requirements'] = {'objects':[o['id'] for o in kept], 'relations':[r['id'] for r in scene['relations']]}
+        scene['requirements'] = {'objects':[o['id'] for o in kept if o.get('visible',True)], 'relations':[r['id'] for r in scene['relations']]}
     elif config.get('reference_purpose') != 'style' and reference.get('objects'):
         source = reference['objects']
         objects = [o for o in scene['objects'] if o.get('role','entity') == 'entity']
-        free = list(source)
-        placed = []
-        reference_ids = {}
+        strict=config.get('reference_purpose') in ('sketch','content')
+        reference_ids={}
         width,height = config['canvas_mm']
-        for obj in objects:
-            match = next((x for x in free if x['id'] == obj['id'] or (_label(x['label']) and _label(x['label']) == _label(obj['label']))), None)
-            if match is None and len(objects) == len(source) and free:
-                match = free[0]
-            if match is None:
-                continue
-            free.remove(match)
-            reference_ids[match['id']] = obj['id']
-            obj.update(x=round(match['x']*width,4), y=round(match['y']*height,4),
-                       w=round(match['w']*width,4), h=round(match['h']*height,4))
-            # Reserve label space without changing the object's supplied location.
-            if obj['y']+obj['h'] > height-7:
-                obj['label_dy'] = -obj['h']-2
-            placed.append(obj['id'])
-        if len(placed) != len(objects):
-            scene['unresolved'].append('参考图与本图对象数量或名称不同，未匹配对象保留自动布局；请在画布核对')
-        if config.get('reference_purpose')=='sketch' and len(placed)==len(source):
-            # A request to improve a sketch does not authorize extra external nodes.
-            scene['objects']=[o for o in scene['objects'] if o['id'] in placed]
-            scene['relations']=[r for r in scene['relations'] if r['source'] in placed and r['target'] in placed]
-            scene['requirements']={'objects':placed,'relations':[r['id'] for r in scene['relations']]}
-        if placed:
-            # Leave free reference positions free instead of inventing cell compartments.
-            scene['compartments'] = []
-            for obj in scene['objects']:
-                obj['compartment'] = ''
-        if config.get('reference_purpose') in ('sketch','content') and reference.get('relations'):
-            retained = []
-            for i, relation in enumerate(reference['relations']):
+        free=list(objects);matched={}
+        from scientific_intent import labeled_cell_phase
+        for ref in source:
+            candidates=[o for o in free if _label(ref['label']) and _label(ref['label'])==_label(o['label'])]
+            if len(candidates)!=1:
+                phase=labeled_cell_phase(ref['label'],biological_context=True)
+                candidates=[o for o in free if phase and phase==labeled_cell_phase(o['label'],biological_context=True)]
+            if len(candidates)!=1:
+                candidates=[o for o in free if o['id']==ref['id'] and
+                            (not strict or not ref['label'] or not o['label'] or _label(ref['label'])==_label(o['label']))]
+            if len(candidates)==1:
+                matched[ref['id']]=candidates[0];free.remove(candidates[0])
+        if not strict and len(objects)==len(source):
+            for ref in source:
+                if ref['id'] not in matched and free:matched[ref['id']]=free.pop(0)
+        placed=[];used_ids={o['id'] for o in scene['objects']}
+        for ref in source:
+            obj=matched.get(ref['id'])
+            if obj is None:
+                if not strict:continue
+                ident=ref['id'];suffix=2
+                while ident in used_ids:ident=ref['id']+'_'+str(suffix);suffix+=1
+                used_ids.add(ident)
+                obj={'id':ident,'type':ref.get('type','process'),'label':ref['label'],'state':ref.get('state',''),
+                     'evidence':ref['label'],'evidence_source':'reference_image','evidence_ref':config.get('reference_id','')}
+                scene['unresolved'].append('参考对象「'+ref['label']+'」未被规划器可靠匹配，已按观察保留，请核对形态。')
+            obj.update(reference_object_id=ref['id'],x=round(ref['x']*width,4),y=round(ref['y']*height,4),
+                       w=round(ref['w']*width,4),h=round(ref['h']*height,4),compartment='')
+            if obj['y']+obj['h']>height-7:obj['label_dy']=-obj['h']-2
+            reference_ids[ref['id']]=obj['id'];placed.append(obj)
+        if strict:
+            kept_ids={o['id'] for o in placed}
+            if config.get('reference_purpose')=='content':
+                for obj in scene['objects']:
+                    evidence=obj.get('evidence','')
+                    if obj['id'] not in kept_ids and obj.get('evidence_source','user_text')=='user_text' and evidence and evidence in config['original_text']:
+                        placed.append(obj);kept_ids.add(obj['id'])
+            scene['objects']=placed
+            retained=[]
+            for i,relation in enumerate(reference.get('relations') or []):
                 a,b=reference_ids.get(relation['source']),reference_ids.get(relation['target'])
-                if a and b:
-                    retained.append({'id':f'sketch_r{i+1}','source':a,'target':b,'type':relation['type'],
-                                     'label':relation.get('label',''),'uncertain':relation['type']=='associates',
-                                     'evidence':'用户上传草稿中可见的连接', 'evidence_source':'reference_image',
-                                     'evidence_ref':config.get('reference_id','')})
-            if len(retained)==len(reference['relations']):
-                scene['relations']=retained
-                scene['requirements']['relations']=[r['id'] for r in retained]
+                if a and b:retained.append({'id':f'sketch_r{i+1}','source':a,'target':b,'type':relation['type'],
+                    'label':relation.get('label',''),'uncertain':relation['type']=='associates',
+                    'evidence':'用户上传草稿中可见的连接','evidence_source':'reference_image','evidence_ref':config.get('reference_id','')})
+            if config.get('reference_purpose')=='content':
+                existing={(r['source'],r['target'],r['type']) for r in retained}
+                for relation in scene['relations']:
+                    evidence=relation.get('evidence','');key=(relation['source'],relation['target'],relation['type'])
+                    if relation['source'] in kept_ids and relation['target'] in kept_ids and key not in existing and relation.get('evidence_source','user_text')=='user_text' and evidence and evidence in config['original_text']:
+                        relation=copy.deepcopy(relation);relation['id']='authored_'+relation['id'];retained.append(relation);existing.add(key)
+            scene['relations']=retained
+            scene['requirements']={'objects':[o['id'] for o in placed if o.get('visible',True)],'relations':[r['id'] for r in retained]}
+        if placed:
+            scene['compartments']=[]
+            for obj in scene['objects']:obj['compartment']=''
+        if len(matched)!=len(source):scene['unresolved'].append('参考图的部分对象对应关系待核对；未按列表顺序猜测科学身份。')
         for uncertainty in reference.get('uncertainties') or []:
             scene['unresolved'].append('参考图待核对：' + uncertainty)
     scene['source_text'] = config['original_text']
+    from scientific_intent import apply_division_context
+    apply_division_context(scene,config['original_text'])
     contract = {'original_text':config['original_text'], 'generation_brief':config['generation_brief'],
                 'source_kind':'canvas-sketch' if sketch else 'reference' if config.get('reference_id') else 'description',
                 'reference_id':config.get('reference_id',''), 'reference_summary':reference.get('summary',''),
@@ -231,24 +275,90 @@ def plan(text, config, *, on_stage=None, cancelled=None):
     return apply_constraints(scene, config), meta
 
 
+def enforce_content_audit(scene):
+    """Never label a known contradiction as a successfully generated draft."""
+    from scene_document import audit_scene
+    codes={'excluded-object','contradicted-relation','excluded-scientific-state','unsupported-mechanism','missing-scientific-state','phase-morphology'}
+    blockers=[f for f in audit_scene(scene)['findings'] if f['severity']=='error' and f['code'] in codes]
+    if blockers:
+        raise SceneError('内容核验未通过，已保留可编辑草稿：'+'；'.join(f['message'] for f in blockers[:5]))
+
+
 def preview(app, text, config):
     from scene_render import render_scene
     scene, meta = plan(text, config)
+    from scene_document import audit_scene
+    audit=audit_scene(scene)
     ident = 'gp_' + uuid.uuid4().hex[:24]
     folder = Path(app.DATA_DIR)/'generation-previews'
     folder.mkdir(parents=True,exist_ok=True)
     (folder/(ident+'.json')).write_text(json.dumps({'created':time.time(), 'fingerprint':fingerprint(config),
                                                  'scene':scene, 'planner':meta},ensure_ascii=False),encoding='utf-8')
     return {'ok':True,'preview_id':ident,'scene':scene,'svg':render_scene(scene),
-            'contract':scene['generation_contract'],'unresolved':scene['unresolved']}
+            'contract':scene['generation_contract'],'unresolved':scene['unresolved'],'audit':audit}
 
 
 def load_preview(data_dir, ident, config):
     if not isinstance(ident,str) or not PREVIEW_ID.fullmatch(ident):
         raise SceneError('结构预览标识无效')
-    stored = json.loads((Path(data_dir)/'generation-previews'/(ident+'.json')).read_text(encoding='utf-8'))
+    try:
+        stored = json.loads((Path(data_dir)/'generation-previews'/(ident+'.json')).read_text(encoding='utf-8'))
+    except (OSError,ValueError):
+        raise SceneError('结构预览不存在或已损坏，请重新预览') from None
     if stored['fingerprint'] != fingerprint(config):
         raise RevisionConflict('描述、参考图或草稿已变化，请重新查看结构预览')
     if time.time()-stored['created'] > 86400:
         raise SceneError('结构预览已过期，请重新生成预览')
     return normalize_scene(stored['scene'])
+
+
+# Only document inputs are persisted. Service addresses, model settings and
+# credentials are deliberately absent; retries use the current local settings.
+INPUT_KEYS=('original_text','generation_brief','canvas_mm','illustration_mode','dpi','style_dna',
+            'reference_id','reference_purpose','sketch_scene','draft_source_id','draft_source_revision',
+            'prepared_scene','redraw_ids','redraw_instruction')
+
+
+def persist_inputs(app,job_id,config):
+    values={key:copy.deepcopy(config[key]) for key in INPUT_KEYS if key in config}
+    for key in ('sketch_scene','prepared_scene'):
+        if values.get(key):values[key]=normalize_scene(values[key])
+    folder=Path(app.JOBS_DIR)/job_id
+    folder.mkdir(parents=True,exist_ok=True)
+    path=folder/'generation-input.json'
+    temporary=folder/('generation-input.'+uuid.uuid4().hex+'.tmp')
+    temporary.write_text(json.dumps(values,ensure_ascii=False),encoding='utf8')
+    os.replace(temporary,path)
+
+
+def retry_inputs(app,job):
+    path=Path(app.JOBS_DIR)/job['id']/'generation-input.json'
+    if path.exists():
+        try:
+            saved=json.loads(path.read_text(encoding='utf8'))
+            if not isinstance(saved,dict):raise ValueError()
+        except (OSError,ValueError):
+            raise SceneError('原始生成输入已损坏；当前图版保留，请从画布创建新版本') from None
+        body={key:saved[key] for key in ('original_text','generation_brief','canvas_mm','illustration_mode','dpi','style_dna','reference_id','reference_purpose') if key in saved}
+        if saved.get('redraw_ids'):
+            body.pop('reference_id',None);body.pop('reference_purpose',None)
+        body['text']=saved.get('original_text') or job.get('original_text') or job.get('text') or ''
+        text,config=prepare(app,body)
+        for key in ('sketch_scene','prepared_scene','draft_source_id','draft_source_revision','redraw_ids','redraw_instruction'):
+            if key in saved:
+                config[key]=normalize_scene(saved[key]) if key.endswith('_scene') else copy.deepcopy(saved[key])
+        return text,config
+    # Older jobs have no input snapshot. Reuse their saved object scene rather
+    # than guessing the original reference layout or changing render modes.
+    import scene_service
+    scene=scene_service.repository(app,job['id']).read() if job.get('scene_revision') else None
+    contract=(scene or {}).get('generation_contract') or {}
+    body={'text':job.get('original_text') or job.get('text') or '',
+          'generation_brief':contract.get('generation_brief') or job.get('generation_brief') or job.get('text') or '',
+          'canvas_mm':job.get('canvas_mm') or [180,120],
+          'illustration_mode':job.get('illustration_mode') or 'vector','dpi':job.get('dpi') or 300}
+    if contract.get('reference_id'):
+        body.update(reference_id=contract['reference_id'],reference_purpose=contract.get('reference_purpose') or 'layout')
+    text,config=prepare(app,body)
+    if scene:config['prepared_scene']=scene
+    return text,config

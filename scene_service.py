@@ -134,6 +134,8 @@ def create_job(app, text, config, *, example=None, revision_of=None, request_id=
                 return prior
         from figure_generation import fingerprint
         job['generation_fingerprint'] = fingerprint(config)
+        from figure_generation import persist_inputs
+        persist_inputs(app,job['id'],config)
         app.JOBS[job["id"]] = job
     app._save_meta(job)
 
@@ -164,16 +166,28 @@ def create_job(app, text, config, *, example=None, revision_of=None, request_id=
             app._set_stage(job, "assemble", "保存可编辑矢量草稿")
             result = repository(app, job["id"]).commit(scene)
             _publish(app, job, result)
+            generation_revision=result['revision']
+            if not example:
+                from figure_generation import enforce_content_audit
+                enforce_content_audit(result['scene'])
             if not example and config.get('illustration_mode') == 'image':
                 from figure_assets import illustrate
                 def checkpoint(current):
-                    saved = repository(app, job['id']).commit(current, base_revision=job['scene_revision'])
-                    _publish(app, job, saved)
+                    nonlocal generation_revision
+                    repo=repository(app,job['id'])
+                    with repo.lock:
+                        try:
+                            saved=repo.commit(current,base_revision=generation_revision)
+                        except RevisionConflict:
+                            raise RevisionConflict('生成期间图版已有手动修改，后台插画已停止，保留你的编辑。可在当前图版选中对象后重绘。') from None
+                        generation_revision=saved['revision']
+                        _publish(app,job,saved)
                 scene, job['illustration_result'] = illustrate(scene,config,
                     on_stage=lambda n,d: app._set_stage(job,n,d),
                     cancelled=lambda: bool(job.get('cancel_requested')), checkpoint=checkpoint)
                 # Include failures/partial status in the saved draft, too.
                 checkpoint(scene)
+                enforce_content_audit(scene)
             app._set_stage(job, "qa", "核对原始需求、对象、连接与物理尺寸")
             if not example and (config.get('vision') or {}).get('base_url') and (config.get('vision') or {}).get('model'):
                 from scene_planner import review_scene_visual
@@ -377,7 +391,10 @@ def dispatch(handler, method, path, app):
                 clone["id"] = "j_"+uuid.uuid4().hex[:12]
                 clone["revision"] = 1
                 copied = copy.deepcopy(job)
-                copied.update(id=clone["id"],created=time.time(),revision_of=job_id,scene_exports=[])
+                copied.update(id=clone["id"],created=time.time(),revision_of=job_id,scene_exports=[],
+                              status='completed',progress=100,stages=[],error=None,request_id=None,
+                              message='已创建可编辑副本',cancel_requested=False)
+                copied.pop('generation_fingerprint',None)
                 result = repository(app,copied["id"]).commit(clone)
                 _publish(app,copied,result)
                 with app.JOBS_LOCK:
@@ -406,9 +423,11 @@ def dispatch(handler, method, path, app):
             handler._json(200,{"ok":True,"cancel_requested":True})
             return True
         if action == "retry" and method == "POST":
-            config = app.load_config()
-            config["canvas_mm"] = job.get("canvas_mm") or [180,120]
-            child = create_job(app,job.get("original_text") or job.get("text"),config,revision_of=job_id)
+            if job.get('status') in ('queued','processing'):
+                raise RevisionConflict('原任务仍在处理，请等待完成或取消后再重试')
+            from figure_generation import retry_inputs
+            text,config=retry_inputs(app,job)
+            child=create_job(app,text,config,revision_of=job_id,request_id=body.get('request_id'))
             handler._json(200,{"ok":True,"job_id":child["id"]})
             return True
         if not job.get("scene_revision"):
@@ -468,17 +487,27 @@ def dispatch(handler, method, path, app):
             current=repository(app,job_id).read()
             if _revision(body)!=current['revision']:raise RevisionConflict('图版已变化，请保存后重绘')
             target_ids=body.get('target_ids') or []
-            allowed={o['id'] for o in current['objects'] if not o['locked'] and o['type']!='text'}
+            allowed={o['id'] for o in current['objects'] if not o['locked'] and o['visible'] and o.get('role','entity')=='entity' and o['type'] not in ('text','membrane','nuclear_pore')}
             if not isinstance(target_ids,list) or not target_ids or len(target_ids)>24 or any(x not in allowed for x in target_ids):
-                raise SceneError('请选取 1–24 个未锁定的图形对象')
+                raise SceneError('请选取 1–24 个可见且未锁定的插画主体；文字、膜和核孔请直接编辑')
             instruction=str(body.get('instruction') or '').strip()
             if not instruction or len(instruction)>2000:raise SceneError('请填写 1–2000 字的重绘要求')
             contract=current.get('generation_contract') or {}
             request={'text':current['source_text'] or current['title'],'canvas_mm':[current['canvas']['width_mm'],current['canvas']['height_mm']],
                      'illustration_mode':'image','generation_brief':contract.get('generation_brief') or current['source_text'] or current['title']}
-            if contract.get('reference_id'):
-                request.update(reference_id=contract['reference_id'],reference_purpose=contract.get('reference_purpose') or 'layout')
             text,config=prepare(app,request)
+            if contract.get('reference_id'):
+                # Imported scenes already contain their editable artwork.
+                # An unavailable original upload must not block local redraw.
+                import figure_references
+                try:
+                    reference=figure_references.read(app.DATA_DIR,contract['reference_id'])
+                    config.update(reference_id=reference['reference_id'],reference_purpose=contract.get('reference_purpose') or reference['purpose'],
+                        reference_contract=reference['reference_contract'],reference_image_data_url=figure_references.image_data_url(app.DATA_DIR,reference['reference_id']),
+                        style_dna=app.sanitize_style(reference.get('style_dna') or {}))
+                except (OSError,ValueError):
+                    current=copy.deepcopy(current)
+                    current['unresolved'].append('原始上传参考图不在此电脑，局部重绘将依据当前对象的实际图像；当前图版和原版均保留。')
             config.update(prepared_scene=copy.deepcopy(current),redraw_ids=list(dict.fromkeys(target_ids)),redraw_instruction=instruction)
             child=create_job(app,text,config,revision_of=job_id,request_id=body.get('request_id'))
             handler._json(200,{'ok':True,'job_id':child['id'],'original_job_id':job_id,'base_revision':current['revision']})

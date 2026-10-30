@@ -6,6 +6,7 @@ the scene, or the editable vector draft retained as an earlier revision.
 from __future__ import annotations
 
 import base64
+import copy
 import hashlib
 import io
 import json
@@ -14,7 +15,7 @@ import urllib.request
 import uuid
 from functools import lru_cache
 
-from scene_document import SceneError
+from scene_document import SceneError, RevisionConflict
 
 
 @lru_cache(maxsize=40)
@@ -92,12 +93,14 @@ def referenced_image(prompt, config, data_url):
         data=b''.join(parts), method="POST", headers={"Content-Type": f"multipart/form-data; boundary={boundary}",
         "Authorization": "Bearer " + key if key else "", "Accept": "application/json"})
     try:
-        with urllib.request.urlopen(request, timeout=min(180, int(section.get("timeout") or 120))) as response:
+        with urllib.request.urlopen(request, timeout=max(15,min(300,int(section.get("timeout") or 300)))) as response:
             result = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         if exc.code in (400, 404, 405, 415, 422):
             raise SceneError("当前图像服务不支持参考图重绘；已保留按参考布局生成的可编辑矢量稿") from None
         raise SceneError(f"参考图重绘服务暂不可用（HTTP {exc.code}）；可编辑草稿已保留") from None
+    except TimeoutError:
+        raise SceneError('参考图重绘服务超时；原对象与已有草稿已保留，可以稍后按原要求重试') from None
     except (OSError, ValueError) as exc:
         raise SceneError("参考图重绘未完成；可编辑草稿已保留") from exc
     item = (result.get("data") or [{}])[0]
@@ -116,7 +119,9 @@ def object_reference(config,obj):
     contract=config.get('reference_contract') or {}
     import re
     label=lambda s:re.sub(r'[\W_]+','',str(s).lower())
-    region=next((r for r in contract.get('objects',[]) if r['id']==obj['id'] or (label(r['label']) and label(r['label'])==label(obj['label']))),None)
+    bound=obj.get('reference_object_id')
+    region=next((r for r in contract.get('objects',[]) if r['id']==(bound or obj['id'])),None)
+    if region is None:region=next((r for r in contract.get('objects',[]) if label(r['label']) and label(r['label'])==label(obj['label'])),None)
     if region is None:
         # Layout references still constrain the planner but should not be copied
         # wholesale into every new cell. Style-only references use one subject.
@@ -134,6 +139,23 @@ def object_reference(config,obj):
         cropped=source.crop(box)
         out=io.BytesIO();cropped.save(out,'PNG')
     return 'data:image/png;base64,'+base64.b64encode(out.getvalue()).decode('ascii')
+
+
+def current_object_reference(scene,obj):
+    """A self-contained visual input for redraw, including imported vector scenes."""
+    if obj.get('illustration'):return obj['illustration']['data']
+    from scene_render import render_scene
+    import fitz
+    reference=copy.deepcopy(scene);single=copy.deepcopy(obj)
+    single.update(x=5,y=5,label='',label_dx=0,label_dy=0,compartment='',rotation=0,locked=False)
+    reference.update(objects=[single],relations=[],compartments=[],requirements={'objects':[obj['id']],'relations':[]})
+    reference['canvas']={'width_mm':max(40,single['w']+10),'height_mm':max(40,single['h']+10)}
+    reference['style']['show_title']=False
+    svg=render_scene(reference).encode('utf8')
+    with fitz.open(stream=svg,filetype='svg') as source:
+        with fitz.open(stream=source.convert_to_pdf(),filetype='pdf') as pdf:
+            pixmap=pdf[0].get_pixmap(matrix=fitz.Matrix(2.5,2.5),alpha=False)
+            return image_asset(pixmap.tobytes('png'))['data']
 
 
 def validate_object_count(asset,obj):
@@ -156,11 +178,15 @@ def illustrate(scene, config, *, on_stage=None, cancelled=None, checkpoint=None)
     objects = [o for o in scene['objects'] if o['type'] not in ('text', 'membrane', 'nuclear_pore')
                and o.get('role') == 'entity' and o.get('visible', True) and not o.get('locked')
                and (not config.get('redraw_ids') or o['id'] in config['redraw_ids'])]
+    if not objects:
+        scene['unresolved'].append('没有可绘制的插画主体，已保留矢量草稿；文字、膜与核孔可直接编辑。')
+        return scene,{'state':'draft','generated':0,'requested':0}
     if len(objects) > 24:
         scene['unresolved'].append('对象超过24个，本次保留矢量稿；可选取对象分批生成插画')
         return scene, {"state": "draft", "generated": 0, "requested": len(objects)}
     generated = 0
     reference_count = 0
+    reference_requests = 0
     for index, obj in enumerate(objects):
         if cancelled and cancelled():
             raise InterruptedError("任务已取消；已完成的草稿保留")
@@ -171,18 +197,22 @@ def illustrate(scene, config, *, on_stage=None, cancelled=None, checkpoint=None)
                   "Preserve the scientific state precisely. Flat clean scientific drawing, "
                   "clear silhouette, restrained colours, consistent line weights. "
                   "The attached reference, if any, provides visual guidance; draw only this object.\n"
-                  + json.dumps({k: obj.get(k) for k in ('type','label','state','evidence')}, ensure_ascii=False)
+                  + json.dumps({k: obj.get(k) for k in ('type','label','state','visual_description')}, ensure_ascii=False)
                   + '\nThis request is for this object alone, not the whole figure. Do not show another phase, another cell, a side-by-side comparison, or a before/after pair.'
                   + '\nVisual style: '+str((config.get('style_dna') or {}).get('visual_style_summary') or 'clear scientific illustration')[:700]
                   + '\nPalette: ' + json.dumps(scene['style']['palette']))
         if config.get('redraw_instruction'):
             prompt += '\nRequested change, preserve the object identity and scientific meaning: '+config['redraw_instruction'][:2000]
-        from scientific_intent import canonical_phase,PHASE_FEATURES
+        from scientific_intent import canonical_phase,PHASE_FEATURES,classical_mitosis_compatible
         phase=canonical_phase(obj.get('state','')) if obj['type']=='cell' else ''
-        if phase in PHASE_FEATURES:
+        if phase in PHASE_FEATURES and classical_mitosis_compatible(config.get('original_text') or scene.get('source_text')):
             prompt+='\nRequired morphology, the figure must visibly satisfy EACH feature: '+PHASE_FEATURES[phase]
         try:
-            reference = object_reference(config,obj)
+            # A local redraw must see the object the author is editing, even
+            # when no external reference was uploaded for the original figure.
+            reference = current_object_reference(scene,obj) if config.get('redraw_ids') else None
+            reference = reference or object_reference(config,obj)
+            reference_requests+=bool(reference)
             asset=None
             for attempt in range(2):
                 local_prompt=prompt if not attempt else prompt+'\nCORRECTION: The previous asset contained multiple separate cells. Draw exactly ONE cell, in only the specified state, with no comparison or second cell.'
@@ -200,7 +230,7 @@ def illustrate(scene, config, *, on_stage=None, cancelled=None, checkpoint=None)
             reference_count += bool(reference)
             if checkpoint:
                 checkpoint(scene)
-        except InterruptedError:
+        except (InterruptedError,RevisionConflict):
             raise
         except Exception as exc:
             message = str(exc) if isinstance(exc, SceneError) else '图像服务未完成素材绘制，已保留可编辑矢量稿'
@@ -209,4 +239,4 @@ def illustrate(scene, config, *, on_stage=None, cancelled=None, checkpoint=None)
             break
     return scene, {"state": "ready" if generated == len(objects) else "partial",
                    "generated": generated, "requested": len(objects), "reference_pixels": bool(reference_count),
-                   "reference_objects": reference_count}
+                   "reference_objects": reference_count,'reference_requests':reference_requests}

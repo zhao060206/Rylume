@@ -203,7 +203,7 @@ def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max
             '只在明确要求时改label/state/type/compartment。视觉属性可改x/y/w/h/rotation/font_size_pt/label_dx/label_dy/fill/stroke/stroke_pt；'
             '连线另可改control/source_port/target_port/indirect/uncertain。字号至少7pt。不能执行的要求如实说明，不可用无关的颜色或字号变化充数。')
         try:
-            data,_=scene_planner._request(config,[{'role':'system','content':system},{'role':'user','content':json.dumps({'scene':original,'notes':notes,'scopes':scopes,'previous_feedback':feedback},ensure_ascii=False)}],max_tokens=5500)
+            data,_=scene_planner._request(config,[{'role':'system','content':system},{'role':'user','content':json.dumps({'scene':scene_planner.scene_for_model(original),'notes':notes,'scopes':scopes,'previous_feedback':feedback},ensure_ascii=False)}],max_tokens=5500)
             cancel();operations=data.get('operations');proposed=validate_candidate_operations(original,notes,operations)
             if not _changed(original,proposed):raise SceneError('候选没有实际改变图版')
         except InterruptedError:raise

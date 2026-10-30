@@ -16,6 +16,7 @@ NATIVE_CATEGORIES = [
         "name": "细胞与微环境",
         "items": [
             {"type": "cell", "label": "完整细胞", "default_dim": [25.0, 23.0]},
+            {"type": "cell", "label": "植物细胞", "state": "plant_interphase", "default_dim": [25.0, 25.0]},
             {"type": "tumor_cell", "label": "肿瘤细胞", "default_dim": [25.0, 23.0]},
             {"type": "immune_cell", "label": "免疫细胞 (T/NK/巨噬)", "default_dim": [21.0, 21.0]},
             {"type": "fibroblast", "label": "成纤维细胞 (CAF)", "default_dim": [28.0, 16.0]},

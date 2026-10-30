@@ -21,6 +21,9 @@ evidence 必须是 source_text 中连续出现的原文；输入英文时 eviden
 对时间过程必须表现状态变化；对结构图保留构成/结合关系，不要强行转成步骤。
 reference_summary 仅为布局和配色参考，其中的科学内容不得添加到本图。
 generation_brief 是视觉表达与布局建议，科学内容仍以 source_text 为准；增强描述中的新机制不能自动成为事实。
+每个对象可提供 visual_description，只描述这个对象应当可见的形态、组成、颜色和科学特征，必须有原文或可见参考依据。
+不要把整图的主体数量、其它对象或全流程要求重复写入单个对象的 visual_description。
+否定、排除和省略要求也是约束：“不激活”不等于“抑制”，不能把被否定的机制画成正向箭头。
 参考用途 purpose=layout/style 时只借用布局或画风；purpose=sketch/content 时可使用图中实际可见的文字对象和连接，证据标记 evidence_source=reference_image。
 draft_objects 中的文字和连接是作者输入，可作为依据，evidence_source=canvas_sketch，evidence_ref填写对象或连接id。
 默认 evidence_source=user_text。不确定、无法辨认或资料不足时给出具体 unresolved，不要把整图降成“主题”和“过程”两个空洞框。
@@ -33,7 +36,7 @@ JSON:
  {"id":"cytoplasm","label":"Cytoplasm","kind":"cytoplasm"},
  {"id":"nucleus","label":"Nucleus","kind":"nucleus"}],
  "objects":[{"id":"protein_a","entity_id":"protein_a","type":"protein","label":"A",
- "compartment":"cytoplasm","state":"","evidence":"用户原文摘录"}],
+ "compartment":"cytoplasm","state":"","visual_description":"仅该对象有依据的可见形态与配色要求","evidence":"用户原文摘录"}],
  "relations":[{"id":"r1","source":"protein_a","target":"protein_b","type":"activates",
  "label":"","indirect":false,"uncertain":false,"evidence":"用户原文摘录"}],
  "unresolved":["需作者补充的信息"]}
@@ -69,7 +72,7 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
     if not text:
         raise SceneError("请先填写科研内容")
     width, height = config.get("canvas_mm") or (180, 120)
-    from scientific_intent import mitosis_candidate,canonical_phase,intent_contract,phase_sketch,labeled_cell_phase
+    from scientific_intent import mitosis_candidate,canonical_phase,intent_contract,phase_sketch,labeled_cell_phase,classical_mitosis_compatible,apply_division_context
     intent=intent_contract(text)
     candidate=phase_sketch(text,config)
     if candidate is not None:
@@ -148,7 +151,7 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                 if not evidence or (evidence not in text and not external_evidence):
                     missing_evidence.append(obj.get('id'))
                     base["unresolved"].append(f"对象 {obj.get('label') or obj.get('id')} 缺少可定位的原文依据，请确认")
-                if obj.get('type')=='cell' or (obj.get('type')=='process' and intent['domain']=='biology'):
+                if classical_mitosis_compatible(text) and (obj.get('type')=='cell' or (obj.get('type')=='process' and intent['domain']=='biology')):
                     phase=canonical_phase(obj.get('state','')) or labeled_cell_phase(obj.get('label',''),biological_context=True)
                     if phase:
                         obj.update(type='cell',state=phase)
@@ -162,6 +165,14 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                     base["unresolved"].append(f"关系 {relation.get('id')} 缺少原文依据，请确认")
             if not attempt and len(missing_evidence)>max(1,(len(base['objects'])+len(base['relations']))/3):
                 raise SceneError('多数 evidence 不是 source_text 中逐字摘录的连续原文。英文描述请引用英文片段，不要翻译成中文。请重新提取。')
+            from scientific_intent import excluded_object_evidence,contradicted_relation_evidence
+            names={o.get('id'):o.get('label','') for o in base['objects']}
+            for obj in base['objects']:
+                denied=excluded_object_evidence(text,obj.get('label',''))
+                if denied:raise SceneError('规划包含被原文明确排除的对象：'+denied)
+            for relation in base['relations']:
+                denied=contradicted_relation_evidence(text,names.get(relation.get('source'),''),names.get(relation.get('target'),''),relation.get('type'))
+                if denied:raise SceneError('规划关系违反原文否定要求：'+denied)
             if not base["relations"] and len(base["objects"]) > 1:
                 base["unresolved"].append("尚未说明对象间关系；当前保留对象，请补充连接及方向")
             base["requirements"] = {"objects": [o["id"] for o in base["objects"]],
@@ -172,6 +183,7 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                 for key in base["style"]["palette"]:
                     if key in reference["palette"]:
                         base["style"]["palette"][key] = reference["palette"][key]
+            apply_division_context(base,text)
             base = normalize_scene(base)
             if cancelled and cancelled():
                 raise InterruptedError("任务已取消")
@@ -188,18 +200,38 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
     raise SceneError(str(error))
 
 
+def scene_for_model(scene):
+    """Binary artwork is an image resource, never megabytes of text tokens."""
+    result=copy.deepcopy(scene)
+    for obj in result['objects']:
+        illustration=obj.pop('illustration',None)
+        snapshot=obj.pop('asset_snapshot',None)
+        if illustration:obj['artwork']={'kind':'raster','sha256':illustration['sha256'],'editing':'整体重绘使用专门重绘功能，内部像素不能由对象补丁修改'}
+        elif snapshot:obj['artwork']={'kind':'vector-asset','asset_id':obj.get('asset_id','')}
+    return result
+
+
 def propose_revision(scene, instruction, target_ids, config):
     scene = normalize_scene(scene)
     objects = {o["id"]: o for o in scene["objects"]}
     relations = {r["id"]: r for r in scene["relations"]}
+    if not isinstance(instruction,str) or not instruction.strip() or len(instruction)>2000:
+        raise SceneError('请填写 1–2000 字的修改要求')
+    if not isinstance(target_ids,list) or len(target_ids)>1000 or any(not isinstance(x,str) for x in target_ids):
+        raise SceneError('请选择有效的对象列表')
     target_ids = list(dict.fromkeys(target_ids or []))
     if not target_ids:
         raise SceneError("请先选择要修改的对象；全图修改请先全选")
     if any(oid not in objects and oid not in relations for oid in target_ids):
         raise SceneError("选中对象已不存在，请重新选择")
+    if any(objects[oid]['locked'] or not objects[oid]['visible'] for oid in target_ids if oid in objects):
+        raise SceneError('选中对象已锁定或隐藏，请解锁或显示后再修改')
     allowed = set(target_ids)
     # Connected edges may be rerouted, but adjacent unselected objects remain fixed.
-    allowed.update(r["id"] for r in relations.values() if r["source"] in allowed or r["target"] in allowed)
+    allowed.update(r["id"] for r in relations.values() if (r['source'] in target_ids or r['target'] in target_ids)
+                   and not objects[r['source']]['locked'] and not objects[r['target']]['locked'])
+    if any(oid in relations and (objects[relations[oid]['source']]['locked'] or objects[relations[oid]['target']]['locked']) for oid in target_ids):
+        raise SceneError('不能修改连接到锁定对象的连线')
     system = (
         "你是科研矢量图的局部编辑器，只输出 JSON。只修改用户选中的对象或与其直接连接的线，保留其他对象。"
         "不要删除对象、改变ID、增加未经要求的机制或重排整图。文字不小于7pt。"
@@ -207,7 +239,7 @@ def propose_revision(scene, instruction, target_ids, config):
         "连接使用op=update_relation。坐标单位mm，字号pt。无法理解的要求返回operations=[]并在summary解释。"
     )
     data, _ = _request(config, [{"role": "system", "content": system}, {"role": "user", "content": json.dumps(
-        {"instruction": str(instruction)[:2000], "target_ids": target_ids, "allowed_ids": sorted(allowed), "scene": scene}, ensure_ascii=False)}], max_tokens=4200)
+        {"instruction": instruction, "target_ids": target_ids, "allowed_ids": sorted(allowed), "scene": scene_for_model(scene)}, ensure_ascii=False)}], max_tokens=4200)
     operations = data.get("operations")
     if not isinstance(operations, list):
         raise SceneError("模型没有返回有效的局部修改")

@@ -1,4 +1,5 @@
 import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
+import {originalBrief,briefSnapshot,sameBriefSnapshot} from './brief-state.js';
 /** Unified generation, model settings and inspection around the native canvas. */
 export function canApplySavedScene({epoch,dirty,pending,gesture}){return epoch===dirty&&!pending&&!gesture;}
 export function generationPayload({text,mode='vector',width=180,height=120,dpi=300,reference=null,literature=false,originalText,archetype,referenceId,referencePurpose,sketch,previewId}) {
@@ -139,12 +140,15 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   };
 
   async function busy(button,work){button.disabled=true;try{await work();}catch(e){toast(e.message,true);}finally{button.disabled=false;}}
+  function briefContext(){return {size:$('new-size').value,referenceId:state.referenceId||null,referencePurpose:state.referencePurpose||'layout'};}
   $('expand-brief').onclick=()=>busy($('expand-brief'),async()=>{
     const text=$('brief-input').value.trim();if(!text)return toast('先写一句研究构想');
-    const r=await api('/api/optimize',{text:state.originalBrief||text,canvas:[1800,1200],style_dna:state.reference||null});
-    proposed={text:r.text||text,original:text};$('brief-candidate').value=proposed.text;$('brief-preview-dialog').showModal();
+    const snapshot=briefSnapshot(state,text,briefContext()),[width,height]=$('new-size').value.split('x').map(Number),dpi=Number($('generation-dpi').value)||300;
+    const r=await api('/api/optimize',{text:snapshot.original,canvas:[Math.round(width*dpi/25.4),Math.round(height*dpi/25.4)],style_dna:state.reference||null});
+    if(!sameBriefSnapshot(snapshot,state,$('brief-input').value.trim(),briefContext()))throw Error('描述、参考或图版已变化，旧的优化结果未应用，请重新优化');
+    proposed={text:r.text||text,snapshot};$('brief-candidate').value=proposed.text;$('brief-preview-dialog').showModal();
   });
-  $('use-expanded-brief').onclick=()=>{if(!proposed)return;$('brief-input').value=$('brief-candidate').value.slice(0,8000);$('brief-input').dispatchEvent(new Event('input'));state.originalBrief=proposed.original;state.enhancedFrom=proposed.original;$('brief-input').dispatchEvent(new Event('change'));$('brief-preview-dialog').close();toast('增强描述已应用，原始内容仍单独保留');};
+  $('use-expanded-brief').onclick=()=>{if(!proposed)return;if(!sameBriefSnapshot(proposed.snapshot,state,$('brief-input').value.trim(),briefContext()))return toast('原描述或图版已变化，请重新优化',true);const original=proposed.snapshot.original;$('brief-input').value=$('brief-candidate').value.slice(0,8000);state.originalBrief=original;state.enhancedFrom=original;$('brief-input').dispatchEvent(new Event('input'));$('brief-input').dispatchEvent(new Event('change'));proposed=null;$('brief-preview-dialog').close();toast('增强描述已应用，原始内容仍单独保留');};
 
   function wizardFields(){
     const list=$('guide-questions');list.replaceChildren();
@@ -158,7 +162,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     }
   }
   $('open-guide').onclick=()=>{
-    $('guide-seed').value=$('brief-input').value;$('guide-dialog').showModal();$('guide-result').hidden=true;$('guide-status').textContent='先描述要表达的科学内容，再让 AI 提出必要选项。';
+    $('guide-seed').value=originalBrief(state,$('brief-input').value);$('guide-dialog').showModal();$('guide-result').hidden=true;$('guide-status').textContent='先描述要表达的科学内容，再让 AI 提出必要选项。';
   };
   $('guide-load').onclick=()=>busy($('guide-load'),async()=>{
     wizardSource=$('guide-seed').value.trim();if(!wizardSource)return toast('先填写研究内容');
@@ -187,6 +191,6 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   return {refresh,showRight,setMode,legacyZoom,getMode:()=>mode,selection(){refresh();},payload(text){
     if(mode==='image'&&text.length>4000)throw Error('科研插画描述请控制在 4000 字以内；当前描述已保留。');
     const [width,height]=$('new-size').value.split('x').map(Number);
-    return generationPayload({text,mode,width,height,dpi:Number($('generation-dpi').value),reference:state.reference,literature:$('generation-literature').checked,originalText:state.originalBrief,archetype:state.archetype,referenceId:state.referenceId,referencePurpose:state.referencePurpose,sketch:state.sketchSource});
+    return generationPayload({text,mode,width,height,dpi:Number($('generation-dpi').value),reference:state.reference,literature:$('generation-literature').checked,originalText:originalBrief(state,text),archetype:state.archetype,referenceId:state.referenceId,referencePurpose:state.referencePurpose,sketch:state.sketchSource});
   }};
 }

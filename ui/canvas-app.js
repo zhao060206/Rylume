@@ -1,5 +1,6 @@
 import {setupNovice} from './novice-guidance.js';
 import {setupGenerationWorkflow} from './generation-workflow.js';
+import {latestDocumentLoader} from './document-loader.js';
 import {setupWorkspaceModes} from './workspace-modes.js';
 import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
 import {setupDocumentWorkflows} from './document-workflows.js';
@@ -38,18 +39,51 @@ async function flush(){
 }
 async function canLeave(){return !S.pending.length&&!S.saving||await flush();}
 async function refreshJobs(){S.jobs=(await api('/api/jobs?limit=1000')).jobs||[];renderHistory();}
-async function openJob(id){if(!await canLeave())return;try{const data=await api(`/api/jobs/${id}/scene`);S.id=id;S.currentJob=S.jobs.find(j=>j.id===id)||await api(`/api/jobs/${id}`);S.revision=data.revision;S.svg=data.svg;S.audit=data.audit;S.pending=[];S.conflict=false;S.saveError=null;S.saveFailures=0;S.dirty=0;$('error-banner').hidden=true;$('canvas-host').classList.remove('legacy-preview');$('canvas-hint').textContent='V 选择 · H 平移 · C 连线 · 双击改字';editor.setDocument(data.scene,data.svg);$('welcome').hidden=true;$('toggle-export').disabled=false;$('project-title').textContent=data.scene.title;$('brief-input').value=data.scene.source_text;S.originalBrief=data.scene.source_text;S.enhancedFrom=null;updateCount();$('canvas-size').textContent=`${data.scene.canvas.width_mm} × ${data.scene.canvas.height_mm} mm · ${data.scene.objects.some(o=>o.illustration)?'对象插画':'矢量对象'}`;saveStatus(`已保存 · r${S.revision}`);history.replaceState(null,'',`/#${id}`);renderProperties();renderAudit();renderLayers();renderTools();workspaceUI?.refresh();annotationUI?.load(id);await documentUI?.opened(data);noviceUI?.opened(data);modesUI?.opened();generationUI?.opened(data.scene);}catch(error){if(error.data?.legacy){const job=S.jobs.find(j=>j.id===id)||await api(`/api/jobs/${id}`);await openLegacy(job);}else toast(error.message,true);}}
-async function openLegacy(job){
+const loadDocument=latestDocumentLoader({canLeave,readVersion:()=>S.id+':'+S.revision,onError:error=>toast(error.message,true),async load(id){
+ let data,legacy=false,svg='';
+ try{data=await api(`/api/jobs/${id}/scene`);}catch(error){if(!error.data?.legacy)throw error;legacy=true;}
+ const job=S.jobs.find(j=>j.id===id)||await api(`/api/jobs/${id}`);
+ if(legacy&&job.svg_url){const response=await fetch(job.svg_url);if(!response.ok)throw Error('原图文件暂不可用');svg=await response.text();}
+ return {id,data,job,legacy,svg};
+},async apply({id,data,job,legacy,svg},current){
+ if(legacy)return openLegacy(job,svg);
+ S.id=id;S.currentJob=job;S.revision=data.revision;S.svg=data.svg;S.audit=data.audit;S.pending=[];S.conflict=false;S.saveError=null;S.saveFailures=0;S.dirty=0;
+ $('error-banner').hidden=true;$('canvas-host').classList.remove('legacy-preview');$('canvas-hint').textContent='V 选择 · H 平移 · C 连线 · 双击改字';editor.setDocument(data.scene,data.svg);
+ $('welcome').hidden=true;$('toggle-export').disabled=false;$('project-title').textContent=data.scene.title;$('brief-input').value=data.scene.source_text;S.originalBrief=data.scene.source_text;S.enhancedFrom=null;updateCount();
+ $('canvas-size').textContent=`${data.scene.canvas.width_mm} × ${data.scene.canvas.height_mm} mm · ${data.scene.objects.some(o=>o.illustration)?'对象插画':'矢量对象'}`;saveStatus(`已保存 · r${S.revision}`);history.replaceState(null,'',`/#${id}`);
+ renderProperties();renderAudit();renderLayers();renderTools();workspaceUI?.refresh();annotationUI?.load(id);
+ const generationOpened=generationUI?.opened(data.scene);
+ await documentUI?.opened(data);if(!current())return;
+ await generationOpened;if(!current())return;noviceUI?.opened(data);modesUI?.opened();
+}});
+async function openJob(id){return loadDocument(id);}
+async function openLegacy(job,svg=''){
   editor.clear();annotationUI?.load(null);S.id=job.id;S.currentJob=job;S.revision=0;S.pending=[];S.audit=null;S.svg='';S.conflict=false;
   const host=$('canvas-host');host.classList.add('legacy-preview');
-  if(job.svg_url){const response=await fetch(job.svg_url);if(!response.ok)throw Error('原图文件暂不可用');S.svg=await response.text();const art=sanitizedSvg(S.svg);art.id='legacy-art';host.append(art);}
+  if(job.svg_url){S.svg=svg;const art=sanitizedSvg(S.svg);art.id='legacy-art';host.append(art);}
   else if(job.png_url||job.preview_url){const art=el('img');art.src=job.png_url||job.preview_url;art.id='legacy-art';art.alt=job.title||'科研插画';host.append(art);}
   else host.append(el('p','legacy-placeholder',job.error||job.message||'此任务尚无可预览的成图，可在右侧查看任务信息。'));
   $('welcome').hidden=true;$('toggle-export').disabled=!job.svg_url&&!job.png_url;$('project-title').textContent=job.title||'历史图版';
   $('brief-input').value=job.original_text||job.text||'';S.originalBrief=$('brief-input').value;S.enhancedFrom=null;updateCount();saveStatus('原图预览 · 历史版本保留');
+  generationUI?.opened({});
   history.replaceState(null,'',`/#${job.id}`);$('canvas-size').textContent='原图预览 · '+(job.canvas_mm?job.canvas_mm.join(' × ')+' mm':'尺寸见任务信息');$('canvas-hint').textContent='原图预览 · 滚轮缩放 · 右侧查看任务或重建可编辑副本';renderTools();$('canvas-hint').textContent='原图预览 · 滚轮缩放 · 右侧查看任务或重建可编辑副本';renderProperties();renderAudit();workspaceUI?.legacyZoom(1);workspaceUI?.showRight('task');
 }
-async function follow(id){S.active=id;workspaceUI?.refresh();$('generation-status').hidden=false;$('generate').disabled=true;try{for(;;){const job=await api(`/api/jobs/${id}`);$('generation-text').textContent=job.message||'正在生成';$('generation-progress').value=job.progress||0;$('generation-stage-list').replaceChildren(...(job.stages||[]).map(stage=>el('span','stage-pill '+stage.state,stage.label||stage.name||stage.title||stage.id||stage.stage||'处理中')));if(job.status==='completed'){await refreshJobs();await openJob(id);if(job.illustration_result?.state==='partial')toast('插画没有全部完成，已保留可编辑草稿。请查看内容建议。',true);workspaceUI?.refresh();break;}if(['failed','cancelled','error'].includes(job.status)){if(job.scene_revision){await refreshJobs();await openJob(id);}throw Error(job.error||job.message||'任务未完成');}await new Promise(r=>setTimeout(r,800));}}catch(error){toast(error.message,true);}finally{S.active=null;workspaceUI?.refresh();$('generation-status').hidden=true;$('generate').disabled=false;}}
+let followPromise=null;
+function follow(id){
+ if(followPromise){if(S.active===id)return followPromise;toast('已有生成任务正在处理，新任务已保留在最近图版',true);return Promise.resolve({status:'error',message:'已有任务正在处理，请在最近图版查看新任务。'});}
+ followPromise=trackGeneration(id).finally(()=>{followPromise=null;});return followPromise;
+}
+async function trackGeneration(id){
+ S.active=id;workspaceUI?.refresh();$('generation-status').hidden=false;$('generate').disabled=true;let terminal=null;
+ try{for(;;){
+  const job=await api(`/api/jobs/${id}`);$('generation-text').textContent=job.message||'正在生成';$('generation-progress').value=job.progress||0;
+  $('generation-stage-list').replaceChildren(...(job.stages||[]).map(stage=>el('span','stage-pill '+stage.state,stage.label||stage.name||stage.title||stage.id||stage.stage||'处理中')));
+  if(job.status==='completed'){terminal=job;await refreshJobs();const opened=await openJob(id);if(job.illustration_result?.state==='partial')toast('插画没有全部完成，已保留可编辑草稿。请查看内容建议。',true);return {...job,opened};}
+  if(['failed','cancelled','error'].includes(job.status)){terminal=job;if(job.scene_revision){await refreshJobs();await openJob(id);}throw Error(job.error||job.message||'任务未完成');}
+  await new Promise(r=>setTimeout(r,800));
+ }}catch(error){toast(error.message,true);return terminal||{status:'error',error:error.message};}
+ finally{S.active=null;workspaceUI?.refresh();$('generation-status').hidden=true;generationUI?.refresh();}
+}
 async function sample(id){if(S.active)return toast('已有生成任务，请等待完成或先取消');if(!await canLeave())return;try{const dims=$('new-size').value.split('x').map(Number);await follow((await api('/api/scene/example',{example:id,template:({egfr:'signal_lipid',jak_stat:'signal_relay',tgf_smad:'signal_nucleus',exosome:'process_strip',wound:'process_grid',tme:'network_orbit',nlrp3:'assembly_tiers',workflow:'workflow_strip'}[id]),canvas_mm:dims})).job_id);}catch(e){toast(e.message,true);}}
 async function blank(){if(S.active)return toast('已有生成任务，请等待完成或先取消');if(!await canLeave())return;try{const result=await api('/api/scene/blank',{});await refreshJobs();await openJob(result.job_id);tab('assets');editor.fit();}catch(e){toast(e.message,true);}}
 function tab(name, toggle=false){
@@ -80,7 +114,12 @@ function renderProperties(){
   input(basic,'字号 · pt',o.font_size_pt,'number',v=>{if(v<7||v>48){toast('字号可设为 7–48 pt');return renderProperties();}editor.changeSelection({font_size_pt:v});});
   input(basic,'填充颜色',o.fill||'#dae8ed','color',v=>editor.changeSelection({fill:v}));input(basic,'轮廓颜色',o.stroke||'#326c82','color',v=>editor.changeSelection({stroke:v}));
   const bio=section(parent,'状态与说明');
-  if(o.type==='cell')input(bio,'细胞分期',o.state,'select',v=>editor.changeSelection({state:v,illustration:null}),[['','默认细胞'],['interphase','间期'],['prophase','前期'],['prometaphase','前中期'],['metaphase','中期'],['anaphase','后期'],['telophase','末期'],['cytokinesis','胞质分裂'],['apoptotic','凋亡']]);
+  if(o.type==='cell'){
+   const plant=o.state?.startsWith('plant_'),prefix=plant?'plant_':'',phaseChoices=[['interphase','间期'],['prophase','前期'],['prometaphase','前中期'],['metaphase','中期'],['anaphase','后期'],['telophase','末期'],['cytokinesis','胞质分裂']].map(([value,label])=>[prefix+value,label]);
+   const options=[['',plant?'通用细胞':'默认细胞'],...phaseChoices,...(plant?[]:[['apoptotic','凋亡']])];
+   if(o.state&&!options.some(([value])=>value===o.state))options.push([o.state,'当前自定义状态']);
+   input(bio,plant?'植物细胞分期':'细胞分期',o.state,'select',v=>editor.changeSelection({state:v,illustration:null}),options);
+  }
   input(bio,'状态文字',o.state,'text',v=>editor.changeSelection({state:v,illustration:null}));
   if(o.illustration)parent.append(el('p','muted small','这是独立插画对象，可移动和缩放。更改分期将恢复对应矢量形态；像素内部结构不能直接拖动。'));
   const detail=advanced('精确位置、尺寸与文字偏移'),dims=section(detail,'位置与尺寸 · mm');

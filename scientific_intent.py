@@ -17,6 +17,79 @@ MEIOSIS = re.compile(r'减数分裂|\bmeiosis\b|\bmeiotic\b',re.I)
 ENGINEERING = re.compile(r'机器人|控制器|传感器|执行器|控制系统|闭环控制|反馈控制|电化学|电池|燃料电池|光伏|太阳能|生命周期评价|robot|controller|actuator|sensor|closed.loop control|fuel cell|solar cell|battery|life.cycle assessment',re.I)
 BIOLOGY = re.compile(r'细胞|有丝分裂|减数分裂|蛋白|受体|配体|胞质|染色体|纺锤|核膜|信号通路|囊泡|肿瘤|免疫|\bmitosis\b|\bmitotic\b|\bmeiosis\b|\bprotein\b|\breceptor\b|\bligand\b|\bvesicle\b|\bchromosome\w*\b|\bspindle\b|\bcell(?:ular)?\b',re.I)
 SOURCE = 'https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle'
+PLANT_CONTEXT=re.compile(r'植物|洋葱|拟南芥|水稻|玉米|烟草|\b(?:plant|onion|arabidopsis|rice|maize|tobacco)\b',re.I)
+SPECIAL_DIVISION=re.compile(r'非经典|异常|无丝|突变|非对称|酵母|真菌|闭合.{0,8}分裂|核膜.{0,6}(?:不破|始终|一直)|无中心体|无星射线|non.?canonical|mutant|abnormal|asymmetric|yeast|fungal|closed mitosis|(?:no|without) (?:centrosomes|asters)',re.I)
+EXPERIMENT_OR_MECHANISM=re.compile(r'实验(?:流程|方案|步骤)|免疫染色|调控|机制|检查点|纺锤体组装|\b(?:protocol|assay|experimental|mechanism|regulator|checkpoint|kinase)\b|spindle assembly',re.I)
+_NEGATIVE_PHASE=re.compile(r'不要(?:画|显示|包含|包括|绘制)?|不(?:画|显示|含|包含|包括|绘制)|排除|省略|略去|去掉|\b(?:exclude|omit|without|except)\b|\b(?:do not|never)\s+(?:show|draw|include|depict)\b',re.I)
+
+
+def classical_mitosis_compatible(text):
+    text=str(text or '')
+    return not (MEIOSIS.search(text) or PLANT_CONTEXT.search(text) or SPECIAL_DIVISION.search(text)
+                or ENGINEERING.search(text) or EXPERIMENT_OR_MECHANISM.search(text))
+
+
+def apply_division_context(scene,text):
+    """Keep the same authored phase while selecting an appropriate glyph family."""
+    plant=bool(PLANT_CONTEXT.search(str(text))) and not bool(MEIOSIS.search(str(text))) and not bool(re.search(r'非经典|异常|突变|非对称|闭合|封闭|non.?canonical|mutant|abnormal|asymmetric|closed',str(text),re.I))
+    special=bool(MEIOSIS.search(str(text)) or SPECIAL_DIVISION.search(str(text)))
+    if not plant and not special:return scene
+    warned=False
+    for obj in scene.get('objects',[]):
+        if obj.get('locked') or obj.get('illustration'):continue
+        if plant and obj.get('type')=='process' and labeled_cell_phase(obj.get('label',''),biological_context=True):obj['type']='cell'
+        if obj.get('type') not in ('cell','stem_cell'):continue
+        phase=canonical_phase(obj.get('state','')) or labeled_cell_phase(obj.get('label',''),biological_context=True)
+        if not phase:continue
+        if plant:
+            obj['state']='plant_'+phase
+            obj.pop('asset_id',None);obj.pop('asset_snapshot',None)
+        elif obj.get('asset_id'):
+            continue
+        elif obj.get('state','') in ('',phase):
+            obj['state']='special_'+phase
+            warned=True
+    if warned:
+        message='该物种或分裂方式不能使用通用动物细胞分期图元；当前保留通用细胞草稿，请使用相符素材或 AI 插画细化特异结构。'
+        if message not in scene['unresolved']:scene['unresolved'].append(message)
+    return scene
+
+
+def requested_phase_tokens(text):
+    """Track explicit exclusion lists independently of ordinary phase mentions."""
+    text=str(text);states={}
+    for match in _PHASE_RE.finditer(text):
+        prefix=re.split(r'[。；;\n.!?！？]',text[:match.start()])[-1]
+        negatives=list(_NEGATIVE_PHASE.finditer(prefix));excluded=False
+        if negatives:
+            tail=_PHASE_RE.sub('',prefix[negatives[-1].end():])
+            tail=re.sub(r'\b(?:and|or|the|stage|stages|phase|phases)\b|阶段|细胞|和|及|与|或|的','',tail,flags=re.I)
+            excluded=not bool(re.search(r'[A-Za-z\u3400-\u9fff]',tail))
+        if re.match(r'\s*(?:阶段)?\s*(?:不画|不显示|不包含|省略)',text[match.end():]):excluded=True
+        states[match.lastgroup]=excluded
+    return [k for k,v in states.items() if not v],[k for k,v in states.items() if v]
+
+
+def excluded_object_evidence(text,label):
+    """Only explicit global 'do not add X' constraints; no guessing conditional absence."""
+    if not label:return ''
+    name=re.escape(label)
+    if re.search(r'[A-Za-z0-9]',label):name=r'(?<![A-Za-z0-9_])'+name+r'(?![A-Za-z0-9_])'
+    match=re.search(r'(?:不要添加|不要加入|不添加|不加入|\b(?:do not|never)\s+add\s+(?:the\s+)?)\s*'+name,str(text),re.I)
+    return match.group(0) if match else ''
+
+
+def contradicted_relation_evidence(text,source,target,kind):
+    if kind not in ('activates','inhibits') or not source or not target:return ''
+    def name(value):return r'(?<![A-Za-z0-9_])'+re.escape(value)+r'(?![A-Za-z0-9_])'
+    negative=r'\s*(?:(?:does|do|did|can|will)\s+not|cannot|never|不(?:会|能|直接)?|未(?:能|直接)?|没有)\s*(?:directly\s+)?'
+    verb=r'(?:activat(?:e|es|ed)|激活|促进)' if kind=='activates' else r'(?:inhibit(?:s|ed)?|抑制)'
+    gap=r'\s*(?:the\s+)?'
+    pattern=name(source)+negative+verb+gap+name(target)
+    match=re.search(pattern,str(text),re.I)
+    if not match and kind=='activates':
+        match=re.search(name(target)+r'\s+(?:is|was)\s+not\s+(?:directly\s+)?activated\s+by\s+'+name(source),str(text),re.I)
+    return match.group(0) if match else ''
 PHASE_FEATURES = {
     'interphase':'Exactly one cell with a continuous intact nuclear envelope, visible nucleolus and diffuse chromatin; no condensed X-shaped chromosomes or bipolar spindle.',
     'prophase':'Exactly one cell with chromosomes condensing INSIDE a continuous intact nuclear envelope. The nuclear envelope must be a complete unbroken boundary, NOT dashed, fragmented, dissolved or absent. Centrosomes separate outside the nucleus and form asters; spindle fibres must not cross the intact nuclear envelope.',
@@ -61,19 +134,27 @@ def intent_contract(original_text):
     text=str(original_text or '')
     mitosis=bool(MITOSIS.search(text)) and not bool(MEIOSIS.search(text))
     engineering=bool(ENGINEERING.search(text))
-    biology=bool(BIOLOGY.search(text)) and (mitosis or not engineering)
-    phases=phase_tokens(text)
+    concrete_biology=bool(re.search(r'细胞|蛋白|受体|染色体|\b(?:protein|receptor|chromosome|animal cell|plant cell|human cell)\b',text,re.I))
+    biology=bool(BIOLOGY.search(text)) and (not engineering or concrete_biology)
+    phases,excluded=requested_phase_tokens(text)
     temporal=mitosis or bool(re.search(r'细胞周期|\bcell cycle\b|\bcell division\b',text,re.I))
     return {'domain':'biology' if biology else 'engineering' if engineering else 'general',
             'layout_kind':'process' if temporal else 'network' if re.search(r'互作|网络|反馈|network|feedback',text,re.I) else 'auto',
-            'explicit_phases':phases,'requires_mitosis':mitosis,
+            'explicit_phases':phases,'excluded_phases':excluded,'requires_mitosis':mitosis,
+            'depicts_phases':bool(re.search(r'分期|全周期|全过程|有丝分裂.{0,8}(?:流程|过程|周期|[:：])|\b(?:mitosis|mitotic)\s+(?:stages|phases|cycle|process)\b|\b(?:draw|show|depict)\b.{0,35}\b(?:cells|phases|stages)\b',text,re.I)),
             'expects_cycle':temporal and bool(re.search(r'全周期|闭环|循环|cycle|cyclic|回环',text,re.I))}
 
 
 def mitosis_candidate(original_text,width_mm=180,height_mm=120):
     contract=intent_contract(original_text)
-    if not contract['requires_mitosis'] or contract['explicit_phases'] or re.search(r'非经典|异常|无丝|突变|非对称|植物|酵母|真菌|高等植物|non.?canonical|mutant|abnormal|asymmetric|plant|yeast|fungal|(?:不要|不含|不画).{0,12}有丝分裂|(?:do not|without|exclude).{0,18}mitosis',original_text,re.I):
+    if not contract['requires_mitosis'] or contract['explicit_phases'] or contract['excluded_phases'] or not classical_mitosis_compatible(original_text) or re.search(r'(?:不要|不含|不画).{0,12}有丝分裂|(?:do not|without|exclude).{0,18}mitosis',original_text,re.I):
         return None
+    # This shortcut is only for a plain request for the general stages.
+    # Mentioning mitosis in a specific interaction is not authorization to
+    # replace that study with a textbook cycle.
+    remainder=re.sub(r'\b(?:please|draw|show|create|generate|make|a|an|the|of|for|eukaryotic|animal|human|cell|cells|mitosis|mitotic|full|complete|cycle|stages|phases|process|diagram|figure|flowchart|schematic)\b','',original_text,flags=re.I)
+    remainder=re.sub(r'有丝分裂|真核|哺乳动物|动物|人类|细胞|全周期|全过程|生命周期|周期|分期|流程图|流线图|流程|过程|闭环|循环|示意图|绘制|生成|制作|帮我|请|画|一张|一个|的|图','',remainder)
+    if re.search(r'[A-Za-z\u3400-\u9fff]',remainder):return None
     from scene_document import empty_scene,normalize_scene
     scene=empty_scene(title='有丝分裂 · 经典分期候选',source_text=original_text,width_mm=width_mm,height_mm=height_mm)
     scene['layout']='process'
@@ -110,6 +191,7 @@ def mitosis_candidate(original_text,width_mm=180,height_mm=120):
 
 def phase_sketch(original_text,config):
     """Known phase labels can be drawn without asking a model to rediscover them."""
+    if not classical_mitosis_compatible(original_text):return None
     source=config.get('sketch_scene')
     reference=config.get('reference_contract') or {}
     if source:
