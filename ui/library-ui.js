@@ -380,7 +380,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   }
 
   function selectDomain(pid){assetDomain=pid;assetCategory='';assetLimit=60;$('asset-domain').value=pid;renderAssetChips();renderAssets();}
-  function openPackTemplates(pid){group='science';filter=state.assetDomains.find(d=>d.id===pid)?.title||'';structure='';for(const b of $('template-groups').children){b.classList.toggle('active',b.textContent==='机制示意');b.setAttribute('aria-pressed',String(b.textContent==='机制示意'));}openGallery();}
+  function openPackTemplates(pid){group='science';filter=state.assetDomains.find(d=>d.id===pid)?.title||'';structure='';for(const b of $('template-groups').children){b.classList.toggle('active',b.textContent==='机制示意');b.setAttribute('aria-pressed',String(b.textContent==='机制示意'));}for(const b of $('gallery-filters').querySelectorAll('button')){if(b.textContent===filter||b.textContent==='全部主题'){b.classList.toggle('active',b.textContent===filter);b.setAttribute('aria-pressed',String(b.textContent===filter));}}openGallery();}
   return {init,renderReferences,renderAssets,renderTemplates,openGallery,showTemplate,insert,selectDomain,openPackTemplates,applyTemplate:preview};
 }
 

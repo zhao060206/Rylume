@@ -36,7 +36,9 @@ try{
     Log 'Starting the new application'
     $child=Launch $target $true
     $healthy=$false
-    for($i=0;$i -lt 90;$i++){
+    $healthTimeout=90
+    if($plan.health_timeout -and [int]$plan.health_timeout -ge 5 -and [int]$plan.health_timeout -le 120){$healthTimeout=[int]$plan.health_timeout}
+    for($i=0;$i -lt $healthTimeout;$i++){
         Start-Sleep -Seconds 1
         if(Test-Path -LiteralPath $plan.health_file){
             $ack=Get-Content -LiteralPath $plan.health_file -Raw | ConvertFrom-Json
@@ -47,6 +49,8 @@ try{
     if(-not $healthy){throw 'New application failed its startup health confirmation'}
     Log 'Update complete; previous application retained as rollback backup'
     @{state='completed';version=$plan.version;backup=$backup} | ConvertTo-Json | Set-Content -LiteralPath ((Split-Path -Parent $planFile)+'\result.json') -Encoding UTF8
+    try{if(Within $stage ($data+'\updates\staged')){Remove-Item -LiteralPath $stage -Recurse -Force}}
+    catch{Log 'Update succeeded; staging cleanup deferred because a file is busy'}
 }catch{
     Log ('Update failed: '+$_.Exception.Message)
     if($swapped){

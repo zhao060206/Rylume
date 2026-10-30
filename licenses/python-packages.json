@@ -291,5 +291,61 @@
     "notices": [
       "python-packages/xlsxwriter-3.2.9/LICENSE.txt"
     ]
+  },
+  {
+    "name": "pyOpenSSL",
+    "version": "26.2.0",
+    "license": "Apache License, Version 2.0",
+    "notices": [
+      "python-packages/pyOpenSSL-26.2.0/LICENSE"
+    ]
+  },
+  {
+    "name": "h2",
+    "version": "4.3.0",
+    "license": "The MIT License (MIT)\n\nCopyright (c) 2015-2020 Cory Benfield and contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "notices": [
+      "python-packages/h2-4.3.0/LICENSE"
+    ]
+  },
+  {
+    "name": "hpack",
+    "version": "4.2.0",
+    "license": "MIT",
+    "notices": [
+      "python-packages/hpack-4.2.0/LICENSE"
+    ]
+  },
+  {
+    "name": "hyperframe",
+    "version": "6.1.0",
+    "license": "The MIT License (MIT)\n\nCopyright (c) 2014 Cory Benfield\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "notices": [
+      "python-packages/hyperframe-6.1.0/LICENSE"
+    ]
+  },
+  {
+    "name": "simplejson",
+    "version": "4.2.0",
+    "license": "MIT OR AFL-2.1",
+    "notices": [
+      "python-packages/simplejson-4.2.0/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "PySocks",
+    "version": "1.7.1",
+    "license": "BSD",
+    "notices": [
+      "python-packages/PySocks-1.7.1/LICENSE"
+    ]
+  },
+  {
+    "name": "zstandard",
+    "version": "0.25.0",
+    "license": "BSD-3-Clause",
+    "notices": [
+      "python-packages/zstandard-0.25.0/LICENSE"
+    ]
   }
 ]

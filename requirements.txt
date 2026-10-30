@@ -14,3 +14,11 @@ json-repair==0.64.1
 vtracer==0.6.15
 rapidocr-onnxruntime==1.2.3
 onnxruntime==1.27.0
+# HTTP capabilities present in the verified Windows bundle
+pyOpenSSL==26.2.0
+h2==4.3.0
+hpack==4.2.0
+hyperframe==6.1.0
+simplejson==4.2.0
+PySocks==1.7.1
+zstandard==0.25.0

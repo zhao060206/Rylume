@@ -24,7 +24,14 @@ class UpdateManager:
         self.launcher=launcher or subprocess.Popen;self.cancel_event=threading.Event();self.release=None;self.stage=None
         self.info={'state':'idle','current_version':self.current,'latest_version':None,'progress':0,'error':'','can_apply':False}
     def status(self):
-        with self.lock:return {'ok':True,**copy.deepcopy(self.info)}
+        with self.lock:
+            info=copy.deepcopy(self.info)
+        try:
+            result=sorted((self.root/'apply').glob('*/result.json'),key=lambda p:p.stat().st_mtime)[-1]
+            previous=json.loads(result.read_text(encoding='utf-8-sig'))
+            if previous.get('state')=='rolled_back':info['last_update_message']='上次更新未能启动，已恢复旧版。可以重新检查并下载。'
+        except (OSError,ValueError,IndexError):pass
+        return {'ok':True,**info}
     def _set(self,**kwargs):
         with self.lock:self.info.update(kwargs)
     def check(self):
@@ -33,7 +40,9 @@ class UpdateManager:
             self._set(state='checking',error='')
         def work():
             try:
-                try:d=json.loads(self.delivery.read(f'https://github.com/{REPOSITORY}/releases/latest/download/update.json',limit=128*1024))
+                try:
+                    d=json.loads(self.delivery.read(f'https://github.com/{REPOSITORY}/releases/latest/download/update.json',limit=128*1024))
+                    if not isinstance(d,dict) or not d.get('tag_name') or not isinstance(d.get('assets'),list):raise DeliveryError('更新目录格式无效')
                 except Exception:d=json.loads(self.delivery.read(f'https://api.github.com/repos/{REPOSITORY}/releases/latest'))
                 version=d.get('tag_name','').removeprefix('v');new=version_tuple(version)>version_tuple(self.current)
                 if d.get('draft') or d.get('prerelease'):raise DeliveryError('此版本不是正式发行版')
@@ -70,7 +79,9 @@ class UpdateManager:
                 self._set(state='validating',progress=88)
                 checked_zip(file,stage)
                 candidate=stage/'Rylume'
-                if not (candidate/'Rylume.exe').is_file() or not (candidate/'_internal/python313.dll').is_file() or not (candidate/'_internal/ui/canvas-studio.html').is_file():raise DeliveryError('下载包缺少完整的 Rylume 程序文件')
+                if not (candidate/'Rylume.exe').is_file() or not any(re.fullmatch(r'python3\d{1,2}\.dll',p.name) for p in (candidate/'_internal').glob('python3*.dll')) or not (candidate/'_internal/ui/canvas-studio.html').is_file():raise DeliveryError('下载包缺少完整的 Rylume 程序文件')
+                with (candidate/'Rylume.exe').open('rb') as executable:
+                    if executable.read(2)!=b'MZ':raise DeliveryError('下载的程序不是 Windows 可执行文件')
                 forbidden={'config.json','config.local.json','local-key.txt','studio-jobs','exports','webview-profile'}
                 if any(p.name.lower() in forbidden for p in candidate.rglob('*')):raise DeliveryError('安装包混入本机配置或任务，已拒绝更新')
                 if self.cancel_event.is_set():raise Cancelled('更新下载已取消')
@@ -84,7 +95,11 @@ class UpdateManager:
                 if self.stage is None and stage.exists() and stage.resolve().is_relative_to((self.root/'staged').resolve()):shutil.rmtree(stage)
         self.stage=None
         threading.Thread(target=work,daemon=True,name='update-download').start();return self.status()
-    def cancel(self):self.cancel_event.set();return self.status()
+    def cancel(self):
+        self.cancel_event.set()
+        with self.lock:
+            if self.info['state']=='ready':self.stage=None;self._set(state='cancelled',can_apply=False,message='已放弃本次安装；当前版本保持可用')
+        return self.status()
     def apply(self,restart_args=None,helper=None):
         if not self.frozen or sys.platform!='win32':raise DeliveryError('自动替换仅支持 Windows 打包版；源码版请自行更新源码')
         if self.info['state']!='ready' or not self.stage:raise DeliveryError('请先完成下载和校验')

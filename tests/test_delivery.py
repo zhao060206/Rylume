@@ -124,7 +124,7 @@ def test_semantic_versions_and_prerelease():
 def release_fixture(tmp_path):
     file=tmp_path/'app.zip'
     with zipfile.ZipFile(file,'w') as z:
-        z.writestr('Rylume/Rylume.exe','fixture')
+        z.writestr('Rylume/Rylume.exe',b'MZfixture')
         z.writestr('Rylume/_internal/python313.dll','fixture')
         z.writestr('Rylume/_internal/ui/canvas-studio.html','fixture')
     asset={'name':'Rylume-3.1.0-Windows-x64.zip','size':file.stat().st_size,'digest':'sha256:'+hashlib.sha256(file.read_bytes()).hexdigest(),'browser_download_url':'https://github.com/zhao060206/Rylume/releases/download/v3.1.0/Rylume-3.1.0-Windows-x64.zip'}

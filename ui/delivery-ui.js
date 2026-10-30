@@ -27,11 +27,14 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   if(models)models.before(top);else document.querySelector('header')?.append(top);
   const assetOpen=el('button','button full secondary','下载其他学科素材与模板');document.getElementById('panel-assets')?.append(assetOpen);
   const templateOpen=el('button','text-button full','管理学科资源包');document.getElementById('panel-templates')?.append(templateOpen);
-  let view='resources',focused='',timer=null,data=null,update=null,revisionSignature='',manualCheck=false,lastState='';
+  let view='resources',focused='',timer=null,data=null,update=null,revisionSignature='',manualCheck=false,lastState='',renderedPacks='';
   function showView(name){view=name;resourcePage.hidden=name!=='resources';updatePage.hidden=name!=='updates';resourceTab.setAttribute('aria-selected',String(name==='resources'));updateTab.setAttribute('aria-selected',String(name==='updates'));}
   resourceTab.onclick=()=>showView('resources');updateTab.onclick=()=>{showView('updates');loadUpdate();};
   function renderPacks(){
-    if(!data)return;resourceStatus.textContent=data.refreshing?'正在刷新 GitHub 目录…':data.error||'官方 GitHub 资源包 · 原创可编辑矢量';refresh.disabled=data.refreshing;
+    if(!data)return;
+    const key=JSON.stringify([data,focused]);if(key===renderedPacks)return;renderedPacks=key;
+    const active=document.activeElement,focusPack=active?.closest?.('[data-pack]')?.dataset.pack,focusAction=active?.textContent;
+    resourceStatus.textContent=data.refreshing?'正在刷新 GitHub 目录…':data.error||'官方 GitHub 资源包 · 原创可编辑矢量';refresh.disabled=data.refreshing;
     rows.replaceChildren();
     const builtin=el('article','pack-row');builtin.append(el('div','pack-number','01'));const bio=el('div','pack-copy');bio.append(el('h3','','生物学'),el('p','muted small','细胞、分子、组织与机制图 · 已随软件提供'));builtin.append(bio,el('span','pack-installed','内置'));rows.append(builtin);
     data.packs.forEach((p,i)=>{
@@ -55,6 +58,7 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
       if(p.task?.error)copy.append(el('p','delivery-error',p.task.error));
       row.append(count,copy,buttons);rows.append(row);
     });
+    if(focusPack){const row=rows.querySelector(`[data-pack="${focusPack}"]`);[...(row?.querySelectorAll('button')||[])].find(b=>b.textContent===focusAction)?.focus({preventScroll:true});}
   }
   async function syncCatalog(){const fresh=await api('/api/scene/catalog');await reloadCatalog(fresh);}
   async function loadPacks(){
@@ -69,10 +73,10 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   function renderUpdate(){
     if(!update)return;const s=update.state;versionTitle.textContent=`当前版本 ${update.current_version}`;
     versionNote.textContent=s==='available'?`发现新版本 ${update.latest_version}`:s==='up_to_date'?'已是最新正式版本':s==='ready'?'新版已下载并通过校验':s==='installing'?'正在重启更新…':s==='cancelled'?'已取消下载，当前软件可继续使用':s==='failed'?'本次检查或下载未完成':s==='checking'?'正在检查 GitHub 最新版本…':s==='downloading'?`正在下载 ${update.latest_version}`:s==='validating'?'正在核对并解压安装包':'从 GitHub 检查最新正式版本';
-    updateStatus.textContent=update.error||update.message||(s==='downloading'?`${byteSize(update.downloaded||0)} / ${byteSize(update.total||0)}`:'');
+    updateStatus.textContent=update.error||update.message||update.last_update_message||(s==='downloading'?`${byteSize(update.downloaded||0)} / ${byteSize(update.total||0)}`:'');
     updateStatus.classList.toggle('delivery-error',s==='failed');updateProgress.hidden=!['downloading','validating','ready'].includes(s);updateProgress.value=update.progress||0;
     check.disabled=busyUpdate(s)||s==='ready';download.hidden=!update.latest_version||!['available','cancelled','failed'].includes(s);download.disabled=busyUpdate(s);
-    cancel.hidden=!['downloading','validating'].includes(s);apply.hidden=s!=='ready'||!update.can_apply;
+    cancel.hidden=!['downloading','validating','ready'].includes(s);cancel.textContent=s==='ready'?'放弃本次安装':'取消下载';apply.hidden=s!=='ready'||!update.can_apply;
     releaseLink.hidden=!update.release_url;releaseLink.href=update.release_url||'https://github.com/zhao060206/Rylume/releases';
     notes.hidden=!update.notes;notesText.textContent=update.notes||'';
     top.textContent=['available','downloading','validating','ready'].includes(s)?'发现新版本 · '+update.latest_version:'资源与更新';top.classList.toggle('has-update',['available','ready'].includes(s));
