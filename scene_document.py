@@ -83,7 +83,7 @@ def empty_scene(title="未命名图版", source_text="", width_mm=180, height_mm
         "canvas": {"width_mm": width_mm, "height_mm": height_mm},
         "style": copy.deepcopy(DEFAULT_STYLE), "compartments": [], "objects": [],
         "relations": [], "annotations": [], "unresolved": [],
-        "requirements": {"objects": [], "relations": []}, "provenance": {},
+        "requirements": {"objects": [], "relations": []}, "provenance": {}, "generation_contract": {},
     }
 
 
@@ -173,6 +173,16 @@ def normalize_scene(value):
                "label_dx": _number(o.get("label_dx", 0), "label_dx"),
                "label_dy": _number(o.get("label_dy", 0), "label_dy"),
                "evidence": _text(o.get("evidence", ""), 1000)}
+        if o.get('evidence_source') in ('user_text','reference_image','canvas_sketch','knowledge'):
+            out['evidence_source'] = o['evidence_source']
+            out['evidence_ref'] = _text(o.get('evidence_ref',''),240)
+        if o.get('illustration'):
+            from figure_assets import validate_illustration
+            illustration = o['illustration']
+            if not isinstance(illustration, dict):
+                raise SceneError('插画对象格式无效')
+            data = illustration.get('data')
+            out['illustration'] = {'data': data, 'sha256': validate_illustration(data), 'kind': 'generated-raster'}
         if o.get("asset_id"):
             from scientific_library import library
             if not isinstance(o['asset_id'],str) or not IDENTIFIER.fullmatch(o['asset_id']):raise SceneError('未知科研素材，请使用素材库')
@@ -197,6 +207,8 @@ def normalize_scene(value):
             out["stroke_pt"] = _number(o["stroke_pt"], "线宽", 0.2, 6)
         clean_objects.append(out)
     scene["objects"] = clean_objects
+    if sum(len(o.get('illustration',{}).get('data','')) for o in clean_objects)>21_600_000:
+        raise SceneError('插画总量过大，请减少对象数量或缩小单个插画后再保存')
     object_ids = {o["id"] for o in clean_objects}
     clean_relations = []
     for r in scene["relations"]:
@@ -214,6 +226,9 @@ def normalize_scene(value):
                "type": r.get("type", "associates"), "label": _text(r.get("label", ""), 100),
                "indirect": bool(r.get("indirect", False)), "uncertain": bool(r.get("uncertain", False)),
                "evidence": _text(r.get("evidence", ""), 1000)}
+        if r.get('evidence_source') in ('user_text','reference_image','canvas_sketch','knowledge'):
+            out['evidence_source'] = r['evidence_source']
+            out['evidence_ref'] = _text(r.get('evidence_ref',''),240)
         for key in ("source_port", "target_port"):
             out[key] = r.get(key, "auto")
             if out[key] not in PORTS:
@@ -251,9 +266,19 @@ def normalize_scene(value):
     if not isinstance(scene.get("provenance"), dict):
         scene["provenance"] = {}
     # Only descriptive metadata is retained here; endpoints never return keys.
-    scene["provenance"] = {k: _text(v, 2000) for k, v in scene["provenance"].items()
+    scene["provenance"] = {k: _text(v, 8000) for k, v in scene["provenance"].items()
                            if k in ("model", "created_at", "method", "example", "reference_summary", "reference_rights",
-                                     "pre_annotation_revision", "rollback_from", "rollback_to", "annotation_count")}
+                                     "pre_annotation_revision", "rollback_from", "rollback_to", "annotation_count",
+                                     "original_text", "generation_brief", "knowledge_sources", "scientific_assumptions",
+                                     "reference_id", "reference_purpose", "generation_mode", "draft_source_id", "draft_source_revision")}
+    contract = scene.get('generation_contract') or {}
+    if not isinstance(contract, dict):
+        raise SceneError('生成需求基线格式无效')
+    # Data only. Never retain provider credentials or executable markup here.
+    scene['generation_contract'] = {k: _text(contract[k], 8000) for k in (
+        'original_text', 'generation_brief', 'reference_id', 'reference_summary', 'reference_purpose',
+        'layout', 'draft_source_id', 'draft_source_revision', 'source_kind', 'verification',
+        'expected_objects', 'expected_relations') if k in contract}
     return scene
 
 
@@ -273,7 +298,7 @@ def apply_operations(scene, operations, *, allowed_ids=None):
             raise SceneError("AI 修改超出了选中范围")
         if name == "replace":
             replacement = normalize_scene(op.get("scene"))
-            for key in ("id", "revision", "source_text", "requirements", "provenance"):
+            for key in ("id", "revision", "source_text", "requirements", "provenance", "generation_contract"):
                 replacement[key] = copy.deepcopy(scene[key])
             draft = replacement
         elif name in ("update", "update_relation"):
@@ -284,6 +309,8 @@ def apply_operations(scene, operations, *, allowed_ids=None):
             changes = op.get("changes")
             if not isinstance(changes, dict) or "id" in changes:
                 raise SceneError("对象 ID 不可修改")
+            if key=='objects' and any(k in changes and changes[k]!=target.get(k) for k in ('type','state','asset_id')) and 'illustration' not in changes:
+                target.pop('illustration',None)
             target.update(changes)
         elif name in ("add", "add_relation"):
             key, field = ("objects", "object") if name == "add" else ("relations", "relation")
@@ -355,6 +382,24 @@ def audit_scene(scene):
     width, height = (scene["canvas"][k] for k in ("width_mm", "height_mm"))
     objects = {o["id"]: o for o in scene["objects"]}
     relations = {r["id"]: r for r in scene["relations"]}
+    if scene.get('generation_contract'):
+        from scientific_intent import intent_contract,canonical_phase
+        baseline=scene['generation_contract'].get('original_text') or scene['source_text']
+        intent=intent_contract(baseline)
+        if intent['requires_mitosis']:
+            actual={canonical_phase(o.get('state','')) or canonical_phase(o['label']) for o in objects.values() if o['visible']}
+            missing=[phase for phase in intent['explicit_phases'] if phase not in actual]
+            if missing:
+                add('missing-scientific-state','原始描述中的分期未在图中表达：'+'、'.join(missing),severity='error',source_text=baseline)
+            for o in objects.values():
+                if canonical_phase(o['label']) and o['type']!='cell':
+                    add('phase-morphology','分期标签没有对应的细胞形态',[o['id']],'error')
+        generated_text=' '.join([scene['title']]+[o['label']+' '+o.get('state','') for o in objects.values()]+[r['label'] for r in relations.values()])
+        if intent['domain']=='biology':
+            foreign=('latent','physical priors','感知阵列','潜变量','action dispatch','具身智能','u_mitosis')
+            leaked=[term for term in foreign if term in generated_text.lower() and term not in baseline.lower()]
+            if leaked:
+                add('unsupported-mechanism','出现原描述没有要求的工程控制概念：'+'、'.join(leaked),severity='error')
     for oid in scene["requirements"]["objects"]:
         if oid not in objects or not objects[oid]["visible"]:
             add("required-object", "原始需求中的对象缺失或被隐藏", [oid], "error")

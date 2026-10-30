@@ -27,6 +27,9 @@ def export_scene(scene, format, destination, *, dpi=300, config=None):
     svg = render_scene(scene).encode("utf-8")
     result = {"format": fmt, "path": str(destination), "revision": scene["revision"],
               "width_mm": width_mm, "height_mm": height_mm, "raster_objects": [], "warnings": []}
+    result['raster_objects'] = [o['label'] or o['id'] for o in scene['objects'] if o.get('illustration') and o['visible']]
+    if result['raster_objects']:
+        result['warnings'].append('插画对象可整体移动；其内部像素不是独立矢量形状。文字和连线保持可编辑。')
     from scientific_library import credits
     result['artwork_credits'] = credits(scene)
     temp = destination.with_name(destination.name + "." + uuid.uuid4().hex + ".tmp")
@@ -67,7 +70,7 @@ def export_scene(scene, format, destination, *, dpi=300, config=None):
                 if any("skipped" in x for x in native.get("warnings",[])):
                     raise ValueError("PPTX 包含无法转换的图元："+"；".join(native["warnings"]))
                 shutil.copyfile(native["pptx"],temp)
-                result["warnings"] = native.get("warnings",[])
+                result["warnings"].extend(native.get("warnings",[]))
                 result["objects"] = len(scene["objects"])
                 result["text_runs"] = native.get("texts",0)
         os.replace(temp,destination)

@@ -15,6 +15,7 @@ binaries = []
 hiddenimports = ['svgelements', 'svgpathtools', 'framework', 'archetypes', 'archetypes_render', 'ring_render', 'literature', 'fitz', 'review', 'model_review', 'json_repair', 'rework', 'assist_guide', 'webview', 'clr', 'scene_document', 'scene_examples', 'scene_assets', 'scene_render', 'scene_planner', 'scene_service', 'scene_export', 'studio_storage', 'biology_glyphs', 'scientific_library', 'scene_templates', 'scene_storyboards', 'scene_flows', 'relation_visuals', 'annotation_service', 'annotation_planner']
 hiddenimports += ['template_library', 'document_workflows']
 hiddenimports += ['resource_packs','github_delivery','app_updates','desktop_delivery']
+hiddenimports += ['figure_assets', 'figure_generation', 'figure_references', 'scientific_intent']
 datas += [('packaging/update-helper.ps1','packaging')]
 tmp_ret = collect_all('vtracer')
 datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
@@ -74,3 +75,4 @@ coll = COLLECT(
     upx_exclude=[],
     name='Rylume',
 )
+

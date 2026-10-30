@@ -40,14 +40,16 @@ def symbol(kind: str, color: str, state: str = '', stroke: str | None = None, st
         extra = ' '.join(f'{k.replace("_", "-")}="{html.escape(str(v), quote=True)}"' for k, v in attrs.items())
         p.append(f'<path d="{d}" fill="{fill}" stroke="{line}" stroke-width="{sw * stroke_scale:.3f}" stroke-linecap="round" stroke-linejoin="round" {extra}/>')
 
-    def ellipse(cx: float, cy: float, rx: float, ry: float, fill: str = light, line: str = stroke, sw: float = 1.2):
-        p.append(f'<ellipse cx="{cx:.2f}" cy="{cy:.2f}" rx="{rx:.2f}" ry="{ry:.2f}" fill="{fill}" stroke="{line}" stroke-width="{sw * stroke_scale:.3f}"/>')
+    def ellipse(cx: float, cy: float, rx: float, ry: float, fill: str = light, line: str = stroke, sw: float = 1.2, **attrs):
+        extra = (" " + " ".join(f'{k.replace("_", "-")}="{html.escape(str(v), quote=True)}"' for k, v in attrs.items())) if attrs else ""
+        p.append(f'<ellipse cx="{cx:.2f}" cy="{cy:.2f}" rx="{rx:.2f}" ry="{ry:.2f}" fill="{fill}" stroke="{line}" stroke-width="{sw * stroke_scale:.3f}"{extra}/>')
 
-    def circle(cx: float, cy: float, r: float, fill: str = light, line: str = stroke, sw: float = 1.2):
-        ellipse(cx, cy, r, r, fill, line, sw)
+    def circle(cx: float, cy: float, r: float, fill: str = light, line: str = stroke, sw: float = 1.2, **attrs):
+        ellipse(cx, cy, r, r, fill, line, sw, **attrs)
 
-    def rect(x: float, y: float, w: float, h: float, rx: float = 3, fill: str = light, line: str = stroke, sw: float = 1.2):
-        p.append(f'<rect x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}" rx="{rx:.2f}" fill="{fill}" stroke="{line}" stroke-width="{sw * stroke_scale:.3f}"/>')
+    def rect(x: float, y: float, w: float, h: float, rx: float = 3, fill: str = light, line: str = stroke, sw: float = 1.2, **attrs):
+        extra = (" " + " ".join(f'{k.replace("_", "-")}="{html.escape(str(v), quote=True)}"' for k, v in attrs.items())) if attrs else ""
+        p.append(f'<rect x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}" rx="{rx:.2f}" fill="{fill}" stroke="{line}" stroke-width="{sw * stroke_scale:.3f}"{extra}/>')
 
     if state.startswith('legend_') and state[7:] in ('activates','inhibits','binds','converts','transports','sequence','associates'):
         from relation_visuals import relation_parts
@@ -339,8 +341,100 @@ def symbol(kind: str, color: str, state: str = '', stroke: str | None = None, st
             for gx, gy in ((22, 60), (30, 72), (64, 76), (78, 62), (76, 38)):
                 circle(gx, gy, 2.2, fill='#d9824c', line='none', sw=0)
         else:
-            ellipse(50, 50, 44, 43, fill=light, line=stroke, sw=1.5)
-            ellipse(50, 50, 22, 19, fill=mid, line=stroke, sw=1.2)
+            st = str(state or '').lower().strip()
+            if any(k in st for k in ('cytokinesis', '胞质分裂', 'daughter', 'cleavage')):
+                # Cytokinesis: deep equatorial furrow dividing cell into two daughter cells
+                path('M 50 46 C 45 32 30 18 16 26 C 2 34 2 66 16 74 C 30 82 45 68 50 54 C 55 68 70 82 84 74 C 98 66 98 34 84 26 C 70 18 55 32 50 46 Z', fill=light, line=stroke, sw=1.6)
+                circle(50, 50, 2.5, fill='#EA580C', line='#C2410C', sw=0.8)
+                circle(25, 50, 12, fill=mid, line=stroke, sw=1.2)
+                circle(22, 47, 2.5, fill=deep, line='none', sw=0)
+                path('M 21 52 Q 25 55 29 51 M 23 46 Q 27 49 29 45', line=shade(color, 0.35), sw=0.7)
+                circle(75, 50, 12, fill=mid, line=stroke, sw=1.2)
+                circle(72, 47, 2.5, fill=deep, line='none', sw=0)
+                path('M 71 52 Q 75 55 79 51 M 73 46 Q 77 49 79 45', line=shade(color, 0.35), sw=0.7)
+            elif any(k in st for k in ('telophase', '末期')):
+                # Telophase: elongated cell with emerging cleavage furrow and two reforming nuclei
+                path('M 50 22 C 30 14 10 24 10 50 C 10 76 30 86 50 78 C 70 86 90 76 90 50 C 90 24 70 14 50 22 Z', fill=light, line=stroke, sw=1.6)
+                path('M 50 18 L 50 24 M 50 76 L 50 82', line='#EA580C', sw=2.0)
+                ellipse(28, 50, 15, 14, fill=tint(color, 0.65), line=stroke, sw=1.1, stroke_dasharray='4 2')
+                ellipse(72, 50, 15, 14, fill=tint(color, 0.65), line=stroke, sw=1.1, stroke_dasharray='4 2')
+                path('M 22 48 Q 28 42 34 50 M 24 54 Q 28 58 32 52', line='#BE185D', sw=1.5)
+                path('M 66 48 Q 72 42 78 50 M 68 54 Q 72 58 76 52', line='#BE185D', sw=1.5)
+                path('M 46 50 H 54', line='#10B981', sw=1.2)
+            elif any(k in st for k in ('anaphase', '后期')):
+                # Anaphase: elongated cell with sister chromatids separated into V-shapes pulled to poles
+                ellipse(50, 50, 47, 39, fill=light, line=stroke, sw=1.6)
+                circle(10, 50, 2.8, fill='#F59E0B', line='#D97706', sw=0.9)
+                circle(90, 50, 2.8, fill='#F59E0B', line='#D97706', sw=0.9)
+                path('M 12 50 L 30 35 M 12 50 L 32 45 M 12 50 L 32 55 M 12 50 L 30 65', line='#10B981', sw=1.1)
+                path('M 88 50 L 70 35 M 88 50 L 68 45 M 88 50 L 68 55 M 88 50 L 70 65', line='#10B981', sw=1.1)
+                path('M 36 47 H 64 M 36 53 H 64', line='#34D399', sw=0.9, stroke_dasharray='3 2')
+                path('M 36 31 L 30 35 L 36 39', line='#BE185D', sw=2.6)
+                path('M 38 41 L 32 45 L 38 49', line='#831843', sw=2.6)
+                path('M 38 51 L 32 55 L 38 59', line='#BE185D', sw=2.6)
+                path('M 36 61 L 30 65 L 36 69', line='#831843', sw=2.6)
+                path('M 64 31 L 70 35 L 64 39', line='#BE185D', sw=2.6)
+                path('M 62 41 L 68 45 L 62 49', line='#831843', sw=2.6)
+                path('M 62 51 L 68 55 L 62 59', line='#BE185D', sw=2.6)
+                path('M 64 61 L 70 65 L 64 69', line='#831843', sw=2.6)
+            elif any(k in st for k in ('prometaphase', '前中期')):
+                # Prometaphase: dissolving nuclear envelope, invading microtubules, congregating chromosomes
+                ellipse(50, 50, 44, 43, fill=light, line=stroke, sw=1.6)
+                path('M 32 30 Q 36 28 40 31 M 60 28 Q 64 30 68 28 M 30 66 Q 34 68 38 66 M 62 68 Q 66 66 70 69', line=stroke, sw=1.0, stroke_dasharray='2 2')
+                circle(16, 50, 2.8, fill='#F59E0B', line='#D97706', sw=0.8)
+                circle(84, 50, 2.8, fill='#F59E0B', line='#D97706', sw=0.8)
+                path('M 18 50 Q 32 40 44 44 M 18 50 Q 34 48 48 48 M 18 50 Q 32 60 46 56 M 82 50 Q 68 40 56 44 M 82 50 Q 66 48 52 48 M 82 50 Q 68 60 54 56', line='#10B981', sw=1.0)
+                path('M 44 42 L 50 48 M 50 42 L 44 48', line='#BE185D', sw=2.4)
+                path('M 48 52 L 54 58 M 54 52 L 48 58', line='#831843', sw=2.4)
+            elif any(k in st for k in ('metaphase', '中期')):
+                # Metaphase: chromosomes aligned on central equatorial plate with bipolar spindle apparatus
+                ellipse(50, 50, 45, 42, fill=light, line=stroke, sw=1.6)
+                circle(14, 50, 3.0, fill='#F59E0B', line='#D97706', sw=0.9)
+                circle(86, 50, 3.0, fill='#F59E0B', line='#D97706', sw=0.9)
+                path('M 16 50 Q 32 30 46 32 M 16 50 Q 33 41 46 44 M 16 50 L 46 56 M 16 50 Q 32 70 46 68', line='#10B981', sw=1.1)
+                path('M 84 50 Q 68 30 54 32 M 84 50 Q 67 41 54 44 M 84 50 L 54 56 M 84 50 Q 68 70 54 68', line='#10B981', sw=1.1)
+                path('M 16 50 Q 50 20 84 50 M 16 50 Q 50 80 84 50', line='#34D399', sw=0.8, stroke_dasharray='4 2')
+                path('M 47 28 L 53 36 M 53 28 L 47 36', line='#BE185D', sw=2.8)
+                circle(50, 32, 1.2, fill='#F59E0B', line='none', sw=0)
+                path('M 47 40 L 53 48 M 53 40 L 47 48', line='#831843', sw=2.8)
+                circle(50, 44, 1.2, fill='#F59E0B', line='none', sw=0)
+                path('M 47 52 L 53 60 M 53 52 L 47 60', line='#BE185D', sw=2.8)
+                circle(50, 56, 1.2, fill='#F59E0B', line='none', sw=0)
+                path('M 47 64 L 53 72 M 53 64 L 47 72', line='#831843', sw=2.8)
+                circle(50, 68, 1.2, fill='#F59E0B', line='none', sw=0)
+            elif any(k in st for k in ('prophase', '前期')):
+                # Prophase: chromosome condensation within an intact envelope; breakdown is prometaphase.
+                ellipse(50, 50, 44, 43, fill=light, line=stroke, sw=1.6)
+                ellipse(50, 50, 24, 22, fill=tint(color, 0.7), line=stroke, sw=1.2)
+                path('M 40 40 L 48 48 M 48 40 L 40 48', line='#BE185D', sw=2.4)
+                path('M 52 42 L 60 50 M 60 42 L 52 50', line='#BE185D', sw=2.4)
+                path('M 42 52 L 50 60 M 50 52 L 42 60', line='#831843', sw=2.4)
+                path('M 54 54 L 62 62 M 62 54 L 54 62', line='#831843', sw=2.4)
+                circle(22, 34, 2.6, fill='#F59E0B', line='#D97706', sw=0.8)
+                path('M 17 34 L 13 34 M 22 29 L 20 25 M 26 31 L 30 27 M 25 37 L 29 41 M 18 38 L 14 42', line='#10B981', sw=0.8)
+                circle(78, 34, 2.6, fill='#F59E0B', line='#D97706', sw=0.8)
+                path('M 83 34 L 87 34 M 78 29 L 80 25 M 74 31 L 70 27 M 75 37 L 71 41 M 82 38 L 86 42', line='#10B981', sw=0.8)
+            elif any(k in st for k in ('apoptotic', 'apoptosis', '凋亡')):
+                # Apoptotic: membrane blebbing and pyknotic fragmented chromatin
+                path('M 20 20 Q 28 8 40 18 Q 56 6 68 18 Q 84 10 88 28 Q 100 44 88 58 Q 98 76 80 84 Q 60 98 44 86 Q 26 96 16 80 Q 2 64 14 50 Q 6 32 20 20 Z', fill=tint('#EF4444', 0.85), line='#B91C1C', sw=1.5)
+                circle(38, 42, 6, fill='#7F1D1D', line='#450A0A', sw=1.0)
+                circle(58, 46, 5, fill='#7F1D1D', line='#450A0A', sw=1.0)
+                circle(48, 62, 5.5, fill='#7F1D1D', line='#450A0A', sw=1.0)
+                circle(30, 60, 3.5, fill='#7F1D1D', line='#450A0A', sw=0.8)
+            elif any(k in st for k in ('interphase', '间期', 'g1', 's_phase', 'g2', 'quiescent')):
+                # Interphase: prominent intact envelope, nucleolus, diffuse chromatin mesh, centrosome pair
+                ellipse(50, 50, 44, 43, fill=light, line=stroke, sw=1.6)
+                ellipse(50, 50, 22, 20, fill=mid, line=stroke, sw=1.3)
+                circle(44, 46, 4.2, fill=deep, line='none', sw=0)
+                path('M 35 48 Q 42 41 50 50 T 65 47 M 39 55 Q 49 61 58 53 M 41 43 Q 49 37 59 43', line=shade(color, 0.45), sw=0.9)
+                circle(30, 28, 2.2, fill='#EA580C', line='#C2410C', sw=0.6)
+                circle(34, 26, 2.2, fill='#EA580C', line='#C2410C', sw=0.6)
+            else:
+                # Default resting cell with distinct nucleus and nucleolus
+                ellipse(50, 50, 44, 43, fill=light, line=stroke, sw=1.5)
+                ellipse(50, 50, 22, 19, fill=mid, line=stroke, sw=1.2)
+                circle(46, 47, 4.0, fill=deep, line='none', sw=0)
+                path('M 38 52 Q 44 46 50 54 T 62 50', line=shade(color, 0.35), sw=0.8)
 
     elif kind == 'fibroblast':
         # Spindle-shaped cell with tapering bipolar cytoplasmic extensions

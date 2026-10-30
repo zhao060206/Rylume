@@ -12,6 +12,7 @@
   <link href="/ui/delivery.css" rel="stylesheet"/>
   <link href="/ui/canvas-workbench.css" rel="stylesheet"/>
   <link href="/ui/workspace-modes.css" rel="stylesheet"/>
+  <link href="/ui/generation-workflow.css" rel="stylesheet"/>
  </head>
  <body>
   <svg aria-hidden="true" class="icon-defs">
@@ -362,12 +363,12 @@
        </button>
       </div>
       <p class="muted intro">
-       描述对象、关系与空间位置。
+       从描述、参考图或你自己的草稿开始。
       </p>
       <div aria-label="创作方式" class="generation-modes" role="group">
        <button aria-pressed="true" data-generation-mode="vector" type="button">
         <strong>
-         可编辑图形
+         矢量绘图
         </strong>
        </button>
        <button aria-pressed="false" data-generation-mode="image" type="button">
@@ -383,7 +384,7 @@
         研究构想
        </label>
        <button class="text-button" id="expand-brief">
-        AI 扩写
+        优化表达
        </button>
       </div>
       <textarea id="brief-input" maxlength="8000" placeholder="描述你想表达的对象、关系和过程，例如：细胞因子结合受体，激活 JAK–STAT 通路。"></textarea>
@@ -395,9 +396,23 @@
         原生矢量
        </span>
       </div>
+      <div class="generation-sources" aria-label="参考与草稿">
+       <button class="button" id="upload-sketch">上传参考 / 草稿</button>
+       <button class="button" id="draw-sketch">画一张草稿</button>
+       <button class="text-button" id="use-canvas-sketch">以当前画布为草稿</button>
+      </div>
+      <details id="generation-origin-card" class="panel-disclosure" hidden><summary>查看原始研究内容</summary><label class="muted small" for="generation-original-input">科学内容以这里为准；上方增强描述用于表达与布局。</label><textarea id="generation-original-input" maxlength="8000"></textarea></details>
+      <div id="generation-reference-card" class="generation-reference-card" hidden>
+       <img id="generation-reference-preview" alt="本次使用的原始参考图"/>
+       <div><label for="reference-purpose">这张图用于</label><select id="reference-purpose">
+        <option value="layout">参考布局</option><option value="sketch">按草稿生成</option><option value="style">参考画风</option><option value="content">参考对象与布局</option>
+       </select><p id="generation-reference-note" class="muted small"></p><button class="text-button" id="clear-generation-reference">移除</button></div>
+      </div>
+      <div id="canvas-sketch-card" class="canvas-sketch-card" hidden><span id="canvas-sketch-note"></span><button class="text-button" id="clear-canvas-sketch">移除</button></div>
+      <p id="generation-inline-status" class="muted small" role="status"></p>
       <details class="panel-disclosure">
        <summary>
-        添加参考图 / 帮我梳理描述
+        更多描述选项
        </summary>
        <div class="panel-disclosure-body">
         <button class="button full guide-launch" id="open-guide">
@@ -480,6 +495,7 @@
       </details>
      </div>
      <div class="creation-submit">
+      <button class="text-button full" id="preview-generation">先看结构与布局</button>
       <button class="button primary full" id="generate">
        生成可编辑初稿
       </button>
@@ -1461,6 +1477,28 @@
   </dialog>
   <div class="toast" hidden="" id="toast" role="status">
   </div>
+  <dialog id="generation-preview-dialog" class="generation-preview-dialog">
+   <div class="dialog-heading"><div><h2>结构与布局</h2><p class="muted small">先核对对象、顺序和位置。生成后仍可直接拖动修改。</p></div><button class="icon-button" aria-label="关闭结构预览" data-close="generation-preview-dialog">×</button></div>
+   <div id="generation-preview-stage" class="generation-preview-stage"></div>
+   <ul id="generation-preview-findings" class="generation-preview-findings"></ul>
+   <div class="dialog-actions"><button class="button" data-close="generation-preview-dialog">返回修改</button><button class="button primary" id="generate-from-preview">按此结构生成</button></div>
+  </dialog>
+  <dialog id="redraw-object-dialog">
+   <div class="dialog-heading"><h2>重绘所选插画</h2><button class="icon-button" aria-label="关闭重绘" data-close="redraw-object-dialog">×</button></div>
+   <p class="muted small">只替换选中的插画，位置、大小、文字和连接保留。原图版始终保留在最近图版，可随时打开。</p>
+   <label class="field-label" for="redraw-object-instruction">要怎样修改？</label><textarea id="redraw-object-instruction" maxlength="2000" placeholder="例如：把纺锤体画得更清晰，保留当前分期和配色。"></textarea>
+   <div class="dialog-actions"><button class="button" data-close="redraw-object-dialog">返回</button><button class="button primary" id="redraw-object-submit">生成修改版</button></div>
+  </dialog>
+  <dialog id="sketch-pad-dialog" class="sketch-pad-dialog">
+   <div class="dialog-heading"><div><h2>画出你的想法</h2><p class="muted small">画轮廓、箭头并写上名称，AI 会按这些位置生成插图。</p></div><button class="icon-button" aria-label="关闭草稿纸" data-close="sketch-pad-dialog">×</button></div>
+   <div class="sketch-pad-tools" role="toolbar" aria-label="草稿工具">
+    <button data-sketch-tool="pen" aria-pressed="true">画笔</button><button data-sketch-tool="rect" aria-pressed="false">方框</button><button data-sketch-tool="ellipse" aria-pressed="false">圆形</button><button data-sketch-tool="arrow" aria-pressed="false">箭头</button><button data-sketch-tool="text" aria-pressed="false">文字</button>
+    <input id="sketch-pad-label" aria-label="要添加到草稿的文字" placeholder="输入名称，再点击纸面放置"/>
+    <button id="sketch-pad-undo">撤销</button><button id="sketch-pad-clear">清空</button>
+   </div>
+   <canvas id="sketch-pad" width="1200" height="800" aria-label="草稿纸，支持鼠标或触控笔绘制"></canvas>
+   <div class="dialog-actions"><button class="button" data-close="sketch-pad-dialog">保留草稿</button><button class="button primary" id="use-drawn-sketch">使用这张草稿</button></div>
+  </dialog>
   <script src="/ui/canvas-app.js" type="module">
   </script>
   <dialog id="shortcuts-dialog">

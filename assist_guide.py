@@ -45,8 +45,8 @@ CLARIFY_INSTRUCTION = """你是顶刊论文插画顾问，服务所有学科（�
       {"value": "dense", "label": "高密度", "desc": "多级分支、参数与注释齐全"}
     ]},
     {"id": "illustration", "title": "出图模式", "options": [
-      {"value": "image", "label": "教材式机理图", "desc": "生成式细胞/组织底图 + 可编辑标注，默认用于机制图", "recommended": true},
-      {"value": "vector", "label": "纯矢量线框", "desc": "文字+线框/几何图元，全部可编辑；仅明确要求矢量时选"}
+      {"value": "vector", "label": "可编辑科研图", "desc": "矢量科学对象+形态图元，全部可在画布上自由拖动、改字、连线", "recommended": true},
+      {"value": "image", "label": "插画示意图", "desc": "生成式微观插画底图，适合概览展示"}
     ]},
     {"id": "language", "title": "图中文字", "options": [
       {"value": "en", "label": "英文标准术语", "desc": "投稿国际期刊的默认选择", "recommended": true},
@@ -59,7 +59,7 @@ CLARIFY_INSTRUCTION = """你是顶刊论文插画顾问，服务所有学科（�
 1. questions 必须恰好 6 项，id 必须依次是 archetype / palette / ratio / density / illustration / language；不得只输出 3 项或省略任何一项，每项都要有 2-4 个选项。
 2. archetype 只能从上面六个 value 中选，但 label/desc 要结合用户领域改写；不要默认推荐 signal_pathway。
 3. 每个问题的 options 3-6 个，第一个或标 recommended 的选项必须是最贴合用户原文的。
-4. illustration 默认推荐 image（教材式整幅机理图）；只有用户明确说“纯矢量/线框/全部可编辑”时才推荐 vector。用户上传参考图时，先按参考图的排版结构来设计问题，不能套用通用模板。
+4. illustration 默认推荐 vector（可编辑科研图，所有分子、细胞与箭头可在画布自由拖动与编辑）。用户上传参考图时，先按参考图的排版结构来设计问题，不能套用通用模板。
 5. 用语通俗，不堆黑话。
 """
 
@@ -81,9 +81,9 @@ PALETTE_NOTES = {
 }
 
 LAYOUT_NOTES = {
-    "closed_loop": "环形闭环：传感输入 → 中央推理中枢 → 执行输出 → 反馈回路回到输入端；主环用粗实线，反馈用虚线，箭头正交路由。",
+    "closed_loop": "循环流转/闭环调控回路：各阶段或核心实体按顺时针或蛇形流转闭合成环，尾端状态平滑回归初始状态（如细胞增殖周期、代谢循环、信号负反馈回路），保持生物学实体与形态演变完整。",
     "signal_pathway": "自上而下或自左向右的单向通路：配体 → 膜受体 → 胞内级联节点 → 核内效应；膜用双层磷脂带切分空间，级联节点按层级垂直排列。",
-    "process_pipeline": "等宽阶段卡横向排列，编号 1-N 置于卡片左上角，阶段之间用同向粗箭头连接，每卡含图标 + 阶段名 + 一行说明。",
+    "process_pipeline": "按用户指定的阅读顺序展示对象及真实状态变化；可为单行、双行蛇形或时间循环。标签放在对象旁，连线表达先后顺序，不强制增加卡片、分栏或额外调控机制。",
     "structural_anatomy": "分层剖面：各功能层以斜切梯形层叠，左侧标注层名与厚度，右侧以引线标注材料与功能，层间用细分割线。",
     "graphical_abstract": "三分栏叙事：Problem（现状/瓶颈）→ Strategy（本文方法）→ Outcome（结果/意义），三栏等宽，中央用大箭头串联。",
 }
@@ -149,7 +149,10 @@ def _prefer_archetype(data: dict, text: str) -> None:
     default that a novice would accept.
     """
     import re as _re
-    if _re.search(r"闭环|回路|反馈|closed[-_ ]?loop", text, _re.I):
+    from scientific_intent import intent_contract
+    if intent_contract(text)['requires_mitosis']:
+        want = 'process_pipeline'
+    elif _re.search(r"闭环|回路|反馈|closed[-_ ]?loop", text, _re.I):
         want = "closed_loop"
     elif _re.search(r"通路|信号|pathway|signal", text, _re.I):
         # "信号通路…S 形流程" also contains 流程; pathway wins.
@@ -479,14 +482,13 @@ def generate_clarification_cards(text: str, config: dict,
             data["questions"] = [by_id[qid] for qid in
                                  ("archetype", "palette", "ratio", "density",
                                   "illustration", "language")]
-            # The mechanism plate needs the generated scene by default.  A
-            # vector-only request is the exception, never the default.
-            if not re.search(r"纯矢量|矢量|线框|vector|全部可编辑", text, re.I):
+            # Both styles are editable scenes. Prefer vector unless illustration is requested.
+            if not re.search(r"插画|写实|立体|3D|illustration|realistic", text, re.I):
                 for question in data["questions"]:
                     if str(question.get("id")) != "illustration":
                         continue
                     for option in question.get("options") or []:
-                        option["recommended"] = str(option.get("value")) == "image"
+                        option["recommended"] = str(option.get("value")) == "vector"
             data["summary"] = str(data.get("summary") or "")[:400]
             _canonicalize_palette(data)
             _prefer_archetype(data, text)

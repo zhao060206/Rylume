@@ -6,7 +6,7 @@
 
 ## 下载与启动
 
-在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-3.5.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
+在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-3.6.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
 
 也可以运行 `启动理象.cmd`。内置模板、素材和直接编辑可离线使用；AI 生成、批注修改和视觉审查需要在「设置 → 模型设置」中配置你自己的兼容服务。
 
@@ -89,3 +89,4 @@ python app_server.py --smoke-test --port 8786 --data-dir out/native-smoke --no-m
 ## 许可
 
 项目代码使用 [AGPL-3.0-only](LICENSE)。第三方组件分别遵守其原始许可证，参见 [第三方说明](THIRD_PARTY_NOTICES.md)。发布页同时提供对应的 PyMuPDF/MuPDF 源码归档。
+

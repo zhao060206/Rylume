@@ -4,7 +4,7 @@ const {generationPayload,modelPatch,historyMatches}=await import('../ui/workspac
 const vector=generationPayload({text:'EGFR activates ERK',width:90,height:150});
 assert.equal(vector.scene_engine,'v2');assert.equal(vector.illustration_mode,'vector');assert.deepEqual(vector.canvas_mm,[90,150]);
 const image=generationPayload({text:'Delivery',mode:'image',width:180,height:120,dpi:600,literature:true,reference:{layout_analysis:{composition:'split'}},archetype:'signal_pathway'});
-assert.equal(image.scene_engine,undefined);assert.equal(image.illustration_mode,'image');assert.equal(image.literature,true);
+assert.equal(image.scene_engine,'v2');assert.equal(image.illustration_mode,'image');assert.equal(image.literature,true);
 assert.deepEqual(image.canvas,[4252,2835]);assert.equal(image.reference_layout.composition,'split');assert.equal(image.archetype,'signal_pathway');
 const old={text:{api_key:'saved',base_url:'https://old',model:'a'},quality:'hd'};
 const patch=modelPatch({text:{base_url:' https://new ',model:' b ',api_key:''}});
@@ -15,3 +15,9 @@ assert.deepEqual(jobs.filter(j=>historyMatches(j,'','editable')),[jobs[0]]);
 assert.deepEqual(jobs.filter(j=>historyMatches(j,'j2','active')),[jobs[1]]);
 assert.deepEqual(jobs.filter(j=>historyMatches(j,'LNP','illustration')),[jobs[1]]);
 console.log('8 unified-workspace behavior checks passed');
+const sketch=generationPayload({text:'视觉增强',originalText:'前期到后期',mode:'image',referenceId:'ref_123',referencePurpose:'sketch',sketch:{id:'j_draft',revision:7},previewId:'gp_123'});
+assert.equal(sketch.original_text,'前期到后期');assert.equal(sketch.generation_brief,'视觉增强');
+assert.equal(sketch.sketch_job_id,'j_draft');assert.equal(sketch.base_revision,7);
+assert.equal(sketch.reference_id,'ref_123');assert.equal(sketch.reference_purpose,'sketch');assert.equal(sketch.preview_id,'gp_123');
+assert.equal(historyMatches({id:'new',scene_engine:'v2',illustration_mode:'image'},'','illustration'),true);
+console.log('Unified image documents, immutable original brief and sketch/reference inputs passed');

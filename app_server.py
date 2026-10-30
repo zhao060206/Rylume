@@ -1819,6 +1819,10 @@ def _public_job(job: dict) -> dict:
         "diff_url": f"/api/jobs/{job['id']}/diff.png" if job.get("diff_png") else None,
         "research": job.get("research"),
         "illustration_mode": job.get("illustration_mode"),
+        "illustration_result": job.get("illustration_result"),
+        "reference_id": job.get("reference_id"),
+        "draft_source_id": job.get("draft_source_id"),
+        "generation_brief": job.get("generation_brief"),
         "next_job": job.get("next_job"),
         "scene_engine": job.get("scene_engine"),
         "archived": bool(job.get("archived", False)),
@@ -2790,7 +2794,9 @@ class Handler(BaseHTTPRequestHandler):
                     except (TypeError, ValueError):
                         canvas_hint = None
                 try:
-                    optimized = pipeline.optimize_brief(text, load_config(), canvas=canvas_hint)
+                    dna = body.get('style_dna') or {}
+                    style_hint = str(dna.get('reference_summary') or dna.get('visual_style_summary') or '')[:1200] if isinstance(dna,dict) else ''
+                    optimized = pipeline.optimize_brief(text, load_config(), canvas=canvas_hint, style=style_hint)
                 except Exception as exc:
                     return self._json(400, {"ok": False, "error": str(exc)[:400]})
                 return self._json(200, {"ok": True, "text": optimized, "original": text,

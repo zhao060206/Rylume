@@ -87,13 +87,14 @@ def _publish(app, job, result):
                 "scene_path": str(folder / "scene.json"),
                 "report": {"mode": "scene-v2", "scene_version": 2, "title": scene["title"],
                            "spec": {"title": scene["title"]}, "scene_audit": result["audit"]},
-                "visual_state": "failed" if result["audit"]["errors"] else "passed",
+                "visual_state": "failed" if result["audit"]["errors"] else "unverified",
                 "visual_findings": [{"kind": "scene-"+f["code"],
                                      "severity": "high" if f["severity"] == "error" else "low",
                                      "message": f["message"], "object_ids": f["object_ids"],
                                      "evidence": f["evidence"]} for f in result["audit"]["findings"]],
                 "review_version": app.REVIEW_VERSION,
-                "export_audit": {"svg": {"ok": True, "revision": scene["revision"], "images": 0}},
+                "export_audit": {"svg": {"ok": True, "revision": scene["revision"],
+                                          "images": sum(bool(o.get('illustration')) for o in scene['objects'])}},
                 "font": scene["style"]["font_family"], "viewport_shape": "rect"})
     # Caches never survive a scene change. Old revision exports remain on disk.
     job.pop("ppt", None)
@@ -104,23 +105,35 @@ def _publish(app, job, result):
 
 
 def create_job(app, text, config, *, example=None, revision_of=None, request_id=None):
+    config = dict(config)
+    config.setdefault('original_text', text)
+    config.setdefault('generation_brief', text)
+    config.setdefault('canvas_mm', [180,120])
+    if example:
+        config['illustration_mode'] = 'vector'
     if request_id and not re.fullmatch(r"[A-Za-z0-9_-]{1,96}",str(request_id)):
         raise SceneError("重复提交标识无效")
     job = {"id": "j_" + uuid.uuid4().hex[:12], "title": text[:100] or "未命名图版",
-           "text": text, "original_text": text, "mode": "scene", "scene_engine": "v2",
+            "text": config.get('generation_brief') or text, "original_text": text, "mode": "scene", "scene_engine": "v2",
            "status": "queued", "progress": 0, "created": time.time(), "message": "等待生成",
-           "illustration_mode": "vector", "canvas_mm": list(config.get("canvas_mm") or [180,120]),
+            "illustration_mode": config.get('illustration_mode','vector'), "canvas_mm": list(config.get("canvas_mm") or [180,120]),
+            "reference_id": config.get('reference_id'), "draft_source_id": config.get('draft_source_id'),
+            "generation_brief": config.get('generation_brief') or text,
            "stages": [{"name": n, "label": label, "state": "pending", "detail": None}
                       for n,label in (("start","准备"),("plan_scene","科学内容提取"),
-                                      ("assemble","矢量布局"),("qa","本地检查"))],
+                                       ("assemble","对象布局"),("generate","对象绘制"),("qa","需求核对"))],
            "error": None, "report": None, "svg_path": None, "revision_of": revision_of, "request_id":request_id,
            "literature_enabled": False, "dpi": config.get("dpi", 300)}
     with app.JOBS_LOCK:
         if request_id:
             prior=next((j for j in app.JOBS.values() if j.get('request_id')==request_id),None)
             if prior:
-                if prior.get('original_text')!=text:raise RevisionConflict("相同提交标识不能用于不同内容")
+                from figure_generation import fingerprint
+                if prior.get('original_text')!=text or (prior.get('generation_fingerprint') and prior['generation_fingerprint']!=fingerprint(config)):
+                    raise RevisionConflict("相同提交标识不能用于不同内容")
                 return prior
+        from figure_generation import fingerprint
+        job['generation_fingerprint'] = fingerprint(config)
         app.JOBS[job["id"]] = job
     app._save_meta(job)
 
@@ -142,18 +155,34 @@ def create_job(app, text, config, *, example=None, revision_of=None, request_id=
                 job["text"] = job["original_text"] = scene["source_text"]
                 meta = {"method": "example"}
             else:
-                from scene_planner import plan_scene
-                scene, meta = plan_scene(text, config, on_stage=lambda n,d: app._set_stage(job,n,d),
+                from figure_generation import plan
+                scene, meta = plan(text, config, on_stage=lambda n,d: app._set_stage(job,n,d),
                                          cancelled=lambda: bool(job.get("cancel_requested")))
             scene["id"] = job["id"]
             if job.get("cancel_requested"):
                 raise InterruptedError("任务已取消")
-            app._set_stage(job, "qa", "检查对象、连接与物理尺寸")
+            app._set_stage(job, "assemble", "保存可编辑矢量草稿")
             result = repository(app, job["id"]).commit(scene)
             _publish(app, job, result)
+            if not example and config.get('illustration_mode') == 'image':
+                from figure_assets import illustrate
+                def checkpoint(current):
+                    saved = repository(app, job['id']).commit(current, base_revision=job['scene_revision'])
+                    _publish(app, job, saved)
+                scene, job['illustration_result'] = illustrate(scene,config,
+                    on_stage=lambda n,d: app._set_stage(job,n,d),
+                    cancelled=lambda: bool(job.get('cancel_requested')), checkpoint=checkpoint)
+                # Include failures/partial status in the saved draft, too.
+                checkpoint(scene)
+            app._set_stage(job, "qa", "核对原始需求、对象、连接与物理尺寸")
+            if not example and (config.get('vision') or {}).get('base_url') and (config.get('vision') or {}).get('model'):
+                from scene_planner import review_scene_visual
+                review_snapshot=repository(app,job['id']).read()
+                job['scene_vision']={**review_scene_visual(review_snapshot,config),'revision':review_snapshot['revision']}
+                if job.get('cancel_requested'):raise InterruptedError('任务已取消；已有草稿保留')
             job["planner"] = meta
             job["status"] = "completed"
-            job["message"] = "初稿已生成，可直接编辑"
+            job["message"] = "初稿已生成，可直接编辑；科学内容待作者核对"
             job["duration"] = round(time.monotonic()-started,2)
             for stage in job["stages"]:
                 stage["state"] = "done"
@@ -220,6 +249,30 @@ def dispatch(handler, method, path, app):
     if document_workflows.dispatch(handler,method,path,app):return True
     if annotation_service.dispatch(handler,method,path,app):return True
     try:
+        if method == 'POST' and path == '/api/references':
+            import figure_references
+            body = handler._body()
+            result = figure_references.create(app.DATA_DIR, body.get('image'), app.load_config(),
+                purpose=str(body.get('purpose') or 'layout'))
+            handler._json(200,result)
+            return True
+        reference_match = re.fullmatch(r'/api/references/(ref_[a-f0-9]{24})/preview.png', path)
+        if method == 'GET' and reference_match:
+            import figure_references
+            handler._send(200, figure_references.preview(app.DATA_DIR,reference_match.group(1)), 'image/png')
+            return True
+        reference_meta = re.fullmatch(r'/api/references/(ref_[a-f0-9]{24})', path)
+        if method == 'GET' and reference_meta:
+            import figure_references
+            handler._json(200,{'ok':True,**figure_references.read(app.DATA_DIR,reference_meta.group(1)),
+                              'preview_url':f'/api/references/{reference_meta.group(1)}/preview.png'})
+            return True
+        if method == 'POST' and path == '/api/generation/preview':
+            import figure_generation
+            text,config = figure_generation.prepare(app,handler._body())
+            result = queues().submit_generation(figure_generation.preview,app,text,config).result(timeout=260)
+            handler._json(200,result)
+            return True
         if method == "GET" and path == "/api/scene/catalog":
             from resource_packs import configure,DOMAIN_TITLES
             configure(app.DATA_DIR)
@@ -302,22 +355,14 @@ def dispatch(handler, method, path, app):
             job = create_job(app,item["title"],config,example=example)
             handler._json(200,{"ok":True,"job_id":job["id"]})
             return True
-        if method == "POST" and path == "/api/generate" and handler._body().get("scene_engine") == "v2":
+        if method == "POST" and path == "/api/generate":
             body = handler._body()
-            text = str(body.get("original_text") or body.get("text") or "").strip()
-            if not text or len(text)>8000:
-                raise SceneError("请输入 1–8000 字的科研内容")
-            config = app.load_config()
-            from scene_document import empty_scene, normalize_scene
-            blank = empty_scene(width_mm=(body.get("canvas_mm") or [180,120])[0],height_mm=(body.get("canvas_mm") or [180,120])[1])
-            normalized = normalize_scene(blank)
-            config["canvas_mm"] = list(normalized["canvas"].values())
-            config["style_dna"] = app.sanitize_style(body.get("style_dna") or {})
-            config["dpi"] = 300
+            import figure_generation
+            text, config = figure_generation.prepare(app,body)
             job = create_job(app,text,config,request_id=body.get('request_id'))
             handler._json(200,{"ok":True,"job_id":job["id"]})
             return True
-        match = re.fullmatch(r"/api/jobs/([A-Za-z0-9_-]+)/(scene|editable-copy|revise|auto-fix|preview-fix|layout-decision|recheck|review-finding|confirm|ppt|ppt-status|save-as|download|pdf|retry|cancel)",path)
+        match = re.fullmatch(r"/api/jobs/([A-Za-z0-9_-]+)/(scene|editable-copy|redraw|revise|auto-fix|preview-fix|layout-decision|recheck|review-finding|confirm|ppt|ppt-status|save-as|download|pdf|retry|cancel)",path)
         if not match:
             return False
         job_id, action = match.groups()
@@ -417,6 +462,26 @@ def dispatch(handler, method, path, app):
             if repository(app,job_id).read()["revision"] != revision:
                 raise RevisionConflict("AI 生成候选时图版已更新，请基于最新图版重试")
             handler._json(200,{"ok":True,"candidate":candidate})
+            return True
+        if action=='redraw' and method=='POST':
+            from figure_generation import prepare
+            current=repository(app,job_id).read()
+            if _revision(body)!=current['revision']:raise RevisionConflict('图版已变化，请保存后重绘')
+            target_ids=body.get('target_ids') or []
+            allowed={o['id'] for o in current['objects'] if not o['locked'] and o['type']!='text'}
+            if not isinstance(target_ids,list) or not target_ids or len(target_ids)>24 or any(x not in allowed for x in target_ids):
+                raise SceneError('请选取 1–24 个未锁定的图形对象')
+            instruction=str(body.get('instruction') or '').strip()
+            if not instruction or len(instruction)>2000:raise SceneError('请填写 1–2000 字的重绘要求')
+            contract=current.get('generation_contract') or {}
+            request={'text':current['source_text'] or current['title'],'canvas_mm':[current['canvas']['width_mm'],current['canvas']['height_mm']],
+                     'illustration_mode':'image','generation_brief':contract.get('generation_brief') or current['source_text'] or current['title']}
+            if contract.get('reference_id'):
+                request.update(reference_id=contract['reference_id'],reference_purpose=contract.get('reference_purpose') or 'layout')
+            text,config=prepare(app,request)
+            config.update(prepared_scene=copy.deepcopy(current),redraw_ids=list(dict.fromkeys(target_ids)),redraw_instruction=instruction)
+            child=create_job(app,text,config,revision_of=job_id,request_id=body.get('request_id'))
+            handler._json(200,{'ok':True,'job_id':child['id'],'original_job_id':job_id,'base_revision':current['revision']})
             return True
         if action == "auto-fix" and method == "POST":
             handler._json(200,_repair(app,job))

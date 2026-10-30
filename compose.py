@@ -892,7 +892,9 @@ def compose_render(text: str, config: dict, on_stage=None) -> tuple[bytes, dict]
     # When the user asks for a closed-loop system derivation, framework, or regulation architecture,
     # route to the dedicated publication-grade multi-tier framework engine.
     framework_error = None
-    if requested == "closed_loop" or re.search(r"闭环|回路|系统图|架构图|推导图|调控体系|闭环系统|framework|closed[-_ ]?loop|perception-action|system.*architecture", text, re.I):
+    from scientific_intent import intent_contract
+    is_bio = intent_contract(text)['domain']=='biology'
+    if not is_bio and (requested == "closed_loop" or re.search(r"具身智能|感知.*推导|感知.*驱动|控制系统|自驱动实验室|framework|perception-action|system.*architecture", text, re.I)):
         try:
             import framework
             return framework.render_framework(text, config, on_stage=on_stage)

@@ -475,7 +475,7 @@ export class SceneEditor {
       const source = original.get(o.id);
       let body = node('g');
 
-      if (source && old && old.type === o.type && old.asset_id === o.asset_id) {
+      if (source && old && old.type === o.type && old.state === o.state && old.asset_id === o.asset_id && old.illustration?.sha256 === o.illustration?.sha256) {
         for (const child of [...source.children]) {
           if (child.hasAttribute('data-label-for')) continue;
           const c = child.cloneNode(true);
@@ -503,7 +503,9 @@ export class SceneEditor {
           x: o.x, y: o.y, width: o.w, height: o.h, rx: Math.min(o.w, o.h) / 3,
           fill: o.fill || '#deebef', stroke: o.stroke || '#527f92', 'stroke-width': .28
         };
-        if(this.artwork?.has(o.asset_id || o.type)){
+        if(o.illustration?.data){
+          body.append(node('image',{href:o.illustration.data,x:o.x,y:o.y,width:o.w,height:o.h,preserveAspectRatio:'xMidYMid meet'}));
+        } else if(this.artwork?.has(o.asset_id || o.type)){
           const art=this.artwork.get(o.asset_id || o.type).cloneNode(true),box=art.getAttribute('viewBox').split(/[ ,]+/).map(Number);
           const g=node('g',{transform:`translate(${o.x} ${o.y}) scale(${o.w/box[2]} ${o.h/box[3]}) translate(${-box[0]} ${-box[1]})`});
           g.append(...art.children);body.append(g);

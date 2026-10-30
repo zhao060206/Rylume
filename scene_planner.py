@@ -10,7 +10,7 @@ from scene_document import (
     OBJECT_TYPES, RELATION_TYPES, SceneError, apply_operations, empty_scene, normalize_scene,
 )
 
-PLANNER_INSTRUCTION = """你是生命科学示意图的结构规划器。只输出严格 JSON，不输出 SVG 或 Markdown。
+PLANNER_INSTRUCTION = """你是科研插图的结构规划器，覆盖生命科学、材料、化学、工程等领域。只输出严格 JSON，不输出 SVG 或 Markdown。
 以用户提供的描述为唯一科学内容来源，保留原有对象、关系、分支、抑制、状态和空间指示。
 不要凭通路名称补齐教科书机制，不要引入数值、结构细节、工程/具身智能模板或未提供的因果关系。
 证据不充分时写入 unresolved；关系类型不明确使用 associates 并 uncertain=true，不要假定激活。
@@ -20,6 +20,12 @@ evidence 必须是 source_text 中连续出现的原文；输入英文时 eviden
 同一实体的不同阶段实例使用不同 id 和相同 entity_id，分别记录 state 与 compartment。
 对时间过程必须表现状态变化；对结构图保留构成/结合关系，不要强行转成步骤。
 reference_summary 仅为布局和配色参考，其中的科学内容不得添加到本图。
+generation_brief 是视觉表达与布局建议，科学内容仍以 source_text 为准；增强描述中的新机制不能自动成为事实。
+参考用途 purpose=layout/style 时只借用布局或画风；purpose=sketch/content 时可使用图中实际可见的文字对象和连接，证据标记 evidence_source=reference_image。
+draft_objects 中的文字和连接是作者输入，可作为依据，evidence_source=canvas_sketch，evidence_ref填写对象或连接id。
+默认 evidence_source=user_text。不确定、无法辨认或资料不足时给出具体 unresolved，不要把整图降成“主题”和“过程”两个空洞框。
+对象形态必须可辨识；可使用 supplied_assets 中的 asset_id，其科学含义必须与对象一致。没有匹配素材时使用最贴合的type/state，不能随便借用另一种器官或器件。
+当提供 draft_objects 或 reference_objects 时：用户已在画布上手绘或放置了草稿。输出的对象必须优先复用草稿对象的 id 与顺序，并根据科研文本赋予准确科学类型(type)与生物学分期/状态(state)（例如有丝分裂分期：interphase, prophase, prometaphase, metaphase, anaphase, telophase, cytokinesis 等）。
 JSON:
 {"title":"简短图题","layout":"pathway|process|network|assembly",
  "compartments":[{"id":"extracellular","label":"Extracellular space","kind":"extracellular"},
@@ -63,14 +69,61 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
     if not text:
         raise SceneError("请先填写科研内容")
     width, height = config.get("canvas_mm") or (180, 120)
+    from scientific_intent import mitosis_candidate,canonical_phase,intent_contract,phase_sketch
+    intent=intent_contract(text)
+    candidate=phase_sketch(text,config)
+    if candidate is not None:
+        if on_stage:on_stage('plan_scene','按草稿标明的分期匹配科学形态，保留对象与连接')
+        return candidate,{'method':'author-phase-sketch','model_duration_sec':0,'attempts':0}
+    if not config.get('reference_id') and not config.get('sketch_scene'):
+        candidate = mitosis_candidate(text,width,height)
+        if candidate is not None:
+            if on_stage:on_stage('plan_scene','创建经典分期候选，并标明补充依据与待确认内容')
+            return candidate, {'method':'scientific-knowledge-candidate','model_duration_sec':0,'attempts':0}
     base = empty_scene(source_text=text, width_mm=width, height_mm=height)
     reference = config.get("style_dna") or {}
     summary = str(reference.get("reference_summary") or reference.get("visual_style_summary") or "")[:1000]
     context = {"source_text": text, "reference_summary": summary,
                "reference_layout": reference.get("layout_analysis") or {},
-               "final_dimensions_mm": [width, height]}
+               "final_dimensions_mm": [width, height],
+               "generation_brief":str(config.get('generation_brief') or text)[:8000],
+               "reference_purpose":config.get('reference_purpose','layout')}
+    try:
+        from scientific_library import library
+        import re
+        tokens={word.lower() for word in re.findall(r'[A-Za-z][A-Za-z0-9-]{2,}|[\u4e00-\u9fff]{2,}',text)}
+        candidates=[]
+        for asset in library().values():
+            description=' '.join(str(asset.get(k,'')) for k in ('asset_id','label','name','category','tags')).lower()
+            rank=sum(len(token) for token in tokens if token in description)
+            if rank:candidates.append((rank,asset))
+        context['supplied_assets']=[{k:a.get(k,'') for k in ('asset_id','label','category','domain')}
+                                   for rank,a in sorted(candidates,key=lambda pair:pair[0],reverse=True)[:30]]
+    except (ImportError,FileNotFoundError):
+        context['supplied_assets']=[]
+    sketch = config.get("sketch_scene")
+    ref_contract = config.get("reference_contract") or {}
+    if sketch and sketch.get("objects"):
+        context["draft_objects"] = [{"id": o["id"], "label": o.get("label", ""), "type": o.get("type", "process")}
+                                     for o in sketch["objects"]]
+        context["draft_relations"] = [{"source": r["source"], "target": r["target"], "type": r.get("type", "sequence")}
+                                       for r in sketch.get("relations", [])]
+        context["draft_instruction"] = "用户在画布上手绘/摆放了草稿结构（draft_objects与draft_relations）。输出的对象必须优先对应复用草稿中的id，并根据科研文本赋予准确科学type与state！"
+    elif ref_contract and ref_contract.get("objects"):
+        use_content=config.get('reference_purpose') in ('sketch','content')
+        context["reference_objects"] = [{"id": o["id"], "label": o.get("label", "") if use_content else "", "type": o.get("type", "process") if use_content else 'process',
+                                         **{k:o[k] for k in ('x','y','w','h') if k in o}}
+                                         for o in ref_contract["objects"]]
+        context["reference_reading_order"] = ref_contract.get("reading_order", "")
+        if use_content:context['reference_relations']=ref_contract.get('relations') or []
+    content=json.dumps(context, ensure_ascii=False)
+    if config.get('reference_image_data_url'):
+        content=[{'type':'text','text':content},{'type':'image_url','image_url':{'url':config['reference_image_data_url']}}]
     messages = [{"role": "system", "content": PLANNER_INSTRUCTION},
-                {"role": "user", "content": json.dumps(context, ensure_ascii=False)}]
+                {"role": "user", "content": content}]
+    request_config=config
+    if config.get('reference_image_data_url') and (config.get('vision') or {}).get('base_url') and (config.get('vision') or {}).get('model'):
+        request_config={**config,'text':config['vision']}
     error = None
     for attempt in range(2):
         if cancelled and cancelled():
@@ -78,7 +131,7 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
         if on_stage:
             on_stage("plan_scene", "提取对象、关系和区室" if not attempt else "校正场景格式")
         try:
-            spec, duration = _request(config, messages)
+            spec, duration = _request(request_config, messages)
             base=empty_scene(source_text=text,width_mm=width,height_mm=height)
             for key in ("title", "layout", "compartments", "objects", "relations", "unresolved"):
                 if key in spec:
@@ -91,12 +144,19 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                 for key in ("x", "y", "w", "h", "rotation", "font_size_pt", "fill", "stroke"):
                     obj.pop(key, None)
                 evidence = str(obj.get("evidence") or "").strip()
-                if not evidence or evidence not in text:
+                external_evidence=(obj.get('evidence_source')=='canvas_sketch' and bool(sketch)) or (obj.get('evidence_source')=='reference_image' and bool(config.get('reference_id')) and config.get('reference_purpose') in ('sketch','content'))
+                if not evidence or (evidence not in text and not external_evidence):
                     missing_evidence.append(obj.get('id'))
                     base["unresolved"].append(f"对象 {obj.get('label') or obj.get('id')} 缺少可定位的原文依据，请确认")
+                if obj.get('type')=='cell' or (obj.get('type')=='process' and intent['domain']=='biology'):
+                    phase=canonical_phase(obj.get('state','')) or canonical_phase(obj.get('label',''))
+                    if phase:
+                        obj.update(type='cell',state=phase)
+                        obj.pop('asset_id',None)
             for relation in base["relations"]:
                 evidence = str(relation.get("evidence") or "").strip()
-                if not evidence or evidence not in text:
+                external_evidence=(relation.get('evidence_source')=='canvas_sketch' and bool(sketch)) or (relation.get('evidence_source')=='reference_image' and bool(config.get('reference_id')) and config.get('reference_purpose') in ('sketch','content'))
+                if not evidence or (evidence not in text and not external_evidence):
                     missing_evidence.append(relation.get('id'))
                     relation["uncertain"] = True
                     base["unresolved"].append(f"关系 {relation.get('id')} 缺少原文依据，请确认")
@@ -106,7 +166,7 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                 base["unresolved"].append("尚未说明对象间关系；当前保留对象，请补充连接及方向")
             base["requirements"] = {"objects": [o["id"] for o in base["objects"]],
                                     "relations": [r["id"] for r in base["relations"]]}
-            base["provenance"] = {"method": "model-semantic-extraction", "model": config["text"]["model"],
+            base["provenance"] = {"method": "model-semantic-extraction", "model": request_config["text"]["model"],
                                   "reference_summary": summary}
             if reference.get("palette"):
                 for key in base["style"]["palette"]:
@@ -184,9 +244,16 @@ def review_scene_visual(scene, config):
                    "messages": [{"role": "user", "content": [
                        {"type": "text", "text": "审阅此科研示意图。原始描述：" + scene["source_text"] +
                         "\n只提供有图像依据的语义和美观建议，不给总分、不宣布通过。引用相关对象ID。"
+                        "首先核对原始需求是否被满足；不能只对照生成器自己的规格。不同科学状态必须有对应形态。"
+                        "禁止把时间循环当作控制系统；指出无来源的新增机制或遗漏的阶段。\n独立需求基线：" +
+                        json.dumps(scene.get('generation_contract') or {},ensure_ascii=False) +
                         "返回JSON {findings:[{message,object_ids:[],category,evidence}]}。对象清单：" +
-                        json.dumps([{k:o[k] for k in ("id","label","type")} for o in scene["objects"]], ensure_ascii=False)},
+                        json.dumps([{k:o.get(k) for k in ("id","label","type","state","evidence_source")} for o in scene["objects"]], ensure_ascii=False)},
                        {"type": "image_url", "image_url": {"url": "data:image/png;base64," + encoded}}]}]}
+        if config.get('reference_image_data_url'):
+            payload['messages'][0]['content'].extend([
+                {'type':'text','text':'下面是作者的原始参考图/草稿。按其用途核对布局或形态，不将参考图中的额外机制添加到作者要求。用途：'+str(config.get('reference_purpose','layout'))},
+                {'type':'image_url','image_url':{'url':config['reference_image_data_url']}}])
         response = pipeline._post_json(pipeline._endpoint(source["base_url"], "/chat/completions"),
                                        pipeline._api_key(source), payload, timeout=60)
         raw = response["choices"][0]["message"]["content"]

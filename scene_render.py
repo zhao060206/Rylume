@@ -350,13 +350,16 @@ def _object(o,palette,stroke_pt=.8,glyph_tint=.8):
     family=palette['accent'] if kind=='ligand' else palette['secondary'] if kind in ('tf','dna','mrna','complex','domain','fibroblast','collagen','tissue') else palette['primary']
     color=o.get('fill') or family;line=o.get('stroke') or family
     angle=o.get('rotation',0)
-    if o.get('asset_id'):
+    if o.get('illustration'):
+        artwork = ('<image href="' + _escape(o['illustration']['data'])
+                   + '" x="0" y="0" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>')
+    elif o.get('asset_id'):
         from scientific_library import glyph
         if o.get('asset_snapshot'):
             from scientific_library import portable_glyph
             artwork=portable_glyph(o['asset_snapshot']['svg'],o.get('fill'),o.get('stroke'))
         else:artwork=glyph(o['asset_id'],o.get('fill'),o.get('stroke'))
-    else:artwork=symbol(kind,color,o.get('state',''),line,o.get('stroke_pt',stroke_pt)/.8,glyph_tint)
+    else:artwork=symbol(kind,color,o.get('state') or (o.get('label','') if kind in ('cell','stem_cell') else ''),line,o.get('stroke_pt',stroke_pt)/.8,glyph_tint)
     p=[f'<g data-object-id="{oid}" data-type="{kind}" id="obj-{oid}">',f'<g data-glyph="{oid}" transform="rotate({angle} {x+w/2} {y+h/2})"><g transform="translate({x} {y}) scale({w/100} {h/100})">',artwork,'</g>']
     if o.get('state') == 'phosphorylated' and kind in ('kinase','protein','receptor','receptor_dimer'):
         bx,by=x+w-1,y+1

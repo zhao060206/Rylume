@@ -98,8 +98,30 @@ def canvas_ratio(text: str):
     return value if value in ("3:2", "16:9", "1:1", "4:3", "2:1", "3:4") else None
 
 
+BIO_SUBJECT = re.compile(
+    r"细胞|有丝分裂|减数分裂|染色体|染色质|纺锤体|核膜|蛋白|信号通路|受体|配体|囊泡|基因|转录|线粒体|内质网|组织|免疫|肿瘤|凋亡|增殖|分化|\bmitosis\b|\bmeiosis\b|\binterphase\b|\bprophase\b|\bmetaphase\b|\banaphase\b|\btelophase\b|\bcytokinesis\b|\bprotein\b|\breceptor\b|\bligand\b|\bvesicle\b|\bkinase\b|\bsignaling\b",
+    re.I
+)
+
 def archetype_of(text: str) -> str | None:
     value = NEGATION.sub(" ", str(text or ""))
+    from scientific_intent import intent_contract
+    is_bio = intent_contract(value)['domain']=='biology'
+    # Biological processes, cell divisions and cycles are always process pipelines,
+    # never cybernetic/engineering closed loop architectures.
+    if is_bio:
+        if SIGNAL.search(value):
+            return "signal_pathway"
+        if PIPELINE.search(value) or STAGES.search(value) or re.search(r"周期|有丝分裂|减数分裂|mitosis|meiosis|cycle|分期|流线|流程|步骤|过程", value, re.I):
+            return "process_pipeline"
+        if RING.search(value):
+            return "ring_architecture"
+        if ANATOMY.search(value):
+            return "structural_anatomy"
+        if CLOSED.search(value) or NETWORK.search(value):
+            return "closed_loop"
+        return "process_pipeline"
+
     if CLOSED.search(value) or NETWORK.search(value):
         return "closed_loop"
     if SIGNAL.search(value):

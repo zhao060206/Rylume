@@ -1,10 +1,12 @@
 import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
 /** Unified generation, model settings and inspection around the native canvas. */
 export function canApplySavedScene({epoch,dirty,pending,gesture}){return epoch===dirty&&!pending&&!gesture;}
-export function generationPayload({text,mode='vector',width=180,height=120,dpi=300,reference=null,literature=false,originalText,archetype}) {
-  const base={text,original_text:originalText||text,canvas_mm:[width,height],dpi,style_dna:reference||{},request_id:crypto.randomUUID()};
-  if(mode==='vector')return {...base,scene_engine:'v2',illustration_mode:'vector'};
-  return {...base,illustration_mode:'image',canvas:[Math.round(width*dpi/25.4),Math.round(height*dpi/25.4)],literature,
+export function generationPayload({text,mode='vector',width=180,height=120,dpi=300,reference=null,literature=false,originalText,archetype,referenceId,referencePurpose,sketch,previewId}) {
+  const base={text,generation_brief:text,original_text:originalText||text,canvas_mm:[width,height],dpi,style_dna:reference||{},request_id:crypto.randomUUID(),scene_engine:'v2',illustration_mode:mode==='image'?'image':'vector',
+    ...(referenceId?{reference_id:referenceId,reference_purpose:referencePurpose||'layout'}:{}),
+    ...(sketch?{sketch_job_id:sketch.id,base_revision:sketch.revision}:{}),...(previewId?{preview_id:previewId}:{})};
+  if(mode==='vector')return base;
+  return {...base,canvas:[Math.round(width*dpi/25.4),Math.round(height*dpi/25.4)],literature,
     ...(archetype?{archetype}:{}),...(reference?.layout_analysis?{reference_layout:reference.layout_analysis}:{})};
 }
 
@@ -21,7 +23,7 @@ export function modelPatch(values){
 export function historyMatches(job,query,filter){
   if(query&&!((job.title||'')+' '+job.id).toLowerCase().includes(query.toLowerCase()))return false;
   if(filter==='editable')return job.scene_engine==='v2';
-  if(filter==='illustration')return job.scene_engine!=='v2';
+  if(filter==='illustration')return job.illustration_mode==='image'||job.scene_engine!=='v2';
   if(filter==='active')return ['queued','processing','running'].includes(job.status);
   return true;
 }
@@ -54,10 +56,10 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   function setMode(next){
     mode=next==='image'?'image':'vector';
     for(const b of document.querySelectorAll('[data-generation-mode]'))b.setAttribute('aria-pressed',String(b.dataset.generationMode===mode));
-    $('generation-mode-note').textContent=mode==='vector'?'图形、文字和连线都能单独修改。':'由 AI 绘制插画，单独编辑图中对象的能力取决于生成结果。';
+    $('generation-mode-note').textContent=mode==='vector'?'生成可编辑的矢量对象，文字和连线独立。':'逐个绘制插画对象，位置、文字和连线可编辑；插画内部为像素。';
     $('image-options').hidden=mode!=='image';$('generate').textContent=mode==='vector'?'生成可编辑初稿':'生成 AI 插画';
     document.querySelector('.input-meta span:last-child').textContent=mode==='vector'?'原生矢量':'AI 科研插画';
-    $('brief-input').maxLength=mode==='vector'?8000:4000;
+    $('brief-input').maxLength=8000;
     $('brief-count').textContent=`${$('brief-input').value.length} / ${$('brief-input').maxLength}`;
   }
   document.querySelectorAll('[data-generation-mode]').forEach(b=>b.onclick=()=>setMode(b.dataset.generationMode));
@@ -139,10 +141,10 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   async function busy(button,work){button.disabled=true;try{await work();}catch(e){toast(e.message,true);}finally{button.disabled=false;}}
   $('expand-brief').onclick=()=>busy($('expand-brief'),async()=>{
     const text=$('brief-input').value.trim();if(!text)return toast('先写一句研究构想');
-    const r=await api('/api/optimize',{text,canvas:[1800,1200]});
+    const r=await api('/api/optimize',{text:state.originalBrief||text,canvas:[1800,1200],style_dna:state.reference||null});
     proposed={text:r.text||text,original:text};$('brief-candidate').value=proposed.text;$('brief-preview-dialog').showModal();
   });
-  $('use-expanded-brief').onclick=()=>{if(!proposed)return;$('brief-input').value=$('brief-candidate').value.slice(0,8000);$('brief-input').dispatchEvent(new Event('input'));state.originalBrief=proposed.original;$('brief-preview-dialog').close();toast('扩写已放入研究描述，可继续修改');};
+  $('use-expanded-brief').onclick=()=>{if(!proposed)return;$('brief-input').value=$('brief-candidate').value.slice(0,8000);$('brief-input').dispatchEvent(new Event('input'));state.originalBrief=proposed.original;state.enhancedFrom=proposed.original;$('brief-input').dispatchEvent(new Event('change'));$('brief-preview-dialog').close();toast('增强描述已应用，原始内容仍单独保留');};
 
   function wizardFields(){
     const list=$('guide-questions');list.replaceChildren();
@@ -171,7 +173,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     if(!result.enhanced_text)throw Error('未返回描述，请稍后重试');
     state.archetype=answers.archetype;$('guide-output').value=result.enhanced_text;$('guide-result').hidden=false;$('guide-status').textContent='候选尚未应用；请检查对象和关系。';
   });
-  $('guide-use').onclick=()=>{$('brief-input').value=$('guide-output').value.slice(0,8000);$('brief-input').dispatchEvent(new Event('input'));state.originalBrief=wizardSource;$('guide-dialog').close();tab('generate');toast('引导描述已应用，请检查后生成');};
+  $('guide-use').onclick=()=>{$('brief-input').value=$('guide-output').value.slice(0,8000);$('brief-input').dispatchEvent(new Event('input'));state.originalBrief=wizardSource;state.enhancedFrom=wizardSource;$('brief-input').dispatchEvent(new Event('change'));$('guide-dialog').close();tab('generate');toast('引导描述已应用，请检查后生成');};
   $('remove-reference').onclick=()=>{state.reference=null;$('remove-reference').hidden=true;$('reference-status').hidden=true;$('reference-file').value='';toast('已移除本次构图参考');};
   $('show-all-templates').onclick=()=>$('welcome-gallery').click();
   function legacyZoom(value,factor=1){
@@ -185,6 +187,6 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   return {refresh,showRight,setMode,legacyZoom,getMode:()=>mode,selection(){refresh();},payload(text){
     if(mode==='image'&&text.length>4000)throw Error('科研插画描述请控制在 4000 字以内；当前描述已保留。');
     const [width,height]=$('new-size').value.split('x').map(Number);
-    return generationPayload({text,mode,width,height,dpi:Number($('generation-dpi').value),reference:state.reference,literature:$('generation-literature').checked,originalText:state.originalBrief,archetype:state.archetype});
+    return generationPayload({text,mode,width,height,dpi:Number($('generation-dpi').value),reference:state.reference,literature:$('generation-literature').checked,originalText:state.originalBrief,archetype:state.archetype,referenceId:state.referenceId,referencePurpose:state.referencePurpose,sketch:state.sketchSource});
   }};
 }
