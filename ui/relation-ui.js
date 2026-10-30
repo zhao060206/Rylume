@@ -1,10 +1,10 @@
 import {RELATION_DEFINITIONS,relationPreview,legendOperations} from './canvas-editor.js';
 
 /** The same visual vocabulary is used to choose, inspect and explain a link. */
-export function relationChoices(editor,{compact=false}={}){
+export function relationChoices(editor,{compact=false,types=null}={}){
   const box=document.createElement('div');box.className=compact?'relation-choices compact':'relation-choices';
   const selected=()=>editor.scene?.relations.filter(r=>editor.selectedIds.includes(r.id))||[];
-  for(const def of RELATION_DEFINITIONS){
+  for(const def of RELATION_DEFINITIONS.filter(d=>!types||types.includes(d.id))){
     const button=document.createElement('button');button.type='button';button.className='relation-choice';
     button.dataset.relationChoice=def.id;button.setAttribute('aria-label',def.title+'：'+def.description);
     button.setAttribute('aria-pressed',String(selected().length>0&&selected().every(r=>r.type===def.id)));
@@ -27,6 +27,7 @@ export function setupRelations(editor){
   const $=id=>document.getElementById(id),select=$('connection-type');
   const picker=document.createElement('button');picker.className='tool relation-picker';picker.id='relation-picker';
   picker.title='查看符号与含义；选中连线时可直接更改';select.hidden=true;$('relation-context').append(picker);
+  const inline=relationChoices(editor,{types:['sequence','activates','inhibits']});inline.classList.add('inline-relation-choices');inline.setAttribute('role','group');inline.setAttribute('aria-label','常用连线含义');$('relation-context').prepend(inline);
   const dialog=document.createElement('dialog');dialog.id='relation-guide';dialog.className='relation-guide';
   const header=document.createElement('div');header.className='dialog-heading';
   const heading=document.createElement('h2');heading.textContent='连线表达什么';
@@ -40,13 +41,13 @@ export function setupRelations(editor){
   const legend=document.createElement('button');legend.type='button';legend.className='button';legend.textContent='将当前连线图例放入图中';
   legend.onclick=()=>{if(!editor.scene)return;dialog.close();editor.host.dispatchEvent(new CustomEvent('editor-request-legend'));};
   dialog.append(header,intro,relationChoices(editor),notes,option,legend);document.body.append(dialog);
-  picker.onclick=()=>{const rs=editor.scene?.relations.filter(r=>editor.selectedIds.includes(r.id))||[];intro.textContent=rs.length?`选中了 ${rs.length} 条连线，点选类型即可修改。`:'点选类型后，从对象的蓝色连接点拖到另一对象。';check.checked=!!editor.scene?.style.relation_labels;check.disabled=!editor.scene;legend.disabled=!editor.scene;dialog.showModal();};
+  picker.onclick=()=>{const rs=editor.scene?.relations.filter(r=>editor.selectedIds.includes(r.id))||[];intro.textContent=rs.length?`选中了 ${rs.length} 条连线，点选类型即可修改。`:'先选这条线的含义，再依次点击图中的起点和终点。';check.checked=!!editor.scene?.style.relation_labels;check.disabled=!editor.scene;legend.disabled=!editor.scene;dialog.showModal();};
   function refresh(){
     const rs=editor.scene?.relations.filter(r=>editor.selectedIds.includes(r.id))||[];
     const type=rs.length===1?rs[0].type:editor.relationType||'associates',def=RELATION_DEFINITIONS.find(x=>x.id===type);
     picker.replaceChildren(relationPreview(type),document.createTextNode(def.title+' ▾'));picker.setAttribute('aria-label','连线含义：'+def.title);
     select.value=editor.relationType||'associates';
-    for(const b of dialog.querySelectorAll('[data-relation-choice]'))b.setAttribute('aria-pressed',String(b.dataset.relationChoice===type));
+    for(const b of document.querySelectorAll('[data-relation-choice]'))b.setAttribute('aria-pressed',String(b.dataset.relationChoice===type));
   }
   editor.host.addEventListener('editor-relation-change',refresh);refresh();return{refresh};
 }

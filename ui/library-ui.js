@@ -15,15 +15,15 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   const $=id=>document.getElementById(id);
   const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;};
   let filter='',structure='',group='recommended',legacy=false,drafts=false,assetCategory='',assetDomain='biology',pending=null,detail=null,assetLimit=60,selectedTemplate=null;
-  let favorites=[],recent=[];
+  let favorites=[],recent=[],creatingDocument=null;
   try{favorites=JSON.parse(localStorage.getItem('rylume-favorite-assets')||'[]');recent=JSON.parse(localStorage.getItem('rylume-recent-assets')||'[]');}catch{}
   function remember(){try{localStorage.setItem('rylume-favorite-assets',JSON.stringify(favorites));localStorage.setItem('rylume-recent-assets',JSON.stringify(recent));}catch{toast('素材偏好暂未保存；图版不受影响');}}
   const templateCategory=t=>t.category||({pathway:'通路排版',process:'过程排版',network:'互作排版',assembly:'组装排版'}[t.family]);
 
   async function insert(item,position){
-    if(!state.id || !state.revision)await blank();
+    if(!state.id||!state.revision){if(!creatingDocument)creatingDocument=blank().finally(()=>creatingDocument=null);await creatingDocument;}
     if(!state.revision)return;
-    const key=item.asset_id||item.type;
+    const documentId=state.id,key=item.asset_id||item.type;
     if(!editor.artwork.has(key)){
       try{
         const {sanitizedSvg}=await import('./canvas-editor.js');
@@ -32,7 +32,8 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
         editor.artwork.set(key,sanitizedSvg(await response.text()));
       }catch{return toast('素材载入失败，请重试',true);}
     }
-    editor.insertObject(item.type,assetDisplayName(item),item,position);
+    if(state.id!==documentId)return toast('图版已切换，请在当前图版重新添加素材。');
+    editor.insertObject(item.type,assetDisplayName(item),item,position);editor.ensureSelectionVisible();
     recent=[assetKey(item),...recent.filter(k=>k!==assetKey(item))].slice(0,60);remember();
     editor.host.focus({preventScroll:true});
     toast('已添加 '+item.label+' · 可拖动位置，双击改字');
@@ -65,7 +66,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     const category=assetCategory || ($('asset-category')?.value || '');
     const assets=rankAssets(state.assets,{domain:assetDomain,category,query:q,style:$('asset-style')?.value||'',view:$('asset-view')?.value||'all',favorites,recent});
     list.replaceChildren();
-    if($('asset-count'))$('asset-count').textContent=`生物学 / ${category||'全部素材'} · ${assets.length} 项`;
+    if($('asset-count'))$('asset-count').textContent=`${state.assetDomains?.find(d=>d.id===assetDomain)?.title||'生物学'} / ${category||'全部素材'} · ${assets.length} 项`;
     
     for(const item of assets.slice(0,assetLimit)){
       const card=el('div','asset-card');
@@ -79,7 +80,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
       b.append(img,el('span','asset-name',assetDisplayName(item)));
       const style=el('span','asset-style-tag',{native:'原生图元',flat:'简洁矢量',detailed:'精细插画'}[assetStyle(item)]);b.append(style);
       b.title='点击添加到画布：'+item.label;
-      b.onclick=()=>insert(item);
+      b.onclick=e=>{if(e.detail>1)return;insert(item);};
       card.draggable=true;
       card.ondragstart=e=>{
         e.dataTransfer.setData('application/cell-asset',JSON.stringify(item));
@@ -94,11 +95,12 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     }
     if(assets.length>assetLimit){
       const more=el('button','button secondary asset-load-more',`再看 60 个 · 还有 ${assets.length-assetLimit} 个`);
-      more.onclick=()=>{const y=list.parentElement.scrollTop;assetLimit+=60;renderAssets();list.parentElement.scrollTop=y;};
+      more.onclick=()=>{const y=list.scrollTop;assetLimit+=60;renderAssets();list.scrollTop=y;};
       list.append(more);
     }
     if(!assets.length){
-      list.append(el('p','muted','未找到匹配素材，可尝试搜索“细胞”、“受体”或“线粒体”。'));
+      list.append(el('p','muted','没有找到匹配的素材。可以换一个关键词，或清空筛选。'));
+      const reset=el('button','button full','清空搜索与筛选');reset.onclick=()=>{assetCategory='';$('asset-search').value='';$('asset-view').value='all';$('asset-style').value='';renderAssetChips();renderAssets();};list.append(reset);
     }
   }
 
@@ -195,7 +197,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     const options=[parent,...state.templates.filter(x=>x.variant_of===parent.id)];
     if(options.length>1){variants.append(el('h3','','同类用途的其他起点'));for(const v of options){const b=el('button','button'+(v.id===t.id?' selected':''),v.title);b.onclick=()=>showTemplate(v);variants.append(b);}}
     $('template-detail-apply').hidden=!compatible(t);
-    $('template-detail-create').textContent=t.library_group==='layout'?'用示例新建图版':'从此样板新建';
+    $('template-detail-create').textContent=t.library_group==='layout'?'用示例新建图版':'使用模板，开始编辑';
     if(!$('template-detail-dialog').open)$('template-detail-dialog').showModal();
   }
 
@@ -263,7 +265,6 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
         const label=el('label','legacy-layout-toggle');const check=el('input');check.type='checkbox';check.checked=drafts;check.onchange=()=>{drafts=check.checked;filter='';renderGalleryFilters();renderTemplates();};label.append(check,'显示扩展草图（尚未精修）');filtersContainer.append(label);
       }
     }
-    if($('welcome-gallery'))$('welcome-gallery').textContent='从模板开始';
     renderAssetChips();
     renderAssets();
     renderTemplates();

@@ -291,8 +291,10 @@ export class SceneEditor {
 
   finishConnection(source,target,sourcePort='auto'){
     if(source===target||!this.doc?.objects.some(o=>o.id===target))return false;
-    this.applyOperations([{op:'add_relation',relation:{id:uid('r'),source,target,type:this.relationType||'associates',source_port:sourcePort,target_port:'auto',label:'',indirect:false,uncertain:(this.relationType||'associates')==='associates'}}],'添加连线');
-    this.setTool('select');this.onStatus('连线已添加。可以继续拖动对象，连线会跟随。');return true;
+    const id=uid('r');
+    this.applyOperations([{op:'add_relation',relation:{id,source,target,type:this.relationType||'associates',source_port:sourcePort,target_port:'auto',label:'',indirect:false,uncertain:(this.relationType||'associates')==='associates'}}],'添加连线');
+    this.setTool('select');this.setSelection?.([id]);
+    this.onStatus('已连好。上方可以确认连线含义，拖动图形时连线会跟随。');return true;
   }
 
   world(e) {
@@ -379,6 +381,30 @@ export class SceneEditor {
     const x=Math.min(...objects.map(o=>o.x)),y=Math.min(...objects.map(o=>o.y)),w=Math.max(...objects.map(o=>o.x+o.w))-x,h=Math.max(...objects.map(o=>o.y+o.h))-y;
     this.zoom=Math.max(.1,Math.min(this.zoom,(this.host.clientWidth-70)/((w+20)*PXMM),(this.host.clientHeight-70)/((h+20)*PXMM)));
     this.offset={x:this.host.clientWidth/2-(x+w/2)*PXMM*this.zoom,y:this.host.clientHeight/2-(y+h/2)*PXMM*this.zoom};this.fitMode=false;this.position();
+  }
+
+  /** Newly inserted items stay visible, without centering the paper after every click. */
+  ensureSelectionVisible(){
+    if(!this.doc)return;
+    const objects=this.doc.objects.filter(o=>this.selected.has(o.id)&&o.visible!==false);
+    if(!objects.length)return;
+    const x=Math.min(...objects.map(o=>o.x))-2,y=Math.min(...objects.map(o=>o.y))-2;
+    const w=Math.max(...objects.map(o=>o.x+o.w))-x+2,h=Math.max(...objects.map(o=>o.y+o.h))-y+8;
+    const width=this.host.clientWidth,height=this.host.clientHeight;
+    const zoom=Math.max(.1,Math.min(this.zoom,(width-80)/(w*PXMM),(height-120)/(h*PXMM)));
+    let ox=this.offset.x,oy=this.offset.y;
+    const left=x*PXMM*zoom+ox,top=y*PXMM*zoom+oy;
+    if(left<39.99)ox+=40-left;else if(left+w*PXMM*zoom>width-39.99)ox+=width-40-left-w*PXMM*zoom;
+    if(top<79.99)oy+=80-top;else if(top+h*PXMM*zoom>height-39.99)oy+=height-40-top-h*PXMM*zoom;
+    if(zoom===this.zoom&&ox===this.offset.x&&oy===this.offset.y)return;
+    this.zoom=zoom;this.offset={x:ox,y:oy};this.fitMode=false;this.position();
+  }
+
+  insertTextAtCenter(){
+    if(!this.doc)return;
+    const r=this.host.getBoundingClientRect(),point=this.world({clientX:r.left+this.host.clientWidth/2,clientY:r.top+this.host.clientHeight/2});
+    this.setTool('select');this.insertObject('text','输入文字',{},point);this.ensureSelectionVisible();
+    requestAnimationFrame(()=>this.editSelectedLabel());
   }
 
   draw() {
@@ -583,7 +609,7 @@ export class SceneEditor {
   }
 
   down(e) {
-    if (!this.doc || e.target.closest('input')) return;
+    if (!this.doc || e.target.closest('input,.editor-inline-actions')) return;
     if (e.button !== 0 && e.button !== 1) return;
     e.preventDefault();
     this.host.focus({ preventScroll: true });
@@ -942,18 +968,26 @@ export class SceneEditor {
     if (!o || o.locked) return;
     e.preventDefault();
     this.host.querySelector('input')?.remove();
+    this.host.querySelector('.editor-inline-actions')?.remove();
     const rect = label.getBoundingClientRect(), host = this.host.getBoundingClientRect();
     const input = document.createElement('input');
+    const actions=document.createElement('div'),save=document.createElement('button'),cancel=document.createElement('button');
+    actions.className='editor-inline-actions';save.type=cancel.type='button';save.textContent='完成';cancel.textContent='取消';actions.append(save,cancel);
     input.className = 'editor-inline-input';
     input.setAttribute('aria-label', '原位编辑标签');
     input.value = o.label;
+    const width=Math.min(Math.max(130,rect.width+20),Math.max(130,this.host.clientWidth-20));
+    const left=Math.max(0,Math.min(rect.left-host.left-5,this.host.clientWidth-width-10)),top=Math.max(0,rect.top-host.top-5);
     Object.assign(input.style, {
-      left: Math.max(0, rect.left - host.left - 5) + 'px',
-      top: rect.top - host.top - 5 + 'px',
-      width: Math.max(130, rect.width + 20) + 'px',
+      left: left + 'px',
+      top: top + 'px',
+      width: width + 'px',
       fontSize: Math.max(12, rect.height) + 'px'
     });
-    this.host.append(input);
+    Object.assign(actions.style,{left:left+'px',top:(top+Math.max(34,rect.height+16)+5)+'px'});
+    this.host.append(input,actions);
+    const actionTop=top+(input.offsetHeight||Math.max(34,rect.height+16))+6;
+    actions.style.top=(actionTop+42>this.host.clientHeight?Math.max(0,top-42):actionTop)+'px';
     input.focus();
     input.select();
     let done = false;
@@ -962,9 +996,21 @@ export class SceneEditor {
       done = true;
       const value = input.value;
       input.remove();
+      actions.remove();
       if (save && value !== o.label) this.applyOperations([{ op: 'update', id: o.id, changes: { label: value } }], '编辑标签');
+      else {
+        this.drawOverlay();
+        this.onSelection(this.selectedIds);
+      }
+      this.host.focus({preventScroll:true});
     };
-    input.onblur = () => finish(true);
+    actions.onpointerdown=actions.onmousedown=e=>e.stopPropagation();
+    save.onpointerdown=cancel.onpointerdown=e=>{e.preventDefault();e.stopPropagation();};
+    save.onmousedown=cancel.onmousedown=e=>{e.preventDefault();e.stopPropagation();};
+    save.onclick=e=>{e.stopPropagation();finish(true);};
+    cancel.onclick=e=>{e.stopPropagation();finish(false);};
+    input.onblur = e => {if(!actions.contains(e?.relatedTarget))finish(true);};
+    actions.onfocusout=e=>{if(e.relatedTarget!==input&&!actions.contains(e.relatedTarget))finish(true);};
     input.onkeydown = e => {
       e.stopPropagation();
       if (e.key === 'Enter') { e.preventDefault(); finish(true); }

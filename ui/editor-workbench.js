@@ -49,6 +49,8 @@ export function setupWorkbench({editor,workspace}){
     $('add-text').setAttribute('aria-pressed',String(editor.tool==='text'));
     const objects=editor.scene?.objects.filter(o=>editor.selectedIds.includes(o.id))||[],relations=editor.scene?.relations.filter(o=>editor.selectedIds.includes(o.id))||[];
     const count=editor.selectedIds.length,o=objects[0]||relations[0];
+    $('quick-label-title').textContent=relations.length&&!objects.length?'线上文字':'修改文字';
+    label.placeholder=relations.length&&!objects.length?'可选：给连线加说明':'在这里输入文字';
     workspace.classList.toggle('has-selection',count>0);
     workspace.classList.toggle('tool-in-use',editor.tool!=='select');
     workspace.classList.toggle('editing-connection',editor.tool==='connect'||relations.length>0);
@@ -59,11 +61,14 @@ export function setupWorkbench({editor,workspace}){
     $('quick-fields').hidden=!count&&editor.tool!=='connect';$('quick-empty').hidden=true;
     $('quick-count').textContent=count===1?(relations.length?'所选连线':'所选对象'):`已选 ${count} 项`;
     for(const [n,value] of [[label,count===1?o?.label||'':''],[font,objects[0]?.font_size_pt||8],[fill,objects[0]?.fill||'#dae8ed']])if(document.activeElement!==n)n.value=value;
-    label.closest('label').hidden=!count;
-    document.querySelector('.selection-more').hidden=!count;
+    const connecting=editor.tool==='connect';
+    label.closest('label').hidden=count!==1||connecting;
+    $('duplicate').hidden=connecting||!objects.length;
+    $('delete').hidden=connecting;
+    document.querySelector('.selection-more').hidden=!count||editor.tool==='connect';
     label.disabled=count!==1||objects[0]?.locked||!o;font.disabled=!objects.length||objects.every(o=>o.locked);fill.disabled=font.disabled;
     $('quick-label-focus').disabled=label.disabled;
-    for(const n of [font,fill])n.closest('label').hidden=!objects.length;
+    for(const n of [font,fill])n.closest('label').hidden=!objects.length||editor.tool==='connect';
     $('quick-connect').hidden=!!relations.length&&!objects.length;
     $('cancel-canvas-tool').hidden=editor.tool==='select';
     const source=editor.scene?.objects.find(o=>o.id===editor.connectStart);

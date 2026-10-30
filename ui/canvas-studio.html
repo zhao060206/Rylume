@@ -251,6 +251,9 @@
      </div>
     </details>
    </nav>
+   <button class="quiet" id="open-start" title="新建图版；当前图版会自动保留">
+    新建
+   </button>
    <div class="project-heading">
     <span id="project-title">
      未命名图版
@@ -271,21 +274,12 @@
      <use href="#download">
      </use>
     </svg>
-    导出
+    导出图片
    </button>
   </header>
   <main class="workspace left-collapsed properties-hidden" id="workspace">
    <nav aria-label="工作区工具" class="rail">
-    <button aria-controls="panel-generate" aria-expanded="false" class="rail-item" data-tab="generate">
-     <svg class="icon">
-      <use href="#spark">
-      </use>
-     </svg>
-     <span>
-      生成
-     </span>
-    </button>
-    <button aria-controls="panel-templates" aria-expanded="false" class="rail-item" data-tab="templates">
+    <button aria-controls="panel-templates" aria-expanded="false" class="rail-item" data-tab="templates" title="选择模板并创建一张新图">
      <svg class="icon">
       <use href="#layers">
       </use>
@@ -294,31 +288,40 @@
       模板
      </span>
     </button>
-    <button aria-controls="panel-assets" aria-expanded="false" class="rail-item" data-tab="assets">
+    <button aria-controls="panel-assets" aria-expanded="false" class="rail-item" data-tab="assets" title="点击或搜索素材，添加到纸张上">
      <svg class="icon">
       <use href="#plus">
       </use>
      </svg>
      <span>
-      素材
+      添加素材
      </span>
     </button>
-    <button aria-controls="panel-references" aria-expanded="false" class="rail-item" data-tab="references">
+    <button aria-controls="panel-generate" aria-expanded="false" class="rail-item" data-tab="generate" title="描述研究内容，让 AI 创建初稿">
      <svg class="icon">
-      <use href="#icon-journal">
+      <use href="#spark">
       </use>
      </svg>
      <span>
-      参考
+      AI 生成
      </span>
     </button>
-    <button aria-controls="panel-layers" aria-expanded="false" class="rail-item" data-tab="layers">
+    <button aria-controls="panel-layers" aria-expanded="false" class="rail-item" data-tab="layers" title="查看、隐藏或锁定图中对象">
      <svg class="icon">
       <use href="#layers">
       </use>
      </svg>
      <span>
       图层
+     </span>
+    </button>
+    <button aria-controls="panel-references" aria-expanded="false" class="rail-item" data-tab="references" title="查看论文原图与出处">
+     <svg class="icon">
+      <use href="#icon-journal">
+      </use>
+     </svg>
+     <span>
+      论文参考
      </span>
     </button>
     <div class="rail-spacer">
@@ -355,12 +358,12 @@
       <div aria-label="创作方式" class="generation-modes" role="group">
        <button aria-pressed="true" data-generation-mode="vector" type="button">
         <strong>
-         机制图
+         可编辑图形
         </strong>
        </button>
        <button aria-pressed="false" data-generation-mode="image" type="button">
         <strong>
-         科研插画
+         AI 插画
         </strong>
        </button>
       </div>
@@ -385,7 +388,7 @@
       </div>
       <details class="panel-disclosure">
        <summary>
-        参考与辅助
+        添加参考图 / 帮我梳理描述
        </summary>
        <div class="panel-disclosure-body">
         <button class="button full guide-launch" id="open-guide">
@@ -499,10 +502,10 @@
       </button>
      </div>
      <p class="muted">
-      选择构图，或应用到兼容的当前图版。
+      选择模板后会新建一张图，已有图版会保留。
      </p>
      <button class="button primary full" id="open-gallery">
-      打开完整模板画廊
+      选择模板，开始绘图
      </button>
      <label class="field-label" for="colorway">
       配色风格 · 应用到当前图
@@ -530,7 +533,7 @@
       </button>
      </div>
      <p class="muted">
-      点击添加，拖动可指定放置位置。
+      点一下添加；放到图上后可以拖动和改字。
      </p>
      <label class="field-label" for="asset-domain">
       学科
@@ -545,7 +548,7 @@
        全部分类
       </option>
      </select>
-     <input aria-label="搜索科研素材" id="asset-search" placeholder="在当前分类中搜索…" type="search"/>
+     <input aria-label="搜索科研素材" id="asset-search" placeholder="搜索素材，例如：受体、线粒体…" type="search"/>
      <p class="muted small" id="asset-count">
      </p>
      <div class="asset-list" id="asset-list">
@@ -600,12 +603,18 @@
         <use href="#icon-undo">
         </use>
        </svg>
+       <span class="tool-caption">
+        撤销
+       </span>
       </button>
       <button aria-label="重做" class="tool" disabled="" id="redo" title="重做 Ctrl+Y">
        <svg class="icon">
         <use href="#icon-redo">
         </use>
        </svg>
+       <span class="tool-caption">
+        重做
+       </span>
       </button>
      </div>
      <div class="tool-cluster">
@@ -638,10 +647,10 @@
      </div>
      <div class="canvas-actions">
       <button class="tool text-tool" id="toggle-properties" title="打开所选对象属性或画布设置">
-       属性
+       详细设置
       </button>
       <button class="tool text-tool" id="open-check-toolbar" title="查看排版与内容建议">
-       检查
+       帮我检查
       </button>
      </div>
     </div>
@@ -694,8 +703,8 @@
        所选对象
       </span>
       <label class="quick-name">
-       文字
-       <input aria-label="所选对象文字" id="quick-label" placeholder="输入名称"/>
+       <span id="quick-label-title">修改文字</span>
+       <input aria-label="所选对象文字" id="quick-label" placeholder="在这里输入文字"/>
       </label>
       <label>
        字号
@@ -705,9 +714,15 @@
        颜色
        <input aria-label="所选对象颜色" id="quick-fill" type="color" value="#dae8ed"/>
       </label>
+      <button class="tool text-tool" id="duplicate" title="复制所选 Ctrl+D">
+       复制
+      </button>
+      <button class="tool text-tool" id="delete" title="删除所选 Delete">
+       删除
+      </button>
       <details class="selection-more app-menu">
-       <summary aria-label="更多编辑操作">
-        更多
+       <summary aria-label="对齐、组合与排列">
+        排列
        </summary>
        <div class="menu-items selection-menu">
         <button class="tool text-tool" id="group">
@@ -754,12 +769,6 @@
         <button class="tool text-tool" id="quick-send-back" title="将所选对象置于底层">
          置底
         </button>
-        <button class="tool text-tool" id="duplicate" title="复制所选 Ctrl+D">
-         复制
-        </button>
-        <button class="tool text-tool" id="delete" title="删除所选 Delete">
-         删除
-        </button>
         <button class="tool text-tool" id="quick-connect" title="选择一个对象后，点这里，再点击目标对象">
          连线到…
         </button>
@@ -782,52 +791,103 @@
     </div>
     <div class="welcome" id="welcome">
      <div class="start-document">
-      <span class="start-eyebrow">
-       理象 · Rylume
-      </span>
-      <h2>
-       开始绘图
-      </h2>
-      <p>
-       选择模板、描述构想，或直接在画布上创作。
+      <div class="home-heading">
+       <div>
+        <span class="start-eyebrow">
+         理象 · Rylume
+        </span>
+        <h2>
+         新建图版
+        </h2>
+       </div>
+       <button class="button" hidden="" id="return-to-document">
+        返回当前图版
+       </button>
+      </div>
+      <p class="home-intro">
+       第一次使用？先试着改一张示例图。模板和手动绘图无需配置 AI。
       </p>
-      <div class="start-actions">
-       <button class="button primary" id="welcome-gallery">
-        从模板开始
-       </button>
-       <button class="button" id="welcome-ai">
-        描述生成
-       </button>
-       <button class="button" id="welcome-blank">
-        新建空白图版
-       </button>
-      </div>
-      <div class="start-divider">
-       <span>
-        示例
-       </span>
-      </div>
-      <button class="start-example" id="welcome-example">
+      <button class="home-example" id="welcome-example">
        <img alt="JAK–STAT 通路样板预览" src="/ui/library/sb_socs_feedback.svg"/>
        <span>
         <strong>
-         JAK–STAT · SOCS 负反馈
+         先试着改一张图
         </strong>
         <small>
-         对象、连线与标签可直接编辑
+         打开可编辑示例，点选、拖动、改字即可
         </small>
        </span>
        <span aria-hidden="true">
-        ↗
+        打开示例 →
        </span>
       </button>
-      <button class="text-button" id="empty-model-settings">
-       配置 AI 服务
-      </button>
-      <div class="start-shortcuts">
-       单击选中，拖动移动，双击改字。
+      <div class="home-choices">
+       <button class="home-choice" id="welcome-gallery">
+        <svg class="icon">
+         <use href="#layers">
+         </use>
+        </svg>
+        <strong>
+         选择一个模板
+        </strong>
+        <small>
+         已有构图，换文字和素材就能用
+        </small>
+       </button>
+       <button class="home-choice" id="welcome-blank">
+        <svg class="icon">
+         <use href="#plus">
+         </use>
+        </svg>
+        <strong>
+         自己画一张
+        </strong>
+        <small>
+         从空白纸张开始，点击添加素材
+        </small>
+       </button>
+       <button class="home-choice" id="welcome-ai">
+        <svg class="icon">
+         <use href="#spark">
+         </use>
+        </svg>
+        <strong>
+         让 AI 画初稿
+        </strong>
+        <small>
+         描述研究内容，再由你调整细节
+        </small>
+       </button>
       </div>
+      <div class="home-ai-note">
+       <span>
+        只有 AI 生成功能需要配置模型服务。
+       </span>
+       <button class="text-button" id="empty-model-settings">
+        设置 AI 服务
+       </button>
+      </div>
+      <section class="home-recent" hidden="" id="home-recent">
+       <h3>
+        继续最近的图版
+       </h3>
+       <div id="home-recent-list">
+       </div>
+      </section>
      </div>
+    </div>
+    <div class="workflow-guide" hidden="" id="workflow-guide">
+     <div class="workflow-copy">
+      <strong id="workflow-title">
+      </strong>
+      <span id="workflow-detail">
+      </span>
+     </div>
+     <button class="button" id="workflow-next">
+     </button>
+     <button aria-label="查看操作说明" class="text-button" id="workflow-help">
+      操作说明
+     </button>
     </div>
     <footer class="canvas-footer">
      <span id="canvas-size">
@@ -871,6 +931,30 @@
       滚轮移动画布，Ctrl + 滚轮缩放。点“适合窗口”找回整张图。改错了就点“撤销”。
      </p>
     </div>
+    <div class="empty-canvas-actions" hidden="" id="empty-canvas-actions">
+     <div>
+      <svg class="icon">
+       <use href="#plus">
+       </use>
+      </svg>
+      <h2>
+       纸张准备好了
+      </h2>
+      <p>
+       点一下左侧素材，就能放到图上。
+       <br/>
+       也可以先写一段文字。
+      </p>
+      <div>
+       <button class="button primary" id="empty-add-asset">
+        添加素材
+       </button>
+       <button class="button" id="empty-add-text">
+        输入文字
+       </button>
+      </div>
+     </div>
+    </div>
    </section>
    <aside class="properties" id="properties">
     <div class="properties-heading">
@@ -903,52 +987,94 @@
     </div>
    </aside>
   </main>
-  <div class="popover" hidden="" id="export-menu">
-   <h2>
-    导出当前修订
-   </h2>
-   <p class="muted small" id="export-revision">
-   </p>
-   <label class="field-label" for="export-dpi">
-    PNG 分辨率
-   </label>
-   <select id="export-dpi">
-    <option value="300">
-     300 DPI
-    </option>
-    <option value="600">
-     600 DPI
-    </option>
-   </select>
-   <div class="export-formats">
-    <button class="button" data-export="svg">
-     SVG
-     <span>
-      矢量图形
-     </span>
-    </button>
-    <button class="button" data-export="pdf">
-     PDF
-     <span>
-      物理尺寸
-     </span>
-    </button>
-    <button class="button" data-export="png">
-     PNG
-     <span>
-      高清图片
-     </span>
-    </button>
-    <button class="button" data-export="pptx">
-     PPTX
-     <span>
-      原生对象
-     </span>
+  <dialog aria-labelledby="export-title" class="export-dialog" hidden="" id="export-menu">
+   <div class="dialog-heading">
+    <div>
+     <h2 id="export-title">
+      把图保存到电脑
+     </h2>
+     <p class="muted">
+      选择用途即可保存；软件里的原图会保留。
+     </p>
+    </div>
+    <button aria-label="关闭导出" class="icon-button" id="close-export">
+     ×
     </button>
    </div>
-   <p class="muted small" id="export-status" role="status">
+   <p class="muted small" id="export-revision">
    </p>
-  </div>
+   <div class="export-warning" hidden="" id="export-warning">
+   </div>
+   <div class="export-formats">
+    <button class="export-choice" data-export="png">
+     <strong>
+      用于论文或汇报
+     </strong>
+     <span>
+      高清图片 · PNG · 推荐
+     </span>
+     <small>
+      PNG →
+     </small>
+    </button>
+    <button class="export-choice" data-export="pptx">
+     <strong>
+      放进 PowerPoint 继续编辑
+     </strong>
+     <span>
+      图形和文字可以分别修改 · PPTX
+     </span>
+     <small>
+      PPTX →
+     </small>
+    </button>
+    <button class="export-choice" data-export="pdf">
+     <strong>
+      投稿或打印
+     </strong>
+     <span>
+      按纸张尺寸保存的矢量文件 · PDF
+     </span>
+     <small>
+      PDF →
+     </small>
+    </button>
+    <button class="export-choice" data-export="svg">
+     <strong>
+      在其他绘图软件里编辑
+     </strong>
+     <span>
+      可缩放的矢量文件 · SVG
+     </span>
+     <small>
+      SVG →
+     </small>
+    </button>
+   </div>
+   <details class="export-details" id="export-details">
+    <summary>
+     清晰度、纸张与素材来源
+    </summary>
+    <label class="field-label" for="export-dpi">
+     图片清晰度
+    </label>
+    <select id="export-dpi">
+     <option value="300">
+      清晰 · 300 DPI（通常够用）
+     </option>
+     <option value="600">
+      更高清 · 600 DPI（文件更大）
+     </option>
+    </select>
+   </details>
+   <div class="export-status" id="export-status" role="status">
+   </div>
+   <div class="dialog-actions">
+    <button class="button" id="continue-editing">
+     返回继续编辑
+    </button>
+   </div>
+  </dialog>
   <dialog class="history-dialog" id="history-dialog">
    <div class="dialog-heading">
     <div>

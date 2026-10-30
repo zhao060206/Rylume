@@ -53,8 +53,8 @@ export function setupReview({state,editor,api,flush,toast,showRight,showLayers})
     const parent=$('inspector-review');parent.replaceChildren();const a=state.audit;
     if(!a){parent.append(el('p','muted','打开可编辑图版后，这里会给出可处理的排版建议。'));return;}
     const findings=(a.findings||[]).filter(f=>f.status!=='acknowledged'),parts=findings.map(f=>({f,...findingPresentation(f,editor.scene),...(f.severity==='error'?{section:'output'}:{})}));
-    parent.append(el('div','review-status',`当前修订 r${state.revision} · ${a.author_confirmed?'作者已核对':'作者待核对'} · ${a.vision?.status==='completed'?'视觉建议已获取':'视觉建议可选'}`));
-    parent.append(el('p','review-intro','建议帮助你检查文字与排版，可以逐项处理，也可以继续编辑和导出。'));
+    parent.append(el('div','review-status',parts.length?'有 '+parts.length+' 处值得看一眼':'当前排版没有发现需要处理的问题'));
+    parent.append(el('p','review-intro','点「在图上查看」就能找到位置。调整前可以预览，改错后可以撤销。科学内容仍需由你核对。'));
     if(state.pending.length||state.saving)parent.append(el('p','review-updating','正在保存；下列建议对应上一次保存的图版。'));
     if(!parts.length)parent.append(el('div','review-clear','当前没有待处理的建议。科学机制仍请对照研究资料核对。'));
     for(const [section,title] of [['output','可能影响输出'],['layout','排版建议'],['content','科学内容待核对']]){
@@ -64,7 +64,7 @@ export function setupReview({state,editor,api,flush,toast,showRight,showLayers})
         const card=el('article','advice-card');card.append(el('h4','',p.title),el('p','',p.detail),el('span','review-source','本机结构与排版检查 · r'+state.revision));const actions=el('div','advice-actions');
         if(p.f.object_ids?.some(id=>editor.scene?.objects.some(o=>o.id===id)||editor.scene?.relations.some(r=>r.id===id))){const locateButton=el('button','button','在图上查看');locateButton.onclick=()=>locate(p.f);actions.append(locateButton);}
         if(p.canPreview){const b=el('button','button primary','预览调整');b.onclick=()=>preview(p.f,b);actions.append(b);}
-        else if(p.f.code==='empty-label'){const b=el('button','button','填写名称');b.onclick=()=>{locate(p.f);$('quick-label').focus();$('quick-label').select();};actions.append(b);}
+        else if(p.f.code==='empty-label'){const b=el('button','button','填写名称');b.onclick=()=>{locate(p.f);editor.ensureSelectionVisible();editor.editSelectedLabel();};actions.append(b);}
         else if(p.f.code==='uncertain-relation'){const b=el('button','button','设置连线含义');b.onclick=()=>{locate(p.f);showRight('properties',false);};actions.append(b);}
         else if(['hidden-endpoint','required-object'].includes(p.f.code)){const b=el('button','button','查看图层');b.onclick=showLayers;actions.append(b);}
         if(p.f.severity!=='error'&&['overlap','label-overlap','label-object-overlap','empty-label'].includes(p.f.code)){const keep=el('button','text-button','保留当前排版');keep.onclick=()=>decision(p.f);actions.append(keep);}
@@ -76,6 +76,7 @@ export function setupReview({state,editor,api,flush,toast,showRight,showLayers})
     const visionButton=el('button','button',vision.status==='running'?'视觉建议获取中…':'获取视觉建议');visionButton.disabled=vision.status==='running';visionButton.onclick=()=>$('vision-review').click();details.append(visionButton);
     for(const f of (vision.findings||[]).filter(f=>f.status!=='dismissed'))details.append(el('p','finding',f.message));
     for(const f of (a.findings||[]).filter(f=>f.status==='acknowledged')){const row=el('div','finding');row.append(el('p','',findingPresentation(f,editor.scene).title+' · 已确认保留'));const restore=el('button','text-button','重新显示这条建议');restore.onclick=()=>decision(f,true);row.append(restore);details.append(row);}
+    const exportButton=el('button','button full','继续导出图片');exportButton.onclick=()=>$('toggle-export').click();parent.append(exportButton);
     const raw=el('button','text-button','查看完整记录与作者确认');raw.onclick=()=>$('audit-dialog').showModal();details.append(raw);parent.append(details);
   }
   return {render};

@@ -54,8 +54,8 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   function setMode(next){
     mode=next==='image'?'image':'vector';
     for(const b of document.querySelectorAll('[data-generation-mode]'))b.setAttribute('aria-pressed',String(b.dataset.generationMode===mode));
-    $('generation-mode-note').textContent=mode==='vector'?'对象、连线和文字均可直接修改。':'使用生图服务生成插画素材并排版；实际可编辑范围取决于生成结果。';
-    $('image-options').hidden=mode!=='image';$('generate').textContent=mode==='vector'?'生成可编辑图版':'生成科研插画';
+    $('generation-mode-note').textContent=mode==='vector'?'图形、文字和连线都能单独修改。':'由 AI 绘制插画，单独编辑图中对象的能力取决于生成结果。';
+    $('image-options').hidden=mode!=='image';$('generate').textContent=mode==='vector'?'生成可编辑初稿':'生成 AI 插画';
     document.querySelector('.input-meta span:last-child').textContent=mode==='vector'?'原生矢量':'AI 科研插画';
     $('brief-input').maxLength=mode==='vector'?8000:4000;
     $('brief-count').textContent=`${$('brief-input').value.length} / ${$('brief-input').maxLength}`;
