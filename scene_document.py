@@ -282,7 +282,7 @@ def normalize_scene(value):
     scene['generation_contract'] = {k: _text(contract[k], 200000 if k in ('expected_objects','expected_relations') else 8000) for k in (
         'original_text', 'generation_brief', 'reference_id', 'reference_summary', 'reference_purpose',
         'layout', 'draft_source_id', 'draft_source_revision', 'source_kind', 'verification',
-        'expected_objects', 'expected_relations') if k in contract}
+        'layout_policy','layout_summary','editable_layers', 'expected_objects', 'expected_relations') if k in contract}
     return scene
 
 

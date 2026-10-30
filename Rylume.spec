@@ -16,6 +16,7 @@ hiddenimports = ['svgelements', 'svgpathtools', 'framework', 'archetypes', 'arch
 hiddenimports += ['template_library', 'document_workflows']
 hiddenimports += ['resource_packs','github_delivery','app_updates','desktop_delivery']
 hiddenimports += ['figure_assets', 'figure_generation', 'figure_references', 'scientific_intent']
+hiddenimports += ['sketch_layout']
 datas += [('packaging/update-helper.ps1','packaging')]
 tmp_ret = collect_all('vtracer')
 datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]

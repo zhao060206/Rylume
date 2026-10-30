@@ -2,9 +2,10 @@ import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
 import {originalBrief,briefSnapshot,sameBriefSnapshot,acceptEnhancement,generationBrief,authorBrief} from './brief-state.js';
 /** Unified generation, model settings and inspection around the native canvas. */
 export function canApplySavedScene({epoch,dirty,pending,gesture}){return epoch===dirty&&!pending&&!gesture;}
-export function generationPayload({text,mode='vector',width=180,height=120,dpi=300,reference=null,literature=false,originalText,archetype,referenceId,referencePurpose,sketch,previewId}) {
+export function generationPayload({text,mode='vector',width=180,height=120,dpi=300,reference=null,literature=false,originalText,archetype,referenceId,referencePurpose,sketch,previewId,layoutPolicy}) {
   const base={text,generation_brief:text,original_text:originalText||text,canvas_mm:[width,height],dpi,style_dna:reference||{},request_id:crypto.randomUUID(),scene_engine:'v2',illustration_mode:mode==='image'?'image':'vector',
     ...(referenceId?{reference_id:referenceId,reference_purpose:referencePurpose||'layout'}:{}),
+    ...((referenceId||sketch)?{layout_policy:layoutPolicy|| (sketch?'preserve':'regularize')}:{}),
     ...(sketch?{sketch_job_id:sketch.id,base_revision:sketch.revision}:{}),...(previewId?{preview_id:previewId}:{})};
   if(mode==='vector')return base;
   return {...base,canvas:[Math.round(width*dpi/25.4),Math.round(height*dpi/25.4)],literature,
@@ -57,7 +58,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   function setMode(next){
     mode=next==='image'?'image':'vector';
     for(const b of document.querySelectorAll('[data-generation-mode]'))b.setAttribute('aria-pressed',String(b.dataset.generationMode===mode));
-    $('generation-mode-note').textContent=mode==='vector'?'生成可编辑的矢量对象，文字和连线独立。':'逐个绘制插画对象，位置、文字和连线可编辑；插画内部为像素。';
+    $('generation-mode-note').textContent=mode==='vector'?'生成可编辑的矢量对象，文字和连线独立。':'插画主体为图片；文字、箭头及箭头文字独立，可拖动、改字和调整连接。';
     $('image-options').hidden=mode!=='image';$('generate').textContent=mode==='vector'?'生成可编辑初稿':'生成 AI 插画';
     document.querySelector('.input-meta span:last-child').textContent=mode==='vector'?'原生矢量':'AI 科研插画';
     $('brief-input').maxLength=8000;
@@ -147,7 +148,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     catch(e){if(enhancing)$('generation-inline-status').textContent=e.message;toast(e.message,true);}
     finally{button.disabled=false;button.setAttribute('aria-busy','false');}
   }
-  function briefContext(){return {size:$('new-size').value,referenceId:state.referenceId||null,referencePurpose:state.referencePurpose||'layout'};}
+  function briefContext(){return {size:$('new-size').value,referenceId:state.referenceId||null,referencePurpose:state.referencePurpose||'layout',layoutPolicy:state.layoutPolicy||'regularize'};}
   function reviewBrief(){
     if(!proposed)return;
     if(!sameBriefSnapshot(proposed.snapshot,state,$('brief-input').value.trim(),briefContext())){
@@ -209,6 +210,6 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     const enhanced=generationBrief(state,text);
     if(mode==='image'&&enhanced.length>4000)throw Error('科研插画描述请控制在 4000 字以内；当前描述已保留。');
     const [width,height]=$('new-size').value.split('x').map(Number);
-    return generationPayload({text:enhanced,mode,width,height,dpi:Number($('generation-dpi').value),reference:state.reference,literature:$('generation-literature').checked,originalText:originalBrief(state,text),archetype:state.archetype,referenceId:state.referenceId,referencePurpose:state.referencePurpose,sketch:state.sketchSource});
+    return generationPayload({text:enhanced,mode,width,height,dpi:Number($('generation-dpi').value),reference:state.reference,literature:$('generation-literature').checked,originalText:originalBrief(state,text),archetype:state.archetype,referenceId:state.referenceId,referencePurpose:state.referencePurpose,sketch:state.sketchSource,layoutPolicy:state.layoutPolicy});
   }};
 }

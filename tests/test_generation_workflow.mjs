@@ -13,6 +13,9 @@ for(const mode of ['vector','image']){
  const payload=generationPayload({text:'增强布局',originalText:'原始科学内容',mode,referenceId:'ref_saved',referencePurpose:'sketch',sketch:{id:'j_sketch',revision:13},previewId:'gp_saved'});
  assert.equal(payload.scene_engine,'v2');assert.equal(payload.original_text,'原始科学内容');assert.equal(payload.generation_brief,'增强布局');
  assert.equal(payload.reference_id,'ref_saved');assert.equal(payload.sketch_job_id,'j_sketch');assert.equal(payload.base_revision,13);assert.equal(payload.preview_id,'gp_saved');
+  assert.equal(payload.layout_policy,'preserve','An editable canvas keeps exact positions unless the author opts into cleanup');
+  assert.equal(generationPayload({text:'rough sketch',referenceId:'ref_saved'}).layout_policy,'regularize');
+  assert.equal(generationPayload({text:'rough sketch',sketch:{id:'draft',revision:1},layoutPolicy:'regularize'}).layout_policy,'regularize');
 }
 console.log('Sketch pointer mapping, both editable render styles, original intent and revision-pinned inputs passed');
 

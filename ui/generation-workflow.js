@@ -21,7 +21,11 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
   if(document.activeElement!==$('generation-enhanced-input'))$('generation-enhanced-input').value=state.enhancedBrief||'';
   $('use-canvas-sketch').disabled=!editor.scene?.objects?.length||!!state.active;
   $('canvas-sketch-card').hidden=!state.sketchSource;
-  if(state.sketchSource)$('canvas-sketch-note').textContent='使用画布草稿 · '+(state.sketchSource.title||state.sketchSource.id)+' · 位置和连接保持';
+  $('creation-reference-help').hidden=!!(state.sketchSource||state.referenceId);
+  $('sketch-layout-settings').hidden=!(state.sketchSource||state.referenceId&&state.referencePurpose!=='style');
+  $('sketch-layout-policy').value=state.layoutPolicy||'regularize';
+  $('sketch-layout-help').textContent=state.layoutPolicy==='preserve'?'严格沿用对象位置与尺寸，保留你的精确排版。':'把草稿当作大致构图：整理对齐、间距和同类尺寸，保留阅读顺序、分组及连接含义。';
+  if(state.sketchSource)$('canvas-sketch-note').textContent='使用画布草稿 · '+(state.sketchSource.title||state.sketchSource.id)+(state.layoutPolicy==='regularize'?' · 智能整理排版':' · 保持精确位置');
   $('generation-reference-card').hidden=!state.referenceId;
   $('upload-sketch').hidden=!!state.referenceId;
  }
@@ -29,7 +33,7 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
  async function upload(image,purpose='layout'){
   const epoch=++referenceEpoch;state.referenceLoading=true;invalidate();refresh();status('正在保留原图并识别对象与位置…');$('upload-sketch').disabled=true;
   try{const result=await api('/api/references',{image,purpose,text:$('brief-input').value});if(epoch!==referenceEpoch)return;
-   state.referenceId=result.reference_id;state.reference=result.style_dna;state.referencePurpose=purpose;state.sketchSource=null;
+   state.referenceId=result.reference_id;state.reference=result.style_dna;state.referencePurpose=purpose;state.sketchSource=null;state.layoutPolicy='regularize';
    $('generation-reference-preview').src=result.preview_url;$('reference-purpose').value=purpose;
    $('generation-reference-note').textContent=result.reference_contract?.summary||result.analysis_message||'原图已保存，生成时会提供原图。';
    status(result.analysis_status==='ready'?'已保留原图与识别布局。可以先看结构，也可以直接生成。':result.analysis_message||'原图已保存。');invalidate();refresh();tab('generate');
@@ -40,9 +44,10 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
  $('replace-generation-reference').onclick=()=>$('reference-file').click();
  $('reference-file').onchange=async e=>{const file=e.target.files?.[0];if(!file)return;if(file.size>10*1024*1024)return toast('参考图请小于 10 MB');const epoch=++referenceEpoch;let awaitedEpoch=epoch;state.referenceLoading=true;refresh();try{const image=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file);});if(epoch!==referenceEpoch)return;awaitedEpoch=referenceEpoch+1;await upload(image,'layout');}catch(error){if(awaitedEpoch===referenceEpoch){state.referenceLoading=false;refresh();$('reference-file').value='';status('参考图未载入：'+error.message);toast(error.message,true);}}};
  $('remove-reference').onclick=$('clear-generation-reference').onclick=removeReference;
- $('reference-purpose').onchange=e=>{state.referencePurpose=e.target.value;invalidate();};
+ $('reference-purpose').onchange=e=>{state.referencePurpose=e.target.value;invalidate();refresh();};
+ $('sketch-layout-policy').onchange=e=>{state.layoutPolicy=e.target.value==='preserve'?'preserve':'regularize';invalidate();refresh();};
  $('use-canvas-sketch').onclick=async()=>{if(!editor.scene?.objects.length)return toast('先在画布放置对象，写上名称并连接');if(!await flush())return;
-  state.sketchSource={id:state.id,revision:state.revision,title:editor.scene.title};if(state.referenceId){state.referencePurpose='style';$('reference-purpose').value='style';}invalidate();refresh();status('草稿的位置、大小和连接将保持，AI 只细化对象。'+(state.referenceId?'上传图片仅参考画风。':''));};
+  state.sketchSource={id:state.id,revision:state.revision,title:editor.scene.title};state.layoutPolicy='preserve';if(state.referenceId){state.referencePurpose='style';$('reference-purpose').value='style';}invalidate();refresh();status('当前画布默认保持精确位置，也可切换为智能整理排版。'+(state.referenceId?'上传图片仅参考画风。':''));};
  $('clear-canvas-sketch').onclick=()=>{state.sketchSource=null;invalidate();refresh();status('已移除画布草稿。');};
  $('brief-input').addEventListener('input',()=>{invalidate();status('');});
  $('brief-input').addEventListener('change',()=>{invalidate();refresh();});
@@ -64,6 +69,7 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
    const body=await payload();if(!body.text&&!body.sketch_job_id&&!body.reference_id)throw Error('写下研究内容，或上传/绘制一张带名称的草稿');
    if(previewOnly){const epoch=version;status('正在提取对象与关系，并按草稿保留布局…');const result=await api('/api/generation/preview',body);
     if(epoch!==version)throw Error('输入已变化，请重新查看结构预览');preview={id:result.preview_id,body,version:epoch};
+    $('generation-preview-layout').textContent=result.contract?.layout_summary||'';
     $('generation-preview-stage').replaceChildren(sanitizedSvg(result.svg));$('generation-preview-findings').replaceChildren();
     for(const text of result.unresolved||[]){const li=document.createElement('li');li.textContent=text;$('generation-preview-findings').append(li);}
     for(const finding of result.audit?.findings||[]){if(finding.severity==='error'){const li=document.createElement('li');li.textContent='需要修正：'+finding.message;$('generation-preview-findings').append(li);}}
@@ -90,6 +96,7 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
   invalidate();
   const openedEpoch=++referenceEpoch;state.referenceLoading=false;$('upload-sketch').disabled=false;const openedId=state.id;
   const contract=scene?.generation_contract||{};
+  state.layoutPolicy=contract.layout_policy||'preserve';
   if(contract.original_text){state.originalBrief=contract.original_text;state.enhancedFrom=contract.generation_brief&&contract.generation_brief!==state.originalBrief?state.originalBrief:null;state.enhancedBrief=state.enhancedFrom?contract.generation_brief:null;$('brief-input').value=contract.original_text;$('brief-count').textContent=$('brief-input').value.length+' / 8000';}
   if(state.sketchSource&&state.sketchSource.id!==state.id)state.sketchSource=null;
   if(contract.reference_id&&contract.reference_id!==state.referenceId){

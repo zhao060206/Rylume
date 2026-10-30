@@ -29,6 +29,7 @@ draft_objects 中的文字和连接是作者输入，可作为依据，evidence_
 默认 evidence_source=user_text。不确定、无法辨认或资料不足时给出具体 unresolved，不要把整图降成“主题”和“过程”两个空洞框。
 对象形态必须可辨识；可使用 supplied_assets 中的 asset_id，其科学含义必须与对象一致。没有匹配素材时使用最贴合的type/state，不能随便借用另一种器官或器件。
 当提供 draft_objects 或 reference_objects 时：用户已在画布上手绘或放置了草稿。输出的对象必须优先复用草稿对象的 id 与顺序，并根据科研文本赋予准确科学类型(type)与生物学分期/状态(state)（例如有丝分裂分期：interphase, prophase, prometaphase, metaphase, anaphase, telophase, cytokinesis 等）。
+layout_policy=regularize 时，草稿只表示大致构图、阅读顺序与拓扑；歪斜、比例和不等间距不是科学要求。根据内容为对象选择准确的形态与状态，由确定性排版器整理尺寸、对齐与间距。不要把不同阶段画成同一种状态，不增加草稿和文字未支持的关系。
 JSON:
 {"title":"简短图题","layout":"pathway|process|network|assembly",
  "compartments":[{"id":"extracellular","label":"Extracellular space","kind":"extracellular"},
@@ -90,7 +91,8 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                "reference_layout": reference.get("layout_analysis") or {},
                "final_dimensions_mm": [width, height],
                "generation_brief":str(config.get('generation_brief') or text)[:8000],
-               "reference_purpose":config.get('reference_purpose','layout')}
+               "reference_purpose":config.get('reference_purpose','layout'),
+               "layout_policy":config.get('layout_policy','preserve')}
     try:
         from scientific_library import library
         import re

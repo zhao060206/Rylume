@@ -114,6 +114,10 @@ def referenced_image(prompt, config, data_url):
 
 def object_reference(config,obj):
     """An object-generation request receives its crop, not an entire flowchart."""
+    if config.get('layout_policy')=='regularize' and config.get('reference_purpose') in ('layout','sketch'):
+        # The planner has already seen the sketch to extract meaning. Feeding its
+        # rough contour into an image edit would trace the very wobble we remove.
+        return None
     image=config.get('reference_image_data_url')
     if not image:return None
     contract=config.get('reference_contract') or {}
@@ -196,6 +200,8 @@ def illustrate(scene, config, *, on_stage=None, cancelled=None, checkpoint=None)
                   "White background, no labels, no text, no arrows, no panels or infographic. "
                   "Preserve the scientific state precisely. Flat clean scientific drawing, "
                   "clear silhouette, restrained colours, consistent line weights. "
+                  "Use precise, regular, professionally drawn contours, not a tracing of wobbly hand-drawn outlines. "
+                  "All object labels and connecting arrows will be added as separate editable layers outside this image. "
                   "The attached reference, if any, provides visual guidance; draw only this object.\n"
                   + json.dumps({k: obj.get(k) for k in ('type','label','state','visual_description')}, ensure_ascii=False)
                   + '\nThis request is for this object alone, not the whole figure. Do not show another phase, another cell, a side-by-side comparison, or a before/after pair.'

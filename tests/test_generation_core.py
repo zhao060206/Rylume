@@ -53,15 +53,20 @@ def test_image_generation_uses_same_editable_document_and_exports(studio,monkeyp
     job=finished(studio,result['job_id']);assert job['status']=='completed',job
     assert job['scene_engine']=='v2' and job['illustration_result']['generated']==2
     assert len(calls)==2
+    assert all('no labels, no text, no arrows' in prompt for prompt in calls)
     endpoint=f"/api/jobs/{job['id']}/scene"
     _,document=studio(endpoint);assert all(o.get('illustration') for o in document['scene']['objects'])
     assert document['svg'].count('<image ')==2 and 'data-object-id="a"' in document['svg']
     # Move an actual generated cell and its label; reload the document.
     code,moved=studio(endpoint,{'base_revision':document['revision'],'operations':[
-        {'op':'update','id':'a','changes':{'x':28,'label':'A edited','label_dx':3}}]},'PATCH')
+        {'op':'update','id':'a','changes':{'x':28,'label':'A edited','label_dx':3}},
+        {'op':'update_relation','id':'ab','changes':{'label':'editable arrow label','type':'transports','label_position':{'x':72,'y':54}}}]},'PATCH')
     assert code==200,moved
     _,reloaded=studio(endpoint);assert reloaded['scene']['objects'][0]['x']==28
     assert reloaded['scene']['relations'][0]['source']=='a'
+    assert reloaded['scene']['relations'][0]['type']=='transports'
+    assert reloaded['scene']['relations'][0]['label_position']=={'x':72,'y':54}
+    assert 'editable arrow label' in reloaded['svg']
     from scene_render import connection_geometry
     assert connection_geometry(reloaded['scene'],reloaded['scene']['relations'][0])!=connection_geometry(document['scene'],document['scene']['relations'][0])
     for fmt in ('svg','pdf','png','pptx'):
@@ -72,7 +77,7 @@ def test_image_generation_uses_same_editable_document_and_exports(studio,monkeyp
         if fmt=='pptx':
             with zipfile.ZipFile(out['path']) as z:
                 xml=z.read('ppt/slides/slide1.xml').decode()
-                assert 'A edited' in xml and '<p:pic>' in xml and '<p:sp>' in xml
+                assert 'A edited' in xml and 'editable arrow label' in xml and '<p:pic>' in xml and '<p:sp>' in xml
     # A failed/absent image service cannot erase the committed vector draft.
     _,draft=studio(f"/api/jobs/{job['id']}/scene")
     assert draft['scene']['generation_contract']['original_text']=='A then B'
@@ -100,7 +105,7 @@ def test_reference_pixels_and_object_positions_survive_upload_to_generation(stud
     def plan(text,config,**kw):
         captured.append(config);return scene(),{}
     monkeypatch.setattr(scene_planner,'plan_scene',plan)
-    code,result=studio('/api/generate',{'text':'A then B','reference_id':reference['reference_id'],'reference_purpose':'sketch'})
+    code,result=studio('/api/generate',{'text':'A then B','reference_id':reference['reference_id'],'reference_purpose':'sketch','layout_policy':'preserve'})
     assert code==200,result
     job=finished(studio,result['job_id']);assert job['status']=='completed',job
     _,doc=studio(f"/api/jobs/{job['id']}/scene")

@@ -1259,8 +1259,8 @@
   <div class="toast" hidden="" id="toast" role="status">
   </div>
   <dialog id="generation-preview-dialog" class="generation-preview-dialog">
-   <div class="dialog-heading"><div><h2>结构与布局</h2><p class="muted small">先核对对象、顺序和位置。生成后仍可直接拖动修改。</p></div><button class="icon-button" aria-label="关闭结构预览" data-close="generation-preview-dialog">×</button></div>
-   <div id="generation-preview-stage" class="generation-preview-stage"></div>
+   <div class="dialog-heading"><div><h2>结构与布局</h2><p class="muted small">先核对对象、顺序和整理后的排版。文字与箭头独立，生成后仍可直接拖动修改。</p></div><button class="icon-button" aria-label="关闭结构预览" data-close="generation-preview-dialog">×</button></div>
+   <p id="generation-preview-layout" class="muted small"></p><div id="generation-preview-stage" class="generation-preview-stage"></div>
    <ul id="generation-preview-findings" class="generation-preview-findings"></ul>
    <div class="dialog-actions"><button class="button" data-close="generation-preview-dialog">返回修改</button><button class="button primary" id="generate-from-preview">按此结构生成</button></div>
   </dialog>
@@ -1271,7 +1271,7 @@
    <div class="dialog-actions"><button class="button" data-close="redraw-object-dialog">返回</button><button class="button primary" id="redraw-object-submit">生成修改版</button></div>
   </dialog>
   <dialog id="sketch-pad-dialog" class="sketch-pad-dialog">
-   <div class="dialog-heading"><div><h2>画出你的想法</h2><p class="muted small">画轮廓、箭头并写上名称，AI 会按这些位置生成插图。</p></div><button class="icon-button" aria-label="关闭草稿纸" data-close="sketch-pad-dialog">×</button></div>
+   <div class="dialog-heading"><div><h2>画出你的想法</h2><p class="muted small">画出大致布局、箭头并写上名称，不必画得整齐。AI 会保留顺序与连接，自动整理排版、细化形态。</p></div><button class="icon-button" aria-label="关闭草稿纸" data-close="sketch-pad-dialog">×</button></div>
    <div class="sketch-pad-tools" role="toolbar" aria-label="草稿工具">
     <button data-sketch-tool="pen" aria-pressed="true">画笔</button><button data-sketch-tool="rect" aria-pressed="false">方框</button><button data-sketch-tool="ellipse" aria-pressed="false">圆形</button><button data-sketch-tool="arrow" aria-pressed="false">箭头</button><button data-sketch-tool="text" aria-pressed="false">文字</button>
     <input id="sketch-pad-label" aria-label="要添加到草稿的文字" placeholder="输入名称，再点击纸面放置"/>
@@ -1304,11 +1304,11 @@
       <div class="sketch-source-actions"><button type="button" class="button" id="draw-sketch">画一张草稿</button><button type="button" class="button" id="use-canvas-sketch" title="先打开图版并放置对象，再将画布作为草稿">使用当前画布</button></div>
       <div id="generation-reference-card" class="generation-reference-card" hidden><img id="generation-reference-preview" alt="本次使用的原始参考图"/><div><label for="reference-purpose">希望 AI 参考什么？</label><select id="reference-purpose"><option value="layout">只参考排版</option><option value="sketch">按我的草稿生成</option><option value="style">只参考画风</option><option value="content">参考对象与排版</option></select><p id="generation-reference-note" class="muted small"></p><button type="button" class="text-button" id="clear-generation-reference">移除图片</button><button type="button" class="text-button" id="replace-generation-reference">更换图片</button></div></div>
       <div id="canvas-sketch-card" class="canvas-sketch-card" hidden><span id="canvas-sketch-note"></span><button type="button" class="text-button" id="clear-canvas-sketch">移除</button></div>
-      <p class="reference-help">有参考图就说明想借鉴什么；有手绘草稿就写上对象名称和箭头。</p>
+      <div id="sketch-layout-settings" class="sketch-layout-settings" hidden><label for="sketch-layout-policy">怎样处理草稿排版？</label><select id="sketch-layout-policy"><option value="regularize">智能整理 · 推荐手绘草稿使用</option><option value="preserve">严格保留位置与尺寸</option></select><p id="sketch-layout-help"></p></div><p class="reference-help" id="creation-reference-help">手绘只需表达大致位置、对象名称和连接。默认自动对齐、等距排列，细化为规范图形。</p>
       <details class="composer-settings"><summary>尺寸与输出设置 <span id="creation-size-summary">180 × 120 mm</span></summary><label for="new-size">图版尺寸</label><select id="new-size"><option value="180x120">论文双栏 · 180 × 120 mm</option><option value="90x150">论文单栏 · 90 × 150 mm</option><option value="180x101">宽屏 · 16:9</option><option value="150x150">正方形 · 150 × 150 mm</option><option value="180x135">经典 · 4:3</option></select><label for="generation-dpi">图片分辨率</label><select id="generation-dpi"><option value="300">300 DPI</option><option value="600">600 DPI</option></select><div hidden id="image-options"><label class="checkbox-field"><input id="generation-literature" type="checkbox"/>生成时检索文献参考</label></div></details>
      </aside>
     </div>
-    <div class="composer-output"><label class="field-label"><span class="step-number">3</span> 选择绘图方式</label><div aria-label="创作方式" class="generation-modes" role="group"><button type="button" aria-pressed="true" data-generation-mode="vector"><strong>可编辑示意图</strong><span>图形、文字、箭头都能单独修改</span></button><button type="button" aria-pressed="false" data-generation-mode="image"><strong>细节插画</strong><span>AI 绘制主体，主体内部为图片</span></button></div><p id="generation-mode-note" class="muted small"></p></div>
+    <div class="composer-output"><label class="field-label"><span class="step-number">3</span> 选择绘图方式</label><div aria-label="创作方式" class="generation-modes" role="group"><button type="button" aria-pressed="true" data-generation-mode="vector"><strong>可编辑示意图</strong><span>图形、文字、箭头都能单独修改</span></button><button type="button" aria-pressed="false" data-generation-mode="image"><strong>细节插画</strong><span>主体为图片；文字、箭头可单独修改</span></button></div><p id="generation-mode-note" class="muted small"></p></div>
     <footer class="creation-submit"><p id="generation-inline-status" role="status" aria-live="polite"></p><div class="composer-submit-row"><span class="composer-save-note">生成一张新图，当前图版会保留</span><button type="button" class="button" id="preview-generation">先预览结构</button><button type="button" class="button primary" id="generate">生成可编辑初稿</button></div><div class="generation-status" hidden id="generation-status" role="status"><span id="generation-text"></span><button type="button" class="text-button" id="cancel-job">取消生成</button><div class="generation-stage-list" id="generation-stage-list"></div><progress id="generation-progress" max="100" value="0"></progress></div></footer>
     <div hidden aria-hidden="true"><button id="reference-button" tabindex="-1"></button><p id="reference-status" hidden></p><button id="remove-reference" tabindex="-1" hidden></button><div id="example-list"></div><button id="show-all-templates" tabindex="-1"></button><button id="new-blank" tabindex="-1"></button></div>
    </section>

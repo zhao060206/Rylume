@@ -34,6 +34,9 @@ def prepare(app, body):
     mode=body.get('illustration_mode','vector')
     if mode not in ('image','vector'):
         raise SceneError('请选择矢量绘图或 AI 插画')
+    layout_policy = body.get('layout_policy', 'regularize' if body.get('reference_id') else 'preserve')
+    if layout_policy not in ('regularize','preserve'):
+        raise SceneError('请选择智能整理或严格保留草稿位置')
     supplied_dpi=body.get('dpi',300)
     try:
         dpi=float(supplied_dpi)
@@ -43,7 +46,7 @@ def prepare(app, body):
         raise SceneError('DPI 必须是 72–1200 之间的整数') from None
     config.update(canvas_mm=[checked['canvas']['width_mm'], checked['canvas']['height_mm']],
                   original_text=original, generation_brief=brief, scene_engine='v2',
-                  illustration_mode=mode,dpi=int(dpi),style_dna=app.sanitize_style(body.get('style_dna') or {}))
+                  illustration_mode=mode,dpi=int(dpi),layout_policy=layout_policy,style_dna=app.sanitize_style(body.get('style_dna') or {}))
     if body.get('reference_id'):
         import figure_references
         reference = figure_references.read(app.DATA_DIR, body['reference_id'])
@@ -96,7 +99,7 @@ def prepare(app, body):
 def fingerprint(config):
     values = {k: config.get(k) for k in ('original_text','generation_brief','canvas_mm','illustration_mode',
                                        'reference_id','reference_purpose','draft_source_id','draft_source_revision','style_dna',
-                                       'redraw_ids','redraw_instruction','dpi')}
+                                       'redraw_ids','redraw_instruction','dpi','layout_policy')}
     for key in ('sketch_scene','prepared_scene'):
         if config.get(key):
             encoded=json.dumps(normalize_scene(config[key]),ensure_ascii=False,sort_keys=True,separators=(',',':'))
@@ -108,7 +111,7 @@ def _label(value):
     return re.sub(r'[\W_]+','',str(value).lower())
 
 def apply_constraints(scene, config):
-    """Keep user geometry/topology independently of a model's preferred layout."""
+    """Keep authored topology; exact geometry is an explicit, independent policy."""
     scene = copy.deepcopy(scene)
     sketch = config.get('sketch_scene')
     reference = config.get('reference_contract') or {}
@@ -229,11 +232,21 @@ def apply_constraints(scene, config):
     scene['source_text'] = config['original_text']
     from scientific_intent import apply_division_context
     apply_division_context(scene,config['original_text'])
+    layout_policy=config.get('layout_policy','preserve')
+    layout_summary='严格保留位置、尺寸与作者连接。'
+    if layout_policy=='regularize' and (sketch or (reference.get('objects') and config.get('reference_purpose')!='style')):
+        from sketch_layout import regularize_sketch
+        composition=reference.get('composition','auto') if not sketch else 'auto'
+        scene,report=regularize_sketch(scene,composition)
+        layout_summary=('已按大致构图整理 '+str(report['adjusted'])+' 个对象：同类尺寸、对齐与间距统一，文字和箭头独立。'
+                        +(' 部分位置需要核对，请查看预览提示。' if not report['fits'] else ''))
     contract = {'original_text':config['original_text'], 'generation_brief':config['generation_brief'],
                 'source_kind':'canvas-sketch' if sketch else 'reference' if config.get('reference_id') else 'description',
                 'reference_id':config.get('reference_id',''), 'reference_summary':reference.get('summary',''),
                 'reference_purpose':config.get('reference_purpose',''), 'draft_source_id':config.get('draft_source_id',''),
                 'draft_source_revision':str(config.get('draft_source_revision') or ''),
+                'layout_policy':layout_policy, 'layout_summary':layout_summary,
+                'editable_layers':'主体图形或图片、对象文字、关系箭头与箭头文字分别保留',
                 'verification':'核对原始描述、草稿布局与科学状态；机器检查不替代作者科学确认'}
     scene['generation_contract'] = contract
     scene['provenance'].update({k:v for k,v in contract.items() if k not in ('source_kind','verification')})
@@ -243,7 +256,7 @@ def apply_constraints(scene, config):
     contract['expected_objects'] = json.dumps(
         [{'id':o['id'],'label':o['label'],'state':o.get('state',''),
           **({k:o[k] for k in ('x','y','w','h') if k in o} if sketch or config.get('reference_purpose') in ('layout','sketch','content') else {})}
-         for o in (sketch['objects'] if sketch else scene['objects'])],ensure_ascii=False)
+         for o in (sketch['objects'] if sketch and layout_policy=='preserve' else scene['objects'])],ensure_ascii=False)
     contract['expected_relations'] = json.dumps([{k:r.get(k,'') for k in ('source','target','type')} for r in scene['relations']],ensure_ascii=False)
     return normalize_scene(scene)
 
@@ -315,7 +328,7 @@ def load_preview(data_dir, ident, config):
 # Only document inputs are persisted. Service addresses, model settings and
 # credentials are deliberately absent; retries use the current local settings.
 INPUT_KEYS=('original_text','generation_brief','canvas_mm','illustration_mode','dpi','style_dna',
-            'reference_id','reference_purpose','sketch_scene','draft_source_id','draft_source_revision',
+            'reference_id','reference_purpose','layout_policy','sketch_scene','draft_source_id','draft_source_revision',
             'prepared_scene','redraw_ids','redraw_instruction')
 
 
@@ -339,7 +352,8 @@ def retry_inputs(app,job):
             if not isinstance(saved,dict):raise ValueError()
         except (OSError,ValueError):
             raise SceneError('原始生成输入已损坏；当前图版保留，请从画布创建新版本') from None
-        body={key:saved[key] for key in ('original_text','generation_brief','canvas_mm','illustration_mode','dpi','style_dna','reference_id','reference_purpose') if key in saved}
+        body={key:saved[key] for key in ('original_text','generation_brief','canvas_mm','illustration_mode','dpi','style_dna','reference_id','reference_purpose','layout_policy') if key in saved}
+        body.setdefault('layout_policy','preserve')
         if saved.get('redraw_ids'):
             body.pop('reference_id',None);body.pop('reference_purpose',None)
         body['text']=saved.get('original_text') or job.get('original_text') or job.get('text') or ''
@@ -356,7 +370,8 @@ def retry_inputs(app,job):
     body={'text':job.get('original_text') or job.get('text') or '',
           'generation_brief':contract.get('generation_brief') or job.get('generation_brief') or job.get('text') or '',
           'canvas_mm':job.get('canvas_mm') or [180,120],
-          'illustration_mode':job.get('illustration_mode') or 'vector','dpi':job.get('dpi') or 300}
+          'illustration_mode':job.get('illustration_mode') or 'vector','dpi':job.get('dpi') or 300,
+          'layout_policy':contract.get('layout_policy') or 'preserve'}
     if contract.get('reference_id'):
         body.update(reference_id=contract['reference_id'],reference_purpose=contract.get('reference_purpose') or 'layout')
     text,config=prepare(app,body)
