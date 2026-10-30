@@ -1,4 +1,6 @@
 import {setupNovice} from './novice-guidance.js';
+import {setupCreationComposer} from './creation-composer.js';
+import {authorBrief} from './brief-state.js';
 import {setupGenerationWorkflow} from './generation-workflow.js';
 import {latestDocumentLoader} from './document-loader.js';
 import {setupWorkspaceModes} from './workspace-modes.js';
@@ -17,7 +19,7 @@ const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,conflict:false,timer:null,reference:null,candidate:null,active:null};
 const ws=$('workspace');
 new MutationObserver(()=>syncPanelButtons(ws)).observe(ws,{attributes:true,attributeFilter:['class']});
-let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI;
+let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
 let toastTimer;function toast(message,error=false){$('toast').textContent=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
 async function api(path,body,method){const response=await fetch(path,{method:method||(body?'POST':'GET'),headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});const data=await response.json();if(!response.ok||data.ok===false){const error=new Error(data.error||'请求未完成');error.status=response.status;error.data=data;throw error;}return data;}
@@ -49,7 +51,7 @@ const loadDocument=latestDocumentLoader({canLeave,readVersion:()=>S.id+':'+S.rev
  if(legacy)return openLegacy(job,svg);
  S.id=id;S.currentJob=job;S.revision=data.revision;S.svg=data.svg;S.audit=data.audit;S.pending=[];S.conflict=false;S.saveError=null;S.saveFailures=0;S.dirty=0;
  $('error-banner').hidden=true;$('canvas-host').classList.remove('legacy-preview');$('canvas-hint').textContent='V 选择 · H 平移 · C 连线 · 双击改字';editor.setDocument(data.scene,data.svg);
- $('welcome').hidden=true;$('toggle-export').disabled=false;$('project-title').textContent=data.scene.title;$('brief-input').value=data.scene.source_text;S.originalBrief=data.scene.source_text;S.enhancedFrom=null;updateCount();
+ $('welcome').hidden=true;$('toggle-export').disabled=false;$('project-title').textContent=data.scene.title;$('brief-input').value=data.scene.source_text;authorBrief(S,data.scene.source_text);updateCount();
  $('canvas-size').textContent=`${data.scene.canvas.width_mm} × ${data.scene.canvas.height_mm} mm · ${data.scene.objects.some(o=>o.illustration)?'对象插画':'矢量对象'}`;saveStatus(`已保存 · r${S.revision}`);history.replaceState(null,'',`/#${id}`);
  renderProperties();renderAudit();renderLayers();renderTools();workspaceUI?.refresh();annotationUI?.load(id);
  const generationOpened=generationUI?.opened(data.scene);
@@ -64,7 +66,7 @@ async function openLegacy(job,svg=''){
   else if(job.png_url||job.preview_url){const art=el('img');art.src=job.png_url||job.preview_url;art.id='legacy-art';art.alt=job.title||'科研插画';host.append(art);}
   else host.append(el('p','legacy-placeholder',job.error||job.message||'此任务尚无可预览的成图，可在右侧查看任务信息。'));
   $('welcome').hidden=true;$('toggle-export').disabled=!job.svg_url&&!job.png_url;$('project-title').textContent=job.title||'历史图版';
-  $('brief-input').value=job.original_text||job.text||'';S.originalBrief=$('brief-input').value;S.enhancedFrom=null;updateCount();saveStatus('原图预览 · 历史版本保留');
+  $('brief-input').value=job.original_text||job.text||'';authorBrief(S,$('brief-input').value);updateCount();saveStatus('原图预览 · 历史版本保留');
   generationUI?.opened({});
   history.replaceState(null,'',`/#${job.id}`);$('canvas-size').textContent='原图预览 · '+(job.canvas_mm?job.canvas_mm.join(' × ')+' mm':'尺寸见任务信息');$('canvas-hint').textContent='原图预览 · 滚轮缩放 · 右侧查看任务或重建可编辑副本';renderTools();$('canvas-hint').textContent='原图预览 · 滚轮缩放 · 右侧查看任务或重建可编辑副本';renderProperties();renderAudit();workspaceUI?.legacyZoom(1);workspaceUI?.showRight('task');
 }
@@ -87,6 +89,7 @@ async function trackGeneration(id){
 async function sample(id){if(S.active)return toast('已有生成任务，请等待完成或先取消');if(!await canLeave())return;try{const dims=$('new-size').value.split('x').map(Number);await follow((await api('/api/scene/example',{example:id,template:({egfr:'signal_lipid',jak_stat:'signal_relay',tgf_smad:'signal_nucleus',exosome:'process_strip',wound:'process_grid',tme:'network_orbit',nlrp3:'assembly_tiers',workflow:'workflow_strip'}[id]),canvas_mm:dims})).job_id);}catch(e){toast(e.message,true);}}
 async function blank(){if(S.active)return toast('已有生成任务，请等待完成或先取消');if(!await canLeave())return;try{const result=await api('/api/scene/blank',{});await refreshJobs();await openJob(result.job_id);tab('assets');editor.fit();}catch(e){toast(e.message,true);}}
 function tab(name, toggle=false){
+ if(name==='generate'&&composerUI){composerUI.open();return;}
  ws.dispatchEvent(new Event('workspace-panel-request'));
  if(name==='templates')libraryUI.renderTemplates();
  const collapse=toggle&&!ws.classList.contains('left-collapsed')&&document.querySelector(`[data-tab="${name}"]`)?.classList.contains('active');
@@ -193,7 +196,7 @@ async function exportFile(format){
 function updateCount(){$('brief-count').textContent=`${$('brief-input').value.length} / ${$('brief-input').maxLength}`;}
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>tab(b.dataset.tab,true));document.querySelectorAll('[data-tool]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tool]').forEach(n=>n.classList.toggle('active',n===b));if(b.dataset.tool==='connect'&&editor.scene?.objects.filter(o=>editor.selectedIds.includes(o.id)).length===2){editor.connectSelection(editor.relationType);editor.setTool('select');}else editor.setTool(b.dataset.tool);});document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
 for(const[id,fn]of [['toggle-left',()=>{preserveCanvasView(editor,()=>ws.classList.toggle('left-collapsed'));syncPanelButtons(ws); }],['toggle-properties',()=>ws.classList.toggle('properties-hidden')],['close-properties',()=>{preserveCanvasView(editor,()=>ws.classList.add('properties-hidden'));syncPanelButtons(ws); }],['undo',()=>editor.undo()],['redo',()=>editor.redo()],['group',()=>editor.groupSelection()],['ungroup',()=>editor.ungroupSelection()],['add-text',()=>editor.insertTextAtCenter()],['zoom-fit',()=>S.revision?editor.fit():workspaceUI?.legacyZoom(1)],['zoom-100',()=>S.revision?editor.setZoom(1):workspaceUI?.legacyZoom(1)],['zoom-in',()=>S.revision?editor.zoomBy(1.15):workspaceUI?.legacyZoom(null,1.15)],['zoom-out',()=>S.revision?editor.zoomBy(1/1.15):workspaceUI?.legacyZoom(null,1/1.15)],['welcome-example',()=>libraryUI.showTemplate(S.templates.find(t=>t.id==='sb_socs_feedback'))],['welcome-blank',blank],['new-blank',blank]])$(id).onclick=fn;
-$('align').onchange=e=>{if(e.target.value.startsWith('distribute-'))editor.distributeSelection(e.target.value.at(-1));else if(e.target.value)editor.alignSelection(e.target.value);e.target.value='';};$('brief-input').oninput=()=>{if(!S.enhancedFrom)S.originalBrief=$('brief-input').value;try{localStorage.setItem('rylume-research-brief',$('brief-input').value);}catch{}updateCount();};$('asset-search').oninput=renderAssets;$('history-search').oninput=renderHistory;
+$('align').onchange=e=>{if(e.target.value.startsWith('distribute-'))editor.distributeSelection(e.target.value.at(-1));else if(e.target.value)editor.alignSelection(e.target.value);e.target.value='';};$('brief-input').oninput=()=>{authorBrief(S,$('brief-input').value);generationUI?.refresh();try{localStorage.setItem('rylume-research-brief',$('brief-input').value);}catch{}updateCount();};$('asset-search').oninput=renderAssets;$('history-search').oninput=renderHistory;
 // generate handled by generationUI
 $('cancel-job').onclick=()=>{if(S.active)api(`/api/jobs/${S.active}/cancel`,{}).then(()=>$('generation-text').textContent='正在取消…').catch(e=>toast(e.message,true));};$('open-history').onclick=async()=>{await refreshJobs();$('history-dialog').showModal();};$('toggle-export').onclick=()=>{const dialog=$('export-menu');if(dialog.open){dialog.close();return;}dialog.hidden=false;dialog.showModal();$('export-status').replaceChildren();if(S.exporting)$('export-status').textContent='上一份文件还在保存，请稍候。';$('export-revision').textContent='导出当前图版，原图仍可继续编辑。';};
 $('close-export').onclick=$('continue-editing').onclick=()=>$('export-menu').close();$('export-menu').addEventListener('close',()=>$('export-menu').hidden=true);document.querySelectorAll('[data-export]').forEach(b=>b.onclick=()=>exportFile(b.dataset.export));$('open-audit').onclick=()=>workspaceUI?.showRight('review');
@@ -231,4 +234,5 @@ document.querySelectorAll('.close-library-panel').forEach(b=>b.onclick=()=>{pres
 noviceUI=setupNovice({state:S,editor,api,toast,flush,canLeave,openJob,refreshJobs,follow,tab});
 modesUI=setupWorkspaceModes({editor,state:S,tab,showRight:name=>workspaceUI.showRight(name),refresh:renderTools});
 generationUI=setupGenerationWorkflow({state:S,editor,api,flush,follow,canLeave,workspace:workspaceUI,checkModels:mode=>documentUI.checkModels(mode),toast,tab});
+composerUI=setupCreationComposer({state:S,toast});
 boot().then(ok=>{if(ok)deliveryUI.ready();});

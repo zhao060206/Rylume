@@ -1,5 +1,5 @@
 import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
-import {originalBrief,briefSnapshot,sameBriefSnapshot} from './brief-state.js';
+import {originalBrief,briefSnapshot,sameBriefSnapshot,acceptEnhancement,generationBrief,authorBrief} from './brief-state.js';
 /** Unified generation, model settings and inspection around the native canvas. */
 export function canApplySavedScene({epoch,dirty,pending,gesture}){return epoch===dirty&&!pending&&!gesture;}
 export function generationPayload({text,mode='vector',width=180,height=120,dpi=300,reference=null,literature=false,originalText,archetype,referenceId,referencePurpose,sketch,previewId}) {
@@ -139,16 +139,33 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     try{await api('/api/config',settingsPatch());$('models-dialog').close();toast('模型设置已保存');}catch(e){$('model-status').textContent=e.message;}finally{b.disabled=false;}
   };
 
-  async function busy(button,work){button.disabled=true;try{await work();}catch(e){toast(e.message,true);}finally{button.disabled=false;}}
+  async function busy(button,work){
+    button.disabled=true;button.setAttribute('aria-busy','true');
+    const enhancing=button===$('expand-brief');
+    if(enhancing)$('generation-inline-status').textContent='正在优化表达，原始研究内容会保留…';
+    try{await work();if(enhancing)$('generation-inline-status').textContent='优化候选已就绪，请对照原文核对后采用。';}
+    catch(e){if(enhancing)$('generation-inline-status').textContent=e.message;toast(e.message,true);}
+    finally{button.disabled=false;button.setAttribute('aria-busy','false');}
+  }
   function briefContext(){return {size:$('new-size').value,referenceId:state.referenceId||null,referencePurpose:state.referencePurpose||'layout'};}
+  function reviewBrief(){
+    if(!proposed)return;
+    if(!sameBriefSnapshot(proposed.snapshot,state,$('brief-input').value.trim(),briefContext())){
+      proposed=null;$('review-brief-candidate').hidden=true;return toast('描述或参考已变化，请重新优化',true);
+    }
+    $('brief-source-preview').value=proposed.snapshot.original;$('brief-candidate').value=proposed.text;$('brief-preview-dialog').showModal();
+  }
+  $('review-brief-candidate').onclick=reviewBrief;
   $('expand-brief').onclick=()=>busy($('expand-brief'),async()=>{
-    const text=$('brief-input').value.trim();if(!text)return toast('先写一句研究构想');
+    const text=$('brief-input').value.trim();if(!text){$('brief-input').focus?.();throw Error('先写一句你想画的内容，再让 AI 优化。');}
     const snapshot=briefSnapshot(state,text,briefContext()),[width,height]=$('new-size').value.split('x').map(Number),dpi=Number($('generation-dpi').value)||300;
     const r=await api('/api/optimize',{text:snapshot.original,canvas:[Math.round(width*dpi/25.4),Math.round(height*dpi/25.4)],style_dna:state.reference||null});
     if(!sameBriefSnapshot(snapshot,state,$('brief-input').value.trim(),briefContext()))throw Error('描述、参考或图版已变化，旧的优化结果未应用，请重新优化');
-    proposed={text:r.text||text,snapshot};$('brief-candidate').value=proposed.text;$('brief-preview-dialog').showModal();
+    proposed={text:r.text||text,snapshot};$('review-brief-candidate').hidden=false;
+    if($('creation-dialog').open)reviewBrief();
   });
-  $('use-expanded-brief').onclick=()=>{if(!proposed)return;if(!sameBriefSnapshot(proposed.snapshot,state,$('brief-input').value.trim(),briefContext()))return toast('原描述或图版已变化，请重新优化',true);const original=proposed.snapshot.original;$('brief-input').value=$('brief-candidate').value.slice(0,8000);state.originalBrief=original;state.enhancedFrom=original;$('brief-input').dispatchEvent(new Event('input'));$('brief-input').dispatchEvent(new Event('change'));proposed=null;$('brief-preview-dialog').close();toast('增强描述已应用，原始内容仍单独保留');};
+  $('use-expanded-brief').onclick=()=>{if(!proposed)return;if(!sameBriefSnapshot(proposed.snapshot,state,$('brief-input').value.trim(),briefContext()))return toast('原描述或图版已变化，请重新优化',true);const original=proposed.snapshot.original;acceptEnhancement(state,original,$('brief-candidate').value.slice(0,8000));$('brief-input').value=original;$('brief-input').dispatchEvent(new Event('change'));proposed=null;$('review-brief-candidate').hidden=true;$('brief-preview-dialog').close();$('generation-inline-status').textContent='已采用优化描述；你的原文保留在输入区。';toast('已采用优化描述，你的原文保留在输入区');};
+  $('discard-enhancement').onclick=()=>{authorBrief(state,$('brief-input').value);$('brief-input').dispatchEvent(new Event('change'));$('generation-inline-status').textContent='生成将使用你的原文。';toast('生成将使用你的原文');};
 
   function wizardFields(){
     const list=$('guide-questions');list.replaceChildren();
@@ -177,7 +194,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     if(!result.enhanced_text)throw Error('未返回描述，请稍后重试');
     state.archetype=answers.archetype;$('guide-output').value=result.enhanced_text;$('guide-result').hidden=false;$('guide-status').textContent='候选尚未应用；请检查对象和关系。';
   });
-  $('guide-use').onclick=()=>{$('brief-input').value=$('guide-output').value.slice(0,8000);$('brief-input').dispatchEvent(new Event('input'));state.originalBrief=wizardSource;state.enhancedFrom=wizardSource;$('brief-input').dispatchEvent(new Event('change'));$('guide-dialog').close();tab('generate');toast('引导描述已应用，请检查后生成');};
+  $('guide-use').onclick=()=>{$('brief-input').value=wizardSource;acceptEnhancement(state,wizardSource,$('guide-output').value.slice(0,8000));$('brief-input').dispatchEvent(new Event('change'));$('guide-dialog').close();tab('generate');toast('已采用引导描述，请核对后生成');};
   $('remove-reference').onclick=()=>{state.reference=null;$('remove-reference').hidden=true;$('reference-status').hidden=true;$('reference-file').value='';toast('已移除本次构图参考');};
   $('show-all-templates').onclick=()=>$('welcome-gallery').click();
   function legacyZoom(value,factor=1){
@@ -189,8 +206,9 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   editor.host.addEventListener('wheel',e=>{if(!state.revision&&$('legacy-art')){e.preventDefault();legacyZoom(null,e.deltaY<0?1.1:1/1.1);}},{passive:false});
   setMode('vector');refresh();
   return {refresh,showRight,setMode,legacyZoom,getMode:()=>mode,selection(){refresh();},payload(text){
-    if(mode==='image'&&text.length>4000)throw Error('科研插画描述请控制在 4000 字以内；当前描述已保留。');
+    const enhanced=generationBrief(state,text);
+    if(mode==='image'&&enhanced.length>4000)throw Error('科研插画描述请控制在 4000 字以内；当前描述已保留。');
     const [width,height]=$('new-size').value.split('x').map(Number);
-    return generationPayload({text,mode,width,height,dpi:Number($('generation-dpi').value),reference:state.reference,literature:$('generation-literature').checked,originalText:originalBrief(state,text),archetype:state.archetype,referenceId:state.referenceId,referencePurpose:state.referencePurpose,sketch:state.sketchSource});
+    return generationPayload({text:enhanced,mode,width,height,dpi:Number($('generation-dpi').value),reference:state.reference,literature:$('generation-literature').checked,originalText:originalBrief(state,text),archetype:state.archetype,referenceId:state.referenceId,referencePurpose:state.referencePurpose,sketch:state.sketchSource});
   }};
 }
