@@ -85,38 +85,29 @@ def fingerprint(config):
 def _label(value):
     return re.sub(r'[\W_]+','',str(value).lower())
 
-STAGE_SYNONYMS = {
-    'interphase': ('interphase', '间期', 'g1', 's', 'g2'),
-    'prophase': ('prophase', '前期'),
-    'prometaphase': ('prometaphase', '前中期'),
-    'metaphase': ('metaphase', '中期'),
-    'anaphase': ('anaphase', '后期'),
-    'telophase': ('telophase', '末期'),
-    'cytokinesis': ('cytokinesis', '胞质分裂', '分裂期', 'daughter'),
-    'apoptotic': ('apoptotic', 'apoptosis', '凋亡'),
-}
-
 def apply_constraints(scene, config):
     """Keep user geometry/topology independently of a model's preferred layout."""
     scene = copy.deepcopy(scene)
     sketch = config.get('sketch_scene')
     reference = config.get('reference_contract') or {}
     if sketch:
+        from scientific_intent import intent_contract, labeled_cell_phase
+        biological_context=intent_contract(config['original_text'])['domain']=='biology'
         by_id = {o['id']:o for o in scene['objects']}
         unused = set(by_id)
         remap = {}
         kept = []
         for idx, original in enumerate(sketch['objects']):
             candidate = by_id.get(original['id'])
+            if candidate and candidate['id'] not in unused:
+                candidate = None
             if candidate is None:
                 candidate = next((o for o in scene['objects'] if o['id'] in unused and _label(o['label']) == _label(original['label'])), None)
             if candidate is None:
-                orig_lbl = _label(original.get('label', ''))
-                for std_stage, syns in STAGE_SYNONYMS.items():
-                    if any(s in orig_lbl for s in syns):
-                        candidate = next((o for o in scene['objects'] if o['id'] in unused and (std_stage in _label(o.get('label', '')) or std_stage == o.get('state'))), None)
-                        if candidate:
-                            break
+                phase = labeled_cell_phase(original.get('label',''),biological_context=biological_context or original.get('type') in ('cell','stem_cell'))
+                if phase:
+                    candidate = next((o for o in scene['objects'] if o['id'] in unused and
+                        (phase == labeled_cell_phase(o.get('label',''),biological_context=True) or phase == o.get('state'))), None)
             if candidate is None and len(sketch['objects']) == len(scene['objects']) and idx < len(scene['objects']):
                 candidate_by_idx = scene['objects'][idx]
                 if candidate_by_idx['id'] in unused:
@@ -133,13 +124,11 @@ def apply_constraints(scene, config):
                 if key in original:
                     candidate[key] = original[key]
             # Infer biological state from label if missing or generic
-            orig_text = (str(original.get('label', '')) + ' ' + str(candidate.get('label', ''))).lower()
-            if candidate.get('type') in ('cell', 'stem_cell', 'process') or not candidate.get('state'):
-                for std_stage, syns in STAGE_SYNONYMS.items():
-                    if any(s in orig_text for s in syns):
-                        candidate['type'] = 'cell'
-                        candidate['state'] = std_stage
-                        break
+            if candidate.get('type') in ('cell', 'stem_cell', 'process'):
+                phase = labeled_cell_phase(original.get('label',''),biological_context=biological_context or candidate.get('type') in ('cell','stem_cell'))
+                if phase:
+                    candidate['type'] = 'cell'
+                    candidate['state'] = phase
             candidate['compartment'] = original.get('compartment','')
             kept.append(candidate)
         # Do not insert unrequested nodes or new causal edges into a user's sketch.

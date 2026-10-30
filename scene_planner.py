@@ -69,7 +69,7 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
     if not text:
         raise SceneError("请先填写科研内容")
     width, height = config.get("canvas_mm") or (180, 120)
-    from scientific_intent import mitosis_candidate,canonical_phase,intent_contract,phase_sketch
+    from scientific_intent import mitosis_candidate,canonical_phase,intent_contract,phase_sketch,labeled_cell_phase
     intent=intent_contract(text)
     candidate=phase_sketch(text,config)
     if candidate is not None:
@@ -149,7 +149,7 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                     missing_evidence.append(obj.get('id'))
                     base["unresolved"].append(f"对象 {obj.get('label') or obj.get('id')} 缺少可定位的原文依据，请确认")
                 if obj.get('type')=='cell' or (obj.get('type')=='process' and intent['domain']=='biology'):
-                    phase=canonical_phase(obj.get('state','')) or canonical_phase(obj.get('label',''))
+                    phase=canonical_phase(obj.get('state','')) or labeled_cell_phase(obj.get('label',''),biological_context=True)
                     if phase:
                         obj.update(type='cell',state=phase)
                         obj.pop('asset_id',None)

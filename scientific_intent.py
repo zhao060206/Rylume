@@ -41,6 +41,22 @@ def canonical_phase(value):
     return tokens[-1] if tokens else ''
 
 
+def labeled_cell_phase(value, *, biological_context=False):
+    """Recognize a named cell phase, never a substring in a protein or project step."""
+    text=str(value).replace('_',' ')
+    tokens=phase_tokens(text)
+    if len(tokens)!=1:
+        return ''
+    remainder=_PHASE_RE.sub('',text)
+    remainder=re.sub(r'\b(?:animal|mitotic|cell|cells|stage|phase)\b|动物|有丝分裂|细胞|阶段', '', remainder, flags=re.I)
+    if re.search(r'[A-Za-z\u3400-\u9fff]',remainder):
+        return ''
+    # Chinese 前期/中期/后期 are also ordinary project phases.
+    if not biological_context and not re.search(r'细胞|\b(?:interphase|prophase|prometaphase|metaphase|anaphase|telophase|cytokinesis)\b',text,re.I):
+        return ''
+    return tokens[0]
+
+
 def intent_contract(original_text):
     text=str(original_text or '')
     mitosis=bool(MITOSIS.search(text)) and not bool(MEIOSIS.search(text))
@@ -101,7 +117,8 @@ def phase_sketch(original_text,config):
     elif config.get('reference_purpose') in ('sketch','content'):
         items=reference.get('objects') or [];relations=reference.get('relations') or [];evidence_source='reference_image'
     else:return None
-    if not items or not all(canonical_phase(o.get('label','')) for o in items):
+    biological_context=intent_contract(original_text)['domain']=='biology'
+    if not items or not all(labeled_cell_phase(o.get('label',''),biological_context=biological_context or o.get('type') in ('cell','stem_cell')) for o in items):
         return None
     from scene_document import empty_scene,normalize_scene
     import copy

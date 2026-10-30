@@ -383,16 +383,16 @@ def audit_scene(scene):
     objects = {o["id"]: o for o in scene["objects"]}
     relations = {r["id"]: r for r in scene["relations"]}
     if scene.get('generation_contract'):
-        from scientific_intent import intent_contract,canonical_phase
+        from scientific_intent import intent_contract,canonical_phase,labeled_cell_phase
         baseline=scene['generation_contract'].get('original_text') or scene['source_text']
         intent=intent_contract(baseline)
         if intent['requires_mitosis']:
-            actual={canonical_phase(o.get('state','')) or canonical_phase(o['label']) for o in objects.values() if o['visible']}
+            actual={canonical_phase(o.get('state','')) or labeled_cell_phase(o['label'],biological_context=True) for o in objects.values() if o['visible'] and o['type']=='cell'}
             missing=[phase for phase in intent['explicit_phases'] if phase not in actual]
             if missing:
                 add('missing-scientific-state','原始描述中的分期未在图中表达：'+'、'.join(missing),severity='error',source_text=baseline)
             for o in objects.values():
-                if canonical_phase(o['label']) and o['type']!='cell':
+                if labeled_cell_phase(o['label'],biological_context=True) and o['type']!='cell':
                     add('phase-morphology','分期标签没有对应的细胞形态',[o['id']],'error')
         generated_text=' '.join([scene['title']]+[o['label']+' '+o.get('state','') for o in objects.values()]+[r['label'] for r in relations.values()])
         if intent['domain']=='biology':

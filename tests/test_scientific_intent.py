@@ -81,3 +81,52 @@ def test_independent_audit_detects_missing_phases_and_foreign_mechanisms():
     value['title']='LATENT physical priors'
     codes={f['code'] for f in audit_scene(value)['findings']}
     assert 'missing-scientific-state' in codes and 'unsupported-mechanism' in codes
+
+
+def test_project_stages_and_molecular_names_never_become_cell_phases():
+    from scientific_intent import labeled_cell_phase,phase_sketch
+    from figure_generation import apply_constraints
+    from scene_document import empty_scene,normalize_scene
+    for label in ('Signal kinase','Apoptosis regulator','S','G2 sensor','前期调研','中期开发','后期测试','Prophase kinase'):
+        assert labeled_cell_phase(label,biological_context=True)==''
+    assert labeled_cell_phase('前期')==''
+    assert labeled_cell_phase('细胞 2（前中期）')=='prometaphase'
+    assert labeled_cell_phase('Prophase cell')=='prophase'
+    value=empty_scene()
+    value['objects']=[{'id':'n'+str(i),'type':'process','label':label,'x':10+i*40,'y':20,'w':20,'h':20}
+                      for i,label in enumerate(('Signal kinase','前期调研','Prophase kinase'))]
+    value=normalize_scene(value)
+    config={'original_text':'按草稿细化科研流程图','generation_brief':'按草稿细化科研流程图',
+            'sketch_scene':value,'canvas_mm':[180,120]}
+    result=apply_constraints(value,config)
+    assert all(o['type']=='process' and not o['state'] for o in result['objects'])
+    assert phase_sketch(config['original_text'],config) is None
+
+
+def test_sketch_phase_matching_does_not_confuse_metaphase_with_prometaphase():
+    from figure_generation import apply_constraints
+    from scene_document import empty_scene,normalize_scene
+    sketch=empty_scene()
+    sketch['objects']=[{'id':'n'+str(i),'type':'process','label':label,'x':10+i*60,'y':20,'w':30,'h':30}
+                       for i,label in enumerate(('前中期','中期'))]
+    sketch=normalize_scene(sketch)
+    model=empty_scene()
+    model['objects']=[{'id':'meta','type':'cell','label':'Metaphase','state':'metaphase'},
+                      {'id':'prometa','type':'cell','label':'Prometaphase','state':'prometaphase'}]
+    result=apply_constraints(normalize_scene(model),{'original_text':'按细胞草稿生成','generation_brief':'按细胞草稿生成',
+        'sketch_scene':sketch,'canvas_mm':[180,120]})
+    assert [o['state'] for o in result['objects']]==['prometaphase','metaphase']
+    assert [o['label'] for o in result['objects']]==['Prometaphase','Metaphase']
+
+
+def test_planning_and_audit_do_not_treat_a_phase_regulator_as_a_cell(monkeypatch):
+    def request(*args,**kwargs):
+        return {'objects':[{'id':'regulator','type':'process','label':'Prophase kinase','evidence':'Prophase kinase'}]},0
+    monkeypatch.setattr(scene_planner,'_request',request)
+    text='A Prophase kinase participates in mitosis.'
+    value,_=scene_planner.plan_scene(text,{'text':{'model':'fake'}})
+    assert value['objects'][0]['type']=='process'
+    value['generation_contract']={'original_text':text}
+    codes={f['code'] for f in audit_scene(value)['findings']}
+    assert 'phase-morphology' not in codes
+    assert 'missing-scientific-state' in codes
