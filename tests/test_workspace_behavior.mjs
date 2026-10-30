@@ -1,7 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-const source=await readFile(new URL('../ui/workspace-ui.js',import.meta.url),'utf8');
-const {generationPayload,modelPatch,historyMatches}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const {generationPayload,modelPatch,historyMatches}=await import('../ui/workspace-ui.js');
 const vector=generationPayload({text:'EGFR activates ERK',width:90,height:150});
 assert.equal(vector.scene_engine,'v2');assert.equal(vector.illustration_mode,'vector');assert.deepEqual(vector.canvas_mm,[90,150]);
 const image=generationPayload({text:'Delivery',mode:'image',width:180,height:120,dpi:600,literature:true,reference:{layout_analysis:{composition:'split'}},archetype:'signal_pathway'});

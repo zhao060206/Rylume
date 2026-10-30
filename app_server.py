@@ -3629,7 +3629,7 @@ def main() -> int:
             height=win_h,
             min_size=(1000, 640),
             maximized=True,
-            background_color="#182925",
+            background_color="#f0f0ed",
             text_select=False,
         )
         def _nudge_native_window():

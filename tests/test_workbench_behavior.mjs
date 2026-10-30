@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-async function module(path){const s=await readFile(new URL(path,import.meta.url),'utf8');return import('data:text/javascript;base64,'+Buffer.from(s).toString('base64'));}
+async function module(path){return import(new URL(path,import.meta.url));}
 const {filterAssets}=await import('../ui/library-ui.js');
 const assets=[{domain:'biology',category:'细胞',label:'T cell',type:'cell'},{domain:'biology',category:'实验器材',label:'Pipette',type:'equipment'},{domain:'materials',category:'细胞',label:'T cell scaffold',type:'mesh'},{category:'细胞',label:'Legacy cell',type:'cell'}];
 assert.equal(filterAssets(assets).length,3);

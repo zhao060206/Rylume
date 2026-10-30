@@ -1,4 +1,4 @@
-理象 · Rylume 3.1.0
+理象 · Rylume 3.2.0
 
 1. 解压整个压缩包，双击 Rylume.exe 或“启动理象.cmd”。请保留 _internal 文件夹。
 2. 支持 Windows 10/11 x64。需要 Microsoft Edge WebView2 Runtime。
@@ -11,4 +11,4 @@
 版本下载：https://github.com/zhao060206/Rylume/releases
 许可：AGPL-3.0-only。第三方插画请按附带署名使用。
 
-顶部「资源与更新」可下载其他学科素材、模板和新版程序。当前图版保存后再重启更新，失败会恢复旧版。
+「设置 → 资源与更新」可下载其他学科素材、模板和新版程序。当前图版保存后再重启更新，失败会恢复旧版。

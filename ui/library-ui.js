@@ -205,7 +205,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   }
 
   function init(data){
-    if(!$('asset-style')){const row=el('div','asset-filters');for(const[id,label,choices]of [['asset-view','浏览范围',[['all','全部素材'],['favorites','我的收藏'],['recent','最近使用'],['signaling','机制通路套装'],['trafficking','细胞转运套装']]],['asset-style','视觉风格',[['','全部风格'],['native','原生图元'],['flat','简洁矢量'],['detailed','精细插画']]]]){const select=el('select');select.id=id;select.setAttribute('aria-label',label);for(const[value,title]of choices){const option=el('option','',title);option.value=value;select.append(option);}select.onchange=()=>{assetLimit=60;renderAssets();};row.append(select);}$('asset-search').before(row);}
+    if(!$('asset-style')){const row=el('div','asset-filters');for(const[id,label,choices]of [['asset-view','浏览范围',[['all','全部素材'],['favorites','我的收藏'],['recent','最近使用'],['signaling','机制通路套装'],['trafficking','细胞转运套装']]],['asset-style','视觉风格',[['','全部风格'],['native','原生图元'],['flat','简洁矢量'],['detailed','精细插画']]]]){const select=el('select');select.id=id;select.setAttribute('aria-label',label);for(const[value,title]of choices){const option=el('option','',title);option.value=value;select.append(option);}select.onchange=()=>{assetLimit=60;renderAssets();};row.append(select);}const filters=el('details','panel-disclosure asset-filter-disclosure'),summary=el('summary','','风格与收藏筛选');filters.append(summary,row);$('asset-search').after(filters);}
     state.templates=data.templates||[];
     state.colorways=data.colorways||[];
     state.references=data.references||[];

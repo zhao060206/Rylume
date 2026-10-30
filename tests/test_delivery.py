@@ -11,6 +11,7 @@ import pytest
 from github_delivery import GitHubDelivery,DeliveryError,Cancelled,checked_zip,trusted_url,version_tuple
 from resource_packs import configure,safe_svg,_write
 from app_updates import UpdateManager,acknowledge
+from product_identity import PRODUCT_VERSION
 
 ROOT=Path(__file__).resolve().parents[1]
 @pytest.fixture(autouse=True)
@@ -127,8 +128,9 @@ def release_fixture(tmp_path):
         z.writestr('Rylume/Rylume.exe',b'MZfixture')
         z.writestr('Rylume/_internal/python313.dll','fixture')
         z.writestr('Rylume/_internal/ui/canvas-studio.html','fixture')
-    asset={'name':'Rylume-3.1.0-Windows-x64.zip','size':file.stat().st_size,'digest':'sha256:'+hashlib.sha256(file.read_bytes()).hexdigest(),'browser_download_url':'https://github.com/zhao060206/Rylume/releases/download/v3.1.0/Rylume-3.1.0-Windows-x64.zip'}
-    release={'tag_name':'v3.1.0','draft':False,'prerelease':False,'body':'Release notes','assets':[asset]}
+    version=PRODUCT_VERSION
+    asset={'name':f'Rylume-{version}-Windows-x64.zip','size':file.stat().st_size,'digest':'sha256:'+hashlib.sha256(file.read_bytes()).hexdigest(),'browser_download_url':f'https://github.com/zhao060206/Rylume/releases/download/v{version}/Rylume-{version}-Windows-x64.zip'}
+    release={'tag_name':'v'+version,'draft':False,'prerelease':False,'body':'Release notes','assets':[asset]}
     return file,release
 
 def test_update_download_and_source_mode_never_replaces_interpreter(tmp_path):
@@ -156,6 +158,8 @@ def test_update_plan_and_health_are_confined_to_separate_data(tmp_path,monkeypat
     assert '-File' in calls[0][0][0] and 'api_key' not in planpath.read_text()
     acknowledge(tmp_path/'data',planpath,plan['nonce']);assert Path(plan['health_file']).is_file()
     with pytest.raises(DeliveryError):acknowledge(tmp_path/'wrong-data',planpath,plan['nonce'])
+    monkeypatch.setattr(app_updates,'PRODUCT_VERSION','0.0.0')
+    with pytest.raises(DeliveryError,match='版本不一致'):acknowledge(tmp_path/'data',planpath,plan['nonce'])
 
 def test_all_discipline_templates_are_portable_and_have_distinct_mechanisms(tmp_path):
     from scene_document import normalize_scene,audit_scene

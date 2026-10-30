@@ -24,7 +24,8 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   dialog.append(head,tabs,resourcePage,updatePage);document.body.append(dialog);
   const top=el('button','text-button delivery-entry','资源与更新');top.id='open-delivery';top.title='下载学科素材与模板，检查软件更新';
   const models=document.getElementById('open-settings')||document.querySelector('header button[title]');
-  if(models)models.before(top);else document.querySelector('header')?.append(top);
+  const settingsMenu=document.getElementById('settings-menu-items');
+  if(settingsMenu)settingsMenu.prepend(top);else if(models)models.before(top);else document.querySelector('header')?.append(top);
   const assetOpen=el('button','button full secondary','下载其他学科素材与模板');document.getElementById('panel-assets')?.append(assetOpen);
   const templateOpen=el('button','text-button full','管理学科资源包');document.getElementById('panel-templates')?.append(templateOpen);
   let view='resources',focused='',timer=null,data=null,update=null,revisionSignature='',manualCheck=false,lastState='',renderedPacks='';
@@ -80,6 +81,7 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
     releaseLink.hidden=!update.release_url;releaseLink.href=update.release_url||'https://github.com/zhao060206/Rylume/releases';
     notes.hidden=!update.notes;notesText.textContent=update.notes||'';
     top.textContent=['available','downloading','validating','ready'].includes(s)?'发现新版本 · '+update.latest_version:'资源与更新';top.classList.toggle('has-update',['available','ready'].includes(s));
+    document.querySelector('.settings-menu')?.classList.toggle('has-update',['available','ready'].includes(s));
     if(lastState!==s&&manualCheck&&s==='up_to_date')toast('当前已是最新版本');lastState=s;
   }
   async function loadUpdate(){try{update=await api('/api/updates');renderUpdate();}catch(e){updateStatus.textContent=e.message;}}

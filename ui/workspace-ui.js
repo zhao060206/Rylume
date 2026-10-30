@@ -1,3 +1,4 @@
+import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
 /** Unified generation, model settings and inspection around the native canvas. */
 export function canApplySavedScene({epoch,dirty,pending,gesture}){return epoch===dirty&&!pending&&!gesture;}
 export function generationPayload({text,mode='vector',width=180,height=120,dpi=300,reference=null,literature=false,originalText,archetype}) {
@@ -31,17 +32,18 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   let modelConfig={},mode='vector',rightTab='properties',questions=[],answers={},wizardSource='',proposed=null,originalZoom=1;
 
   function showRight(name='properties',compact=true){
-    const previousWidth=editor.host.clientWidth;
+    $('workspace').dispatchEvent(new Event('workspace-panel-request'));
+    preserveCanvasView(editor,()=>{
     rightTab=name;$('workspace').classList.remove('properties-hidden');
     if(innerWidth<1440)$('workspace').classList.add('left-collapsed');
     
     for(const n of document.querySelectorAll('[data-inspector]'))n.setAttribute('aria-selected',String(n.dataset.inspector===name));
     $('property-content').hidden=name!=='properties';$('inspector-review').hidden=name!=='review';$('inspector-task').hidden=name!=='task';
-    if(editor.scene){editor.offset.x+=(editor.host.clientWidth-previousWidth)/2;editor.position();}
+    });syncPanelButtons($('workspace'));
     refresh();
   }
   document.querySelectorAll('[data-inspector]').forEach(b=>b.onclick=()=>showRight(b.dataset.inspector));
-  $('toggle-properties').onclick=()=>showRight('properties',false);
+  $('toggle-properties').onclick=()=>{if(rightTab==='properties'&&!$('workspace').classList.contains('properties-hidden')){preserveCanvasView(editor,()=>$('workspace').classList.add('properties-hidden'));syncPanelButtons($('workspace'));}else showRight('properties',false);};
   $('open-audit').onclick=()=>showRight('review');
   $('process-check').onclick=()=>showRight('review');
   $('process-create').onclick=()=>tab('generate');

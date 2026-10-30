@@ -36,7 +36,7 @@ def test_update_endpoints_report_available_without_touching_source(studio,tmp_pa
     manager=UpdateManager(app_server.DATA_DIR,current_version='3.0.0',frozen=False,delivery=LocalDelivery(file,release))
     monkeypatch.setattr(desktop_delivery,'_updater',manager)
     assert studio('/api/updates/check',{})[0]==200
-    assert wait(manager.status,lambda s:s['state']=='available')['latest_version']=='3.1.0'
+    assert wait(manager.status,lambda s:s['state']=='available')['latest_version']==app_server.PRODUCT_VERSION
     assert studio('/api/updates/download',{})[0]==200
     assert wait(manager.status,lambda s:s['state']=='ready')['can_apply'] is False
     code,error=studio('/api/updates/apply',{});assert code==400 and error['error']

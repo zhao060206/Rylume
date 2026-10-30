@@ -26,7 +26,7 @@ export function relationChoices(editor,{compact=false}={}){
 export function setupRelations(editor){
   const $=id=>document.getElementById(id),select=$('connection-type');
   const picker=document.createElement('button');picker.className='tool relation-picker';picker.id='relation-picker';
-  picker.title='查看符号与含义；选中连线时可直接更改';select.hidden=true;select.after(picker);
+  picker.title='查看符号与含义；选中连线时可直接更改';select.hidden=true;$('relation-context').append(picker);
   const dialog=document.createElement('dialog');dialog.id='relation-guide';dialog.className='relation-guide';
   const header=document.createElement('div');header.className='dialog-heading';
   const heading=document.createElement('h2');heading.textContent='连线表达什么';

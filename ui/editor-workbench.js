@@ -1,3 +1,4 @@
+import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
 /** View commands never alter the saved scientific document. */
 export function setupWorkbench({editor,workspace}){
   const $=id=>document.getElementById(id);let savedPanels=null;
@@ -10,8 +11,10 @@ export function setupWorkbench({editor,workspace}){
   $('zoom-presets').onchange=e=>{const v=e.target.value;if(v==='fit')$('zoom-fit').click();else if(v==='selection')editor.fitSelection();else if(v)editor.setZoom(Number(v));e.target.value='';};
   $('toggle-grid').onclick=()=>{const active=editor.host.classList.toggle('show-grid');$('toggle-grid').setAttribute('aria-pressed',String(active));};
   function focus(){
+    preserveCanvasView(editor,()=>{
     if(savedPanels){workspace.classList.toggle('left-collapsed',savedPanels.left);workspace.classList.toggle('properties-hidden',savedPanels.right);savedPanels=null;}
     else{savedPanels={left:workspace.classList.contains('left-collapsed'),right:workspace.classList.contains('properties-hidden')};workspace.classList.add('left-collapsed','properties-hidden');}
+    });syncPanelButtons(workspace);
     $('focus-canvas').setAttribute('aria-pressed',String(!!savedPanels));editor.host.focus({preventScroll:true});
   }
   $('focus-canvas').onclick=focus;
@@ -40,20 +43,31 @@ export function setupWorkbench({editor,workspace}){
   $('beginner-help').onclick=()=>{$('beginner-tips').hidden=!$('beginner-tips').hidden;};
   $('close-beginner-tips').onclick=()=>$('beginner-tips').hidden=true;
   function refresh(){
+    syncPanelButtons(workspace);
+    for(const b of document.querySelectorAll('[data-tool]')){const active=b.dataset.tool===editor.tool;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));}
+    $('add-text').classList.toggle('active',editor.tool==='text');
+    $('add-text').setAttribute('aria-pressed',String(editor.tool==='text'));
     const objects=editor.scene?.objects.filter(o=>editor.selectedIds.includes(o.id))||[],relations=editor.scene?.relations.filter(o=>editor.selectedIds.includes(o.id))||[];
     const count=editor.selectedIds.length,o=objects[0]||relations[0];
     workspace.classList.toggle('has-selection',count>0);
     workspace.classList.toggle('tool-in-use',editor.tool!=='select');
-    $('quick-fields').hidden=!count;$('quick-empty').hidden=!!count;
+    workspace.classList.toggle('editing-connection',editor.tool==='connect'||relations.length>0);
+    document.querySelector('.quick-edit').hidden=!count&&editor.tool!=='connect';
+    document.querySelector('.quick-edit').setAttribute('aria-label',relations.length?'连线编辑':'所选对象快捷编辑');
+    $('relation-context').hidden=editor.tool!=='connect'&&!relations.length;
+
+    $('quick-fields').hidden=!count&&editor.tool!=='connect';$('quick-empty').hidden=true;
     $('quick-count').textContent=count===1?(relations.length?'所选连线':'所选对象'):`已选 ${count} 项`;
     for(const [n,value] of [[label,count===1?o?.label||'':''],[font,objects[0]?.font_size_pt||8],[fill,objects[0]?.fill||'#dae8ed']])if(document.activeElement!==n)n.value=value;
+    label.closest('label').hidden=!count;
+    document.querySelector('.selection-more').hidden=!count;
     label.disabled=count!==1||objects[0]?.locked||!o;font.disabled=!objects.length||objects.every(o=>o.locked);fill.disabled=font.disabled;
     $('quick-label-focus').disabled=label.disabled;
-    for(const n of [font,fill])n.closest('label').hidden=!!relations.length&&!objects.length;
+    for(const n of [font,fill])n.closest('label').hidden=!objects.length;
     $('quick-connect').hidden=!!relations.length&&!objects.length;
     $('cancel-canvas-tool').hidden=editor.tool==='select';
     const source=editor.scene?.objects.find(o=>o.id===editor.connectStart);
-    $('canvas-hint').textContent=editor.tool==='connect'?(source?`从“${source.label||'所选对象'}”连线：点击目标对象即可完成。`:'先点击起点，再点击终点；连好后自动回到选择。'):editor.tool==='text'?'点击画布放置文字，然后直接输入。':editor.tool==='pan'?'拖动画布查看其他位置；点“选择”继续编辑。':relations.length?'点击上方连线含义切换类型 · 拖动中间圆点调整弯曲 · 右侧设置虚线与核对状态':count?'拖动移动 · 双击对象改字 · 蓝色圆点可拖出连线':'单击选中 · 拖动框选 · 滚轮上下移动 · Ctrl + 滚轮缩放';
+    $('canvas-hint').textContent=editor.tool==='connect'?(source?`从“${source.label||'所选对象'}”连线：点击目标对象即可完成。`:'先点击起点，再点击终点；连好后自动回到选择。'):editor.tool==='text'?'点击画布放置文字，然后直接输入。':editor.tool==='pan'?'拖动画布查看其他位置；点“选择”继续编辑。':relations.length?'点击连线含义切换类型 · 拖动中间圆点调整弯曲 · 右侧设置虚线与核对状态':count?'拖动移动 · 双击对象改字 · 蓝色圆点可拖出连线':'单击选中 · 拖动框选 · 滚轮上下移动 · Ctrl + 滚轮缩放';
   }
   editor.host.addEventListener('editor-tool-change',refresh);refresh();
   return {refresh};
