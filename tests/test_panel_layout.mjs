@@ -14,6 +14,14 @@ assert.equal(editor.fitMode,false,'ResizeObserver must not refit the document af
 preserveCanvasView(editor,()=>{editor.host.clientWidth-=284;editor.host.clientHeight-=50;});
 assert.deepEqual(contentCenter(),before);
 assert.equal(calls,2);
+// Mode changes open both sidebars through helpers that also preserve the view.
+// The outer transaction must account for each pixel once, even when nested.
+const nestedBefore=contentCenter();
+preserveCanvasView(editor,()=>{
+  preserveCanvasView(editor,()=>{editor.host.clientWidth-=260;});
+  preserveCanvasView(editor,()=>{editor.host.clientWidth-=278;editor.host.clientHeight+=18;});
+});
+assert.deepEqual(contentCenter(),nestedBefore,'Nested chrome changes preserve the same world-space center');
 const empty={host:{clientWidth:800,clientHeight:600},scene:null};
 let changed=false;preserveCanvasView(empty,()=>changed=true);assert.equal(changed,true);
 

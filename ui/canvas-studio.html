@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-workspace-mode="simple">
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width,initial-scale=1" name="viewport"/>
@@ -11,6 +11,7 @@
   <link href="/ui/annotation.css" rel="stylesheet"/>
   <link href="/ui/delivery.css" rel="stylesheet"/>
   <link href="/ui/canvas-workbench.css" rel="stylesheet"/>
+  <link href="/ui/workspace-modes.css" rel="stylesheet"/>
  </head>
  <body>
   <svg aria-hidden="true" class="icon-defs">
@@ -262,6 +263,12 @@
      本地工作台
     </span>
    </div>
+   <div class="workspace-mode-switch" role="group" aria-label="工作台模式">
+    <span class="workspace-mode-thumb" aria-hidden="true"></span>
+    <button type="button" data-workspace-mode="simple" aria-pressed="true" title="极简模式：常用绘图工具，更多设置按需打开">极简</button>
+    <button type="button" data-workspace-mode="professional" aria-pressed="false" title="专业模式：图层、对象属性与精细设置">专业</button>
+   </div>
+   <span class="mode-announcement" id="workspace-mode-status" role="status" aria-live="polite"></span>
    <button class="quiet" id="open-history">
     <svg class="icon">
      <use href="#layers">
@@ -279,6 +286,7 @@
   </header>
   <main class="workspace left-collapsed properties-hidden" id="workspace">
    <nav aria-label="工作区工具" class="rail">
+    <span class="rail-section-title">创作</span>
     <button aria-controls="panel-templates" aria-expanded="false" class="rail-item" data-tab="templates" title="选择模板并创建一张新图">
      <svg class="icon">
       <use href="#layers">
@@ -306,7 +314,8 @@
       AI 生成
      </span>
     </button>
-    <button aria-controls="panel-layers" aria-expanded="false" class="rail-item" data-tab="layers" title="查看、隐藏或锁定图中对象">
+    <span class="rail-section-title professional-only">组织</span>
+    <button aria-controls="panel-layers" aria-expanded="false" class="rail-item professional-only" data-tab="layers" title="查看、隐藏或锁定图中对象">
      <svg class="icon">
       <use href="#layers">
       </use>
@@ -315,7 +324,7 @@
       图层
      </span>
     </button>
-    <button aria-controls="panel-references" aria-expanded="false" class="rail-item" data-tab="references" title="查看论文原图与出处">
+    <button aria-controls="panel-references" aria-expanded="false" class="rail-item professional-only" data-tab="references" title="查看论文原图与出处">
      <svg class="icon">
       <use href="#icon-journal">
       </use>
@@ -646,12 +655,23 @@
      <div class="toolbar-spacer">
      </div>
      <div class="canvas-actions">
-      <button class="tool text-tool" id="toggle-properties" title="打开所选对象属性或画布设置">
-       详细设置
+      <button class="tool text-tool professional-only" id="toggle-properties" title="打开所选对象属性或画布设置">
+       属性
       </button>
-      <button class="tool text-tool" id="open-check-toolbar" title="查看排版与内容建议">
-       帮我检查
+      <button class="tool text-tool professional-only" id="open-check-toolbar" title="查看排版与内容建议">
+       检查
       </button>
+      <details class="app-menu workbench-more">
+       <summary aria-label="更多绘图工具">更多</summary>
+       <div class="menu-items">
+        <span class="menu-section-title simple-only">精细编辑</span>
+        <button data-command="toggle-properties" class="simple-only">对象与画布设置</button>
+        <button data-panel-command="layers" class="simple-only">图层与排列</button>
+        <button data-command="open-check-toolbar" class="simple-only">检查图版</button>
+        <button data-panel-command="references" class="simple-only">论文参考与来源</button>
+        <button data-command="beginner-help">操作说明</button>
+       </div>
+      </details>
      </div>
     </div>
     <div class="error-banner" hidden="" id="error-banner" role="alert">

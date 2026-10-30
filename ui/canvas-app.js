@@ -1,4 +1,5 @@
 import {setupNovice} from './novice-guidance.js';
+import {setupWorkspaceModes} from './workspace-modes.js';
 import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
 import {setupDocumentWorkflows} from './document-workflows.js';
 import {setupDelivery} from './delivery-ui.js';
@@ -14,7 +15,7 @@ const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,conflict:false,timer:null,reference:null,candidate:null,active:null};
 const ws=$('workspace');
 new MutationObserver(()=>syncPanelButtons(ws)).observe(ws,{attributes:true,attributeFilter:['class']});
-let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI;
+let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
 let toastTimer;function toast(message,error=false){$('toast').textContent=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
 async function api(path,body,method){const response=await fetch(path,{method:method||(body?'POST':'GET'),headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});const data=await response.json();if(!response.ok||data.ok===false){const error=new Error(data.error||'请求未完成');error.status=response.status;error.data=data;throw error;}return data;}
@@ -36,7 +37,7 @@ async function flush(){
 }
 async function canLeave(){return !S.pending.length&&!S.saving||await flush();}
 async function refreshJobs(){S.jobs=(await api('/api/jobs?limit=1000')).jobs||[];renderHistory();}
-async function openJob(id){if(!await canLeave())return;try{const data=await api(`/api/jobs/${id}/scene`);S.id=id;S.currentJob=S.jobs.find(j=>j.id===id)||await api(`/api/jobs/${id}`);S.revision=data.revision;S.svg=data.svg;S.audit=data.audit;S.pending=[];S.conflict=false;S.saveError=null;S.saveFailures=0;S.dirty=0;$('error-banner').hidden=true;$('canvas-host').classList.remove('legacy-preview');$('canvas-hint').textContent='V 选择 · H 平移 · C 连线 · 双击改字';editor.setDocument(data.scene,data.svg);$('welcome').hidden=true;$('toggle-export').disabled=false;$('project-title').textContent=data.scene.title;$('brief-input').value=data.scene.source_text;S.originalBrief=data.scene.source_text;updateCount();$('canvas-size').textContent=`${data.scene.canvas.width_mm} × ${data.scene.canvas.height_mm} mm · 原生矢量`;saveStatus(`已保存 · r${S.revision}`);history.replaceState(null,'',`/#${id}`);renderProperties();renderAudit();renderLayers();renderTools();workspaceUI?.refresh();annotationUI?.load(id);await documentUI?.opened(data);noviceUI?.opened(data);}catch(error){if(error.data?.legacy){const job=S.jobs.find(j=>j.id===id)||await api(`/api/jobs/${id}`);await openLegacy(job);}else toast(error.message,true);}}
+async function openJob(id){if(!await canLeave())return;try{const data=await api(`/api/jobs/${id}/scene`);S.id=id;S.currentJob=S.jobs.find(j=>j.id===id)||await api(`/api/jobs/${id}`);S.revision=data.revision;S.svg=data.svg;S.audit=data.audit;S.pending=[];S.conflict=false;S.saveError=null;S.saveFailures=0;S.dirty=0;$('error-banner').hidden=true;$('canvas-host').classList.remove('legacy-preview');$('canvas-hint').textContent='V 选择 · H 平移 · C 连线 · 双击改字';editor.setDocument(data.scene,data.svg);$('welcome').hidden=true;$('toggle-export').disabled=false;$('project-title').textContent=data.scene.title;$('brief-input').value=data.scene.source_text;S.originalBrief=data.scene.source_text;updateCount();$('canvas-size').textContent=`${data.scene.canvas.width_mm} × ${data.scene.canvas.height_mm} mm · 原生矢量`;saveStatus(`已保存 · r${S.revision}`);history.replaceState(null,'',`/#${id}`);renderProperties();renderAudit();renderLayers();renderTools();workspaceUI?.refresh();annotationUI?.load(id);await documentUI?.opened(data);noviceUI?.opened(data);modesUI?.opened();}catch(error){if(error.data?.legacy){const job=S.jobs.find(j=>j.id===id)||await api(`/api/jobs/${id}`);await openLegacy(job);}else toast(error.message,true);}}
 async function openLegacy(job){
   editor.clear();annotationUI?.load(null);S.id=job.id;S.currentJob=job;S.revision=0;S.pending=[];S.audit=null;S.svg='';S.conflict=false;
   const host=$('canvas-host');host.classList.add('legacy-preview');
@@ -72,7 +73,7 @@ function renderProperties(){
  const scene=editor.scene,ids=editor.selectedIds,objects=scene.objects.filter(o=>ids.includes(o.id)),relations=scene.relations.filter(r=>ids.includes(r.id));
  function advanced(title){const details=el('details','property-advanced');details.append(el('summary','',title));parent.append(details);return details;}
  if(objects.length){
-  const o=objects[0];parent.append(el('p','property-description',objects.length>1?`已选 ${objects.length} 个对象。颜色和字号会同时应用到这些对象。`:o.locked?'此对象已锁定。可以在图层中解锁后编辑。':'直接拖动改变位置；双击对象或在上方输入框改字。'));
+  const o=objects[0];parent.append(el('p','property-description',objects.length>1?`已选 ${objects.length} 个对象。颜色和字号会同时应用到这些对象。`:o.locked?'此对象已锁定。可以在图层中解锁后编辑。':'在这里修改文字、颜色和状态；拖动图形调整位置。'));
   const basic=section(parent,'文字与外观');
   if(objects.length===1)input(basic,'名称',o.label,'text',v=>editor.changeSelection({label:v}));
   input(basic,'字号 · pt',o.font_size_pt,'number',v=>{if(v<7||v>48){toast('字号可设为 7–48 pt');return renderProperties();}editor.changeSelection({font_size_pt:v});});
@@ -94,7 +95,7 @@ function renderProperties(){
   input(extra,'线宽 · pt',r.stroke_pt||1.05,'number',v=>change({stroke_pt:v}));
   input(extra,'连线颜色',r.stroke||scene.style.palette.primary,'color',v=>change({stroke:v}));
  }else{
-  parent.append(el('p','property-description','选中一个对象，上方会出现文字、字号与颜色。选中多个对象后，可以通过“排列”对齐或组合。'));
+  parent.append(el('p','property-description','选中图形后可以修改文字、颜色和状态；多选后，可在“排列”中对齐或组合。'));
   const grid=section(parent,'纸张大小');input(grid,'宽度 · mm',scene.canvas.width_mm,'number',v=>canvas(v,scene.canvas.height_mm));input(grid,'高度 · mm',scene.canvas.height_mm,'number',v=>canvas(scene.canvas.width_mm,v));
   const presets=el('div','canvas-presets');for(const[label,w,h]of [['论文双栏',180,120],['论文单栏',90,150]]){const b=el('button','button',label);b.onclick=()=>canvas(w,h);presets.append(b);}parent.append(presets);
   const colors=section(advanced('整张图的配色与字号'),'统一样式');for(const[key,label]of [['primary','主色'],['secondary','辅色'],['accent','强调色']])input(colors,label,scene.style.palette[key],'color',v=>editor.applyOperations([{op:'style',changes:{palette:{[key]:v}}}]));
@@ -182,4 +183,5 @@ $('welcome-ai').onclick=()=>{tab('generate');$('brief-input').focus();};
 deliveryUI=setupDelivery({api,toast,flush,state:S,reloadCatalog:async data=>{S.assets=data.assets;libraryUI.init(data);renderExamples();},openAssets:pid=>{tab('assets');libraryUI.selectDomain(pid);},openTemplates:pid=>libraryUI.openPackTemplates(pid)});
 document.querySelectorAll('.close-library-panel').forEach(b=>b.onclick=()=>{preserveCanvasView(editor,()=>ws.classList.add('left-collapsed'));syncPanelButtons(ws);});
 noviceUI=setupNovice({state:S,editor,api,toast,flush,canLeave,openJob,refreshJobs,follow,tab});
+modesUI=setupWorkspaceModes({editor,state:S,tab,showRight:name=>workspaceUI.showRight(name),refresh:renderTools});
 boot().then(ok=>{if(ok)deliveryUI.ready();});

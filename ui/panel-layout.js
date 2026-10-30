@@ -1,11 +1,12 @@
 /** Reflow chrome without moving the document's visible center or changing its zoom. */
 export function preserveCanvasView(editor, change) {
   const width = editor.host.clientWidth, height = editor.host.clientHeight;
+  const offset = editor.scene ? {...editor.offset} : null;
   if (editor.scene) editor.fitMode = false; // A queued resize must not refit and change zoom.
   change();
   if (!editor.scene) return;
-  editor.offset.x += (editor.host.clientWidth - width) / 2;
-  editor.offset.y += (editor.host.clientHeight - height) / 2;
+  editor.offset.x = offset.x + (editor.host.clientWidth - width) / 2;
+  editor.offset.y = offset.y + (editor.host.clientHeight - height) / 2;
   editor.position();
 }
 
