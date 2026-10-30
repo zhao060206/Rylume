@@ -17,6 +17,15 @@ MEIOSIS = re.compile(r'减数分裂|\bmeiosis\b|\bmeiotic\b',re.I)
 ENGINEERING = re.compile(r'机器人|控制器|传感器|执行器|控制系统|闭环控制|反馈控制|电化学|电池|燃料电池|光伏|太阳能|生命周期评价|robot|controller|actuator|sensor|closed.loop control|fuel cell|solar cell|battery|life.cycle assessment',re.I)
 BIOLOGY = re.compile(r'细胞|有丝分裂|减数分裂|蛋白|受体|配体|胞质|染色体|纺锤|核膜|信号通路|囊泡|肿瘤|免疫|\bmitosis\b|\bmitotic\b|\bmeiosis\b|\bprotein\b|\breceptor\b|\bligand\b|\bvesicle\b|\bchromosome\w*\b|\bspindle\b|\bcell(?:ular)?\b',re.I)
 SOURCE = 'https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle'
+PHASE_FEATURES = {
+    'interphase':'Exactly one cell with a continuous intact nuclear envelope, visible nucleolus and diffuse chromatin; no condensed X-shaped chromosomes or bipolar spindle.',
+    'prophase':'Exactly one cell with chromosomes condensing INSIDE a continuous intact nuclear envelope. The nuclear envelope must be a complete unbroken boundary, NOT dashed, fragmented, dissolved or absent. Centrosomes separate outside the nucleus and form asters; spindle fibres must not cross the intact nuclear envelope.',
+    'prometaphase':'Exactly one cell with a disassembled nuclear envelope; fragments may remain. Condensed chromosomes are not yet aligned. Bipolar spindle microtubules attach to kinetochores.',
+    'metaphase':'Exactly one cell with no nuclear envelope. Paired sister chromatids align on the equatorial metaphase plate with centrosomes at opposite poles and a bipolar spindle.',
+    'anaphase':'Exactly one cell. Sister chromatids have separated and move centromere-first to opposite poles; two groups of V-shaped daughter chromosomes, no nuclear envelopes.',
+    'telophase':'Exactly one elongated cell with two re-forming nuclear envelopes around separate chromosome groups; chromatin decondenses and the cleavage furrow begins.',
+    'cytokinesis':'A dividing cell with a deep cleavage furrow producing two daughter cells, each with its own intact nucleus. This is one cytokinesis event, not a montage of different phases.',
+}
 
 
 def phase_tokens(text):
@@ -47,7 +56,7 @@ def intent_contract(original_text):
 
 def mitosis_candidate(original_text,width_mm=180,height_mm=120):
     contract=intent_contract(original_text)
-    if not contract['requires_mitosis'] or contract['explicit_phases'] or re.search(r'非经典|异常|无丝|突变|非对称|non.?canonical|mutant|abnormal|asymmetric',original_text,re.I):
+    if not contract['requires_mitosis'] or contract['explicit_phases'] or re.search(r'非经典|异常|无丝|突变|非对称|植物|酵母|真菌|高等植物|non.?canonical|mutant|abnormal|asymmetric|plant|yeast|fungal|(?:不要|不含|不画).{0,12}有丝分裂|(?:do not|without|exclude).{0,18}mitosis',original_text,re.I):
         return None
     from scene_document import empty_scene,normalize_scene
     scene=empty_scene(title='有丝分裂 · 经典分期候选',source_text=original_text,width_mm=width_mm,height_mm=height_mm)

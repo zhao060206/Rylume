@@ -177,6 +177,10 @@ def illustrate(scene, config, *, on_stage=None, cancelled=None, checkpoint=None)
                   + '\nPalette: ' + json.dumps(scene['style']['palette']))
         if config.get('redraw_instruction'):
             prompt += '\nRequested change, preserve the object identity and scientific meaning: '+config['redraw_instruction'][:2000]
+        from scientific_intent import canonical_phase,PHASE_FEATURES
+        phase=canonical_phase(obj.get('state','')) if obj['type']=='cell' else ''
+        if phase in PHASE_FEATURES:
+            prompt+='\nRequired morphology, the figure must visibly satisfy EACH feature: '+PHASE_FEATURES[phase]
         try:
             reference = object_reference(config,obj)
             asset=None

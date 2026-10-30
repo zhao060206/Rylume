@@ -14,7 +14,7 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
   if(state.sketchSource)$('canvas-sketch-note').textContent='使用画布草稿 · '+(state.sketchSource.title||state.sketchSource.id)+' · 位置和连接保持';
   $('generation-reference-card').hidden=!state.referenceId;
  }
- function removeReference(){referenceEpoch++;state.referenceId=null;state.reference=null;state.referencePurpose='layout';$('reference-file').value='';$('reference-status').hidden=true;$('remove-reference').hidden=true;$('generation-reference-preview').removeAttribute('src');invalidate();refresh();}
+ function removeReference(){referenceEpoch++;$('upload-sketch').disabled=false;state.referenceId=null;state.reference=null;state.referencePurpose='layout';$('reference-file').value='';$('reference-status').hidden=true;$('remove-reference').hidden=true;$('generation-reference-preview').removeAttribute('src');invalidate();refresh();}
  async function upload(image,purpose='layout'){
   const epoch=++referenceEpoch;status('正在保留原图并识别对象与位置…');$('upload-sketch').disabled=true;
   try{const result=await api('/api/references',{image,purpose,text:$('brief-input').value});if(epoch!==referenceEpoch)return;
@@ -70,12 +70,14 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
  };
  return {refresh,invalidate,async redraw(){if(!await flush())return;const ids=editor.selectedIds.filter(id=>editor.scene.objects.some(o=>o.id===id&&o.type!=='text'&&!o.locked));if(!ids.length)return toast('先选择要重绘的图形');redrawSnapshot={id:state.id,revision:state.revision,ids};$('redraw-object-instruction').value='';$('redraw-object-dialog').showModal();},async opened(scene){
   invalidate();
+  const openedEpoch=++referenceEpoch;$('upload-sketch').disabled=false;const openedId=state.id;
   const contract=scene?.generation_contract||{};
   if(contract.original_text){state.originalBrief=contract.original_text;state.enhancedFrom=contract.generation_brief!==state.originalBrief?state.originalBrief:null;$('brief-input').value=contract.generation_brief||contract.original_text;$('brief-count').textContent=$('brief-input').value.length+' / 8000';}
   if(state.sketchSource&&state.sketchSource.id!==state.id)state.sketchSource=null;
   if(contract.reference_id&&contract.reference_id!==state.referenceId){
-   try{const result=await api('/api/references/'+contract.reference_id);state.referenceId=result.reference_id;state.reference=result.style_dna;state.referencePurpose=contract.reference_purpose||result.purpose;$('generation-reference-preview').src=result.preview_url;$('reference-purpose').value=state.referencePurpose;$('generation-reference-note').textContent=result.reference_contract?.summary||'原图已保存';}catch{removeReference();status('当前图版的参考原图暂不可用。');}
+   try{const result=await api('/api/references/'+contract.reference_id);if(state.id!==openedId||referenceEpoch!==openedEpoch)return;state.referenceId=result.reference_id;state.reference=result.style_dna;state.referencePurpose=contract.reference_purpose||result.purpose;$('generation-reference-preview').src=result.preview_url;$('reference-purpose').value=state.referencePurpose;$('generation-reference-note').textContent=result.reference_contract?.summary||'原图已保存';}catch{if(state.id===openedId&&referenceEpoch===openedEpoch){removeReference();status('当前图版的参考原图暂不可用。');}}
   }else if(!contract.reference_id&&state.referenceId)removeReference();
+  else if(contract.reference_id){state.referencePurpose=contract.reference_purpose||state.referencePurpose;$('reference-purpose').value=state.referencePurpose;}
   refresh();
  }};
 }

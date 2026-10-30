@@ -73,7 +73,7 @@ def export_scene(scene, format, destination, *, dpi=300, config=None):
                 result["warnings"].extend(native.get("warnings",[]))
                 result["objects"] = len(scene["objects"])
                 result["text_runs"] = native.get("texts",0)
-        os.replace(temp,destination)
+        shutil.move(str(temp), str(destination))
         if result['artwork_credits']:
             credit_path=destination.with_suffix(destination.suffix+'.credits.txt')
             credit_path.write_text('Scientific artwork attribution (retain in figure legend or acknowledgements):\n\n'+'\n\n'.join(
@@ -83,7 +83,8 @@ def export_scene(scene, format, destination, *, dpi=300, config=None):
         meta = destination.with_suffix(destination.suffix+".json")
         temp_meta = meta.with_name(meta.name+"."+uuid.uuid4().hex+".tmp")
         temp_meta.write_text(json.dumps(result,ensure_ascii=True,indent=2),encoding="utf-8")
-        os.replace(temp_meta,meta)
+        shutil.move(str(temp_meta), str(meta))
         return result
     finally:
         temp.unlink(missing_ok=True)
+
