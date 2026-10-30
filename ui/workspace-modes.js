@@ -43,7 +43,7 @@ export function setupWorkspaceModes({editor, state, tab, showRight, refresh}) {
   inspectorActions.setAttribute('role','toolbar');inspectorActions.setAttribute('aria-label','所选对象操作');
   $('quick-fields').append(inlineActions);$('properties').append(inspectorActions);
   function placeActions(){
-    const target=!ws.classList.contains('properties-hidden')?inspectorActions:inlineActions;
+    const target=inlineActions;
     if(actionNodes[0].parentElement!==target)target.append(...actionNodes);
   }
   const selectedTab=()=>document.querySelector('.rail [data-tab].active')?.dataset.tab||'assets';
@@ -89,12 +89,14 @@ export function setupWorkspaceModes({editor, state, tab, showRight, refresh}) {
     if(document.activeElement?.matches('.editor-inline-input,#quick-label,.property-grid input'))document.activeElement.blur();
     if(reduced.matches){commit(next);return;}
     if(typeof document.startViewTransition==='function'){
+      let watchdog;
       try{
         root.dataset.modeMotion='snapshot';
         transition=document.startViewTransition(()=>commit(next));
+        watchdog=setTimeout(()=>transition?.skipTransition(),1000);
         await transition.finished;
       }catch{if(mode!==next)commit(next);}
-      finally{transition=null;delete root.dataset.modeMotion;}
+      finally{clearTimeout(watchdog);transition=null;delete root.dataset.modeMotion;}
     }else{
       commit(next);
       const surface=!ws.classList.contains('properties-hidden')?$('properties'):document.querySelector('.toolbar');

@@ -15,6 +15,7 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
  function invalidate(){version++;preview=null;}
  function status(text){$('generation-inline-status').textContent=text;}
  function refresh(){
+  $('panel-generate').classList.toggle('has-reference',!!(state.referenceId||state.sketchSource));
   $('generate').disabled=$('preview-generation').disabled=!!(busy||state.active||state.referenceLoading);
   $('reference-purpose').disabled=!!state.referenceLoading;
   $('generation-origin-card').hidden=!state.enhancedFrom;
@@ -77,7 +78,7 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
     $('generation-preview-dialog').showModal();status('结构预览已就绪。');
    }else{
     if(fromPreview){if(!preview||preview.version!==version)throw Error('输入已变化，请重新查看结构预览');body.preview_id=preview.id;}
-    status('正在生成可编辑对象…');$('generation-preview-dialog').close();const result=await api('/api/generate',body);const outcome=await follow(result.job_id);preview=null;status(generationOutcomeText(outcome));
+    status('正在生成可编辑对象…');$('generation-preview-dialog').close();document.dispatchEvent?.(new Event('generation-submitted'));const result=await api('/api/generate',body);const outcome=await follow(result.job_id);preview=null;status(generationOutcomeText(outcome));
     if(outcome?.status==='completed'&&outcome.opened!==false)document.dispatchEvent(new Event('generation-presented'));
    }
   }catch(error){status(error.message);toast(error.message,true);}finally{busy=false;state.submitting=false;$('generate').disabled=false;$('preview-generation').disabled=false;refresh();}
@@ -92,7 +93,14 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
    const result=await api(`/api/jobs/${state.id}/redraw`,{base_revision:state.revision,target_ids:redrawSnapshot.ids,instruction,request_id:crypto.randomUUID()});$('redraw-object-dialog').close();await follow(result.job_id);
   }catch(error){toast(error.message,true);}finally{busy=false;state.submitting=false;button.disabled=false;refresh();}
  };
- return {refresh,invalidate,async redraw(){if(busy||state.active)return toast('请等待当前生成任务结束');if(!await flush())return;const ids=editor.selectedIds.filter(id=>editor.scene.objects.some(o=>o.id===id&&o.visible&&o.role==='entity'&&!['text','membrane','nuclear_pore'].includes(o.type)&&!o.locked));if(!ids.length)return toast('先选择可见的插画主体；文字、膜和核孔可直接编辑');redrawSnapshot={id:state.id,revision:state.revision,ids};$('redraw-object-instruction').value='';$('redraw-object-dialog').showModal();},async opened(scene){
+ function restoreInputs(draft){
+  referenceEpoch++;state.referenceLoading=false;$('upload-sketch').disabled=false;
+  state.referenceId=draft.referenceId||null;state.reference=draft.reference||null;state.referencePurpose=draft.referencePurpose||'layout';state.layoutPolicy=draft.layoutPolicy||'regularize';state.sketchSource=draft.sketchSource||null;
+  if(draft.preview)$('generation-reference-preview').src=draft.preview;else $('generation-reference-preview').removeAttribute('src');
+  $('generation-reference-note').textContent=draft.note||'';$('reference-purpose').value=state.referencePurpose;$('reference-file').value='';
+  invalidate();status('');refresh();
+ }
+ return {refresh,invalidate,restoreInputs,async redraw(){if(busy||state.active)return toast('请等待当前生成任务结束');if(!await flush())return;const ids=editor.selectedIds.filter(id=>editor.scene.objects.some(o=>o.id===id&&o.visible&&o.role==='entity'&&!['text','membrane','nuclear_pore'].includes(o.type)&&!o.locked));if(!ids.length)return toast('先选择可见的插画主体；文字、膜和核孔可直接编辑');redrawSnapshot={id:state.id,revision:state.revision,ids};$('redraw-object-instruction').value='';$('redraw-object-dialog').showModal();},async opened(scene){
   invalidate();
   const openedEpoch=++referenceEpoch;state.referenceLoading=false;$('upload-sketch').disabled=false;const openedId=state.id;
   const contract=scene?.generation_contract||{};

@@ -54,7 +54,11 @@ export function setupWorkbench({editor,workspace}){
     workspace.classList.toggle('has-selection',count>0);
     workspace.classList.toggle('tool-in-use',editor.tool!=='select');
     workspace.classList.toggle('editing-connection',editor.tool==='connect'||relations.length>0);
-    document.querySelector('.quick-edit').hidden=!count&&editor.tool!=='connect';
+    const contextual=document.querySelector('.quick-edit'),hideContext=!count&&editor.tool!=='connect';
+    if(contextual.hidden!==hideContext){
+      if(editor.scene&&editor.offset)preserveCanvasView(editor,()=>contextual.hidden=hideContext);
+      else contextual.hidden=hideContext;
+    }
     document.querySelector('.quick-edit').setAttribute('aria-label',relations.length?'连线编辑':'所选对象快捷编辑');
     $('relation-context').hidden=editor.tool!=='connect'&&!relations.length;
 

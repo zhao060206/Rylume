@@ -24,9 +24,9 @@ export function workflowHint({scene,selectedIds=[],tool='select',connectStart=nu
   return {title:'可以继续编辑，也可以导出了',detail:'点选图形后拖动；双击改字。修改会自动保存在本机。',action:'export',label:'导出图片'};
 }
 
-export function setupNovice({state,editor,api,toast,flush,canLeave,openJob,refreshJobs,follow,tab}) {
+export function setupNovice({state,editor,api,toast,flush,canLeave,openJob,refreshJobs,follow,tab,renderRecent=()=>{}}) {
   const $=id=>document.getElementById(id),ws=$('workspace');
-  let savedPanels=null,starting=false,lastRecent='';
+  let savedPanels=null,starting=false;
   const closeLibrary=()=>preserveCanvasView(editor,()=>ws.classList.add('left-collapsed'));
   const actions={
     assets:()=>{tab('assets');$('asset-search').focus();},
@@ -65,18 +65,6 @@ export function setupNovice({state,editor,api,toast,flush,canLeave,openJob,refre
   };
   $('workflow-help').onclick=()=>$('beginner-help').click();
 
-  function renderRecent(){
-    const jobs=state.jobs.filter(j=>!j.archived&&!['failed','error','cancelled','queued','processing','running'].includes(j.status)).slice(0,3);
-    const signature=jobs.map(j=>j.id+':'+j.title).join('|');if(signature===lastRecent)return;lastRecent=signature;
-    const list=$('home-recent-list');list.replaceChildren();$('home-recent').hidden=!jobs.length;
-    for(const j of jobs){
-      const b=document.createElement('button');b.className='home-recent-item';b.type='button';
-      const img=document.createElement('img');img.src=j.svg_url||j.png_url||'/ui/rylume-mark.svg';img.alt='';img.loading='lazy';
-      const text=document.createElement('span');text.textContent=j.title||'未命名图版';
-      const action=document.createElement('small');action.textContent='继续编辑';b.append(img,text,action);
-      b.onclick=()=>openJob(j.id);list.append(b);
-    }
-  }
   function refresh(){
     const home=!$('welcome').hidden,scene=editor.scene,count=editor.selectedIds.length;
     ws.classList.toggle('showing-start',home);ws.classList.toggle('empty-document',!!state.revision&&!scene?.objects.some(o=>o.visible!==false&&o.role!=='context'));
@@ -94,7 +82,7 @@ export function setupNovice({state,editor,api,toast,flush,canLeave,openJob,refre
     renderRecent();
   }
   return {refresh,opened(){savedPanels=null;refresh();},selection(){
-    if(editor.selectedIds.length&&innerWidth<1100&&!ws.classList.contains('left-collapsed'))closeLibrary();
+    if(editor.selectedIds.length&&editor.host.clientWidth<1100&&!ws.classList.contains('left-collapsed'))closeLibrary();
     refresh();
   }};
 }

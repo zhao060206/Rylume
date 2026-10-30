@@ -163,7 +163,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     const r=await api('/api/optimize',{text:snapshot.original,canvas:[Math.round(width*dpi/25.4),Math.round(height*dpi/25.4)],style_dna:state.reference||null});
     if(!sameBriefSnapshot(snapshot,state,$('brief-input').value.trim(),briefContext()))throw Error('描述、参考或图版已变化，旧的优化结果未应用，请重新优化');
     proposed={text:r.text||text,snapshot};$('review-brief-candidate').hidden=false;
-    if($('creation-dialog').open)reviewBrief();
+    if($('creation-dialog').open||$('panel-generate').classList.contains('home-inline'))reviewBrief();
   });
   $('use-expanded-brief').onclick=()=>{if(!proposed)return;if(!sameBriefSnapshot(proposed.snapshot,state,$('brief-input').value.trim(),briefContext()))return toast('原描述或图版已变化，请重新优化',true);const original=proposed.snapshot.original;acceptEnhancement(state,original,$('brief-candidate').value.slice(0,8000));$('brief-input').value=original;$('brief-input').dispatchEvent(new Event('change'));proposed=null;$('review-brief-candidate').hidden=true;$('brief-preview-dialog').close();$('generation-inline-status').textContent='已采用优化描述；你的原文保留在输入区。';toast('已采用优化描述，你的原文保留在输入区');};
   $('discard-enhancement').onclick=()=>{authorBrief(state,$('brief-input').value);$('brief-input').dispatchEvent(new Event('change'));$('generation-inline-status').textContent='生成将使用你的原文。';toast('生成将使用你的原文');};

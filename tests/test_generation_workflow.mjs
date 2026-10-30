@@ -24,7 +24,7 @@ console.log('Sketch pointer mapping, both editable render styles, original inten
 const elements=new Map();
 function element(id){
  if(!elements.has(id))elements.set(id,{value:'',disabled:false,hidden:false,textContent:'',
-  addEventListener(){},removeAttribute(name){delete this[name];},getContext(){return {fillRect(){}};}});
+  classList:{toggle(){}},addEventListener(){},removeAttribute(name){delete this[name];},getContext(){return {fillRect(){}};}});
  return elements.get(id);
 }
 globalThis.document={getElementById:element,querySelectorAll(){return [];},activeElement:null};
@@ -50,5 +50,15 @@ assert.equal(state.referenceId,'second-ref');
 assert.equal(element('generation-reference-preview').src,'/second.png');
 await workflow.opened({generation_contract:{reference_id:'second-ref',reference_purpose:'style'}});
 assert.equal(state.referencePurpose,'style','Reusing a reference keeps the current document purpose');
+const lateDocument=workflow.opened({generation_contract:{reference_id:'late-document'}});
+workflow.restoreInputs({referenceId:'home-draft',referencePurpose:'sketch',layoutPolicy:'regularize',note:'my draft'});
+loads.at(-1).resolve({reference_id:'late-document',preview_url:'/late-document.png'});
+await lateDocument;
+assert.equal(state.referenceId,'home-draft','Returning to a new draft cancels an old document reference read');
+assert.equal(state.referencePurpose,'sketch');
+assert.equal(state.referenceLoading,false);
+assert.equal(state.layoutPolicy,'regularize');
+assert.equal(element('generation-reference-note').textContent,'my draft');
+
 delete globalThis.document;
 console.log('Delayed reference loads preserve author removal, document isolation and reference purpose');

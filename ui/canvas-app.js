@@ -1,3 +1,4 @@
+import {setupWorkspaceNavigation} from './workspace-navigation.js';
 import {setupNovice} from './novice-guidance.js';
 import {setupCreationComposer} from './creation-composer.js';
 import {authorBrief} from './brief-state.js';
@@ -19,7 +20,7 @@ const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,conflict:false,timer:null,reference:null,candidate:null,active:null};
 const ws=$('workspace');
 new MutationObserver(()=>syncPanelButtons(ws)).observe(ws,{attributes:true,attributeFilter:['class']});
-let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI;
+let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI,navigationUI;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
 let toastTimer;function toast(message,error=false){$('toast').textContent=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
 async function api(path,body,method){const response=await fetch(path,{method:method||(body?'POST':'GET'),headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});const data=await response.json();if(!response.ok||data.ok===false){const error=new Error(data.error||'请求未完成');error.status=response.status;error.data=data;throw error;}return data;}
@@ -40,7 +41,7 @@ async function flush(){
  finally{S.saving=false;if(ok)documentUI?.saved();workspaceUI?.refresh();if(S.pending.length&&!S.conflict)S.timer=setTimeout(flush,Math.min(30000,1000*2**Math.min(S.saveFailures||0,5)));}
 }
 async function canLeave(){return !S.pending.length&&!S.saving||await flush();}
-async function refreshJobs(){S.jobs=(await api('/api/jobs?limit=1000')).jobs||[];renderHistory();}
+async function refreshJobs(){S.jobs=(await api('/api/jobs?limit=1000')).jobs||[];renderHistory();navigationUI?.render();}
 const loadDocument=latestDocumentLoader({canLeave,readVersion:()=>S.id+':'+S.revision,onError:error=>toast(error.message,true),async load(id){
  let data,legacy=false,svg='';
  try{data=await api(`/api/jobs/${id}/scene`);}catch(error){if(!error.data?.legacy)throw error;legacy=true;}
@@ -58,7 +59,7 @@ const loadDocument=latestDocumentLoader({canLeave,readVersion:()=>S.id+':'+S.rev
  await documentUI?.opened(data);if(!current())return;
  await generationOpened;if(!current())return;noviceUI?.opened(data);modesUI?.opened();
 }});
-async function openJob(id){return loadDocument(id);}
+async function openJob(id){composerUI?.leavingHome();return loadDocument(id);}
 async function openLegacy(job,svg=''){
   editor.clear();annotationUI?.load(null);S.id=job.id;S.currentJob=job;S.revision=0;S.pending=[];S.audit=null;S.svg='';S.conflict=false;
   const host=$('canvas-host');host.classList.add('legacy-preview');
@@ -78,7 +79,7 @@ function follow(id){
 async function trackGeneration(id){
  S.active=id;workspaceUI?.refresh();$('generation-status').hidden=false;$('generate').disabled=true;let terminal=null;
  try{for(;;){
-  const job=await api(`/api/jobs/${id}`);$('generation-text').textContent=job.message||'正在生成';$('generation-progress').value=job.progress||0;
+  const job=await api(`/api/jobs/${id}`);const recentIndex=S.jobs.findIndex(j=>j.id===job.id);if(recentIndex<0)S.jobs.unshift(job);else S.jobs[recentIndex]=job;navigationUI?.render();$('generation-text').textContent=job.message||'正在生成';$('generation-progress').value=job.progress||0;
   $('generation-stage-list').replaceChildren(...(job.stages||[]).map(stage=>el('span','stage-pill '+stage.state,stage.label||stage.name||stage.title||stage.id||stage.stage||'处理中')));
   if(job.status==='completed'){terminal=job;await refreshJobs();const opened=await openJob(id);if(job.illustration_result?.state==='partial')toast('插画没有全部完成，已保留可编辑草稿。请查看内容建议。',true);return {...job,opened};}
   if(['failed','cancelled','error'].includes(job.status)){terminal=job;if(job.scene_revision){await refreshJobs();await openJob(id);}throw Error(job.error||job.message||'任务未完成');}
@@ -231,8 +232,9 @@ documentUI=setupDocumentWorkflows({state:S,editor,api,flush,toast,openJob,refres
 $('welcome-ai').onclick=()=>{tab('generate');$('brief-input').focus();};
 deliveryUI=setupDelivery({api,toast,flush,state:S,reloadCatalog:async data=>{S.assets=data.assets;libraryUI.init(data);renderExamples();},openAssets:pid=>{tab('assets');libraryUI.selectDomain(pid);},openTemplates:pid=>libraryUI.openPackTemplates(pid)});
 document.querySelectorAll('.close-library-panel').forEach(b=>b.onclick=()=>{preserveCanvasView(editor,()=>ws.classList.add('left-collapsed'));syncPanelButtons(ws);});
-noviceUI=setupNovice({state:S,editor,api,toast,flush,canLeave,openJob,refreshJobs,follow,tab});
+noviceUI=setupNovice({state:S,editor,api,toast,flush,canLeave,openJob,refreshJobs,follow,tab,renderRecent:()=>navigationUI?.render()});
 modesUI=setupWorkspaceModes({editor,state:S,tab,showRight:name=>workspaceUI.showRight(name),refresh:renderTools});
 generationUI=setupGenerationWorkflow({state:S,editor,api,flush,follow,canLeave,workspace:workspaceUI,checkModels:mode=>documentUI.checkModels(mode),toast,tab});
-composerUI=setupCreationComposer({state:S,toast});
+composerUI=setupCreationComposer({state:S,toast,workflow:generationUI,workspace:workspaceUI});
+navigationUI=setupWorkspaceNavigation({state:S,editor,api,openJob,follow,tab,toast});
 boot().then(ok=>{if(ok)deliveryUI.ready();});

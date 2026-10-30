@@ -14,10 +14,11 @@
   <link href="/ui/workspace-modes.css" rel="stylesheet"/>
   <link href="/ui/generation-workflow.css" rel="stylesheet"/>
   <link href="/ui/creation-composer.css" rel="stylesheet"/>
+  <link href="/ui/workspace-shell.css" rel="stylesheet"/>
  </head>
  <body>
   <svg aria-hidden="true" class="icon-defs">
-   <defs>
+   <defs><symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></symbol>
     <symbol id="pointer" viewBox="0 0 24 24">
      <path d="m5 3 14 10-7 1-3 7z">
      </path>
@@ -84,8 +85,8 @@
     </symbol>
    </defs>
   </svg>
-  <header class="topbar">
-   <a aria-label="理象 Rylume 首页" class="brand" href="/">
+  <aside class="app-sidebar" aria-label="图版导航">
+   <div class="sidebar-brand">   <a aria-label="理象 Rylume 首页" class="brand" href="/">
     <span aria-hidden="true" class="brand-mark">
      <svg viewBox="0 0 72 72">
       <path d="M14 46V22a8 8 0 0 1 8-8h24v10H26v22H14Z">
@@ -102,7 +103,42 @@
       Rylume
      </span>
     </strong>
-   </a>
+   </a><button type="button" id="collapse-navigation" class="icon-button" aria-label="收起图版导航" title="收起导航"><svg class="icon"><use href="#menu"></use></svg></button></div>
+   <div class="sidebar-new">   <button class="quiet" id="open-start" title="新建图版；当前图版会自动保留">
+    新建图版
+   </button></div>
+   <label class="sidebar-search"><svg class="icon"><use href="#search"></use></svg><input type="search" id="navigator-search" placeholder="搜索最近图版" aria-label="搜索最近图版"/></label>
+   <section id="home-recent" class="sidebar-recents"><header><h2>最近图版</h2><button type="button" class="text-button" id="open-history" aria-label="打开全部图版">全部</button></header><div id="home-recent-list"></div><p class="sidebar-empty" id="navigator-empty">新建或生成的图版会保存在这里。</p></section>
+   <footer class="sidebar-footer">    <details class="app-menu settings-menu">
+     <summary aria-label="设置">
+      <svg class="icon"><use href="#settings"></use></svg><span class="settings-label">设置</span>
+      <span aria-hidden="true" class="update-indicator">
+      </span>
+     </summary>
+     <div class="menu-items" id="settings-menu-items">
+      <button class="" id="open-settings" title="设置文本、生图与视觉服务">
+       <svg class="icon">
+        <use href="#settings">
+        </use>
+       </svg>
+       模型设置
+      </button>
+      <button data-command="beginner-help">
+       操作说明
+       <kbd>
+        ?
+       </kbd>
+      </button>
+      <button data-command="show-shortcuts">
+       快捷键
+      </button>
+     </div>
+    </details><span>本机工作区</span></footer>
+  </aside>
+  <header class="topbar">
+   <button type="button" class="icon-button" id="expand-navigation" aria-label="展开图版导航" title="展开导航"><svg class="icon"><use href="#menu"></use></svg></button>
+
+   <span class="home-page-title">新建图版</span>
    <nav aria-label="应用菜单" class="app-menus">
     <details class="app-menu">
      <summary>
@@ -228,35 +264,9 @@
       </select>
      </div>
     </details>
-    <details class="app-menu settings-menu">
-     <summary>
-      设置
-      <span aria-hidden="true" class="update-indicator">
-      </span>
-     </summary>
-     <div class="menu-items" id="settings-menu-items">
-      <button class="" id="open-settings" title="设置文本、生图与视觉服务">
-       <svg class="icon">
-        <use href="#settings">
-        </use>
-       </svg>
-       模型设置
-      </button>
-      <button data-command="beginner-help">
-       操作说明
-       <kbd>
-        ?
-       </kbd>
-      </button>
-      <button data-command="show-shortcuts">
-       快捷键
-      </button>
-     </div>
-    </details>
+
    </nav>
-   <button class="quiet" id="open-start" title="新建图版；当前图版会自动保留">
-    新建
-   </button>
+
    <div class="project-heading">
     <span id="project-title">
      未命名图版
@@ -271,13 +281,7 @@
     <button type="button" data-workspace-mode="professional" aria-pressed="false" title="专业模式：图层、对象属性与精细设置">专业</button>
    </div>
    <span class="mode-announcement" id="workspace-mode-status" role="status" aria-live="polite"></span>
-   <button class="quiet" id="open-history">
-    <svg class="icon">
-     <use href="#layers">
-     </use>
-    </svg>
-    最近图版
-   </button>
+
    <button class="button primary" disabled="" id="toggle-export">
     <svg class="icon">
      <use href="#download">
@@ -287,8 +291,55 @@
    </button>
   </header>
   <main class="workspace left-collapsed properties-hidden" id="workspace">
-   <nav aria-label="工作区工具" class="rail">
-    <span class="rail-section-title">创作</span>
+    <div aria-label="绘图工具" class="toolbar" role="toolbar">
+     <div class="tool-cluster">
+      <button aria-label="撤销" class="tool" disabled="" id="undo" title="撤销 Ctrl+Z">
+       <svg class="icon">
+        <use href="#icon-undo">
+        </use>
+       </svg>
+       <span class="tool-caption">
+        撤销
+       </span>
+      </button>
+      <button aria-label="重做" class="tool" disabled="" id="redo" title="重做 Ctrl+Y">
+       <svg class="icon">
+        <use href="#icon-redo">
+        </use>
+       </svg>
+       <span class="tool-caption">
+        重做
+       </span>
+      </button>
+     </div>
+     <div class="tool-cluster">
+      <button aria-label="选择工具" class="tool active" data-tool="select">
+       <svg class="icon">
+        <use href="#pointer">
+        </use>
+       </svg>
+      </button>
+      <button aria-label="平移工具" class="tool" data-tool="pan">
+       <svg class="icon">
+        <use href="#hand">
+        </use>
+       </svg>
+      </button>
+      <button aria-label="连接工具" class="tool" data-tool="connect">
+       <svg class="icon">
+        <use href="#line">
+        </use>
+       </svg>
+      </button>
+      <button aria-label="添加文本" class="tool" id="add-text">
+       <svg class="icon">
+        <use href="#text">
+        </use>
+       </svg>
+      </button>
+     </div>
+   <nav aria-label="工作区工具" class="rail top-tools">
+
     <button aria-controls="panel-templates" aria-expanded="false" class="rail-item" data-tab="templates" title="选择模板并创建一张新图">
      <svg class="icon">
       <use href="#layers">
@@ -316,7 +367,7 @@
       AI 生成
      </span>
     </button>
-    <span class="rail-section-title professional-only">组织</span>
+
     <button aria-controls="panel-layers" aria-expanded="false" class="rail-item professional-only" data-tab="layers" title="查看、隐藏或锁定图中对象">
      <svg class="icon">
       <use href="#layers">
@@ -347,6 +398,30 @@
      </span>
     </button>
    </nav>
+     <div class="toolbar-spacer">
+     </div>
+     <div class="canvas-actions">
+      <button class="tool text-tool professional-only" id="toggle-properties" title="打开所选对象属性或画布设置">
+       属性
+      </button>
+      <button class="tool text-tool professional-only" id="open-check-toolbar" title="查看排版与内容建议">
+       检查
+      </button>
+      <details class="app-menu workbench-more">
+       <summary aria-label="更多绘图工具">更多</summary>
+       <div class="menu-items">
+        <span class="menu-section-title simple-only">精细编辑</span>
+        <button data-command="toggle-properties" class="simple-only">对象与画布设置</button>
+        <button data-panel-command="layers" class="simple-only">图层与排列</button>
+        <button data-command="open-check-toolbar" class="simple-only">检查图版</button>
+        <button data-panel-command="references" class="simple-only">论文参考与来源</button>
+        <button data-command="beginner-help">操作说明</button>
+       </div>
+      </details>
+     </div>
+    </div>
+
+
    <aside class="left-panel">
     <section class="left-tab" hidden="" id="panel-templates">
      <div class="panel-heading">
@@ -456,86 +531,6 @@
      </div>
     </section>
    </aside>
-   <section aria-label="图版编辑区" class="canvas-column">
-    <div aria-label="绘图工具" class="toolbar" role="toolbar">
-     <div class="tool-cluster">
-      <button aria-label="撤销" class="tool" disabled="" id="undo" title="撤销 Ctrl+Z">
-       <svg class="icon">
-        <use href="#icon-undo">
-        </use>
-       </svg>
-       <span class="tool-caption">
-        撤销
-       </span>
-      </button>
-      <button aria-label="重做" class="tool" disabled="" id="redo" title="重做 Ctrl+Y">
-       <svg class="icon">
-        <use href="#icon-redo">
-        </use>
-       </svg>
-       <span class="tool-caption">
-        重做
-       </span>
-      </button>
-     </div>
-     <div class="tool-cluster">
-      <button aria-label="选择工具" class="tool active" data-tool="select">
-       <svg class="icon">
-        <use href="#pointer">
-        </use>
-       </svg>
-      </button>
-      <button aria-label="平移工具" class="tool" data-tool="pan">
-       <svg class="icon">
-        <use href="#hand">
-        </use>
-       </svg>
-      </button>
-      <button aria-label="连接工具" class="tool" data-tool="connect">
-       <svg class="icon">
-        <use href="#line">
-        </use>
-       </svg>
-      </button>
-      <button aria-label="添加文本" class="tool" id="add-text">
-       <svg class="icon">
-        <use href="#text">
-        </use>
-       </svg>
-      </button>
-     </div>
-     <div class="toolbar-spacer">
-     </div>
-     <div class="canvas-actions">
-      <button class="tool text-tool professional-only" id="toggle-properties" title="打开所选对象属性或画布设置">
-       属性
-      </button>
-      <button class="tool text-tool professional-only" id="open-check-toolbar" title="查看排版与内容建议">
-       检查
-      </button>
-      <details class="app-menu workbench-more">
-       <summary aria-label="更多绘图工具">更多</summary>
-       <div class="menu-items">
-        <span class="menu-section-title simple-only">精细编辑</span>
-        <button data-command="toggle-properties" class="simple-only">对象与画布设置</button>
-        <button data-panel-command="layers" class="simple-only">图层与排列</button>
-        <button data-command="open-check-toolbar" class="simple-only">检查图版</button>
-        <button data-panel-command="references" class="simple-only">论文参考与来源</button>
-        <button data-command="beginner-help">操作说明</button>
-       </div>
-      </details>
-     </div>
-    </div>
-    <div class="error-banner" hidden="" id="error-banner" role="alert">
-     <span id="error-text">
-     </span>
-     <button class="text-button" id="download-draft">
-      保存本地草稿
-     </button>
-     <button class="text-button" id="reload-scene">
-      重新载入
-     </button>
-    </div>
     <div aria-label="所选对象快捷编辑" class="quick-edit">
      <div id="quick-empty">
       <span>
@@ -651,6 +646,17 @@
       </details>
      </div>
     </div>
+   <section aria-label="图版编辑区" class="canvas-column">
+    <div class="error-banner" hidden="" id="error-banner" role="alert">
+     <span id="error-text">
+     </span>
+     <button class="text-button" id="download-draft">
+      保存本地草稿
+     </button>
+     <button class="text-button" id="reload-scene">
+      重新载入
+     </button>
+    </div>
     <div class="canvas-instructions">
      <div class="canvas-hint" id="canvas-hint">
       双击标签改字 · Shift 多选 · 空格拖动画布 · Alt 暂停吸附
@@ -663,34 +669,10 @@
     </div>
     <div class="welcome" id="welcome">
      <div class="start-document">
-      <div class="home-heading">
-       <div>
-        <span class="start-eyebrow">
-         理象 · Rylume
-        </span>
-        <h2>
-         从想法，到图版。
-        </h2>
-       </div>
-       <button class="button" hidden="" id="return-to-document">
-        返回当前图版
-       </button>
-      </div>
-      <p class="home-intro">选一种方式开始。完成初稿后，点选、拖动、改字，就像编辑幻灯片。</p>
-      <div class="home-choices">
-       <button class="home-choice home-choice-primary" id="welcome-ai"><span class="home-choice-number">01</span><svg class="icon"><use href="#spark"></use></svg><strong>用 AI 创建</strong><small>写一段描述，或上传参考图与草稿</small><span class="home-choice-action">开始描述 <span aria-hidden="true">→</span></span></button>
-       <button class="home-choice" id="welcome-gallery"><span class="home-choice-number">02</span><svg class="icon"><use href="#layers"></use></svg><strong>从模板开始</strong><small>挑选已有构图，替换成你的内容</small><span class="home-choice-action">浏览模板 <span aria-hidden="true">→</span></span></button>
-       <button class="home-choice" id="welcome-blank"><span class="home-choice-number">03</span><svg class="icon"><use href="#plus"></use></svg><strong>自己动手画</strong><small>打开空白画布，添加素材与文字</small><span class="home-choice-action">新建空白图 <span aria-hidden="true">→</span></span></button>
-      </div>
-      <div class="home-getting-started"><button class="home-example" id="welcome-example"><img alt="JAK–STAT 通路样板预览" src="/ui/library/sb_socs_feedback.svg"/><span><strong>第一次使用？打开示例试一试</strong><small>移动一个图形，双击修改文字，随时撤销。</small></span><span aria-hidden="true">打开 →</span></button></div>
-      <div class="home-ai-note"><span>模板和手动绘图可直接使用；AI 创作需要连接模型服务。</span><button class="text-button" id="empty-model-settings">设置 AI 服务</button></div>
-      <section class="home-recent" hidden="" id="home-recent">
-       <h3>
-        继续最近的图版
-       </h3>
-       <div id="home-recent-list">
-       </div>
-      </section>
+      <div class="home-heading"><div><span class="start-eyebrow">理象 · Rylume</span><h2>今天想画什么？</h2><p class="home-intro">描述研究内容，或放入一张参考图与草稿。</p></div><button class="button" hidden id="return-to-document">返回当前图版</button></div>
+      <div id="home-composer-host" class="home-composer-host"></div>
+      <div class="home-start-links"><button type="button" id="welcome-gallery"><svg class="icon"><use href="#layers"></use></svg>从模板开始</button><button type="button" id="welcome-blank"><svg class="icon"><use href="#plus"></use></svg>打开空白画布</button><button type="button" id="welcome-example"><svg class="icon"><use href="#icon-journal"></use></svg>试着编辑示例图</button><button type="button" id="welcome-ai" hidden>开始 AI 创作</button></div>
+      <div class="home-ai-note"><span>模板和手动绘图可离线使用。</span><button class="text-button" id="empty-model-settings">设置 AI 服务</button></div>
      </div>
     </div>
     <div class="workflow-guide" hidden="" id="workflow-guide">
@@ -1293,7 +1275,7 @@
       <textarea id="brief-input" maxlength="8000" aria-describedby="brief-help" placeholder="例如：画一张 JAK–STAT 信号通路图。细胞因子结合膜上的受体，激活 JAK，再激活 STAT。STAT 进入细胞核，调控基因表达。&#10;&#10;也可以说明排版、配色，以及哪些内容不要出现。"></textarea>
       <div class="input-meta"><span id="brief-count">0 / 8000</span><span hidden>原生矢量</span></div>
       <p id="brief-help" class="composer-help">写清主要对象、它们的关系和排列方式。不确定的地方可以留给后续核对。</p>
-      <div class="prompt-assists"><button type="button" class="button" id="expand-brief"><svg class="icon"><use href="#spark"></use></svg>帮我优化描述</button><button type="button" class="text-button" id="open-guide">不知道怎么写？</button><button type="button" class="text-button" id="review-brief-candidate" hidden>查看优化候选</button></div>
+      <div class="prompt-assists"><button type="button" class="button" id="composer-attach" aria-expanded="false"><svg class="icon"><use href="#plus"></use></svg>参考 / 草稿</button><button type="button" class="button" id="expand-brief"><svg class="icon"><use href="#spark"></use></svg>帮我优化描述</button><button type="button" class="text-button" id="open-guide">不知道怎么写？</button><button type="button" class="text-button" id="review-brief-candidate" hidden>查看优化候选</button></div>
       <details class="prompt-examples"><summary>试试这些描述</summary><div class="prompt-example-list"><button type="button" data-prompt-example="signal">信号通路</button><button type="button" data-prompt-example="workflow">实验流程</button><button type="button" data-prompt-example="cycle">循环过程</button></div><p id="prompt-example-copy" class="muted small" hidden></p><button type="button" id="use-prompt-example" class="text-button" hidden>使用这段示例</button></details>
       <details id="generation-origin-card" class="enhancement-card" hidden><summary>已采用优化描述 <span>原文保留，可随时停用</span></summary><label class="field-label" for="generation-enhanced-input">AI 生成时使用的补充说明</label><textarea id="generation-enhanced-input" maxlength="8000"></textarea><button type="button" id="discard-enhancement" class="text-button">停用优化，使用我的原文</button></details>
      </div>
@@ -1309,7 +1291,7 @@
      </aside>
     </div>
     <div class="composer-output"><label class="field-label"><span class="step-number">3</span> 选择绘图方式</label><div aria-label="创作方式" class="generation-modes" role="group"><button type="button" aria-pressed="true" data-generation-mode="vector"><strong>可编辑示意图</strong><span>图形、文字、箭头都能单独修改</span></button><button type="button" aria-pressed="false" data-generation-mode="image"><strong>细节插画</strong><span>主体为图片；文字、箭头可单独修改</span></button></div><p id="generation-mode-note" class="muted small"></p></div>
-    <footer class="creation-submit"><p id="generation-inline-status" role="status" aria-live="polite"></p><div class="composer-submit-row"><span class="composer-save-note">生成一张新图，当前图版会保留</span><button type="button" class="button" id="preview-generation">先预览结构</button><button type="button" class="button primary" id="generate">生成可编辑初稿</button></div><div class="generation-status" hidden id="generation-status" role="status"><span id="generation-text"></span><button type="button" class="text-button" id="cancel-job">取消生成</button><div class="generation-stage-list" id="generation-stage-list"></div><progress id="generation-progress" max="100" value="0"></progress></div></footer>
+    <footer class="creation-submit"><p id="generation-inline-status" role="status" aria-live="polite"></p><div class="composer-submit-row"><span class="composer-save-note">生成一张新图，当前图版会保留</span><button type="button" class="button" id="preview-generation">预览结构</button><button type="button" class="button primary" id="generate">生成可编辑初稿</button></div><div class="generation-status" hidden id="generation-status" role="status"><span id="generation-text"></span><button type="button" class="text-button" id="cancel-job">取消生成</button><div class="generation-stage-list" id="generation-stage-list"></div><progress id="generation-progress" max="100" value="0"></progress></div></footer>
     <div hidden aria-hidden="true"><button id="reference-button" tabindex="-1"></button><p id="reference-status" hidden></p><button id="remove-reference" tabindex="-1" hidden></button><div id="example-list"></div><button id="show-all-templates" tabindex="-1"></button><button id="new-blank" tabindex="-1"></button></div>
    </section>
   </dialog>
