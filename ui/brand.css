@@ -1,0 +1,10 @@
+/* Rylume / 理象: product identity, deliberately independent of stored document styles. */
+:root{--accent:#287b68;--accent-soft:#e5f0eb;--bg:#e4e8e5;--panel:#fafbf9;--line:#d9dfdb;--text:#25332f;--muted:#727d77}
+.topbar{background:#182925;border-bottom-color:#10211b;color:#f0f4ef}
+.brand{gap:9px}.brand-mark{width:27px;height:30px}.brand-mark svg{width:27px;height:27px;fill:currentColor;stroke:none;color:#91c1a6}
+.brand strong{font-size:15px;letter-spacing:1px;font-weight:600}.brand strong span{font-family:"Segoe UI",Arial,sans-serif;font-size:10px;letter-spacing:.65px;margin-left:7px;font-weight:500;color:#bfcec5}.brand small{color:#8ea79a}
+.button.primary:hover:not(:disabled){background:#206252;border-color:#206252}
+.rail-item.active{background:#e2ece6;color:#286b57}.tool.active,.tool[aria-pressed=true]{background:var(--accent-soft);color:var(--accent)}
+.quiet:hover,.app-menu[open] summary,.app-menu summary:hover{background:#293d34}
+.project-heading{border-left-color:#40574b}#save-status{color:#a2b6aa}
+@media(max-width:999px){.topbar .brand strong{font-size:14px}.brand strong span{display:none}}

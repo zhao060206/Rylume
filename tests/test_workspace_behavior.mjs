@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const source=await readFile(new URL('../ui/workspace-ui.js',import.meta.url),'utf8');
+const {generationPayload,modelPatch,historyMatches}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const vector=generationPayload({text:'EGFR activates ERK',width:90,height:150});
+assert.equal(vector.scene_engine,'v2');assert.equal(vector.illustration_mode,'vector');assert.deepEqual(vector.canvas_mm,[90,150]);
+const image=generationPayload({text:'Delivery',mode:'image',width:180,height:120,dpi:600,literature:true,reference:{layout_analysis:{composition:'split'}},archetype:'signal_pathway'});
+assert.equal(image.scene_engine,undefined);assert.equal(image.illustration_mode,'image');assert.equal(image.literature,true);
+assert.deepEqual(image.canvas,[4252,2835]);assert.equal(image.reference_layout.composition,'split');assert.equal(image.archetype,'signal_pathway');
+const old={text:{api_key:'saved',base_url:'https://old',model:'a'},quality:'hd'};
+const patch=modelPatch({text:{base_url:' https://new ',model:' b ',api_key:''}});
+assert.deepEqual(patch,{text:{base_url:'https://new',model:'b'}});assert.equal(old.text.api_key,'saved');assert.equal(patch.quality,undefined);
+assert.equal(modelPatch({vision:{base_url:'',model:'',api_key:'new-secret'}}).vision.api_key,'new-secret');
+const jobs=[{id:'j1',title:'EGFR',scene_engine:'v2',status:'completed'},{id:'j2',title:'LNP',status:'processing'}];
+assert.deepEqual(jobs.filter(j=>historyMatches(j,'','editable')),[jobs[0]]);
+assert.deepEqual(jobs.filter(j=>historyMatches(j,'j2','active')),[jobs[1]]);
+assert.deepEqual(jobs.filter(j=>historyMatches(j,'LNP','illustration')),[jobs[1]]);
+console.log('8 unified-workspace behavior checks passed');

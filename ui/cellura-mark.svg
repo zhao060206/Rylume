@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="cellura-helix" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+    <linearGradient id="cellura-node" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+  <path d="M16 12 C34 20, 30 44, 48 52 M48 12 C30 20, 34 44, 16 52" stroke="url(#cellura-helix)" stroke-width="4.2" stroke-linecap="round" />
+  <path d="M22 22 L42 22" stroke="url(#cellura-helix)" stroke-width="2.4" stroke-linecap="round" opacity="0.85" />
+  <path d="M20 32 L44 32" stroke="url(#cellura-helix)" stroke-width="2.6" stroke-linecap="round" opacity="0.95" />
+  <path d="M22 42 L42 42" stroke="url(#cellura-helix)" stroke-width="2.4" stroke-linecap="round" opacity="0.85" />
+  <circle cx="16" cy="12" r="4.2" fill="url(#cellura-node)" />
+  <circle cx="48" cy="12" r="4.2" fill="url(#cellura-node)" />
+  <circle cx="48" cy="52" r="4.2" fill="url(#cellura-node)" />
+  <circle cx="16" cy="52" r="4.2" fill="url(#cellura-node)" />
+  <circle cx="32" cy="32" r="5" fill="#FFFFFF" stroke="#6366F1" stroke-width="2.4" />
+</svg>

@@ -1,0 +1,1230 @@
+{
+  "signal_relay": {
+    "object_labels": [
+      "Cytokine",
+      "Cytokine receptor",
+      "JAK",
+      "STAT",
+      "STAT dimer",
+      "Nuclear STAT",
+      "Target genes"
+    ],
+    "object_count": 7,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "binds",
+      "converts",
+      "transports"
+    ]
+  },
+  "signal_nucleus": {
+    "object_labels": [
+      "TGF-β",
+      "TGF-βR II / I",
+      "SMAD2/3",
+      "SMAD4",
+      "SMAD complex",
+      "Nuclear SMAD",
+      "Target genes"
+    ],
+    "object_count": 7,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "associates",
+      "binds",
+      "transports"
+    ]
+  },
+  "signal_lipid": {
+    "object_labels": [
+      "EGF",
+      "EGFR",
+      "PI3K",
+      "PIP2",
+      "PIP3",
+      "AKT",
+      "mTOR",
+      "Protein synthesis"
+    ],
+    "object_count": 8,
+    "relation_count": 7,
+    "relation_types": [
+      "activates",
+      "associates",
+      "binds",
+      "converts"
+    ]
+  },
+  "signal_vertical": {
+    "object_labels": [
+      "Cytokine",
+      "Cytokine receptor",
+      "JAK",
+      "STAT",
+      "STAT dimer",
+      "Nuclear STAT",
+      "Target genes"
+    ],
+    "object_count": 7,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "binds",
+      "converts",
+      "transports"
+    ]
+  },
+  "signal_compact": {
+    "object_labels": [
+      "TGF-β",
+      "TGF-βR II / I",
+      "SMAD2/3",
+      "SMAD4",
+      "SMAD complex",
+      "Nuclear SMAD",
+      "Target genes"
+    ],
+    "object_count": 7,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "associates",
+      "binds",
+      "transports"
+    ]
+  },
+  "signal_horizontal": {
+    "object_labels": [
+      "EGF",
+      "EGFR",
+      "PI3K",
+      "PIP2",
+      "PIP3",
+      "AKT",
+      "mTOR",
+      "Protein synthesis"
+    ],
+    "object_count": 8,
+    "relation_count": 7,
+    "relation_types": [
+      "activates",
+      "associates",
+      "binds",
+      "converts"
+    ]
+  },
+  "process_strip": {
+    "object_labels": [
+      "MVB formation",
+      "MVB transport",
+      "Membrane fusion",
+      "Exosome release"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "process_steps": {
+    "object_labels": [
+      "MVB formation",
+      "MVB transport",
+      "Membrane fusion",
+      "Exosome release"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "process_vertical": {
+    "object_labels": [
+      "Hemostasis",
+      "Inflammation",
+      "Proliferation",
+      "Remodeling"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "converts"
+    ]
+  },
+  "process_grid": {
+    "object_labels": [
+      "Hemostasis",
+      "Inflammation",
+      "Proliferation",
+      "Remodeling"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "converts"
+    ]
+  },
+  "network_orbit": {
+    "object_labels": [
+      "Tumor cells",
+      "CAF",
+      "M2 macrophages",
+      "Treg",
+      "CD8 T cells",
+      "Endothelial cells"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "associates",
+      "inhibits"
+    ]
+  },
+  "network_columns": {
+    "object_labels": [
+      "Tumor cells",
+      "CAF",
+      "M2 macrophages",
+      "Treg",
+      "CD8 T cells",
+      "Endothelial cells"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "associates",
+      "inhibits"
+    ]
+  },
+  "assembly_horizontal": {
+    "object_labels": [
+      "PYD",
+      "NACHT",
+      "LRR",
+      "ASC · PYD",
+      "ASC · CARD",
+      "pro-caspase-1"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "associates",
+      "binds"
+    ]
+  },
+  "assembly_tiers": {
+    "object_labels": [
+      "PYD",
+      "NACHT",
+      "LRR",
+      "ASC · PYD",
+      "ASC · CARD",
+      "pro-caspase-1"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "associates",
+      "binds"
+    ]
+  },
+  "workflow_strip": {
+    "object_labels": [
+      "Sample collection",
+      "RNA extraction",
+      "Library preparation",
+      "Sequencing",
+      "Data analysis"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "workflow_vertical": {
+    "object_labels": [
+      "Sample collection",
+      "RNA extraction",
+      "Library preparation",
+      "Sequencing",
+      "Data analysis"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "signal_cell": {
+    "object_labels": [
+      "Cytokine",
+      "Cytokine receptor",
+      "JAK",
+      "STAT",
+      "STAT dimer",
+      "Nuclear STAT",
+      "Target genes"
+    ],
+    "object_count": 7,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "binds",
+      "converts",
+      "transports"
+    ]
+  },
+  "process_cell": {
+    "object_labels": [
+      "MVB formation",
+      "MVB transport",
+      "Membrane fusion",
+      "Exosome release"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "network_tissue": {
+    "object_labels": [
+      "Tumor cells",
+      "CAF",
+      "M2 macrophages",
+      "Treg",
+      "CD8 T cells",
+      "Endothelial cells"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "associates",
+      "inhibits"
+    ]
+  },
+  "signal_divergent": {
+    "object_labels": [
+      "EGF",
+      "EGFR",
+      "PI3K",
+      "PIP2",
+      "PIP3",
+      "AKT",
+      "mTOR",
+      "Protein synthesis"
+    ],
+    "object_count": 8,
+    "relation_count": 7,
+    "relation_types": [
+      "activates",
+      "associates",
+      "binds",
+      "converts"
+    ]
+  },
+  "signal_convergent": {
+    "object_labels": [
+      "EGF",
+      "EGFR",
+      "PI3K",
+      "PIP2",
+      "PIP3",
+      "AKT",
+      "mTOR",
+      "Protein synthesis"
+    ],
+    "object_count": 8,
+    "relation_count": 7,
+    "relation_types": [
+      "activates",
+      "associates",
+      "binds",
+      "converts"
+    ]
+  },
+  "signal_feedback": {
+    "object_labels": [
+      "Cytokine",
+      "Cytokine receptor",
+      "JAK",
+      "STAT",
+      "STAT dimer",
+      "Nuclear STAT",
+      "Target genes"
+    ],
+    "object_count": 7,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "binds",
+      "converts",
+      "transports"
+    ]
+  },
+  "sb_mapk_branch": {
+    "object_labels": [
+      "EGF",
+      "EGFR",
+      "RAS–GTP",
+      "RAF",
+      "MEK",
+      "ERK",
+      "PI3K",
+      "PIP2",
+      "PIP3",
+      "AKT"
+    ],
+    "object_count": 10,
+    "relation_count": 9,
+    "relation_types": [
+      "activates",
+      "associates",
+      "binds",
+      "converts"
+    ]
+  },
+  "sb_sting_traffic": {
+    "object_labels": [
+      "Cytosolic DNA",
+      "cGAS",
+      "cGAMP",
+      "STING · ER",
+      "STING · Golgi",
+      "TBK1",
+      "IRF3",
+      "IFN genes",
+      "ATP + GTP"
+    ],
+    "object_count": 9,
+    "relation_count": 8,
+    "relation_types": [
+      "activates",
+      "associates",
+      "binds",
+      "converts",
+      "transports"
+    ]
+  },
+  "sb_nfkb_release": {
+    "object_labels": [
+      "Inflammatory signal",
+      "IKK",
+      "IκB",
+      "NF-κB",
+      "IκB degradation",
+      "Nuclear NF-κB",
+      "Target genes"
+    ],
+    "object_count": 7,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "inhibits",
+      "sequence",
+      "transports"
+    ]
+  },
+  "sb_notch_contact": {
+    "object_labels": [
+      "DLL / JAG",
+      "Notch",
+      "NICD",
+      "RBPJ targets"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "activates",
+      "binds",
+      "converts"
+    ]
+  },
+  "sb_wnt_switch": {
+    "object_labels": [
+      "β-catenin",
+      "Degradation",
+      "β-catenin",
+      "TCF / LEF transcription",
+      "Wnt",
+      "FZD / LRP"
+    ],
+    "object_count": 6,
+    "relation_count": 4,
+    "relation_types": [
+      "activates",
+      "binds",
+      "transports"
+    ]
+  },
+  "sb_socs_feedback": {
+    "object_labels": [
+      "Cytokine",
+      "Cytokine receptor",
+      "JAK",
+      "STAT",
+      "SOCS transcription",
+      "SOCS"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "activates",
+      "binds",
+      "inhibits",
+      "sequence"
+    ]
+  },
+  "sb_checkpoint_contact": {
+    "object_labels": [
+      "PD-1",
+      "PD-L1",
+      "SHP2",
+      "TCR signalling",
+      "Blocking antibody"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "associates",
+      "binds",
+      "inhibits"
+    ]
+  },
+  "sb_car_t_contact": {
+    "object_labels": [
+      "CAR",
+      "Target antigen",
+      "Cytotoxic granules",
+      "Target apoptosis"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "activates",
+      "binds"
+    ]
+  },
+  "sb_antigen_synapse": {
+    "object_labels": [
+      "TCR",
+      "Peptide–MHC",
+      "CD28",
+      "B7",
+      "T-cell activation"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "activates",
+      "binds"
+    ]
+  },
+  "sb_autophagy_flux": {
+    "object_labels": [
+      "Cytoplasmic cargo",
+      "Phagophore",
+      "Autophagosome",
+      "Autolysosome",
+      "Lysosome"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "sb_mitophagy": {
+    "object_labels": [
+      "Damaged mitochondrion",
+      "Ubiquitin-tagged cargo",
+      "Mitophagosome",
+      "Lysosomal clearance"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "sb_secretory_route": {
+    "object_labels": [
+      "Endoplasmic reticulum",
+      "Golgi",
+      "Secretory vesicle",
+      "Secretion"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "sb_endosome_sorting": {
+    "object_labels": [
+      "Surface receptor",
+      "Early endosome",
+      "Recycling endosome",
+      "Late endosome",
+      "Lysosome"
+    ],
+    "object_count": 5,
+    "relation_count": 5,
+    "relation_types": [
+      "sequence",
+      "transports"
+    ]
+  },
+  "sb_exosome_transfer": {
+    "object_labels": [
+      "MVB",
+      "Extracellular vesicle",
+      "Uptake",
+      "Delivered cargo"
+    ],
+    "object_count": 4,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence",
+      "transports"
+    ]
+  },
+  "sb_lnp_delivery": {
+    "object_labels": [
+      "Lipid nanoparticle",
+      "mRNA cargo",
+      "Endosome",
+      "Cytosolic mRNA",
+      "Translated protein"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "associates",
+      "sequence",
+      "transports"
+    ]
+  },
+  "sb_particle_assembly": {
+    "object_labels": [
+      "Ionizable lipid",
+      "Helper lipids",
+      "mRNA",
+      "RNA–lipid assembly",
+      "Formulated LNP",
+      "PEG–lipid"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "associates",
+      "converts"
+    ]
+  },
+  "sb_barrier_transport": {
+    "object_labels": [
+      "Circulating carrier",
+      "Endocytic vesicle",
+      "Tissue delivery"
+    ],
+    "object_count": 3,
+    "relation_count": 2,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "sb_apoptosis_routes": {
+    "object_labels": [
+      "Death receptor",
+      "Mitochondrial route",
+      "Caspase-8",
+      "Caspase-9",
+      "Caspase-3 / 7",
+      "Apoptotic execution"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "activates"
+    ]
+  },
+  "sb_inflamed_barrier": {
+    "object_labels": [
+      "Continuous junctions",
+      "Circulating solute",
+      "Altered junctions",
+      "Circulating solute",
+      "Increased permeability"
+    ],
+    "object_count": 5,
+    "relation_count": 1,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "sb_wound_landscape": {
+    "object_labels": [
+      "Macrophage",
+      "Fibroblast",
+      "Collagen"
+    ],
+    "object_count": 3,
+    "relation_count": 2,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "sb_tumor_ecology": {
+    "object_labels": [
+      "Tumour",
+      "Vascular supply",
+      "Macrophage",
+      "CD8 T cell",
+      "Fibroblast"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "associates",
+      "inhibits"
+    ]
+  },
+  "sb_stem_fates": {
+    "object_labels": [
+      "Pluripotent cell",
+      "Ectoderm",
+      "Mesoderm",
+      "Endoderm"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "converts"
+    ]
+  },
+  "sb_organoid_culture": {
+    "object_labels": [
+      "Tissue isolation",
+      "Cell preparation",
+      "Matrix embedding",
+      "Organoid culture",
+      "Phenotype assays"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "sb_crispr_editing": {
+    "object_labels": [
+      "Guide RNA",
+      "Cas9",
+      "Cas9–gRNA",
+      "Target DNA",
+      "Double-strand break",
+      "NHEJ · indels",
+      "Template repair"
+    ],
+    "object_count": 7,
+    "relation_count": 6,
+    "relation_types": [
+      "binds",
+      "converts"
+    ]
+  },
+  "sb_single_cell": {
+    "object_labels": [
+      "Tissue dissociation",
+      "Single-cell capture",
+      "Barcoded cDNA",
+      "Library / sequencing",
+      "Cell annotation"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "sb_infection_response": {
+    "object_labels": [
+      "Bacterium",
+      "Phagosome",
+      "Phagolysosome",
+      "Peptide–MHC II"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "sb_antibody_modes": {
+    "object_labels": [
+      "Virus",
+      "Neutralising antibody",
+      "Cell entry",
+      "Antibody-coated target",
+      "Fc recognition",
+      "Phagocyte"
+    ],
+    "object_count": 6,
+    "relation_count": 4,
+    "relation_types": [
+      "binds",
+      "inhibits",
+      "sequence"
+    ]
+  },
+  "sb_translation_route": {
+    "object_labels": [
+      "DNA",
+      "Transcription",
+      "Nuclear pore",
+      "Cytoplasmic mRNA",
+      "Ribosome",
+      "Polypeptide"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "associates",
+      "binds",
+      "sequence",
+      "transports"
+    ]
+  },
+  "flow_sample_route": {
+    "object_labels": [
+      "Sample",
+      "Extract",
+      "Measure",
+      "Analyse",
+      "Report"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_vertical_protocol": {
+    "object_labels": [
+      "Prepare",
+      "Treat",
+      "Wash",
+      "Acquire",
+      "Interpret"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_quality_gate": {
+    "object_labels": [
+      "Extract",
+      "QC passed?",
+      "Library prep",
+      "Re-extract",
+      "Sequence"
+    ],
+    "object_count": 5,
+    "relation_count": 5,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_treatment_arms": {
+    "object_labels": [
+      "Matched samples",
+      "Control",
+      "Treatment",
+      "Readout A",
+      "Readout B",
+      "Compare"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_omics_merge": {
+    "object_labels": [
+      "RNA-seq",
+      "Proteomics",
+      "Metabolomics",
+      "Integration",
+      "Pathways"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_design_cycle": {
+    "object_labels": [
+      "Hypothesis",
+      "Design",
+      "Experiment",
+      "Evaluate"
+    ],
+    "object_count": 4,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_screening": {
+    "object_labels": [
+      "Records",
+      "Screen titles",
+      "Full-text review",
+      "Included",
+      "Excluded",
+      "Reasons"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_sample_funnel": {
+    "object_labels": [
+      "All samples",
+      "Eligibility",
+      "Quality control",
+      "Analysis set"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_bench_compute": {
+    "object_labels": [
+      "Prepare",
+      "Acquire",
+      "Validate",
+      "Import",
+      "Process",
+      "Interpret"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_clinical_timeline": {
+    "object_labels": [
+      "Baseline",
+      "Intervention",
+      "Follow-up",
+      "Endpoint"
+    ],
+    "object_count": 4,
+    "relation_count": 3,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_discovery_validation": {
+    "object_labels": [
+      "Cohort A",
+      "Discover",
+      "Candidates",
+      "Cohort B",
+      "Validate",
+      "Report"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_screen_confirm": {
+    "object_labels": [
+      "Library",
+      "Primary screen",
+      "Hits",
+      "Orthogonal test",
+      "Confirmed",
+      "Discard"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_causal_test": {
+    "object_labels": [
+      "Model",
+      "Vehicle",
+      "Block",
+      "Rescue",
+      "Compare"
+    ],
+    "object_count": 5,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_triangulation": {
+    "object_labels": [
+      "Imaging",
+      "Molecular",
+      "Functional",
+      "Concordance",
+      "Interpret"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_decision_tree": {
+    "object_labels": [
+      "Study aim",
+      "Paired?",
+      "Paired analysis",
+      "Independent?",
+      "Group analysis",
+      "Review design"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_batch_pipeline": {
+    "object_labels": [
+      "Dataset",
+      "Batch A",
+      "Batch B",
+      "Batch C",
+      "Merge",
+      "QC"
+    ],
+    "object_count": 6,
+    "relation_count": 7,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_rna_pipeline": {
+    "object_labels": [
+      "Reads",
+      "QC / align",
+      "Counts",
+      "Differential",
+      "Enrichment"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_image_pipeline": {
+    "object_labels": [
+      "Specimen",
+      "Acquire",
+      "Segment",
+      "Quantify",
+      "Validate"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_handoff_lanes": {
+    "object_labels": [
+      "Recruit",
+      "Collect",
+      "Prepare",
+      "Assay",
+      "Analyse",
+      "Archive"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_milestone": {
+    "object_labels": [
+      "Question",
+      "Pilot",
+      "Main study",
+      "Replication",
+      "Manuscript"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_feedback_control": {
+    "object_labels": [
+      "Input",
+      "Process",
+      "Product",
+      "QC passed?",
+      "Release",
+      "Adjust"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_reversible_states": {
+    "object_labels": [
+      "State A",
+      "State B",
+      "State C"
+    ],
+    "object_count": 3,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_paired_readout": {
+    "object_labels": [
+      "Control",
+      "Treatment",
+      "Molecular A",
+      "Molecular B",
+      "Phenotype A",
+      "Phenotype B"
+    ],
+    "object_count": 6,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_database_route": {
+    "object_labels": [
+      "Source A",
+      "Source B",
+      "Curate",
+      "Version",
+      "Publish"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "layout_ranks_lr": {
+    "object_labels": [
+      "Sample collection",
+      "RNA extraction",
+      "Library preparation",
+      "Sequencing",
+      "Data analysis"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "layout_ranks_tb": {
+    "object_labels": [
+      "Sample collection",
+      "RNA extraction",
+      "Library preparation",
+      "Sequencing",
+      "Data analysis"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "layout_snake": {
+    "object_labels": [
+      "Sample collection",
+      "RNA extraction",
+      "Library preparation",
+      "Sequencing",
+      "Data analysis"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "layout_columns": {
+    "object_labels": [
+      "Sample collection",
+      "RNA extraction",
+      "Library preparation",
+      "Sequencing",
+      "Data analysis"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "layout_orbit": {
+    "object_labels": [
+      "Sample collection",
+      "RNA extraction",
+      "Library preparation",
+      "Sequencing",
+      "Data analysis"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "transports"
+    ]
+  },
+  "layout_lanes": {
+    "object_labels": [
+      "Sample collection",
+      "RNA extraction",
+      "Library preparation",
+      "Sequencing",
+      "Data analysis"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "transports"
+    ]
+  }
+}

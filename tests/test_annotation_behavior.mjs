@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const editorSource=await readFile(new URL('../ui/canvas-editor.js',import.meta.url),'utf8');
+let source=await readFile(new URL('../ui/annotation-ui.js',import.meta.url),'utf8');
+source=source.replace("'./canvas-editor.js'",JSON.stringify('data:text/javascript;base64,'+Buffer.from(editorSource).toString('base64')));
+const {regionFromPoints}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const canvas={width_mm:180,height_mm:120};
+assert.deepEqual(regionFromPoints({x:50,y:80},{x:10,y:30},canvas),{x:10,y:30,w:40,h:50});
+assert.deepEqual(regionFromPoints({x:-20,y:20},{x:200,y:140},canvas),{x:0,y:20,w:180,h:100});
+assert.deepEqual(regionFromPoints({x:200,y:140},{x:210,y:150},canvas),{x:180,y:120,w:0,h:0});
+assert.deepEqual(regionFromPoints({x:20,y:30},{x:20,y:30},canvas),{x:20,y:30,w:0,h:0});
+console.log('4 annotation frame coordinate and reverse-drag scenarios passed');

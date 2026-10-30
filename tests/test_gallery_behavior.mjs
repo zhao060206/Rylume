@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const {selectTemplates}=await import('../ui/library-ui.js');
+const science={id:'egfr',library_group:'science',recommended:true,title:'EGFR',search_terms:'PIP2 PIP3'};
+const workflow={id:'linear',library_group:'workflow',recommended:true,title:'实验路线'};
+const variant={id:'rna',library_group:'workflow',variant_of:'linear',title:'RNA-seq'};
+const layout={id:'layout',library_group:'layout',title:'分层排版'};
+const legacy={id:'old',library_group:'layout',compatibility_only:true,title:'旧预设'};
+const items=[science,workflow,variant,layout,legacy];
+assert.deepEqual(selectTemplates(items),[science,workflow]);
+assert.deepEqual(selectTemplates(items,{group:'science',query:'pip2'}),[science]);
+assert.deepEqual(selectTemplates(items,{group:'workflow',query:'RNA-seq'}),[workflow]);
+assert.deepEqual(selectTemplates(items,{group:'layout'}),[layout]);
+assert.deepEqual(selectTemplates(items,{group:'layout',legacy:true}),[layout,legacy]);
+assert.deepEqual(selectTemplates(items,{query:'missing'}),[]);
+console.log('6 purpose-first gallery behavior checks passed');

@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {SceneEditor,legendOperations} from '../ui/canvas-editor.js';
+import {rankAssets} from '../ui/asset-search.js';
+import {DraftStore} from '../ui/draft-store.js';
+import {changeDescriptions} from '../ui/candidate-comparison.js';
+const scene={canvas:{width_mm:180,height_mm:120},style:{font_size_pt:8,palette:{}},objects:[{id:'a',label:'A',type:'protein',visible:true,x:10,y:100,w:20,h:10},{id:'b',label:'B',type:'protein',visible:true,x:70,y:100,w:20,h:10}],relations:[{id:'r',type:'activates',source:'a',target:'b'}]};
+const editor=Object.create(SceneEditor.prototype);Object.assign(editor,{doc:structuredClone(scene),selected:new Set(['a']),undoStack:[],redoStack:[],draw(){},onSelection(){},onChange(){}});
+editor.bringToFront();assert.deepEqual(editor.doc.objects.map(o=>o.id),['b','a']);editor.undo();assert.deepEqual(editor.doc,scene);editor.redo();assert.deepEqual(editor.doc.objects.map(o=>o.id),['b','a']);editor.sendToBack();assert.deepEqual(editor.doc.objects.map(o=>o.id),['a','b']);
+editor.selected=new Set(['a','r']);const count=editor.undoStack.length;editor.changeSelection({label:'Changed'});assert.equal(editor.undoStack.length,count+1);editor.undo();assert.equal(editor.doc.objects[0].label,'A');
+let n=0;const normal=legendOperations(scene,()=> 'l'+(++n));assert.ok(!normal.some(o=>o.op==='canvas'));const expanded=legendOperations(scene,()=> 'x'+(++n),{expand:true});assert.ok(expanded.some(o=>o.op==='canvas'));assert.deepEqual(scene.canvas,{width_mm:180,height_mm:120});
+const assets=[{asset_id:'membrane',label:'磷脂双层',category:'膜结构与受体'},{asset_id:'endo',label:'内吞过程',category:'膜结构与受体'},{asset_id:'r1',label:'七次跨膜受体',category:'膜结构与受体'},{type:'receptor',label:'单体膜受体',category:'膜结构与受体'},{type:'kinase',label:'激酶'}];
+assert.ok(rankAssets(assets,{query:'受体'}).slice(0,2).every(a=>a.label.includes('受体')));assert.equal(rankAssets(assets)[0].type,'receptor');assert.equal(rankAssets(assets,{favorites:['r1'],view:'favorites'})[0].asset_id,'r1');assert.equal(rankAssets(assets,{query:'receptor'})[0].type,'receptor');
+assert.ok(rankAssets(assets,{view:'signaling'}).every(a=>!a.asset_id));
+assert.equal(rankAssets([{type:'protein',label:'X',keywords:'kinase 激酶'}],{query:'激酶'}).length,1,'Upstream keyword strings must remain searchable');
+const values=new Map(),storage={getItem:k=>values.get(k),setItem:(k,v)=>values.set(k,v),removeItem:k=>values.delete(k)};const store=new DraftStore(storage);await store.write({id:'one',base_revision:3,scene});assert.deepEqual((await new DraftStore(storage).read('one')).scene,scene);await store.clear('one');assert.equal(await store.read('one'),null);
+assert.ok(changeDescriptions(scene,[{op:'update',id:'a',changes:{font_size_pt:10}}])[0].includes('字号'));
+console.log('Real command execution, explicit paper sizing, ranked search, restart recovery and comparison passed');

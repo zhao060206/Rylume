@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const source=await readFile(new URL('../ui/canvas-editor.js',import.meta.url),'utf8');
+const{legendOperations,SceneEditor,relationLabel}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const scene={canvas:{width_mm:90,height_mm:120},style:{palette:{}},objects:[{id:'a',visible:true,x:10,y:100,w:10,h:10},{id:'b',visible:true,x:40,y:100,w:10,h:10}],relations:[{id:'r1',source:'a',target:'b',type:'inhibits',label:'Custom',uncertain:true}]};
+let count=0;const safeOps=legendOperations(scene,()=>`safe_${++count}`);assert.ok(!safeOps.some(o=>o.op==='canvas'));
+const ops=legendOperations(scene,()=>`legend_${++count}`,{expand:true});
+assert.equal(ops[0].op,'canvas');assert.equal(ops.at(-1).object.state,'legend_inhibits');
+assert.deepEqual(scene.canvas,{width_mm:90,height_mm:120},'Preview must not mutate the document');
+const editor=Object.create(SceneEditor.prototype);
+Object.assign(editor,{doc:structuredClone(scene),selected:new Set(),undoStack:[],redoStack:[],draw(){},onSelection(){},onChange(){}});
+editor.applyOperations(ops,'Legend');assert.equal(editor.undoStack.length,1);assert.ok(editor.doc.canvas.height_mm>120);assert.equal(editor.doc.objects.length,3);
+assert.deepEqual(editor.doc.relations,scene.relations);editor.undo();assert.deepEqual(editor.doc,scene);editor.redo();assert.equal(editor.doc.objects.length,3);
+assert.equal(relationLabel({style:{relation_labels:true}},scene.relations[0]),'Custom');
+assert.equal(relationLabel({style:{relation_labels:true}},{type:'inhibits',label:''}),'Inhibition');
+console.log('7 connector legend, author text and undo scenarios passed');

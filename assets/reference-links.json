@@ -1,0 +1,178 @@
+[
+  {
+    "id": "reference_1",
+    "title": "Fig. 1: Small extracellular vesicle uptake, biogenesis, cargo content and biological effects.",
+    "journal": "Nature Reviews Cancer · 2020",
+    "category": "细胞内外与局部放大",
+    "style_notes": "左侧细胞轮廓承载发生位置，右侧放大囊泡组成；两类箭头区分发生释放与摄取效应。",
+    "source_url": "https://www.nature.com/articles/s41568-020-00299-w/figures/1",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41568-020-00299-w/MediaObjects/41568_2020_299_Fig1_HTML.png",
+    "rights": "原论文图片，版权与复用条件以原文为准。仅联网查看，不随程序分发。"
+  },
+  {
+    "id": "reference_2",
+    "title": "Fig. 2: Mechanisms of EV immune regulation.",
+    "journal": "Nature Immunology · 2021",
+    "category": "细胞间免疫互作",
+    "style_notes": "不同细胞轮廓与颜色帮助区分身份；曲线围绕局部关系展开，作用文字靠近对应细胞。",
+    "source_url": "https://www.nature.com/articles/s41590-021-00899-0/figures/2",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41590-021-00899-0/MediaObjects/41590_2021_899_Fig2_HTML.png",
+    "rights": "原论文图片，版权与复用条件以原文为准。仅联网查看，不随程序分发。"
+  },
+  {
+    "id": "reference_3",
+    "title": "Fig. 2: Extracellular vesicle biogenesis and heterogeneity.",
+    "journal": "Nature Reviews Clinical Oncology · 2025",
+    "category": "局部发生与系统转运",
+    "style_notes": "不同细胞状态对应不同颗粒形态；血管作为横贯画面的空间地标，连接局部与远处。",
+    "source_url": "https://www.nature.com/articles/s41571-025-01074-2/figures/2",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41571-025-01074-2/MediaObjects/41571_2025_1074_Fig2_HTML.png",
+    "rights": "原论文图片，版权与复用条件以原文为准。仅联网查看，不随程序分发。"
+  },
+  {
+    "id": "reference_4",
+    "title": "Figure 2",
+    "journal": "The EMBO Journal · 2022",
+    "category": "机制、组成与概览",
+    "style_notes": "A 表达发生与摄取，B 比较颗粒组成，C 表达原发与远端的概览；面板各自承担不同解释任务。",
+    "source_url": "https://link.springer.com/article/10.15252/embj.2021109288/figures/2",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.15252%2Fembj.2021109288/MediaObjects/44318_2022_BFEMBJ2021109288_Fig2_HTML.png",
+    "rights": "原论文图片，版权与复用条件以原文为准。仅联网查看，不随程序分发。"
+  },
+  {
+    "id": "reference_5",
+    "title": "Fig. 1: Schematic illustration of NET formation-mediated cytokine delivery to the inflamed CNS.",
+    "journal": "Nature Communications",
+    "category": "载体组装与跨屏障递送",
+    "source_url": "https://www.nature.com/articles/s41467-024-54817-7/figures/1",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-024-54817-7/MediaObjects/41467_2024_54817_Fig1_HTML.png",
+    "style_notes": "顶端比较载体组分，中段展示动物与脊髓位置，下段沿血管屏障展开递送过程；空间层次与功能终点分工明确。",
+    "rights": "原论文图片，版权与复用条件以原文为准。仅联网查看，不随程序分发。"
+  },
+  {
+    "id": "reference_6",
+    "title": "Figure 2: Mechanisms by which nanoparticles alter the induction of immune responses.",
+    "journal": "Nature Reviews Immunology",
+    "category": "多功能并列面板",
+    "source_url": "https://www.nature.com/articles/nri3488/figures/2",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnri3488/MediaObjects/41577_2013_Article_BFnri3488_Fig2_HTML.jpg",
+    "style_notes": "四个并列面板分别解释递送、储库效应、多价呈递与交叉呈递；每个面板使用不同对象和关系结构，同时复用细胞身份色。",
+    "rights": "原论文图片，版权与复用条件以原文为准。仅联网查看，不随程序分发。"
+  },
+  {
+    "id": "reference_7",
+    "title": "Fig. 1: Schematic illustration of the antitumor immunity induced by the inhalation of mscFv/siPD-L1@LNP.",
+    "journal": "Nature Communications",
+    "category": "器官到分子尺度",
+    "source_url": "https://www.nature.com/articles/s41467-025-63415-0/figures/1",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-025-63415-0/MediaObjects/41467_2025_63415_Fig1_HTML.png",
+    "style_notes": "从吸入给药与肺部定位进入细胞放大剖面；下方用同一细胞串联内吞、逃逸与RNA功能，外围对照治疗前后微环境。",
+    "rights": "原论文图片，版权与复用条件以原文为准。仅联网查看，不随程序分发。"
+  },
+  {
+    "id": "reference_8",
+    "title": "Fig. 1: As synthetic APC, BSLBs trigger synapse formation and the release of tSV by stimulated T cells.",
+    "journal": "Nature Communications",
+    "category": "免疫接触与局部过程",
+    "source_url": "https://www.nature.com/articles/s41467-022-31160-3/figures/1",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-022-31160-3/MediaObjects/41467_2022_31160_Fig1_HTML.png",
+    "style_notes": "真实实验图版将左侧接触示意、上方时间序列、中央流式分布与右侧局部结构放大对齐；数值属于原论文，模板不复制实验结果。",
+    "rights": "原论文图片，版权与复用条件以原文为准。仅联网查看，不随程序分发。"
+  },
+  {
+    "id": "flow_reference_1",
+    "title": "PRISMA flow diagram",
+    "journal": "PRISMA statement",
+    "category": "文献与样本筛选",
+    "source_url": "https://www.prisma-statement.org/prisma-2020-flow-diagram",
+    "web_url": "",
+    "style_notes": "逐级筛选与侧向排除路径分别呈现；样板不填造纳入数量。",
+    "verified_at": "2026-10-29",
+    "verification": "Public source page returned HTTP 200; figure title and image URL extracted from the publisher page.",
+    "rights": "来源图示的版权与复用条件以原页面为准。仅联网查看，不随程序分发；软件模板为原创矢量实现。"
+  },
+  {
+    "id": "flow_reference_3",
+    "title": "Systems Biology Graphical Notation",
+    "journal": "SBGN",
+    "category": "关系符号",
+    "source_url": "https://sbgn.github.io/",
+    "web_url": "",
+    "style_notes": "先区分关系语义，再选择符号。软件提供自己的图例约定，不宣称完整实现 SBGN。",
+    "verified_at": "2026-10-29",
+    "verification": "Public source page returned HTTP 200; figure title and image URL extracted from the publisher page.",
+    "rights": "来源图示的版权与复用条件以原页面为准。仅联网查看，不随程序分发；软件模板为原创矢量实现。"
+  },
+  {
+    "id": "flow_reference_4",
+    "title": "Figure 1: Schematic of the RNA-guided Cas9 nuclease.",
+    "journal": "Nature Protocols",
+    "category": "结构与机制",
+    "source_url": "https://www.nature.com/articles/nprot.2013.143/figures/1",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnprot.2013.143/MediaObjects/41596_2013_Article_BFnprot2013143_Fig1_HTML.jpg",
+    "style_notes": "Cas9 与引导 RNA 的对象示意，可与实验步骤分开组织。",
+    "verified_at": "2026-10-29",
+    "verification": "Public source page returned HTTP 200; figure title and image URL extracted from the publisher page.",
+    "rights": "来源图示的版权与复用条件以原页面为准。仅联网查看，不随程序分发；软件模板为原创矢量实现。"
+  },
+  {
+    "id": "flow_reference_5",
+    "title": "Figure 1: ATAC-seq probes open-chromatin state.",
+    "journal": "Nature Methods",
+    "category": "实验与分析",
+    "source_url": "https://www.nature.com/articles/nmeth.2688/figures/1",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.2688/MediaObjects/41592_2013_Article_BFnmeth2688_Fig1_HTML.jpg",
+    "style_notes": "ATAC-seq 的实验原理图；可作为实验对象与下游读出分层组织的参考。",
+    "verified_at": "2026-10-29",
+    "verification": "Public source page returned HTTP 200; figure title and image URL extracted from the publisher page.",
+    "rights": "来源图示的版权与复用条件以原页面为准。仅联网查看，不随程序分发；软件模板为原创矢量实现。"
+  },
+  {
+    "id": "flow_reference_6",
+    "title": "Figure 1: A typical RNA-Seq experiment.",
+    "journal": "Nature Reviews Genetics",
+    "category": "实验与分析",
+    "source_url": "https://www.nature.com/articles/nrg2484/figures/1",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrg2484/MediaObjects/41576_2009_Article_BFnrg2484_Fig1_HTML.jpg",
+    "style_notes": "RNA、片段、测序读段与表达读出沿纵向组织，阶段之间保留对象形态变化；样板不复制定量曲线。",
+    "verified_at": "2026-10-29",
+    "verification": "Public source page returned HTTP 200; figure title and image URL extracted from the publisher page.",
+    "rights": "来源图示的版权与复用条件以原页面为准。仅联网查看，不随程序分发；软件模板为原创矢量实现。"
+  },
+  {
+    "id": "flow_reference_7",
+    "title": "Figure 2: DSB repair promotes gene editing.",
+    "journal": "Nature Protocols",
+    "category": "分支与修复",
+    "source_url": "https://www.nature.com/articles/nprot.2013.143/figures/2",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnprot.2013.143/MediaObjects/41596_2013_Article_BFnprot2013143_Fig2_HTML.jpg",
+    "style_notes": "双链断裂后的基因编辑示意，供比较修复分支的表达方式；原图机制须结合图注阅读。",
+    "verified_at": "2026-10-29",
+    "verification": "Public source page returned HTTP 200; figure title and image URL extracted from the publisher page.",
+    "rights": "来源图示的版权与复用条件以原页面为准。仅联网查看，不随程序分发；软件模板为原创矢量实现。"
+  },
+  {
+    "id": "flow_reference_8",
+    "title": "Figure 1: Flowchart for Smart-seq2 library preparation.",
+    "journal": "Nature Protocols",
+    "category": "纵向实验流程",
+    "source_url": "https://www.nature.com/articles/nprot.2014.006/figures/1",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnprot.2014.006/MediaObjects/41596_2014_Article_BFnprot2014006_Fig1_HTML.jpg",
+    "style_notes": "Smart-seq2 用纵向主轴串联阶段；试剂和引物从侧边进入，步骤说明贴近对应箭头。",
+    "verified_at": "2026-10-29",
+    "verification": "Public source page returned HTTP 200; figure title and image URL extracted from the publisher page.",
+    "rights": "来源图示的版权与复用条件以原页面为准。仅联网查看，不随程序分发；软件模板为原创矢量实现。"
+  },
+  {
+    "id": "flow_reference_9",
+    "title": "Figure 1: CITE-seq enables simultaneous detection of single cell transcriptomes and protein markers.",
+    "journal": "Nature Methods",
+    "category": "多模态与汇合",
+    "source_url": "https://www.nature.com/articles/nmeth.4380/figures/1",
+    "web_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.4380/MediaObjects/41592_2017_Article_BFnmeth4380_Fig1_HTML.jpg",
+    "style_notes": "CITE-seq 同时检测转录组与蛋白标记，可作为并行数据类型与联合分析的参考。",
+    "verified_at": "2026-10-29",
+    "verification": "Public source page returned HTTP 200; figure title and image URL extracted from the publisher page.",
+    "rights": "来源图示的版权与复用条件以原页面为准。仅联网查看，不随程序分发；软件模板为原创矢量实现。"
+  }
+]

@@ -1,0 +1,206 @@
+"""Bounded semantic extraction and selected-object edit proposals."""
+from __future__ import annotations
+
+import copy
+import json
+import time
+
+import pipeline
+from scene_document import (
+    OBJECT_TYPES, RELATION_TYPES, SceneError, apply_operations, empty_scene, normalize_scene,
+)
+
+PLANNER_INSTRUCTION = """你是生命科学示意图的结构规划器。只输出严格 JSON，不输出 SVG 或 Markdown。
+以用户提供的描述为唯一科学内容来源，保留原有对象、关系、分支、抑制、状态和空间指示。
+不要凭通路名称补齐教科书机制，不要引入数值、结构细节、工程/具身智能模板或未提供的因果关系。
+证据不充分时写入 unresolved；关系类型不明确使用 associates 并 uncertain=true，不要假定激活。
+实验步骤的先后使用 sequence，仅表示流程顺序；converts 用于实体转换，transports 用于空间转运。
+所有对象和关系都要带 evidence：逐字摘录用户描述中支持该对象/关系的一小段，不能杜撰引文。
+evidence 必须是 source_text 中连续出现的原文；输入英文时 evidence 也必须保留英文，禁止翻译或改写。输出前逐项检查 source_text.includes(evidence)。
+同一实体的不同阶段实例使用不同 id 和相同 entity_id，分别记录 state 与 compartment。
+对时间过程必须表现状态变化；对结构图保留构成/结合关系，不要强行转成步骤。
+reference_summary 仅为布局和配色参考，其中的科学内容不得添加到本图。
+JSON:
+{"title":"简短图题","layout":"pathway|process|network|assembly",
+ "compartments":[{"id":"extracellular","label":"Extracellular space","kind":"extracellular"},
+ {"id":"membrane","label":"Plasma membrane","kind":"membrane"},
+ {"id":"cytoplasm","label":"Cytoplasm","kind":"cytoplasm"},
+ {"id":"nucleus","label":"Nucleus","kind":"nucleus"}],
+ "objects":[{"id":"protein_a","entity_id":"protein_a","type":"protein","label":"A",
+ "compartment":"cytoplasm","state":"","evidence":"用户原文摘录"}],
+ "relations":[{"id":"r1","source":"protein_a","target":"protein_b","type":"activates",
+ "label":"","indirect":false,"uncertain":false,"evidence":"用户原文摘录"}],
+ "unresolved":["需作者补充的信息"]}
+只保留有用的区室；无细胞区室的网络、组织过程、结构域图和实验流程可以 compartments=[]。
+不要输出坐标，布局由本地引擎决定。默认短英文标签；用户指定中文时保留中文。
+可用对象类型：%s
+可用关系类型：%s
+""" % (", ".join(sorted(OBJECT_TYPES)), ", ".join(sorted(RELATION_TYPES)))
+
+
+def _request(config, messages, *, max_tokens=6500):
+    source = config.get("text") or {}
+    if not source.get("base_url") or not source.get("model"):
+        raise SceneError("请先配置文本模型，或打开一张内置可编辑样板")
+    started = time.monotonic()
+    request = {"model": source["model"], "messages": pipeline._fold_system(messages), "temperature": 0,
+               "max_tokens": max_tokens}
+    if "deepseek" in source["model"].lower():
+        request["thinking"] = {"type": "disabled"}
+    response = pipeline._post_json(
+        pipeline._endpoint(source["base_url"], "/chat/completions"), pipeline._api_key(source),
+        request, timeout=120,
+    )
+    message = response["choices"][0]["message"]
+    content = message.get("content") or ""
+    if not content:
+        raise SceneError("文本模型没有返回完整场景；请重试或在设置中选择支持 JSON 的文本模型")
+    return pipeline._json_object(content), round(time.monotonic() - started, 2)
+
+
+def plan_scene(text, config, *, on_stage=None, cancelled=None):
+    text = str(text).strip()
+    if not text:
+        raise SceneError("请先填写科研内容")
+    width, height = config.get("canvas_mm") or (180, 120)
+    base = empty_scene(source_text=text, width_mm=width, height_mm=height)
+    reference = config.get("style_dna") or {}
+    summary = str(reference.get("reference_summary") or reference.get("visual_style_summary") or "")[:1000]
+    context = {"source_text": text, "reference_summary": summary,
+               "reference_layout": reference.get("layout_analysis") or {},
+               "final_dimensions_mm": [width, height]}
+    messages = [{"role": "system", "content": PLANNER_INSTRUCTION},
+                {"role": "user", "content": json.dumps(context, ensure_ascii=False)}]
+    error = None
+    for attempt in range(2):
+        if cancelled and cancelled():
+            raise InterruptedError("任务已取消")
+        if on_stage:
+            on_stage("plan_scene", "提取对象、关系和区室" if not attempt else "校正场景格式")
+        try:
+            spec, duration = _request(config, messages)
+            base=empty_scene(source_text=text,width_mm=width,height_mm=height)
+            for key in ("title", "layout", "compartments", "objects", "relations", "unresolved"):
+                if key in spec:
+                    base[key] = spec[key]
+            if not base["objects"]:
+                raise SceneError("描述中未提取到可绘制对象，请补充需要展示的分子、细胞或步骤")
+            # A model cannot assign its own geometry or lower the font floor.
+            missing_evidence=[]
+            for obj in base["objects"]:
+                for key in ("x", "y", "w", "h", "rotation", "font_size_pt", "fill", "stroke"):
+                    obj.pop(key, None)
+                evidence = str(obj.get("evidence") or "").strip()
+                if not evidence or evidence not in text:
+                    missing_evidence.append(obj.get('id'))
+                    base["unresolved"].append(f"对象 {obj.get('label') or obj.get('id')} 缺少可定位的原文依据，请确认")
+            for relation in base["relations"]:
+                evidence = str(relation.get("evidence") or "").strip()
+                if not evidence or evidence not in text:
+                    missing_evidence.append(relation.get('id'))
+                    relation["uncertain"] = True
+                    base["unresolved"].append(f"关系 {relation.get('id')} 缺少原文依据，请确认")
+            if not attempt and len(missing_evidence)>max(1,(len(base['objects'])+len(base['relations']))/3):
+                raise SceneError('多数 evidence 不是 source_text 中逐字摘录的连续原文。英文描述请引用英文片段，不要翻译成中文。请重新提取。')
+            if not base["relations"] and len(base["objects"]) > 1:
+                base["unresolved"].append("尚未说明对象间关系；当前保留对象，请补充连接及方向")
+            base["requirements"] = {"objects": [o["id"] for o in base["objects"]],
+                                    "relations": [r["id"] for r in base["relations"]]}
+            base["provenance"] = {"method": "model-semantic-extraction", "model": config["text"]["model"],
+                                  "reference_summary": summary}
+            if reference.get("palette"):
+                for key in base["style"]["palette"]:
+                    if key in reference["palette"]:
+                        base["style"]["palette"][key] = reference["palette"][key]
+            base = normalize_scene(base)
+            if cancelled and cancelled():
+                raise InterruptedError("任务已取消")
+            from scene_render import layout_scene, repair_geometry
+            if on_stage:
+                on_stage("assemble", "按区室和关系装配矢量对象")
+            return repair_geometry(layout_scene(base),passes=2), {"model_duration_sec": duration, "attempts": attempt + 1}
+        except (ValueError, KeyError, TypeError, RuntimeError) as exc:
+            error = exc
+            if not attempt:
+                messages.append({"role": "user", "content": "上一份结构无法使用，请重新提取，严格遵守 JSON 格式。错误：" + str(exc)[:500]})
+                continue
+            raise SceneError(f"模型返回的场景格式无效：{exc}") from exc
+    raise SceneError(str(error))
+
+
+def propose_revision(scene, instruction, target_ids, config):
+    scene = normalize_scene(scene)
+    objects = {o["id"]: o for o in scene["objects"]}
+    relations = {r["id"]: r for r in scene["relations"]}
+    target_ids = list(dict.fromkeys(target_ids or []))
+    if not target_ids:
+        raise SceneError("请先选择要修改的对象；全图修改请先全选")
+    if any(oid not in objects and oid not in relations for oid in target_ids):
+        raise SceneError("选中对象已不存在，请重新选择")
+    allowed = set(target_ids)
+    # Connected edges may be rerouted, but adjacent unselected objects remain fixed.
+    allowed.update(r["id"] for r in relations.values() if r["source"] in allowed or r["target"] in allowed)
+    system = (
+        "你是科研矢量图的局部编辑器，只输出 JSON。只修改用户选中的对象或与其直接连接的线，保留其他对象。"
+        "不要删除对象、改变ID、增加未经要求的机制或重排整图。文字不小于7pt。"
+        "返回 {\"operations\":[{\"op\":\"update\",\"id\":\"对象ID\",\"changes\":{...}}],\"summary\":[\"修改说明\"]}。"
+        "连接使用op=update_relation。坐标单位mm，字号pt。无法理解的要求返回operations=[]并在summary解释。"
+    )
+    data, _ = _request(config, [{"role": "system", "content": system}, {"role": "user", "content": json.dumps(
+        {"instruction": str(instruction)[:2000], "target_ids": target_ids, "allowed_ids": sorted(allowed), "scene": scene}, ensure_ascii=False)}], max_tokens=4200)
+    operations = data.get("operations")
+    if not isinstance(operations, list):
+        raise SceneError("模型没有返回有效的局部修改")
+    if operations:
+        # Reject out-of-selection mutations before ever presenting a candidate.
+        preview_scene = apply_operations(scene, operations, allowed_ids=allowed)
+    else:
+        preview_scene = scene
+    summary = data.get("summary") or ["模型未提供修改说明"]
+    if isinstance(summary, str):
+        summary = [summary]
+    from scene_render import render_scene
+    return {"base_revision": scene["revision"], "operations": operations,
+            "preview_svg": render_scene(preview_scene),
+            "target_ids": target_ids, "summary": [str(x)[:500] for x in summary[:30]]}
+
+
+def review_scene_visual(scene, config):
+    """Optional VLM advice, preserved verbatim and never used as a save gate."""
+    from scene_render import render_scene
+    from scene_export import export_scene
+    import base64
+    import tempfile
+    from pathlib import Path
+    source = config.get("vision") or {}
+    if not source.get("base_url") or not source.get("model"):
+        return {"status": "unavailable", "findings": [], "error": "未配置视觉模型"}
+    try:
+        with tempfile.TemporaryDirectory(prefix="cell-scene-review-") as folder:
+            path = Path(folder) / "preview.png"
+            export_scene(scene, "png", path, dpi=120, config=config)
+            encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+        payload = {"model": source["model"], "temperature": 0, "max_tokens": 2800,
+                   "messages": [{"role": "user", "content": [
+                       {"type": "text", "text": "审阅此科研示意图。原始描述：" + scene["source_text"] +
+                        "\n只提供有图像依据的语义和美观建议，不给总分、不宣布通过。引用相关对象ID。"
+                        "返回JSON {findings:[{message,object_ids:[],category,evidence}]}。对象清单：" +
+                        json.dumps([{k:o[k] for k in ("id","label","type")} for o in scene["objects"]], ensure_ascii=False)},
+                       {"type": "image_url", "image_url": {"url": "data:image/png;base64," + encoded}}]}]}
+        response = pipeline._post_json(pipeline._endpoint(source["base_url"], "/chat/completions"),
+                                       pipeline._api_key(source), payload, timeout=60)
+        raw = response["choices"][0]["message"]["content"]
+        result = pipeline._json_object(raw)
+        ids = {o["id"] for o in scene["objects"]} | {r["id"] for r in scene["relations"]}
+        findings = []
+        for item in (result.get("findings") or [])[:30]:
+            if not isinstance(item, dict):
+                continue
+            findings.append({"message": str(item.get("message", ""))[:1000],
+                             "object_ids": [x for x in item.get("object_ids", []) if x in ids],
+                             "category": str(item.get("category", "advice"))[:50],
+                             "evidence": str(item.get("evidence", ""))[:1000],
+                             "source": "vision", "status": "unverified", "revision": scene["revision"]})
+        return {"status": "completed", "findings": findings, "model": source["model"], "raw": str(raw)[:15000]}
+    except Exception as exc:
+        return {"status": "unavailable", "findings": [], "error": str(exc)[:500]}

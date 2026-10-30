@@ -1,0 +1,20 @@
+{
+  "mode": "auto",
+  "quality": "hd",
+  "text": {
+    "base_url": "http://127.0.0.1:11434/v1",
+    "model": "qwen2.5:32b",
+    "api_key": ""
+  },
+  "image": {
+    "base_url": "http://127.0.0.1:7860/v1",
+    "model": "flux.1-dev",
+    "size": "1536x1024",
+    "api_key": ""
+  },
+  "ocr": {
+    "mode": "auto"
+  },
+  "vectorize": {"colors": 16, "speckle": 40, "epsilon": 0.8, "max_side": 1600},
+  "qa": {"max_diff": 0.45, "min_path_area": 6}
+}

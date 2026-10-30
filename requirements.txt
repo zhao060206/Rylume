@@ -1,0 +1,16 @@
+# Runtime versions verified in the Windows development environment.
+pywebview==6.2.1
+pythonnet==3.2.1
+python-pptx==1.0.2
+svgpathtools==1.7.2
+Pillow==12.3.0
+PyMuPDF==1.28.2
+numpy==2.3.5
+opencv-python==5.0.0.93
+requests==2.34.2
+# Optional legacy image/vector routes
+svgelements==1.9.6
+json-repair==0.64.1
+vtracer==0.6.15
+rapidocr-onnxruntime==1.2.3
+onnxruntime==1.27.0
