@@ -270,13 +270,17 @@ def connection_geometry(scene,r):
         sp = ('s' if dy > 0 else 'n') if abs(dy) > abs(dx) * 1.15 else ('e' if dx >= 0 else 'w')
     elif tp=='auto':
         tp = ('n' if dy > 0 else 's') if abs(dy) > abs(dx) * 1.15 else ('w' if dx >= 0 else 'e')
-    def point(o,p):
+    def point(o,p,anchor=None):
         cx,cy=o['x']+o['w']/2,o['y']+o['h']/2
+        if anchor:p=anchor['side']
         x,y={'e':(o['x']+o['w'],cy),'w':(o['x'],cy),'n':(cx,o['y']),'s':(cx,o['y']+o['h'])}.get(p,(cx,cy))
+        if anchor:
+            if p in ('n','s'):x=o['x']+o['w']*anchor['t']
+            else:y=o['y']+o['h']*anchor['t']
         angle=math.radians(o.get('rotation',0));return (cx+(x-cx)*math.cos(angle)-(y-cy)*math.sin(angle),cy+(x-cx)*math.sin(angle)+(y-cy)*math.cos(angle))
-    x1,y1=point(a,sp);x2,y2=point(b,tp)
+    x1,y1=point(a,sp,r.get('source_anchor'));x2,y2=point(b,tp,r.get('target_anchor'))
     control=r.get('control') or {'x':(x1+x2)/2,'y':(y1+y2)/2}
-    if not r.get('control') and sp==tp:control={'x':max(x1,x2)+12,'y':(y1+y2)/2}
+    if not r.get('control') and not (r.get('source_anchor') or r.get('target_anchor')) and sp==tp:control={'x':max(x1,x2)+12,'y':(y1+y2)/2}
     if not r.get('control'):
         obstacles=[(o['x']-1,o['y']-1,o['w']+2,o['h']+2) for o in scene['objects']
                    if o.get('visible', True) and o.get('role') != 'context' and o['id'] not in (a['id'],b['id'])]
@@ -294,7 +298,9 @@ def connection_geometry(scene,r):
             control=min(candidates,key=lambda c:(cost(c),math.hypot(c['x']-midx,c['y']-midy)))
     cx,cy=control['x'],control['y'];length=math.hypot(x2-cx,y2-cy) or 1
     lx,ly=.25*x1+.5*cx+.25*x2,.25*y1+.5*cy+.25*y2-1.7
-    if r.get('label'):
+    if r.get('label_position'):
+        lx,ly=r['label_position']['x'],r['label_position']['y']
+    elif r.get('label'):
         width=_measure(r['label'],7*PT_MM);height=7*PT_MM
         boxes=[(o['x'],o['y'],o['w'],o['h']) for o in scene['objects'] if o['visible'] and o.get('role') != 'context']
         boxes.extend((b['x'],b['y'],b['w'],b['h']) for b in _object_label_boxes(scene))
@@ -367,7 +373,8 @@ def _relation(scene,r,palette):
     g=connection_geometry(scene,r);color=r.get('stroke') or ('#AD6460' if r['type']=='inhibits' else palette['primary'])
     p=[f'<g data-relation-id="{r["id"]}" data-relation-type="{r["type"]}" id="rel-{r["id"]}">']
     for tag,attrs in relation_parts(r['type'],(g['x1'],g['y1']),(g['x2'],g['y2']),
-                                    (g['control']['x'],g['control']['y']),color,r.get('stroke_pt',1.05),r.get('indirect',False)):
+                                    (g['control']['x'],g['control']['y']),color,r.get('stroke_pt',1.05),r.get('indirect',False),
+                                    anchored_start=bool(r.get('source_anchor')),anchored_end=bool(r.get('target_anchor'))):
         p.append('<'+tag+' '+' '.join(f'{key}="{_escape(value)}"' for key,value in attrs.items())+'/>')
     label=relation_label(scene,r)
     if label:

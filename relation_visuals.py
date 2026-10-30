@@ -20,14 +20,15 @@ def relation_label(scene, relation):
     return relation.get('label') or (BY_ID[relation['type']]['english'] if scene['style'].get('relation_labels') else '')
 
 
-def relation_parts(kind, start, end, control, color, stroke_pt=1.05, indirect=False):
+def relation_parts(kind, start, end, control, color, stroke_pt=1.05, indirect=False, *, anchored_start=False, anchored_end=False):
     """Return SVG primitives. Coordinates and widths use physical millimetres."""
     x1,y1=start; x2,y2=end; cx,cy=control
     # Keep symbols clear of object outlines, including when rendered below them.
     vx,vy=cx-x1,cy-y1; length=math.hypot(vx,vy) or 1
-    x1+=vx/length*1.2; y1+=vy/length*1.2
+    gap=0 if anchored_start else 1.2
+    x1+=vx/length*gap; y1+=vy/length*gap
     vx,vy=x2-cx,y2-cy; length=math.hypot(vx,vy) or 1
-    ux,uy=vx/length,vy/length; x2-=ux*1.2; y2-=uy*1.2
+    ux,uy=vx/length,vy/length;gap=0 if anchored_end else 1.2;x2-=ux*gap;y2-=uy*gap
     sw=stroke_pt*25.4/72
     common={'fill':'none','stroke':color,'stroke-width':sw,'stroke-linecap':'round','stroke-linejoin':'round'}
     if indirect:

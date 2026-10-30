@@ -11,10 +11,10 @@ const isInput = e => e.target.closest('input,textarea,select,[contenteditable=tr
 const uid = prefix => prefix + '_' + crypto.randomUUID().replaceAll('-', '').slice(0, 12);
 export const RELATION_DEFINITIONS = [{"id": "activates", "title": "激活", "english": "Activation", "symbol": "open-arrow", "description": "起点促进终点的活性或作用。", "example": "激酶 A 促进 B 的活性"}, {"id": "inhibits", "title": "抑制", "english": "Inhibition", "symbol": "bar", "description": "横杠所在的一端受到抑制。", "example": "抑制剂 A 阻断 B"}, {"id": "binds", "title": "结合", "english": "Binding", "symbol": "paired-circles", "description": "两端圆点表示结合，不表示作用方向。", "example": "配体与受体结合"}, {"id": "converts", "title": "转换", "english": "Conversion", "symbol": "filled-arrow", "description": "起点转变为终点；实心箭头指向产物。", "example": "底物 A 转变为产物 B"}, {"id": "transports", "title": "转运", "english": "Transport", "symbol": "double-chevron", "description": "双箭头表示对象在位置或区室间移动。", "example": "蛋白从胞质进入细胞核"}, {"id": "sequence", "title": "流程顺序", "english": "Next step", "symbol": "step-arrow", "description": "箭头仅表示步骤的先后，不代表生物学激活。", "example": "提取样本后进行测量"}, {"id": "associates", "title": "普通关联", "english": "Association", "symbol": "plain-line", "description": "无箭头连线，仅表示相关或流程衔接。", "example": "未明确机制时使用，需核对含义"}];
 export function relationLabel(scene,r){return r.label||(scene.style?.relation_labels?RELATION_DEFINITIONS.find(x=>x.id===r.type)?.english||'':'');}
-export function relationParts(kind,start,end,control,color,strokePt=1.05,indirect=false){
+export function relationParts(kind,start,end,control,color,strokePt=1.05,indirect=false,anchored={}){
   let x1=start.x,y1=start.y,x2=end.x,y2=end.y;const cx=control.x,cy=control.y;
-  let vx=cx-x1,vy=cy-y1,len=Math.hypot(vx,vy)||1;x1+=vx/len*1.2;y1+=vy/len*1.2;
-  vx=x2-cx;vy=y2-cy;len=Math.hypot(vx,vy)||1;const ux=vx/len,uy=vy/len;x2-=ux*1.2;y2-=uy*1.2;
+  let vx=cx-x1,vy=cy-y1,len=Math.hypot(vx,vy)||1,gap=anchored.start?0:1.2;x1+=vx/len*gap;y1+=vy/len*gap;
+  vx=x2-cx;vy=y2-cy;len=Math.hypot(vx,vy)||1;const ux=vx/len,uy=vy/len;gap=anchored.end?0:1.2;x2-=ux*gap;y2-=uy*gap;
   const sw=strokePt*25.4/72,common={fill:'none',stroke:color,'stroke-width':sw,'stroke-linecap':'round','stroke-linejoin':'round'};
   let path=`M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`;
   if(indirect){const points=Array.from({length:121},(_,i)=>{const t=i/120,u=1-t;return{x:u*u*x1+2*u*t*cx+t*t*x2,y:u*u*y1+2*u*t*cy+t*t*y2};});let distance=0;const segments=[];
@@ -82,6 +82,34 @@ export function hitObjects(scene,point,includeContext=false){
     return Math.abs(c*dx-s*dy)<=o.w/2&&Math.abs(s*dx+c*dy)<=o.h/2;
   });
 }
+// Edge positions are proportional to the unrotated bounds, so they survive
+// moving, resizing and rotation without depending on pixels or view zoom.
+export function boundaryPoint(o,anchor){
+  const {side,t}=anchor,cx=o.x+o.w/2,cy=o.y+o.h/2;
+  const x=side==='e'?o.x+o.w:side==='w'?o.x:o.x+o.w*t;
+  const y=side==='s'?o.y+o.h:side==='n'?o.y:o.y+o.h*t;
+  const a=(o.rotation||0)*Math.PI/180;
+  return {x:cx+(x-cx)*Math.cos(a)-(y-cy)*Math.sin(a),y:cy+(x-cx)*Math.sin(a)+(y-cy)*Math.cos(a)};
+}
+export function nearestBoundary(o,point){
+  const a=-(o.rotation||0)*Math.PI/180,dx=point.x-o.x-o.w/2,dy=point.y-o.y-o.h/2;
+  const x=Math.cos(a)*dx-Math.sin(a)*dy+o.w/2,y=Math.sin(a)*dx+Math.cos(a)*dy+o.h/2;
+  const tx=Math.max(0,Math.min(1,x/o.w)),ty=Math.max(0,Math.min(1,y/o.h));
+  const choices=[{side:'n',t:tx},{side:'e',t:ty},{side:'s',t:tx},{side:'w',t:ty}];
+  choices.sort((a,b)=>{const p=boundaryPoint(o,a),q=boundaryPoint(o,b);return Math.hypot(p.x-point.x,p.y-point.y)-Math.hypot(q.x-point.x,q.y-point.y);});
+  return choices[0];
+}
+export function connectionTarget(scene,point,zoom=1,exclude=null){
+  const eligible=o=>o.id!==exclude&&o.visible!==false&&!o.locked&&o.role!=='context';
+  const inside=hitObjects(scene,point).find(eligible);
+  if(inside)return {object:inside,anchor:nearestBoundary(inside,point)};
+  const tolerance=10/(PXMM*zoom);
+  const candidates=[...scene.objects].reverse().filter(eligible).map(object=>{
+    const anchor=nearestBoundary(object,point),p=boundaryPoint(object,anchor);
+    return {object,anchor,distance:Math.hypot(p.x-point.x,p.y-point.y)};
+  }).filter(c=>c.distance<=tolerance).sort((a,b)=>a.distance-b.distance);
+  return candidates[0]||null;
+}
 let measureContext;
 function measureMM(text,fs){
   try{measureContext ||= document.createElement('canvas').getContext('2d');
@@ -106,7 +134,7 @@ export function sanitizedSvg(source) {
   return document.importNode(doc.documentElement, true);
 }
 
-export function edgeGeometry(scene, r) {
+export function edgeGeometry(scene, r, preview=null) {
   r={...r,label:relationLabel(scene,r)};
   const a = scene.objects.find(o => o.id === r.source), b = scene.objects.find(o => o.id === r.target);
   if (!a || !b) return null;
@@ -141,9 +169,9 @@ export function edgeGeometry(scene, r) {
       y: cy + (x - cx) * Math.sin(angle) + (y - cy) * Math.cos(angle)
     };
   };
-  const start = point(a, sp), end = point(b, tp);
+  const start = preview?.start || (r.source_anchor?boundaryPoint(a,r.source_anchor):point(a, sp)), end = preview?.end || (r.target_anchor?boundaryPoint(b,r.target_anchor):point(b, tp));
   let control = r.control || { x: (start.x + end.x) / 2, y: (start.y + end.y) / 2 };
-  if (!r.control && sp === tp) control = { x: Math.max(start.x, end.x) + 12, y: (start.y + end.y) / 2 };
+  if (!r.control && !r.source_anchor && !r.target_anchor && sp === tp) control = { x: Math.max(start.x, end.x) + 12, y: (start.y + end.y) / 2 };
   if(!r.control){
     const obstacles=scene.objects.filter(o=>o.visible&&o.role!=='context'&&o.id!==a.id&&o.id!==b.id);
     const cost=c=>{let hit=0;for(let i=1;i<30;i++){const t=i/30,u=1-t,x=u*u*start.x+2*u*t*c.x+t*t*end.x,y=u*u*start.y+2*u*t*c.y+t*t*end.y;
@@ -155,7 +183,8 @@ export function edgeGeometry(scene, r) {
   const path = `M ${start.x} ${start.y} Q ${control.x} ${control.y} ${end.x} ${end.y}`;
   const vx = end.x - control.x, vy = end.y - control.y, len = Math.hypot(vx, vy) || 1;
   const label={x:.25*start.x+.5*control.x+.25*end.x,y:.25*start.y+.5*control.y+.25*end.y-1.7};
-  if(r.label){const width=measureMM(r.label,7*25.4/72),height=7*25.4/72,boxes=scene.objects.filter(o=>o.visible&&o.role!=='context').map(o=>({x:o.x,y:o.y,w:o.w,h:o.h}));
+  if(r.label_position)Object.assign(label,r.label_position);
+  else if(r.label){const width=measureMM(r.label,7*25.4/72),height=7*25.4/72,boxes=scene.objects.filter(o=>o.visible&&o.role!=='context').map(o=>({x:o.x,y:o.y,w:o.w,h:o.h}));
     for(const o of scene.objects.filter(o=>o.visible&&o.label)){const{lines,fs}=labelLines(o),w=Math.max(...lines.map(t=>measureMM(t,fs)));boxes.push({x:o.x+o.w/2+(o.label_dx||0)-w/2,y:labelBaseline(o,lines,fs)-fs*.8,w,h:fs*(1.23*(lines.length-1)+1)});}
     const cost=([dx,dy])=>{const x=label.x+dx-width/2,y=label.y+dy-height*.8;if(x<.5||y<.5||x+width>scene.canvas.width_mm-.5||y+height>scene.canvas.height_mm-.5)return 10000;
       return boxes.reduce((sum,b)=>sum+Math.max(0,Math.min(x+width,b.x+b.w)-Math.max(x,b.x))*Math.max(0,Math.min(y+height,b.y+b.h)-Math.max(y,b.y)),0);};
@@ -241,6 +270,7 @@ export class SceneEditor {
   get hasRedo() { return this.redoStack.length > 0; }
 
   setDocument(scene, svg) {
+    this.activeLabel=null;
     this.relationType=scene.provenance?.method==='original-editable-workflow'?'sequence':'associates';
     this.doc = copy(scene);
     this.base = copy(scene);
@@ -272,6 +302,7 @@ export class SceneEditor {
   }
 
   setSelection(ids) {
+    if(ids.length!==1||ids[0]!==this.activeLabel?.id)this.activeLabel=null;
     this.selected = new Set(ids);
     this.drawOverlay();
     this.onSelection(this.selectedIds);
@@ -280,6 +311,7 @@ export class SceneEditor {
   setTool(tool) {
     this.tool = tool;
     this.connectStart = null;
+    this.connectAnchor = null;
     this.connectPreview = null;
     if(tool==='connect'&&this.selected.size===1&&this.doc?.objects.some(o=>this.selected.has(o.id)&&!o.locked))this.connectStart=this.selectedIds[0];
     this.host.style.cursor = tool === 'pan' ? 'grab' : ['connect','text'].includes(tool) ? 'crosshair' : 'default';
@@ -289,10 +321,10 @@ export class SceneEditor {
     this.host.dispatchEvent?.(new Event('editor-tool-change'));
   }
 
-  finishConnection(source,target,sourcePort='auto'){
+  finishConnection(source,target,sourcePort='auto',targetAnchor=null,sourceAnchor=null){
     if(source===target||!this.doc?.objects.some(o=>o.id===target))return false;
     const id=uid('r');
-    this.applyOperations([{op:'add_relation',relation:{id,source,target,type:this.relationType||'associates',source_port:sourcePort,target_port:'auto',label:'',indirect:false,uncertain:(this.relationType||'associates')==='associates'}}],'添加连线');
+    this.applyOperations([{op:'add_relation',relation:{id,source,target,type:this.relationType||'associates',source_port:sourcePort,target_port:'auto',...(sourceAnchor?{source_anchor:sourceAnchor}:{}),...(targetAnchor?{target_anchor:targetAnchor}:{}),label:'',indirect:false,uncertain:(this.relationType||'associates')==='associates'}}],'添加连线');
     this.setTool('select');this.setSelection?.([id]);
     this.onStatus('已连好。上方可以确认连线含义，拖动图形时连线会跟随。');return true;
   }
@@ -308,6 +340,11 @@ export class SceneEditor {
       x: (e.clientX - r.left - this.offset.x) / (PXMM * this.zoom),
       y: (e.clientY - r.top - this.offset.y) / (PXMM * this.zoom)
     };
+  }
+
+  geometry(r){
+    const g=this.gesture,preview=g?.kind==='edge'&&g.id===r.id&&g.handle!=='control'&&g.preview?{[g.handle]:g.preview}:null;
+    return edgeGeometry(this.doc,r,preview);
   }
 
   fit() {
@@ -498,6 +535,7 @@ export class SceneEditor {
       });
       }
 
+      group.querySelectorAll('[data-label-for]').forEach(n=>{n.setAttribute('cursor',o.type==='text'?'move':'grab');n.setAttribute('pointer-events','all');});
       (o.role==='context'?contexts:objects).append(group);
     }
 
@@ -511,7 +549,7 @@ export class SceneEditor {
     for (const r of this.doc.relations) {
       const a = this.doc.objects.find(o => o.id === r.source), b = this.doc.objects.find(o => o.id === r.target);
       if (!a?.visible || !b?.visible) continue;
-      const g = edgeGeometry(this.doc, r);
+      const g = this.geometry(r);
       if (!g) continue;
       const color = r.stroke || (r.type === 'inhibits' ? '#AD6460' : this.doc.style.palette.primary);
       const group = node('g', {
@@ -523,12 +561,12 @@ export class SceneEditor {
       group.setAttribute('data-relation-type',r.type);
       group.setAttribute('aria-label',`${RELATION_DEFINITIONS.find(t=>t.id===r.type)?.title}: ${a.label} → ${b.label}${r.indirect?' · 间接':''}${r.uncertain?' · 含义待核对':''}`);
       group.append(node('path',{d:g.path,fill:'none',stroke:'transparent','stroke-width':10,'vector-effect':'non-scaling-stroke','data-relation-hit':r.id}));
-      for(const[tag,attrs]of relationParts(r.type,g.start,g.end,g.control,color,r.stroke_pt||1.05,r.indirect))group.append(node(tag,attrs));
+      for(const[tag,attrs]of relationParts(r.type,g.start,g.end,g.control,color,r.stroke_pt||1.05,r.indirect,{start:!!r.source_anchor,end:!!r.target_anchor}))group.append(node(tag,attrs));
       const label=relationLabel(this.doc,r);
       if(label){
         const width=measureMM(label,7*25.4/72)+1.2;
-        group.append(node('rect',{x:g.label.x-width/2,y:g.label.y-2,width,height:2.7,fill:'#FFFFFF',rx:.3}));
-        group.append(node('text',{x:g.label.x,y:g.label.y,'text-anchor':'middle','font-size':7*25.4/72,'font-family':'Arial, Microsoft YaHei, sans-serif',fill:color},label));
+        group.append(node('rect',{x:g.label.x-width/2,y:g.label.y-2,width,height:2.7,fill:'#FFFFFF',rx:.3,'data-relation-label-for':r.id,cursor:'grab'}));
+        group.append(node('text',{x:g.label.x,y:g.label.y,'text-anchor':'middle','font-size':7*25.4/72,'font-family':'Arial, Microsoft YaHei, sans-serif',fill:color,'data-relation-label-for':r.id,cursor:'grab'},label));
       }
       if(r.uncertain)group.append(node('text',{x:g.label.x,y:g.label.y+3,'text-anchor':'middle','font-size':7*25.4/72,'font-family':'Arial, Microsoft YaHei, sans-serif',fill:'#A3783B'},'?'));
       edges.append(group);
@@ -548,7 +586,9 @@ export class SceneEditor {
     const unit=1/(PXMM*this.zoom),handleSize=8*unit,lineWidth=unit;
     if(this.connectStart&&this.connectPreview){
       const a=this.doc.objects.find(o=>o.id===this.connectStart);
-      if(a)overlay.append(node('path',{d:`M ${a.x+a.w/2} ${a.y+a.h/2} L ${this.connectPreview.x} ${this.connectPreview.y}`,stroke:'#3d71c7','stroke-width':unit,'stroke-dasharray':`${4*unit} ${3*unit}`,fill:'none','pointer-events':'none'}));
+      const target=connectionTarget(this.doc,this.connectPreview,this.zoom,this.connectStart),end=target?boundaryPoint(target.object,target.anchor):this.connectPreview;
+      const start=a?boundaryPoint(a,this.connectAnchor||nearestBoundary(a,end)):null;
+      if(start)overlay.append(node('path',{d:`M ${start.x} ${start.y} L ${end.x} ${end.y}`,stroke:'#3d71c7','stroke-width':unit,'stroke-dasharray':`${4*unit} ${3*unit}`,fill:'none','pointer-events':'none'}));
     }
     for(const guide of this.guides || [])overlay.append(node('line',{
       x1:guide.axis==='x'?guide.value:0,y1:guide.axis==='y'?guide.value:0,
@@ -589,11 +629,12 @@ export class SceneEditor {
           for(const [port,x,y] of [['e',o.x+o.w+12*unit,o.y+o.h/2],['w',o.x-12*unit,o.y+o.h/2]]){
             const p=node('circle',{cx:x,cy:y,r:5*unit,fill:'#345fc4',stroke:'white','stroke-width':1.5*unit,'data-connect-port':port,'data-owner':o.id,cursor:'crosshair'});p.append(node('title',{},'从这里拖到另一个对象，建立连线'));selection.append(p);
           }
+          if(this.tool==='connect')selection.append(node('rect',{x:o.x,y:o.y,width:o.w,height:o.h,fill:'none',stroke:'transparent','stroke-width':10*unit,'data-connect-boundary':o.id,cursor:'crosshair'}));
         }
       }
       const r = this.doc.relations.find(x => x.id === id);
       if (r) {
-        const g = edgeGeometry(this.doc, r);
+        const g = this.geometry(r);
         if (g) {
           for (const [k, p] of [['start', g.start], ['end', g.end], ['control', g.control]]) {
             overlay.append(node('circle', {
@@ -603,6 +644,16 @@ export class SceneEditor {
           }
         }
       }
+    }
+    const candidate=this.gesture?.candidate||(this.connectStart&&this.connectPreview?connectionTarget(this.doc,this.connectPreview,this.zoom,this.connectStart):null);
+    if(candidate){const o=candidate.object,p=boundaryPoint(o,candidate.anchor);
+      overlay.append(node('rect',{x:o.x,y:o.y,width:o.w,height:o.h,transform:`rotate(${o.rotation||0} ${o.x+o.w/2} ${o.y+o.h/2})`,fill:'none',stroke:'#287b68','stroke-width':2*unit,'stroke-dasharray':`${5*unit} ${3*unit}`,'data-snap-boundary':o.id,'pointer-events':'none'}));
+      overlay.append(node('circle',{cx:p.x,cy:p.y,r:5*unit,fill:'#287b68',stroke:'white','stroke-width':1.5*unit,'data-snap-point':o.id,'pointer-events':'none'}));
+    }
+    if(this.activeLabel&&this.selected.size===1&&this.selected.has(this.activeLabel.id)){
+      const selector=this.activeLabel.kind==='relation'?'[data-relation-label-for]':'[data-label-for]';
+      const labels=[...svg.querySelectorAll(selector)].filter(n=>(n.dataset.labelFor||n.dataset.relationLabelFor)===this.activeLabel.id&&n.tagName==='text');
+      for(const n of labels){const b=n.getBBox();overlay.append(node('rect',{x:b.x-.7,y:b.y-.5,width:b.width+1.4,height:b.height+1,fill:'none',stroke:'#287b68','stroke-width':unit,'stroke-dasharray':`${3*unit} ${2*unit}`,'data-label-selection':this.activeLabel.id,'pointer-events':'none'}));}
     }
     svg.append(overlay);
     this.onAnnotationRender?.();
@@ -625,7 +676,12 @@ export class SceneEditor {
       this.insertObject('text','文本',{},point);this.setTool('select');requestAnimationFrame(()=>this.editSelectedLabel());return;
     }
     const port=e.target.closest('[data-connect-port]');
-    if(port){this.connectStart=port.dataset.owner;this.connectPreview=point;this.gesture={kind:'connect',source:port.dataset.owner,port:port.dataset.connectPort,start:point};this.drawOverlay();return;}
+    const boundary=e.target.closest('[data-connect-boundary]');
+    if(port||boundary){
+      const id=port?.dataset.owner||boundary.dataset.connectBoundary,o=this.doc.objects.find(o=>o.id===id);
+      const anchor=port?{side:port.dataset.connectPort,t:.5}:nearestBoundary(o,point);
+      this.connectStart=id;this.connectAnchor=anchor;this.connectPreview=point;this.gesture={kind:'connect',source:id,port:anchor.side,anchor,start:point};this.drawOverlay();return;
+    }
     if(e.altKey&&!e.target.closest('[data-handle],[data-edge-handle]')){
       const hits=hitObjects(this.doc,point,true),current=hits.findIndex(o=>this.selected.has(o.id));
       if(hits.length){
@@ -639,8 +695,19 @@ export class SceneEditor {
       return;
     }
     if (edgeHandle) {
+      this.activeLabel=null;
       this.gesture = { kind: 'edge', handle: edgeHandle.dataset.edgeHandle, id: edgeHandle.dataset.owner, start: point, before };
       return;
+    }
+    const label=e.target.closest('[data-label-for],[data-relation-label-for]');
+    if(label&&this.tool==='select'&&!e.altKey){
+      const kind=label.dataset.relationLabelFor?'relation':'object',id=label.dataset.relationLabelFor||label.dataset.labelFor;
+      const item=(kind==='relation'?this.doc.relations:this.doc.objects).find(o=>o.id===id);
+      if(item&&!item.locked&&item.type!=='text'){
+        this.activeLabel={kind,id};this.setSelection([id]);
+        this.gesture={kind:'label',labelKind:kind,id,start:point,before,px:e.clientX,py:e.clientY,origin:kind==='relation'?edgeGeometry(before,item).label:null};
+        return;
+      }
     }
     const object = e.target.closest('[data-object-id]'), edge = e.target.closest('[data-relation-id]');
     const picked=object?this.doc.objects.find(x=>x.id===object.dataset.objectId):(!edge?hitObjects(this.doc,point)[0]:null);
@@ -649,14 +716,16 @@ export class SceneEditor {
       if (!o) return;
       if (this.tool === 'connect') {
         if (this.connectStart && this.connectStart !== id) {
-          this.finishConnection(this.connectStart,id);
+          this.finishConnection(this.connectStart,id,'auto',nearestBoundary(o,point),this.connectAnchor);
         } else {
           this.connectStart = id;
+          this.connectAnchor=nearestBoundary(o,point);
           this.setSelection([id]);
           this.onStatus('请点击要连接的目标图元');
         }
         return;
       }
+      this.activeLabel=null;
       if (e.shiftKey) {
         if (this.selected.has(id)) this.selected.delete(id);
         else this.selected.add(id);
@@ -674,6 +743,7 @@ export class SceneEditor {
       return;
     }
     if (edge) {
+      this.activeLabel=null;
       this.setSelection([edge.dataset.relationId]);
       return;
     }
@@ -694,7 +764,17 @@ export class SceneEditor {
     }
     if(g.kind==='connect'){this.connectPreview=this.world(e);this.drawOverlay();return;}
     const point = this.world(e);let dx=point.x-g.start.x,dy=point.y-g.start.y;
-    if (g.kind === 'move') {
+    if(g.kind==='label'){
+      if(!g.moved&&Math.hypot(e.clientX-g.px,e.clientY-g.py)<3)return;
+      g.moved=true;if(e.shiftKey){if(Math.abs(dx)>Math.abs(dy))dy=0;else dx=0;}
+      if(g.labelKind==='relation'){
+        const r=this.doc.relations.find(r=>r.id===g.id);if(r)r.label_position={x:g.origin.x+dx,y:g.origin.y+dy};
+      }else{
+        const old=g.before.objects.find(o=>o.id===g.id),o=this.doc.objects.find(o=>o.id===g.id);
+        if(o&&old){o.label_dx=(old.label_dx||0)+dx;o.label_dy=(old.label_dy||0)+dy;}
+      }
+      this.draw();
+    }else if (g.kind === 'move') {
       if(!g.moved&&Math.hypot(e.clientX-g.px,e.clientY-g.py)<3)return;
       g.moved=true;
       if(e.shiftKey){if(Math.abs(dx)>Math.abs(dy))dy=0;else dx=0;}
@@ -732,7 +812,7 @@ export class SceneEditor {
     } else if (g.kind === 'edge') {
       const r = this.doc.relations.find(r => r.id === g.id);
       if (r && g.handle === 'control') r.control = { x: point.x, y: point.y };
-      this.drawOverlay();
+      else if(r){g.candidate=connectionTarget(this.doc,point,this.zoom,r[g.handle==='start'?'target':'source']);g.preview=g.candidate?boundaryPoint(g.candidate.object,g.candidate.anchor):point;}
       this.draw();
     } else if (g.kind === 'marquee') {
       this.host.querySelector('#editor-marquee')?.remove();
@@ -747,14 +827,15 @@ export class SceneEditor {
   }
 
   up(e) {
+    if(this.host.hasPointerCapture?.(e.pointerId))this.host.releasePointerCapture(e.pointerId);
     const g = this.gesture;
     if (!g) return;
     this.gesture = null;
     this.guides = [];
     if(g.kind==='connect'){
-      const target=hitObjects(this.doc,this.world(e)).find(o=>o.id!==g.source);
-      if(target)this.finishConnection(g.source,target.id,g.port);
-      else{this.setTool('connect');this.connectStart=g.source;this.connectPreview=null;this.onStatus('点击另一个对象完成连线，或点“取消连线”。');this.host.dispatchEvent?.(new Event('editor-tool-change'));}
+      const target=connectionTarget(this.doc,this.world(e),this.zoom,g.source);
+      if(target)this.finishConnection(g.source,target.object.id,g.port,target.anchor,g.anchor);
+      else{this.setTool('connect');this.connectStart=g.source;this.connectAnchor=g.anchor;this.connectPreview=null;this.onStatus('点击另一个对象的边缘完成连线，或点“取消连线”。');this.host.dispatchEvent?.(new Event('editor-tool-change'));}
       return;
     }
     if(g.kind==='move'&&g.cycleId&&!g.moved){this.setSelection([g.cycleId]);return;}
@@ -769,30 +850,33 @@ export class SceneEditor {
     }
     if (g.kind === 'edge' && g.handle !== 'control') {
       const point = this.world(e);
-      const target=hitObjects(this.doc,point)[0];
+      const relation=this.doc.relations.find(r=>r.id===g.id);
+      const target=connectionTarget(this.doc,point,this.zoom,relation?.[g.handle==='start'?'target':'source']);
       if (target) {
         const r = this.doc.relations.find(r => r.id === g.id);
         if (r) {
           const opposite=r[g.handle==='start'?'target':'source'];
-          if(target.id!==opposite){r[g.handle==='start'?'source':'target']=target.id;r[g.handle==='start'?'source_port':'target_port']='auto';delete r.control;}
+          if(target.object.id!==opposite){const end=g.handle==='start'?'source':'target';r[end]=target.object.id;r[end+'_port']='auto';r[end+'_anchor']=target.anchor;}
         }
       } else {
-        this.onStatus('请拖拽端点到目标图元上');
+        this.onStatus('请把端点拖到对象边缘，靠近时会显示吸附点；本次保留原连接。');
       }
     }
-    if (g.kind !== 'pan') this.commit(g.before);
-    this.drawOverlay();
+    if (g.kind !== 'pan') this.commit(g.before,g.kind==='label'?'移动文字':g.kind==='edge'?'调整连线':'编辑图元');
+    if(g.kind==='edge')this.draw();else this.drawOverlay();
   }
 
   cancelGesture() {
     this.guides=[];
     this.host.querySelector('#editor-marquee')?.remove();
-    if (this.gesture?.before) {
-      this.doc = this.gesture.before;
+    const before=this.gesture?.before;
+    this.gesture=null;
+    if (before) {
+      this.doc = before;
       this.draw();
     }
-    this.gesture = null;
     this.connectStart=null;this.connectPreview=null;
+    this.connectAnchor=null;
     this.drawOverlay();
   }
 
@@ -917,7 +1001,7 @@ export class SceneEditor {
     });
     for (const r of this.doc.relations) {
       if (ids.has(r.source) && ids.has(r.target)) {
-        ops.push({ op: 'add_relation', relation: { ...copy(r), id: uid('r'), source: ids.get(r.source), target: ids.get(r.target),...(r.control?{control:{x:r.control.x+4,y:r.control.y+4}}:{}) } });
+        ops.push({ op: 'add_relation', relation: { ...copy(r), id: uid('r'), source: ids.get(r.source), target: ids.get(r.target),...(r.control?{control:{x:r.control.x+4,y:r.control.y+4}}:{}),...(r.label_position?{label_position:{x:r.label_position.x+4,y:r.label_position.y+4}}:{}) } });
       }
     }
     this.applyOperations(ops, '复制');
@@ -961,10 +1045,12 @@ export class SceneEditor {
 
   editLabel(e) {
     if(!this.doc)return;
-    let label = e.target.closest('[data-label-for]');
-    if(!label){const id=e.target.closest('[data-object-id]')?.dataset.objectId||(Number.isFinite(e.clientX)?hitObjects(this.doc,this.world(e))[0]?.id:null);label=id?[...this.host.querySelectorAll('[data-label-for]')].find(n=>n.dataset.labelFor===id):document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-label-for]');}
+    let label = e.target.closest('[data-label-for],[data-relation-label-for]');
+    if(!label&&Number.isFinite(e.clientX))label=[...this.host.querySelectorAll('[data-label-for],[data-relation-label-for]')].reverse().find(n=>{const r=n.getBoundingClientRect();return e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom;});
+    if(!label){const id=e.target.closest('[data-object-id]')?.dataset.objectId||(Number.isFinite(e.clientX)?hitObjects(this.doc,this.world(e))[0]?.id:null);label=id?[...this.host.querySelectorAll('[data-label-for]')].find(n=>n.dataset.labelFor===id):null;}
     if (!label || !this.doc) return;
-    const o = this.doc.objects.find(o => o.id === label.dataset.labelFor);
+    const relation=!!label.dataset.relationLabelFor;
+    const o = (relation?this.doc.relations:this.doc.objects).find(o => o.id === (label.dataset.relationLabelFor||label.dataset.labelFor));
     if (!o || o.locked) return;
     e.preventDefault();
     this.host.querySelector('input')?.remove();
@@ -975,7 +1061,8 @@ export class SceneEditor {
     actions.className='editor-inline-actions';save.type=cancel.type='button';save.textContent='完成';cancel.textContent='取消';actions.append(save,cancel);
     input.className = 'editor-inline-input';
     input.setAttribute('aria-label', '原位编辑标签');
-    input.value = o.label;
+    const originalText=relation?relationLabel(this.doc,o):o.label;
+    input.value = originalText;
     const width=Math.min(Math.max(130,rect.width+20),Math.max(130,this.host.clientWidth-20));
     const left=Math.max(0,Math.min(rect.left-host.left-5,this.host.clientWidth-width-10)),top=Math.max(0,rect.top-host.top-5);
     Object.assign(input.style, {
@@ -997,7 +1084,7 @@ export class SceneEditor {
       const value = input.value;
       input.remove();
       actions.remove();
-      if (save && value !== o.label) this.applyOperations([{ op: 'update', id: o.id, changes: { label: value } }], '编辑标签');
+      if (save && value !== originalText) this.applyOperations([{ op: relation?'update_relation':'update', id: o.id, changes: { label: value } }], '编辑标签');
       else {
         this.drawOverlay();
         this.onSelection(this.selectedIds);
@@ -1019,8 +1106,8 @@ export class SceneEditor {
   }
 
   editSelectedLabel(){
-    const id=this.selectedIds.find(id=>this.doc.objects.some(o=>o.id===id));
-    const label=[...this.host.querySelectorAll('[data-label-for]')].find(n=>n.getAttribute('data-label-for')===id);
+    const id=this.selectedIds[0];
+    const label=[...this.host.querySelectorAll('[data-label-for],[data-relation-label-for]')].find(n=>(n.getAttribute('data-label-for')||n.getAttribute('data-relation-label-for'))===id);
     if(label)this.editLabel({target:label,preventDefault(){}});
   }
 
@@ -1130,7 +1217,7 @@ export class SceneEditor {
       e.preventDefault();
       const ids=new Map(this.clipboard.objects.map(o=>[o.id,uid('o')])),groups=new Map();
       const ops=this.clipboard.objects.map(o=>{if(o.group_id&&!groups.has(o.group_id))groups.set(o.group_id,uid('group'));return {op:'add',object:{...copy(o),id:ids.get(o.id),x:o.x+5,y:o.y+5,group_id:groups.get(o.group_id)||''}};});
-      for(const r of this.clipboard.relations)ops.push({op:'add_relation',relation:{...copy(r),id:uid('r'),source:ids.get(r.source),target:ids.get(r.target),...(r.control?{control:{x:r.control.x+5,y:r.control.y+5}}:{})}});
+      for(const r of this.clipboard.relations)ops.push({op:'add_relation',relation:{...copy(r),id:uid('r'),source:ids.get(r.source),target:ids.get(r.target),...(r.control?{control:{x:r.control.x+5,y:r.control.y+5}}:{}),...(r.label_position?{label_position:{x:r.label_position.x+5,y:r.label_position.y+5}}:{})}});
       this.applyOperations(ops, '粘贴');
       this.setSelection([...ids.values()]);
     } else if (['Delete', 'Backspace'].includes(e.key)) {
@@ -1151,6 +1238,13 @@ export class SceneEditor {
     } else if (e.key.startsWith('Arrow') && this.selected.size) {
       e.preventDefault();
       const delta = e.shiftKey ? 2 : .5;
+      const dx=e.key==='ArrowRight'?delta:e.key==='ArrowLeft'?-delta:0,dy=e.key==='ArrowDown'?delta:e.key==='ArrowUp'?-delta:0;
+      if(this.activeLabel&&this.selected.size===1&&this.selected.has(this.activeLabel.id)){
+        const {kind,id}=this.activeLabel;
+        if(kind==='relation'){const r=this.doc.relations.find(r=>r.id===id),p=edgeGeometry(this.doc,r).label;this.applyOperations([{op:'update_relation',id,changes:{label_position:{x:p.x+dx,y:p.y+dy}}}],'微调文字');}
+        else{const o=this.doc.objects.find(o=>o.id===id);if(o&&!o.locked)this.applyOperations([{op:'update',id,changes:{label_dx:(o.label_dx||0)+dx,label_dy:(o.label_dy||0)+dy}}],'微调文字');}
+        return;
+      }
       this.applyOperations(this.doc.objects.filter(o => this.selected.has(o.id) && !o.locked).map(o => ({
         op: 'update', id: o.id,
         changes: {

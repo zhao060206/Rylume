@@ -6,7 +6,7 @@
 
 ## 下载与启动
 
-在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-3.4.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
+在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-3.5.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
 
 也可以运行 `启动理象.cmd`。内置模板、素材和直接编辑可离线使用；AI 生成、批注修改和视觉审查需要在「设置 → 模型设置」中配置你自己的兼容服务。
 
@@ -16,7 +16,13 @@
 
 软件会提示正式新版，支持后台下载、校验以及保存后重启更新；启动失败自动恢复旧版。3.0 及更早版本需手动安装一次 3.1。详见 [资源与更新说明](docs/RESOURCES-AND-UPDATES.md)。
 
-## 3.4：极简与专业工作台
+## 3.5：自由连接与文字定位
+
+选中箭头，拖动两端圆点到对象边缘的任意位置；绿色轮廓和圆点显示吸附结果。端点会按边缘的相对位置保存，随对象移动、缩放和旋转。连接工具也可以从选中对象的边缘直接拖出新线。
+
+对象名称和连线旁的文字可以单独拖动，双击仍可改字。点选文字后，用方向键微调，Shift 加大步长；独立文本也可直接拖动。每次拖动作为一步撤销，自动保存并同步至 SVG、PDF、PNG 和 PPTX。专业属性可精确设置端点所在边和沿边百分比，或将连线文字恢复为自动位置。
+
+## 极简与专业工作台
 
 右上角可在「极简 / 专业」之间切换。两种模式共用同一图版与全部功能，默认极简并记住上次选择。
 

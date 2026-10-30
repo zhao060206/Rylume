@@ -86,12 +86,17 @@ function renderProperties(){
  }else if(relations.length){
   const r=relations[0],grid=section(parent,'连线表达什么'),change=c=>editor.applyOperations([{op:'update_relation',id:r.id,changes:c}]);
   grid.append(relationChoices(editor,{compact:true}));
-  input(grid,'线上文字',r.label,'text',v=>change({label:v}));parent.append(el('p','property-description','移动两端对象，连线会自动跟随。选中连线后，可拖动中间圆点调整弯曲程度。'));
+  input(grid,'线上文字',r.label,'text',v=>change({label:v}));parent.append(el('p','property-description','拖动两端圆点，可连接对象边缘任意位置；中间圆点调整弯曲。线上文字可以单独拖动或双击改字。'));
   const meaning=section(parent,'作用方式与核对');
   input(meaning,'作用方式',String(!!r.indirect),'select',v=>change({indirect:v==='true'}),[['false','直接 · 实线'],['true','间接 · 虚线']]);
   input(meaning,'含义状态',String(!!r.uncertain),'select',v=>change({uncertain:v==='true'}),[['true','待核对 · 问号'],['false','已核对']]);
   const extra=section(advanced('更多连线设置'),'端点');
-  for(const[key,label]of [['source_port','从哪里连出'],['target_port','连接到哪里']])input(extra,label,r[key]||'auto','select',v=>change({[key]:v}),[['auto','自动'],['n','上方'],['e','右侧'],['s','下方'],['w','左侧']]);
+  for(const[key,label]of [['source_port','从哪里连出'],['target_port','连接到哪里']]){
+    const anchorKey=key.replace('_port','_anchor'),a=r[anchorKey];
+    input(extra,label,a?'custom':r[key]||'auto','select',v=>{if(v!=='custom')change({[key]:v,[anchorKey]:null});},[['custom','自定义 · 拖动端点'],['auto','自动'],['n','上方中点'],['e','右侧中点'],['s','下方中点'],['w','左侧中点']]);
+    if(a){input(extra,label+' · 所在边',a.side,'select',v=>change({[anchorKey]:{...a,side:v}}),[['n','上边'],['e','右边'],['s','下边'],['w','左边']]);input(extra,label+' · 沿边位置 %',a.t*100,'number',v=>{if(v>=0&&v<=100)change({[anchorKey]:{...a,t:v/100}});else toast('沿边位置为 0–100%，上/下边从左到右，左/右边从上到下。');});}
+  }
+  const reset=el('button','button','文字回到连线旁');reset.onclick=()=>change({label_position:null});extra.append(reset);
   input(extra,'线宽 · pt',r.stroke_pt||1.05,'number',v=>change({stroke_pt:v}));
   input(extra,'连线颜色',r.stroke||scene.style.palette.primary,'color',v=>change({stroke:v}));
  }else{

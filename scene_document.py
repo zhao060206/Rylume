@@ -218,6 +218,17 @@ def normalize_scene(value):
             out[key] = r.get(key, "auto")
             if out[key] not in PORTS:
                 raise SceneError("连接端口无效")
+        for key in ("source_anchor", "target_anchor"):
+            if r.get(key) is not None:
+                anchor = r[key]
+                if not isinstance(anchor, dict) or anchor.get('side') not in PORTS - {'auto'}:
+                    raise SceneError("连接边缘位置无效")
+                out[key] = {'side': anchor['side'], 't': _number(anchor.get('t'), '边缘位置', 0, 1)}
+        if r.get('label_position') is not None:
+            position = r['label_position']
+            if not isinstance(position, dict):
+                raise SceneError("连线文字位置无效")
+            out['label_position'] = {k: _number(position.get(k), '文字'+k) for k in ('x', 'y')}
         if r.get("control") is not None:
             control = r["control"]
             if not isinstance(control, dict):
@@ -304,6 +315,8 @@ def apply_operations(scene, operations, *, allowed_ids=None):
                     for rel in draft['relations']:
                         if rel.get('control'):
                             rel['control']['x']*=sx;rel['control']['y']*=sy
+                        if rel.get('label_position'):
+                            rel['label_position']['x']*=sx;rel['label_position']['y']*=sy
                     from scene_render import repair_geometry
                     draft=repair_geometry(draft,passes=2)
                 else:draft = layout_scene(draft, force=True)
