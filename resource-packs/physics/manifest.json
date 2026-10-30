@@ -1,0 +1,623 @@
+{
+  "schema_version": 1,
+  "id": "physics",
+  "version": "1.0.0",
+  "title": "物理学",
+  "domain": "physics",
+  "min_app_version": "3.1.0",
+  "license": "CC0-1.0",
+  "assets": [
+    {
+      "id": "physics_lens",
+      "asset_id": "physics_lens",
+      "label": "透镜",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/lens.svg",
+      "keywords": [
+        "lens",
+        "透镜",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "49137de8efdf2aa5a2cc9a87dd2e48894e72012b18c89206110ec3c7db329f77"
+    },
+    {
+      "id": "physics_mirror",
+      "asset_id": "physics_mirror",
+      "label": "反射镜",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mirror.svg",
+      "keywords": [
+        "mirror",
+        "反射镜",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "ba60c3db448769a27443247108cbb009de011d9ae5d8592ba70f6ef6eadea989"
+    },
+    {
+      "id": "physics_laser",
+      "asset_id": "physics_laser",
+      "label": "激光器",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/laser.svg",
+      "keywords": [
+        "laser",
+        "激光器",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "c996534e1c0e4a23f1539274415e76d86859e0d2f1aa80f07f07931226aeb5ad"
+    },
+    {
+      "id": "physics_prism",
+      "asset_id": "physics_prism",
+      "label": "棱镜",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/prism.svg",
+      "keywords": [
+        "prism",
+        "棱镜",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "eae4c3ef4d69847587bb2a24c196384b333e8bbe39184577bd5c3898336a0293"
+    },
+    {
+      "id": "physics_slit",
+      "asset_id": "physics_slit",
+      "label": "狭缝",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/slit.svg",
+      "keywords": [
+        "slit",
+        "狭缝",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "8649329b055b107006399e148e47b77c1d1723e85cd0f2fcbdfff37a58a0d8d5"
+    },
+    {
+      "id": "physics_screen",
+      "asset_id": "physics_screen",
+      "label": "成像屏",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/screen.svg",
+      "keywords": [
+        "screen",
+        "成像屏",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "421e30960d65966fac608f2698db06fbe0a0fdfc46576da9a61646d634767937"
+    },
+    {
+      "id": "physics_atom",
+      "asset_id": "physics_atom",
+      "label": "原子模型",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/atom.svg",
+      "keywords": [
+        "atom",
+        "原子模型",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "fbc9dab9fad260a63397f054d3253bdc675c5729b13ad8b80c27fe327c8bf6d4"
+    },
+    {
+      "id": "physics_wave",
+      "asset_id": "physics_wave",
+      "label": "波动",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/wave.svg",
+      "keywords": [
+        "wave",
+        "波动",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "d87118b079c3e079f07a70360cd5f05e76ecf9457924aa0d049ca215601b7ca0"
+    },
+    {
+      "id": "physics_magnet",
+      "asset_id": "physics_magnet",
+      "label": "磁铁",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/magnet.svg",
+      "keywords": [
+        "magnet",
+        "磁铁",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "b29d86ffd2ef125a14f298a1ccd31773645cb11c10551b33dd6278b15859f5b3"
+    },
+    {
+      "id": "physics_coil",
+      "asset_id": "physics_coil",
+      "label": "线圈",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/coil.svg",
+      "keywords": [
+        "coil",
+        "线圈",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "6e824688a45e48f9e3e9368c6aba4c4b7ea53b7ccca2b042718e5b98d25244d5"
+    },
+    {
+      "id": "physics_pendulum",
+      "asset_id": "physics_pendulum",
+      "label": "单摆",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/pendulum.svg",
+      "keywords": [
+        "pendulum",
+        "单摆",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "a6a661878f8fddd9a27f2129a7d7aa60e80c0f5c5c003550d4359a0cbbe91434"
+    },
+    {
+      "id": "physics_spring",
+      "asset_id": "physics_spring",
+      "label": "弹簧",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/spring.svg",
+      "keywords": [
+        "spring",
+        "弹簧",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "c4d862f7a8914786cbf3a91ae373b66e72c85fdc164891158fefbf02aa777bac"
+    },
+    {
+      "id": "physics_mass",
+      "asset_id": "physics_mass",
+      "label": "质量块",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mass.svg",
+      "keywords": [
+        "mass",
+        "质量块",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "89999abb73557fc552d1d4ecc840fdda1b047ca938fe6f8bb1dab185f2c72610"
+    },
+    {
+      "id": "physics_charge",
+      "asset_id": "physics_charge",
+      "label": "点电荷",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/charge.svg",
+      "keywords": [
+        "charge",
+        "点电荷",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "addd9b1da2a75f4e779a64c4b8f31fe1b35715862d51da151d47474f89c3696f"
+    },
+    {
+      "id": "physics_capacitor",
+      "asset_id": "physics_capacitor",
+      "label": "电容",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/capacitor.svg",
+      "keywords": [
+        "capacitor",
+        "电容",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "7fd6d9346fc8db1b3e11e5d384f01085f12bfb19e5d578113be0a3ac9be807ca"
+    },
+    {
+      "id": "physics_resistor",
+      "asset_id": "physics_resistor",
+      "label": "电阻",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/resistor.svg",
+      "keywords": [
+        "resistor",
+        "电阻",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "5cb69f839bf77462c4434b7990484687edbd0df1d2d4ab70930acd389840829f"
+    },
+    {
+      "id": "physics_detector",
+      "asset_id": "physics_detector",
+      "label": "探测器",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/detector.svg",
+      "keywords": [
+        "detector",
+        "探测器",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "d5a69d6af216c12d26af2bf9d9ee478d7a13e776bd4cee5750af875585875b90"
+    },
+    {
+      "id": "physics_polarizer",
+      "asset_id": "physics_polarizer",
+      "label": "偏振片",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/polarizer.svg",
+      "keywords": [
+        "polarizer",
+        "偏振片",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "710b66b3f5d3daa5c61f1d4e467ee9bf66c9aef311ccb42ee42020f4acaa72ae"
+    },
+    {
+      "id": "physics_beam_splitter",
+      "asset_id": "physics_beam_splitter",
+      "label": "分束器",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/beam_splitter.svg",
+      "keywords": [
+        "beam_splitter",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "72c27b7170a6a706e3bafa6b94f22b0872a6af1a770dafcd6b3d0c091e321f15"
+    },
+    {
+      "id": "physics_sensor",
+      "asset_id": "physics_sensor",
+      "label": "sensor",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/sensor.svg",
+      "keywords": [
+        "sensor",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "2a682096cfdd8cfcb6c3da38077ef32c8030a5bc3d956b14a864b05803314d50"
+    }
+  ],
+  "templates": [
+    {
+      "id": "physics_template_interference",
+      "title": "分束与干涉测量",
+      "description": "Coherent source · Beam splitter · Reference arm · Measurement arm · Interference signal",
+      "file": "templates/interference.scene.json",
+      "thumbnail": "previews/interference.svg",
+      "thumbnail_single": "previews/interference-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Coherent source",
+        "Beam splitter",
+        "Reference arm",
+        "Measurement arm",
+        "Interference signal"
+      ],
+      "keywords": [
+        "物理学",
+        "分束与干涉测量"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "Coherent source",
+        "Beam splitter",
+        "Reference arm",
+        "Measurement arm",
+        "Interference signal"
+      ]
+    },
+    {
+      "id": "physics_template_polarization",
+      "title": "偏振态分析",
+      "description": "Light source · Polarizer · Rotating analyser · Intensity · Incident field",
+      "file": "templates/polarization.scene.json",
+      "thumbnail": "previews/polarization.svg",
+      "thumbnail_single": "previews/polarization-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Light source",
+        "Polarizer",
+        "Rotating analyser",
+        "Intensity",
+        "Incident field"
+      ],
+      "keywords": [
+        "物理学",
+        "偏振态分析"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "Light source",
+        "Polarizer",
+        "Rotating analyser",
+        "Intensity",
+        "Incident field"
+      ]
+    },
+    {
+      "id": "physics_template_oscillation",
+      "title": "受迫振动与位移测量",
+      "description": "Elastic element · Moving mass · Periodic drive · Displacement sensor · Response",
+      "file": "templates/oscillation.scene.json",
+      "thumbnail": "previews/oscillation.svg",
+      "thumbnail_single": "previews/oscillation-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Elastic element",
+        "Moving mass",
+        "Periodic drive",
+        "Displacement sensor",
+        "Response"
+      ],
+      "keywords": [
+        "物理学",
+        "受迫振动与位移测量"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "Elastic element",
+        "Moving mass",
+        "Periodic drive",
+        "Displacement sensor",
+        "Response"
+      ]
+    },
+    {
+      "id": "physics_template_induction",
+      "title": "电磁感应与负载",
+      "description": "Moving magnet · Induction coil · Electrical load · Current measurement · Changing flux",
+      "file": "templates/induction.scene.json",
+      "thumbnail": "previews/induction.svg",
+      "thumbnail_single": "previews/induction-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Moving magnet",
+        "Induction coil",
+        "Electrical load",
+        "Current measurement",
+        "Changing flux"
+      ],
+      "keywords": [
+        "物理学",
+        "电磁感应与负载"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "Moving magnet",
+        "Induction coil",
+        "Electrical load",
+        "Current measurement",
+        "Changing flux"
+      ]
+    }
+  ]
+}

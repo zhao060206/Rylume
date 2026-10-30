@@ -1,0 +1,598 @@
+{
+  "schema_version": 1,
+  "id": "materials",
+  "version": "1.0.0",
+  "title": "材料科学",
+  "domain": "materials",
+  "min_app_version": "3.1.0",
+  "license": "CC0-1.0",
+  "assets": [
+    {
+      "id": "materials_particle",
+      "asset_id": "materials_particle",
+      "label": "纳米颗粒",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/particle.svg",
+      "keywords": [
+        "particle",
+        "纳米颗粒",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "f4c3c3a8709232ca0dae7af499cd8c728368349adfcc5121bcce4a72b7f646d8"
+    },
+    {
+      "id": "materials_lattice",
+      "asset_id": "materials_lattice",
+      "label": "晶格",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/lattice.svg",
+      "keywords": [
+        "lattice",
+        "晶格",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "e5a0253adc2accac4a572e4932db75586e589c13b70dc7763be0844a3d71f0fa"
+    },
+    {
+      "id": "materials_vacancy",
+      "asset_id": "materials_vacancy",
+      "label": "空位缺陷",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/vacancy.svg",
+      "keywords": [
+        "vacancy",
+        "空位缺陷",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "2ec2cf8258fe0118b67e26bbdb73ce4947ae7da2803026cbf963739acec52bd5"
+    },
+    {
+      "id": "materials_dislocation",
+      "asset_id": "materials_dislocation",
+      "label": "位错",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/dislocation.svg",
+      "keywords": [
+        "dislocation",
+        "位错",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "6f2bf4e5f630579517b1ec38b351526efa1e18cbd491d966d315e44e6748b699"
+    },
+    {
+      "id": "materials_layers",
+      "asset_id": "materials_layers",
+      "label": "层状材料",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/layers.svg",
+      "keywords": [
+        "layers",
+        "层状材料",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "e1cac03f46ce389d283f35502b95808cd5c1378781c7072308dfd63e33fddcd3"
+    },
+    {
+      "id": "materials_graphene",
+      "asset_id": "materials_graphene",
+      "label": "石墨烯晶格",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/graphene.svg",
+      "keywords": [
+        "graphene",
+        "石墨烯晶格",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "02ebd97c7a4f0c9669f2ebc95afa23d1c7148b1a43db7913480258cbe2055b92"
+    },
+    {
+      "id": "materials_nanotube",
+      "asset_id": "materials_nanotube",
+      "label": "纳米管",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/nanotube.svg",
+      "keywords": [
+        "nanotube",
+        "纳米管",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "5e34644f53cbf1f4e8032300ead6adeb60a693e1f02abccfec52b22afc9fb3b1"
+    },
+    {
+      "id": "materials_polymer",
+      "asset_id": "materials_polymer",
+      "label": "聚合物链",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/polymer.svg",
+      "keywords": [
+        "polymer",
+        "聚合物链",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "484006d56f6b45f4b988f90db0dcb59fa8a33b4e01f09dee1886df8f2277a8c7"
+    },
+    {
+      "id": "materials_composite",
+      "asset_id": "materials_composite",
+      "label": "复合材料",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/composite.svg",
+      "keywords": [
+        "composite",
+        "复合材料",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "519430af69ef6da0bb6595b18c0e8c25f79098e4915b0bbe6ba53fb9dc5745fd"
+    },
+    {
+      "id": "materials_pore",
+      "asset_id": "materials_pore",
+      "label": "多孔材料",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/pore.svg",
+      "keywords": [
+        "pore",
+        "多孔材料",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "acd00d98cd39e57633acdfd2b0179edbad1537e66ea4fa9a14acb1c3ef6d4dea"
+    },
+    {
+      "id": "materials_membrane",
+      "asset_id": "materials_membrane",
+      "label": "多孔膜",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/membrane.svg",
+      "keywords": [
+        "membrane",
+        "多孔膜",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "363f108a56e7530fb29b2ac636d12c923be4f8e4bddbc80f607a76feb557a143"
+    },
+    {
+      "id": "materials_grain",
+      "asset_id": "materials_grain",
+      "label": "多晶晶粒",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/grain.svg",
+      "keywords": [
+        "grain",
+        "多晶晶粒",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "3bb308cb89979d27a2853a32d4efca8746c397c645839847252e26f20796d502"
+    },
+    {
+      "id": "materials_fiber",
+      "asset_id": "materials_fiber",
+      "label": "纤维",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/fiber.svg",
+      "keywords": [
+        "fiber",
+        "纤维",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "c8f906519870b0d8a506d9f0e788e0e913e57a8fad177d9d701484bb54f2842f"
+    },
+    {
+      "id": "materials_film",
+      "asset_id": "materials_film",
+      "label": "薄膜",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/film.svg",
+      "keywords": [
+        "film",
+        "薄膜",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "fe5108f47bfcfaf52d23893da7a3f9c198b827227c06134b237e5b8344eb66d8"
+    },
+    {
+      "id": "materials_substrate",
+      "asset_id": "materials_substrate",
+      "label": "基底",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/substrate.svg",
+      "keywords": [
+        "substrate",
+        "基底",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "68421e3a4d757d914373d6b3e7d6f2fc6f056c9e68d6d65b67fc973ad60d7884"
+    },
+    {
+      "id": "materials_tensile",
+      "asset_id": "materials_tensile",
+      "label": "拉伸试样",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/tensile.svg",
+      "keywords": [
+        "tensile",
+        "拉伸试样",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "71dc6988034daaeb16edf222d73e5cc2750b4c1bf8f48717b510dc6b52c7fbfb"
+    },
+    {
+      "id": "materials_fracture",
+      "asset_id": "materials_fracture",
+      "label": "裂纹扩展",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/fracture.svg",
+      "keywords": [
+        "fracture",
+        "裂纹扩展",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "b7aebc56465a5cb689989a9531fcd94cbf1f556cae95514bc1cbb870d1bf14ef"
+    },
+    {
+      "id": "materials_powder",
+      "asset_id": "materials_powder",
+      "label": "粉末颗粒",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/powder.svg",
+      "keywords": [
+        "powder",
+        "粉末颗粒",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "e161c0d70717ceeaf17068757d81ae7c438f3bee301b80dda458e4e4df741236"
+    },
+    {
+      "id": "materials_droplet",
+      "asset_id": "materials_droplet",
+      "label": "液滴",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/droplet.svg",
+      "keywords": [
+        "droplet",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "427e0c1a13027b41898a57cc260cf1ec475f0feccdd25d4f40c07eb6639a0712"
+    }
+  ],
+  "templates": [
+    {
+      "id": "materials_template_composite",
+      "title": "复合材料制备与表征",
+      "description": "Filler · Polymer matrix · Mix and cure · Mechanical test · Failure analysis",
+      "file": "templates/composite.scene.json",
+      "thumbnail": "previews/composite.svg",
+      "thumbnail_single": "previews/composite-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Filler",
+        "Polymer matrix",
+        "Mix and cure",
+        "Mechanical test",
+        "Failure analysis"
+      ],
+      "keywords": [
+        "材料科学",
+        "复合材料制备与表征"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "Filler",
+        "Polymer matrix",
+        "Mix and cure",
+        "Mechanical test",
+        "Failure analysis"
+      ]
+    },
+    {
+      "id": "materials_template_membrane",
+      "title": "多孔膜选择性传输",
+      "description": "Feed particles · Selective membrane · Retentate · Permeate",
+      "file": "templates/membrane.scene.json",
+      "thumbnail": "previews/membrane.svg",
+      "thumbnail_single": "previews/membrane-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Feed particles",
+        "Selective membrane",
+        "Retentate",
+        "Permeate"
+      ],
+      "keywords": [
+        "材料科学",
+        "多孔膜选择性传输"
+      ],
+      "object_count": 4,
+      "relation_count": 3,
+      "object_labels": [
+        "Feed particles",
+        "Selective membrane",
+        "Retentate",
+        "Permeate"
+      ]
+    },
+    {
+      "id": "materials_template_film",
+      "title": "薄膜沉积与界面",
+      "description": "Precursor · Nucleation · Film growth · Substrate · Microstructure",
+      "file": "templates/film.scene.json",
+      "thumbnail": "previews/film.svg",
+      "thumbnail_single": "previews/film-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Precursor",
+        "Nucleation",
+        "Film growth",
+        "Substrate",
+        "Microstructure"
+      ],
+      "keywords": [
+        "材料科学",
+        "薄膜沉积与界面"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "Precursor",
+        "Nucleation",
+        "Film growth",
+        "Substrate",
+        "Microstructure"
+      ]
+    },
+    {
+      "id": "materials_template_defects",
+      "title": "缺陷与材料失效",
+      "description": "Initial lattice · Point defects · Dislocation motion · Crack propagation · Applied load",
+      "file": "templates/defects.scene.json",
+      "thumbnail": "previews/defects.svg",
+      "thumbnail_single": "previews/defects-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Initial lattice",
+        "Point defects",
+        "Dislocation motion",
+        "Crack propagation",
+        "Applied load"
+      ],
+      "keywords": [
+        "材料科学",
+        "缺陷与材料失效"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "Initial lattice",
+        "Point defects",
+        "Dislocation motion",
+        "Crack propagation",
+        "Applied load"
+      ]
+    }
+  ]
+}

@@ -9,5 +9,5 @@ if(Test-Path -LiteralPath $numpyLibs){Get-ChildItem -LiteralPath $numpyLibs -Fil
 $releasePath=Join-Path $projectRoot 'dist-rylume\Rylume'
 foreach($notice in @('LICENSE','COPYRIGHT','THIRD_PARTY_NOTICES.md')){Copy-Item -LiteralPath (Join-Path $projectRoot $notice) -Destination $releasePath -Force}
 Copy-Item -LiteralPath (Join-Path $projectRoot 'licenses') -Destination $releasePath -Recurse -Force
-Get-ChildItem -LiteralPath (Join-Path $projectRoot 'packaging') -File | Copy-Item -Destination $releasePath -Force
+Get-ChildItem -LiteralPath (Join-Path $projectRoot 'packaging') -File | Where-Object {$_.Extension -in @('.cmd','.txt')} | Copy-Item -Destination $releasePath -Force
 Write-Output (Join-Path $projectRoot 'dist-rylume\Rylume\Rylume.exe')

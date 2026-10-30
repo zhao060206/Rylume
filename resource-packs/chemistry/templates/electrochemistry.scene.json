@@ -1,0 +1,229 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "chemistry_template_electrochemistry",
+  "title": "电化学三电极测量",
+  "source_text": "电化学三电极测量",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [
+    {
+      "id": "electrolyte",
+      "kind": "compartment",
+      "label": "Shared electrolyte",
+      "x": 8.0,
+      "y": 51.0,
+      "w": 164.0,
+      "h": 61.0
+    }
+  ],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Working electrode",
+      "state": "",
+      "compartment": "electrolyte",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"39\" y=\"12\" width=\"22\" height=\"67\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"12\" x2=\"50\" y2=\"3\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"86\" x2=\"73\" y2=\"86\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_electrode",
+          "label": "电极",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_electrode",
+      "x": 15.0,
+      "y": 65.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Counter electrode",
+      "state": "",
+      "compartment": "electrolyte",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"39\" y=\"12\" width=\"22\" height=\"67\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"12\" x2=\"50\" y2=\"3\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"86\" x2=\"73\" y2=\"86\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_electrode",
+          "label": "电极",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_electrode",
+      "x": 75.0,
+      "y": 65.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Reference electrode",
+      "state": "",
+      "compartment": "electrolyte",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"39\" y=\"12\" width=\"22\" height=\"67\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"12\" x2=\"50\" y2=\"3\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"86\" x2=\"73\" y2=\"86\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_electrode",
+          "label": "电极",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_electrode",
+      "x": 135.0,
+      "y": 65.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Potentiostat",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"14\" width=\"82\" height=\"69\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"20\" y=\"24\" width=\"43\" height=\"25\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"77\" cy=\"35\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"28\" cy=\"66\" r=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"66\" r=\"4\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"72\" cy=\"66\" r=\"4\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_potentiostat",
+          "label": "恒电位仪",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_potentiostat",
+      "x": 75.0,
+      "y": 8.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o3",
+      "target": "o0",
+      "type": "sequence",
+      "label": "Control potential",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Current path",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "Sense potential",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "chemistry"
+  }
+}

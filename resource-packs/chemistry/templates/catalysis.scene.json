@@ -1,0 +1,286 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "chemistry_template_catalysis",
+  "title": "催化反应与再生",
+  "source_text": "催化反应与再生",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Reactant",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"27\" y1=\"60\" x2=\"51\" y2=\"32\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"51\" y1=\"32\" x2=\"77\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"27\" y1=\"60\" x2=\"53\" y2=\"78\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"53\" y1=\"78\" x2=\"77\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><circle cx=\"27\" cy=\"60\" r=\"12\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"51\" cy=\"32\" r=\"10\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"77\" cy=\"57\" r=\"11\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"53\" cy=\"78\" r=\"8\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_molecule",
+          "label": "球棍分子",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_molecule",
+      "x": 11.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Catalytic site",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"31\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"37\" cy=\"39\" r=\"7\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"62\" cy=\"60\" r=\"7\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M17 23 L8 15 M83 23 L92 15 M15 77 L7 85 M85 77 L93 85\" fill=\"none\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_catalyst",
+          "label": "催化位点",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_catalyst",
+      "x": 63.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Product",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"27\" y1=\"60\" x2=\"51\" y2=\"32\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"51\" y1=\"32\" x2=\"77\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"27\" y1=\"60\" x2=\"53\" y2=\"78\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"53\" y1=\"78\" x2=\"77\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><circle cx=\"27\" cy=\"60\" r=\"12\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"51\" cy=\"32\" r=\"10\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"77\" cy=\"57\" r=\"11\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"53\" cy=\"78\" r=\"8\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_molecule",
+          "label": "球棍分子",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_molecule",
+      "x": 125.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Co-reactant",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M50 6 C43 27 20 46 20 66 A30 29 0 0 0 80 66 C80 46 57 27 50 6 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M34 63 Q28 77 45 82\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_droplet",
+          "label": "液滴",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_droplet",
+      "x": 63.0,
+      "y": 8.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Regenerated site",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"31\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"37\" cy=\"39\" r=\"7\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"62\" cy=\"60\" r=\"7\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M17 23 L8 15 M83 23 L92 15 M15 77 L7 85 M85 77 L93 85\" fill=\"none\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_catalyst",
+          "label": "催化位点",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_catalyst",
+      "x": 63.0,
+      "y": 82.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Adsorb",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o3",
+      "target": "o1",
+      "type": "sequence",
+      "label": "React",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "Desorb",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o1",
+      "target": "o4",
+      "type": "sequence",
+      "label": "Regenerate",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto",
+      "control": {
+        "x": 52.5,
+        "y": 74.0
+      }
+    },
+    {
+      "id": "r4",
+      "source": "o4",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Reuse",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto",
+      "control": {
+        "x": 92.5,
+        "y": 74.0
+      }
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "chemistry"
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "engineering_template_structure",
+  "title": "结构加载与传感",
+  "source_text": "结构加载与传感",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Loading actuator",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"30\" width=\"61\" height=\"40\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"24\" y=\"38\" width=\"12\" height=\"24\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"36\" y1=\"50\" x2=\"94\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"5\" stroke-linecap=\"round\" /><line x1=\"94\" y1=\"31\" x2=\"94\" y2=\"69\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "engineering_actuator",
+          "label": "执行器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_actuator",
+      "x": 15.0,
+      "y": 9.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Test structure",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 78 L50 18 L93 78 Z\" fill=\"none\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M7 78 L36 78 L50 18 L64 78 L93 78 M27 49 L73 49 M36 78 L73 49 M64 78 L27 49\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "engineering_truss",
+          "label": "桁架",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_truss",
+      "x": 75.0,
+      "y": 42.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Strain sensors",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"58\" r=\"18\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"76\" x2=\"50\" y2=\"94\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M19 41 Q50 7 81 41 M29 47 Q50 24 71 47\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "engineering_sensor",
+          "label": "传感器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_sensor",
+      "x": 135.0,
+      "y": 9.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Acquisition",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"14\" width=\"68\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"24\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"24\" x2=\"75\" y2=\"24\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><rect x=\"16\" y=\"40\" width=\"68\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"50\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"50\" x2=\"75\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><rect x=\"16\" y=\"66\" width=\"68\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"76\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"76\" x2=\"75\" y2=\"76\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "engineering_server",
+          "label": "数据采集器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_server",
+      "x": 135.0,
+      "y": 80.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Load control",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"25\" width=\"50\" height=\"50\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"35\" y=\"35\" width=\"30\" height=\"30\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"34\" y1=\"12\" x2=\"34\" y2=\"25\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"34\" y1=\"75\" x2=\"34\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"12\" y1=\"34\" x2=\"25\" y2=\"34\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"75\" y1=\"34\" x2=\"88\" y2=\"34\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"12\" x2=\"50\" y2=\"25\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"75\" x2=\"50\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"12\" y1=\"50\" x2=\"25\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"75\" y1=\"50\" x2=\"88\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"66\" y1=\"12\" x2=\"66\" y2=\"25\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"66\" y1=\"75\" x2=\"66\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"12\" y1=\"66\" x2=\"25\" y2=\"66\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"75\" y1=\"66\" x2=\"88\" y2=\"66\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "engineering_chip",
+          "label": "控制芯片",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_chip",
+      "x": 15.0,
+      "y": 80.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Apply load",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "Measure strain",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "Acquire",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o0",
+      "target": "o3",
+      "type": "sequence",
+      "label": "Applied load",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r4",
+      "source": "o3",
+      "target": "o4",
+      "type": "sequence",
+      "label": "Feedback",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r5",
+      "source": "o4",
+      "target": "o0",
+      "type": "sequence",
+      "label": "Regulate",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "engineering"
+  }
+}

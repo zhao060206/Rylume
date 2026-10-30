@@ -1,0 +1,266 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "physics_template_polarization",
+  "title": "偏振态分析",
+  "source_text": "偏振态分析",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Light source",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"35\" width=\"49\" height=\"30\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"57\" cy=\"50\" r=\"13\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"70\" y1=\"50\" x2=\"96\" y2=\"50\" stroke=\"#C67F76\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"43\" x2=\"40\" y2=\"43\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"50\" x2=\"40\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"57\" x2=\"40\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_laser",
+          "label": "激光器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_laser",
+      "x": 10.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Polarizer",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"50\" rx=\"30\" ry=\"39\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"35\" y1=\"24\" x2=\"35\" y2=\"76\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"45\" y1=\"24\" x2=\"45\" y2=\"76\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"55\" y1=\"24\" x2=\"55\" y2=\"76\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"65\" y1=\"24\" x2=\"65\" y2=\"76\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"3\" y1=\"50\" x2=\"19\" y2=\"50\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"81\" y1=\"50\" x2=\"97\" y2=\"50\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_polarizer",
+          "label": "偏振片",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_polarizer",
+      "x": 54.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Rotating analyser",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"50\" cy=\"50\" rx=\"30\" ry=\"39\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"35\" y1=\"24\" x2=\"35\" y2=\"76\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"45\" y1=\"24\" x2=\"45\" y2=\"76\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"55\" y1=\"24\" x2=\"55\" y2=\"76\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"65\" y1=\"24\" x2=\"65\" y2=\"76\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"3\" y1=\"50\" x2=\"19\" y2=\"50\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"81\" y1=\"50\" x2=\"97\" y2=\"50\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_polarizer",
+          "label": "偏振片",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_polarizer",
+      "x": 101.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Intensity",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"29\" y=\"18\" width=\"46\" height=\"64\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"17\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"8\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"75\" y1=\"50\" x2=\"94\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"52\" y1=\"82\" x2=\"52\" y2=\"94\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_detector",
+          "label": "探测器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_detector",
+      "x": 146.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Incident field",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 8 50 C 20 20 30 20 42 50 S 66 80 78 50 S 90 20 96 50\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_wave",
+          "label": "波动",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_wave",
+      "x": 54.0,
+      "y": 8.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Prepare",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o4",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Field direction",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "Polarized light",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "Measure",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "physics"
+  }
+}

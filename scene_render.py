@@ -9,6 +9,7 @@ from biology_glyphs import symbol,tint
 from scene_document import PT_MM,normalize_scene
 
 DEFAULT_DIMS={
+    'symbol':(22,24),
     'ligand':(13,9),'receptor':(11,20),'receptor_dimer':(17,21),'gpcr':(18,19),
     'kinase':(17,12),'protein':(17,12),'tf':(18,12),'dna':(29,9),'mrna':(24,8),
     'lipid':(9,9),'vesicle':(24,24),'mvb':(29,29),'vesicle_fusion':(29,26),
@@ -345,7 +346,10 @@ def _object(o,palette,stroke_pt=.8,glyph_tint=.8):
     angle=o.get('rotation',0)
     if o.get('asset_id'):
         from scientific_library import glyph
-        artwork=glyph(o['asset_id'],o.get('fill'),o.get('stroke'))
+        if o.get('asset_snapshot'):
+            from scientific_library import portable_glyph
+            artwork=portable_glyph(o['asset_snapshot']['svg'],o.get('fill'),o.get('stroke'))
+        else:artwork=glyph(o['asset_id'],o.get('fill'),o.get('stroke'))
     else:artwork=symbol(kind,color,o.get('state',''),line,o.get('stroke_pt',stroke_pt)/.8,glyph_tint)
     p=[f'<g data-object-id="{oid}" data-type="{kind}" id="obj-{oid}">',f'<g data-glyph="{oid}" transform="rotate({angle} {x+w/2} {y+h/2})"><g transform="translate({x} {y}) scale({w/100} {h/100})">',artwork,'</g>']
     if o.get('state') == 'phosphorylated' and kind in ('kinase','protein','receptor','receptor_dimer'):

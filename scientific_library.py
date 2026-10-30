@@ -9,12 +9,20 @@ ROOT = Path(__file__).resolve().parent
 @lru_cache(maxsize=1)
 def library():
     path = ROOT/'assets/bioicons/manifest.json'
-    return {item['asset_id']: item for item in json.loads(path.read_text(encoding='utf8'))} if path.exists() else {}
+    result={item['asset_id']: item for item in json.loads(path.read_text(encoding='utf8'))} if path.exists() else {}
+    from resource_packs import manager
+    result.update(manager().assets())
+    return result
 
 @lru_cache(maxsize=256)
 def glyph(asset_id,fill=None,stroke=None):
     item = library()[asset_id]
-    root = ET.fromstring((ROOT/'ui/library'/f'{asset_id}.svg').read_text(encoding='utf8'))
+    file=Path(item['_file']) if item.get('_file') else ROOT/'ui/library'/f'{asset_id}.svg'
+    return portable_glyph(file.read_text(encoding='utf8'),fill,stroke)
+
+@lru_cache(maxsize=512)
+def portable_glyph(svg,fill=None,stroke=None):
+    root = ET.fromstring(svg)
     x,y,w,h = map(float,root.get('viewBox').split())
     if fill or stroke:
         from biology_glyphs import tint
@@ -32,7 +40,8 @@ def glyph(asset_id,fill=None,stroke=None):
 
 def credits(scene):
     ids = sorted({o.get('asset_id') for o in scene['objects'] if o.get('asset_id')})
-    result=[{k: library()[aid][k] for k in ('asset_id','label','author','author_url','license','license_url','source_url','modifications')} for aid in ids]
+    snapshots={o['asset_id']:o['asset_snapshot']['meta'] for o in scene['objects'] if o.get('asset_snapshot')}
+    result=[{k:(snapshots.get(aid) or library()[aid]).get(k,'') for k in ('asset_id','label','author','author_url','license','license_url','source_url','modifications')} for aid in ids]
     for item in result:
         if any(o.get('asset_id')==item['asset_id'] and (o.get('fill') or o.get('stroke')) for o in scene['objects']):item['modifications']+=' Recoloured by the figure author.'
     return result

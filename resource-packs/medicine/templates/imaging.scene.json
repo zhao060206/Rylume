@@ -1,0 +1,278 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "medicine_template_imaging",
+  "title": "影像采集与判读",
+  "source_text": "影像采集与判读",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Participant",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"23\" r=\"13\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M22 89 L22 55 Q22 42 50 42 Q78 42 78 55 L78 89 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"50\" y1=\"44\" x2=\"50\" y2=\"89\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"34\" y1=\"59\" x2=\"34\" y2=\"84\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"66\" y1=\"59\" x2=\"66\" y2=\"84\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "medicine_patient",
+          "label": "患者",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "medicine_patient",
+      "x": 14.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Imaging acquisition",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"12\" width=\"76\" height=\"70\" fill=\"#DFEDF1\" rx=\"9\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"43\" r=\"25\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"43\" r=\"16\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M34 53 L66 53 L77 91 L25 91 Z\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "medicine_mri",
+          "label": "磁共振设备",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "medicine_mri",
+      "x": 69.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Reconstructed image",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M49 15 C28 4 14 25 20 36 C4 45 12 67 24 67 C20 87 40 93 49 80 C58 95 81 85 78 70 C99 60 88 39 81 37 C88 20 66 7 52 18 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M50 18 L50 81 M25 30 Q50 35 33 49 Q18 57 36 69 M67 25 Q52 37 69 46 Q87 54 65 70\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "medicine_brain",
+          "label": "脑",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "medicine_brain",
+      "x": 128.0,
+      "y": 10.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Quantitative feature",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"27\" y1=\"60\" x2=\"51\" y2=\"32\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"51\" y1=\"32\" x2=\"77\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"27\" y1=\"60\" x2=\"53\" y2=\"78\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"53\" y1=\"78\" x2=\"77\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><circle cx=\"27\" cy=\"60\" r=\"12\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"51\" cy=\"32\" r=\"10\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"77\" cy=\"57\" r=\"11\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"53\" cy=\"78\" r=\"8\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M12 14 L25 14 M18 8 L18 21\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "medicine_biomarker",
+          "label": "生物标志物",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "medicine_biomarker",
+      "x": 128.0,
+      "y": 80.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Clinical review",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 8 L24 38 C24 68 67 68 67 38 L67 8 M45 62 L45 78 C45 99 84 95 84 74\" fill=\"none\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"84\" cy=\"65\" r=\"12\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"84\" cy=\"65\" r=\"6\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"24\" y1=\"8\" x2=\"29\" y2=\"8\" stroke=\"#84B7C8\" stroke-width=\"5\" stroke-linecap=\"round\" /><line x1=\"62\" y1=\"8\" x2=\"67\" y2=\"8\" stroke=\"#84B7C8\" stroke-width=\"5\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "medicine_stethoscope",
+          "label": "听诊器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "medicine_stethoscope",
+      "x": 153.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Acquire",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "Reconstruct",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "Segment and measure",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o2",
+      "target": "o4",
+      "type": "sequence",
+      "label": "Interpret",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r4",
+      "source": "o3",
+      "target": "o4",
+      "type": "sequence",
+      "label": "Support review",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "medicine"
+  }
+}

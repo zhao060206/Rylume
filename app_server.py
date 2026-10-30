@@ -3524,7 +3524,10 @@ def _screen_work_area() -> tuple[int, int]:
 
 def main() -> int:
     global SERVER, DATA_DIR, CONFIG_PATH, JOBS_DIR, EXPORT_DIR
+    global UPDATE_PLAN, UPDATE_NONCE, RESTART_ARGS
     parser = argparse.ArgumentParser()
+    parser.add_argument('--update-plan',help=argparse.SUPPRESS)
+    parser.add_argument('--update-nonce',help=argparse.SUPPRESS)
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8779)
     parser.add_argument("--open", action="store_true", help="(legacy) open in browser")
@@ -3535,6 +3538,7 @@ def main() -> int:
     parser.add_argument("--data-dir", help="Override the shared per-user data directory")
     parser.add_argument("--no-migrate", action="store_true", help="Start an isolated data directory without legacy import")
     args = parser.parse_args()
+    UPDATE_PLAN,UPDATE_NONCE=args.update_plan,args.update_nonce
     DATA_DIR = get_data_dir(args.data_dir)
     CONFIG_PATH = DATA_DIR / "config.json"
     JOBS_DIR = DATA_DIR / "studio-jobs"
@@ -3594,6 +3598,10 @@ def main() -> int:
     _load_jobs()
 
     SERVER = server
+    RESTART_ARGS=['--host',args.host,'--port',str(port),'--data-dir',str(DATA_DIR),'--no-migrate']
+    if args.no_window:RESTART_ARGS.append('--no-window')
+    from resource_packs import configure
+    configure(DATA_DIR)
     url = f"http://{args.host}:{port}/"
     print(f"{PRODUCT_DISPLAY} on {url}", file=sys.stderr)
 

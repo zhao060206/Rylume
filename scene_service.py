@@ -213,12 +213,16 @@ def _repair(app, job):
 
 def dispatch(handler, method, path, app):
     """Return True only when the request belongs to the scene-v2 adapter."""
+    import desktop_delivery
+    if desktop_delivery.dispatch(handler,method,path,app):return True
     import annotation_service
     import document_workflows
     if document_workflows.dispatch(handler,method,path,app):return True
     if annotation_service.dispatch(handler,method,path,app):return True
     try:
         if method == "GET" and path == "/api/scene/catalog":
+            from resource_packs import configure,DOMAIN_TITLES
+            configure(app.DATA_DIR)
             from scene_assets import asset_catalog, ASSET_DOMAINS
             from scene_examples import EXAMPLES
             assets = []
@@ -230,6 +234,7 @@ def dispatch(handler, method, path, app):
             from scene_document import OBJECT_TYPES
             assets = [a for a in assets if a.get("type") in OBJECT_TYPES]
             for a in assets:
+                a.pop('_file',None)
                 a.setdefault('thumbnail','/ui/library/native_'+a['type']+'.svg')
                 a.setdefault('license','原创图元')
             from scene_templates import TEMPLATES, COLORWAYS
@@ -237,11 +242,14 @@ def dispatch(handler, method, path, app):
             references=json.loads(ref_path.read_text(encoding='utf8')) if ref_path.exists() else []
             manifest_path=Path(__file__).resolve().parent/'ui/library/manifest.json'
             manifest=json.loads(manifest_path.read_text(encoding='utf8')) if manifest_path.exists() else {}
+            from resource_packs import configure,DOMAIN_TITLES
+            packs=configure(app.DATA_DIR)
             handler._json(200,{"ok":True,"assets":assets,"examples":EXAMPLES,
                 "templates":[{**t,**manifest.get(t['id'],{}),'thumbnail':'/ui/library/'+t['id']+'.svg',
-                    'thumbnail_single':'/ui/library/'+t['id']+'-single.svg'} for t in TEMPLATES],
+                    'thumbnail_single':'/ui/library/'+t['id']+'-single.svg'} for t in TEMPLATES]+[{k:v for k,v in t.items() if not k.startswith('_')} for t in packs.templates()],
                 "colorways":COLORWAYS,"references":references,
-                "asset_domains":[{**d,'count':sum(a.get('domain')==d['id'] for a in assets)} for d in ASSET_DOMAINS]})
+                "asset_domains":[{'id':pid,'title':title,'count':sum(a.get('domain')==pid for a in assets),
+                    'available':pid=='biology' or any(a.get('domain')==pid for a in assets)} for pid,title in DOMAIN_TITLES.items()]})
             return True
         if method == "POST" and path == "/api/scene/preview-template":
             from scene_templates import apply_template
@@ -272,6 +280,14 @@ def dispatch(handler, method, path, app):
         if method == "POST" and path == "/api/scene/example":
             from scene_examples import EXAMPLES
             body = handler._body()
+            if body.get('template'):
+                from resource_packs import manager
+                size=body.get('canvas_mm') or [None,None]
+                if not isinstance(size,list) or len(size)!=2:raise SceneError('画布尺寸无效')
+                packed=manager().template_scene(str(body['template']),*size)
+                if packed:
+                    from document_workflows import _create
+                    handler._json(200,_create(app,packed));return True
             example = str(body.get("example") or "egfr")
             if body.get('template'):
                 from scene_templates import template_info

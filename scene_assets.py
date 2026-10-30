@@ -178,7 +178,7 @@ def asset_catalog():
     for aid, item in library().items():
         copy_item = dict(item)
         copy_item['category'] = _asset_category(copy_item)
-        copy_item['domain'] = 'biology'
+        copy_item.setdefault('domain','biology')
         if aid in TYPE_CORRECTIONS:
             copy_item['type'] = TYPE_CORRECTIONS[aid]
         bio_items.append(copy_item)
@@ -208,8 +208,12 @@ def asset_catalog():
             item_copy.setdefault("category", cname)
             item_copy['domain'] = 'biology'
             native_items.append(item_copy)
-        matching_bio = [b for b in bio_items if b["category"] == cname]
+        matching_bio = [b for b in bio_items if b["category"] == cname and b['domain']=='biology']
         items = native_items + matching_bio
         for item in items:item['category_id']=cid
         result.append({"id": cid, "name": cname, "domain":'biology', "items": items})
+    for domain in dict.fromkeys(a['domain'] for a in bio_items if a['domain']!='biology'):
+        for category in dict.fromkeys(a['category'] for a in bio_items if a['domain']==domain):
+            items=[{**a,'category_id':domain+'_'+str(len(result))} for a in bio_items if a['domain']==domain and a['category']==category]
+            result.append({'id':domain+'_'+str(len(result)),'name':category,'domain':domain,'items':items})
     return result

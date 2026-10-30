@@ -21,7 +21,7 @@ OBJECT_TYPES = {
     "mitochondrion", "golgi", "er", "cell", "tumor_cell", "immune_cell",
     "fibroblast", "endothelial", "collagen", "tissue", "complex", "domain",
     "process", "text", "membrane", "nuclear_pore",
-    "junction", "pathogen", "stem_cell", "organelle", "channel", "antibody",
+    "junction", "pathogen", "stem_cell", "organelle", "channel", "antibody", "symbol",
 }
 RELATION_TYPES = {"sequence", "activates", "inhibits", "binds", "converts", "transports", "associates"}
 PORTS = {"auto", "n", "e", "s", "w"}
@@ -175,9 +175,18 @@ def normalize_scene(value):
                "evidence": _text(o.get("evidence", ""), 1000)}
         if o.get("asset_id"):
             from scientific_library import library
-            if o["asset_id"] not in library():
-                raise SceneError("未知科研素材，请使用内置素材库")
-            out["asset_id"] = o["asset_id"]
+            if not isinstance(o['asset_id'],str) or not IDENTIFIER.fullmatch(o['asset_id']):raise SceneError('未知科研素材，请使用素材库')
+            aid=o['asset_id']
+            from resource_packs import snapshot
+            try:
+                if o.get('asset_snapshot'):
+                    out['asset_snapshot']=snapshot(o['asset_snapshot'],aid)
+                elif aid in library() and library()[aid].get('_file'):
+                    meta=library()[aid]
+                    out['asset_snapshot']=snapshot({'svg':Path(meta['_file']).read_text(encoding='utf8'),'meta':meta},aid)
+                elif aid not in library():raise SceneError('未知科研素材：素材包未安装且图版没有素材快照，请先下载对应学科包')
+            except ValueError as exc:raise SceneError(str(exc)) from None
+            out["asset_id"] = aid
         for key in ("x", "y", "w", "h"):
             if key in o:
                 out[key] = _number(o[key], key, 0.1 if key in ("w", "h") else -4000)

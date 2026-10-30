@@ -1,0 +1,219 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "chemistry_template_titration",
+  "title": "酸碱滴定装置",
+  "source_text": "酸碱滴定装置",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Titrant",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"44\" y=\"8\" width=\"12\" height=\"65\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"73\" x2=\"50\" y2=\"89\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"37\" y1=\"70\" x2=\"64\" y2=\"70\" stroke=\"#C67F76\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"45\" y1=\"17\" x2=\"50\" y2=\"17\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"45\" y1=\"25\" x2=\"50\" y2=\"25\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"45\" y1=\"33\" x2=\"50\" y2=\"33\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"45\" y1=\"41\" x2=\"50\" y2=\"41\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"45\" y1=\"49\" x2=\"50\" y2=\"49\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"45\" y1=\"57\" x2=\"50\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_burette",
+          "label": "滴定管",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_burette",
+      "x": 45.0,
+      "y": 9.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Analyte + indicator",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M38 12 L62 12 L62 18 L58 18 L58 43 L83 79 Q88 89 75 90 L25 90 Q12 89 17 79 L42 43 L42 18 L38 18 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M27 67 L73 67 L82 81 Q84 85 75 85 L25 85 Q16 85 20 80 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"39\" y1=\"29\" x2=\"61\" y2=\"29\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_flask",
+          "label": "锥形瓶",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_flask",
+      "x": 45.0,
+      "y": 64.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Mixing",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"15\" y=\"65\" width=\"70\" height=\"22\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><ellipse cx=\"50\" cy=\"65\" rx=\"35\" ry=\"7\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"69\" cy=\"78\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><g transform=\"translate(16 -6) scale(.68)\"><path d=\"M20 15 L78 15 L73 25 L73 83 Q73 90 66 90 L29 90 Q22 90 22 83 L22 22 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M26 52 Q48 45 69 52 L69 82 Q69 85 64 85 L31 85 Q26 85 26 82 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"26\" y1=\"30\" x2=\"35\" y2=\"30\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"26\" y1=\"40\" x2=\"35\" y2=\"40\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"26\" y1=\"50\" x2=\"35\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"26\" y1=\"60\" x2=\"35\" y2=\"60\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"26\" y1=\"70\" x2=\"35\" y2=\"70\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></g></svg>",
+        "meta": {
+          "asset_id": "chemistry_stirrer",
+          "label": "磁力搅拌器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_stirrer",
+      "x": 113.0,
+      "y": 64.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Endpoint",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M50 6 C43 27 20 46 20 66 A30 29 0 0 0 80 66 C80 46 57 27 50 6 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M34 63 Q28 77 45 82\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "chemistry_droplet",
+          "label": "液滴",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "chemistry_droplet",
+      "x": 113.0,
+      "y": 9.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Add dropwise",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o2",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Mix",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o1",
+      "target": "o3",
+      "type": "sequence",
+      "label": "Detect endpoint",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "chemistry"
+  }
+}

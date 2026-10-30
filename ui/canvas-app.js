@@ -1,4 +1,5 @@
 import {setupDocumentWorkflows} from './document-workflows.js';
+import {setupDelivery} from './delivery-ui.js';
 import {setupAnnotations} from './annotation-ui.js';
 import {setupRelations,relationChoices} from './relation-ui.js';
 import {RELATION_DEFINITIONS} from './canvas-editor.js';
@@ -10,7 +11,7 @@ import {SceneEditor,sanitizedSvg} from './canvas-editor.js';
 const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,conflict:false,timer:null,reference:null,candidate:null,active:null};
 const ws=$('workspace');
-let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI;
+let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
 let toastTimer;function toast(message,error=false){$('toast').textContent=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
 async function api(path,body,method){const response=await fetch(path,{method:method||(body?'POST':'GET'),headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});const data=await response.json();if(!response.ok||data.ok===false){const error=new Error(data.error||'请求未完成');error.status=response.status;error.data=data;throw error;}return data;}
@@ -123,7 +124,7 @@ $('download-draft').onclick=()=>{if(!editor.scene)return;const url=URL.createObj
 $('reference-button').onclick=()=>$('reference-file').click();$('reference-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;if(file.size>10*1024*1024)return toast('参考图请小于 10 MB');$('reference-status').hidden=false;$('reference-status').textContent='正在分析构图…';try{const image=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(file);});const data=await api('/api/analyze-reference-deep',{image,text:$('brief-input').value});S.reference=data.style_dna;$('remove-reference').hidden=!S.reference;$('reference-status').textContent=S.reference.reference_summary||'构图参考已就绪';}catch(e){S.reference=null;$('reference-status').textContent=e.message;}};
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();flush();}if(e.key==='Escape')$('export-menu').hidden=true;});window.addEventListener('beforeunload',e=>{if(S.pending.length||S.saving){e.preventDefault();e.returnValue='';}});
 async function boot(){if(innerWidth<1440)ws.classList.add('left-collapsed');if(innerWidth<1500)ws.classList.add('properties-hidden');renderProperties();try{try{if(!location.hash)$('brief-input').value=localStorage.getItem('rylume-research-brief')||'';}catch{}updateCount();const data=await api('/api/scene/catalog');S.assets=data.assets||[];S.examples=data.examples||[];libraryUI.init(data);renderExamples();renderTools();await refreshJobs();const id=location.hash.slice(1);if(/^[A-Za-z0-9_-]+$/.test(id))await openJob(id);}catch(e){toast('连接本地服务失败：'+e.message,true);}}
-const libraryUI=setupLibrary({editor,api,state:S,toast,blank,flush,follow,tab});
+const libraryUI=setupLibrary({editor,api,state:S,toast,blank,flush,follow,tab,requestResource:pid=>deliveryUI.openResources(pid)});
 $('toggle-snap').onchange=e=>editor.snap=e.target.checked;
 $('duplicate').onclick=()=>editor.duplicateSelection();$('delete').onclick=()=>editor.deleteSelection();$('quick-connect').onclick=()=>{const objects=editor.scene?.objects.filter(o=>editor.selectedIds.includes(o.id))||[];if(objects.length===2){editor.connectSelection(editor.relationType);editor.setTool('select');}else editor.setTool('connect');};
 for(const b of document.querySelectorAll('.tool[aria-label]'))b.title=b.title||b.getAttribute('aria-label');
@@ -145,4 +146,5 @@ reviewUI=setupReview({state:S,editor,api,flush,toast,showRight:workspaceUI.showR
 $('open-check-toolbar').onclick=()=>workspaceUI.showRight('review',false);
 documentUI=setupDocumentWorkflows({state:S,editor,api,flush,toast,openJob,refreshJobs,follow});
 $('welcome-ai').onclick=()=>{tab('generate');$('brief-input').focus();};
-boot();
+deliveryUI=setupDelivery({api,toast,flush,state:S,reloadCatalog:async data=>{S.assets=data.assets;libraryUI.init(data);renderExamples();},openAssets:pid=>{tab('assets');libraryUI.selectDomain(pid);},openTemplates:pid=>libraryUI.openPackTemplates(pid)});
+boot().then(()=>deliveryUI.ready());

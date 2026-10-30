@@ -1,0 +1,623 @@
+{
+  "schema_version": 1,
+  "id": "earth-environment",
+  "version": "1.0.0",
+  "title": "地球与环境",
+  "domain": "earth-environment",
+  "min_app_version": "3.1.0",
+  "license": "CC0-1.0",
+  "assets": [
+    {
+      "id": "earth_environment_mountain",
+      "asset_id": "earth_environment_mountain",
+      "label": "山地",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mountain.svg",
+      "keywords": [
+        "mountain",
+        "山地",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "1f429aa3755fadab4a5db3be87444c8024ffcbe9b6be72c8cbde5b5710977f25"
+    },
+    {
+      "id": "earth_environment_river",
+      "asset_id": "earth_environment_river",
+      "label": "河流",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/river.svg",
+      "keywords": [
+        "river",
+        "河流",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "d24e62c628ea6290a3791e20f729245abfa12ecc1ce6c9e4a22457c5b398330d"
+    },
+    {
+      "id": "earth_environment_aquifer",
+      "asset_id": "earth_environment_aquifer",
+      "label": "含水层",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/aquifer.svg",
+      "keywords": [
+        "aquifer",
+        "含水层",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "a90ac3618c345df2f435cdf87e9880e1679dcc55278c8386d17cbbe89e961d2a"
+    },
+    {
+      "id": "earth_environment_soil",
+      "asset_id": "earth_environment_soil",
+      "label": "土壤剖面",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/soil.svg",
+      "keywords": [
+        "soil",
+        "土壤剖面",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "d8b3befcec18c7a8b9d3e7117dcfc1bcbb0afa3f6d363c68eb50049cc2d3ad8c"
+    },
+    {
+      "id": "earth_environment_cloud",
+      "asset_id": "earth_environment_cloud",
+      "label": "云",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/cloud.svg",
+      "keywords": [
+        "cloud",
+        "云",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "3e922d1c60c9efafe3c552fd734cc7f895971ef1c5b9f46f36aff0b243a85c0b"
+    },
+    {
+      "id": "earth_environment_rain",
+      "asset_id": "earth_environment_rain",
+      "label": "降水",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/rain.svg",
+      "keywords": [
+        "rain",
+        "降水",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "41a84020fd2d552dc7b3240a51f108fc24504b2321e668f6af8e38938ab88c0b"
+    },
+    {
+      "id": "earth_environment_sun",
+      "asset_id": "earth_environment_sun",
+      "label": "太阳",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/sun.svg",
+      "keywords": [
+        "sun",
+        "太阳",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "8e6b2f5e11944618d4566938ece15a9372b662e0f64f95f5d83fb08f82ecdc73"
+    },
+    {
+      "id": "earth_environment_volcano",
+      "asset_id": "earth_environment_volcano",
+      "label": "火山",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/volcano.svg",
+      "keywords": [
+        "volcano",
+        "火山",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "7938203db5ba4be0ae1bb7f767a12042c318776c0304594b9a3329e614e5e533"
+    },
+    {
+      "id": "earth_environment_tree",
+      "asset_id": "earth_environment_tree",
+      "label": "树木",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/tree.svg",
+      "keywords": [
+        "tree",
+        "树木",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "48c7eb3dbc7c3d6eb9ede9642d1dcf479e1b72ceaf3d1a0037dba166928576d2"
+    },
+    {
+      "id": "earth_environment_leaf",
+      "asset_id": "earth_environment_leaf",
+      "label": "叶片",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/leaf.svg",
+      "keywords": [
+        "leaf",
+        "叶片",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "71b3d5704604bb2491e04fb5bc144413979738ae8c17ba458ce48c0d720d5ad2"
+    },
+    {
+      "id": "earth_environment_wetland",
+      "asset_id": "earth_environment_wetland",
+      "label": "人工湿地",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/wetland.svg",
+      "keywords": [
+        "wetland",
+        "人工湿地",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "66c6edce2f5ce9341ba89fdd9b430569f38b95724b3610f1fad1dc70fe4fb8f7"
+    },
+    {
+      "id": "earth_environment_ocean",
+      "asset_id": "earth_environment_ocean",
+      "label": "海洋",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/ocean.svg",
+      "keywords": [
+        "ocean",
+        "海洋",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "7511ab2490a3ab6d311036833b500128f20078c451fec881f9649733ed58616e"
+    },
+    {
+      "id": "earth_environment_sediment",
+      "asset_id": "earth_environment_sediment",
+      "label": "沉积层",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/sediment.svg",
+      "keywords": [
+        "sediment",
+        "沉积层",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "0392c5cf8f1858c59cd499a00b21af42756889a1927ffd5da2825bb6102d8161"
+    },
+    {
+      "id": "earth_environment_glacier",
+      "asset_id": "earth_environment_glacier",
+      "label": "冰川",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/glacier.svg",
+      "keywords": [
+        "glacier",
+        "冰川",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "76727353edad68b3e3495742ec80adf4c6fe8eda953282e47f7b6049a80a0349"
+    },
+    {
+      "id": "earth_environment_watershed",
+      "asset_id": "earth_environment_watershed",
+      "label": "流域",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/watershed.svg",
+      "keywords": [
+        "watershed",
+        "流域",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "adb18054777996089a20c718f28ab7605b06b6f3da878f5d1dded31202f0346a"
+    },
+    {
+      "id": "earth_environment_pollutant",
+      "asset_id": "earth_environment_pollutant",
+      "label": "污染物",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/pollutant.svg",
+      "keywords": [
+        "pollutant",
+        "污染物",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "4dbc97dd710050e0a78198e1303cbd51b059b1cef3c86f9e8fc82bbe206f0999"
+    },
+    {
+      "id": "earth_environment_station",
+      "asset_id": "earth_environment_station",
+      "label": "环境监测站",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/station.svg",
+      "keywords": [
+        "station",
+        "环境监测站",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "87a506d6a68304fac2ff94ba5bb1f3e8e8be5d3511320d621db6a343935d6ef5"
+    },
+    {
+      "id": "earth_environment_satellite",
+      "asset_id": "earth_environment_satellite",
+      "label": "遥感卫星",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/satellite.svg",
+      "keywords": [
+        "satellite",
+        "遥感卫星",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "44605ae2345418ceee079b9f771c9c8ef82c1867253048cb88c80f248842cfc6"
+    },
+    {
+      "id": "earth_environment_database",
+      "asset_id": "earth_environment_database",
+      "label": "数据库",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/database.svg",
+      "keywords": [
+        "database",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "3f4561e69e150b33e96d43d68180a29caec8f82a4cf4fe42b846423bf1d5bfa9"
+    },
+    {
+      "id": "earth_environment_mesh",
+      "asset_id": "earth_environment_mesh",
+      "label": "计算网格",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mesh.svg",
+      "keywords": [
+        "mesh",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "a58febb8c95a1bdfa0191dcd38c1175fd93abff6bf9afdee55e548292af438f5"
+    }
+  ],
+  "templates": [
+    {
+      "id": "earth_environment_template_water_cycle",
+      "title": "流域水循环",
+      "description": "Atmosphere · Upland · Surface runoff · Receiving water · Groundwater",
+      "file": "templates/water_cycle.scene.json",
+      "thumbnail": "previews/water_cycle.svg",
+      "thumbnail_single": "previews/water_cycle-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Atmosphere",
+        "Upland",
+        "Surface runoff",
+        "Receiving water",
+        "Groundwater"
+      ],
+      "keywords": [
+        "地球与环境",
+        "流域水循环"
+      ],
+      "object_count": 5,
+      "relation_count": 6,
+      "object_labels": [
+        "Atmosphere",
+        "Upland",
+        "Surface runoff",
+        "Receiving water",
+        "Groundwater"
+      ]
+    },
+    {
+      "id": "earth_environment_template_carbon_cycle",
+      "title": "陆地碳交换",
+      "description": "Atmospheric carbon · Vegetation · Soil carbon · River transport · Aquatic carbon",
+      "file": "templates/carbon_cycle.scene.json",
+      "thumbnail": "previews/carbon_cycle.svg",
+      "thumbnail_single": "previews/carbon_cycle-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Atmospheric carbon",
+        "Vegetation",
+        "Soil carbon",
+        "River transport",
+        "Aquatic carbon"
+      ],
+      "keywords": [
+        "地球与环境",
+        "陆地碳交换"
+      ],
+      "object_count": 5,
+      "relation_count": 6,
+      "object_labels": [
+        "Atmospheric carbon",
+        "Vegetation",
+        "Soil carbon",
+        "River transport",
+        "Aquatic carbon"
+      ]
+    },
+    {
+      "id": "earth_environment_template_remediation",
+      "title": "湿地污染物去除",
+      "description": "Contaminated inflow · Treatment wetland · Treated outflow · Sediment retention · Plant uptake",
+      "file": "templates/remediation.scene.json",
+      "thumbnail": "previews/remediation.svg",
+      "thumbnail_single": "previews/remediation-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Contaminated inflow",
+        "Treatment wetland",
+        "Treated outflow",
+        "Sediment retention",
+        "Plant uptake"
+      ],
+      "keywords": [
+        "地球与环境",
+        "湿地污染物去除"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "Contaminated inflow",
+        "Treatment wetland",
+        "Treated outflow",
+        "Sediment retention",
+        "Plant uptake"
+      ]
+    },
+    {
+      "id": "earth_environment_template_earth_observation",
+      "title": "多源环境观测",
+      "description": "Remote sensing · In situ station · Study catchment · Aligned observations · Spatial model",
+      "file": "templates/earth_observation.scene.json",
+      "thumbnail": "previews/earth_observation.svg",
+      "thumbnail_single": "previews/earth_observation-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Remote sensing",
+        "In situ station",
+        "Study catchment",
+        "Aligned observations",
+        "Spatial model"
+      ],
+      "keywords": [
+        "地球与环境",
+        "多源环境观测"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "Remote sensing",
+        "In situ station",
+        "Study catchment",
+        "Aligned observations",
+        "Spatial model"
+      ]
+    }
+  ]
+}

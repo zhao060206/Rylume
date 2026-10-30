@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "id": "computing-math",
+  "version": "1.0.0",
+  "title": "计算机与数学",
+  "domain": "computing-math",
+  "min_app_version": "3.1.0",
+  "license": "CC0-1.0",
+  "assets": [
+    {
+      "id": "computing_math_database",
+      "asset_id": "computing_math_database",
+      "label": "数据库",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/database.svg",
+      "keywords": [
+        "database",
+        "数据库",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "3f4561e69e150b33e96d43d68180a29caec8f82a4cf4fe42b846423bf1d5bfa9"
+    },
+    {
+      "id": "computing_math_server",
+      "asset_id": "computing_math_server",
+      "label": "服务器",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/server.svg",
+      "keywords": [
+        "server",
+        "服务器",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "70504842c57c6e8b136224a47375c7e3d7166d515d739e648c49ef572701a8c5"
+    },
+    {
+      "id": "computing_math_neuron",
+      "asset_id": "computing_math_neuron",
+      "label": "神经元",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/neuron.svg",
+      "keywords": [
+        "neuron",
+        "神经元",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "f85b093dcd7aac917c97b90d119a47d8d747407cd48b7d254373d991dc8aa241"
+    },
+    {
+      "id": "computing_math_network",
+      "asset_id": "computing_math_network",
+      "label": "图网络",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/network.svg",
+      "keywords": [
+        "network",
+        "图网络",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "a23d53a88e0157e09ff30278e03f5dc822b3af3a22bddfd1151913f64efb3d89"
+    },
+    {
+      "id": "computing_math_tree_graph",
+      "asset_id": "computing_math_tree_graph",
+      "label": "树结构",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/tree_graph.svg",
+      "keywords": [
+        "tree_graph",
+        "树结构",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "561038049d90de36c9ca0361537339174c66c7fa6b229d63e42f13d725182b1f"
+    },
+    {
+      "id": "computing_math_tensor",
+      "asset_id": "computing_math_tensor",
+      "label": "张量",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/tensor.svg",
+      "keywords": [
+        "tensor",
+        "张量",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "af7d5c64c75f89e0a121dfc09ad833e40876d63121ec89343387e678c101fe15"
+    },
+    {
+      "id": "computing_math_matrix",
+      "asset_id": "computing_math_matrix",
+      "label": "矩阵",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/matrix.svg",
+      "keywords": [
+        "matrix",
+        "矩阵",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "c5955386d6d6f359faadb2571b1f7ce138313dc34ec0ebe4cbd35e994d416ea6"
+    },
+    {
+      "id": "computing_math_embedding",
+      "asset_id": "computing_math_embedding",
+      "label": "特征嵌入",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/embedding.svg",
+      "keywords": [
+        "embedding",
+        "特征嵌入",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "179a87263f449b0afd89cc80113524d962f48d0c3b7891f1e4a5c4e7a8ccdd69"
+    },
+    {
+      "id": "computing_math_gpu",
+      "asset_id": "computing_math_gpu",
+      "label": "计算加速器",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/gpu.svg",
+      "keywords": [
+        "gpu",
+        "计算加速器",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "c6777f7f6cad95b8cb76e6b24359a3a8207fdb7b41ed0e87cc104535b362f431"
+    },
+    {
+      "id": "computing_math_dataset",
+      "asset_id": "computing_math_dataset",
+      "label": "数据集",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/dataset.svg",
+      "keywords": [
+        "dataset",
+        "数据集",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "afa065e884f9d03883ed57808de3bc82e18a7d4bfa6425be058e8b8e1e679b9c"
+    },
+    {
+      "id": "computing_math_loss",
+      "asset_id": "computing_math_loss",
+      "label": "损失函数",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/loss.svg",
+      "keywords": [
+        "loss",
+        "损失函数",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "22b67c77dcd95ff998ef192c5e40840dea32d67940fdc18dc0155f3a5fa2d86c"
+    },
+    {
+      "id": "computing_math_optimizer",
+      "asset_id": "computing_math_optimizer",
+      "label": "优化器",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/optimizer.svg",
+      "keywords": [
+        "optimizer",
+        "优化器",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "75c73d92257ed7347e0c8a65f8c61174abda0b11c510a5760c0768e7b07a6693"
+    },
+    {
+      "id": "computing_math_decision",
+      "asset_id": "computing_math_decision",
+      "label": "判定节点",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/decision.svg",
+      "keywords": [
+        "decision",
+        "判定节点",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "c8b14daeb6362ddda0381372e8148022e3f5249737588e1961b798c947967d9a"
+    },
+    {
+      "id": "computing_math_mesh",
+      "asset_id": "computing_math_mesh",
+      "label": "计算网格",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mesh.svg",
+      "keywords": [
+        "mesh",
+        "计算网格",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "a58febb8c95a1bdfa0191dcd38c1175fd93abff6bf9afdee55e548292af438f5"
+    },
+    {
+      "id": "computing_math_field",
+      "asset_id": "computing_math_field",
+      "label": "向量场",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/field.svg",
+      "keywords": [
+        "field",
+        "向量场",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "ff724b6afd248e29d09c807795b6e8fac9725a1175bbeee14c937f6b09e9b920"
+    },
+    {
+      "id": "computing_math_code",
+      "asset_id": "computing_math_code",
+      "label": "计算程序",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/code.svg",
+      "keywords": [
+        "code",
+        "计算程序",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "1ee276c02fe472366e048ccb4b363484f7113b44811df431c17184b30c288105"
+    },
+    {
+      "id": "computing_math_split",
+      "asset_id": "computing_math_split",
+      "label": "数据划分",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/split.svg",
+      "keywords": [
+        "split",
+        "数据划分",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "2b675056cc34908b18825cf17c69a8e56efca6e15b873b35ff31408419dd9e02"
+    },
+    {
+      "id": "computing_math_chip",
+      "asset_id": "computing_math_chip",
+      "label": "处理芯片",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chip.svg",
+      "keywords": [
+        "chip",
+        "处理芯片",
+        "计算机与数学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+      "modifications": "Original vector artwork.",
+      "sha256": "d95f811dcdc70976eb7396b97b8dcbebec4313b1f65b85af78a9dfba28583eff"
+    }
+  ],
+  "templates": [
+    {
+      "id": "computing_math_template_training",
+      "title": "训练、验证与优化",
+      "description": "Dataset · Data split · Training model · Validation loss · Parameter update",
+      "file": "templates/training.scene.json",
+      "thumbnail": "previews/training.svg",
+      "thumbnail_single": "previews/training-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Dataset",
+        "Data split",
+        "Training model",
+        "Validation loss",
+        "Parameter update"
+      ],
+      "keywords": [
+        "计算机与数学",
+        "训练、验证与优化"
+      ],
+      "object_count": 5,
+      "relation_count": 6,
+      "object_labels": [
+        "Dataset",
+        "Data split",
+        "Training model",
+        "Validation loss",
+        "Parameter update"
+      ]
+    },
+    {
+      "id": "computing_math_template_message_passing",
+      "title": "图网络消息传递",
+      "description": "Input graph · Node features · Aggregation · Graph embedding",
+      "file": "templates/message_passing.scene.json",
+      "thumbnail": "previews/message_passing.svg",
+      "thumbnail_single": "previews/message_passing-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Input graph",
+        "Node features",
+        "Aggregation",
+        "Graph embedding"
+      ],
+      "keywords": [
+        "计算机与数学",
+        "图网络消息传递"
+      ],
+      "object_count": 4,
+      "relation_count": 4,
+      "object_labels": [
+        "Input graph",
+        "Node features",
+        "Aggregation",
+        "Graph embedding"
+      ]
+    },
+    {
+      "id": "computing_math_template_simulation",
+      "title": "数值模拟与验证",
+      "description": "Geometry and mesh · Solver · Computed field · Boundary conditions · Convergence check",
+      "file": "templates/simulation.scene.json",
+      "thumbnail": "previews/simulation.svg",
+      "thumbnail_single": "previews/simulation-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Geometry and mesh",
+        "Solver",
+        "Computed field",
+        "Boundary conditions",
+        "Convergence check"
+      ],
+      "keywords": [
+        "计算机与数学",
+        "数值模拟与验证"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "Geometry and mesh",
+        "Solver",
+        "Computed field",
+        "Boundary conditions",
+        "Convergence check"
+      ]
+    },
+    {
+      "id": "computing_math_template_reproducibility",
+      "title": "可复现计算流程",
+      "description": "Versioned input · Pinned program · Execution environment · Result artifacts · Provenance",
+      "file": "templates/reproducibility.scene.json",
+      "thumbnail": "previews/reproducibility.svg",
+      "thumbnail_single": "previews/reproducibility-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Versioned input",
+        "Pinned program",
+        "Execution environment",
+        "Result artifacts",
+        "Provenance"
+      ],
+      "keywords": [
+        "计算机与数学",
+        "可复现计算流程"
+      ],
+      "object_count": 5,
+      "relation_count": 6,
+      "object_labels": [
+        "Versioned input",
+        "Pinned program",
+        "Execution environment",
+        "Result artifacts",
+        "Provenance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "materials_template_membrane",
+  "title": "多孔膜选择性传输",
+  "source_text": "多孔膜选择性传输",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Feed particles",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"29\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"40\" cy=\"39\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"61\" cy=\"49\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"45\" cy=\"65\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "materials_particle",
+          "label": "纳米颗粒",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "materials_particle",
+      "x": 17.0,
+      "y": 25.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Selective membrane",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"37\" y=\"8\" width=\"26\" height=\"84\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"21\" r=\"6\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"40\" r=\"6\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"59\" r=\"6\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"78\" r=\"6\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"8\" y1=\"30\" x2=\"33\" y2=\"30\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"8\" y1=\"66\" x2=\"33\" y2=\"66\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"67\" y1=\"30\" x2=\"91\" y2=\"30\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"67\" y1=\"66\" x2=\"91\" y2=\"66\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "materials_membrane",
+          "label": "多孔膜",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "materials_membrane",
+      "x": 76.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Retentate",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"29\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"40\" cy=\"39\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"61\" cy=\"49\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"45\" cy=\"65\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "materials_particle",
+          "label": "纳米颗粒",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "materials_particle",
+      "x": 17.0,
+      "y": 83.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Permeate",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M50 6 C43 27 20 46 20 66 A30 29 0 0 0 80 66 C80 46 57 27 50 6 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M34 63 Q28 77 45 82\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "materials_droplet",
+          "label": "液滴",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "materials_droplet",
+      "x": 138.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Feed",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "Retain",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o1",
+      "target": "o3",
+      "type": "sequence",
+      "label": "Permeate",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "materials"
+  }
+}

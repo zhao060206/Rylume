@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "id": "medicine",
+  "version": "1.0.0",
+  "title": "医学",
+  "domain": "medicine",
+  "min_app_version": "3.1.0",
+  "license": "CC0-1.0",
+  "assets": [
+    {
+      "id": "medicine_heart",
+      "asset_id": "medicine_heart",
+      "label": "心脏",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/heart.svg",
+      "keywords": [
+        "heart",
+        "心脏",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "0233316f6b8f387e73e761cd27f0a661b7fc023d82d9ba535525c9cef5272b72"
+    },
+    {
+      "id": "medicine_lung",
+      "asset_id": "medicine_lung",
+      "label": "肺",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/lung.svg",
+      "keywords": [
+        "lung",
+        "肺",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "98f6ede48d4d0767610e58a4b5ce03a0e1112acd3b91f48c02c396b587d261b3"
+    },
+    {
+      "id": "medicine_brain",
+      "asset_id": "medicine_brain",
+      "label": "脑",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/brain.svg",
+      "keywords": [
+        "brain",
+        "脑",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "16efc988a6fb0dfcc7ac1955ef72ee691a802009e4a1663be926690488aefab5"
+    },
+    {
+      "id": "medicine_kidney",
+      "asset_id": "medicine_kidney",
+      "label": "肾脏",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/kidney.svg",
+      "keywords": [
+        "kidney",
+        "肾脏",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "59dd045245923df4f398370f73ea01e2486b0cfad234cf68018147292f15a259"
+    },
+    {
+      "id": "medicine_liver",
+      "asset_id": "medicine_liver",
+      "label": "肝脏",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/liver.svg",
+      "keywords": [
+        "liver",
+        "肝脏",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "fec7badd5488647192b10e46611e4d6a069c94066736767abc02d6eee80b58c7"
+    },
+    {
+      "id": "medicine_vessel",
+      "asset_id": "medicine_vessel",
+      "label": "血管",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/vessel.svg",
+      "keywords": [
+        "vessel",
+        "血管",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "c5e590b85bda839e7ad9d227c7a8fd637d6f9964bee572edd94d2f8523e4bbd6"
+    },
+    {
+      "id": "medicine_capillary",
+      "asset_id": "medicine_capillary",
+      "label": "毛细血管",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/capillary.svg",
+      "keywords": [
+        "capillary",
+        "毛细血管",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "e4d9ecf2c9a565ec8260238f106d6e70cde54efe2e90e8f7ba8bbd6fc880de4c"
+    },
+    {
+      "id": "medicine_syringe",
+      "asset_id": "medicine_syringe",
+      "label": "注射器",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/syringe.svg",
+      "keywords": [
+        "syringe",
+        "注射器",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "0c12118e6bb0cd5241a746cdd5eac718ab5d13760824b89ef65805d1a4fbc5ce"
+    },
+    {
+      "id": "medicine_tablet",
+      "asset_id": "medicine_tablet",
+      "label": "药片",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/tablet.svg",
+      "keywords": [
+        "tablet",
+        "药片",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "37edcd4a6cd7d0edf186ff4ed1d9a581635e6fbb9025ab5db212da4e6b4cd5c2"
+    },
+    {
+      "id": "medicine_ultrasound",
+      "asset_id": "medicine_ultrasound",
+      "label": "超声设备",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/ultrasound.svg",
+      "keywords": [
+        "ultrasound",
+        "超声设备",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "2958d00ca2f4753d2277b17cff4268aa5f9eea5e2c360720cbb18f76854a7bd3"
+    },
+    {
+      "id": "medicine_mri",
+      "asset_id": "medicine_mri",
+      "label": "磁共振设备",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mri.svg",
+      "keywords": [
+        "mri",
+        "磁共振设备",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "4f23ef6bf7991efea30aafda83968d36992c59a62d1bf3a9e8e0a58a3f5129ce"
+    },
+    {
+      "id": "medicine_ecg",
+      "asset_id": "medicine_ecg",
+      "label": "心电图示意",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/ecg.svg",
+      "keywords": [
+        "ecg",
+        "心电图示意",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "dfe6840063aa89905787e047250a1107d3d21ae1912c5b8b6e4705fedf345a33"
+    },
+    {
+      "id": "medicine_patient",
+      "asset_id": "medicine_patient",
+      "label": "患者",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/patient.svg",
+      "keywords": [
+        "patient",
+        "患者",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "6552ca096ba32b3705ab491ef034d83d94dbb117634c64404ac0cd2387074af0"
+    },
+    {
+      "id": "medicine_hospital",
+      "asset_id": "medicine_hospital",
+      "label": "医院",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/hospital.svg",
+      "keywords": [
+        "hospital",
+        "医院",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "dcf8bd684ed1ccaaaad840b288e120537d354cad8bc1bd6c0ba3f243d07f267e"
+    },
+    {
+      "id": "medicine_stethoscope",
+      "asset_id": "medicine_stethoscope",
+      "label": "听诊器",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/stethoscope.svg",
+      "keywords": [
+        "stethoscope",
+        "听诊器",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "fa15245439641d4602025c0ba19bf40cf787c84ba6bc522ee7c07526563bc3bd"
+    },
+    {
+      "id": "medicine_biomarker",
+      "asset_id": "medicine_biomarker",
+      "label": "生物标志物",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/biomarker.svg",
+      "keywords": [
+        "biomarker",
+        "生物标志物",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "7dacf93a94016369260151542b01f2f6ff5cc11c3f8e47b609d285d0bedfb56a"
+    },
+    {
+      "id": "medicine_cohort",
+      "asset_id": "medicine_cohort",
+      "label": "研究队列",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/cohort.svg",
+      "keywords": [
+        "cohort",
+        "研究队列",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "c07b72ba0814b18b14a47713b152770db8b8e17fba86d8b5b2647391b751ef19"
+    },
+    {
+      "id": "medicine_iv",
+      "asset_id": "medicine_iv",
+      "label": "输液装置",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/iv.svg",
+      "keywords": [
+        "iv",
+        "输液装置",
+        "医学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+      "modifications": "Original vector artwork.",
+      "sha256": "feb5934e8398b0d5d273fe4a832f2cfb50ec7a179d5f6f9b5aaa112dd3406862"
+    }
+  ],
+  "templates": [
+    {
+      "id": "medicine_template_trial",
+      "title": "随机对照试验流程",
+      "description": "Eligible cohort · Random allocation · Intervention group · Control group · Prespecified endpoint",
+      "file": "templates/trial.scene.json",
+      "thumbnail": "previews/trial.svg",
+      "thumbnail_single": "previews/trial-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Eligible cohort",
+        "Random allocation",
+        "Intervention group",
+        "Control group",
+        "Prespecified endpoint"
+      ],
+      "keywords": [
+        "医学",
+        "随机对照试验流程"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "Eligible cohort",
+        "Random allocation",
+        "Intervention group",
+        "Control group",
+        "Prespecified endpoint"
+      ]
+    },
+    {
+      "id": "medicine_template_distribution",
+      "title": "药物分布与清除",
+      "description": "Administration · Circulation · Target tissue · Metabolism · Excretion",
+      "file": "templates/distribution.scene.json",
+      "thumbnail": "previews/distribution.svg",
+      "thumbnail_single": "previews/distribution-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Administration",
+        "Circulation",
+        "Target tissue",
+        "Metabolism",
+        "Excretion"
+      ],
+      "keywords": [
+        "医学",
+        "药物分布与清除"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "Administration",
+        "Circulation",
+        "Target tissue",
+        "Metabolism",
+        "Excretion"
+      ]
+    },
+    {
+      "id": "medicine_template_gas_exchange",
+      "title": "肺部气体交换",
+      "description": "Alveolar compartment · Pulmonary capillary · Systemic circulation · Venous return",
+      "file": "templates/gas_exchange.scene.json",
+      "thumbnail": "previews/gas_exchange.svg",
+      "thumbnail_single": "previews/gas_exchange-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Alveolar compartment",
+        "Pulmonary capillary",
+        "Systemic circulation",
+        "Venous return"
+      ],
+      "keywords": [
+        "医学",
+        "肺部气体交换"
+      ],
+      "object_count": 4,
+      "relation_count": 5,
+      "object_labels": [
+        "Alveolar compartment",
+        "Pulmonary capillary",
+        "Systemic circulation",
+        "Venous return"
+      ]
+    },
+    {
+      "id": "medicine_template_imaging",
+      "title": "影像采集与判读",
+      "description": "Participant · Imaging acquisition · Reconstructed image · Quantitative feature · Clinical review",
+      "file": "templates/imaging.scene.json",
+      "thumbnail": "previews/imaging.svg",
+      "thumbnail_single": "previews/imaging-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "Participant",
+        "Imaging acquisition",
+        "Reconstructed image",
+        "Quantitative feature",
+        "Clinical review"
+      ],
+      "keywords": [
+        "医学",
+        "影像采集与判读"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "Participant",
+        "Imaging acquisition",
+        "Reconstructed image",
+        "Quantitative feature",
+        "Clinical review"
+      ]
+    }
+  ]
+}

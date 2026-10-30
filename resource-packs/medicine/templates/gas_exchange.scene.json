@@ -1,0 +1,251 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "medicine_template_gas_exchange",
+  "title": "肺部气体交换",
+  "source_text": "肺部气体交换",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Alveolar compartment",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M44 30 C34 12 25 17 18 33 L9 70 Q8 88 34 84 L43 74 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M56 30 C66 12 75 17 82 33 L91 70 Q92 88 66 84 L57 74 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M48 9 L48 42 L30 58 M52 9 L52 42 L71 58\" fill=\"none\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"29\" y1=\"59\" x2=\"21\" y2=\"72\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"71\" y1=\"59\" x2=\"80\" y2=\"72\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "medicine_lung",
+          "label": "肺",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "medicine_lung",
+      "x": 25.0,
+      "y": 23.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Pulmonary capillary",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5 22 C45 22 22 79 95 79 M5 42 C35 42 32 59 95 59\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"18\" cy=\"33\" r=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"44\" cy=\"50\" r=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"74\" cy=\"69\" r=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "medicine_capillary",
+          "label": "毛细血管",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "medicine_capillary",
+      "x": 100.0,
+      "y": 23.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Systemic circulation",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M50 86 C43 80 11 62 14 38 C16 15 39 15 49 34 C59 6 88 15 88 40 C87 60 65 76 50 86 Z\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M48 33 L42 60 L56 65 L55 80\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M54 29 L57 9 L71 10 L69 31\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "medicine_heart",
+          "label": "心脏",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "medicine_heart",
+      "x": 100.0,
+      "y": 80.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "Venous return",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5 30 Q30 48 48 35 T95 30 L95 68 Q70 50 50 65 T5 68 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><ellipse cx=\"18\" cy=\"49\" rx=\"7\" ry=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><ellipse cx=\"43\" cy=\"49\" rx=\"7\" ry=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><ellipse cx=\"69\" cy=\"49\" rx=\"7\" ry=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><ellipse cx=\"88\" cy=\"49\" rx=\"7\" ry=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "medicine_vessel",
+          "label": "血管",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "medicine_vessel",
+      "x": 25.0,
+      "y": 80.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Oxygen diffusion",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto",
+      "control": {
+        "x": 72.0,
+        "y": 54.5
+      }
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o0",
+      "type": "sequence",
+      "label": "Carbon dioxide diffusion",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto",
+      "control": {
+        "x": 72.0,
+        "y": 14.5
+      }
+    },
+    {
+      "id": "r2",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "Oxygenated blood",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "Tissue exchange",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r4",
+      "source": "o3",
+      "target": "o1",
+      "type": "sequence",
+      "label": "Return",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "medicine"
+  }
+}
