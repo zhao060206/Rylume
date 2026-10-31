@@ -36,7 +36,7 @@ export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,ref
   $('download-draft').onclick=download;
   const file=el('input');file.type='file';file.accept='.json,.scene.json,application/json';file.hidden=true;file.id='import-scene-file';document.body.append(file);
   file.onchange=async()=>{try{const selected=file.files[0];if(!selected)return;if(selected.size>24*1024*1024)throw Error('可编辑文件请小于 24 MB');const value=JSON.parse(await selected.text());if(!await flush()&&state.revision)throw Error('请先保存当前图版，或另存未保存的修改');await independentCopy(value.scene||value);}catch(e){toast('导入未完成：'+e.message,true);}finally{file.value='';}};
-  const menu=document.querySelector('.app-menu .menu-items');
+  const menu=$('file-menu-items')||document.querySelector('.app-menu .menu-items');
   const info=dialog('图版名称与分类'),name=el('input'),collection=el('input');name.maxLength=120;collection.maxLength=60;name.setAttribute('aria-label','图版名称');collection.setAttribute('aria-label','图版分类');
   const labelName=el('label','settings-field','图版名称'),labelCollection=el('label','settings-field','分类（可选）');labelName.append(name);labelCollection.append(collection);info.append(labelName,labelCollection);
   info.append(button('保存图版信息',async()=>{if(!await flush())return;const id=state.id;await api('/api/jobs/'+id+'/document-info',{base_revision:state.revision,title:name.value,collection:collection.value});info.close();await refreshJobs();await openJob(id);},true));

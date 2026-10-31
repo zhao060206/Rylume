@@ -51,6 +51,8 @@ def dispatch(handler,method,path,app):
         elif path=='/api/updates/health' and method=='POST':
             acknowledge(app.DATA_DIR,getattr(app,'UPDATE_PLAN',None),getattr(app,'UPDATE_NONCE',None));result={'ok':True}
         elif path=='/api/updates/apply' and method=='POST':
+            import personal_assets
+            if personal_assets.manager(app.DATA_DIR).active:raise DeliveryError('请先完成或取消素材矢量化，再重启更新')
             import annotation_service
             if annotation_service._ACTIVE:raise DeliveryError('请先等待或取消批注修改任务，再重启更新')
             with app.JOBS_LOCK:

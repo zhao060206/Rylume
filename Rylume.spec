@@ -4,6 +4,10 @@ from PyInstaller.utils.hooks import collect_all, collect_data_files, copy_metada
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path.cwd()))
+from release_notes import history
+from product_identity import PRODUCT_VERSION
+if not any(r['version'] == PRODUCT_VERSION and r['items'] for r in history()):
+    raise ValueError('每次发布必须先在 CHANGELOG.md 写明当前版本的变更日志')
 # Research reference images require individual publication/license verification.
 # Only reviewed scientific art is distributed; research downloads stay local.
 datas = [(str(file), 'vendor') for file in Path('vendor').glob('*.py')]
@@ -19,6 +23,8 @@ hiddenimports += ['figure_assets', 'figure_generation', 'figure_references', 'sc
 hiddenimports += ['sketch_layout']
 hiddenimports += ['document_conversion', 'document_advisor', 'document_assistant', 'onboarding_state']
 hiddenimports += ['annotation_redraw']
+hiddenimports += ['personal_assets', 'release_notes']
+datas += [('CHANGELOG.md', '.')]
 # MarkItDown detects local files with Magika's ONNX data. PDFMiner requires CMaps.
 # Keep optional online/audio converters inactive; legacy Office uses local LibreOffice.
 for package in ('markitdown', 'magika', 'pdfminer', 'mammoth', 'markdownify', 'openpyxl', 'docx', 'pptx'):

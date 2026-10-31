@@ -1,7 +1,7 @@
 /** Load every dependency before switching documents; the latest request wins. */
 export function latestDocumentLoader({canLeave,load,apply,onError,readVersion=()=>null}){
  let epoch=0;
- return async function open(id,{isCurrent=()=>true}={}){
+ const open=async function(id,{isCurrent=()=>true}={}){
   const request=++epoch,current=()=>request===epoch&&isCurrent();
   try{
    if(!await canLeave()||!current())return false;
@@ -17,4 +17,6 @@ export function latestDocumentLoader({canLeave,load,apply,onError,readVersion=()
    throw Error('图版仍在持续修改，请完成当前编辑后重新打开');
   }catch(error){if(current())onError(error);return false;}
  };
+ open.cancel=()=>{epoch++;};
+ return open;
 }

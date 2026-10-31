@@ -29,3 +29,8 @@ let lessonActive=true;const delayedLesson=deferred();let lessonOpened=false;
 const openLesson=latestDocumentLoader({canLeave:async()=>true,load:()=>delayedLesson.promise,apply(){lessonOpened=true;},onError(){throw Error('Cancelled loads should not show errors');}});
 const lesson=openLesson('practice',{isCurrent:()=>lessonActive});await Promise.resolve();lessonActive=false;delayedLesson.resolve('practice');
 assert.equal(await lesson,false);assert.equal(lessonOpened,false,'Dismissing a guide while its document loads keeps the current document');
+
+const slowStartup=deferred();let initialApplied=false;
+const restoreInitial=latestDocumentLoader({canLeave:async()=>true,load:()=>slowStartup.promise,apply(){initialApplied=true;},onError(){throw Error('Explicit home navigation should cancel quietly');}});
+const startup=restoreInitial('previous-document');await Promise.resolve();restoreInitial.cancel();slowStartup.resolve('previous-document');
+assert.equal(await startup,false);assert.equal(initialApplied,false,'A late startup response cannot replace an explicitly opened home screen');

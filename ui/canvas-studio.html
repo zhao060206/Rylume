@@ -20,6 +20,7 @@
   <link href="/ui/document-assistant.css" rel="stylesheet"/>
   <link href="/ui/floating-windows.css" rel="stylesheet"/>
   <link href="/ui/quick-edit-toolbar.css" rel="stylesheet"/>
+  <link href="/ui/product-ui.css" rel="stylesheet"/>
  </head>
  <body>
   <svg aria-hidden="true" class="icon-defs">
@@ -149,7 +150,7 @@
      <summary>
       文件
      </summary>
-     <div class="menu-items">
+     <div class="menu-items" id="file-menu-items">
       <button id="process-create">
        生成图版
       </button>
@@ -681,7 +682,7 @@
     </div>
     <div class="welcome" id="welcome">
      <div class="start-document">
-      <div class="home-heading"><div><span class="start-eyebrow">理象 · Rylume</span><h2>今天想画什么？</h2><p class="home-intro">写下要画的内容，点击生成；也可以从下方模板或空白画布开始。</p></div><button class="button" hidden id="return-to-document">返回当前图版</button></div>
+      <div class="home-heading"><div><span class="start-eyebrow">理象 · Rylume</span><h2>从想法，到清晰的图。</h2><p class="home-intro">写下你想画的内容，生成后可以直接拖动、改字和连线。</p></div><button class="button" hidden id="return-to-document">返回当前图版</button></div>
       <div id="home-composer-host" class="home-composer-host"></div>
       <div class="home-start-links"><button type="button" id="welcome-gallery"><svg class="icon"><use href="#layers"></use></svg>从模板开始</button><button type="button" id="welcome-blank"><svg class="icon"><use href="#plus"></use></svg>打开空白画布</button><button type="button" id="welcome-example"><svg class="icon"><use href="#icon-journal"></use></svg>试着编辑示例图</button><button type="button" id="welcome-ai" hidden>开始 AI 创作</button></div>
       <div class="home-ai-note"><span>模板和手动绘图可离线使用。</span><button class="text-button" id="empty-model-settings">设置 AI 服务</button></div>

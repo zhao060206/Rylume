@@ -1,4 +1,6 @@
 import {setupFloatingWindows} from './floating-windows.js';
+import {setupPersonalAssets} from './personal-assets.js';
+import {setupReleaseNotes} from './release-notes.js';
 import {setupDocumentAssistant} from './document-assistant.js';
 import {setupOnboarding} from './onboarding.js';
 import {setupWorkspaceNavigation} from './workspace-navigation.js';
@@ -21,6 +23,7 @@ import {setupLibrary} from './library-ui.js';
 import {SceneEditor,sanitizedSvg} from './canvas-editor.js';
 const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,conflict:false,timer:null,reference:null,candidate:null,active:null};
+let startupNavigationCancelled=false;
 const ws=$('workspace');
 const floatingWindows=setupFloatingWindows();
 new MutationObserver(()=>syncPanelButtons(ws)).observe(ws,{attributes:true,attributeFilter:['class']});
@@ -63,7 +66,7 @@ const loadDocument=latestDocumentLoader({canLeave,readVersion:()=>S.id+':'+S.rev
  await documentUI?.opened(data);if(!current())return;
  await generationOpened;if(!current())return;noviceUI?.opened(data);modesUI?.opened();
 }});
-async function openJob(id,options){composerUI?.leavingHome();return loadDocument(id,options);}
+async function openJob(id,options){startupNavigationCancelled=true;composerUI?.leavingHome();return loadDocument(id,options);}
 async function openLegacy(job,svg=''){
   editor.clear();annotationUI?.load(null);S.id=job.id;S.currentJob=job;S.revision=0;S.pending=[];S.audit=null;S.svg='';S.conflict=false;
   const host=$('canvas-host');host.classList.add('legacy-preview');
@@ -212,7 +215,7 @@ $('confirm-author').onclick=async()=>{if(!S.revision||!await flush())return;awai
 $('download-draft').onclick=()=>{if(!editor.scene)return;const url=URL.createObjectURL(new Blob([JSON.stringify(editor.scene,null,2)],{type:'application/json'})),a=el('a');a.href=url;a.download=(S.id||'figure')+'-draft.scene.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};$('reload-scene').onclick=()=>{if(!confirm('请先保存本地草稿。重新载入将显示服务器上已保存的修订。'))return;S.pending=[];S.conflict=false;openJob(S.id);};
 // reference handled by generationUI
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();flush();}if(e.key==='Escape'&&$('export-menu').open)$('export-menu').close();});window.addEventListener('beforeunload',e=>{if(S.pending.length||S.saving){e.preventDefault();e.returnValue='';}});
-async function boot(){ws.classList.add('left-collapsed','properties-hidden');syncPanelButtons(ws);renderProperties();try{try{if(!location.hash)$('brief-input').value=localStorage.getItem('rylume-research-brief')||'';}catch{}updateCount();const data=await api('/api/scene/catalog');S.assets=data.assets||[];S.examples=data.examples||[];libraryUI.init(data);renderExamples();renderTools();await refreshJobs();const id=location.hash.slice(1);if(/^[A-Za-z0-9_-]+$/.test(id))await openJob(id);return true;}catch(e){toast('连接本地服务失败：'+e.message,true);return false;}}
+async function boot(){ws.classList.add('left-collapsed','properties-hidden');syncPanelButtons(ws);renderProperties();try{try{if(!location.hash)$('brief-input').value=localStorage.getItem('rylume-research-brief')||'';}catch{}updateCount();const data=await api('/api/scene/catalog');S.assets=data.assets||[];S.examples=data.examples||[];libraryUI.init(data);renderExamples();renderTools();await refreshJobs();const id=location.hash.slice(1);if(!startupNavigationCancelled&&/^[A-Za-z0-9_-]+$/.test(id))await openJob(id);return true;}catch(e){toast('连接本地服务失败：'+e.message,true);return false;}}
 const libraryUI=setupLibrary({editor,api,state:S,toast,blank,flush,follow,tab,requestResource:pid=>deliveryUI.openResources(pid)});
 $('toggle-snap').onchange=e=>editor.snap=e.target.checked;
 $('duplicate').onclick=()=>editor.duplicateSelection();$('delete').onclick=()=>editor.deleteSelection();$('quick-connect').onclick=()=>{const objects=editor.scene?.objects.filter(o=>editor.selectedIds.includes(o.id))||[];if(objects.length===2){editor.connectSelection(editor.relationType);editor.setTool('select');}else editor.setTool('connect');};
@@ -242,6 +245,10 @@ modesUI=setupWorkspaceModes({editor,state:S,tab,showRight:name=>workspaceUI.show
 generationUI=setupGenerationWorkflow({state:S,editor,api,flush,follow,canLeave,workspace:workspaceUI,checkModels:mode=>documentUI.checkModels(mode),toast,tab});
 composerUI=setupCreationComposer({state:S,toast,workflow:generationUI,workspace:workspaceUI});
 navigationUI=setupWorkspaceNavigation({state:S,editor,api,openJob,follow,tab,toast});
+// A slow startup must not reopen the last document over an explicit new start.
+$('open-start').addEventListener('click',()=>{startupNavigationCancelled=true;loadDocument.cancel();},{capture:true});
 documentsUI=setupDocumentAssistant({state:S,editor,api,toast,composer:composerUI});
 onboardingUI=setupOnboarding({state:S,editor,api,flush,canLeave,openJob,refreshJobs,tab,toast});
-boot().then(async ok=>{if(ok){await onboardingUI.ready();deliveryUI.ready();}});
+const personalUI=setupPersonalAssets({api,toast,library:libraryUI,state:S});
+const releaseUI=setupReleaseNotes({api,toast});
+boot().then(async ok=>{if(ok){await onboardingUI.ready();deliveryUI.ready();releaseUI.ready();}});

@@ -12,6 +12,8 @@ def library():
     result={item['asset_id']: item for item in json.loads(path.read_text(encoding='utf8'))} if path.exists() else {}
     from resource_packs import manager
     result.update(manager().assets())
+    from personal_assets import manager as personal_store
+    result.update(personal_store(manager().data_dir).catalog())
     return result
 
 @lru_cache(maxsize=256)

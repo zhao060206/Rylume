@@ -2,13 +2,21 @@
 
 本机科研图形工作台。把科研描述整理为对象、关系和区室，在矢量画布中直接编辑，再导出到论文或 PowerPoint。
 
-![Rylume 创作入口](docs/home-3.8.png)
+![Rylume 创作入口](docs/ui-4.4-home.png)
 
 ## 下载与启动
 
-在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-4.3.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
+在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-4.4.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
 
 也可以运行 `启动理象.cmd`。内置模板、素材和直接编辑可离线使用；AI 生成、批注修改和视觉审查需要在「设置 → 模型设置」中配置你自己的兼容服务。
+
+## 4.4：自己的素材，与统一的工作台
+
+从首页「导入素材」或绘图台「添加素材 → 上传素材」上传 PNG、JPG、WebP 图片，可按学科和自定义分类保存在「我的素材」。高保真矢量化使用原始像素生成贝塞尔路径，可选择调用自配模型分析轮廓和颜色、复核转换结果。原图与候选并排显示，点击「确认并加入素材库」后才能重复插入图版；转换失败、取消和重试都保留原始文件。素材图片原有文字会转曲，可另添独立文字。
+
+首页、图版导航、顶部工具、属性、素材、模板、文档助手、批注、设置与导出统一使用简洁的视觉规范。选择对象不会挤动画布，素材确认操作固定在窗口底部，浮窗仍可移动、缩放和收起恢复。
+
+每次升级在角落说明新增和改进，「设置 → 更新日志」可离线查看完整历史；构建要求当前版本具有非空变更记录。详见 [素材导入与 UI 验收](docs/UI-AND-ASSETS-4.4.md)。
 
 ## 学科资源与更新
 
