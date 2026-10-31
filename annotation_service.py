@@ -100,7 +100,7 @@ def _revision(body,key='base_revision',zero=False):
 
 
 def _start(app,job,repo,body):
-    from annotation_planner import normalize_notes, propose_annotations
+    from annotation_planner import normalize_notes, propose_annotations, recheck_annotations
     from scene_service import queues
     from scene_render import render_scene
     request_id=str(body.get('request_id') or '')
@@ -112,18 +112,27 @@ def _start(app,job,repo,body):
         if note_revision!=notes_doc['annotation_revision']:raise RevisionConflict('批注已变化，请先保存最新批注')
         notes=normalize_notes(scene,notes_doc['notes'])
         if not notes:raise SceneError('请先添加至少一条批注')
-        fingerprint=hashlib.sha256(json.dumps([base,note_revision,notes],sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+        retry_run_id=body.get('retry_run_id')
+        fingerprint=hashlib.sha256(json.dumps([base,note_revision,notes,retry_run_id],sort_keys=True,ensure_ascii=False).encode()).hexdigest()
         prior=_runs(repo,limit=None)
         for old in prior:
             if old.get('request_id')==request_id:
                 if old.get('fingerprint')!=fingerprint:raise RevisionConflict('相同提交标识不能用于不同批注')
                 return _public_run(old,True)
         if any(r['status'] in ('queued','running') for r in prior):raise RevisionConflict('这张图已有批注修改任务，请先等待或取消')
+        previous=None
+        if retry_run_id:
+            previous=_run(repo,retry_run_id)
+            if previous.get('status')!='completed' or previous.get('applied_revision') or previous.get('base_revision')!=base or previous.get('annotation_revision')!=note_revision:
+                raise RevisionConflict('原图或批注已变化，不能重新核验旧候选，请重新提交要求')
+            if previous.get('candidate',{}).get('pending_image_requests') or not previous.get('candidate',{}).get('operations'):
+                raise SceneError('这个候选尚没有可核验的修改')
         run_id='a_'+uuid.uuid4().hex[:16];path=_run_path(repo,run_id)
         run={'id':run_id,'status':'queued','stage':'queued','message':'已排队；当前图版保持原样',
              'created_at':time.time(),'base_revision':base,'annotation_revision':note_revision,'notes':notes,
              'request_id':request_id,'fingerprint':fingerprint,'session':_SESSION,'max_rounds':3,'round':0,
              'before_svg':render_scene(scene)}
+        if retry_run_id:run['retry_run_id']=retry_run_id
         _atomic_json(path,run)
         cancelled=threading.Event();key=(str(repo.root),run_id)
         with _ACTIVE_LOCK:_ACTIVE[key]={'cancelled':cancelled}
@@ -139,9 +148,13 @@ def _start(app,job,repo,body):
         def worker():
             try:
                 if cancelled.is_set():raise InterruptedError('已取消')
-                progress(stage='planning',message='正在逐项理解批注并规划修改')
-                candidate=propose_annotations(copy.deepcopy(scene),copy.deepcopy(notes),config,
-                    on_progress=progress,cancelled=cancelled.is_set,max_rounds=3)
+                if previous:
+                    progress(stage='verifying',message='正在重新核验已有候选，不会重新生图')
+                    candidate=recheck_annotations(copy.deepcopy(scene),copy.deepcopy(notes),copy.deepcopy(previous['candidate']),config,cancelled=cancelled.is_set)
+                else:
+                    progress(stage='planning',message='正在逐项理解批注并规划修改')
+                    candidate=propose_annotations(copy.deepcopy(scene),copy.deepcopy(notes),config,
+                        on_progress=progress,cancelled=cancelled.is_set,max_rounds=3)
                 with repo.lock:
                     current=_run(repo,run_id)
                     if cancelled.is_set() or current['status']=='cancelled':raise InterruptedError('已取消')

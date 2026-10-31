@@ -1,7 +1,8 @@
 """Scoped multi-note editing with independent verification. Never writes HEAD."""
 from __future__ import annotations
-import base64,copy,json,math,re
+import base64,copy,io,json,math,re
 import fitz
+from PIL import Image
 import pipeline
 import scene_planner
 from scene_document import SceneError,normalize_scene,apply_operations,audit_scene
@@ -164,7 +165,7 @@ def _changed(before,after):
     old={o['id']:o for o in before['objects']+before['relations']}
     return {o['id'] for o in after['objects']+after['relations'] if o!=old.get(o['id'])}
 
-def _image(scene,notes):
+def _image(scene,notes,max_bytes=100_000):
     svg=render_scene(scene);overlay=[]
     for i,n in enumerate(notes,1):
         if n['shape']=='whole':continue
@@ -172,7 +173,72 @@ def _image(scene,notes):
         attrs=(f'cx="{n["x"]+n["w"]/2}" cy="{n["y"]+n["h"]/2}" rx="{n["w"]/2}" ry="{n["h"]/2}"' if tag=='ellipse' else f'x="{n["x"]}" y="{n["y"]}" width="{n["w"]}" height="{n["h"]}"')
         overlay.append(f'<{tag} {attrs} fill="none" stroke="#C65D37" stroke-width=".5"/><text x="{n["x"]+1}" y="{n["y"]+3}" font-family="Arial" font-size="3" fill="#A74027">{i}</text>')
     with fitz.open(stream=svg.replace('</svg>',''.join(overlay)+'</svg>').encode(),filetype='svg') as doc:
-        with fitz.open('pdf',doc.convert_to_pdf()) as pdf:return base64.b64encode(pdf[0].get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).tobytes('png')).decode('ascii')
+        with fitz.open('pdf',doc.convert_to_pdf()) as pdf:
+            page=pdf[0];width,height=page.rect.width,page.rect.height
+            scale=min(1.5,1400/max(width,height),math.sqrt(1_800_000/(width*height)))
+            pix=page.get_pixmap(matrix=fitz.Matrix(scale,scale),alpha=False)
+            picture=Image.frombytes('RGB',(pix.width,pix.height),pix.samples)
+    # Some compatible gateways count data URLs as text tokens. Bound each image
+    # in bytes as well as pixels, while keeping the saved figure untouched.
+    for _ in range(6):
+        for quality in (82,72,60,48,36):
+            out=io.BytesIO();picture.save(out,'JPEG',quality=quality,optimize=True)
+            if out.tell()<=max_bytes:return 'data:image/jpeg;base64,'+base64.b64encode(out.getvalue()).decode('ascii')
+        picture.thumbnail((max(1,int(picture.width*.75)),max(1,int(picture.height*.75))),Image.Resampling.LANCZOS)
+    raise SceneError('预览图片过于复杂，无法缩小至核验服务可接受的大小。请缩小批注范围后重试。')
+
+
+def _review_context(before,after,notes,operations):
+    payload={'notes':notes,'before':scene_planner.scene_for_model(before),'after':scene_planner.scene_for_model(after),'operations':operations}
+    def encode():return json.dumps(payload,ensure_ascii=False,separators=(',',':'))
+    result=encode()
+    if len(result.encode('utf8'))<=220_000:return result
+    relevant=set().union(*(set(resolve_note_targets(before,n)) for n in notes),{o.get('id') for o in operations})
+    for r in before['relations']:
+        if r['id'] in relevant or r['source'] in relevant or r['target'] in relevant:
+            relevant.update((r['id'],r['source'],r['target']))
+    object_fields={'id','type','role','label','state','compartment','x','y','w','h','rotation','visible','locked','artwork'}
+    relation_fields={'id','source','target','type','label','indirect','uncertain'}
+    for key in ('before','after'):
+        s=payload[key]
+        for field in ('generation_contract','provenance','annotations','unresolved','requirements'):s.pop(field,None)
+        s['objects']=[o if o['id'] in relevant else {k:v for k,v in o.items() if k in object_fields} for o in s['objects']]
+        s['relations']=[r if r['id'] in relevant else {k:v for k,v in r.items() if k in relation_fields} for r in s['relations']]
+    payload['context_note']='背景对象仅提供身份、位置和连接摘要；批注范围及实际修改保留完整属性。证据不足时不得标记通过。'
+    result=encode()
+    if len(result.encode('utf8'))>220_000:raise SceneError('图版或批注内容太多，无法安全提交核验。请缩小圈选范围，分批修改；原图和候选均已保留。')
+    return result
+
+
+def _context_overflow(exc):
+    return bool(re.search(r'input token count|context.{0,30}(?:length|window|limit|exceed|maximum)|(?:token|input).{0,40}(?:limit|exceed|maximum|too long)|too many tokens|HTTP 413',str(exc),re.I))
+
+
+def _planning_context(scene,notes,scopes,capabilities,feedback):
+    payload={'scene':scene_planner.scene_for_model(scene),'notes':notes,'scopes':scopes,'image_capabilities':capabilities,'previous_feedback':feedback}
+    def encode():return json.dumps(payload,ensure_ascii=False,separators=(',',':'))
+    result=encode()
+    if len(result.encode('utf8'))<=220_000:return result
+    compact=json.loads(_review_context(scene,scene,notes,[]))
+    payload['scene']=compact['before'];payload['context_note']=compact.get('context_note','')
+    result=encode()
+    if len(result.encode('utf8'))>220_000:raise SceneError('图版或批注内容太多，请缩小圈选范围，分批提交；原图和批注均已保留。')
+    return result
+
+
+def _review_error(exc):
+    if _context_overflow(exc):return '核验内容超过模型容量；已尝试缩小预览。请缩小批注范围或更换可用模型，然后重新核验。'
+    if isinstance(exc,SceneError):return str(exc)[:500]
+    return '核验服务暂时不可用。请检查模型设置或网络，然后重新核验；已有候选和原图均保留。'
+
+
+def _requires_image_review(check,mode):
+    if check['status']!='verified':return False
+    if mode=='structure_and_text':return True
+    # Some gateways return text-only evidence even to an image request. Do not
+    # treat an explicit admission that pixels could not be assessed as visual proof.
+    evidence=check.get('evidence','')+' '+check.get('message','')
+    return bool(re.search(r'(?:无法|不能|未能|不)(?:查看|判断|核对|验证|确认|评估).{0,10}(?:视觉|纹理|像素|插画|图像|图片)|(?:no|without).{0,12}(?:visual|image|pixel)',evidence,re.I))
 
 def _review(before,after,notes,operations,config):
     instruction=('你是独立科研图修改核验者。生成器的自报不是证据。逐条对比原始要求、原图、候选与实际属性变化。'
@@ -182,15 +248,20 @@ def _review(before,after,notes,operations,config):
     readable_ops=copy.deepcopy(operations)
     for op in readable_ops:
         if 'illustration' in op.get('changes',{}):op['changes']['illustration']={'sha256':op['changes']['illustration']['sha256'],'kind':'generated-raster'}
-    context=json.dumps({'notes':notes,'before':scene_planner.scene_for_model(before),'after':scene_planner.scene_for_model(after),'operations':readable_ops},ensure_ascii=False);vision=config.get('vision') or {}
+    context=_review_context(before,after,notes,readable_ops);vision=config.get('vision') or {}
+    data=None;mode=None
     if vision.get('base_url') and vision.get('model'):
-        content=[{'type':'text','text':instruction+'\n框号对应批注顺序，第一张为原图，第二张为候选。\n'+context},
-            {'type':'image_url','image_url':{'url':'data:image/png;base64,'+_image(before,notes)}},{'type':'image_url','image_url':{'url':'data:image/png;base64,'+_image(after,notes)}}]
-        req={'model':vision['model'],'temperature':0,'max_tokens':3000,'messages':[{'role':'user','content':content}]}
-        if 'deepseek' in vision['model'].lower():req['thinking']={'type':'disabled'}
-        response=pipeline._post_json(pipeline._endpoint(vision['base_url'],'/chat/completions'),pipeline._api_key(vision),req,timeout=90)
-        data=pipeline._json_object(response['choices'][0]['message']['content']);mode='vision_and_structure'
-    else:
+        for budget in (100_000,35_000):
+            content=[{'type':'text','text':instruction+'\n框号对应批注顺序，第一张为原图，第二张为候选。图像细节看不清时请标记需要人工核对。\n'+context},
+                {'type':'image_url','image_url':{'url':_image(before,notes,budget)}},{'type':'image_url','image_url':{'url':_image(after,notes,budget)}}]
+            req={'model':vision['model'],'temperature':0,'max_tokens':3000,'messages':[{'role':'user','content':content}]}
+            if 'deepseek' in vision['model'].lower():req['thinking']={'type':'disabled'}
+            try:
+                response=pipeline._post_json(pipeline._endpoint(vision['base_url'],'/chat/completions'),pipeline._api_key(vision),req,timeout=90)
+                data=pipeline._json_object(response['choices'][0]['message']['content']);mode='vision_and_structure';break
+            except Exception as exc:
+                if not _context_overflow(exc):raise
+    if data is None:
         text_contract=('没有提供图像，只能核对结构和文字，不得声称视觉已验收。'
             '若批注涉及插画重绘，这个通道的status仅评价可编辑的文字、结构、对象身份及未涉及区域是否保持；'
             '像素细节将单独要求作者查看原图与候选后确认。结构和文字完全满足可标verified，但证据必须说明只核对了结构，不能声称看见了纹理。'
@@ -231,7 +302,7 @@ def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max
             '用户明确要求重绘插画时必须提出对应主体的redraw_requests，不能用文字/颜色补丁冒充完成。'
             '不能执行的要求如实说明，不可用无关的颜色或字号变化充数。')
         try:
-            data,_=scene_planner._request(config,[{'role':'system','content':system},{'role':'user','content':json.dumps({'scene':scene_planner.scene_for_model(original),'notes':notes,'scopes':scopes,'image_capabilities':image_capabilities,'previous_feedback':feedback},ensure_ascii=False)}],max_tokens=5500)
+            data,_=scene_planner._request(config,[{'role':'system','content':system},{'role':'user','content':_planning_context(original,notes,scopes,image_capabilities,feedback)}],max_tokens=5500)
             cancel();operations=data.get('operations',[])
             if not isinstance(operations,list) or any('illustration' in op.get('changes',{}) for op in operations if isinstance(op,dict)):
                 raise SceneError('规划器不得直接提交插画数据；请使用局部重绘请求')
@@ -264,11 +335,14 @@ def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max
             proposed=validate_candidate_operations(original,notes,operations,image_authorizations=auth) if operations else copy.deepcopy(original)
             if not _changed(original,proposed):raise SceneError('候选没有实际改变图版')
         except InterruptedError:raise
-        except Exception as exc:attempts.append(dict(round=round_no,stage='planning',error=str(exc)[:1000]));feedback=[{'error':str(exc)[:1000]}];continue
+        except Exception as exc:
+            attempts.append(dict(round=round_no,stage='planning',error=_review_error(exc) if _context_overflow(exc) else str(exc)[:1000]));feedback=[{'error':attempts[-1]['error']}]
+            if _context_overflow(exc) or isinstance(exc,SceneError) and '内容太多' in str(exc):break
+            continue
         progress('verifying',f'第 {round_no}/{max_rounds} 轮：独立核对逐条要求',round_no)
         try:checks,mode=_review(original,proposed,notes,operations,config);cancel()
         except InterruptedError:raise
-        except Exception as exc:checks=[dict(note_id=n['id'],status='needs_review',message='独立核验未完成，不能确认已满足',evidence=str(exc)[:500]) for n in notes];mode='unavailable'
+        except Exception as exc:checks=[dict(note_id=n['id'],status='needs_review',message='独立核验未完成，不能确认已满足',evidence=_review_error(exc)) for n in notes];mode='unavailable'
         changed_images={r['object_id'] for r in records}
         image_notes={nid for r in records for nid in r['note_ids']}
         for check in checks:
@@ -278,15 +352,15 @@ def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max
                 check.update(status='unfulfilled',message='批注要求重绘，但没有得到有效的新插画；原图保留',evidence='没有对应的已完成生图记录')
             if image_errors and any(r['object_id'] in scopes[note['id']] for r in requests):
                 check.update(status='unfulfilled',message='插画重绘未完整满足要求',evidence='；'.join(dict.fromkeys(image_errors)))
-            elif note['id'] in image_notes and mode=='structure_and_text' and check['status']=='verified':
-                check.update(status='needs_review',reason_code='image_requires_visual_review',message='插画已重绘；本轮仅核对了结构与文字，请对照画面确认内部细节',evidence='生图返回与原图不同；未配置视觉核验模型，不能声称像素内容已自动验收')
+            elif note['id'] in image_notes and _requires_image_review(check,mode):
+                check.update(status='needs_review',reason_code='image_requires_visual_review',message='插画已重绘；请对照画面确认内部细节',evidence='核验没有提供足够的视觉依据，不能声称像素内容已自动验收')
         score=sum(c['status']=='verified' for c in checks);summary=data.get('summary') or ['请对比图版与逐条核验结果']
         if isinstance(summary,str):summary=[summary]
         result=dict(base_revision=original['revision'],operations=operations,preview_scene=proposed,preview_svg=render_scene(proposed),summary=[str(v)[:1000] for v in summary[:30]],
             checks=checks,rounds=round_no,can_apply=score==len(notes),verification=dict(mode=mode,all_verified=score==len(notes),verified=score,total=len(notes),scope_checked=True,attempts=copy.deepcopy(attempts)))
-        result.update(image_results=records,image_error='；'.join(dict.fromkeys(image_errors)),manual_visual_review_allowed=bool(records) and not image_errors and all(c['status']=='verified' or c.get('reason_code')=='image_requires_visual_review' for c in checks))
+        result.update(image_results=records,image_error='；'.join(dict.fromkeys(image_errors)),manual_visual_review_allowed=bool(records) and not image_errors and all(c['status']=='verified' or (c['status']=='needs_review' and c.get('reason_code')=='image_requires_visual_review') for c in checks))
         if best is None or score>=best[0]:best=(score,result)
-        if score==len(notes) or result['manual_visual_review_allowed'] or image_errors:break
+        if score==len(notes) or result['manual_visual_review_allowed'] or image_errors or mode=='unavailable':break
         feedback=checks
     cancel()
     if best:
@@ -294,3 +368,33 @@ def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max
     return dict(base_revision=original['revision'],operations=[],preview_scene=original,preview_svg=render_scene(original),summary=['没有获得可安全应用的候选，原图保留。'],
         checks=[dict(note_id=n['id'],status='unfulfilled',message='未得到符合范围和结构约束的修改',evidence=attempts[-1]['error'] if attempts else '') for n in notes],rounds=round_no,can_apply=False,
         image_results=[],image_error='；'.join(dict.fromkeys(failed_images.values())),verification=dict(mode='unavailable',all_verified=False,attempts=attempts))
+
+
+def recheck_annotations(scene,notes,candidate,config,*,cancelled=None):
+    """Reassess an existing candidate without planning, redrawing or modifying HEAD."""
+    import annotation_redraw as redraw
+    original=normalize_scene(copy.deepcopy(scene));notes=normalize_notes(original,notes)
+    if candidate.get('pending_image_requests') or not candidate.get('operations'):raise SceneError('此候选尚无可核验的修改')
+    scopes={n['id']:resolve_note_targets(original,n) for n in notes}
+    records=candidate.get('image_results') or []
+    auth=redraw.authorizations(original,notes,scopes,records)
+    operations=copy.deepcopy(candidate['operations'])
+    proposed=validate_candidate_operations(original,notes,operations,image_authorizations=auth)
+    if cancelled and cancelled():raise InterruptedError('已取消')
+    try:checks,mode=_review(original,proposed,notes,operations,config)
+    except Exception as exc:
+        checks=[dict(note_id=n['id'],status='needs_review',message='独立核验未完成，不能确认已满足',evidence=_review_error(exc)) for n in notes];mode='unavailable'
+    if cancelled and cancelled():raise InterruptedError('已取消')
+    old={c['note_id']:c for c in candidate.get('checks',[]) if c.get('status')=='unfulfilled'}
+    image_notes={nid for r in records for nid in r['note_ids']}
+    for index,check in enumerate(checks):
+        if check['note_id'] in old:
+            checks[index]=copy.deepcopy(old[check['note_id']]);continue
+        if check['note_id'] in image_notes and _requires_image_review(check,mode):
+            check.update(status='needs_review',reason_code='image_requires_visual_review',message='插画已重绘；请对照画面确认内部细节',evidence='核验没有提供足够的视觉依据，不能声称像素内容已自动验收')
+    score=sum(c['status']=='verified' for c in checks);image_error=candidate.get('image_error') or ''
+    result=copy.deepcopy(candidate)
+    result.update(preview_scene=proposed,preview_svg=render_scene(proposed),checks=checks,rounds=1,can_apply=score==len(notes) and not image_error,
+        manual_visual_review_allowed=bool(records) and not image_error and all(c['status']=='verified' or (c['status']=='needs_review' and c.get('reason_code')=='image_requires_visual_review') for c in checks),
+        verification=dict(mode=mode,all_verified=score==len(notes) and not image_error,verified=score,total=len(notes),scope_checked=True,rechecked=True))
+    return result

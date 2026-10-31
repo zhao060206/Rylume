@@ -67,6 +67,23 @@ def test_failed_model_and_interrupted_run_keep_notes_and_original(studio,monkeyp
     repo=repository(app_server,job);path=annotation_service._run_path(repo,rid);run=json.loads(path.read_text(encoding="utf8"));run.update(status='running',session='old-session');path.write_text(json.dumps(run))
     _,res=studio(base+'/annotation-runs?run_id='+rid);assert res['run']['status']=='interrupted'
 
+
+def test_recheck_existing_candidate_uses_no_planning_or_new_images_and_rejects_stale(studio,monkeypatch):
+    calls=[]
+    def plan(*a,**kw):
+        calls.append('planning');result=fake_plan(*a,**kw)
+        result.update(can_apply=False,checks=[dict(note_id='n1',status='needs_review',message='模型上下文超限')]);return result
+    monkeypatch.setattr(annotation_planner,'propose_annotations',plan)
+    monkeypatch.setattr(annotation_planner,'_review',lambda *a,**kw:([dict(note_id='n1',status='verified',message='核对通过',evidence='已比较修改前后文字')],'structure_and_text'))
+    _,base,original,n=prepare(studio);rid=start(studio,base);first=wait(studio,base,rid)
+    assert not first['candidate']['can_apply']
+    code,value=studio(base+'/annotation-runs',dict(base_revision=1,annotation_revision=1,request_id='recheck_12345678',retry_run_id=rid))
+    assert code==200,value
+    rerun=wait(studio,base,value['run']['id']);assert rerun['candidate']['can_apply'] and calls==['planning']
+    _,unchanged=studio(base+'/scene');assert unchanged['scene']==original['scene']
+    code,applied=studio(base+'/annotation-apply',dict(run_id=rerun['id'],base_revision=1));assert code==200 and applied['revision']==2
+    code,_=studio(base+'/annotation-runs',dict(base_revision=2,annotation_revision=1,request_id='recheck_stale_123',retry_run_id=rid));assert code==409
+
 def test_pending_apply_metadata_recovers_after_commit(studio,monkeypatch):
     monkeypatch.setattr(annotation_planner,'propose_annotations',fake_plan)
     job,base,data,n=prepare(studio);rid=start(studio,base);run=wait(studio,base,rid)
