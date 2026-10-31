@@ -1,9 +1,10 @@
 import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
+import {setupUpdateDock,newerRelease} from './update-dock.js';
 /** Deliberate downloads; a restart is requested only after saving the current work. */
 export function byteSize(n){if(!Number.isFinite(n)||n<0)return '—';return n<1024*1024?`${Math.max(1,Math.round(n/1024))} KB`:`${(n/1024/1024).toFixed(1)} MB`;}
 export function packAction(p){const s=p.task?.state;if(['queued','downloading','validating','installing'].includes(s))return 'cancel';if(!p.compatible)return 'upgrade';if(p.update_available)return 'update';if(p.installed_version)return 'use';return 'install';}
 export const busyUpdate=s=>['checking','downloading','validating','installing'].includes(s);
-export const showUpdateNotice=(u,dismissed)=>!!u?.latest_version&&['available','downloading','validating','ready','failed','cancelled'].includes(u.state)&&dismissed!==u.latest_version;
+export const showUpdateNotice=u=>newerRelease(u);
 export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,openTemplates}){
   const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;};
   const dialog=el('dialog','delivery-dialog');dialog.id='delivery-dialog';dialog.setAttribute('aria-labelledby','delivery-title');
@@ -24,13 +25,12 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   const reminder=el('p','muted small','自动检查只查询公开版本信息。下载由你发起；文件校验通过后才能替换程序。任务与模型配置保存在本机数据目录。');
   updatePage.append(versionTitle,versionNote,updateProgress,updateStatus,updateActions,notes,reminder);
   dialog.append(head,tabs,resourcePage,updatePage);document.body.append(dialog);setupFloatingWindows(dialog);
-  const notice=el('aside','update-corner');notice.hidden=true;notice.setAttribute('aria-live','polite');
-  const noticeHead=el('div','update-corner-head'),noticeTitle=el('strong'),noticeClose=el('button','icon-button','×');noticeClose.type='button';noticeClose.setAttribute('aria-label','稍后提醒');noticeClose.title='稍后提醒';noticeHead.append(noticeTitle,noticeClose);
-  const noticeText=el('p'),noticeActions=el('div','update-corner-actions'),noticePrimary=el('button','button primary'),noticeDetails=el('button','text-button','查看详情');noticeActions.append(noticePrimary,noticeDetails);notice.append(noticeHead,noticeText,noticeActions);document.body.append(notice);
-  let dismissedVersion='';try{dismissedVersion=localStorage.getItem('rylume-dismissed-update')||'';}catch{}
-  noticeClose.onclick=()=>{dismissedVersion=update?.latest_version||'';try{localStorage.setItem('rylume-dismissed-update',dismissedVersion);}catch{}notice.hidden=true;};
-  noticeDetails.onclick=()=>{showView('updates');showFloatingWindow(dialog);loadUpdate();schedule();};
-  noticePrimary.onclick=()=>{if(update?.state==='ready')apply.click();else if(update?.state==='available'||update?.state==='failed'||update?.state==='cancelled')download.click();};
+  const updateDock=setupUpdateDock({openUpdate(){
+    showView('updates');showFloatingWindow(dialog);notes.open=true;
+    if(update?.state==='ready'&&update.can_apply)apply.click();
+    else if(['available','failed','cancelled'].includes(update?.state)&&update.latest_version)download.click();
+    else if(!update?.latest_version)check.click();else loadUpdate();schedule();
+  }});
   const top=el('button','text-button delivery-entry','资源与更新');top.id='open-delivery';top.title='下载学科素材与模板，检查软件更新';
   const models=document.getElementById('open-settings')||document.querySelector('header button[title]');
   const settingsMenu=document.getElementById('settings-menu-items');
@@ -91,9 +91,7 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
     notes.hidden=!update.notes;notesText.textContent=update.notes||'';
     top.textContent=['available','downloading','validating','ready'].includes(s)?'发现新版本 · '+update.latest_version:'资源与更新';top.classList.toggle('has-update',['available','ready'].includes(s));
     document.querySelector('.settings-menu')?.classList.toggle('has-update',['available','ready'].includes(s));
-    const showNotice=showUpdateNotice(update,dismissedVersion);
-    notice.hidden=!showNotice;
-    if(showNotice){noticeTitle.textContent=s==='ready'?'更新已准备好':s==='downloading'||s==='validating'?'正在准备更新':s==='failed'?'更新未完成':`发现新版本 ${update.latest_version}`;noticeText.textContent=update.error||[update.message,s==='downloading'?`${Math.round(update.progress||0)}%`:''].filter(Boolean).join(' · ')||'可选择下载，保存后重启更新。';noticePrimary.hidden=['downloading','validating'].includes(s)||(s==='ready'&&!update.can_apply);noticePrimary.textContent=s==='ready'?'保存并重启':s==='failed'||s==='cancelled'?'重试下载':'下载新版';}
+    updateDock.render(update);
     if(lastState!==s&&manualCheck&&s==='up_to_date')toast('当前已是最新版本');lastState=s;
   }
   async function loadUpdate(){try{update=await api('/api/updates');renderUpdate();}catch(e){updateStatus.textContent=e.message;}}

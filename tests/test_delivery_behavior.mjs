@@ -7,8 +7,10 @@ assert.equal(packAction({compatible:true,installed_version:'1.0.0',update_availa
 assert.equal(packAction({compatible:true,task:{state:'downloading'}}),'cancel');
 assert.equal(busyUpdate('validating'),true);assert.equal(busyUpdate('ready'),false);
 assert.equal(showUpdateNotice({state:'available',latest_version:'4.3.0'},''),true);
-assert.equal(showUpdateNotice({state:'available',latest_version:'4.3.0'},'4.3.0'),false);
+assert.equal(showUpdateNotice({state:'available',latest_version:'4.3.0'},'4.3.0'),true,'An old dismissal cannot hide a persistent update entry');
 assert.equal(showUpdateNotice({state:'available',latest_version:'4.4.0'},'4.3.0'),true);
-assert.equal(showUpdateNotice({state:'checking',latest_version:'4.3.0'},''),false);
+assert.equal(showUpdateNotice({state:'checking',latest_version:'4.3.0'},''),true);
+assert.equal(showUpdateNotice({state:'available',current_version:'4.4.1',latest_version:'4.4.1'}),false);
+assert.equal(showUpdateNotice({state:'available',current_version:'4.4.1',latest_version:'4.4.0'}),false);
 assert.equal(showUpdateNotice({state:'failed'},''),false);
 console.log('Delivery states, installed package actions, sizes and update safety checks passed');

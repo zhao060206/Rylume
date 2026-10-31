@@ -6,7 +6,7 @@
 
 ## 下载与启动
 
-在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-4.4.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
+在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-4.4.1-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
 
 也可以运行 `启动理象.cmd`。内置模板、素材和直接编辑可离线使用；AI 生成、批注修改和视觉审查需要在「设置 → 模型设置」中配置你自己的兼容服务。
 
@@ -19,6 +19,8 @@
 每次升级在角落说明新增和改进，「设置 → 更新日志」可离线查看完整历史；构建要求当前版本具有非空变更记录。详见 [素材导入与 UI 验收](docs/UI-AND-ASSETS-4.4.md)。
 
 ## 学科资源与更新
+
+发现新版本时，左下角常驻「点击更新」入口。悬停或键盘聚焦可查看目标版本的本次日志；点击开始下载，完成校验后再点击「重启更新」。日志预览支持移入鼠标滚动、Esc 收起；收起左栏后仍保留更新图标。没有新版本时不显示。
 
 「设置 → 资源与更新」按需从 GitHub 安装化学、物理、材料、工程、地球环境、计算机与数学和医学资源。首批 134 个原创素材、28 个可编辑模板；生物库继续内置。图版保存素材快照，卸载包后仍可编辑和导出。
 

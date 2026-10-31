@@ -2,4 +2,18 @@
 
 .delivery-dialog{overflow:hidden}.delivery-dialog>.dialog-heading,.delivery-dialog>.delivery-tabs{flex-shrink:0}.delivery-page{overflow:auto;min-height:0;max-height:calc(88vh - 170px);padding-right:5px}
 
-.update-corner{position:fixed;right:18px;bottom:18px;width:min(320px,calc(100vw - 36px));padding:14px 16px;background:#fff;border:1px solid #d7e0dc;border-radius:10px;box-shadow:0 10px 32px #1c302922;z-index:80;color:#273a32;font-size:13px}.update-corner[hidden]{display:none}.update-corner-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.update-corner-head strong{font-size:14px}.update-corner p{line-height:1.5;margin:8px 0 12px;color:#60736a}.update-corner-actions{display:flex;align-items:center;gap:12px}.update-corner .icon-button{width:28px;height:28px}
+.update-dock{margin:0 0 8px;min-width:0}
+.update-dock-button{display:flex;align-items:center;gap:10px;width:100%;min-height:46px;padding:9px 10px;border:1px solid #d0dfd3;border-radius:7px;background:#eaf2ec;color:#315d4c;text-align:left;cursor:pointer}
+.update-dock-button:hover{background:#dfebe2;border-color:#aac5b2}
+.update-dock-icon{display:grid;place-items:center;width:18px;flex-shrink:0}
+.update-dock-copy{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;flex:1}
+.update-dock-copy strong{font-size:12px;font-weight:550;white-space:nowrap}
+.update-dock-copy small{font-size:10px;color:#5c7766;white-space:nowrap}
+.update-dock-preview{position:fixed;z-index:90;padding:16px 18px 12px;border:1px solid #d7e2d9;border-radius:9px;background:#fff;color:#304539;box-shadow:0 10px 32px #1c302922;max-height:calc(100dvh - 24px);overflow:auto;overscroll-behavior:contain;font:12px/1.8 var(--ui-font,"Segoe UI","Microsoft YaHei",sans-serif)}
+.update-dock-preview>strong{display:block;font-size:13px;font-weight:600;margin-bottom:10px}
+.update-dock-preview pre{font-size:12px;line-height:1.85;font-family:var(--ui-font,"Segoe UI","Microsoft YaHei",sans-serif);white-space:pre-wrap;overflow-wrap:anywhere;max-height:min(420px,55vh);overflow:auto;overscroll-behavior:contain;margin:0;color:#52625b}
+.update-dock-preview>p{font-size:11px;line-height:1.7;color:#68766e;border-top:1px solid #e1e7e2;padding-top:10px;margin:12px 0 0}
+.update-dock-button:focus-visible{outline:2px solid #497b62;outline-offset:3px}
+.navigation-collapsed .update-dock-button{justify-content:center;padding:9px 6px;min-height:38px}
+.navigation-collapsed .update-dock-copy{display:none}
+.update-dock-fallback{position:fixed;left:12px;bottom:12px;width:200px;z-index:80}
