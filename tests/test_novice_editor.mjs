@@ -39,3 +39,12 @@ controls[1].onclick({stopPropagation(){}});assert.equal(committed[0].changes.lab
 captured.down({target:{closest(selector){assert.ok(selector.includes('.editor-inline-actions'));return {};}}});
 delete globalThis.document;
 console.log('13 novice workflow regression scenarios passed');
+
+// Space on an ordinary toolbar button must keep native button activation;
+// a handled floating-window move must never also nudge a selected figure.
+const keyboard=Object.create(SceneEditor.prototype);let moves=0;
+Object.assign(keyboard,{doc:{objects:[]},selected:new Set(['a']),applyOperations(){moves++;}});
+const buttonTarget={closest:selector=>selector==='button,summary'?{}:null};
+let blocked=false;keyboard.key({target:buttonTarget,key:' ',code:'Space',preventDefault(){blocked=true;}});
+assert.equal(blocked,false);assert.equal(keyboard.space,undefined);
+keyboard.key({target:{closest(){return null;}},key:'ArrowRight',defaultPrevented:true});assert.equal(moves,0);

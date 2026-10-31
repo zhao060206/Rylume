@@ -1,23 +1,54 @@
-/* Selection controls share the toolbar; they never create a new canvas row. */
+/* A stable toolbar area holds editing and guidance without covering the figure. */
+.workspace,.workspace.properties-hidden,.workspace.left-collapsed{container-type:inline-size;grid-template-rows:auto auto minmax(0,1fr)}
+.workspace.showing-start{grid-template-rows:minmax(0,1fr)}
 .workspace>.toolbar{position:relative;overflow:visible}
-.workspace .toolbar .quick-edit{position:relative;inset:auto;flex:0 0 auto;width:auto;min-width:0;max-width:100%;min-height:34px;height:34px;padding:0 6px;border:0;border-radius:0;box-shadow:none;background:transparent;overflow:visible;z-index:19}
+.quick-edit-slot{display:flex;align-items:center;justify-content:flex-end;min-width:0;gap:10px;flex:0 1 auto;height:38px}
+.workspace .toolbar .quick-edit{position:static;inset:auto;flex:none;width:auto;min-width:0;max-width:100%;min-height:34px;height:34px;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;overflow:visible;z-index:19}
 .workspace:not(.showing-start):not(.annotations-open) .toolbar .quick-edit:not([hidden]){display:flex}
 .workspace .toolbar .quick-edit[hidden],.workspace.showing-start .toolbar .quick-edit,.workspace.annotations-open .toolbar .quick-edit{display:none!important}
 .workspace .toolbar .quick-edit #quick-fields{width:auto;min-height:0;gap:7px;flex-wrap:nowrap;white-space:nowrap}
-.workspace .toolbar .quick-edit .quick-name{min-width:0;max-width:none;flex:0 0 auto}
+.workspace .toolbar .quick-edit .quick-name{min-width:0;max-width:none;flex:none}
 .workspace .toolbar .quick-edit .quick-name input{width:130px;min-width:70px}
 .workspace .toolbar .quick-edit .selection-actions-inline{display:contents}
 .quick-overflow-action{display:none!important}
-.workspace .toolbar .quick-edit :focus-visible{outline:2px solid var(--ui-focus,#446e60);outline-offset:2px}
-/* If the toolbar cannot fit the controls, keep them anchored at its right edge
-   over the canvas instead of pushing the figure down. */
-@media(max-width:1800px){
- .workspace .toolbar .quick-edit{position:absolute;top:calc(100% + 5px);right:8px;left:auto;max-width:calc(100% - 16px);height:auto;min-height:40px;padding:4px 8px;background:var(--panel,#fff);border:1px solid var(--line,#dce3df);border-radius:7px;box-shadow:0 5px 20px #26343d1c}
- .workspace .toolbar .quick-edit .quick-name input{width:130px}
+#toolbar-guidance{margin:0;max-width:310px;font-size:12px;line-height:1.5;color:#63746b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#toolbar-guidance[hidden],#toolbar-cancel[hidden]{display:none!important}
+#toolbar-cancel{white-space:nowrap;font-size:12px;color:#365e4a;background:#f0f5f2;border:1px solid #dce5de;border-radius:5px;min-height:30px;padding:5px 10px}
+.quick-edit-slot :focus-visible{outline:2px solid var(--ui-focus,#446e60);outline-offset:2px}
+@container (width < 1500px){
+ .workspace>.left-panel.floating-library{top:102px}
+ .workspace>.toolbar{height:94px;min-height:94px;display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;grid-template-rows:42px 42px;align-content:center;column-gap:6px;row-gap:0;padding:3px 12px}
+ .toolbar>.tool-cluster:first-child{grid-column:1;grid-row:1}.toolbar>.tool-cluster:nth-child(2){grid-column:2;grid-row:1}
+ .toolbar>.rail{grid-column:3;grid-row:1}.toolbar>.canvas-actions{grid-column:4;grid-row:1;margin-left:0}
+ .toolbar>.toolbar-spacer{display:none}
+ .toolbar>.quick-edit-slot{grid-column:1/-1;grid-row:2;height:42px;justify-content:flex-end;border-top:1px solid #edf0ee;padding:4px 0 0}
+ #toolbar-guidance{max-width:none;margin-right:auto}
 }
-@media(max-width:1000px){
- .workspace .toolbar .quick-edit .quick-name input{width:95px}
- .workspace .toolbar .quick-edit #duplicate,.workspace .toolbar .quick-edit #delete{display:none}
- .workspace .toolbar .quick-edit .quick-overflow-action{display:flex!important}
+@container (width < 820px){
+ .toolbar .tool-caption{display:none!important}.toolbar .rail .rail-item span{display:none}.toolbar .rail .rail-item .icon{display:block}
+ .workspace .toolbar .quick-edit .quick-name input{width:110px}
  .workspace .toolbar .quick-edit .inline-relation-choices{display:none}
+ .workspace .toolbar .quick-edit #duplicate,.workspace .toolbar .quick-edit #delete{display:none}
+ .workspace .toolbar .quick-edit .quick-overflow-action:not([hidden]){display:flex!important}
+ .workspace .toolbar .canvas-actions .tool.text-tool{padding-inline:5px}
 }
+@container (width < 600px){
+ .workspace .toolbar .quick-edit #quick-fields{gap:4px}.workspace .toolbar .quick-edit .quick-name input{width:90px}
+ .quick-edit label:not(.quick-name)>span{display:none}
+ .workspace .toolbar .quick-edit .quick-name>span{display:none}
+ #toolbar-guidance{font-size:11px;white-space:normal}
+}
+
+/* Home presents one primary action and keeps optional ways to start out of the way. */
+.home-inline #open-guide,.home-inline #composer-documents{display:none}
+.home-inline .prompt-examples{display:block;margin:0;padding:0 20px 12px;font-size:12px;color:#60746a}
+.home-inline .prompt-examples>summary{cursor:pointer;list-style:none;display:inline-block;padding:5px 0}
+.home-inline .prompt-examples>summary:before{content:'›';margin-right:7px}
+.home-inline .prompt-examples[open]>summary:before{content:'⌄'}
+.home-inline .prompt-example-list{display:flex;gap:7px;margin-top:7px}
+.home-inline .prompt-example-list button{min-height:30px;padding:5px 10px;border:1px solid #dce4de;border-radius:5px;background:#fafcfb;font-size:12px;color:#4d6658}
+.home-inline #brief-input::placeholder{color:#75827b}
+.home-inline .input-meta,.workspace.showing-start .home-intro,.workspace.showing-start .home-ai-note{color:#6a7a70}
+.home-inline .prompt-assists .button,.home-inline .generation-modes button strong{font-size:12px}
+.home-inline #generate{min-height:38px;font-size:13px}
+.workspace .toolbar .tool:disabled{opacity:.42;cursor:default}

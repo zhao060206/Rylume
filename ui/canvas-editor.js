@@ -1222,8 +1222,9 @@ export class SceneEditor {
   }
 
   key(e) {
-    if (!this.doc || isInput(e)) return;
+    if (!this.doc || e.defaultPrevented || isInput(e)) return;
     const mod = e.ctrlKey || e.metaKey, key = e.key.toLowerCase();
+    if(!mod&&e.target.closest('button,summary'))return;
     if(this.gesture&&mod&&['z','y'].includes(key)){e.preventDefault();this.cancelGesture();return;}
     if(e.shiftKey&&!mod&&e.code==='Digit1'){e.preventDefault();this.fit();return;}
     if(e.shiftKey&&!mod&&e.code==='Digit2'){e.preventDefault();this.fitSelection();return;}

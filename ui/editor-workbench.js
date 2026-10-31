@@ -33,6 +33,7 @@ export function setupWorkbench({editor,workspace}){
   font.onchange=commitFont;font.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();commitFont();font.blur();editor.host.focus({preventScroll:true});}};
   fill.onchange=()=>editor.changeSelection({fill:fill.value});
   $('cancel-canvas-tool').onclick=()=>{editor.cancelGesture();editor.setTool('select');};
+  $('toolbar-cancel').onclick=()=>$('cancel-canvas-tool').click();
   $('insert-legend')?.addEventListener('click', async () => {
     if (!editor.scene) return;
     editor.host.dispatchEvent(new CustomEvent('editor-request-legend'));
@@ -75,8 +76,13 @@ export function setupWorkbench({editor,workspace}){
     for(const n of [font,fill])n.closest('label').hidden=!objects.length||editor.tool==='connect';
     $('quick-connect').hidden=!!relations.length&&!objects.length;
     $('cancel-canvas-tool').hidden=editor.tool==='select';
+    $('toolbar-cancel').hidden=editor.tool==='select';
+    $('toolbar-cancel').textContent=editor.tool==='connect'?'取消连线':'回到选择';
+    $('toolbar-guidance').hidden=!hideContext;
+    for(const b of document.querySelectorAll('.quick-overflow-action')){const target=$(b.dataset.command);b.disabled=target.disabled;b.hidden=target.hidden;}
     const source=editor.scene?.objects.find(o=>o.id===editor.connectStart);
     $('canvas-hint').textContent=editor.tool==='connect'?(source?`从“${source.label||'所选对象'}”连线：点击目标对象即可完成。`:'先点击起点，再点击终点；连好后自动回到选择。'):editor.tool==='text'?'点击画布放置文字，然后直接输入。':editor.tool==='pan'?'拖动画布查看其他位置；点“选择”继续编辑。':relations.length?'点击连线含义切换类型 · 拖动中间圆点调整弯曲 · 右侧设置虚线与核对状态':count?'拖动移动 · 双击对象改字 · 蓝色圆点可拖出连线':'单击选中 · 拖动框选 · 滚轮上下移动 · Ctrl + 滚轮缩放';
+    $('toolbar-guidance-text').textContent=editor.tool==='text'?'在纸张上点击，输入文字。':editor.tool==='pan'?'拖动画布查看；要移动图形，请回到选择。':'点选后改字 · 拖动移动 · 双击文字编辑';
   }
   editor.host.addEventListener('editor-tool-change',refresh);refresh();
   return {refresh};

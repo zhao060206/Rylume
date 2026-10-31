@@ -1,13 +1,31 @@
-/* Modeless library windows keep the figure available while browsing. */
-.workspace>.left-panel.floating-library{bottom:auto;height:min(680px,calc(100% - 55px));min-width:230px;min-height:100px;max-width:min(650px,100%);max-height:calc(100% - 55px);resize:both;overflow:auto;border:1px solid var(--line);border-radius:8px;box-shadow:0 10px 32px #24343e26;background:var(--panel)}
-.floating-library .panel-heading,.floating-library .dialog-heading{cursor:move;touch-action:none;user-select:none}
-.floating-library .floating-minimize{flex:none;font-size:19px;line-height:1}
-.workspace>.left-panel.is-minimized{height:64px!important;min-height:64px;resize:none;overflow:hidden}
-.left-panel.is-minimized .left-tab:not([hidden])>:not(.panel-heading){display:none!important}
-dialog.floating-library[open]{position:fixed;inset:auto;margin:0;top:12vh;left:20vw;max-width:calc(100vw - 12px);max-height:calc(100vh - 12px);min-width:230px;resize:both;z-index:30}
-dialog.floating-library.is-minimized{height:auto!important;min-height:0;resize:none;overflow:hidden;padding-bottom:6px}
-dialog.floating-library.is-minimized>:not(.dialog-heading){display:none!important}
-@media(max-width:640px){dialog.floating-library[open]{left:3vw;top:8vh;max-width:94vw}.workspace>.left-panel.floating-library{max-width:95%}}
+/* A minimized window leaves a named restore button, never an empty rectangle. */
+.workspace>.left-panel.floating-library{grid-column:auto;grid-row:auto;top:58px;left:8px;bottom:auto;height:min(640px,calc(100% - 64px));min-width:min(270px,100%);min-height:160px;max-width:min(650px,100%);max-height:calc(100% - 48px);resize:both;overflow:hidden;border:1px solid var(--line);border-radius:9px;box-shadow:0 8px 28px #24343e20;background:var(--panel)}
+.floating-library.is-minimized{display:none!important}
+.floating-library .panel-heading,.floating-library .dialog-heading{cursor:move;touch-action:none;user-select:none;gap:8px;isolation:isolate}
+.floating-library .panel-heading>:first-child,.floating-library .dialog-heading>:first-child{flex:1;min-width:0}
+.floating-library .panel-heading h1,.floating-library .dialog-heading h2{font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.floating-library .floating-window-actions{display:flex;align-items:center;gap:3px;flex:none}
+.floating-window-actions button,.floating-options>summary{min-width:30px;min-height:30px;border:0;border-radius:5px;background:transparent;color:#52615b;font-size:12px;padding:5px 7px;cursor:pointer}
+.floating-window-actions button:hover,.floating-options>summary:hover{background:#eef2ef;color:#203d30}
+.floating-window-actions .icon-button{width:30px;height:30px;font-size:19px}
+.floating-options{position:relative;cursor:default;margin:0}
+.floating-options>summary{list-style:none;display:flex;align-items:center;justify-content:center;font-size:20px;line-height:1}
+.floating-options>summary::-webkit-details-marker{display:none}
+.floating-options-menu{position:absolute;z-index:2;right:0;top:34px;width:190px;padding:5px;background:white;border:1px solid #d7dfda;border-radius:7px;box-shadow:0 6px 18px #20352920}
+.floating-options-menu button{display:block;width:100%;text-align:left;font-size:12px}
+.floating-library .left-tab{padding:0 14px 16px;overflow:auto;scrollbar-width:thin}
+.floating-library .panel-heading{position:sticky;top:0;margin:0 -14px 14px;padding:10px 12px;background:var(--panel,#fff);border-bottom:1px solid var(--line);z-index:2}
+dialog.floating-library[open]{position:fixed;inset:auto;margin:0;top:90px;left:18vw;width:min(800px,calc(100vw - 24px));max-width:calc(100vw - 16px);max-height:calc(100vh - 16px);min-width:min(290px,calc(100vw - 16px));min-height:160px;resize:both;z-index:40;padding:18px;background:#fff;border-radius:10px;box-shadow:0 12px 40px #1f33272b}
+dialog.floating-library .dialog-heading{position:sticky;top:-18px;margin:-18px -18px 16px;padding:12px 16px;background:#fff;border-bottom:1px solid var(--line);z-index:2}
+.window-restore-strip{position:fixed;bottom:48px;z-index:65;display:flex;align-items:center;gap:6px;max-height:46px;overflow-x:auto;padding:4px;scrollbar-width:thin;border:1px solid #d8e1da;background:#f7faf8f5;border-radius:9px;box-shadow:0 3px 14px #233e2714}
+.window-restore-strip[hidden]{display:none!important}
+.window-restore-item{display:flex;align-items:center;flex-shrink:0;border:1px solid #d7e1db;border-radius:6px;background:white;overflow:hidden}
+.window-restore-button{max-width:150px;min-height:30px;padding:6px 12px;font-size:12px;color:#304d3e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border:0;background:none;cursor:pointer}
+.window-restore-close{min-height:30px;width:27px;border:0;border-left:1px solid #e6ebe8;background:none;color:#758179;cursor:pointer}
+.window-restore-item button:hover{background:#eaf1ed}
+.floating-library :focus-visible,.window-restore-strip :focus-visible{outline:2px solid #466f5e;outline-offset:-2px}
+@media(max-width:640px){dialog.floating-library[open]{left:8px;top:68px}.workspace>.left-panel.floating-library{max-width:100%}.window-restore-strip{bottom:42px}}
 
-
-.floating-library .dialog-heading>:first-child,.floating-library .panel-heading>:first-child{flex:1;min-width:0}
+dialog.floating-library[open]{height:min(640px,calc(100vh - 120px))}
+dialog#asset-dialog.floating-library[open]{height:min(470px,calc(100vh - 100px))}
+.window-restore-item[hidden]{display:none!important}
