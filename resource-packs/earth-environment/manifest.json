@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "earth-environment",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "title": "地球与环境",
   "domain": "earth-environment",
   "min_app_version": "3.1.0",
@@ -1013,7 +1013,7 @@
       "author_url": "https://github.com/zhao060206/Rylume",
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
       "modifications": "Original vector artwork.",
-      "sha256": "0a571e4c50a0d70d2357c553c535090c1386f9e74d4fb339f2b67e23b775dddb"
+      "sha256": "94cb42c1efd5fcc60a80d38b91e7ccd22a5cc3286f82f8e94c4745e160a7bcb6"
     },
     {
       "id": "earth_environment_earth_carbon_cycle",
@@ -1852,6 +1852,75 @@
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
       "modifications": "Original vector artwork.",
       "sha256": "a58febb8c95a1bdfa0191dcd38c1175fd93abff6bf9afdee55e548292af438f5"
+    },
+    {
+      "id": "earth_environment_pipe",
+      "asset_id": "earth_environment_pipe",
+      "label": "pipe",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/pipe.svg",
+      "keywords": [
+        "pipe",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "1f8f81e69cf82b9b4d18d139d416528d93e4b68ae48e3f098e2486bad9c6389e"
+    },
+    {
+      "id": "earth_environment_earth_land_cover",
+      "asset_id": "earth_environment_earth_land_cover",
+      "label": "earth land cover",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_land_cover.svg",
+      "keywords": [
+        "earth_land_cover",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "a2f35720805a61f42de5659830d0f0649a99b9096ffff6b30d6ca997b37d3edc"
+    },
+    {
+      "id": "earth_environment_reservoir",
+      "asset_id": "earth_environment_reservoir",
+      "label": "reservoir",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/reservoir.svg",
+      "keywords": [
+        "reservoir",
+        "地球与环境"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+      "modifications": "Original vector artwork.",
+      "sha256": "1cbfc86c5269f1f1c05647b842d3f09a6ba6ae9a0b330d37c8d30036952e547f"
     }
   ],
   "templates": [
@@ -1985,6 +2054,138 @@
         "Study catchment",
         "Aligned observations",
         "Spatial model"
+      ]
+    },
+    {
+      "id": "earth_environment_template_carbon_capture_chain",
+      "title": "碳捕集与封存",
+      "description": "排放源 · 捕集装置 · 输送管线 · 封存层 · 监测站",
+      "file": "templates/carbon_capture_chain.scene.json",
+      "thumbnail": "previews/carbon_capture_chain.svg",
+      "thumbnail_single": "previews/carbon_capture_chain-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "排放源",
+        "捕集装置",
+        "输送管线",
+        "封存层",
+        "监测站"
+      ],
+      "keywords": [
+        "地球与环境",
+        "碳捕集与封存"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "排放源",
+        "捕集装置",
+        "输送管线",
+        "封存层",
+        "监测站"
+      ]
+    },
+    {
+      "id": "earth_environment_template_remote_sensing_workflow",
+      "title": "遥感监测流程",
+      "description": "卫星平台 · 传感器 · GIS 图层 · 地表分类 · 地面验证",
+      "file": "templates/remote_sensing_workflow.scene.json",
+      "thumbnail": "previews/remote_sensing_workflow.svg",
+      "thumbnail_single": "previews/remote_sensing_workflow-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "卫星平台",
+        "传感器",
+        "GIS 图层",
+        "地表分类",
+        "地面验证"
+      ],
+      "keywords": [
+        "地球与环境",
+        "遥感监测流程"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "卫星平台",
+        "传感器",
+        "GIS 图层",
+        "地表分类",
+        "地面验证"
+      ]
+    },
+    {
+      "id": "earth_environment_template_water_treatment_chain",
+      "title": "饮用水处理链",
+      "description": "取水 · 处理厂 · 清水库 · 配水管网 · 水质监测",
+      "file": "templates/water_treatment_chain.scene.json",
+      "thumbnail": "previews/water_treatment_chain.svg",
+      "thumbnail_single": "previews/water_treatment_chain-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "取水",
+        "处理厂",
+        "清水库",
+        "配水管网",
+        "水质监测"
+      ],
+      "keywords": [
+        "地球与环境",
+        "饮用水处理链"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "取水",
+        "处理厂",
+        "清水库",
+        "配水管网",
+        "水质监测"
+      ]
+    },
+    {
+      "id": "earth_environment_template_coastal_hazard",
+      "title": "海岸灾害链",
+      "description": "气旋 · 风暴潮 · 海岸带 · 淹没 · 预警",
+      "file": "templates/coastal_hazard.scene.json",
+      "thumbnail": "previews/coastal_hazard.svg",
+      "thumbnail_single": "previews/coastal_hazard-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "气旋",
+        "风暴潮",
+        "海岸带",
+        "淹没",
+        "预警"
+      ],
+      "keywords": [
+        "地球与环境",
+        "海岸灾害链"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "气旋",
+        "风暴潮",
+        "海岸带",
+        "淹没",
+        "预警"
       ]
     }
   ]

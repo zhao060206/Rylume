@@ -1,0 +1,267 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "physics_template_transformer_grid",
+  "title": "变压器并网",
+  "source_text": "变压器并网",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "发电机",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5 67 L20 67 C32 67 17 25 30 25 C44 25 30 67 43 67 C56 67 43 25 56 25 C69 25 56 67 69 67 C82 67 69 25 82 25 L92 25\" fill=\"none\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_coil",
+          "label": "线圈",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_coil",
+      "x": 10.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "升压变压器",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"43\" y=\"20\" width=\"14\" height=\"60\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M15 26 C38 27 38 42 15 44 C38 46 38 60 15 62 C38 64 38 75 15 77\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M85 26 C62 27 62 42 85 44 C62 46 62 60 85 62 C62 64 62 75 85 77\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"15\" y1=\"26\" x2=\"15\" y2=\"77\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"85\" y1=\"26\" x2=\"85\" y2=\"77\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"9\" y=\"56\" fill=\"#D5AA6C\" font-family=\"Arial\" font-size=\"16\" font-weight=\"700\" text-anchor=\"middle\">~</text></svg>",
+        "meta": {
+          "asset_id": "physics_phys_transformer",
+          "label": "变压器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_phys_transformer",
+      "x": 65.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "输电网",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"14\" y1=\"78\" x2=\"14\" y2=\"23\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"78\" x2=\"50\" y2=\"23\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"86\" y1=\"78\" x2=\"86\" y2=\"23\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"5\" y1=\"26\" x2=\"95\" y2=\"26\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"5\" y1=\"42\" x2=\"95\" y2=\"42\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"5\" y1=\"58\" x2=\"95\" y2=\"58\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><polygon points=\"6,23 22,23 14,10\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><polygon points=\"42,23 58,23 50,10\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><polygon points=\"78,23 94,23 86,10\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><line x1=\"18\" y1=\"70\" x2=\"46\" y2=\"70\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"46\" y1=\"70\" x2=\"41.4951556604879\" y2=\"72.1694186955878\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"46\" y1=\"70\" x2=\"41.4951556604879\" y2=\"67.8305813044122\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"54\" y1=\"70\" x2=\"82\" y2=\"70\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"82\" y1=\"70\" x2=\"77.49515566048791\" y2=\"72.1694186955878\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"82\" y1=\"70\" x2=\"77.49515566048791\" y2=\"67.8305813044122\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_eng_grid",
+          "label": "eng grid",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_eng_grid",
+      "x": 120.0,
+      "y": 10.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "负载",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5 50 L20 50 L25 33 L35 67 L45 33 L55 67 L65 33 L75 67 L80 50 L95 50\" fill=\"none\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_resistor",
+          "label": "电阻",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_resistor",
+      "x": 120.0,
+      "y": 76.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "计量",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"29\" y=\"18\" width=\"46\" height=\"64\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"17\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"8\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"75\" y1=\"50\" x2=\"94\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"52\" y1=\"82\" x2=\"52\" y2=\"94\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_detector",
+          "label": "探测器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_detector",
+      "x": 158.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "交流输入",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "升压",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "配电",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o3",
+      "target": "o4",
+      "type": "sequence",
+      "label": "负荷测量",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "physics"
+  },
+  "generation_contract": {}
+}

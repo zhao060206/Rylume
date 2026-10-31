@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "materials",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "title": "材料科学",
   "domain": "materials",
   "min_app_version": "3.1.0",
@@ -1205,7 +1205,7 @@
       "author_url": "https://github.com/zhao060206/Rylume",
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
       "modifications": "Original vector artwork.",
-      "sha256": "93cdb2f219d7cac1de4f02140f57982004ba97cefc5d3df8dbcb97ceb565f39c"
+      "sha256": "dc3dc0b508ea6be80451d712c02f2ac645450481fcbfd6b7c13e0b79e402ed56"
     },
     {
       "id": "materials_mat_piezoelectric",
@@ -1469,7 +1469,7 @@
       "author_url": "https://github.com/zhao060206/Rylume",
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
       "modifications": "Original vector artwork.",
-      "sha256": "69637d02cc36c25cf99a2639a08926a7dbd5ef93c9362a1c7197c001f9cfbc1c"
+      "sha256": "9e2b0a85e89e45a093236c569c05e1f7c00e0b55eb86c9548d719b97887c3ed7"
     },
     {
       "id": "materials_mat_copolymer",
@@ -1912,6 +1912,138 @@
         "Dislocation motion",
         "Crack propagation",
         "Applied load"
+      ]
+    },
+    {
+      "id": "materials_template_battery_materials",
+      "title": "电池材料与界面",
+      "description": "正极颗粒 · 隔膜 · 负极界面 · 能带匹配 · 截面表征",
+      "file": "templates/battery_materials.scene.json",
+      "thumbnail": "previews/battery_materials.svg",
+      "thumbnail_single": "previews/battery_materials-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "正极颗粒",
+        "隔膜",
+        "负极界面",
+        "能带匹配",
+        "截面表征"
+      ],
+      "keywords": [
+        "材料科学",
+        "电池材料与界面"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "正极颗粒",
+        "隔膜",
+        "负极界面",
+        "能带匹配",
+        "截面表征"
+      ]
+    },
+    {
+      "id": "materials_template_semiconductor_fab",
+      "title": "半导体制造流程",
+      "description": "晶圆 · 光刻 · 薄膜沉积 · 退火 · 缺陷检测",
+      "file": "templates/semiconductor_fab.scene.json",
+      "thumbnail": "previews/semiconductor_fab.svg",
+      "thumbnail_single": "previews/semiconductor_fab-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "晶圆",
+        "光刻",
+        "薄膜沉积",
+        "退火",
+        "缺陷检测"
+      ],
+      "keywords": [
+        "材料科学",
+        "半导体制造流程"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "晶圆",
+        "光刻",
+        "薄膜沉积",
+        "退火",
+        "缺陷检测"
+      ]
+    },
+    {
+      "id": "materials_template_mechanical_failure",
+      "title": "材料力学失效",
+      "description": "拉伸试样 · 裂纹尖端 · 断裂 · 应力应变 · 断口形貌",
+      "file": "templates/mechanical_failure.scene.json",
+      "thumbnail": "previews/mechanical_failure.svg",
+      "thumbnail_single": "previews/mechanical_failure-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "拉伸试样",
+        "裂纹尖端",
+        "断裂",
+        "应力应变",
+        "断口形貌"
+      ],
+      "keywords": [
+        "材料科学",
+        "材料力学失效"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "拉伸试样",
+        "裂纹尖端",
+        "断裂",
+        "应力应变",
+        "断口形貌"
+      ]
+    },
+    {
+      "id": "materials_template_polymer_hydrogel",
+      "title": "聚合物水凝胶",
+      "description": "单体 · 交联 · 水凝胶网络 · 溶胀 · 热分析",
+      "file": "templates/polymer_hydrogel.scene.json",
+      "thumbnail": "previews/polymer_hydrogel.svg",
+      "thumbnail_single": "previews/polymer_hydrogel-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "单体",
+        "交联",
+        "水凝胶网络",
+        "溶胀",
+        "热分析"
+      ],
+      "keywords": [
+        "材料科学",
+        "聚合物水凝胶"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "单体",
+        "交联",
+        "水凝胶网络",
+        "溶胀",
+        "热分析"
       ]
     }
   ]

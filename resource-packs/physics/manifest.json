@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "physics",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "title": "物理学",
   "domain": "physics",
   "min_app_version": "3.1.0",
@@ -1493,7 +1493,7 @@
       "author_url": "https://github.com/zhao060206/Rylume",
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
       "modifications": "Original vector artwork.",
-      "sha256": "e44b522085fc546a4bfcc80804bc6af407aedf0cc5aabce31a308648f9ec9c4d"
+      "sha256": "aba7f739c878d0ad464da4151c83394c615211c62664f6a145a6265239d4dafc"
     },
     {
       "id": "physics_phys_interferometer",
@@ -1732,6 +1732,29 @@
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
       "modifications": "Original vector artwork.",
       "sha256": "2a682096cfdd8cfcb6c3da38077ef32c8030a5bc3d956b14a864b05803314d50"
+    },
+    {
+      "id": "physics_eng_grid",
+      "asset_id": "physics_eng_grid",
+      "label": "eng grid",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_grid.svg",
+      "keywords": [
+        "eng_grid",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "c478ae48c10557631eac1ecdb40a8d628f7a99fee2d86e03bc63712010e78a30"
     }
   ],
   "templates": [
@@ -1865,6 +1888,138 @@
         "Electrical load",
         "Current measurement",
         "Changing flux"
+      ]
+    },
+    {
+      "id": "physics_template_double_slit_interference",
+      "title": "双缝干涉测量",
+      "description": "相干光源 · 双缝 · 干涉条纹 · 成像屏 · 探测器",
+      "file": "templates/double_slit_interference.scene.json",
+      "thumbnail": "previews/double_slit_interference.svg",
+      "thumbnail_single": "previews/double_slit_interference-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "相干光源",
+        "双缝",
+        "干涉条纹",
+        "成像屏",
+        "探测器"
+      ],
+      "keywords": [
+        "物理学",
+        "双缝干涉测量"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "相干光源",
+        "双缝",
+        "干涉条纹",
+        "成像屏",
+        "探测器"
+      ]
+    },
+    {
+      "id": "physics_template_fiber_optic_link",
+      "title": "光纤传输链路",
+      "description": "发射端 · 光纤 · 接收端 · 模式传输 · 信号分析",
+      "file": "templates/fiber_optic_link.scene.json",
+      "thumbnail": "previews/fiber_optic_link.svg",
+      "thumbnail_single": "previews/fiber_optic_link-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "发射端",
+        "光纤",
+        "接收端",
+        "模式传输",
+        "信号分析"
+      ],
+      "keywords": [
+        "物理学",
+        "光纤传输链路"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "发射端",
+        "光纤",
+        "接收端",
+        "模式传输",
+        "信号分析"
+      ]
+    },
+    {
+      "id": "physics_template_transformer_grid",
+      "title": "变压器并网",
+      "description": "发电机 · 升压变压器 · 输电网 · 负载 · 计量",
+      "file": "templates/transformer_grid.scene.json",
+      "thumbnail": "previews/transformer_grid.svg",
+      "thumbnail_single": "previews/transformer_grid-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "发电机",
+        "升压变压器",
+        "输电网",
+        "负载",
+        "计量"
+      ],
+      "keywords": [
+        "物理学",
+        "变压器并网"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "发电机",
+        "升压变压器",
+        "输电网",
+        "负载",
+        "计量"
+      ]
+    },
+    {
+      "id": "physics_template_quantum_emission",
+      "title": "量子点发光",
+      "description": "激发光 · 量子点 · 能级 · 发射态 · 光谱检测",
+      "file": "templates/quantum_emission.scene.json",
+      "thumbnail": "previews/quantum_emission.svg",
+      "thumbnail_single": "previews/quantum_emission-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "激发光",
+        "量子点",
+        "能级",
+        "发射态",
+        "光谱检测"
+      ],
+      "keywords": [
+        "物理学",
+        "量子点发光"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "激发光",
+        "量子点",
+        "能级",
+        "发射态",
+        "光谱检测"
       ]
     }
   ]

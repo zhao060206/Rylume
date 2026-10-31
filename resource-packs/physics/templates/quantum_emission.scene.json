@@ -1,0 +1,267 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "physics_template_quantum_emission",
+  "title": "量子点发光",
+  "source_text": "量子点发光",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "激发光",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 50 Q17 20 27 50 T47 50 T67 50 T87 50 T97 50\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"47\" y1=\"50\" x2=\"92\" y2=\"50\" stroke=\"#D5AA6C\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"92\" y1=\"50\" x2=\"84.79224905678065\" y2=\"53.471069912940465\" stroke=\"#D5AA6C\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"92\" y1=\"50\" x2=\"84.79224905678065\" y2=\"46.528930087059535\" stroke=\"#D5AA6C\" stroke-width=\"3\" stroke-linecap=\"round\" /><circle cx=\"20\" cy=\"31\" r=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"42\" cy=\"66\" r=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"18\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">hν</text></svg>",
+        "meta": {
+          "asset_id": "physics_phys_photon",
+          "label": "光子",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_phys_photon",
+      "x": 10.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "量子点",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"17\" y=\"21\" width=\"66\" height=\"59\" fill=\"#DFEDF1\" rx=\"4\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M23 50 C32 20 42 80 51 50 S70 20 78 50\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"17\" cy=\"21\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"83\" cy=\"21\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"17\" cy=\"80\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"83\" cy=\"80\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"91\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">QD</text></svg>",
+        "meta": {
+          "asset_id": "physics_phys_quantum_dot",
+          "label": "量子点",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_phys_quantum_dot",
+      "x": 65.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "能级",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"11\" y1=\"16\" x2=\"11\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"11\" y1=\"88\" x2=\"92\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"27\" x2=\"82\" y2=\"27\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"45\" x2=\"82\" y2=\"45\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"64\" x2=\"82\" y2=\"64\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"80\" x2=\"82\" y2=\"80\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" /><circle cx=\"42\" cy=\"27\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"64\" cy=\"64\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"48\" y1=\"31\" x2=\"54\" y2=\"60\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"54\" y1=\"60\" x2=\"49.748014401408305\" y2=\"54.43936887850229\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"54\" y1=\"60\" x2=\"55.69640681480629\" y2=\"53.20866699986823\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"17\" y=\"24\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">E</text></svg>",
+        "meta": {
+          "asset_id": "physics_phys_energy_levels",
+          "label": "能级",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_phys_energy_levels",
+      "x": 120.0,
+      "y": 10.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "发射态",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"7\" y1=\"50\" x2=\"93\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><path d=\"M8 50 C15 10 24 10 31 50 S47 90 54 50 S70 10 77 50 S89 80 93 50\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M10 39 C22 25 34 25 45 39 M48 39 C62 25 76 25 88 39\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><text x=\"20\" y=\"23\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">ψ</text></svg>",
+        "meta": {
+          "asset_id": "physics_phys_wavefunction",
+          "label": "波函数",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_phys_wavefunction",
+      "x": 120.0,
+      "y": 76.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "光谱检测",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"29\" y=\"18\" width=\"46\" height=\"64\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"17\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"8\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"75\" y1=\"50\" x2=\"94\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"52\" y1=\"82\" x2=\"52\" y2=\"94\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_detector",
+          "label": "探测器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_detector",
+      "x": 158.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "激发",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "带间跃迁",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "辐射复合",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o3",
+      "target": "o4",
+      "type": "sequence",
+      "label": "发射",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "physics"
+  },
+  "generation_contract": {}
+}

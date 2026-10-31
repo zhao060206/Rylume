@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "medicine",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "title": "医学",
   "domain": "medicine",
   "min_app_version": "3.1.0",
@@ -989,7 +989,7 @@
       "author_url": "https://github.com/zhao060206/Rylume",
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
       "modifications": "Original vector artwork.",
-      "sha256": "4652080da89491689364d0530327b849b0677e9e199b6c3fa3bf6c016b56cb84"
+      "sha256": "7e502e7e6779f727106341abca223e7226ec54ae0686e3c52b8b0932b8e48633"
     },
     {
       "id": "medicine_med_platelet",
@@ -2009,6 +2009,138 @@
         "Reconstructed image",
         "Quantitative feature",
         "Clinical review"
+      ]
+    },
+    {
+      "id": "medicine_template_diagnostic_pathway",
+      "title": "诊断检查路径",
+      "description": "就诊 · 实验室检查 · 影像检查 · 病理 · 临床诊断",
+      "file": "templates/diagnostic_pathway.scene.json",
+      "thumbnail": "previews/diagnostic_pathway.svg",
+      "thumbnail_single": "previews/diagnostic_pathway-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "就诊",
+        "实验室检查",
+        "影像检查",
+        "病理",
+        "临床诊断"
+      ],
+      "keywords": [
+        "医学",
+        "诊断检查路径"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "就诊",
+        "实验室检查",
+        "影像检查",
+        "病理",
+        "临床诊断"
+      ]
+    },
+    {
+      "id": "medicine_template_vaccination_immunity",
+      "title": "疫苗接种免疫",
+      "description": "疫苗 · 抗原呈递 · 免疫细胞 · 抗体 · 免疫记忆",
+      "file": "templates/vaccination_immunity.scene.json",
+      "thumbnail": "previews/vaccination_immunity.svg",
+      "thumbnail_single": "previews/vaccination_immunity-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "疫苗",
+        "抗原呈递",
+        "免疫细胞",
+        "抗体",
+        "免疫记忆"
+      ],
+      "keywords": [
+        "医学",
+        "疫苗接种免疫"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "疫苗",
+        "抗原呈递",
+        "免疫细胞",
+        "抗体",
+        "免疫记忆"
+      ]
+    },
+    {
+      "id": "medicine_template_drug_delivery",
+      "title": "药物递送与释放",
+      "description": "药物载体 · 血液循环 · 靶点结合 · 细胞内释放 · 效应",
+      "file": "templates/drug_delivery.scene.json",
+      "thumbnail": "previews/drug_delivery.svg",
+      "thumbnail_single": "previews/drug_delivery-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "药物载体",
+        "血液循环",
+        "靶点结合",
+        "细胞内释放",
+        "效应"
+      ],
+      "keywords": [
+        "医学",
+        "药物递送与释放"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "药物载体",
+        "血液循环",
+        "靶点结合",
+        "细胞内释放",
+        "效应"
+      ]
+    },
+    {
+      "id": "medicine_template_surgery_recovery",
+      "title": "围手术期管理",
+      "description": "术前评估 · 手术 · 器械操作 · 生命监测 · 康复随访",
+      "file": "templates/surgery_recovery.scene.json",
+      "thumbnail": "previews/surgery_recovery.svg",
+      "thumbnail_single": "previews/surgery_recovery-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "术前评估",
+        "手术",
+        "器械操作",
+        "生命监测",
+        "康复随访"
+      ],
+      "keywords": [
+        "医学",
+        "围手术期管理"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "术前评估",
+        "手术",
+        "器械操作",
+        "生命监测",
+        "康复随访"
       ]
     }
   ]

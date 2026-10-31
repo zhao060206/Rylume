@@ -1,0 +1,279 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "materials_template_semiconductor_fab",
+  "title": "半导体制造流程",
+  "source_text": "半导体制造流程",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "晶圆",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"9\" y1=\"31\" x2=\"91\" y2=\"31\" stroke=\"#84B7C8\" stroke-width=\"8\" stroke-linecap=\"round\" /><line x1=\"9\" y1=\"69\" x2=\"91\" y2=\"69\" stroke=\"#79A99A\" stroke-width=\"8\" stroke-linecap=\"round\" /><circle cx=\"32\" cy=\"31\" r=\"4\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"28\" y=\"24\" fill=\"#C67F76\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">e−</text><circle cx=\"68\" cy=\"69\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"72\" y=\"84\" fill=\"#D5AA6C\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">h+</text><line x1=\"50\" y1=\"62\" x2=\"50\" y2=\"39\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"39\" x2=\"52.60330243470535\" y2=\"44.40581320741452\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"39\" x2=\"47.39669756529465\" y2=\"44.40581320741452\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"9\" y1=\"50\" x2=\"20\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "materials_mat_semiconductor",
+          "label": "半导体",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "materials_mat_semiconductor",
+      "x": 10.0,
+      "y": 20.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "光刻",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"18\" y=\"18\" width=\"64\" height=\"12\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"18\" y=\"55\" width=\"64\" height=\"24\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"18\" y=\"45\" width=\"64\" height=\"8\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"36\" y1=\"9\" x2=\"36\" y2=\"42\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"36\" y1=\"42\" x2=\"33.830581304412206\" y2=\"37.4951556604879\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"36\" y1=\"42\" x2=\"38.169418695587794\" y2=\"37.4951556604879\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"9\" x2=\"50\" y2=\"42\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"42\" x2=\"47.830581304412206\" y2=\"37.4951556604879\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"42\" x2=\"52.169418695587794\" y2=\"37.4951556604879\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"64\" y1=\"9\" x2=\"64\" y2=\"42\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"64\" y1=\"42\" x2=\"61.830581304412206\" y2=\"37.4951556604879\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"64\" y1=\"42\" x2=\"66.1694186955878\" y2=\"37.4951556604879\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M32 68 L43 68 L43 79 L32 79 Z\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><text x=\"82\" y=\"25\" fill=\"#D5AA6C\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">UV</text></svg>",
+        "meta": {
+          "asset_id": "materials_mat_lithography",
+          "label": "光刻",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "materials_mat_lithography",
+      "x": 55.0,
+      "y": 20.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "薄膜沉积",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"15\" y=\"20\" width=\"70\" height=\"53\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"32\" y=\"66\" width=\"36\" height=\"7\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"18\" y1=\"13\" x2=\"35\" y2=\"31\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"35\" y1=\"31\" x2=\"30.329671939072814\" y2=\"29.214492844227138\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"35\" y1=\"31\" x2=\"33.484063789232394\" y2=\"26.235344985743083\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"82\" y1=\"13\" x2=\"65\" y2=\"31\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"65\" y1=\"31\" x2=\"66.5159362107676\" y2=\"26.235344985743083\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"65\" y1=\"31\" x2=\"69.67032806092719\" y2=\"29.214492844227138\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M35 44 Q50 34 65 44 Q50 54 35 44 Z\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><text x=\"50\" y=\"91\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">CVD</text></svg>",
+        "meta": {
+          "asset_id": "materials_mat_cvd",
+          "label": "化学气相沉积",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "materials_mat_cvd",
+      "x": 100.0,
+      "y": 20.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "退火",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 55 Q10 21 50 21 Q90 21 90 55 L90 79 L10 79 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M27 63 Q27 42 50 42 Q73 42 73 63\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"50\" y1=\"79\" x2=\"50\" y2=\"92\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><path d=\"M26 15 C20 25 32 28 26 39\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M50 10 C44 21 56 25 50 37\" fill=\"none\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M74 15 C68 25 80 28 74 39\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "materials_mat_annealing",
+          "label": "退火",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "materials_mat_annealing",
+      "x": 145.0,
+      "y": 20.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "缺陷检测",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"35\" y=\"8\" width=\"30\" height=\"18\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"29\" y=\"26\" width=\"42\" height=\"28\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><polygon points=\"39,54 61,54 66,66 34,66\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><line x1=\"50\" y1=\"18\" x2=\"50\" y2=\"54\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M34 66 L23 84 M50 66 L50 88 M66 66 L77 84\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M18 82 L36 78 M64 78 L82 82\" fill=\"none\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><text x=\"83\" y=\"26\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">SEM</text></svg>",
+        "meta": {
+          "asset_id": "materials_mat_sem",
+          "label": "扫描电镜",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "materials_mat_sem",
+      "x": 100.0,
+      "y": 82.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "图形化",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "沉积",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "激活",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o3",
+      "target": "o4",
+      "type": "sequence",
+      "label": "检测",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r4",
+      "source": "o4",
+      "target": "o0",
+      "type": "sequence",
+      "label": "反馈",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "materials"
+  },
+  "generation_contract": {}
+}

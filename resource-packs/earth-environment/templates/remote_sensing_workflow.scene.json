@@ -1,0 +1,267 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "earth_environment_template_remote_sensing_workflow",
+  "title": "遥感监测流程",
+  "source_text": "遥感监测流程",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "卫星平台",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"37\" y=\"34\" width=\"26\" height=\"32\" fill=\"#D5AA6C\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"4\" y=\"25\" width=\"28\" height=\"50\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"68\" y=\"25\" width=\"28\" height=\"50\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M38 28 Q50 6 64 28 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"50\" y1=\"9\" x2=\"50\" y2=\"2\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"13\" y1=\"27\" x2=\"13\" y2=\"73\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"23\" y1=\"27\" x2=\"23\" y2=\"73\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"77\" y1=\"27\" x2=\"77\" y2=\"73\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"87\" y1=\"27\" x2=\"87\" y2=\"73\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "earth_environment_satellite",
+          "label": "遥感卫星",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_satellite",
+      "x": 10.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "传感器",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"31\" y=\"18\" width=\"30\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><polygon points=\"14,8 25,8 20,18 51,18 74,18\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><polygon points=\"43,18 59,18 68,8 34,8\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><line x1=\"14\" y1=\"26\" x2=\"20\" y2=\"48\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"78\" y1=\"26\" x2=\"75\" y2=\"48\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><path d=\"M27 48 Q50 42 73 48 L91 86 Q50 95 9 86 Z\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"40\" cy=\"66\" r=\"5\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"57\" cy=\"73\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"66\" cy=\"58\" r=\"5\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"76\" y=\"22\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">遥感</text></svg>",
+        "meta": {
+          "asset_id": "earth_environment_earth_remote_sensing",
+          "label": "遥感",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_earth_remote_sensing",
+      "x": 60.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "GIS 图层",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 32 L50 18 L92 32 L50 47 Z\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M8 49 L50 34 L92 49 L50 64 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M8 66 L50 51 L92 66 L50 81 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"20\" y1=\"32\" x2=\"20\" y2=\"68\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><line x1=\"77\" y1=\"32\" x2=\"77\" y2=\"67\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><circle cx=\"38\" cy=\"58\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"93\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">GIS</text></svg>",
+        "meta": {
+          "asset_id": "earth_environment_earth_gis",
+          "label": "GIS 图层",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_earth_gis",
+      "x": 110.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "地表分类",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 87 Q28 74 50 87 T92 87 L92 94 L8 94 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"15\" y1=\"64\" x2=\"15\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"29\" y1=\"64\" x2=\"29\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"43\" y1=\"64\" x2=\"43\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"57\" y1=\"64\" x2=\"57\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"71\" y1=\"64\" x2=\"71\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"85\" y1=\"64\" x2=\"85\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"10\" y1=\"56\" x2=\"90\" y2=\"56\" stroke=\"#84B7C8\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><circle cx=\"22\" cy=\"55\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"55\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"78\" cy=\"55\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"78\" cy=\"23\" r=\"9\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"42\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">农田</text></svg>",
+        "meta": {
+          "asset_id": "earth_environment_earth_land_cover",
+          "label": "earth land cover",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_earth_land_cover",
+      "x": 158.0,
+      "y": 10.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "地面验证",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"50\" y1=\"87\" x2=\"50\" y2=\"19\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"29\" y1=\"88\" x2=\"71\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M50 20 L77 16 L77 35 L50 39 Z\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"50\" cy=\"57\" r=\"10\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"12\" y1=\"42\" x2=\"45\" y2=\"42\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"20\" y1=\"30\" x2=\"20\" y2=\"53\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "earth_environment_station",
+          "label": "环境监测站",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_station",
+      "x": 158.0,
+      "y": 76.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "观测",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "反演",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "制图",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o3",
+      "target": "o4",
+      "type": "sequence",
+      "label": "地面核验",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "earth-environment"
+  },
+  "generation_contract": {}
+}

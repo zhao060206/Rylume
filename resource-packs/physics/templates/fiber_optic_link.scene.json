@@ -1,0 +1,267 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "physics_template_fiber_optic_link",
+  "title": "光纤传输链路",
+  "source_text": "光纤传输链路",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "发射端",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"35\" width=\"49\" height=\"30\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"57\" cy=\"50\" r=\"13\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"70\" y1=\"50\" x2=\"96\" y2=\"50\" stroke=\"#C67F76\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"43\" x2=\"40\" y2=\"43\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"50\" x2=\"40\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"57\" x2=\"40\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_laser",
+          "label": "激光器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_laser",
+      "x": 10.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "光纤",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 27 L88 27 Q95 27 95 50 Q95 73 88 73 L10 73 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M10 38 L76 27 M76 73 L10 62 M10 50 L65 38 L65 62 L10 50\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"10\" cy=\"38\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"10\" cy=\"62\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "physics_phys_optical_fiber",
+          "label": "光纤",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_phys_optical_fiber",
+      "x": 65.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "接收端",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"29\" y=\"18\" width=\"46\" height=\"64\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"17\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"8\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"75\" y1=\"50\" x2=\"94\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"52\" y1=\"82\" x2=\"52\" y2=\"94\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_detector",
+          "label": "探测器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_detector",
+      "x": 120.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "模式传输",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"24\" width=\"82\" height=\"52\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M16 50 C28 20 40 80 52 50 S76 20 84 50\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"9\" y1=\"30\" x2=\"91\" y2=\"30\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><line x1=\"9\" y1=\"70\" x2=\"91\" y2=\"70\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><line x1=\"3\" y1=\"50\" x2=\"9\" y2=\"50\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"9\" y1=\"50\" x2=\"4.495155660487904\" y2=\"52.169418695587794\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"9\" y1=\"50\" x2=\"4.495155660487904\" y2=\"47.830581304412206\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"97\" y1=\"50\" x2=\"91\" y2=\"50\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"91\" y1=\"50\" x2=\"95.50484433951209\" y2=\"47.830581304412206\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"91\" y1=\"50\" x2=\"95.50484433951209\" y2=\"52.16941869558779\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_phys_waveguide",
+          "label": "波导",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_phys_waveguide",
+      "x": 65.0,
+      "y": 10.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "信号分析",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"13\" width=\"68\" height=\"63\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"76\" x2=\"50\" y2=\"91\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"31\" y1=\"91\" x2=\"69\" y2=\"91\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"34\" y1=\"25\" x2=\"34\" y2=\"65\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"48\" y1=\"25\" x2=\"48\" y2=\"65\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"62\" y1=\"25\" x2=\"62\" y2=\"65\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "physics_screen",
+          "label": "成像屏",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "physics_screen",
+      "x": 158.0,
+      "y": 76.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "调制",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "传输",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o1",
+      "target": "o3",
+      "type": "sequence",
+      "label": "模式耦合",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o2",
+      "target": "o4",
+      "type": "sequence",
+      "label": "解调",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "physics"
+  },
+  "generation_contract": {}
+}

@@ -1,0 +1,267 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "computing_math_template_transformer_pipeline",
+  "title": "Transformer 推理链",
+  "source_text": "Transformer 推理链",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "词元序列",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M29 9 L65 9 L77 21 L77 69 L29 69 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M19 19 L55 19 L67 31 L67 79 L19 79 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M9 29 L45 29 L57 41 L57 89 L9 89 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"18\" y1=\"48\" x2=\"48\" y2=\"48\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"60\" x2=\"48\" y2=\"60\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"72\" x2=\"48\" y2=\"72\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "computing_math_dataset",
+          "label": "数据集",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "computing_math_dataset",
+      "x": 10.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "嵌入",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"15\" y1=\"86\" x2=\"91\" y2=\"86\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"15\" y1=\"86\" x2=\"15\" y2=\"11\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><circle cx=\"28\" cy=\"28\" r=\"4\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"37\" cy=\"23\" r=\"4\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"31\" cy=\"39\" r=\"4\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"68\" cy=\"63\" r=\"4\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"78\" cy=\"70\" r=\"4\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"62\" cy=\"75\" r=\"4\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"69\" cy=\"28\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"81\" cy=\"22\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "computing_math_embedding",
+          "label": "特征嵌入",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "computing_math_embedding",
+      "x": 60.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "自注意力",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"34\" r=\"11\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"25\" r=\"11\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"76\" cy=\"34\" r=\"11\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"37\" y=\"60\" width=\"27\" height=\"27\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"24\" y=\"38\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">Q</text><text x=\"50\" y=\"29\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">K</text><text x=\"76\" y=\"38\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">V</text><line x1=\"24\" y1=\"45\" x2=\"43\" y2=\"64\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"36\" x2=\"50\" y2=\"60\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"76\" y1=\"45\" x2=\"57\" y2=\"64\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"50\" y=\"78\" fill=\"#C67F76\" font-family=\"Arial\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">α</text></svg>",
+        "meta": {
+          "asset_id": "computing_math_math_attention",
+          "label": "注意力机制",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "computing_math_math_attention",
+      "x": 110.0,
+      "y": 10.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "编码层",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"14\" cy=\"65\" r=\"6\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"34\" cy=\"65\" r=\"6\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"54\" cy=\"65\" r=\"6\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"74\" cy=\"65\" r=\"6\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"91\" cy=\"65\" r=\"6\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"14\" y1=\"59\" x2=\"34\" y2=\"41\" stroke=\"#79A99A\" stroke-width=\"1.3\" stroke-linecap=\"round\" /><line x1=\"34\" y1=\"59\" x2=\"74\" y2=\"41\" stroke=\"#D5AA6C\" stroke-width=\"1.3\" stroke-linecap=\"round\" /><line x1=\"54\" y1=\"59\" x2=\"91\" y2=\"41\" stroke=\"#C67F76\" stroke-width=\"1.3\" stroke-linecap=\"round\" /><line x1=\"14\" y1=\"41\" x2=\"91\" y2=\"41\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><circle cx=\"14\" cy=\"39\" r=\"5\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"34\" cy=\"39\" r=\"5\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"54\" cy=\"39\" r=\"5\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"74\" cy=\"39\" r=\"5\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"91\" cy=\"39\" r=\"5\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"86\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">注意力</text></svg>",
+        "meta": {
+          "asset_id": "computing_math_math_transformer",
+          "label": "变换器",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "computing_math_math_transformer",
+      "x": 110.0,
+      "y": 76.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "预测",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"50\" y1=\"25\" x2=\"26\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"25\" x2=\"74\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"26\" y1=\"56\" x2=\"14\" y2=\"80\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"26\" y1=\"56\" x2=\"38\" y2=\"80\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"74\" y1=\"56\" x2=\"62\" y2=\"80\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"74\" y1=\"56\" x2=\"86\" y2=\"80\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><circle cx=\"50\" cy=\"22\" r=\"8\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"53\" r=\"8\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"74\" cy=\"53\" r=\"8\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"14\" cy=\"83\" r=\"8\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"38\" cy=\"83\" r=\"8\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"62\" cy=\"83\" r=\"8\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"86\" cy=\"83\" r=\"8\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"25\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">?</text><text x=\"43\" y=\"83\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">是</text><text x=\"63\" y=\"83\" fill=\"#C67F76\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">否</text></svg>",
+        "meta": {
+          "asset_id": "computing_math_math_decision_tree",
+          "label": "决策树",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "computing_math_math_decision_tree",
+      "x": 158.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "分词",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "上下文",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "表示",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o3",
+      "target": "o4",
+      "type": "sequence",
+      "label": "读出",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "computing-math"
+  },
+  "generation_contract": {}
+}

@@ -176,6 +176,13 @@ PACKS={
 }
 
 SYMBOLS.update(EXTRA_SYMBOLS)
+# A few late-added templates use semantic aliases so the same carefully drawn
+# glyph can be reused without duplicating geometry or IDs.
+SYMBOLS.update({
+    'chem_catalyst': SYMBOLS['catalyst'],
+    'earth_land_cover': SYMBOLS['earth_cropland'],
+    'reservoir': SYMBOLS['earth_reservoir'],
+})
 for _pid,_definitions in EXTRA_DEFINITIONS.items():
     _title,_description,_existing=PACKS[_pid]
     PACKS[_pid]=(_title,_description,_existing+_definitions)

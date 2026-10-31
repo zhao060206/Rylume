@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "computing-math",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "title": "计算机与数学",
   "domain": "computing-math",
   "min_app_version": "3.1.0",
@@ -1865,6 +1865,138 @@
         "Execution environment",
         "Result artifacts",
         "Provenance"
+      ]
+    },
+    {
+      "id": "computing_math_template_cnn_pipeline",
+      "title": "卷积网络流程",
+      "description": "输入图像 · 卷积 · 池化网格 · 特征提取 · 分类输出",
+      "file": "templates/cnn_pipeline.scene.json",
+      "thumbnail": "previews/cnn_pipeline.svg",
+      "thumbnail_single": "previews/cnn_pipeline-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "输入图像",
+        "卷积",
+        "池化网格",
+        "特征提取",
+        "分类输出"
+      ],
+      "keywords": [
+        "计算机与数学",
+        "卷积网络流程"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "输入图像",
+        "卷积",
+        "池化网格",
+        "特征提取",
+        "分类输出"
+      ]
+    },
+    {
+      "id": "computing_math_template_transformer_pipeline",
+      "title": "Transformer 推理链",
+      "description": "词元序列 · 嵌入 · 自注意力 · 编码层 · 预测",
+      "file": "templates/transformer_pipeline.scene.json",
+      "thumbnail": "previews/transformer_pipeline.svg",
+      "thumbnail_single": "previews/transformer_pipeline-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "词元序列",
+        "嵌入",
+        "自注意力",
+        "编码层",
+        "预测"
+      ],
+      "keywords": [
+        "计算机与数学",
+        "Transformer 推理链"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "词元序列",
+        "嵌入",
+        "自注意力",
+        "编码层",
+        "预测"
+      ]
+    },
+    {
+      "id": "computing_math_template_bayesian_workflow",
+      "title": "贝叶斯推断",
+      "description": "先验 · 似然 · 后验 · 决策 · 后验采样",
+      "file": "templates/bayesian_workflow.scene.json",
+      "thumbnail": "previews/bayesian_workflow.svg",
+      "thumbnail_single": "previews/bayesian_workflow-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "先验",
+        "似然",
+        "后验",
+        "决策",
+        "后验采样"
+      ],
+      "keywords": [
+        "计算机与数学",
+        "贝叶斯推断"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "先验",
+        "似然",
+        "后验",
+        "决策",
+        "后验采样"
+      ]
+    },
+    {
+      "id": "computing_math_template_fem_workflow",
+      "title": "有限元分析流程",
+      "description": "几何模型 · 网格离散 · 求解器 · 场变量 · 误差估计",
+      "file": "templates/fem_workflow.scene.json",
+      "thumbnail": "previews/fem_workflow.svg",
+      "thumbnail_single": "previews/fem_workflow-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "几何模型",
+        "网格离散",
+        "求解器",
+        "场变量",
+        "误差估计"
+      ],
+      "keywords": [
+        "计算机与数学",
+        "有限元分析流程"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "几何模型",
+        "网格离散",
+        "求解器",
+        "场变量",
+        "误差估计"
       ]
     }
   ]

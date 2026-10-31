@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "chemistry",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "title": "化学",
   "domain": "chemistry",
   "min_app_version": "3.1.0",
@@ -1684,6 +1684,29 @@
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
       "modifications": "Original vector artwork.",
       "sha256": "e4214d89b6134f8f3096af0f531df30d6e2bedc2abc9013bba75874a4838b575"
+    },
+    {
+      "id": "chemistry_chem_catalyst",
+      "asset_id": "chemistry_chem_catalyst",
+      "label": "chem catalyst",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_catalyst.svg",
+      "keywords": [
+        "chem_catalyst",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "3bed1d81d176c47d3746e05df224dcb6f4f932114925803604ea58d1aa4596c2"
     }
   ],
   "templates": [
@@ -1813,6 +1836,140 @@
         "Product",
         "Co-reactant",
         "Regenerated site"
+      ]
+    },
+    {
+      "id": "chemistry_template_hplc_analysis",
+      "title": "HPLC 分析流程",
+      "description": "样品制备 · 液相分离 · 光谱检测 · 色谱峰 · 质谱确证",
+      "file": "templates/hplc_analysis.scene.json",
+      "thumbnail": "previews/hplc_analysis.svg",
+      "thumbnail_single": "previews/hplc_analysis-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "样品制备",
+        "液相分离",
+        "光谱检测",
+        "色谱峰",
+        "质谱确证"
+      ],
+      "keywords": [
+        "化学",
+        "HPLC 分析流程"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "样品制备",
+        "液相分离",
+        "光谱检测",
+        "色谱峰",
+        "质谱确证"
+      ]
+    },
+    {
+      "id": "chemistry_template_nmr_structure",
+      "title": "NMR 结构解析",
+      "description": "样品管 · 核磁谱仪 · 化学位移 · 结构模型 · 氢键约束",
+      "file": "templates/nmr_structure.scene.json",
+      "thumbnail": "previews/nmr_structure.svg",
+      "thumbnail_single": "previews/nmr_structure-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "样品管",
+        "核磁谱仪",
+        "化学位移",
+        "结构模型",
+        "氢键约束"
+      ],
+      "keywords": [
+        "化学",
+        "NMR 结构解析"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "样品管",
+        "核磁谱仪",
+        "化学位移",
+        "结构模型",
+        "氢键约束"
+      ]
+    },
+    {
+      "id": "chemistry_template_fuel_cell_cycle",
+      "title": "燃料电池能量循环",
+      "description": "燃料供给 · 阳极 · 膜电极 · 阴极 · 负载 · 产物水",
+      "file": "templates/fuel_cell_cycle.scene.json",
+      "thumbnail": "previews/fuel_cell_cycle.svg",
+      "thumbnail_single": "previews/fuel_cell_cycle-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "燃料供给",
+        "阳极",
+        "膜电极",
+        "阴极",
+        "负载",
+        "产物水"
+      ],
+      "keywords": [
+        "化学",
+        "燃料电池能量循环"
+      ],
+      "object_count": 6,
+      "relation_count": 6,
+      "object_labels": [
+        "燃料供给",
+        "阳极",
+        "膜电极",
+        "阴极",
+        "负载",
+        "产物水"
+      ]
+    },
+    {
+      "id": "chemistry_template_catalysis_cycle",
+      "title": "催化反应循环",
+      "description": "反应物 · 吸附位点 · 过渡态 · 产物 · 催化剂再生",
+      "file": "templates/catalysis_cycle.scene.json",
+      "thumbnail": "previews/catalysis_cycle.svg",
+      "thumbnail_single": "previews/catalysis_cycle-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "反应物",
+        "吸附位点",
+        "过渡态",
+        "产物",
+        "催化剂再生"
+      ],
+      "keywords": [
+        "化学",
+        "催化反应循环"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "反应物",
+        "吸附位点",
+        "过渡态",
+        "产物",
+        "催化剂再生"
       ]
     }
   ]

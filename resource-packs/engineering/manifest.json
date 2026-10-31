@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "engineering",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "title": "工程技术",
   "domain": "engineering",
   "min_app_version": "3.1.0",
@@ -1840,6 +1840,138 @@
         "Strain sensors",
         "Acquisition",
         "Load control"
+      ]
+    },
+    {
+      "id": "engineering_template_pid_loop",
+      "title": "PID 闭环控制",
+      "description": "温度传感器 · PID 控制器 · 执行器 · 被控对象 · 操作界面",
+      "file": "templates/pid_loop.scene.json",
+      "thumbnail": "previews/pid_loop.svg",
+      "thumbnail_single": "previews/pid_loop-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "温度传感器",
+        "PID 控制器",
+        "执行器",
+        "被控对象",
+        "操作界面"
+      ],
+      "keywords": [
+        "工程技术",
+        "PID 闭环控制"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "温度传感器",
+        "PID 控制器",
+        "执行器",
+        "被控对象",
+        "操作界面"
+      ]
+    },
+    {
+      "id": "engineering_template_scada_network",
+      "title": "SCADA 数据链路",
+      "description": "现场仪表 · PLC · SCADA · 操作站 · 历史数据库",
+      "file": "templates/scada_network.scene.json",
+      "thumbnail": "previews/scada_network.svg",
+      "thumbnail_single": "previews/scada_network-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "现场仪表",
+        "PLC",
+        "SCADA",
+        "操作站",
+        "历史数据库"
+      ],
+      "keywords": [
+        "工程技术",
+        "SCADA 数据链路"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "现场仪表",
+        "PLC",
+        "SCADA",
+        "操作站",
+        "历史数据库"
+      ]
+    },
+    {
+      "id": "engineering_template_heat_pump_cycle",
+      "title": "热泵循环",
+      "description": "蒸发器 · 压缩机 · 冷凝器 · 节流阀 · 建筑供热",
+      "file": "templates/heat_pump_cycle.scene.json",
+      "thumbnail": "previews/heat_pump_cycle.svg",
+      "thumbnail_single": "previews/heat_pump_cycle-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "蒸发器",
+        "压缩机",
+        "冷凝器",
+        "节流阀",
+        "建筑供热"
+      ],
+      "keywords": [
+        "工程技术",
+        "热泵循环"
+      ],
+      "object_count": 5,
+      "relation_count": 5,
+      "object_labels": [
+        "蒸发器",
+        "压缩机",
+        "冷凝器",
+        "节流阀",
+        "建筑供热"
+      ]
+    },
+    {
+      "id": "engineering_template_robotic_assembly",
+      "title": "机器人装配单元",
+      "description": "输送线 · 装配机器人 · 零件 · 视觉检测 · 物料搬运",
+      "file": "templates/robotic_assembly.scene.json",
+      "thumbnail": "previews/robotic_assembly.svg",
+      "thumbnail_single": "previews/robotic_assembly-single.svg",
+      "canvas_mm": [
+        180,
+        120
+      ],
+      "family": "network",
+      "includes": [
+        "输送线",
+        "装配机器人",
+        "零件",
+        "视觉检测",
+        "物料搬运"
+      ],
+      "keywords": [
+        "工程技术",
+        "机器人装配单元"
+      ],
+      "object_count": 5,
+      "relation_count": 4,
+      "object_labels": [
+        "输送线",
+        "装配机器人",
+        "零件",
+        "视觉检测",
+        "物料搬运"
       ]
     }
   ]

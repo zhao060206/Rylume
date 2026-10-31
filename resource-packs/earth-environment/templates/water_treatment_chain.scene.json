@@ -1,0 +1,267 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "earth_environment_template_water_treatment_chain",
+  "title": "饮用水处理链",
+  "source_text": "饮用水处理链",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "取水",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M37 4 C94 34 1 40 57 65 C83 80 43 90 51 98 L75 98 C66 86 100 79 77 64 C17 34 100 32 58 4 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "earth_environment_river",
+          "label": "河流",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_river",
+      "x": 10.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "处理厂",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"16\" width=\"30\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"10\" y=\"48\" width=\"30\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"58\" y=\"28\" width=\"32\" height=\"31\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M14 26 Q24 19 35 26 M14 58 Q24 51 35 58\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"74\" cy=\"43\" r=\"11\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"74\" cy=\"43\" r=\"6\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"40\" y1=\"26\" x2=\"58\" y2=\"34\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"40\" y1=\"58\" x2=\"58\" y2=\"52\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"74\" y1=\"59\" x2=\"74\" y2=\"87\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"58\" y1=\"87\" x2=\"89\" y2=\"87\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><text x=\"50\" y=\"94\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">水处理</text></svg>",
+        "meta": {
+          "asset_id": "earth_environment_earth_water_treatment",
+          "label": "水处理",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_earth_water_treatment",
+      "x": 60.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "清水库",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5 35 L58 35 L73 88 L5 88 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M58 26 L74 26 L88 89 L73 89 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M6 47 Q24 40 43 47 M6 61 Q24 54 43 61 M6 75 Q24 68 43 75\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"34\" y1=\"13\" x2=\"34\" y2=\"32\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"34\" y1=\"32\" x2=\"31.83058130441221\" y2=\"27.495155660487903\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"34\" y1=\"32\" x2=\"36.169418695587794\" y2=\"27.495155660487903\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><circle cx=\"50\" cy=\"16\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "earth_environment_reservoir",
+          "label": "reservoir",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_reservoir",
+      "x": 110.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "配水管网",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 22 L62 22 Q83 22 83 43 L83 88 L62 88 L62 46 Q62 43 58 43 L12 43 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"10\" y1=\"17\" x2=\"10\" y2=\"47\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"56\" y1=\"90\" x2=\"89\" y2=\"90\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "earth_environment_pipe",
+          "label": "pipe",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_pipe",
+      "x": 158.0,
+      "y": 10.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "水质监测",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"50\" y1=\"87\" x2=\"50\" y2=\"19\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"29\" y1=\"88\" x2=\"71\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M50 20 L77 16 L77 35 L50 39 Z\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"50\" cy=\"57\" r=\"10\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"12\" y1=\"42\" x2=\"45\" y2=\"42\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"20\" y1=\"30\" x2=\"20\" y2=\"53\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "earth_environment_station",
+          "label": "环境监测站",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "earth_environment_station",
+      "x": 158.0,
+      "y": 76.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "引水",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "净化",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "供水",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o3",
+      "target": "o4",
+      "type": "sequence",
+      "label": "监测",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "earth-environment"
+  },
+  "generation_contract": {}
+}

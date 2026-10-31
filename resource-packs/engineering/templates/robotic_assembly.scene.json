@@ -1,0 +1,267 @@
+{
+  "schema_version": 2,
+  "revision": 1,
+  "id": "engineering_template_robotic_assembly",
+  "title": "机器人装配单元",
+  "source_text": "机器人装配单元",
+  "layout": "network",
+  "canvas": {
+    "width_mm": 180.0,
+    "height_mm": 120.0
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size_pt": 8.0,
+    "min_font_size_pt": 7.0,
+    "stroke_pt": 0.8,
+    "show_title": false,
+    "relation_labels": true,
+    "template": "",
+    "colorway": "lagoon",
+    "glyph_tint": 0.65,
+    "palette": {
+      "primary": "#2E6F83",
+      "secondary": "#669A83",
+      "accent": "#D99854"
+    }
+  },
+  "compartments": [],
+  "objects": [
+    {
+      "id": "o0",
+      "entity_id": "o0",
+      "type": "symbol",
+      "role": "entity",
+      "label": "输送线",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 62 L79 62 Q91 62 91 72 Q91 82 79 82 L9 82 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"13\" y1=\"72\" x2=\"85\" y2=\"72\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><circle cx=\"20\" cy=\"72\" r=\"4\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"36\" cy=\"72\" r=\"4\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"72\" r=\"4\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"68\" cy=\"72\" r=\"4\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"84\" cy=\"72\" r=\"4\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"19\" y=\"42\" width=\"18\" height=\"15\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"46\" y=\"42\" width=\"18\" height=\"15\" fill=\"#D5AA6C\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"72\" y=\"42\" width=\"18\" height=\"15\" fill=\"#C67F76\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"14\" y1=\"32\" x2=\"78\" y2=\"32\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"78\" y1=\"32\" x2=\"73.49515566048791\" y2=\"34.169418695587794\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"78\" y1=\"32\" x2=\"73.49515566048791\" y2=\"29.83058130441221\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "meta": {
+          "asset_id": "engineering_eng_conveyor",
+          "label": "输送带",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_eng_conveyor",
+      "x": 10.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o1",
+      "entity_id": "o1",
+      "type": "symbol",
+      "role": "entity",
+      "label": "装配机器人",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"21\" y1=\"9\" x2=\"79\" y2=\"9\" stroke=\"#395B70\" stroke-width=\"6\" stroke-linecap=\"round\" /><circle cx=\"50\" cy=\"9\" r=\"6\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"31\" y1=\"17\" x2=\"21\" y2=\"47\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"69\" y1=\"17\" x2=\"79\" y2=\"47\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"17\" x2=\"50\" y2=\"45\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><circle cx=\"21\" cy=\"47\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"79\" cy=\"47\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"45\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><polygon points=\"30,52 70,52 60,68 40,68\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><line x1=\"21\" y1=\"47\" x2=\"40\" y2=\"60\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"79\" y1=\"47\" x2=\"60\" y2=\"60\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"45\" x2=\"50\" y2=\"52\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><circle cx=\"50\" cy=\"68\" r=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "engineering_eng_delta_robot",
+          "label": "并联机器人",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_eng_delta_robot",
+      "x": 60.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o2",
+      "entity_id": "o2",
+      "type": "symbol",
+      "role": "entity",
+      "label": "零件",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"24,19 40,11 56,19 56,33 40,41 24,33\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><line x1=\"40\" y1=\"41\" x2=\"40\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"7\" stroke-linecap=\"round\" /><path d=\"M32 49 L48 55 M32 59 L48 65 M32 69 L48 75 M32 79 L48 85\" fill=\"none\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><text x=\"40\" y=\"28\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">M</text></svg>",
+        "meta": {
+          "asset_id": "engineering_eng_bolt",
+          "label": "螺栓",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_eng_bolt",
+      "x": 110.0,
+      "y": 10.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o3",
+      "entity_id": "o3",
+      "type": "symbol",
+      "role": "entity",
+      "label": "视觉检测",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"43\" cy=\"43\" r=\"27\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"43\" cy=\"43\" r=\"22\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"63\" y1=\"64\" x2=\"85\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"7\" stroke-linecap=\"round\" /><rect x=\"27\" y=\"41\" width=\"34\" height=\"10\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"44\" cy=\"46\" r=\"5\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"15\" y1=\"73\" x2=\"28\" y2=\"58\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"58\" x2=\"26.689045895490594\" y2=\"62.82508024139184\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"58\" x2=\"23.410233846978954\" y2=\"59.98344313268176\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"76\" y=\"28\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">OK</text></svg>",
+        "meta": {
+          "asset_id": "engineering_eng_inspection",
+          "label": "质量检测",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_eng_inspection",
+      "x": 110.0,
+      "y": 76.0,
+      "w": 19.0,
+      "h": 23.0
+    },
+    {
+      "id": "o4",
+      "entity_id": "o4",
+      "type": "symbol",
+      "role": "entity",
+      "label": "物料搬运",
+      "state": "",
+      "compartment": "",
+      "group_id": "",
+      "locked": false,
+      "visible": true,
+      "rotation": 0.0,
+      "font_size_pt": 8.0,
+      "label_dx": 0.0,
+      "label_dy": 0.0,
+      "evidence": "",
+      "asset_snapshot": {
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"43\" width=\"68\" height=\"32\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"26\" y=\"29\" width=\"48\" height=\"18\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"28\" cy=\"79\" r=\"9\" fill=\"#395B70\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"72\" cy=\"79\" r=\"9\" fill=\"#395B70\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"29\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"33\" y=\"52\" width=\"34\" height=\"9\" fill=\"#FFFFFF\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M33 21 Q50 8 67 21\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"28\" cy=\"79\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"72\" cy=\"79\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "meta": {
+          "asset_id": "engineering_eng_agv",
+          "label": "移动机器人",
+          "author": "Rylume contributors",
+          "author_url": "https://github.com/zhao060206/Rylume",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+          "modifications": "Original vector artwork."
+        }
+      },
+      "asset_id": "engineering_eng_agv",
+      "x": 158.0,
+      "y": 43.0,
+      "w": 19.0,
+      "h": 23.0
+    }
+  ],
+  "relations": [
+    {
+      "id": "r0",
+      "source": "o0",
+      "target": "o1",
+      "type": "sequence",
+      "label": "上料",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r1",
+      "source": "o1",
+      "target": "o2",
+      "type": "sequence",
+      "label": "装配",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r2",
+      "source": "o2",
+      "target": "o3",
+      "type": "sequence",
+      "label": "检测",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    },
+    {
+      "id": "r3",
+      "source": "o3",
+      "target": "o4",
+      "type": "sequence",
+      "label": "流转",
+      "indirect": false,
+      "uncertain": false,
+      "evidence": "",
+      "source_port": "auto",
+      "target_port": "auto"
+    }
+  ],
+  "annotations": [],
+  "unresolved": [],
+  "requirements": {
+    "objects": [],
+    "relations": []
+  },
+  "provenance": {
+    "method": "original-discipline-template",
+    "example": "engineering"
+  },
+  "generation_contract": {}
+}
