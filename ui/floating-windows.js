@@ -1,8 +1,8 @@
 /** Movable library windows leave the artwork interactive. */
 export function clampPosition(value, size, limit){return Math.max(0,Math.min(value,Math.max(0,limit-size)));}
-export function setupFloatingWindows(){
- const panel=document.querySelector('.workspace>.left-panel');
- const dialogs=['asset-dialog','gallery-dialog','template-detail-dialog','template-preview-dialog','reference-dialog'].map(id=>document.getElementById(id)).filter(Boolean);
+export function setupFloatingWindows(only=null){
+ const panel=only?null:document.querySelector('.workspace>.left-panel');
+ const dialogs=only?[only]:['asset-dialog','gallery-dialog','template-detail-dialog','template-preview-dialog','reference-dialog'].map(id=>document.getElementById(id)).filter(Boolean);
  const windows=[...(panel?[panel]:[]),...dialogs];let z=30;
  function bounds(win){return win===panel?win.parentElement.getBoundingClientRect():{left:0,top:0,width:innerWidth,height:innerHeight};}
  function constrain(win){if(win.hidden||win===panel&&win.parentElement.classList.contains('left-collapsed')||win instanceof HTMLDialogElement&&!win.open)return;const area=bounds(win),rect=win.getBoundingClientRect();if(rect.width>area.width)win.style.width=Math.max(0,area.width-8)+'px';if(rect.height>area.height)win.style.height=Math.max(0,area.height-8)+'px';win.style.left=clampPosition(rect.left-area.left,Math.min(rect.width,area.width),area.width)+'px';win.style.top=clampPosition(rect.top-area.top,Math.min(rect.height,area.height),area.height)+'px';win.style.right='auto';win.style.bottom='auto';}
