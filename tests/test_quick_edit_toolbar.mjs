@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const html=await readFile(new URL('../ui/canvas-studio.html',import.meta.url),'utf8');
+const css=await readFile(new URL('../ui/quick-edit-toolbar.css',import.meta.url),'utf8');
+const toolbarStart=html.indexOf('class="toolbar" role="toolbar"');
+const quick=html.indexOf('class="quick-edit"');
+const actions=html.indexOf('class="canvas-actions"');
+const canvas=html.indexOf('aria-label="图版编辑区"');
+assert.ok(toolbarStart<quick && quick<actions && actions<canvas,'Context controls are in the toolbar, not a separate canvas row');
+assert.match(css,/\.quick-edit\[hidden\][\s\S]*?display:none!important/);
+assert.match(css,/@media\(max-width:1800px\)[\s\S]*?position:absolute/,'Narrow screens use an overlay so canvas geometry stays fixed');
+assert.match(html,/class="tool text-tool quick-overflow-action" data-command="duplicate"/);
+assert.match(html,/class="tool text-tool quick-overflow-action" data-command="delete"/);
+console.log('Quick editing stays inside the toolbar and has narrow-screen actions.');

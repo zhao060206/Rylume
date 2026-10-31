@@ -19,6 +19,7 @@
   <link href="/ui/onboarding.css" rel="stylesheet"/>
   <link href="/ui/document-assistant.css" rel="stylesheet"/>
   <link href="/ui/floating-windows.css" rel="stylesheet"/>
+  <link href="/ui/quick-edit-toolbar.css" rel="stylesheet"/>
  </head>
  <body>
   <svg aria-hidden="true" class="icon-defs">
@@ -405,6 +406,123 @@
    </nav>
      <div class="toolbar-spacer">
      </div>
+    <div aria-label="所选对象快捷编辑" class="quick-edit">
+     <div id="quick-empty">
+      <span>
+       选中对象后，在这里直接改文字和外观。
+      </span>
+      <button class="text-button" id="beginner-help">
+       操作说明
+      </button>
+     </div>
+     <div hidden="" id="quick-fields">
+      <div class="relation-context" id="relation-context">
+       <select aria-label="新建连接类型" class="tool-select relation-select" id="connection-type" title="新建连接的关系类型">
+        <option value="sequence">
+         流程顺序
+        </option>
+        <option value="associates">
+         关联
+        </option>
+        <option value="activates">
+         激活 →
+        </option>
+        <option value="inhibits">
+         抑制 ⊣
+        </option>
+        <option value="binds">
+         结合
+        </option>
+        <option value="converts">
+         转换
+        </option>
+        <option value="transports">
+         转运
+        </option>
+       </select>
+      </div>
+      <span id="quick-count">
+       所选对象
+      </span>
+      <label class="quick-name">
+       <span id="quick-label-title">修改文字</span>
+       <input aria-label="所选对象文字" id="quick-label" placeholder="在这里输入文字"/>
+      </label>
+      <label>
+       字号
+       <input aria-label="所选对象字号" id="quick-font" max="48" min="7" step="1" type="number" value="8"/>
+      </label>
+      <label>
+       颜色
+       <input aria-label="所选对象颜色" id="quick-fill" type="color" value="#dae8ed"/>
+      </label>
+      <button class="tool text-tool" id="duplicate" title="复制所选 Ctrl+D">
+       复制
+      </button>
+      <button class="tool text-tool" id="delete" title="删除所选 Delete">
+       删除
+      </button>
+      <details class="selection-more app-menu">
+       <summary aria-label="对齐、组合与排列">
+        排列
+       </summary>
+       <div class="menu-items selection-menu">
+        <button class="tool text-tool quick-overflow-action" data-command="duplicate">复制</button>
+        <button class="tool text-tool quick-overflow-action" data-command="delete">删除</button>
+        <button class="tool text-tool" id="group">
+         组合
+        </button>
+        <button class="tool text-tool" id="ungroup">
+         解组
+        </button>
+        <select aria-label="对齐所选对象" class="tool-select" id="align">
+         <option value="">
+          对齐
+         </option>
+         <option value="left">
+          左对齐
+         </option>
+         <option value="center">
+          水平居中
+         </option>
+         <option value="right">
+          右对齐
+         </option>
+         <option value="top">
+          顶端对齐
+         </option>
+         <option value="middle">
+          垂直居中
+         </option>
+         <option value="bottom">
+          底端对齐
+         </option>
+         <option value="distribute-x">
+          水平等距
+         </option>
+         <option value="distribute-y">
+          垂直等距
+         </option>
+        </select>
+        <button class="tool text-tool" id="quick-label-focus">
+         改字
+        </button>
+        <button class="tool text-tool" id="quick-bring-front" title="将所选对象置于顶层">
+         置顶
+        </button>
+        <button class="tool text-tool" id="quick-send-back" title="将所选对象置于底层">
+         置底
+        </button>
+        <button class="tool text-tool" id="quick-connect" title="选择一个对象后，点这里，再点击目标对象">
+         连线到…
+        </button>
+        <button class="tool text-tool" id="insert-legend" title="在图版右下角插入规范科研图例">
+         插入图例
+        </button>
+       </div>
+      </details>
+     </div>
+    </div>
      <div class="canvas-actions">
       <button class="tool text-tool professional-only" id="toggle-properties" title="打开所选对象属性或画布设置">
        属性
@@ -536,121 +654,6 @@
      </div>
     </section>
    </aside>
-    <div aria-label="所选对象快捷编辑" class="quick-edit">
-     <div id="quick-empty">
-      <span>
-       选中对象后，在这里直接改文字和外观。
-      </span>
-      <button class="text-button" id="beginner-help">
-       操作说明
-      </button>
-     </div>
-     <div hidden="" id="quick-fields">
-      <div class="relation-context" id="relation-context">
-       <select aria-label="新建连接类型" class="tool-select relation-select" id="connection-type" title="新建连接的关系类型">
-        <option value="sequence">
-         流程顺序
-        </option>
-        <option value="associates">
-         关联
-        </option>
-        <option value="activates">
-         激活 →
-        </option>
-        <option value="inhibits">
-         抑制 ⊣
-        </option>
-        <option value="binds">
-         结合
-        </option>
-        <option value="converts">
-         转换
-        </option>
-        <option value="transports">
-         转运
-        </option>
-       </select>
-      </div>
-      <span id="quick-count">
-       所选对象
-      </span>
-      <label class="quick-name">
-       <span id="quick-label-title">修改文字</span>
-       <input aria-label="所选对象文字" id="quick-label" placeholder="在这里输入文字"/>
-      </label>
-      <label>
-       字号
-       <input aria-label="所选对象字号" id="quick-font" max="48" min="7" step="1" type="number" value="8"/>
-      </label>
-      <label>
-       颜色
-       <input aria-label="所选对象颜色" id="quick-fill" type="color" value="#dae8ed"/>
-      </label>
-      <button class="tool text-tool" id="duplicate" title="复制所选 Ctrl+D">
-       复制
-      </button>
-      <button class="tool text-tool" id="delete" title="删除所选 Delete">
-       删除
-      </button>
-      <details class="selection-more app-menu">
-       <summary aria-label="对齐、组合与排列">
-        排列
-       </summary>
-       <div class="menu-items selection-menu">
-        <button class="tool text-tool" id="group">
-         组合
-        </button>
-        <button class="tool text-tool" id="ungroup">
-         解组
-        </button>
-        <select aria-label="对齐所选对象" class="tool-select" id="align">
-         <option value="">
-          对齐
-         </option>
-         <option value="left">
-          左对齐
-         </option>
-         <option value="center">
-          水平居中
-         </option>
-         <option value="right">
-          右对齐
-         </option>
-         <option value="top">
-          顶端对齐
-         </option>
-         <option value="middle">
-          垂直居中
-         </option>
-         <option value="bottom">
-          底端对齐
-         </option>
-         <option value="distribute-x">
-          水平等距
-         </option>
-         <option value="distribute-y">
-          垂直等距
-         </option>
-        </select>
-        <button class="tool text-tool" id="quick-label-focus">
-         改字
-        </button>
-        <button class="tool text-tool" id="quick-bring-front" title="将所选对象置于顶层">
-         置顶
-        </button>
-        <button class="tool text-tool" id="quick-send-back" title="将所选对象置于底层">
-         置底
-        </button>
-        <button class="tool text-tool" id="quick-connect" title="选择一个对象后，点这里，再点击目标对象">
-         连线到…
-        </button>
-        <button class="tool text-tool" id="insert-legend" title="在图版右下角插入规范科研图例">
-         插入图例
-        </button>
-       </div>
-      </details>
-     </div>
-    </div>
    <section aria-label="图版编辑区" class="canvas-column">
     <div class="error-banner" hidden="" id="error-banner" role="alert">
      <span id="error-text">

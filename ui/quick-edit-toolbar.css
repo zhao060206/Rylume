@@ -1,0 +1,23 @@
+/* Selection controls share the toolbar; they never create a new canvas row. */
+.workspace>.toolbar{position:relative;overflow:visible}
+.workspace .toolbar .quick-edit{position:relative;inset:auto;flex:0 0 auto;width:auto;min-width:0;max-width:100%;min-height:34px;height:34px;padding:0 6px;border:0;border-radius:0;box-shadow:none;background:transparent;overflow:visible;z-index:19}
+.workspace:not(.showing-start):not(.annotations-open) .toolbar .quick-edit:not([hidden]){display:flex}
+.workspace .toolbar .quick-edit[hidden],.workspace.showing-start .toolbar .quick-edit,.workspace.annotations-open .toolbar .quick-edit{display:none!important}
+.workspace .toolbar .quick-edit #quick-fields{width:auto;min-height:0;gap:7px;flex-wrap:nowrap;white-space:nowrap}
+.workspace .toolbar .quick-edit .quick-name{min-width:0;max-width:none;flex:0 0 auto}
+.workspace .toolbar .quick-edit .quick-name input{width:130px;min-width:70px}
+.workspace .toolbar .quick-edit .selection-actions-inline{display:contents}
+.quick-overflow-action{display:none!important}
+.workspace .toolbar .quick-edit :focus-visible{outline:2px solid var(--ui-focus,#446e60);outline-offset:2px}
+/* If the toolbar cannot fit the controls, keep them anchored at its right edge
+   over the canvas instead of pushing the figure down. */
+@media(max-width:1800px){
+ .workspace .toolbar .quick-edit{position:absolute;top:calc(100% + 5px);right:8px;left:auto;max-width:calc(100% - 16px);height:auto;min-height:40px;padding:4px 8px;background:var(--panel,#fff);border:1px solid var(--line,#dce3df);border-radius:7px;box-shadow:0 5px 20px #26343d1c}
+ .workspace .toolbar .quick-edit .quick-name input{width:130px}
+}
+@media(max-width:1000px){
+ .workspace .toolbar .quick-edit .quick-name input{width:95px}
+ .workspace .toolbar .quick-edit #duplicate,.workspace .toolbar .quick-edit #delete{display:none}
+ .workspace .toolbar .quick-edit .quick-overflow-action{display:flex!important}
+ .workspace .toolbar .quick-edit .inline-relation-choices{display:none}
+}
