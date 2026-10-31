@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "materials",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "title": "材料科学",
   "domain": "materials",
   "min_app_version": "3.1.0",
@@ -11,6 +11,7 @@
       "id": "materials_particle",
       "asset_id": "materials_particle",
       "label": "纳米颗粒",
+      "label_en": "Particle",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -35,6 +36,7 @@
       "id": "materials_lattice",
       "asset_id": "materials_lattice",
       "label": "晶格",
+      "label_en": "Lattice",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -59,6 +61,7 @@
       "id": "materials_vacancy",
       "asset_id": "materials_vacancy",
       "label": "空位缺陷",
+      "label_en": "Vacancy",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -83,6 +86,7 @@
       "id": "materials_dislocation",
       "asset_id": "materials_dislocation",
       "label": "位错",
+      "label_en": "Dislocation",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -107,6 +111,7 @@
       "id": "materials_layers",
       "asset_id": "materials_layers",
       "label": "层状材料",
+      "label_en": "Layers",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -131,6 +136,7 @@
       "id": "materials_graphene",
       "asset_id": "materials_graphene",
       "label": "石墨烯晶格",
+      "label_en": "Graphene",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -155,6 +161,7 @@
       "id": "materials_nanotube",
       "asset_id": "materials_nanotube",
       "label": "纳米管",
+      "label_en": "Nanotube",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -179,6 +186,7 @@
       "id": "materials_polymer",
       "asset_id": "materials_polymer",
       "label": "聚合物链",
+      "label_en": "Polymer",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -203,6 +211,7 @@
       "id": "materials_composite",
       "asset_id": "materials_composite",
       "label": "复合材料",
+      "label_en": "Composite",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -227,6 +236,7 @@
       "id": "materials_pore",
       "asset_id": "materials_pore",
       "label": "多孔材料",
+      "label_en": "Pore",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -251,6 +261,7 @@
       "id": "materials_membrane",
       "asset_id": "materials_membrane",
       "label": "多孔膜",
+      "label_en": "Membrane",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -275,6 +286,7 @@
       "id": "materials_grain",
       "asset_id": "materials_grain",
       "label": "多晶晶粒",
+      "label_en": "Grain",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -299,6 +311,7 @@
       "id": "materials_fiber",
       "asset_id": "materials_fiber",
       "label": "纤维",
+      "label_en": "Fiber",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -323,6 +336,7 @@
       "id": "materials_film",
       "asset_id": "materials_film",
       "label": "薄膜",
+      "label_en": "Film",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -347,6 +361,7 @@
       "id": "materials_substrate",
       "asset_id": "materials_substrate",
       "label": "基底",
+      "label_en": "Substrate",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -371,6 +386,7 @@
       "id": "materials_tensile",
       "asset_id": "materials_tensile",
       "label": "拉伸试样",
+      "label_en": "Tensile",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -395,6 +411,7 @@
       "id": "materials_fracture",
       "asset_id": "materials_fracture",
       "label": "裂纹扩展",
+      "label_en": "Fracture",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -419,6 +436,7 @@
       "id": "materials_powder",
       "asset_id": "materials_powder",
       "label": "粉末颗粒",
+      "label_en": "Powder",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -443,6 +461,7 @@
       "id": "materials_mat_bcc",
       "asset_id": "materials_mat_bcc",
       "label": "体心立方晶格",
+      "label_en": "Mat bcc",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -467,6 +486,7 @@
       "id": "materials_mat_fcc",
       "asset_id": "materials_mat_fcc",
       "label": "面心立方晶格",
+      "label_en": "Mat fcc",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -491,6 +511,7 @@
       "id": "materials_mat_hcp",
       "asset_id": "materials_mat_hcp",
       "label": "六方密排晶格",
+      "label_en": "Mat hcp",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -515,6 +536,7 @@
       "id": "materials_mat_grain_boundary",
       "asset_id": "materials_mat_grain_boundary",
       "label": "晶界",
+      "label_en": "Mat grain boundary",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -539,6 +561,7 @@
       "id": "materials_mat_twin_boundary",
       "asset_id": "materials_mat_twin_boundary",
       "label": "孪晶界",
+      "label_en": "Mat twin boundary",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -563,6 +586,7 @@
       "id": "materials_mat_precipitate",
       "asset_id": "materials_mat_precipitate",
       "label": "析出相",
+      "label_en": "Mat precipitate",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -587,6 +611,7 @@
       "id": "materials_mat_inclusion",
       "asset_id": "materials_mat_inclusion",
       "label": "夹杂物",
+      "label_en": "Mat inclusion",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -611,6 +636,7 @@
       "id": "materials_mat_crack_tip",
       "asset_id": "materials_mat_crack_tip",
       "label": "裂纹尖端",
+      "label_en": "Mat crack tip",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -635,6 +661,7 @@
       "id": "materials_mat_fatigue",
       "asset_id": "materials_mat_fatigue",
       "label": "疲劳曲线",
+      "label_en": "Mat fatigue",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -659,6 +686,7 @@
       "id": "materials_mat_creep",
       "asset_id": "materials_mat_creep",
       "label": "蠕变曲线",
+      "label_en": "Mat creep",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -683,6 +711,7 @@
       "id": "materials_mat_corrosion",
       "asset_id": "materials_mat_corrosion",
       "label": "腐蚀",
+      "label_en": "Mat corrosion",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -707,6 +736,7 @@
       "id": "materials_mat_oxide_layer",
       "asset_id": "materials_mat_oxide_layer",
       "label": "氧化层",
+      "label_en": "Mat oxide layer",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -731,6 +761,7 @@
       "id": "materials_mat_coating",
       "asset_id": "materials_mat_coating",
       "label": "涂层",
+      "label_en": "Mat coating",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -755,6 +786,7 @@
       "id": "materials_mat_thin_film",
       "asset_id": "materials_mat_thin_film",
       "label": "薄膜沉积",
+      "label_en": "Mat thin film",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -779,6 +811,7 @@
       "id": "materials_mat_sputtering",
       "asset_id": "materials_mat_sputtering",
       "label": "磁控溅射",
+      "label_en": "Mat sputtering",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -803,6 +836,7 @@
       "id": "materials_mat_cvd",
       "asset_id": "materials_mat_cvd",
       "label": "化学气相沉积",
+      "label_en": "Mat CVD",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -827,6 +861,7 @@
       "id": "materials_mat_lithography",
       "asset_id": "materials_mat_lithography",
       "label": "光刻",
+      "label_en": "Mat lithography",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -851,6 +886,7 @@
       "id": "materials_mat_annealing",
       "asset_id": "materials_mat_annealing",
       "label": "退火",
+      "label_en": "Mat annealing",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -875,6 +911,7 @@
       "id": "materials_mat_quenching",
       "asset_id": "materials_mat_quenching",
       "label": "淬火",
+      "label_en": "Mat quenching",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -899,6 +936,7 @@
       "id": "materials_mat_sintering",
       "asset_id": "materials_mat_sintering",
       "label": "烧结",
+      "label_en": "Mat sintering",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -923,6 +961,7 @@
       "id": "materials_mat_additive",
       "asset_id": "materials_mat_additive",
       "label": "增材制造",
+      "label_en": "Mat additive",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -947,6 +986,7 @@
       "id": "materials_mat_extrusion",
       "asset_id": "materials_mat_extrusion",
       "label": "挤出成型",
+      "label_en": "Mat extrusion",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -971,6 +1011,7 @@
       "id": "materials_mat_injection",
       "asset_id": "materials_mat_injection",
       "label": "注塑成型",
+      "label_en": "Mat injection",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -995,6 +1036,7 @@
       "id": "materials_mat_rolling",
       "asset_id": "materials_mat_rolling",
       "label": "轧制",
+      "label_en": "Mat rolling",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1019,6 +1061,7 @@
       "id": "materials_mat_forging",
       "asset_id": "materials_mat_forging",
       "label": "锻造",
+      "label_en": "Mat forging",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1043,6 +1086,7 @@
       "id": "materials_mat_weld",
       "asset_id": "materials_mat_weld",
       "label": "焊接",
+      "label_en": "Mat weld",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1067,6 +1111,7 @@
       "id": "materials_mat_laminate",
       "asset_id": "materials_mat_laminate",
       "label": "层合板",
+      "label_en": "Mat laminate",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1091,6 +1136,7 @@
       "id": "materials_mat_fiber_reinf",
       "asset_id": "materials_mat_fiber_reinf",
       "label": "纤维增强",
+      "label_en": "Mat fiber reinf",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1115,6 +1161,7 @@
       "id": "materials_mat_foam",
       "asset_id": "materials_mat_foam",
       "label": "泡沫材料",
+      "label_en": "Mat foam",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1139,6 +1186,7 @@
       "id": "materials_mat_aerogel",
       "asset_id": "materials_mat_aerogel",
       "label": "气凝胶",
+      "label_en": "Mat aerogel",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1163,6 +1211,7 @@
       "id": "materials_mat_metamaterial",
       "asset_id": "materials_mat_metamaterial",
       "label": "超材料",
+      "label_en": "Mat metamaterial",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1187,6 +1236,7 @@
       "id": "materials_mat_shape_memory",
       "asset_id": "materials_mat_shape_memory",
       "label": "形状记忆",
+      "label_en": "Mat shape memory",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1211,6 +1261,7 @@
       "id": "materials_mat_piezoelectric",
       "asset_id": "materials_mat_piezoelectric",
       "label": "压电材料",
+      "label_en": "Mat piezoelectric",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1235,6 +1286,7 @@
       "id": "materials_mat_semiconductor",
       "asset_id": "materials_mat_semiconductor",
       "label": "半导体",
+      "label_en": "Mat semiconductor",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1259,6 +1311,7 @@
       "id": "materials_mat_superconductor",
       "asset_id": "materials_mat_superconductor",
       "label": "超导体",
+      "label_en": "Mat superconductor",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1283,6 +1336,7 @@
       "id": "materials_mat_magnetic",
       "asset_id": "materials_mat_magnetic",
       "label": "磁畴",
+      "label_en": "Mat magnetic",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1307,6 +1361,7 @@
       "id": "materials_mat_battery_material",
       "asset_id": "materials_mat_battery_material",
       "label": "电池材料",
+      "label_en": "Mat battery material",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1331,6 +1386,7 @@
       "id": "materials_mat_catalyst_support",
       "asset_id": "materials_mat_catalyst_support",
       "label": "催化剂载体",
+      "label_en": "Mat catalyst support",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1355,6 +1411,7 @@
       "id": "materials_mat_sep_membrane",
       "asset_id": "materials_mat_sep_membrane",
       "label": "分离膜",
+      "label_en": "Mat sep membrane",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1379,6 +1436,7 @@
       "id": "materials_mat_hydrogel",
       "asset_id": "materials_mat_hydrogel",
       "label": "水凝胶",
+      "label_en": "Mat hydrogel",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1403,6 +1461,7 @@
       "id": "materials_mat_elastomer",
       "asset_id": "materials_mat_elastomer",
       "label": "弹性体",
+      "label_en": "Mat elastomer",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1427,6 +1486,7 @@
       "id": "materials_mat_thermoplastic",
       "asset_id": "materials_mat_thermoplastic",
       "label": "热塑性塑料",
+      "label_en": "Mat thermoplastic",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1451,6 +1511,7 @@
       "id": "materials_mat_thermoset",
       "asset_id": "materials_mat_thermoset",
       "label": "热固性塑料",
+      "label_en": "Mat thermoset",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1475,6 +1536,7 @@
       "id": "materials_mat_copolymer",
       "asset_id": "materials_mat_copolymer",
       "label": "共聚物",
+      "label_en": "Mat copolymer",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1499,6 +1561,7 @@
       "id": "materials_mat_crosslink",
       "asset_id": "materials_mat_crosslink",
       "label": "交联网络",
+      "label_en": "Mat crosslink",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1523,6 +1586,7 @@
       "id": "materials_mat_crystallization",
       "asset_id": "materials_mat_crystallization",
       "label": "结晶",
+      "label_en": "Mat crystallization",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1547,6 +1611,7 @@
       "id": "materials_mat_phase_sep",
       "asset_id": "materials_mat_phase_sep",
       "label": "相分离",
+      "label_en": "Mat phase sep",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1571,6 +1636,7 @@
       "id": "materials_mat_band_structure",
       "asset_id": "materials_mat_band_structure",
       "label": "能带结构",
+      "label_en": "Mat band structure",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1595,6 +1661,7 @@
       "id": "materials_mat_stress_strain",
       "asset_id": "materials_mat_stress_strain",
       "label": "应力应变曲线",
+      "label_en": "Mat stress strain",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1619,6 +1686,7 @@
       "id": "materials_mat_nanoindentation",
       "asset_id": "materials_mat_nanoindentation",
       "label": "纳米压痕",
+      "label_en": "Mat nanoindentation",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1643,6 +1711,7 @@
       "id": "materials_mat_afm",
       "asset_id": "materials_mat_afm",
       "label": "原子力显微镜",
+      "label_en": "Mat AFM",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1667,6 +1736,7 @@
       "id": "materials_mat_tem",
       "asset_id": "materials_mat_tem",
       "label": "透射电镜",
+      "label_en": "Mat TEM",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1691,6 +1761,7 @@
       "id": "materials_mat_sem",
       "asset_id": "materials_mat_sem",
       "label": "扫描电镜",
+      "label_en": "Mat SEM",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1715,6 +1786,7 @@
       "id": "materials_mat_xrd",
       "asset_id": "materials_mat_xrd",
       "label": "X 射线衍射",
+      "label_en": "Mat XRD",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1739,6 +1811,7 @@
       "id": "materials_mat_dsc",
       "asset_id": "materials_mat_dsc",
       "label": "差示扫描量热",
+      "label_en": "Mat dsc",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1763,6 +1836,7 @@
       "id": "materials_droplet",
       "asset_id": "materials_droplet",
       "label": "液滴",
+      "label_en": "Droplet",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [

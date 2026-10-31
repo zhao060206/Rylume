@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "chemistry",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "title": "化学",
   "domain": "chemistry",
   "min_app_version": "3.1.0",
@@ -11,6 +11,7 @@
       "id": "chemistry_beaker",
       "asset_id": "chemistry_beaker",
       "label": "烧杯",
+      "label_en": "Beaker",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -35,6 +36,7 @@
       "id": "chemistry_flask",
       "asset_id": "chemistry_flask",
       "label": "锥形瓶",
+      "label_en": "Flask",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -59,6 +61,7 @@
       "id": "chemistry_tube",
       "asset_id": "chemistry_tube",
       "label": "试管",
+      "label_en": "Tube",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -83,6 +86,7 @@
       "id": "chemistry_burette",
       "asset_id": "chemistry_burette",
       "label": "滴定管",
+      "label_en": "Burette",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -107,6 +111,7 @@
       "id": "chemistry_condenser",
       "asset_id": "chemistry_condenser",
       "label": "冷凝管",
+      "label_en": "Condenser",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -131,6 +136,7 @@
       "id": "chemistry_funnel",
       "asset_id": "chemistry_funnel",
       "label": "漏斗",
+      "label_en": "Funnel",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -155,6 +161,7 @@
       "id": "chemistry_round_flask",
       "asset_id": "chemistry_round_flask",
       "label": "圆底烧瓶",
+      "label_en": "Round flask",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -179,6 +186,7 @@
       "id": "chemistry_molecule",
       "asset_id": "chemistry_molecule",
       "label": "球棍分子",
+      "label_en": "Molecule",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -203,6 +211,7 @@
       "id": "chemistry_benzene",
       "asset_id": "chemistry_benzene",
       "label": "苯环",
+      "label_en": "Benzene",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -227,6 +236,7 @@
       "id": "chemistry_catalyst",
       "asset_id": "chemistry_catalyst",
       "label": "催化位点",
+      "label_en": "Catalyst",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -251,6 +261,7 @@
       "id": "chemistry_electrode",
       "asset_id": "chemistry_electrode",
       "label": "电极",
+      "label_en": "Electrode",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -275,6 +286,7 @@
       "id": "chemistry_battery",
       "asset_id": "chemistry_battery",
       "label": "电化学电池",
+      "label_en": "Battery",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -299,6 +311,7 @@
       "id": "chemistry_chromatogram",
       "asset_id": "chemistry_chromatogram",
       "label": "色谱峰",
+      "label_en": "Chromatogram",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -323,6 +336,7 @@
       "id": "chemistry_stirrer",
       "asset_id": "chemistry_stirrer",
       "label": "磁力搅拌器",
+      "label_en": "Stirrer",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -347,6 +361,7 @@
       "id": "chemistry_balance",
       "asset_id": "chemistry_balance",
       "label": "天平",
+      "label_en": "Balance",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -371,6 +386,7 @@
       "id": "chemistry_droplet",
       "asset_id": "chemistry_droplet",
       "label": "液滴",
+      "label_en": "Droplet",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -395,6 +411,7 @@
       "id": "chemistry_crystal",
       "asset_id": "chemistry_crystal",
       "label": "晶体",
+      "label_en": "Crystal",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -419,6 +436,7 @@
       "id": "chemistry_column",
       "asset_id": "chemistry_column",
       "label": "色谱柱",
+      "label_en": "Column",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -443,6 +461,7 @@
       "id": "chemistry_chem_volumetric_flask",
       "asset_id": "chemistry_chem_volumetric_flask",
       "label": "容量瓶",
+      "label_en": "Chem volumetric flask",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -467,6 +486,7 @@
       "id": "chemistry_chem_graduated_cylinder",
       "asset_id": "chemistry_chem_graduated_cylinder",
       "label": "量筒",
+      "label_en": "Chem graduated cylinder",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -491,6 +511,7 @@
       "id": "chemistry_chem_pipette",
       "asset_id": "chemistry_chem_pipette",
       "label": "移液器",
+      "label_en": "Chem pipette",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -515,6 +536,7 @@
       "id": "chemistry_chem_microplate",
       "asset_id": "chemistry_chem_microplate",
       "label": "多孔板",
+      "label_en": "Chem microplate",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -539,6 +561,7 @@
       "id": "chemistry_chem_crucible",
       "asset_id": "chemistry_chem_crucible",
       "label": "坩埚",
+      "label_en": "Chem crucible",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -563,6 +586,7 @@
       "id": "chemistry_chem_mortar",
       "asset_id": "chemistry_chem_mortar",
       "label": "研钵",
+      "label_en": "Chem mortar",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -587,6 +611,7 @@
       "id": "chemistry_chem_desiccator",
       "asset_id": "chemistry_chem_desiccator",
       "label": "干燥器",
+      "label_en": "Chem desiccator",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -611,6 +636,7 @@
       "id": "chemistry_chem_rotary_evap",
       "asset_id": "chemistry_chem_rotary_evap",
       "label": "旋转蒸发仪",
+      "label_en": "Chem rotary evap",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -635,6 +661,7 @@
       "id": "chemistry_chem_distillation",
       "asset_id": "chemistry_chem_distillation",
       "label": "蒸馏装置",
+      "label_en": "Chem distillation",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -659,6 +686,7 @@
       "id": "chemistry_chem_reflux",
       "asset_id": "chemistry_chem_reflux",
       "label": "回流装置",
+      "label_en": "Chem reflux",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -683,6 +711,7 @@
       "id": "chemistry_chem_separatory",
       "asset_id": "chemistry_chem_separatory",
       "label": "分液漏斗",
+      "label_en": "Chem separatory",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -707,6 +736,7 @@
       "id": "chemistry_chem_ph_meter",
       "asset_id": "chemistry_chem_ph_meter",
       "label": "pH 计",
+      "label_en": "Chem ph meter",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -731,6 +761,7 @@
       "id": "chemistry_chem_spectrometer",
       "asset_id": "chemistry_chem_spectrometer",
       "label": "光谱仪",
+      "label_en": "Chem spectrometer",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -755,6 +786,7 @@
       "id": "chemistry_chem_nmr_tube",
       "asset_id": "chemistry_chem_nmr_tube",
       "label": "核磁管",
+      "label_en": "Chem NMR tube",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -779,6 +811,7 @@
       "id": "chemistry_chem_mass_spec",
       "asset_id": "chemistry_chem_mass_spec",
       "label": "质谱仪",
+      "label_en": "Chem mass spec",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -803,6 +836,7 @@
       "id": "chemistry_chem_hplc",
       "asset_id": "chemistry_chem_hplc",
       "label": "液相色谱仪",
+      "label_en": "Chem HPLC",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -827,6 +861,7 @@
       "id": "chemistry_chem_gc",
       "asset_id": "chemistry_chem_gc",
       "label": "气相色谱仪",
+      "label_en": "Chem GC",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -851,6 +886,7 @@
       "id": "chemistry_chem_centrifuge",
       "asset_id": "chemistry_chem_centrifuge",
       "label": "离心机",
+      "label_en": "Chem centrifuge",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -875,6 +911,7 @@
       "id": "chemistry_chem_incubator",
       "asset_id": "chemistry_chem_incubator",
       "label": "恒温培养箱",
+      "label_en": "Chem incubator",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -899,6 +936,7 @@
       "id": "chemistry_chem_autoclave",
       "asset_id": "chemistry_chem_autoclave",
       "label": "高压灭菌锅",
+      "label_en": "Chem autoclave",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -923,6 +961,7 @@
       "id": "chemistry_chem_vacuum_pump",
       "asset_id": "chemistry_chem_vacuum_pump",
       "label": "真空泵",
+      "label_en": "Chem vacuum pump",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -947,6 +986,7 @@
       "id": "chemistry_chem_gas_cylinder",
       "asset_id": "chemistry_chem_gas_cylinder",
       "label": "气瓶",
+      "label_en": "Chem gas cylinder",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -971,6 +1011,7 @@
       "id": "chemistry_chem_water",
       "asset_id": "chemistry_chem_water",
       "label": "水分子",
+      "label_en": "Chem water",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -995,6 +1036,7 @@
       "id": "chemistry_chem_peptide",
       "asset_id": "chemistry_chem_peptide",
       "label": "肽链",
+      "label_en": "Chem peptide",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1019,6 +1061,7 @@
       "id": "chemistry_chem_protein",
       "asset_id": "chemistry_chem_protein",
       "label": "蛋白结构",
+      "label_en": "Chem protein",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1043,6 +1086,7 @@
       "id": "chemistry_chem_enzyme",
       "asset_id": "chemistry_chem_enzyme",
       "label": "酶活性口袋",
+      "label_en": "Chem enzyme",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1067,6 +1111,7 @@
       "id": "chemistry_chem_ligand",
       "asset_id": "chemistry_chem_ligand",
       "label": "配体",
+      "label_en": "Chem ligand",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1091,6 +1136,7 @@
       "id": "chemistry_chem_micelle",
       "asset_id": "chemistry_chem_micelle",
       "label": "胶束",
+      "label_en": "Chem micelle",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1115,6 +1161,7 @@
       "id": "chemistry_chem_liposome",
       "asset_id": "chemistry_chem_liposome",
       "label": "脂质体",
+      "label_en": "Chem liposome",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1139,6 +1186,7 @@
       "id": "chemistry_chem_nanoparticle",
       "asset_id": "chemistry_chem_nanoparticle",
       "label": "纳米颗粒",
+      "label_en": "Chem nanoparticle",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1163,6 +1211,7 @@
       "id": "chemistry_chem_unit_cell",
       "asset_id": "chemistry_chem_unit_cell",
       "label": "晶胞",
+      "label_en": "Chem unit cell",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1187,6 +1236,7 @@
       "id": "chemistry_chem_hbond",
       "asset_id": "chemistry_chem_hbond",
       "label": "氢键",
+      "label_en": "Chem hbond",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1211,6 +1261,7 @@
       "id": "chemistry_chem_chelate",
       "asset_id": "chemistry_chem_chelate",
       "label": "螯合物",
+      "label_en": "Chem chelate",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1235,6 +1286,7 @@
       "id": "chemistry_chem_alkene",
       "asset_id": "chemistry_chem_alkene",
       "label": "烯烃",
+      "label_en": "Chem alkene",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1259,6 +1311,7 @@
       "id": "chemistry_chem_alkyne",
       "asset_id": "chemistry_chem_alkyne",
       "label": "炔烃",
+      "label_en": "Chem alkyne",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1283,6 +1336,7 @@
       "id": "chemistry_chem_carbonyl",
       "asset_id": "chemistry_chem_carbonyl",
       "label": "羰基",
+      "label_en": "Chem carbonyl",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1307,6 +1361,7 @@
       "id": "chemistry_chem_amine",
       "asset_id": "chemistry_chem_amine",
       "label": "氨基",
+      "label_en": "Chem amine",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1331,6 +1386,7 @@
       "id": "chemistry_chem_carboxyl",
       "asset_id": "chemistry_chem_carboxyl",
       "label": "羧基",
+      "label_en": "Chem carboxyl",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1355,6 +1411,7 @@
       "id": "chemistry_chem_reaction_coordinate",
       "asset_id": "chemistry_chem_reaction_coordinate",
       "label": "反应坐标",
+      "label_en": "Chem reaction coordinate",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1379,6 +1436,7 @@
       "id": "chemistry_chem_activation_energy",
       "asset_id": "chemistry_chem_activation_energy",
       "label": "活化能",
+      "label_en": "Chem activation energy",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1403,6 +1461,7 @@
       "id": "chemistry_chem_redox",
       "asset_id": "chemistry_chem_redox",
       "label": "氧化还原",
+      "label_en": "Chem redox",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1427,6 +1486,7 @@
       "id": "chemistry_chem_fuel_cell",
       "asset_id": "chemistry_chem_fuel_cell",
       "label": "燃料电池",
+      "label_en": "Chem fuel cell",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1451,6 +1511,7 @@
       "id": "chemistry_chem_catalytic_surface",
       "asset_id": "chemistry_chem_catalytic_surface",
       "label": "催化表面",
+      "label_en": "Chem catalytic surface",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1475,6 +1536,7 @@
       "id": "chemistry_chem_flow_reactor",
       "asset_id": "chemistry_chem_flow_reactor",
       "label": "连续流反应器",
+      "label_en": "Chem flow reactor",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1499,6 +1561,7 @@
       "id": "chemistry_chem_calorimeter",
       "asset_id": "chemistry_chem_calorimeter",
       "label": "量热仪",
+      "label_en": "Chem calorimeter",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1523,6 +1586,7 @@
       "id": "chemistry_chem_periodic",
       "asset_id": "chemistry_chem_periodic",
       "label": "元素周期表",
+      "label_en": "Chem periodic",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1547,6 +1611,7 @@
       "id": "chemistry_chem_orbital",
       "asset_id": "chemistry_chem_orbital",
       "label": "电子轨道",
+      "label_en": "Chem orbital",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1571,6 +1636,7 @@
       "id": "chemistry_chem_crystal_polymorph",
       "asset_id": "chemistry_chem_crystal_polymorph",
       "label": "晶型转变",
+      "label_en": "Chem crystal polymorph",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1595,6 +1661,7 @@
       "id": "chemistry_chem_solubility",
       "asset_id": "chemistry_chem_solubility",
       "label": "溶解度",
+      "label_en": "Chem solubility",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1619,6 +1686,7 @@
       "id": "chemistry_chem_titration_curve",
       "asset_id": "chemistry_chem_titration_curve",
       "label": "滴定曲线",
+      "label_en": "Chem titration curve",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1643,6 +1711,7 @@
       "id": "chemistry_detector",
       "asset_id": "chemistry_detector",
       "label": "检测器",
+      "label_en": "Detector",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1666,6 +1735,7 @@
       "id": "chemistry_potentiostat",
       "asset_id": "chemistry_potentiostat",
       "label": "恒电位仪",
+      "label_en": "Potentiostat",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1689,6 +1759,7 @@
       "id": "chemistry_chem_catalyst",
       "asset_id": "chemistry_chem_catalyst",
       "label": "chem catalyst",
+      "label_en": "Catalyst",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [

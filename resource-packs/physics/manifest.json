@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "physics",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "title": "物理学",
   "domain": "physics",
   "min_app_version": "3.1.0",
@@ -11,6 +11,7 @@
       "id": "physics_lens",
       "asset_id": "physics_lens",
       "label": "透镜",
+      "label_en": "Lens",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -35,6 +36,7 @@
       "id": "physics_mirror",
       "asset_id": "physics_mirror",
       "label": "反射镜",
+      "label_en": "Mirror",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -59,6 +61,7 @@
       "id": "physics_laser",
       "asset_id": "physics_laser",
       "label": "激光器",
+      "label_en": "Laser",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -83,6 +86,7 @@
       "id": "physics_prism",
       "asset_id": "physics_prism",
       "label": "棱镜",
+      "label_en": "Prism",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -107,6 +111,7 @@
       "id": "physics_slit",
       "asset_id": "physics_slit",
       "label": "狭缝",
+      "label_en": "Slit",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -131,6 +136,7 @@
       "id": "physics_screen",
       "asset_id": "physics_screen",
       "label": "成像屏",
+      "label_en": "Screen",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -155,6 +161,7 @@
       "id": "physics_atom",
       "asset_id": "physics_atom",
       "label": "原子模型",
+      "label_en": "Atom",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -179,6 +186,7 @@
       "id": "physics_wave",
       "asset_id": "physics_wave",
       "label": "波动",
+      "label_en": "Wave",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -203,6 +211,7 @@
       "id": "physics_magnet",
       "asset_id": "physics_magnet",
       "label": "磁铁",
+      "label_en": "Magnet",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -227,6 +236,7 @@
       "id": "physics_coil",
       "asset_id": "physics_coil",
       "label": "线圈",
+      "label_en": "Coil",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -251,6 +261,7 @@
       "id": "physics_pendulum",
       "asset_id": "physics_pendulum",
       "label": "单摆",
+      "label_en": "Pendulum",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -275,6 +286,7 @@
       "id": "physics_spring",
       "asset_id": "physics_spring",
       "label": "弹簧",
+      "label_en": "Spring",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -299,6 +311,7 @@
       "id": "physics_mass",
       "asset_id": "physics_mass",
       "label": "质量块",
+      "label_en": "Mass",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -323,6 +336,7 @@
       "id": "physics_charge",
       "asset_id": "physics_charge",
       "label": "点电荷",
+      "label_en": "Charge",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -347,6 +361,7 @@
       "id": "physics_capacitor",
       "asset_id": "physics_capacitor",
       "label": "电容",
+      "label_en": "Capacitor",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -371,6 +386,7 @@
       "id": "physics_resistor",
       "asset_id": "physics_resistor",
       "label": "电阻",
+      "label_en": "Resistor",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -395,6 +411,7 @@
       "id": "physics_detector",
       "asset_id": "physics_detector",
       "label": "探测器",
+      "label_en": "Detector",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -419,6 +436,7 @@
       "id": "physics_polarizer",
       "asset_id": "physics_polarizer",
       "label": "偏振片",
+      "label_en": "Polarizer",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -443,6 +461,7 @@
       "id": "physics_phys_incline",
       "asset_id": "physics_phys_incline",
       "label": "斜面",
+      "label_en": "Phys incline",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -467,6 +486,7 @@
       "id": "physics_phys_pulley",
       "asset_id": "physics_phys_pulley",
       "label": "滑轮",
+      "label_en": "Phys pulley",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -491,6 +511,7 @@
       "id": "physics_phys_collision",
       "asset_id": "physics_phys_collision",
       "label": "碰撞",
+      "label_en": "Phys collision",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -515,6 +536,7 @@
       "id": "physics_phys_projectile",
       "asset_id": "physics_phys_projectile",
       "label": "抛体运动",
+      "label_en": "Phys projectile",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -539,6 +561,7 @@
       "id": "physics_phys_gyroscope",
       "asset_id": "physics_phys_gyroscope",
       "label": "陀螺仪",
+      "label_en": "Phys gyroscope",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -563,6 +586,7 @@
       "id": "physics_phys_torque",
       "asset_id": "physics_phys_torque",
       "label": "力矩",
+      "label_en": "Phys torque",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -587,6 +611,7 @@
       "id": "physics_phys_friction",
       "asset_id": "physics_phys_friction",
       "label": "摩擦力",
+      "label_en": "Phys friction",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -611,6 +636,7 @@
       "id": "physics_phys_free_body",
       "asset_id": "physics_phys_free_body",
       "label": "受力分析",
+      "label_en": "Phys free body",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -635,6 +661,7 @@
       "id": "physics_phys_center_mass",
       "asset_id": "physics_phys_center_mass",
       "label": "质心",
+      "label_en": "Phys center mass",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -659,6 +686,7 @@
       "id": "physics_phys_orbit",
       "asset_id": "physics_phys_orbit",
       "label": "轨道运动",
+      "label_en": "Phys orbit",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -683,6 +711,7 @@
       "id": "physics_phys_thermometer",
       "asset_id": "physics_phys_thermometer",
       "label": "温度计",
+      "label_en": "Phys thermometer",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -707,6 +736,7 @@
       "id": "physics_phys_heat_flow",
       "asset_id": "physics_phys_heat_flow",
       "label": "热流",
+      "label_en": "Phys heat flow",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -731,6 +761,7 @@
       "id": "physics_phys_entropy",
       "asset_id": "physics_phys_entropy",
       "label": "熵增",
+      "label_en": "Phys entropy",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -755,6 +786,7 @@
       "id": "physics_phys_phase_diagram",
       "asset_id": "physics_phys_phase_diagram",
       "label": "相图",
+      "label_en": "Phys phase diagram",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -779,6 +811,7 @@
       "id": "physics_phys_ideal_gas",
       "asset_id": "physics_phys_ideal_gas",
       "label": "理想气体",
+      "label_en": "Phys ideal gas",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -803,6 +836,7 @@
       "id": "physics_phys_diffusion",
       "asset_id": "physics_phys_diffusion",
       "label": "扩散",
+      "label_en": "Phys diffusion",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -827,6 +861,7 @@
       "id": "physics_phys_heat_engine",
       "asset_id": "physics_phys_heat_engine",
       "label": "热机",
+      "label_en": "Phys heat engine",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -851,6 +886,7 @@
       "id": "physics_phys_diffraction",
       "asset_id": "physics_phys_diffraction",
       "label": "衍射",
+      "label_en": "Phys diffraction",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -875,6 +911,7 @@
       "id": "physics_phys_double_slit",
       "asset_id": "physics_phys_double_slit",
       "label": "双缝干涉",
+      "label_en": "Phys double slit",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -899,6 +936,7 @@
       "id": "physics_phys_convex_lens",
       "asset_id": "physics_phys_convex_lens",
       "label": "凸透镜",
+      "label_en": "Phys convex lens",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -923,6 +961,7 @@
       "id": "physics_phys_concave_mirror",
       "asset_id": "physics_phys_concave_mirror",
       "label": "凹面镜",
+      "label_en": "Phys concave mirror",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -947,6 +986,7 @@
       "id": "physics_phys_optical_fiber",
       "asset_id": "physics_phys_optical_fiber",
       "label": "光纤",
+      "label_en": "Phys optical fiber",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -971,6 +1011,7 @@
       "id": "physics_phys_spectrometer",
       "asset_id": "physics_phys_spectrometer",
       "label": "光谱仪",
+      "label_en": "Phys spectrometer",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -995,6 +1036,7 @@
       "id": "physics_phys_electric_field",
       "asset_id": "physics_phys_electric_field",
       "label": "电场",
+      "label_en": "Phys electric field",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1019,6 +1061,7 @@
       "id": "physics_phys_magnetic_field",
       "asset_id": "physics_phys_magnetic_field",
       "label": "磁场",
+      "label_en": "Phys magnetic field",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1043,6 +1086,7 @@
       "id": "physics_phys_lorentz",
       "asset_id": "physics_phys_lorentz",
       "label": "洛伦兹力",
+      "label_en": "Phys lorentz",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1067,6 +1111,7 @@
       "id": "physics_phys_transformer",
       "asset_id": "physics_phys_transformer",
       "label": "变压器",
+      "label_en": "Phys transformer",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1091,6 +1136,7 @@
       "id": "physics_phys_inductor",
       "asset_id": "physics_phys_inductor",
       "label": "电感",
+      "label_en": "Phys inductor",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1115,6 +1161,7 @@
       "id": "physics_phys_diode",
       "asset_id": "physics_phys_diode",
       "label": "二极管",
+      "label_en": "Phys diode",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1139,6 +1186,7 @@
       "id": "physics_phys_transistor",
       "asset_id": "physics_phys_transistor",
       "label": "晶体管",
+      "label_en": "Phys transistor",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1163,6 +1211,7 @@
       "id": "physics_phys_logic_gate",
       "asset_id": "physics_phys_logic_gate",
       "label": "逻辑门",
+      "label_en": "Phys logic gate",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1187,6 +1236,7 @@
       "id": "physics_phys_antenna",
       "asset_id": "physics_phys_antenna",
       "label": "天线",
+      "label_en": "Phys antenna",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1211,6 +1261,7 @@
       "id": "physics_phys_waveguide",
       "asset_id": "physics_phys_waveguide",
       "label": "波导",
+      "label_en": "Phys waveguide",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1235,6 +1286,7 @@
       "id": "physics_phys_energy_levels",
       "asset_id": "physics_phys_energy_levels",
       "label": "能级",
+      "label_en": "Phys energy levels",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1259,6 +1311,7 @@
       "id": "physics_phys_wavefunction",
       "asset_id": "physics_phys_wavefunction",
       "label": "波函数",
+      "label_en": "Phys wavefunction",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1283,6 +1336,7 @@
       "id": "physics_phys_quantum_dot",
       "asset_id": "physics_phys_quantum_dot",
       "label": "量子点",
+      "label_en": "Phys quantum dot",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1307,6 +1361,7 @@
       "id": "physics_phys_spin",
       "asset_id": "physics_phys_spin",
       "label": "自旋",
+      "label_en": "Phys spin",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1331,6 +1386,7 @@
       "id": "physics_phys_entanglement",
       "asset_id": "physics_phys_entanglement",
       "label": "量子纠缠",
+      "label_en": "Phys entanglement",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1355,6 +1411,7 @@
       "id": "physics_phys_photon",
       "asset_id": "physics_phys_photon",
       "label": "光子",
+      "label_en": "Phys photon",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1379,6 +1436,7 @@
       "id": "physics_phys_band_gap",
       "asset_id": "physics_phys_band_gap",
       "label": "带隙",
+      "label_en": "Phys band gap",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1403,6 +1461,7 @@
       "id": "physics_phys_tunneling",
       "asset_id": "physics_phys_tunneling",
       "label": "量子隧穿",
+      "label_en": "Phys tunneling",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1427,6 +1486,7 @@
       "id": "physics_phys_qubit",
       "asset_id": "physics_phys_qubit",
       "label": "量子比特",
+      "label_en": "Phys qubit",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1451,6 +1511,7 @@
       "id": "physics_phys_laser_cavity",
       "asset_id": "physics_phys_laser_cavity",
       "label": "激光谐振腔",
+      "label_en": "Phys laser cavity",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1475,6 +1536,7 @@
       "id": "physics_phys_cryostat",
       "asset_id": "physics_phys_cryostat",
       "label": "低温恒温器",
+      "label_en": "Phys cryostat",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1499,6 +1561,7 @@
       "id": "physics_phys_interferometer",
       "asset_id": "physics_phys_interferometer",
       "label": "干涉仪",
+      "label_en": "Phys interferometer",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1523,6 +1586,7 @@
       "id": "physics_phys_plasma",
       "asset_id": "physics_phys_plasma",
       "label": "等离子体",
+      "label_en": "Phys plasma",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1547,6 +1611,7 @@
       "id": "physics_phys_fluid",
       "asset_id": "physics_phys_fluid",
       "label": "流体",
+      "label_en": "Phys fluid",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1571,6 +1636,7 @@
       "id": "physics_phys_viscosity",
       "asset_id": "physics_phys_viscosity",
       "label": "黏度",
+      "label_en": "Phys viscosity",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1595,6 +1661,7 @@
       "id": "physics_phys_surface_tension",
       "asset_id": "physics_phys_surface_tension",
       "label": "表面张力",
+      "label_en": "Phys surface tension",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1619,6 +1686,7 @@
       "id": "physics_phys_double_pendulum",
       "asset_id": "physics_phys_double_pendulum",
       "label": "双摆",
+      "label_en": "Phys double pendulum",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1643,6 +1711,7 @@
       "id": "physics_phys_normal_mode",
       "asset_id": "physics_phys_normal_mode",
       "label": "简正模",
+      "label_en": "Phys normal mode",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1667,6 +1736,7 @@
       "id": "physics_phys_phonon",
       "asset_id": "physics_phys_phonon",
       "label": "声子",
+      "label_en": "Phys phonon",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1691,6 +1761,7 @@
       "id": "physics_beam_splitter",
       "asset_id": "physics_beam_splitter",
       "label": "分束器",
+      "label_en": "Beam splitter",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1714,6 +1785,7 @@
       "id": "physics_sensor",
       "asset_id": "physics_sensor",
       "label": "sensor",
+      "label_en": "Sensor",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1737,6 +1809,7 @@
       "id": "physics_eng_grid",
       "asset_id": "physics_eng_grid",
       "label": "eng grid",
+      "label_en": "Power grid",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [

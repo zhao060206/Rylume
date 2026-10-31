@@ -295,6 +295,7 @@ def dispatch(handler, method, path, app):
             from resource_packs import configure,DOMAIN_TITLES
             configure(app.DATA_DIR)
             from scene_assets import asset_catalog, ASSET_DOMAINS
+            from asset_language import ensure_bilingual
             from scene_examples import EXAMPLES
             assets = []
             for item in asset_catalog():
@@ -305,6 +306,7 @@ def dispatch(handler, method, path, app):
             from scene_document import OBJECT_TYPES
             assets = [a for a in assets if a.get("type") in OBJECT_TYPES]
             for a in assets:
+                ensure_bilingual(a)
                 a.pop('_file',None)
                 a.setdefault('thumbnail','/ui/library/native_'+a['type']+'.svg')
                 a.setdefault('license','原创图元')

@@ -16,6 +16,8 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   const $=id=>document.getElementById(id);
   const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;};
   let filter='',structure='',group='recommended',legacy=false,drafts=false,assetCategory='',assetDomain='biology',pending=null,detail=null,assetLimit=60,selectedTemplate=null;
+  let assetLocale='zh';try{assetLocale=localStorage.getItem('rylume-asset-locale')==='en'?'en':'zh';}catch{}
+  const assetName=a=>assetDisplayName(a,assetLocale);
   let favorites=[],recent=[],creatingDocument=null;
   try{favorites=JSON.parse(localStorage.getItem('rylume-favorite-assets')||'[]');recent=JSON.parse(localStorage.getItem('rylume-recent-assets')||'[]');}catch{}
   function remember(){try{localStorage.setItem('rylume-favorite-assets',JSON.stringify(favorites));localStorage.setItem('rylume-recent-assets',JSON.stringify(recent));}catch{toast('素材偏好暂未保存；图版不受影响');}}
@@ -34,7 +36,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
       }catch{return toast('素材载入失败，请重试',true);}
     }
     if(state.id!==documentId)return toast('图版已切换，请在当前图版重新添加素材。');
-    editor.insertObject(item.type,assetDisplayName(item),item,position);editor.ensureSelectionVisible();
+    editor.insertObject(item.type,assetName(item),item,position);editor.ensureSelectionVisible();
     recent=[assetKey(item),...recent.filter(k=>k!==assetKey(item))].slice(0,60);remember();
     editor.host.focus({preventScroll:true});
     toast('已添加 '+item.label+' · 可拖动位置，双击改字');
@@ -42,7 +44,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
 
   function assetDetail(item){
     detail=item;
-    $('asset-detail-title').textContent=assetDisplayName(item);
+    $('asset-detail-title').textContent=assetName(item);
     $('asset-detail-image').src=item.thumbnail;
     const credits=$('asset-detail-credit');
     credits.replaceChildren();
@@ -77,22 +79,22 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
       img.alt='';
       img.loading='lazy';
       img.draggable=false;
-      b.setAttribute('aria-label','添加 '+assetDisplayName(item));
-      b.append(img,el('span','asset-name',assetDisplayName(item)));
+      b.setAttribute('aria-label','添加 '+assetName(item));
+      b.append(img,el('span','asset-name',assetName(item)));
       const style=el('span','asset-style-tag',{native:'原生图元',flat:'简洁矢量',detailed:'精细插画'}[assetStyle(item)]);b.append(style);
       const approximate=q&&assetMatch(item,q).kind==='fuzzy';
       if(approximate){card.classList.add('asset-approximate');b.append(el('span','asset-match-tag','近似匹配'));b.setAttribute('aria-description','近似匹配，请核对名称后添加。');}
-      b.title=(approximate?'近似匹配，请核对名称。':'')+'点击添加到画布：'+item.label;
+      b.title=(approximate?'近似匹配，请核对名称。':'')+'点击添加到画布：'+assetName(item);
       b.onclick=e=>{if(e.detail>1)return;insert(item);};
       card.draggable=true;
       card.ondragstart=e=>{
         e.dataTransfer.setData('application/cell-asset',JSON.stringify(item));
         e.dataTransfer.effectAllowed='copy';
       };
-      const info=el('button','asset-license','i');info.setAttribute('aria-label','查看 '+item.label+' 的来源与详情');
+      const info=el('button','asset-license','i');info.setAttribute('aria-label','查看 '+assetName(item)+' 的来源与详情');
       info.title='查看素材出处与大图';
       info.onclick=()=>assetDetail(item);
-      const favorite=el('button','asset-favorite',favorites.includes(assetKey(item))?'已收藏':'收藏');favorite.setAttribute('aria-label',(favorites.includes(assetKey(item))?'取消收藏 ':'收藏 ')+assetDisplayName(item));favorite.setAttribute('aria-pressed',String(favorites.includes(assetKey(item))));favorite.onclick=()=>{const key=assetKey(item);favorites=favorites.includes(key)?favorites.filter(x=>x!==key):[...favorites,key];remember();renderAssets();};
+      const favorite=el('button','asset-favorite',favorites.includes(assetKey(item))?'已收藏':'收藏');favorite.setAttribute('aria-label',(favorites.includes(assetKey(item))?'取消收藏 ':'收藏 ')+assetName(item));favorite.setAttribute('aria-pressed',String(favorites.includes(assetKey(item))));favorite.onclick=()=>{const key=assetKey(item);favorites=favorites.includes(key)?favorites.filter(x=>x!==key):[...favorites,key];remember();renderAssets();};
       card.append(b,info,favorite);
       list.append(card);
     }
@@ -210,6 +212,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   }
 
   function init(data){
+    if(!$('asset-language-toggle')){const toggle=el('button','button secondary','中文 / EN');toggle.id='asset-language-toggle';toggle.type='button';toggle.setAttribute('aria-label','切换素材中文或英文标签');toggle.setAttribute('aria-pressed',String(assetLocale==='en'));toggle.onclick=()=>{assetLocale=assetLocale==='zh'?'en':'zh';try{localStorage.setItem('rylume-asset-locale',assetLocale);}catch{}toggle.setAttribute('aria-pressed',String(assetLocale==='en'));renderAssets();if(detail)assetDetail(detail);};$('asset-search')?.before(toggle);}
     if(!$('asset-style')){const row=el('div','asset-filters');for(const[id,label,choices]of [['asset-view','浏览范围',[['all','全部素材'],['favorites','我的收藏'],['recent','最近使用'],['signaling','机制通路套装'],['trafficking','细胞转运套装']]],['asset-style','视觉风格',[['','全部风格'],['native','原生图元'],['flat','简洁矢量'],['detailed','精细插画']]]]){const select=el('select');select.id=id;select.setAttribute('aria-label',label);for(const[value,title]of choices){const option=el('option','',title);option.value=value;select.append(option);}select.onchange=()=>{assetLimit=60;renderAssets();};row.append(select);}const filters=el('details','panel-disclosure asset-filter-disclosure'),summary=el('summary','','风格与收藏筛选');filters.append(summary,row);$('asset-search').after(filters);}
     state.templates=data.templates||[];
     state.colorways=data.colorways||[];

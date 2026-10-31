@@ -12,10 +12,11 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from scene_document import empty_scene,normalize_scene,audit_scene
 from resource_packs import safe_svg,reflow_pack_scene,SAFE_ATTRS
+from asset_language import english_asset_label
 from discipline_assets_extended import EXTRA_SYMBOLS,EXTRA_DEFINITIONS
 
 ROOT=Path(__file__).resolve().parents[1]
-PACK_VERSION='2.0.0'
+PACK_VERSION='2.1.0'
 INK='#395B70';BLUE='#84B7C8';PALE='#DFEDF1';TEAL='#79A99A';GOLD='#D5AA6C';RED='#C67F76'
 def tag(name,**attrs):return '<'+name+' '+ ' '.join(k.replace('_','-')+'="'+html.escape(str(v),quote=True)+'"' for k,v in attrs.items())+'/>'
 def path(d,fill='none',stroke=INK,sw=2):return tag('path',d=d,fill=fill,stroke=stroke,stroke_width=sw,stroke_linecap='round',stroke_linejoin='round')
@@ -311,7 +312,7 @@ def build(output):
         assets={}
         for definition in definitions:
             key,name=definition.split(':');aid=pid.replace('-','_')+'_'+key
-            item={'id':aid,'asset_id':aid,'label':name,'category':description,'type':'symbol','default_dim':[22,24],
+            item={'id':aid,'asset_id':aid,'label':name,'label_en':english_asset_label({'asset_id':aid,'keywords':[key]}),'category':description,'type':'symbol','default_dim':[22,24],
                 'file':'assets/'+key+'.svg','keywords':[key,name,title],'author':'Rylume contributors','license':'CC0 1.0',
                 'license_url':'https://creativecommons.org/publicdomain/zero/1.0/','author_url':'https://github.com/zhao060206/Rylume',
                 'source_url':'https://github.com/zhao060206/Rylume/tree/main/resource-packs/'+pid,'modifications':'Original vector artwork.'}
@@ -322,7 +323,7 @@ def build(output):
             for key,_,_,_ in objects:
                 aid=pid.replace('-','_')+'_'+key
                 if aid not in assets:
-                    item={'id':aid,'asset_id':aid,'label':{'potentiostat':'恒电位仪','beam_splitter':'分束器','detector':'检测器','database':'数据库','mesh':'计算网格','server':'数据采集器','droplet':'液滴'}.get(key,key.replace('_',' ')),'category':description,'type':'symbol','default_dim':[22,24],
+                    item={'id':aid,'asset_id':aid,'label':{'potentiostat':'恒电位仪','beam_splitter':'分束器','detector':'检测器','database':'数据库','mesh':'计算网格','server':'数据采集器','droplet':'液滴'}.get(key,key.replace('_',' ')),'label_en':english_asset_label({'asset_id':aid,'keywords':[key]}),'category':description,'type':'symbol','default_dim':[22,24],
                         'file':'assets/'+key+'.svg','keywords':[key,title],'author':'Rylume contributors','license':'CC0 1.0',
                         'license_url':'https://creativecommons.org/publicdomain/zero/1.0/','author_url':'https://github.com/zhao060206/Rylume',
                         'source_url':'https://github.com/zhao060206/Rylume/tree/main/resource-packs/'+pid,'modifications':'Original vector artwork.'}

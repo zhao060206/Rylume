@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "engineering",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "title": "工程技术",
   "domain": "engineering",
   "min_app_version": "3.1.0",
@@ -11,6 +11,7 @@
       "id": "engineering_pump",
       "asset_id": "engineering_pump",
       "label": "泵",
+      "label_en": "Pump",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -35,6 +36,7 @@
       "id": "engineering_valve",
       "asset_id": "engineering_valve",
       "label": "阀门",
+      "label_en": "Valve",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -59,6 +61,7 @@
       "id": "engineering_pipe",
       "asset_id": "engineering_pipe",
       "label": "弯管",
+      "label_en": "Pipe",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -83,6 +86,7 @@
       "id": "engineering_tank",
       "asset_id": "engineering_tank",
       "label": "储罐",
+      "label_en": "Tank",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -107,6 +111,7 @@
       "id": "engineering_turbine",
       "asset_id": "engineering_turbine",
       "label": "涡轮",
+      "label_en": "Turbine",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -131,6 +136,7 @@
       "id": "engineering_gear",
       "asset_id": "engineering_gear",
       "label": "齿轮",
+      "label_en": "Gear",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -155,6 +161,7 @@
       "id": "engineering_motor",
       "asset_id": "engineering_motor",
       "label": "电动机",
+      "label_en": "Motor",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -179,6 +186,7 @@
       "id": "engineering_sensor",
       "asset_id": "engineering_sensor",
       "label": "传感器",
+      "label_en": "Sensor",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -203,6 +211,7 @@
       "id": "engineering_chip",
       "asset_id": "engineering_chip",
       "label": "控制芯片",
+      "label_en": "Chip",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -227,6 +236,7 @@
       "id": "engineering_actuator",
       "asset_id": "engineering_actuator",
       "label": "执行器",
+      "label_en": "Actuator",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -251,6 +261,7 @@
       "id": "engineering_robot",
       "asset_id": "engineering_robot",
       "label": "机械臂",
+      "label_en": "Robot",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -275,6 +286,7 @@
       "id": "engineering_heat_exchanger",
       "asset_id": "engineering_heat_exchanger",
       "label": "换热器",
+      "label_en": "Heat exchanger",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -299,6 +311,7 @@
       "id": "engineering_filter",
       "asset_id": "engineering_filter",
       "label": "过滤器",
+      "label_en": "Filter",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -323,6 +336,7 @@
       "id": "engineering_compressor",
       "asset_id": "engineering_compressor",
       "label": "压缩机",
+      "label_en": "Compressor",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -347,6 +361,7 @@
       "id": "engineering_fan",
       "asset_id": "engineering_fan",
       "label": "风机",
+      "label_en": "Fan",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -371,6 +386,7 @@
       "id": "engineering_nozzle",
       "asset_id": "engineering_nozzle",
       "label": "喷嘴",
+      "label_en": "Nozzle",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -395,6 +411,7 @@
       "id": "engineering_piston",
       "asset_id": "engineering_piston",
       "label": "活塞",
+      "label_en": "Piston",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -419,6 +436,7 @@
       "id": "engineering_truss",
       "asset_id": "engineering_truss",
       "label": "桁架",
+      "label_en": "Truss",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -443,6 +461,7 @@
       "id": "engineering_eng_centrifugal_pump",
       "asset_id": "engineering_eng_centrifugal_pump",
       "label": "离心泵",
+      "label_en": "Eng centrifugal pump",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -467,6 +486,7 @@
       "id": "engineering_eng_recip_pump",
       "asset_id": "engineering_eng_recip_pump",
       "label": "往复泵",
+      "label_en": "Eng recip pump",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -491,6 +511,7 @@
       "id": "engineering_eng_boiler",
       "asset_id": "engineering_eng_boiler",
       "label": "锅炉",
+      "label_en": "Eng boiler",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -515,6 +536,7 @@
       "id": "engineering_eng_cooling_tower",
       "asset_id": "engineering_eng_cooling_tower",
       "label": "冷却塔",
+      "label_en": "Eng cooling tower",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -539,6 +561,7 @@
       "id": "engineering_eng_distillation_tower",
       "asset_id": "engineering_eng_distillation_tower",
       "label": "精馏塔",
+      "label_en": "Eng distillation tower",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -563,6 +586,7 @@
       "id": "engineering_eng_reactor_vessel",
       "asset_id": "engineering_eng_reactor_vessel",
       "label": "反应釜",
+      "label_en": "Eng reactor vessel",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -587,6 +611,7 @@
       "id": "engineering_eng_pipeline",
       "asset_id": "engineering_eng_pipeline",
       "label": "管路系统",
+      "label_en": "Eng pipeline",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -611,6 +636,7 @@
       "id": "engineering_eng_ball_bearing",
       "asset_id": "engineering_eng_ball_bearing",
       "label": "滚动轴承",
+      "label_en": "Eng ball bearing",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -635,6 +661,7 @@
       "id": "engineering_eng_shaft",
       "asset_id": "engineering_eng_shaft",
       "label": "传动轴",
+      "label_en": "Eng shaft",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -659,6 +686,7 @@
       "id": "engineering_eng_coupling",
       "asset_id": "engineering_eng_coupling",
       "label": "联轴器",
+      "label_en": "Eng coupling",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -683,6 +711,7 @@
       "id": "engineering_eng_belt_drive",
       "asset_id": "engineering_eng_belt_drive",
       "label": "带传动",
+      "label_en": "Eng belt drive",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -707,6 +736,7 @@
       "id": "engineering_eng_chain_drive",
       "asset_id": "engineering_eng_chain_drive",
       "label": "链传动",
+      "label_en": "Eng chain drive",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -731,6 +761,7 @@
       "id": "engineering_eng_spur_gear",
       "asset_id": "engineering_eng_spur_gear",
       "label": "齿轮啮合",
+      "label_en": "Eng spur gear",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -755,6 +786,7 @@
       "id": "engineering_eng_planetary_gear",
       "asset_id": "engineering_eng_planetary_gear",
       "label": "行星齿轮",
+      "label_en": "Eng planetary gear",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -779,6 +811,7 @@
       "id": "engineering_eng_cam",
       "asset_id": "engineering_eng_cam",
       "label": "凸轮机构",
+      "label_en": "Eng cam",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -803,6 +836,7 @@
       "id": "engineering_eng_crank",
       "asset_id": "engineering_eng_crank",
       "label": "曲柄滑块",
+      "label_en": "Eng crank",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -827,6 +861,7 @@
       "id": "engineering_eng_linkage",
       "asset_id": "engineering_eng_linkage",
       "label": "四杆机构",
+      "label_en": "Eng linkage",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -851,6 +886,7 @@
       "id": "engineering_eng_hydraulic",
       "asset_id": "engineering_eng_hydraulic",
       "label": "液压缸",
+      "label_en": "Eng hydraulic",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -875,6 +911,7 @@
       "id": "engineering_eng_pneumatic",
       "asset_id": "engineering_eng_pneumatic",
       "label": "气动阀",
+      "label_en": "Eng pneumatic",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -899,6 +936,7 @@
       "id": "engineering_eng_pressure_gauge",
       "asset_id": "engineering_eng_pressure_gauge",
       "label": "压力表",
+      "label_en": "Eng pressure gauge",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -923,6 +961,7 @@
       "id": "engineering_eng_thermocouple",
       "asset_id": "engineering_eng_thermocouple",
       "label": "热电偶",
+      "label_en": "Eng thermocouple",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -947,6 +986,7 @@
       "id": "engineering_eng_flow_meter",
       "asset_id": "engineering_eng_flow_meter",
       "label": "流量计",
+      "label_en": "Eng flow meter",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -971,6 +1011,7 @@
       "id": "engineering_eng_plc",
       "asset_id": "engineering_eng_plc",
       "label": "可编程控制器",
+      "label_en": "Eng PLC",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -995,6 +1036,7 @@
       "id": "engineering_eng_inverter",
       "asset_id": "engineering_eng_inverter",
       "label": "变频器",
+      "label_en": "Eng inverter",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1019,6 +1061,7 @@
       "id": "engineering_eng_hmi",
       "asset_id": "engineering_eng_hmi",
       "label": "人机界面",
+      "label_en": "Eng HMI",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1043,6 +1086,7 @@
       "id": "engineering_eng_conveyor",
       "asset_id": "engineering_eng_conveyor",
       "label": "输送带",
+      "label_en": "Eng conveyor",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1067,6 +1111,7 @@
       "id": "engineering_eng_delta_robot",
       "asset_id": "engineering_eng_delta_robot",
       "label": "并联机器人",
+      "label_en": "Eng delta robot",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1091,6 +1136,7 @@
       "id": "engineering_eng_agv",
       "asset_id": "engineering_eng_agv",
       "label": "移动机器人",
+      "label_en": "Eng AGV",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1115,6 +1161,7 @@
       "id": "engineering_eng_drone",
       "asset_id": "engineering_eng_drone",
       "label": "巡检无人机",
+      "label_en": "Eng drone",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1139,6 +1186,7 @@
       "id": "engineering_eng_3d_printer",
       "asset_id": "engineering_eng_3d_printer",
       "label": "3D 打印机",
+      "label_en": "Eng 3d printer",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1163,6 +1211,7 @@
       "id": "engineering_eng_cnc",
       "asset_id": "engineering_eng_cnc",
       "label": "数控机床",
+      "label_en": "Eng cnc",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1187,6 +1236,7 @@
       "id": "engineering_eng_lathe",
       "asset_id": "engineering_eng_lathe",
       "label": "车床",
+      "label_en": "Eng lathe",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1211,6 +1261,7 @@
       "id": "engineering_eng_milling",
       "asset_id": "engineering_eng_milling",
       "label": "铣削加工",
+      "label_en": "Eng milling",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1235,6 +1286,7 @@
       "id": "engineering_eng_welding_robot",
       "asset_id": "engineering_eng_welding_robot",
       "label": "焊接机器人",
+      "label_en": "Eng welding robot",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1259,6 +1311,7 @@
       "id": "engineering_eng_assembly_line",
       "asset_id": "engineering_eng_assembly_line",
       "label": "装配线",
+      "label_en": "Eng assembly line",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1283,6 +1336,7 @@
       "id": "engineering_eng_inspection",
       "asset_id": "engineering_eng_inspection",
       "label": "质量检测",
+      "label_en": "Eng inspection",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1307,6 +1361,7 @@
       "id": "engineering_eng_laser_cutter",
       "asset_id": "engineering_eng_laser_cutter",
       "label": "激光切割",
+      "label_en": "Eng laser cutter",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1331,6 +1386,7 @@
       "id": "engineering_eng_battery_pack",
       "asset_id": "engineering_eng_battery_pack",
       "label": "电池包",
+      "label_en": "Eng battery pack",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1355,6 +1411,7 @@
       "id": "engineering_eng_motor_drive",
       "asset_id": "engineering_eng_motor_drive",
       "label": "电机驱动",
+      "label_en": "Eng motor drive",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1379,6 +1436,7 @@
       "id": "engineering_eng_dc_bus",
       "asset_id": "engineering_eng_dc_bus",
       "label": "直流母线",
+      "label_en": "Eng dc bus",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1403,6 +1461,7 @@
       "id": "engineering_eng_grid",
       "asset_id": "engineering_eng_grid",
       "label": "输电网络",
+      "label_en": "Eng grid",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1427,6 +1486,7 @@
       "id": "engineering_eng_substation",
       "asset_id": "engineering_eng_substation",
       "label": "变电站",
+      "label_en": "Eng substation",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1451,6 +1511,7 @@
       "id": "engineering_eng_wind_turbine",
       "asset_id": "engineering_eng_wind_turbine",
       "label": "风力机",
+      "label_en": "Eng wind turbine",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1475,6 +1536,7 @@
       "id": "engineering_eng_solar_panel",
       "asset_id": "engineering_eng_solar_panel",
       "label": "光伏组件",
+      "label_en": "Eng solar panel",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1499,6 +1561,7 @@
       "id": "engineering_eng_hvac",
       "asset_id": "engineering_eng_hvac",
       "label": "暖通空调",
+      "label_en": "Eng HVAC",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1523,6 +1586,7 @@
       "id": "engineering_eng_clean_room",
       "asset_id": "engineering_eng_clean_room",
       "label": "洁净室",
+      "label_en": "Eng clean room",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1547,6 +1611,7 @@
       "id": "engineering_eng_flange",
       "asset_id": "engineering_eng_flange",
       "label": "法兰",
+      "label_en": "Eng flange",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1571,6 +1636,7 @@
       "id": "engineering_eng_gasket",
       "asset_id": "engineering_eng_gasket",
       "label": "密封垫",
+      "label_en": "Eng gasket",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1595,6 +1661,7 @@
       "id": "engineering_eng_bolt",
       "asset_id": "engineering_eng_bolt",
       "label": "螺栓",
+      "label_en": "Eng bolt",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1619,6 +1686,7 @@
       "id": "engineering_eng_scada",
       "asset_id": "engineering_eng_scada",
       "label": "SCADA 系统",
+      "label_en": "Eng SCADA",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1643,6 +1711,7 @@
       "id": "engineering_eng_pid",
       "asset_id": "engineering_eng_pid",
       "label": "PID 控制",
+      "label_en": "Eng PID",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1667,6 +1736,7 @@
       "id": "engineering_eng_heat_pump",
       "asset_id": "engineering_eng_heat_pump",
       "label": "热泵",
+      "label_en": "Eng heat pump",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1691,6 +1761,7 @@
       "id": "engineering_server",
       "asset_id": "engineering_server",
       "label": "数据采集器",
+      "label_en": "Server",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [

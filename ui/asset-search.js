@@ -34,7 +34,7 @@ function searchIndex(asset){
  const signature=[asset.label,asset.type,asset.category,JSON.stringify(asset.keywords),JSON.stringify(asset.aliases)].join('|');
  const old=indexes.get(asset);if(old?.signature===signature)return old;
  const name=normalized(asset.label),display=normalized(assetDisplayName(asset));
- const keywords=normalized([Array.isArray(asset.keywords)?asset.keywords.join(' '):asset.keywords,Array.isArray(asset.aliases)?asset.aliases.join(' '):asset.aliases].filter(Boolean).join(' '));
+ const keywords=normalized([asset.label_en,Array.isArray(asset.keywords)?asset.keywords.join(' '):asset.keywords,Array.isArray(asset.aliases)?asset.aliases.join(' '):asset.aliases].filter(Boolean).join(' '));
  const category=normalized(asset.category),type=normalized(asset.type);
  const words=[...new Set([name,display,keywords,type].flatMap(v=>v.split(' ')))].filter(v=>v&&v.length<=64);
  const value={signature,name,display,keywords,category,type,words};indexes.set(asset,value);return value;
@@ -99,7 +99,13 @@ export function assetMatch(asset,query,{fuzzy=true}={}){
 }
 export const assetKey=a=>a.asset_id||a.type;
 export function assetStyle(a){return !a.asset_id?'native':/servier/i.test((a.author||'')+' '+(a.source_url||''))?'detailed':'flat';}
-export function assetDisplayName(a){
+export function assetDisplayName(a,locale='zh'){
+  if(locale==='en'){
+    const explicit=String(a.label_en||'').trim();
+    if(explicit)return explicit;
+    const raw=String(a.asset_id||a.type||'').replace(/^(bio|chemistry|physics|materials|engineering|earth_environment|computing_math|medicine)_/i,'').replace(/^(chem|phys|mat|eng|earth|math|med)_/i,'').replace(/[_-]+/g,' ');
+    return raw.replace(/\b\w/g,c=>c.toUpperCase());
+  }
   let label=String(a.label||a.type).replace(/_/g,' ').replace(/\s+/g,' ').trim();
   const translations={'ions':'离子','pink transporter':'转运蛋白 · 粉色','simple receptor':'受体示意','cell membrane semi circle':'细胞膜截面','t cell receptor':'T 细胞受体'};
   for(const[from,to]of Object.entries(translations))if(normalized(label).startsWith(from))label=to+label.slice(from.length);
