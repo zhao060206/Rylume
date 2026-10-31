@@ -16,6 +16,7 @@ globalThis.document=new class extends EventTarget {
  querySelector(){return footer;}
 };
 globalThis.window=new EventTarget();globalThis.innerWidth=1280;globalThis.innerHeight=720;
+const storage=new Map();globalThis.localStorage={getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value),removeItem:key=>storage.delete(key)};
 const opened=[],dock=setupUpdateDock({openUpdate:info=>opened.push(info)});
 const root=footer.children[0],button=root.children[0],preview=body.children[0];
 const status={state:'available',current_version:'4.4.0',latest_version:'4.4.1',notes:'本次更新\n- 左下角常驻更新入口\n- 悬停查看日志'};
@@ -41,4 +42,15 @@ assert.equal(dockLabel({state:'ready',can_apply:false}),'下载已完成');
 dock.render({...status,notes:'<img src=x onerror=alert(1)>'});button.dispatchEvent(new Event('mouseenter'));
 assert.equal(preview.children[1].textContent,'<img src=x onerror=alert(1)>','Untrusted release notes remain literal text');
 assert.equal(preview.children[1].children.length,0);
+
+const reopened=setupUpdateDock({openUpdate:info=>opened.push(info)}),reopenedRoot=footer.children[0];
+reopened.render({state:'idle',current_version:'4.4.0'});
+assert.equal(reopenedRoot.hidden,false,'Restart retains the last known newer release before a network check');
+reopened.render({state:'failed',current_version:'4.4.0'});
+assert.equal(reopenedRoot.hidden,false,'Offline launch keeps the cached entry reachable');
+reopenedRoot.children[0].onclick();assert.equal(opened.at(-1).state,'cached','Cached metadata must not restore download or install authority');
+reopened.render({state:'idle',current_version:'4.4.1'});assert.equal(reopenedRoot.hidden,true,'Upgrading clears cached hints even before checking');
+assert.equal(storage.size,0);
+storage.set('rylume-known-update-preview','{broken');
+assert.doesNotThrow(()=>setupUpdateDock({openUpdate:()=>{}}));
 console.log('Persistent update dock, hover/focus notes, Esc, progress, retry, explicit click and upgrade completion passed');

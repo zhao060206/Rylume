@@ -109,7 +109,7 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   async function checkWhenDue(){
     if(busyUpdate(update?.state)||update?.state==='ready')return;
     let last=0;try{last=Number(localStorage.getItem('rylume-last-update-check')||0);}catch{}
-    if(Date.now()-last>24*60*60*1000){try{localStorage.setItem('rylume-last-update-check',String(Date.now()));}catch{}await updateAction('/api/updates/check');}
+    if(update?.state==='idle'||Date.now()-last>24*60*60*1000){try{localStorage.setItem('rylume-last-update-check',String(Date.now()));}catch{}await updateAction('/api/updates/check');}
   }
   async function ready(){
     try{await api('/api/updates/health',{});}catch{}
