@@ -31,7 +31,7 @@ export function setupDocumentAssistant({state,editor,api,toast,composer}){
  function controls(){
   $('document-analyze').disabled=uploading||submitting||!canAnalyzeDocuments(data?.documents||[],selected);
   const count=selectedDocumentIds(data?.documents||[],selected).length;
-  $('document-analyze').textContent=count?'分析 '+count+' 份文档的绘图建议':'分析绘图建议';
+  $('document-analyze').textContent=count>8?'每次最多分析 8 份，请减少选择':count?'分析 '+count+' 份文档的绘图建议':'分析绘图建议';
  }
  async function copy(text){try{await navigator.clipboard.writeText(text);toast('已复制');}catch{toast('复制未完成，可以在预览中选中文字复制。',true);}}
  function renderDocuments(){
