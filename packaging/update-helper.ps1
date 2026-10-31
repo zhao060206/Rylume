@@ -13,6 +13,11 @@ if((Split-Path -Parent $backup) -ne $parent -or (Split-Path -Parent $next) -ne $
 if(-not (Within $stage ($data+'\updates\staged')) -or -not (Within $planFile ($data+'\updates\apply'))){throw 'Invalid staging target'}
 if(-not (Test-Path -LiteralPath ($stage+'\Rylume.exe')) -or -not (Test-Path -LiteralPath ($target+'\Rylume.exe'))){throw 'Incomplete application'}
 if((Absolute $plan.health_file) -ne ((Split-Path -Parent $planFile)+'\healthy.json')){throw 'Invalid health path'}
+# Both PowerShell's provider location and the Win32 process working directory
+# must leave the installation tree before any rename (including rollback).
+$work=Split-Path -Parent $planFile
+Set-Location -LiteralPath $work
+[Environment]::CurrentDirectory=$work
 function Log([string]$message){('[{0}] {1}' -f (Get-Date -Format o),$message) | Add-Content -LiteralPath $plan.log_file -Encoding UTF8}
 function QuoteArg([string]$value){'"'+($value -replace '(\\*)"','$1$1\"' -replace '(\\+)$','$1$1')+'"'}
 function Launch([string]$folder,[bool]$health){
@@ -61,7 +66,7 @@ try{
         Move-Item -LiteralPath $backup -Destination $target
         Log 'Previous application restored'
     }
-    @{state='rolled_back';message=$_.Exception.Message} | ConvertTo-Json | Set-Content -LiteralPath ((Split-Path -Parent $planFile)+'\result.json') -Encoding UTF8
+    @{state='rolled_back';version=$plan.version;message=$_.Exception.Message} | ConvertTo-Json | Set-Content -LiteralPath ((Split-Path -Parent $planFile)+'\result.json') -Encoding UTF8
     if(-not (Get-Process -Id $plan.parent_pid -ErrorAction SilentlyContinue)){Launch $target $false | Out-Null}
     exit 1
 }

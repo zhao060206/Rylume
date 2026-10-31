@@ -5,6 +5,7 @@ export function byteSize(n){if(!Number.isFinite(n)||n<0)return '—';return n<10
 export function packAction(p){const s=p.task?.state;if(['queued','downloading','validating','installing'].includes(s))return 'cancel';if(!p.compatible)return 'upgrade';if(p.update_available)return 'update';if(p.installed_version)return 'use';return 'install';}
 export const busyUpdate=s=>['checking','downloading','validating','installing'].includes(s);
 export const showUpdateNotice=u=>newerRelease(u);
+export function updateStatusText(u){return [u.last_update_message,u.error||[u.message,u.state==='downloading'?`${byteSize(u.downloaded||0)} / ${byteSize(u.total||0)}`:''].filter(Boolean).join(' · ')].filter(Boolean).join('\n');}
 export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,openTemplates}){
   const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;};
   const dialog=el('dialog','delivery-dialog');dialog.id='delivery-dialog';dialog.setAttribute('aria-labelledby','delivery-title');
@@ -83,8 +84,8 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   function renderUpdate(){
     if(!update)return;const s=update.state;versionTitle.textContent=`当前版本 ${update.current_version}`;
     versionNote.textContent=s==='available'?`发现新版本 ${update.latest_version}`:s==='up_to_date'?'已是最新正式版本':s==='ready'?'新版已下载并通过校验':s==='installing'?'正在重启更新…':s==='cancelled'?'已取消下载，当前软件可继续使用':s==='failed'?'本次检查或下载未完成':s==='checking'?'正在检查 GitHub 最新版本…':s==='downloading'?`正在下载 ${update.latest_version}`:s==='validating'?'正在核对并解压安装包':'从 GitHub 检查最新正式版本';
-    updateStatus.textContent=update.error||[update.message,s==='downloading'?`${byteSize(update.downloaded||0)} / ${byteSize(update.total||0)}`:''].filter(Boolean).join(' · ')||update.last_update_message||'';
-    updateStatus.classList.toggle('delivery-error',s==='failed');updateProgress.hidden=!['downloading','validating','ready'].includes(s);updateProgress.value=update.progress||0;
+    updateStatus.textContent=updateStatusText(update);
+    updateStatus.classList.toggle('delivery-error',s==='failed'||Boolean(update.last_update_message));updateProgress.hidden=!['downloading','validating','ready'].includes(s);updateProgress.value=update.progress||0;
     check.disabled=busyUpdate(s)||s==='ready';download.hidden=!update.latest_version||!['available','cancelled','failed'].includes(s);download.disabled=busyUpdate(s);
     cancel.hidden=!['downloading','validating','ready'].includes(s);cancel.textContent=s==='ready'?'放弃本次安装':'取消下载';apply.hidden=s!=='ready'||!update.can_apply;
     releaseLink.hidden=!update.release_url;releaseLink.href=update.release_url||'https://github.com/zhao060206/Rylume/releases';

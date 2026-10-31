@@ -31,7 +31,15 @@ class UpdateManager:
         try:
             result=sorted((self.root/'apply').glob('*/result.json'),key=lambda p:p.stat().st_mtime)[-1]
             previous=json.loads(result.read_text(encoding='utf-8-sig'))
-            if previous.get('state')=='rolled_back':info['last_update_message']='上次更新未能启动，已恢复旧版。可以重新检查并下载。'
+            if previous.get('state')=='rolled_back':
+                attempted=previous.get('version')
+                if not attempted:
+                    attempted=json.loads(result.with_name('plan.json').read_text(encoding='utf-8-sig')).get('version')
+                # A manual installation of the fixed version resolves an older failed attempt.
+                if attempted and version_tuple(attempted)>version_tuple(self.current):
+                    reason=str(previous.get('message',''))
+                    busy=any(t in reason.lower() for t in ('正在使用','in use','being used','access','拒绝访问'))
+                    info['last_update_message']=('上次更新未完成：程序目录被占用，仍在使用 '+self.current+'。请关闭其他程序窗口后重试；旧版如反复失败，请从发布页完整解压新版到新文件夹。' if busy else '上次更新未通过启动确认，已保留旧版 '+self.current+'。请重试或从发布页完整解压新版到新文件夹。')
         except (OSError,ValueError,IndexError):pass
         return {'ok':True,**info}
     def _set(self,**kwargs):
@@ -162,7 +170,9 @@ class UpdateManager:
             'log_file':str(work/'update.log'),'version':self.release['version'],'nonce':nonce,'args':args}
         _write(work/'plan.json',plan)
         powershell=str(Path(os.environ.get('SYSTEMROOT',r'C:\Windows'))/'System32/WindowsPowerShell/v1.0/powershell.exe')
-        self.launcher([powershell,'-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-WindowStyle','Hidden','-File',str(script),'-PlanPath',str(work/'plan.json')],creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+        # Never inherit the application folder: Windows cannot rename a directory
+        # held as the updater's working directory, even after the app has exited.
+        self.launcher([powershell,'-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-WindowStyle','Hidden','-File',str(script),'-PlanPath',str(work/'plan.json')],cwd=str(work),creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         self._set(state='installing',message='正在退出并替换程序；启动失败会恢复旧版')
         return self.status()
 

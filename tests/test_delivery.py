@@ -156,10 +156,23 @@ def test_update_plan_and_health_are_confined_to_separate_data(tmp_path,monkeypat
     planpath=next((m.root/'apply').glob('*/plan.json'));plan=json.loads(planpath.read_text())
     assert plan['install_dir']==str(target.resolve()) and plan['data_dir']==str((tmp_path/'data').resolve())
     assert '-File' in calls[0][0][0] and 'api_key' not in planpath.read_text()
+    assert Path(calls[0][1]['cwd'])==planpath.parent
+    assert not Path(calls[0][1]['cwd']).is_relative_to(target.resolve())
     acknowledge(tmp_path/'data',planpath,plan['nonce']);assert Path(plan['health_file']).is_file()
     with pytest.raises(DeliveryError):acknowledge(tmp_path/'wrong-data',planpath,plan['nonce'])
     monkeypatch.setattr(app_updates,'PRODUCT_VERSION','0.0.0')
     with pytest.raises(DeliveryError,match='版本不一致'):acknowledge(tmp_path/'data',planpath,plan['nonce'])
+
+def test_failed_update_is_visible_until_its_version_is_installed(tmp_path):
+    work=tmp_path/'data/updates/apply/attempt';work.mkdir(parents=True)
+    (work/'result.json').write_text(json.dumps({'state':'rolled_back','message':'Cannot move item because the item is in use.'}),encoding='utf8')
+    (work/'plan.json').write_text(json.dumps({'version':'4.5.1'}),encoding='utf8')
+    old=UpdateManager(tmp_path/'data',current_version='4.4.0')
+    old._set(state='available',message='更新信息来源：GitHub 直连')
+    assert '程序目录被占用' in old.status()['last_update_message']
+    assert 'last_update_message' not in UpdateManager(tmp_path/'data',current_version='4.5.1').status()
+    (work/'result.json').write_text(json.dumps({'state':'rolled_back','version':'4.5.2','message':'New application failed its startup health confirmation'}),encoding='utf8')
+    assert '启动确认' in UpdateManager(tmp_path/'data',current_version='4.5.1').status()['last_update_message']
 
 def test_all_discipline_templates_are_portable_and_have_distinct_mechanisms(tmp_path):
     from scene_document import normalize_scene,audit_scene
