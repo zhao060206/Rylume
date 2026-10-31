@@ -232,6 +232,15 @@ dialog.asset-import-dialog.floating-library[open] {display:flex;flex-direction:c
 .personal-actions .dialog-actions {display:flex;justify-content:flex-start;gap:8px}
 /* Every version has offline release history; a quiet corner note after upgrade. */
 dialog.release-history-dialog.floating-library[open] {width:min(700px,calc(100vw - 32px))}
+/* Asset and template libraries share the same modeless window shell. */
+dialog.asset-library-dialog.floating-library[open] {display:flex;flex-direction:column;width:min(760px,calc(100vw - 24px));overflow:hidden}
+dialog.asset-library-dialog>.dialog-heading {flex-shrink:0}
+.asset-library-body {min-width:0;padding:0 2px 12px}
+.asset-library-body>.muted {font-size:12px;line-height:1.8}
+#asset-library-dialog #panel-assets {flex:1;min-height:0;overflow:auto}
+#asset-library-dialog #asset-list {flex:none;overflow:visible;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+.toolbar .rail [data-tab=assets][aria-expanded=true] {background:var(--ui-tint);color:var(--ui-accent)}
+.toolbar .rail [data-tab=assets][aria-expanded=false] {background:transparent;color:var(--ui-secondary)}
 .release-history {padding-bottom:16px}.release-entry {border-top:1px solid var(--ui-border);padding:18px 0 7px}
 .release-entry h3 {display:inline-block;font-size:15px;font-weight:550;color:var(--ui-ink);margin:0 14px 10px 0}
 .release-entry time {font-size:11px;color:var(--ui-muted)}

@@ -1,4 +1,4 @@
-import {setupFloatingWindows} from './floating-windows.js';
+import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
 import {setupPersonalAssets} from './personal-assets.js';
 import {setupReleaseNotes} from './release-notes.js';
 import {setupDocumentAssistant} from './document-assistant.js';
@@ -27,6 +27,7 @@ let startupNavigationCancelled=false;
 const ws=$('workspace');
 const floatingWindows=setupFloatingWindows();
 new MutationObserver(()=>syncPanelButtons(ws)).observe(ws,{attributes:true,attributeFilter:['class']});
+new MutationObserver(()=>syncPanelButtons(ws)).observe($('asset-library-dialog'),{attributes:true,attributeFilter:['open','class']});
 let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI,navigationUI,onboardingUI,documentsUI;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
 let toastTimer;function toast(message,error=false){$('toast').textContent=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
@@ -99,6 +100,7 @@ async function blank(){if(S.active)return toast('已有生成任务，请等待�
 function tab(name, toggle=false){
  if(name==='generate'&&composerUI){composerUI.open();return;}
  ws.dispatchEvent(new Event('workspace-panel-request'));
+ if(name==='assets'){showFloatingWindow($('asset-library-dialog'));syncPanelButtons(ws);return;}
  if(name==='templates')libraryUI.renderTemplates();
  const wasMinimized=document.querySelector('.left-panel')?.classList.contains('is-minimized');
  const collapse=toggle&&!wasMinimized&&!ws.classList.contains('left-collapsed')&&document.querySelector(`[data-tab="${name}"]`)?.classList.contains('active');

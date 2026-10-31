@@ -28,7 +28,7 @@ export function setupPersonalAssets({api,toast,library,state}){
  let assets=[],selected=null,timer=null,uploading=false,mutation=false,rendered='';
  const entry=make('div','personal-entry'),open=make('button','button','我的素材'),upload=make('button','button','上传素材');
  open.id='open-personal-assets';upload.id='upload-personal-assets';entry.append(open,upload);
- document.querySelector('#panel-assets>.panel-heading').after(entry);
+ document.getElementById('panel-assets').prepend(entry);
  const home=make('button','','导入自己的素材');home.type='button';home.id='home-import-assets';home.innerHTML='<svg class="icon" aria-hidden="true"><use href="#download"></use></svg><span>导入素材</span>';document.querySelector('.home-start-links').append(home);
  const states={uploaded:'原图已保存',queued:'排队中',analyzing:'模型分析中',tracing:'矢量转换中',verifying:'对照核验中',ready:'等待确认',failed:'可重新转换',cancelled:'已取消',interrupted:'上次转换已中断'};
  function schedule(){clearTimeout(timer);if(dialog.open&&assets.some(assetBusy))timer=setTimeout(load,1100);}

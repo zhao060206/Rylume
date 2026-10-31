@@ -356,7 +356,7 @@
       模板
      </span>
     </button>
-    <button aria-controls="panel-assets" aria-expanded="false" class="rail-item active" data-tab="assets" title="点击或搜索素材，添加到纸张上">
+    <button aria-controls="asset-library-dialog" aria-expanded="false" class="rail-item active" data-tab="assets" title="打开素材库，点击或搜索素材添加到图上">
      <svg class="icon">
       <use href="#plus">
       </use>
@@ -582,42 +582,7 @@
       查看模板
      </button>
     </section>
-    <section class="left-tab" id="panel-assets">
-     <div class="panel-heading">
-      <div>
-       <h1>
-        素材库
-       </h1>
-      </div>
-      <button aria-label="收起侧栏" class="icon-button close-library-panel" title="收起侧栏">
-       <svg class="icon">
-        <use href="#close">
-        </use>
-       </svg>
-      </button>
-     </div>
-     <p class="muted">
-      点击素材放到图上；拖动可移动，双击文字可改字。
-     </p>
-     <label class="field-label" for="asset-domain">
-      学科
-     </label>
-     <select aria-label="素材学科" class="full" id="asset-domain">
-     </select>
-     <label class="field-label" for="asset-category">
-      分类
-     </label>
-     <select aria-label="素材分类" class="full" id="asset-category">
-      <option value="">
-       全部分类
-      </option>
-     </select>
-     <input aria-label="搜索科研素材" id="asset-search" placeholder="搜索素材，例如：受体、线粒体…" type="search"/>
-     <p class="muted small" id="asset-count">
-     </p>
-     <div class="asset-list" id="asset-list">
-     </div>
-    </section>
+
     <section class="left-tab" hidden="" id="panel-references">
      <div class="panel-heading">
       <div>
@@ -753,7 +718,7 @@
        纸张准备好了
       </h2>
       <p>
-       点一下左侧素材，就能放到图上。
+       点“添加素材”，选择素材放到图上。
        <br/>
        也可以先写一段文字。
       </p>
@@ -986,6 +951,35 @@
    </div>
    <p class="muted small" id="ai-status" role="status">
    </p>
+  </dialog>
+  <dialog aria-labelledby="asset-library-title" class="gallery-dialog asset-library-dialog" id="asset-library-dialog">
+   <div class="dialog-heading">
+    <div><h2 id="asset-library-title">素材库</h2></div>
+    <button aria-label="关闭素材库" class="icon-button" data-close="asset-library-dialog">×</button>
+   </div>
+   <section class="asset-library-body" id="panel-assets">
+     <p class="muted">
+      点击素材放到图上；拖动可移动，双击文字可改字。
+     </p>
+     <label class="field-label" for="asset-domain">
+      学科
+     </label>
+     <select aria-label="素材学科" class="full" id="asset-domain">
+     </select>
+     <label class="field-label" for="asset-category">
+      分类
+     </label>
+     <select aria-label="素材分类" class="full" id="asset-category">
+      <option value="">
+       全部分类
+      </option>
+     </select>
+     <input aria-label="搜索科研素材" id="asset-search" placeholder="搜索素材，例如：受体、线粒体…" type="search"/>
+     <p class="muted small" id="asset-count">
+     </p>
+     <div class="asset-list" id="asset-list">
+     </div>
+   </section>
   </dialog>
   <dialog class="gallery-dialog" id="gallery-dialog">
    <div class="dialog-heading">

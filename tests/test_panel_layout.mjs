@@ -38,4 +38,13 @@ syncPanelButtons(workspace,root);
 assert.equal(assets.attrs['aria-expanded'],'true');
 assert.equal(layers.attrs['aria-expanded'],'false');
 assert.equal(properties.attrs['aria-pressed'],'true');
+// The asset library is a dialog, independent of the old left-panel state.
+assets.dataset={tab:'assets'};
+const assetWindow={open:true,classList:{contains:()=>false}};
+root.getElementById=id=>id==='asset-library-dialog'?assetWindow:properties;
+classes.add('left-collapsed');syncPanelButtons(workspace,root);
+assert.equal(assets.attrs['aria-expanded'],'true','An open asset window remains expanded while the old sidebar is closed');
+assetWindow.classList.contains=()=>true;syncPanelButtons(workspace,root);
+assert.equal(assets.attrs['aria-expanded'],'false','Minimizing the asset window updates its toolbar disclosure');
+assetWindow.open=false;syncPanelButtons(workspace,root);assert.equal(assets.attrs['aria-expanded'],'false');
 console.log('Panel reflow preserves document center and zoom; disclosure state follows visibility.');

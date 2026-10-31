@@ -25,7 +25,7 @@ export function showFloatingWindow(win){
 }
 export function setupFloatingWindows(only=null){
  const panel=only?null:document.querySelector('.workspace>.left-panel');
- const dialogs=only?[only]:['asset-dialog','gallery-dialog','template-detail-dialog','template-preview-dialog','reference-dialog'].map(id=>document.getElementById(id)).filter(Boolean);
+ const dialogs=only?[only]:['asset-library-dialog','asset-dialog','gallery-dialog','template-detail-dialog','template-preview-dialog','reference-dialog'].map(id=>document.getElementById(id)).filter(Boolean);
  for(const win of [...(panel?[panel]:[]),...dialogs]){
   if(entries.has(win))continue;
   const isPanel=win===panel,headings=[...win.querySelectorAll(isPanel?'.panel-heading':'.dialog-heading')];

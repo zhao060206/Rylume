@@ -68,7 +68,7 @@ export function setupWorkspaceModes({editor, state, tab, showRight, refresh}) {
   function layout(){
     if(!state.id||!$('welcome').hidden||ws.classList.contains('annotations-open'))return;
     const target=responsiveModeLayout(layouts[mode],innerWidth);
-    tab(target.tab);
+    if(target.tab!=='assets'||!target.leftCollapsed)tab(target.tab);
     if(!target.propertiesHidden)showRight(target.inspector);
     ws.classList.toggle('left-collapsed',target.leftCollapsed);
     ws.classList.toggle('properties-hidden',target.propertiesHidden);

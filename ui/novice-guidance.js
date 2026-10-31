@@ -13,7 +13,7 @@ export function workflowHint({scene,selectedIds=[],tool='select',connectStart=nu
   }
   if(tool==='text')return {title:'在纸张上点一下，放置文字',detail:'输入后点「完成」，或点击空白处保存。',action:'cancel',label:'取消放置'};
   if(tool==='pan')return {title:'按住鼠标拖动，移动整张画布',detail:'需要移动单个图形时，回到「选择」工具。',action:'select',label:'回到选择'};
-  if(!objects.length)return {title:'先放入第一个素材',detail:'点击左侧素材即可添加，也可以直接输入一段文字。',action:'assets',label:'添加素材'};
+  if(!objects.length)return {title:'先放入第一个素材',detail:'点“添加素材”打开素材库，也可以直接输入一段文字。',action:'assets',label:'添加素材'};
   if(activeLabel&&selectedIds.length===1&&selectedIds[0]===activeLabel.id)return {title:'正在调整文字',detail:'直接拖动文字；方向键微调，Shift 加大步长。双击或点右侧按钮改字。',action:'edit',label:'修改文字'};
   if(relation){const def=RELATION_DEFINITIONS.find(d=>d.id===relation.type);return {title:relation.type==='associates'?'这条连线表达什么？':'连线含义：'+(def?.title||'待确认'),detail:(def?.description||'在上方选择含义。')+' 移动图形时，连线会跟随。',action:'meaning',label:'查看连线含义'};}
   if(selected.length===1&&selected[0].locked)return {title:'这个对象已锁定',detail:'需要修改时，在图层中解除锁定。',action:'layers',label:'打开图层'};

@@ -20,6 +20,7 @@ class Node extends EventTarget {
  show(){this.open=true;this.shows=(this.shows||0)+1;}
  close(){this.open=false;this.dispatchEvent(new Event('close'));}
  click(){this.onclick?.();}
+ setPointerCapture(id){this.captured=id;}
 }
 const body=new Node('body'),opener=new Node('button');body.append(opener);
 globalThis.innerWidth=1280;globalThis.innerHeight=900;
@@ -46,5 +47,29 @@ second.close();assert.equal(strip.children.length,0);assert.ok(strip.hidden,'Clo
 first.querySelector('.floating-minimize').click();globalThis.innerWidth=320;globalThis.innerHeight=300;showFloatingWindow(first);
 assert.ok(parseFloat(first.style.width)<=304 && parseFloat(first.style.height)<=284,'Restore after resizing remains reachable');
 first.querySelector('.floating-minimize').click();strip.children[0].querySelector('.window-restore-close').click();assert.ok(!first.open && strip.hidden);
+// Both full libraries are discovered by the default initializer and use the
+// same title dragging, keyboard movement and named restore workflow.
+globalThis.innerWidth=1280;globalThis.innerHeight=900;
+const assetLibrary=makeWindow('素材库'),templateLibrary=makeWindow('模板库');
+document.getElementById=id=>({'asset-library-dialog':assetLibrary,'gallery-dialog':templateLibrary}[id]||null);
+document.addEventListener=()=>{};globalThis.addEventListener=()=>{};
+setupFloatingWindows();
+for(const win of [assetLibrary,templateLibrary]){
+ showFloatingWindow(win);const head=win.querySelector('.dialog-heading'),beforeLeft=parseFloat(win.style.left);
+ const key=new Event('keydown',{cancelable:true});key.key='ArrowRight';head.dispatchEvent(key);
+ assert.equal(parseFloat(win.style.left),beforeLeft+10);
+ const pointer=(type,x,y)=>{const event=new Event(type,{cancelable:true});Object.assign(event,{button:0,pointerId:4,clientX:x,clientY:y});head.dispatchEvent(event);};
+ const left=parseFloat(win.style.left),top=parseFloat(win.style.top);
+ pointer('pointerdown',100,100);pointer('pointermove',130,120);pointer('pointerup',130,120);
+ assert.equal(parseFloat(win.style.left),left+30);assert.equal(parseFloat(win.style.top),top+20);
+ const moved={...win.style};win.querySelector('.floating-minimize').click();
+ assert.ok(win.open&&win.classList.contains('is-minimized'));
+ const item=strip.children.find(item=>item.querySelector('.window-restore-button').textContent===win.querySelector('h2').textContent);
+ item.querySelector('.window-restore-button').click();
+ for(const key of ['left','top','width','height'])assert.equal(win.style[key],moved[key]);
+ win.querySelector('.floating-minimize').click();showFloatingWindow(win);assert.ok(!win.classList.contains('is-minimized'));
+ win.close();
+}
+delete globalThis.addEventListener;
 for(const key of ['document','MutationObserver','innerWidth','innerHeight'])delete globalThis[key];
 console.log('Window minimize, same-instance restore, multiple windows, stacking, close, resize and duplicate setup passed');

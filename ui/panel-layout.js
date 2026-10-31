@@ -12,8 +12,11 @@ export function preserveCanvasView(editor, change) {
 
 export function syncPanelButtons(workspace, root = document) {
   const collapsed = workspace.classList.contains('left-collapsed');
+  const assets = root.getElementById('asset-library-dialog');
   for (const b of root.querySelectorAll('[data-tab]')) {
-    const expanded = !collapsed && b.classList.contains('active');
+    const expanded = b.dataset?.tab==='assets'&&assets
+      ? assets.open&&!assets.classList.contains('is-minimized')
+      : !collapsed && b.classList.contains('active');
     b.setAttribute('aria-expanded', String(expanded));
   }
   root.getElementById('toggle-properties')?.setAttribute('aria-pressed', String(!workspace.classList.contains('properties-hidden')));
