@@ -286,5 +286,6 @@
   "provenance": {
     "method": "original-discipline-template",
     "example": "earth-environment"
-  }
+  },
+  "generation_contract": {}
 }

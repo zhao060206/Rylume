@@ -282,5 +282,6 @@
   "provenance": {
     "method": "original-discipline-template",
     "example": "computing-math"
-  }
+  },
+  "generation_contract": {}
 }

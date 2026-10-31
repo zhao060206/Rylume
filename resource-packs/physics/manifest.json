@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "physics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "物理学",
   "domain": "physics",
   "min_app_version": "3.1.0",
@@ -438,6 +438,1254 @@
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
       "modifications": "Original vector artwork.",
       "sha256": "710b66b3f5d3daa5c61f1d4e467ee9bf66c9aef311ccb42ee42020f4acaa72ae"
+    },
+    {
+      "id": "physics_phys_incline",
+      "asset_id": "physics_phys_incline",
+      "label": "斜面",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_incline.svg",
+      "keywords": [
+        "phys_incline",
+        "斜面",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "6509f6d2d43390541bbcdc0afcbd2cf2da4995c577864bd0444eac917ec9fd62"
+    },
+    {
+      "id": "physics_phys_pulley",
+      "asset_id": "physics_phys_pulley",
+      "label": "滑轮",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_pulley.svg",
+      "keywords": [
+        "phys_pulley",
+        "滑轮",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "d71df1b46e2fd5c3c0b1b21613b839819e71b617a542eccd4c7273024bfc3804"
+    },
+    {
+      "id": "physics_phys_collision",
+      "asset_id": "physics_phys_collision",
+      "label": "碰撞",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_collision.svg",
+      "keywords": [
+        "phys_collision",
+        "碰撞",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "5ca1d95095113832ae49ec8129e1e424ec5ca3b8eca2ec1e41954aa5928758b7"
+    },
+    {
+      "id": "physics_phys_projectile",
+      "asset_id": "physics_phys_projectile",
+      "label": "抛体运动",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_projectile.svg",
+      "keywords": [
+        "phys_projectile",
+        "抛体运动",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "500d35d2432e59b68ea9d2e7f4e3046bba50ba5a2e049753a795a1ca4a31afb1"
+    },
+    {
+      "id": "physics_phys_gyroscope",
+      "asset_id": "physics_phys_gyroscope",
+      "label": "陀螺仪",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_gyroscope.svg",
+      "keywords": [
+        "phys_gyroscope",
+        "陀螺仪",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "3914a5b4e2b85189dbd84604f8e540d929e54cfe9c8d97d79fd57d495b146147"
+    },
+    {
+      "id": "physics_phys_torque",
+      "asset_id": "physics_phys_torque",
+      "label": "力矩",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_torque.svg",
+      "keywords": [
+        "phys_torque",
+        "力矩",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "7eba80e7114eb6eda9e02843f152c1d660506b20f32565cfe1024625d63c1e49"
+    },
+    {
+      "id": "physics_phys_friction",
+      "asset_id": "physics_phys_friction",
+      "label": "摩擦力",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_friction.svg",
+      "keywords": [
+        "phys_friction",
+        "摩擦力",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "ad9d05db9af45ca4e6eed49f1a31ee21852b0e7cd449d9980e202065c80f9e05"
+    },
+    {
+      "id": "physics_phys_free_body",
+      "asset_id": "physics_phys_free_body",
+      "label": "受力分析",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_free_body.svg",
+      "keywords": [
+        "phys_free_body",
+        "受力分析",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "15b643ec3b77c63f7d75d1e6f9d14067de1a5f89971c227fb0d7daf75b0ab63d"
+    },
+    {
+      "id": "physics_phys_center_mass",
+      "asset_id": "physics_phys_center_mass",
+      "label": "质心",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_center_mass.svg",
+      "keywords": [
+        "phys_center_mass",
+        "质心",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "6611cf6ab93417dcd5bb9f0b090393238e1857bd2e9982a0da6a76640c00125d"
+    },
+    {
+      "id": "physics_phys_orbit",
+      "asset_id": "physics_phys_orbit",
+      "label": "轨道运动",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_orbit.svg",
+      "keywords": [
+        "phys_orbit",
+        "轨道运动",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "b072f8b3ba6081cb47bd97523e12db7ba75a54f22e8872f928775dbe216c115f"
+    },
+    {
+      "id": "physics_phys_thermometer",
+      "asset_id": "physics_phys_thermometer",
+      "label": "温度计",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_thermometer.svg",
+      "keywords": [
+        "phys_thermometer",
+        "温度计",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "e09dd37c9b310bb22afa335dc556a2a4946502bd7eea85b235d35291d27edfb9"
+    },
+    {
+      "id": "physics_phys_heat_flow",
+      "asset_id": "physics_phys_heat_flow",
+      "label": "热流",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_heat_flow.svg",
+      "keywords": [
+        "phys_heat_flow",
+        "热流",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "b9f54dab915a87f69c89d7a3af750574479ff3703b28eab53f2d6034e88bec92"
+    },
+    {
+      "id": "physics_phys_entropy",
+      "asset_id": "physics_phys_entropy",
+      "label": "熵增",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_entropy.svg",
+      "keywords": [
+        "phys_entropy",
+        "熵增",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "7babc9f1e0f3439264b69d640d3de981d5eaa7437781e28705f71b3215a2fb76"
+    },
+    {
+      "id": "physics_phys_phase_diagram",
+      "asset_id": "physics_phys_phase_diagram",
+      "label": "相图",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_phase_diagram.svg",
+      "keywords": [
+        "phys_phase_diagram",
+        "相图",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "7fdd4618e81857abb87f15f74e58ff0084ac5c4320137e3697b0bc436cf0b3ec"
+    },
+    {
+      "id": "physics_phys_ideal_gas",
+      "asset_id": "physics_phys_ideal_gas",
+      "label": "理想气体",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_ideal_gas.svg",
+      "keywords": [
+        "phys_ideal_gas",
+        "理想气体",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "35ae91c08c7c1e037c2a360fd2db4c48fe7ddb4050549e25df74256536aa7478"
+    },
+    {
+      "id": "physics_phys_diffusion",
+      "asset_id": "physics_phys_diffusion",
+      "label": "扩散",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_diffusion.svg",
+      "keywords": [
+        "phys_diffusion",
+        "扩散",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "fe36bdc6f4fcffd6e3b3833de46fa93185e5f533e0a846d9235f6d7bec294ed6"
+    },
+    {
+      "id": "physics_phys_heat_engine",
+      "asset_id": "physics_phys_heat_engine",
+      "label": "热机",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_heat_engine.svg",
+      "keywords": [
+        "phys_heat_engine",
+        "热机",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "ef9264359f310c235e87674e7d44d9fe07890cc80439a4c10aa4abf4e3795d61"
+    },
+    {
+      "id": "physics_phys_diffraction",
+      "asset_id": "physics_phys_diffraction",
+      "label": "衍射",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_diffraction.svg",
+      "keywords": [
+        "phys_diffraction",
+        "衍射",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "3660b2f9cab471ef027aa8220ebc7a18f9f1bab5b6f5fb999ca100f2dc0067c1"
+    },
+    {
+      "id": "physics_phys_double_slit",
+      "asset_id": "physics_phys_double_slit",
+      "label": "双缝干涉",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_double_slit.svg",
+      "keywords": [
+        "phys_double_slit",
+        "双缝干涉",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "cb4c00cb2ae6b1f69f498dd6d60d9b2bd05e6c47a61ab25631b7a16e6d7bf962"
+    },
+    {
+      "id": "physics_phys_convex_lens",
+      "asset_id": "physics_phys_convex_lens",
+      "label": "凸透镜",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_convex_lens.svg",
+      "keywords": [
+        "phys_convex_lens",
+        "凸透镜",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "9dbd6692f6a21b2860183812ce1e55a2edd79bfe432e3c3bbace8072b6484845"
+    },
+    {
+      "id": "physics_phys_concave_mirror",
+      "asset_id": "physics_phys_concave_mirror",
+      "label": "凹面镜",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_concave_mirror.svg",
+      "keywords": [
+        "phys_concave_mirror",
+        "凹面镜",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "e2459242db915b5186480ba3508f0f2e1a3fd7bb8091bbacd47f5c9ae63e108f"
+    },
+    {
+      "id": "physics_phys_optical_fiber",
+      "asset_id": "physics_phys_optical_fiber",
+      "label": "光纤",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_optical_fiber.svg",
+      "keywords": [
+        "phys_optical_fiber",
+        "光纤",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "624b1284d7974e43c650bbdac7159b17468c41487c0bee63a9aa586fdc4e18b8"
+    },
+    {
+      "id": "physics_phys_spectrometer",
+      "asset_id": "physics_phys_spectrometer",
+      "label": "光谱仪",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_spectrometer.svg",
+      "keywords": [
+        "phys_spectrometer",
+        "光谱仪",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "de60a7c6301699cb8af25e6cf91bd56732f6b1147d4e2d745e3718c1886b2fc6"
+    },
+    {
+      "id": "physics_phys_electric_field",
+      "asset_id": "physics_phys_electric_field",
+      "label": "电场",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_electric_field.svg",
+      "keywords": [
+        "phys_electric_field",
+        "电场",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "998937750aff43711d4198bf8fc5442cef4e55319d72cbe3f8d12a88616ae3f5"
+    },
+    {
+      "id": "physics_phys_magnetic_field",
+      "asset_id": "physics_phys_magnetic_field",
+      "label": "磁场",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_magnetic_field.svg",
+      "keywords": [
+        "phys_magnetic_field",
+        "磁场",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "5ed2e4344471748aa4daccd681cb9a95036121e32d4719068a38d3b51995d833"
+    },
+    {
+      "id": "physics_phys_lorentz",
+      "asset_id": "physics_phys_lorentz",
+      "label": "洛伦兹力",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_lorentz.svg",
+      "keywords": [
+        "phys_lorentz",
+        "洛伦兹力",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "d81be1cd84e8380090e1837c00a3ac3f070b93ff653c0670046e0827a03f4afc"
+    },
+    {
+      "id": "physics_phys_transformer",
+      "asset_id": "physics_phys_transformer",
+      "label": "变压器",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_transformer.svg",
+      "keywords": [
+        "phys_transformer",
+        "变压器",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "70416fea031695c568ddd026ba81ccc0e6ec74c894bb25affba695f469716e03"
+    },
+    {
+      "id": "physics_phys_inductor",
+      "asset_id": "physics_phys_inductor",
+      "label": "电感",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_inductor.svg",
+      "keywords": [
+        "phys_inductor",
+        "电感",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "fe126d60fd757cb497a242e7b7f73e4562065d663626f985f1e67d66787ca08e"
+    },
+    {
+      "id": "physics_phys_diode",
+      "asset_id": "physics_phys_diode",
+      "label": "二极管",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_diode.svg",
+      "keywords": [
+        "phys_diode",
+        "二极管",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "d9fca694987ae2ec8ad5083707d7c48fe9865bdd379273a06fdbb60bd62bc7eb"
+    },
+    {
+      "id": "physics_phys_transistor",
+      "asset_id": "physics_phys_transistor",
+      "label": "晶体管",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_transistor.svg",
+      "keywords": [
+        "phys_transistor",
+        "晶体管",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "760d354086d3a36fb17183548bc6f20db2b8898d0ba0006de58bec8413d38def"
+    },
+    {
+      "id": "physics_phys_logic_gate",
+      "asset_id": "physics_phys_logic_gate",
+      "label": "逻辑门",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_logic_gate.svg",
+      "keywords": [
+        "phys_logic_gate",
+        "逻辑门",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "8fc24c187fac1df62fef8cab6335a71c43f913c7997c9de1d9da966e859450c4"
+    },
+    {
+      "id": "physics_phys_antenna",
+      "asset_id": "physics_phys_antenna",
+      "label": "天线",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_antenna.svg",
+      "keywords": [
+        "phys_antenna",
+        "天线",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "ca262f2b1df94dd1f6a0d2f2b8dd43f329847861b34afe208908efb106d6b6b2"
+    },
+    {
+      "id": "physics_phys_waveguide",
+      "asset_id": "physics_phys_waveguide",
+      "label": "波导",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_waveguide.svg",
+      "keywords": [
+        "phys_waveguide",
+        "波导",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "8f7883730d344f926649731c09295777824b5701a7eed678644eb037d15b0d0a"
+    },
+    {
+      "id": "physics_phys_energy_levels",
+      "asset_id": "physics_phys_energy_levels",
+      "label": "能级",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_energy_levels.svg",
+      "keywords": [
+        "phys_energy_levels",
+        "能级",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "cd93297f0eb35e2cb7fd8b793c72aca15e0dd93f26a099142c817e54687b4f7b"
+    },
+    {
+      "id": "physics_phys_wavefunction",
+      "asset_id": "physics_phys_wavefunction",
+      "label": "波函数",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_wavefunction.svg",
+      "keywords": [
+        "phys_wavefunction",
+        "波函数",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "3fa3bee1ca1188602b7bb4ad105a1e346d610a018303769a29c9dec0972ee22a"
+    },
+    {
+      "id": "physics_phys_quantum_dot",
+      "asset_id": "physics_phys_quantum_dot",
+      "label": "量子点",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_quantum_dot.svg",
+      "keywords": [
+        "phys_quantum_dot",
+        "量子点",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "f71651587150754acb1c470b5df9c7be92eebfae11d741cfe78ff105ca7190ae"
+    },
+    {
+      "id": "physics_phys_spin",
+      "asset_id": "physics_phys_spin",
+      "label": "自旋",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_spin.svg",
+      "keywords": [
+        "phys_spin",
+        "自旋",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "7daf220040dd402643eb08b63fc30437bf36d64b111d2dc1a41cb8dd64fdbdb5"
+    },
+    {
+      "id": "physics_phys_entanglement",
+      "asset_id": "physics_phys_entanglement",
+      "label": "量子纠缠",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_entanglement.svg",
+      "keywords": [
+        "phys_entanglement",
+        "量子纠缠",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "cd798f15acc3ad250b721d34ffa4907a6ae1fe63b177881b997fd929aef8bd0f"
+    },
+    {
+      "id": "physics_phys_photon",
+      "asset_id": "physics_phys_photon",
+      "label": "光子",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_photon.svg",
+      "keywords": [
+        "phys_photon",
+        "光子",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "606a7fe42f8eeef12e6013752591ab34cb4e28a3008bcd971ba22601655bdc50"
+    },
+    {
+      "id": "physics_phys_band_gap",
+      "asset_id": "physics_phys_band_gap",
+      "label": "带隙",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_band_gap.svg",
+      "keywords": [
+        "phys_band_gap",
+        "带隙",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "729d4c8dd200b8426448f9e0dad093fda28d2e7fe98dc1815fc08ae5d6296a62"
+    },
+    {
+      "id": "physics_phys_tunneling",
+      "asset_id": "physics_phys_tunneling",
+      "label": "量子隧穿",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_tunneling.svg",
+      "keywords": [
+        "phys_tunneling",
+        "量子隧穿",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "3aadc781a6cf54d9230db82846ce46d74a2239ff09086c640db4e1f1674f0df5"
+    },
+    {
+      "id": "physics_phys_qubit",
+      "asset_id": "physics_phys_qubit",
+      "label": "量子比特",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_qubit.svg",
+      "keywords": [
+        "phys_qubit",
+        "量子比特",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "2f8d9fd2a9117630e2534ce7b43df3a695897c7810e97da4b6aa496ab5b1596a"
+    },
+    {
+      "id": "physics_phys_laser_cavity",
+      "asset_id": "physics_phys_laser_cavity",
+      "label": "激光谐振腔",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_laser_cavity.svg",
+      "keywords": [
+        "phys_laser_cavity",
+        "激光谐振腔",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "7e582e0878f9c7001ed12e91417182a9c667a84010acdbc7f3a864dc5bf4c518"
+    },
+    {
+      "id": "physics_phys_cryostat",
+      "asset_id": "physics_phys_cryostat",
+      "label": "低温恒温器",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_cryostat.svg",
+      "keywords": [
+        "phys_cryostat",
+        "低温恒温器",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "e44b522085fc546a4bfcc80804bc6af407aedf0cc5aabce31a308648f9ec9c4d"
+    },
+    {
+      "id": "physics_phys_interferometer",
+      "asset_id": "physics_phys_interferometer",
+      "label": "干涉仪",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_interferometer.svg",
+      "keywords": [
+        "phys_interferometer",
+        "干涉仪",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "2408cff03776ecff3811b565c82be57d1ba20de6a656794fee3c67d38c71291e"
+    },
+    {
+      "id": "physics_phys_plasma",
+      "asset_id": "physics_phys_plasma",
+      "label": "等离子体",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_plasma.svg",
+      "keywords": [
+        "phys_plasma",
+        "等离子体",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "a406bdab0f4be8e8ed8611c6711c478ebe8d9931f60812587ddc6722d78bd96b"
+    },
+    {
+      "id": "physics_phys_fluid",
+      "asset_id": "physics_phys_fluid",
+      "label": "流体",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_fluid.svg",
+      "keywords": [
+        "phys_fluid",
+        "流体",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "495d8d70851cb0e28ef958de40ef63f955022bc63dc47f2e853c3c8ead606941"
+    },
+    {
+      "id": "physics_phys_viscosity",
+      "asset_id": "physics_phys_viscosity",
+      "label": "黏度",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_viscosity.svg",
+      "keywords": [
+        "phys_viscosity",
+        "黏度",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "c47dda00bdc804f12b18425e47e3f5833d4ad6ba3c355f1180a159d30da30597"
+    },
+    {
+      "id": "physics_phys_surface_tension",
+      "asset_id": "physics_phys_surface_tension",
+      "label": "表面张力",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_surface_tension.svg",
+      "keywords": [
+        "phys_surface_tension",
+        "表面张力",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "cc78cca3679f18dcfece978f53a5ab5d04a7fd8950d8b83acb2c91b2f6fbe0e9"
+    },
+    {
+      "id": "physics_phys_double_pendulum",
+      "asset_id": "physics_phys_double_pendulum",
+      "label": "双摆",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_double_pendulum.svg",
+      "keywords": [
+        "phys_double_pendulum",
+        "双摆",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "0dee11f21825ff0b4d67bbde5e0d17f4e095539e76c78c8c57eef58db2fe9515"
+    },
+    {
+      "id": "physics_phys_normal_mode",
+      "asset_id": "physics_phys_normal_mode",
+      "label": "简正模",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_normal_mode.svg",
+      "keywords": [
+        "phys_normal_mode",
+        "简正模",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "fa827b8597a8dc3f5ca88b2dc914886b9467c519e07eaab22e255e602f82a878"
+    },
+    {
+      "id": "physics_phys_phonon",
+      "asset_id": "physics_phys_phonon",
+      "label": "声子",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_phonon.svg",
+      "keywords": [
+        "phys_phonon",
+        "声子",
+        "物理学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
+      "modifications": "Original vector artwork.",
+      "sha256": "3b02c54a91f56e7a352f753161d56457a42f27c0cd3626712240bff6a148622d"
     },
     {
       "id": "physics_beam_splitter",

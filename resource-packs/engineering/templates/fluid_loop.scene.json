@@ -274,5 +274,6 @@
   "provenance": {
     "method": "original-discipline-template",
     "example": "engineering"
-  }
+  },
+  "generation_contract": {}
 }

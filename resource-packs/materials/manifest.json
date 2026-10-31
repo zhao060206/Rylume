@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "materials",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "材料科学",
   "domain": "materials",
   "min_app_version": "3.1.0",
@@ -438,6 +438,1326 @@
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
       "modifications": "Original vector artwork.",
       "sha256": "e161c0d70717ceeaf17068757d81ae7c438f3bee301b80dda458e4e4df741236"
+    },
+    {
+      "id": "materials_mat_bcc",
+      "asset_id": "materials_mat_bcc",
+      "label": "体心立方晶格",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_bcc.svg",
+      "keywords": [
+        "mat_bcc",
+        "体心立方晶格",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "606b240fe775d2f59075343a4e2145bbda6451b54ac3b50431ad488fa97b8d10"
+    },
+    {
+      "id": "materials_mat_fcc",
+      "asset_id": "materials_mat_fcc",
+      "label": "面心立方晶格",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_fcc.svg",
+      "keywords": [
+        "mat_fcc",
+        "面心立方晶格",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "ebb5fd01b70359ab6675b2ebd3dee8e3e2207f5f16b84079a539bd95c29f9dad"
+    },
+    {
+      "id": "materials_mat_hcp",
+      "asset_id": "materials_mat_hcp",
+      "label": "六方密排晶格",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_hcp.svg",
+      "keywords": [
+        "mat_hcp",
+        "六方密排晶格",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "f47a9356f10b302b73bcd52965f7fcaceec4dc4d61a5549d29f0019af3276b94"
+    },
+    {
+      "id": "materials_mat_grain_boundary",
+      "asset_id": "materials_mat_grain_boundary",
+      "label": "晶界",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_grain_boundary.svg",
+      "keywords": [
+        "mat_grain_boundary",
+        "晶界",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "35167dbccf93b4e4ea358de2b12feab06f504be930f21a59d0ee3881efe7df68"
+    },
+    {
+      "id": "materials_mat_twin_boundary",
+      "asset_id": "materials_mat_twin_boundary",
+      "label": "孪晶界",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_twin_boundary.svg",
+      "keywords": [
+        "mat_twin_boundary",
+        "孪晶界",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "409b9ce07077bb8803b2becab930659631e2cf3297b33acd98d2a96c7f569176"
+    },
+    {
+      "id": "materials_mat_precipitate",
+      "asset_id": "materials_mat_precipitate",
+      "label": "析出相",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_precipitate.svg",
+      "keywords": [
+        "mat_precipitate",
+        "析出相",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "b514f8ffd181b7a7b715ec8f814580831a8766feca6e35764766d47c1883977e"
+    },
+    {
+      "id": "materials_mat_inclusion",
+      "asset_id": "materials_mat_inclusion",
+      "label": "夹杂物",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_inclusion.svg",
+      "keywords": [
+        "mat_inclusion",
+        "夹杂物",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "382694a6207bd346d8afa2e8bd01703e35dadd50be312511cb159c36caa8ddbd"
+    },
+    {
+      "id": "materials_mat_crack_tip",
+      "asset_id": "materials_mat_crack_tip",
+      "label": "裂纹尖端",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_crack_tip.svg",
+      "keywords": [
+        "mat_crack_tip",
+        "裂纹尖端",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "4372775204c555d2699b191114b04e0465e1ae4d8cc3611193c842b408f7c47b"
+    },
+    {
+      "id": "materials_mat_fatigue",
+      "asset_id": "materials_mat_fatigue",
+      "label": "疲劳曲线",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_fatigue.svg",
+      "keywords": [
+        "mat_fatigue",
+        "疲劳曲线",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "c53a663f7784f3728fae6ab10f342c6e9408a7b416d6f78e8e1b9d58ffb80160"
+    },
+    {
+      "id": "materials_mat_creep",
+      "asset_id": "materials_mat_creep",
+      "label": "蠕变曲线",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_creep.svg",
+      "keywords": [
+        "mat_creep",
+        "蠕变曲线",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "6a3b275deeac0ac937eaf93fa209900c8b459f5057ffee7c9f012cad4a5b7f2f"
+    },
+    {
+      "id": "materials_mat_corrosion",
+      "asset_id": "materials_mat_corrosion",
+      "label": "腐蚀",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_corrosion.svg",
+      "keywords": [
+        "mat_corrosion",
+        "腐蚀",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "04a40d4505407659e429a6e8b5ac69d360b04d990c425f4941816bb55b663ea7"
+    },
+    {
+      "id": "materials_mat_oxide_layer",
+      "asset_id": "materials_mat_oxide_layer",
+      "label": "氧化层",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_oxide_layer.svg",
+      "keywords": [
+        "mat_oxide_layer",
+        "氧化层",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "731443b09c4a53e27c7d9360424b48e7bb9b4fe5a32ef2192af18614f8c385b1"
+    },
+    {
+      "id": "materials_mat_coating",
+      "asset_id": "materials_mat_coating",
+      "label": "涂层",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_coating.svg",
+      "keywords": [
+        "mat_coating",
+        "涂层",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "c117c8a474e42477ebea1a46793821779d4a435616fe1034f775b0b2c712f788"
+    },
+    {
+      "id": "materials_mat_thin_film",
+      "asset_id": "materials_mat_thin_film",
+      "label": "薄膜沉积",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_thin_film.svg",
+      "keywords": [
+        "mat_thin_film",
+        "薄膜沉积",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "61c2184fe09036482ac1a5ab54ef35e77636c95a99b5c10e32be149d76f84455"
+    },
+    {
+      "id": "materials_mat_sputtering",
+      "asset_id": "materials_mat_sputtering",
+      "label": "磁控溅射",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_sputtering.svg",
+      "keywords": [
+        "mat_sputtering",
+        "磁控溅射",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "b6e044966ecee9fe06b059183007cdca2a73cc110ce471121ef12d6331ffc6db"
+    },
+    {
+      "id": "materials_mat_cvd",
+      "asset_id": "materials_mat_cvd",
+      "label": "化学气相沉积",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_cvd.svg",
+      "keywords": [
+        "mat_cvd",
+        "化学气相沉积",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "9d8d7fdd268e42c2ac48380016ab9471a35b51f630a047ac726f20c085682949"
+    },
+    {
+      "id": "materials_mat_lithography",
+      "asset_id": "materials_mat_lithography",
+      "label": "光刻",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_lithography.svg",
+      "keywords": [
+        "mat_lithography",
+        "光刻",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "a8eb415f56cebf8bf6cdb7b00d99224a2581684cdd94cc8b1678263142d48ee8"
+    },
+    {
+      "id": "materials_mat_annealing",
+      "asset_id": "materials_mat_annealing",
+      "label": "退火",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_annealing.svg",
+      "keywords": [
+        "mat_annealing",
+        "退火",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "08a198fb1b0066d14e3e4ffe4a9894193bdf77349b51075a215055e05a3cd918"
+    },
+    {
+      "id": "materials_mat_quenching",
+      "asset_id": "materials_mat_quenching",
+      "label": "淬火",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_quenching.svg",
+      "keywords": [
+        "mat_quenching",
+        "淬火",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "f2bb63dab6623419c12f0ae7a28f81620297be35b44b15a3f8831751b5ac9499"
+    },
+    {
+      "id": "materials_mat_sintering",
+      "asset_id": "materials_mat_sintering",
+      "label": "烧结",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_sintering.svg",
+      "keywords": [
+        "mat_sintering",
+        "烧结",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "d49e7c52e2d0804055cfd5bf7b37b77fd6135c6b3de790b31177227be50800ae"
+    },
+    {
+      "id": "materials_mat_additive",
+      "asset_id": "materials_mat_additive",
+      "label": "增材制造",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_additive.svg",
+      "keywords": [
+        "mat_additive",
+        "增材制造",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "c53faf11e1a08fea98a365937a22fd232b033786578528485c9ca2b28d8e0548"
+    },
+    {
+      "id": "materials_mat_extrusion",
+      "asset_id": "materials_mat_extrusion",
+      "label": "挤出成型",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_extrusion.svg",
+      "keywords": [
+        "mat_extrusion",
+        "挤出成型",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "690aee7af1afc3bb306f68c7eb12a8c8de53c2bccfaec29e0e737e10652a3cea"
+    },
+    {
+      "id": "materials_mat_injection",
+      "asset_id": "materials_mat_injection",
+      "label": "注塑成型",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_injection.svg",
+      "keywords": [
+        "mat_injection",
+        "注塑成型",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "cc3056f8145f960b1e852172ea698357d51be9cdec3942b42f434a41170e2fa8"
+    },
+    {
+      "id": "materials_mat_rolling",
+      "asset_id": "materials_mat_rolling",
+      "label": "轧制",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_rolling.svg",
+      "keywords": [
+        "mat_rolling",
+        "轧制",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "461a7b02c27bd9e1df9946496d8a5a66e0b77feb4a39dc2d3fb3ea2a05520f0c"
+    },
+    {
+      "id": "materials_mat_forging",
+      "asset_id": "materials_mat_forging",
+      "label": "锻造",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_forging.svg",
+      "keywords": [
+        "mat_forging",
+        "锻造",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "53a045dfbea0f9f805cb4a4afaeb7147a6dc7d6bca7b85f644284ec704ee0d03"
+    },
+    {
+      "id": "materials_mat_weld",
+      "asset_id": "materials_mat_weld",
+      "label": "焊接",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_weld.svg",
+      "keywords": [
+        "mat_weld",
+        "焊接",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "ed5d0e4ddab568824f409e73f15a9844abe45f52b1d110793d4af2f717eab7b8"
+    },
+    {
+      "id": "materials_mat_laminate",
+      "asset_id": "materials_mat_laminate",
+      "label": "层合板",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_laminate.svg",
+      "keywords": [
+        "mat_laminate",
+        "层合板",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "5edb45150b2b1ccfc3ad9e314ab9d54cd9740ce18f3f4469f23a4f038d3b2ef0"
+    },
+    {
+      "id": "materials_mat_fiber_reinf",
+      "asset_id": "materials_mat_fiber_reinf",
+      "label": "纤维增强",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_fiber_reinf.svg",
+      "keywords": [
+        "mat_fiber_reinf",
+        "纤维增强",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "5e3849467485efd22644257d8c9dd822ab68e0ae92a6509fa8b6d3f8496c288a"
+    },
+    {
+      "id": "materials_mat_foam",
+      "asset_id": "materials_mat_foam",
+      "label": "泡沫材料",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_foam.svg",
+      "keywords": [
+        "mat_foam",
+        "泡沫材料",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "10378d40ba59b3843e3a4cdacb443cbd36770e0075962b062d5c94bf79da8c88"
+    },
+    {
+      "id": "materials_mat_aerogel",
+      "asset_id": "materials_mat_aerogel",
+      "label": "气凝胶",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_aerogel.svg",
+      "keywords": [
+        "mat_aerogel",
+        "气凝胶",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "320c7fdb48e8387156f3f0064a8ddca5d693701b43c9b975ac9041edf3f05644"
+    },
+    {
+      "id": "materials_mat_metamaterial",
+      "asset_id": "materials_mat_metamaterial",
+      "label": "超材料",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_metamaterial.svg",
+      "keywords": [
+        "mat_metamaterial",
+        "超材料",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "fdccf82e8e708ab432fb1823b23334fc04fcc4773dc3efe2726f23e5d5c6b035"
+    },
+    {
+      "id": "materials_mat_shape_memory",
+      "asset_id": "materials_mat_shape_memory",
+      "label": "形状记忆",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_shape_memory.svg",
+      "keywords": [
+        "mat_shape_memory",
+        "形状记忆",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "93cdb2f219d7cac1de4f02140f57982004ba97cefc5d3df8dbcb97ceb565f39c"
+    },
+    {
+      "id": "materials_mat_piezoelectric",
+      "asset_id": "materials_mat_piezoelectric",
+      "label": "压电材料",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_piezoelectric.svg",
+      "keywords": [
+        "mat_piezoelectric",
+        "压电材料",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "f8f23cb3d445f37d37573cf20879a02aff4a19a951af5310bd1f2fc0a1ab3a01"
+    },
+    {
+      "id": "materials_mat_semiconductor",
+      "asset_id": "materials_mat_semiconductor",
+      "label": "半导体",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_semiconductor.svg",
+      "keywords": [
+        "mat_semiconductor",
+        "半导体",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "680573d1476a920b4c00f8cb3c5ce79a5654f421525b214a5691d197a876eeaa"
+    },
+    {
+      "id": "materials_mat_superconductor",
+      "asset_id": "materials_mat_superconductor",
+      "label": "超导体",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_superconductor.svg",
+      "keywords": [
+        "mat_superconductor",
+        "超导体",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "04bd2e0d5125e4c2963cf9e36d626759f3272b75f36f0ba7b5822c5d81610a54"
+    },
+    {
+      "id": "materials_mat_magnetic",
+      "asset_id": "materials_mat_magnetic",
+      "label": "磁畴",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_magnetic.svg",
+      "keywords": [
+        "mat_magnetic",
+        "磁畴",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "c9219cdf6490deae614020884fe20e07a56388d99bca4483db30ab887b0bb4fe"
+    },
+    {
+      "id": "materials_mat_battery_material",
+      "asset_id": "materials_mat_battery_material",
+      "label": "电池材料",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_battery_material.svg",
+      "keywords": [
+        "mat_battery_material",
+        "电池材料",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "ea80e129bf614a2b6c4ba956d7dcccadd530c2e462929c664d2fc7d4d1de408b"
+    },
+    {
+      "id": "materials_mat_catalyst_support",
+      "asset_id": "materials_mat_catalyst_support",
+      "label": "催化剂载体",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_catalyst_support.svg",
+      "keywords": [
+        "mat_catalyst_support",
+        "催化剂载体",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "06cf76182b54fe65f0c4f2d2d0c1a409b0ad04ac4a579895b0d020b0e3196156"
+    },
+    {
+      "id": "materials_mat_sep_membrane",
+      "asset_id": "materials_mat_sep_membrane",
+      "label": "分离膜",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_sep_membrane.svg",
+      "keywords": [
+        "mat_sep_membrane",
+        "分离膜",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "7681b592ed83889a16e6997fd031f54a62aefdac419ddca174d45a73bfa22032"
+    },
+    {
+      "id": "materials_mat_hydrogel",
+      "asset_id": "materials_mat_hydrogel",
+      "label": "水凝胶",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_hydrogel.svg",
+      "keywords": [
+        "mat_hydrogel",
+        "水凝胶",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "d0b8cb7a52bce354e11883e4bbb845297fd63b30ab8fbafa6550104b6bda428b"
+    },
+    {
+      "id": "materials_mat_elastomer",
+      "asset_id": "materials_mat_elastomer",
+      "label": "弹性体",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_elastomer.svg",
+      "keywords": [
+        "mat_elastomer",
+        "弹性体",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "f8a6bb2abd831aaf9ecc2a1178aa523d81b88e8904a384ca16b5b32419686281"
+    },
+    {
+      "id": "materials_mat_thermoplastic",
+      "asset_id": "materials_mat_thermoplastic",
+      "label": "热塑性塑料",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_thermoplastic.svg",
+      "keywords": [
+        "mat_thermoplastic",
+        "热塑性塑料",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "cbae2148023129b6140248a0b1fcf9dbb1b2f22b2a400930d402c16c38cbf0df"
+    },
+    {
+      "id": "materials_mat_thermoset",
+      "asset_id": "materials_mat_thermoset",
+      "label": "热固性塑料",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_thermoset.svg",
+      "keywords": [
+        "mat_thermoset",
+        "热固性塑料",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "69637d02cc36c25cf99a2639a08926a7dbd5ef93c9362a1c7197c001f9cfbc1c"
+    },
+    {
+      "id": "materials_mat_copolymer",
+      "asset_id": "materials_mat_copolymer",
+      "label": "共聚物",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_copolymer.svg",
+      "keywords": [
+        "mat_copolymer",
+        "共聚物",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "1c87306d801c5368a64ae489e8acce3860f3d7852fa3775cf01ddfa15f494559"
+    },
+    {
+      "id": "materials_mat_crosslink",
+      "asset_id": "materials_mat_crosslink",
+      "label": "交联网络",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_crosslink.svg",
+      "keywords": [
+        "mat_crosslink",
+        "交联网络",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "53738bc2495d9d15eb957d9049f551df706409a5159350823312020ff9cf9d67"
+    },
+    {
+      "id": "materials_mat_crystallization",
+      "asset_id": "materials_mat_crystallization",
+      "label": "结晶",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_crystallization.svg",
+      "keywords": [
+        "mat_crystallization",
+        "结晶",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "7c4b0660be4f84901087e874e35bd4a5b02220205b57193d906715f7fdfc5b9a"
+    },
+    {
+      "id": "materials_mat_phase_sep",
+      "asset_id": "materials_mat_phase_sep",
+      "label": "相分离",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_phase_sep.svg",
+      "keywords": [
+        "mat_phase_sep",
+        "相分离",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "fc0f5f3f9132f59bb0f996da247200308dda57ec3fcd15e0b9282dceaf8e99f5"
+    },
+    {
+      "id": "materials_mat_band_structure",
+      "asset_id": "materials_mat_band_structure",
+      "label": "能带结构",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_band_structure.svg",
+      "keywords": [
+        "mat_band_structure",
+        "能带结构",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "5c8530e47965f1661f2b76f6c330b4ef772f7c5b926dd2a7ddaeac815dd25115"
+    },
+    {
+      "id": "materials_mat_stress_strain",
+      "asset_id": "materials_mat_stress_strain",
+      "label": "应力应变曲线",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_stress_strain.svg",
+      "keywords": [
+        "mat_stress_strain",
+        "应力应变曲线",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "1819a63735c4ce0832037f1c33bb929c0857ac82c2b74a69d6c6d5eaf18b6770"
+    },
+    {
+      "id": "materials_mat_nanoindentation",
+      "asset_id": "materials_mat_nanoindentation",
+      "label": "纳米压痕",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_nanoindentation.svg",
+      "keywords": [
+        "mat_nanoindentation",
+        "纳米压痕",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "fb57207343ec65b9a14df9fb31fac099137309393f3d2e797b8b73b3b7d5605f"
+    },
+    {
+      "id": "materials_mat_afm",
+      "asset_id": "materials_mat_afm",
+      "label": "原子力显微镜",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_afm.svg",
+      "keywords": [
+        "mat_afm",
+        "原子力显微镜",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "1cd77c100662a4ff2504f99fc7f119dfc781c50b6640fcb242ef2a2d5ac68331"
+    },
+    {
+      "id": "materials_mat_tem",
+      "asset_id": "materials_mat_tem",
+      "label": "透射电镜",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_tem.svg",
+      "keywords": [
+        "mat_tem",
+        "透射电镜",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "3a0e31fc07b3fac62f9c0b32e453a84b566dfbf0bd1fdc5af7a740b19a5b9a67"
+    },
+    {
+      "id": "materials_mat_sem",
+      "asset_id": "materials_mat_sem",
+      "label": "扫描电镜",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_sem.svg",
+      "keywords": [
+        "mat_sem",
+        "扫描电镜",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "2a0905e132cde4beef6e4b20e70b1ab829521346e9bd4ce85ddedd4941e542fa"
+    },
+    {
+      "id": "materials_mat_xrd",
+      "asset_id": "materials_mat_xrd",
+      "label": "X 射线衍射",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_xrd.svg",
+      "keywords": [
+        "mat_xrd",
+        "X 射线衍射",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "981a90f7a14d3f8088de31cf34584b148f561c84105eebe4144f7e0dda554488"
+    },
+    {
+      "id": "materials_mat_dsc",
+      "asset_id": "materials_mat_dsc",
+      "label": "差示扫描量热",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_dsc.svg",
+      "keywords": [
+        "mat_dsc",
+        "差示扫描量热",
+        "材料科学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
+      "modifications": "Original vector artwork.",
+      "sha256": "68fb93395c72c683cbe22c8e8c57a439bed8514c8f0b91e762df70c82dd78c74"
     },
     {
       "id": "materials_droplet",

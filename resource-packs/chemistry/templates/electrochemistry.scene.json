@@ -225,5 +225,6 @@
   "provenance": {
     "method": "original-discipline-template",
     "example": "chemistry"
-  }
+  },
+  "generation_contract": {}
 }

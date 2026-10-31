@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "engineering",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "工程技术",
   "domain": "engineering",
   "min_app_version": "3.1.0",
@@ -438,6 +438,1254 @@
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
       "modifications": "Original vector artwork.",
       "sha256": "8435c1474715ce9efaa697e34d48d414b108b1051e1da4346514dcb58883ac1e"
+    },
+    {
+      "id": "engineering_eng_centrifugal_pump",
+      "asset_id": "engineering_eng_centrifugal_pump",
+      "label": "离心泵",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_centrifugal_pump.svg",
+      "keywords": [
+        "eng_centrifugal_pump",
+        "离心泵",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "08a389eac93dd31b853574fac9a7114beb2f63e596c1e5fe41b5db4f579bac05"
+    },
+    {
+      "id": "engineering_eng_recip_pump",
+      "asset_id": "engineering_eng_recip_pump",
+      "label": "往复泵",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_recip_pump.svg",
+      "keywords": [
+        "eng_recip_pump",
+        "往复泵",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "6872bef86f810f55411073b245ae597802f71236e688efad8328f8f83d397592"
+    },
+    {
+      "id": "engineering_eng_boiler",
+      "asset_id": "engineering_eng_boiler",
+      "label": "锅炉",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_boiler.svg",
+      "keywords": [
+        "eng_boiler",
+        "锅炉",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "2d2b1e41fe32b2912a2d1c197378c054c50d7bde96ea91921c5fd7a873af9782"
+    },
+    {
+      "id": "engineering_eng_cooling_tower",
+      "asset_id": "engineering_eng_cooling_tower",
+      "label": "冷却塔",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_cooling_tower.svg",
+      "keywords": [
+        "eng_cooling_tower",
+        "冷却塔",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "297f18c713eb1b219422f7d095d01c700e31211fba37adf34a77cc52eccd97d8"
+    },
+    {
+      "id": "engineering_eng_distillation_tower",
+      "asset_id": "engineering_eng_distillation_tower",
+      "label": "精馏塔",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_distillation_tower.svg",
+      "keywords": [
+        "eng_distillation_tower",
+        "精馏塔",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "2d0ec938cef26c1c3be89adaf71b4e7e3ee2e7223107297faf871a59296b7d3c"
+    },
+    {
+      "id": "engineering_eng_reactor_vessel",
+      "asset_id": "engineering_eng_reactor_vessel",
+      "label": "反应釜",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_reactor_vessel.svg",
+      "keywords": [
+        "eng_reactor_vessel",
+        "反应釜",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "065e8e4f3d1bf1a6675f1a1bd4842179a8d523ab88e010d727a70d5f11682bec"
+    },
+    {
+      "id": "engineering_eng_pipeline",
+      "asset_id": "engineering_eng_pipeline",
+      "label": "管路系统",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_pipeline.svg",
+      "keywords": [
+        "eng_pipeline",
+        "管路系统",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "c9216dbc4dbd75a8f613c1382e01d038797cd0681f1d8c92953d725114016635"
+    },
+    {
+      "id": "engineering_eng_ball_bearing",
+      "asset_id": "engineering_eng_ball_bearing",
+      "label": "滚动轴承",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_ball_bearing.svg",
+      "keywords": [
+        "eng_ball_bearing",
+        "滚动轴承",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "a47cba06f92d06195951e4962dba1cb673d9aaabe29f7400a37e117380ca9a2a"
+    },
+    {
+      "id": "engineering_eng_shaft",
+      "asset_id": "engineering_eng_shaft",
+      "label": "传动轴",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_shaft.svg",
+      "keywords": [
+        "eng_shaft",
+        "传动轴",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "5d14ee3a9db410e37a30c67043318941f54b82d10b5e4122419b3abb8612b49d"
+    },
+    {
+      "id": "engineering_eng_coupling",
+      "asset_id": "engineering_eng_coupling",
+      "label": "联轴器",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_coupling.svg",
+      "keywords": [
+        "eng_coupling",
+        "联轴器",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "463f596301e2dfa817f27f77fe51be8dd37ded2642b8f0cde12d1c026616c919"
+    },
+    {
+      "id": "engineering_eng_belt_drive",
+      "asset_id": "engineering_eng_belt_drive",
+      "label": "带传动",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_belt_drive.svg",
+      "keywords": [
+        "eng_belt_drive",
+        "带传动",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "327e3d91575649d68ad852f4427348b08a79da4f544ddece2afe485be06428ca"
+    },
+    {
+      "id": "engineering_eng_chain_drive",
+      "asset_id": "engineering_eng_chain_drive",
+      "label": "链传动",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_chain_drive.svg",
+      "keywords": [
+        "eng_chain_drive",
+        "链传动",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "271c415e1b939c25d1b8dd79b0d3768a90d56b16ab0705c8c38d14f80bb96fa1"
+    },
+    {
+      "id": "engineering_eng_spur_gear",
+      "asset_id": "engineering_eng_spur_gear",
+      "label": "齿轮啮合",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_spur_gear.svg",
+      "keywords": [
+        "eng_spur_gear",
+        "齿轮啮合",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "e192e282d478bafd52b65516dcce47b19bb56c7e93b1ed327e5f63c2a50fe346"
+    },
+    {
+      "id": "engineering_eng_planetary_gear",
+      "asset_id": "engineering_eng_planetary_gear",
+      "label": "行星齿轮",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_planetary_gear.svg",
+      "keywords": [
+        "eng_planetary_gear",
+        "行星齿轮",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "b4e6b9be8d4e2ed584b2f44f3e919d46a90f5da8594958cdbeb04c4f29d85f5a"
+    },
+    {
+      "id": "engineering_eng_cam",
+      "asset_id": "engineering_eng_cam",
+      "label": "凸轮机构",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_cam.svg",
+      "keywords": [
+        "eng_cam",
+        "凸轮机构",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "703f314328fa65ed3fcd6418a1a9d3634bf9d88554c2d336d385127842e111a1"
+    },
+    {
+      "id": "engineering_eng_crank",
+      "asset_id": "engineering_eng_crank",
+      "label": "曲柄滑块",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_crank.svg",
+      "keywords": [
+        "eng_crank",
+        "曲柄滑块",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "c65da03dab6961dfca75bb41a432c1d54f88cac10b631d0d65f2b37dbc2991e7"
+    },
+    {
+      "id": "engineering_eng_linkage",
+      "asset_id": "engineering_eng_linkage",
+      "label": "四杆机构",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_linkage.svg",
+      "keywords": [
+        "eng_linkage",
+        "四杆机构",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "6c3e97729509fd6932a6e26b2d0b06b9109f46ac54cd63a0ee60e3890f79f0eb"
+    },
+    {
+      "id": "engineering_eng_hydraulic",
+      "asset_id": "engineering_eng_hydraulic",
+      "label": "液压缸",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_hydraulic.svg",
+      "keywords": [
+        "eng_hydraulic",
+        "液压缸",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "c65cbe4c723d4a5c74d7d85d0b2b1adf85addc8a38c07411986c223e62afb338"
+    },
+    {
+      "id": "engineering_eng_pneumatic",
+      "asset_id": "engineering_eng_pneumatic",
+      "label": "气动阀",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_pneumatic.svg",
+      "keywords": [
+        "eng_pneumatic",
+        "气动阀",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "cc56024c7ad1108395cc0c43ecf3ce6a62aa85df27aeb5a5c8b9568f2a99d309"
+    },
+    {
+      "id": "engineering_eng_pressure_gauge",
+      "asset_id": "engineering_eng_pressure_gauge",
+      "label": "压力表",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_pressure_gauge.svg",
+      "keywords": [
+        "eng_pressure_gauge",
+        "压力表",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "d4653c21a546665d1085e2fec42026658212bba9900ead91e4b6aa5786350db3"
+    },
+    {
+      "id": "engineering_eng_thermocouple",
+      "asset_id": "engineering_eng_thermocouple",
+      "label": "热电偶",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_thermocouple.svg",
+      "keywords": [
+        "eng_thermocouple",
+        "热电偶",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "f5323c8802e72f8cf78d3a7572d4795867042b5c0bf74bdc367461ab7ce9bad0"
+    },
+    {
+      "id": "engineering_eng_flow_meter",
+      "asset_id": "engineering_eng_flow_meter",
+      "label": "流量计",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_flow_meter.svg",
+      "keywords": [
+        "eng_flow_meter",
+        "流量计",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "0b773a7f4589c04ea85bb22872c54c9deec1b27d531b040075868f8b0b3b0a69"
+    },
+    {
+      "id": "engineering_eng_plc",
+      "asset_id": "engineering_eng_plc",
+      "label": "可编程控制器",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_plc.svg",
+      "keywords": [
+        "eng_plc",
+        "可编程控制器",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "253b769f3142cfa105900db5df1ec84f641bb074b7075c56ed3243fb5c05eb75"
+    },
+    {
+      "id": "engineering_eng_inverter",
+      "asset_id": "engineering_eng_inverter",
+      "label": "变频器",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_inverter.svg",
+      "keywords": [
+        "eng_inverter",
+        "变频器",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "6b6ad5d9ca3e3cede3623b247d6f7236cf21657d51c0fee432aff7c0a9929b50"
+    },
+    {
+      "id": "engineering_eng_hmi",
+      "asset_id": "engineering_eng_hmi",
+      "label": "人机界面",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_hmi.svg",
+      "keywords": [
+        "eng_hmi",
+        "人机界面",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "8ba582c49e39ff351633731d7416506d983e91b9ccbaf3be2f74512d0a20e67b"
+    },
+    {
+      "id": "engineering_eng_conveyor",
+      "asset_id": "engineering_eng_conveyor",
+      "label": "输送带",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_conveyor.svg",
+      "keywords": [
+        "eng_conveyor",
+        "输送带",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "5cfc73c7b22a4f89dd7975a59eb5afd2597cdfd4c9d2b3ab2ed666b92d511498"
+    },
+    {
+      "id": "engineering_eng_delta_robot",
+      "asset_id": "engineering_eng_delta_robot",
+      "label": "并联机器人",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_delta_robot.svg",
+      "keywords": [
+        "eng_delta_robot",
+        "并联机器人",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "7e489c41241f2f08ef4b6ac418941281e48bb01519c975e1a3fe8373e79dafb1"
+    },
+    {
+      "id": "engineering_eng_agv",
+      "asset_id": "engineering_eng_agv",
+      "label": "移动机器人",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_agv.svg",
+      "keywords": [
+        "eng_agv",
+        "移动机器人",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "7120e9164ee4d1391202d3db21859efd4d2f28aa3920875dacb1c3d10e076e61"
+    },
+    {
+      "id": "engineering_eng_drone",
+      "asset_id": "engineering_eng_drone",
+      "label": "巡检无人机",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_drone.svg",
+      "keywords": [
+        "eng_drone",
+        "巡检无人机",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "12569691469ec0d818c62f2b733af88daeb0ef23c37a6d8f9f38e91c182b6b19"
+    },
+    {
+      "id": "engineering_eng_3d_printer",
+      "asset_id": "engineering_eng_3d_printer",
+      "label": "3D 打印机",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_3d_printer.svg",
+      "keywords": [
+        "eng_3d_printer",
+        "3D 打印机",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "770e3b8d5d57dfa8527a7b6c4a9982b1ec40d5d7e3aa33d8077eaab66a393fbb"
+    },
+    {
+      "id": "engineering_eng_cnc",
+      "asset_id": "engineering_eng_cnc",
+      "label": "数控机床",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_cnc.svg",
+      "keywords": [
+        "eng_cnc",
+        "数控机床",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "f2678b9111f8de738494743fae90b912492b96516c3760d082eb7c4b7573bf5c"
+    },
+    {
+      "id": "engineering_eng_lathe",
+      "asset_id": "engineering_eng_lathe",
+      "label": "车床",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_lathe.svg",
+      "keywords": [
+        "eng_lathe",
+        "车床",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "ce2ea66a5d6c489e10f6f0ff9815b7bef8d68f507eeef9b17cc53e611769e95c"
+    },
+    {
+      "id": "engineering_eng_milling",
+      "asset_id": "engineering_eng_milling",
+      "label": "铣削加工",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_milling.svg",
+      "keywords": [
+        "eng_milling",
+        "铣削加工",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "2bc3c452a72141b62066c2e86ceb953be19789c355b0cfe9a146bdfc8f941869"
+    },
+    {
+      "id": "engineering_eng_welding_robot",
+      "asset_id": "engineering_eng_welding_robot",
+      "label": "焊接机器人",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_welding_robot.svg",
+      "keywords": [
+        "eng_welding_robot",
+        "焊接机器人",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "271993e35a912d7138cb1541b8366cc39e2c2b3cb01e73b9569a920ccca8b0fe"
+    },
+    {
+      "id": "engineering_eng_assembly_line",
+      "asset_id": "engineering_eng_assembly_line",
+      "label": "装配线",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_assembly_line.svg",
+      "keywords": [
+        "eng_assembly_line",
+        "装配线",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "cc0e0e2599bab5e3cc6f1bc457783624e7a603a9b4a8aa2e8f4970efb9d2edab"
+    },
+    {
+      "id": "engineering_eng_inspection",
+      "asset_id": "engineering_eng_inspection",
+      "label": "质量检测",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_inspection.svg",
+      "keywords": [
+        "eng_inspection",
+        "质量检测",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "2923d2b70ac24a102f2881ef11ca01ba4ee6a0e46ddc295277be4c78987abd21"
+    },
+    {
+      "id": "engineering_eng_laser_cutter",
+      "asset_id": "engineering_eng_laser_cutter",
+      "label": "激光切割",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_laser_cutter.svg",
+      "keywords": [
+        "eng_laser_cutter",
+        "激光切割",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "e693f124d4a4c2e86291e4bd35d5296f927b26a794b72e22ab1393accfafe03d"
+    },
+    {
+      "id": "engineering_eng_battery_pack",
+      "asset_id": "engineering_eng_battery_pack",
+      "label": "电池包",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_battery_pack.svg",
+      "keywords": [
+        "eng_battery_pack",
+        "电池包",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "71d9b8957f819fe067e22c8bc68313d1637b64ff075926e2d51a2d6fc80d35f2"
+    },
+    {
+      "id": "engineering_eng_motor_drive",
+      "asset_id": "engineering_eng_motor_drive",
+      "label": "电机驱动",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_motor_drive.svg",
+      "keywords": [
+        "eng_motor_drive",
+        "电机驱动",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "ba823873e709cda863c3220a67dd23268f7fb9e33929cecb80b4dba10535269e"
+    },
+    {
+      "id": "engineering_eng_dc_bus",
+      "asset_id": "engineering_eng_dc_bus",
+      "label": "直流母线",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_dc_bus.svg",
+      "keywords": [
+        "eng_dc_bus",
+        "直流母线",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "939c89f4bb1600c2cd376b60ae59f057a6fb1a41190ae7551b3672bbc1986093"
+    },
+    {
+      "id": "engineering_eng_grid",
+      "asset_id": "engineering_eng_grid",
+      "label": "输电网络",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_grid.svg",
+      "keywords": [
+        "eng_grid",
+        "输电网络",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "c478ae48c10557631eac1ecdb40a8d628f7a99fee2d86e03bc63712010e78a30"
+    },
+    {
+      "id": "engineering_eng_substation",
+      "asset_id": "engineering_eng_substation",
+      "label": "变电站",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_substation.svg",
+      "keywords": [
+        "eng_substation",
+        "变电站",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "7f662c49e295db83a5978e17f64bb120aa4f3597a96e7f0b5e3b32b3e10c1b95"
+    },
+    {
+      "id": "engineering_eng_wind_turbine",
+      "asset_id": "engineering_eng_wind_turbine",
+      "label": "风力机",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_wind_turbine.svg",
+      "keywords": [
+        "eng_wind_turbine",
+        "风力机",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "54dba3ef4328bd3e1866c1cbfbb72b0879368649164b1e483af6b453cb278f09"
+    },
+    {
+      "id": "engineering_eng_solar_panel",
+      "asset_id": "engineering_eng_solar_panel",
+      "label": "光伏组件",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_solar_panel.svg",
+      "keywords": [
+        "eng_solar_panel",
+        "光伏组件",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "d5ab0d42712409634e888285f03758e3904260bd2c270909e6e23a87464ca206"
+    },
+    {
+      "id": "engineering_eng_hvac",
+      "asset_id": "engineering_eng_hvac",
+      "label": "暖通空调",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_hvac.svg",
+      "keywords": [
+        "eng_hvac",
+        "暖通空调",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "00635dad097c9fcbea899bc2a91efe5916b5c403168d7442fe07d94b9af9dd0d"
+    },
+    {
+      "id": "engineering_eng_clean_room",
+      "asset_id": "engineering_eng_clean_room",
+      "label": "洁净室",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_clean_room.svg",
+      "keywords": [
+        "eng_clean_room",
+        "洁净室",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "e1976cd2702fc557435e75701a03f6e3e5d97a37701a11050193fe301f82fd09"
+    },
+    {
+      "id": "engineering_eng_flange",
+      "asset_id": "engineering_eng_flange",
+      "label": "法兰",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_flange.svg",
+      "keywords": [
+        "eng_flange",
+        "法兰",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "767cdab0a738b4914618bd1bc04126389f14328b8167cc193bbb23fa2d363515"
+    },
+    {
+      "id": "engineering_eng_gasket",
+      "asset_id": "engineering_eng_gasket",
+      "label": "密封垫",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_gasket.svg",
+      "keywords": [
+        "eng_gasket",
+        "密封垫",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "420b9d76b6ae755eccbbaefc76e850273291de79c4c28986f826bb16acd2e071"
+    },
+    {
+      "id": "engineering_eng_bolt",
+      "asset_id": "engineering_eng_bolt",
+      "label": "螺栓",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_bolt.svg",
+      "keywords": [
+        "eng_bolt",
+        "螺栓",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "b1585e2b3f5669ee307daa0393509c53338350bbefcbf263fcf5922b464bc4b1"
+    },
+    {
+      "id": "engineering_eng_scada",
+      "asset_id": "engineering_eng_scada",
+      "label": "SCADA 系统",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_scada.svg",
+      "keywords": [
+        "eng_scada",
+        "SCADA 系统",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "aa69a563c80b8fce3c79214ee6b1b0a9dae95c5b59101d3b942b4c6415c98114"
+    },
+    {
+      "id": "engineering_eng_pid",
+      "asset_id": "engineering_eng_pid",
+      "label": "PID 控制",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_pid.svg",
+      "keywords": [
+        "eng_pid",
+        "PID 控制",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "3b27560de70405a867df77f05855903013d5b8a47eadf4c88c5df50b54db5e65"
+    },
+    {
+      "id": "engineering_eng_heat_pump",
+      "asset_id": "engineering_eng_heat_pump",
+      "label": "热泵",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_heat_pump.svg",
+      "keywords": [
+        "eng_heat_pump",
+        "热泵",
+        "工程技术"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
+      "modifications": "Original vector artwork.",
+      "sha256": "f64ad0d4f3955249989a35afcb18582f6d8544694ad8c8b655fd22b62d41ea8b"
     },
     {
       "id": "engineering_server",

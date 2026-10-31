@@ -76,13 +76,13 @@ def test_install_uninstall_and_portable_scene_roundtrip(tmp_path):
 
 def test_install_is_deduplicated_and_offline_catalog_survives(tmp_path):
     m,d=installed(tmp_path);m.refresh();wait(m.status,lambda s:not s['refreshing'])
-    assert m.status()['packs'][0]['installed_version']=='1.0.0'
+    assert m.status()['packs'][0]['installed_version']==m.status()['packs'][0]['version']
     assert m.status()['error']
 
 def test_bad_digest_preserves_installed_pack(tmp_path):
     m,d=installed(tmp_path);m.catalog=lambda:{'schema_version':1,'packs':[{**m.validate_catalog(json.loads(m.builtin.read_text()))['packs'][0],'sha256':'0'*64,'version':'1.0.1','asset_name':'rylume-pack-chemistry-1.0.1.zip'}]}
     m.install('chemistry');s=wait(m.status,lambda s:s['packs'][0]['task']['state']=='failed')
-    assert s['packs'][0]['installed_version']=='1.0.0' and m.assets()
+    assert s['packs'][0]['installed_version']==m.status()['packs'][0]['installed_version'] and m.assets()
 
 @pytest.mark.parametrize('text',[
  '<svg viewBox="0 0 100 100"><script>alert(1)</script></svg>',
@@ -188,3 +188,15 @@ def test_all_discipline_templates_are_portable_and_have_distinct_mechanisms(tmp_
             assert '<image' not in render_scene(scene)
             geometries.append((tuple(o['asset_id'] for o in scene['objects']),tuple((r['source'],r['target'],r['label']) for r in scene['relations'])))
         assert len(set(geometries))==len(geometries)
+
+def test_expanded_non_biology_packs_have_distinct_editable_assets():
+    catalog=json.loads((ROOT/'assets/resource-catalog.json').read_text(encoding='utf8'))
+    rows={p['id']:p for p in catalog['packs']}
+    assert set(rows)=={'chemistry','physics','materials','engineering','earth-environment','computing-math','medicine'}
+    assert sum(p['asset_count'] for p in rows.values())==514
+    assert all(p['version']=='1.1.0' and p['template_count']==4 for p in rows.values())
+    for pid,p in rows.items():
+        manifest=json.loads((ROOT/'resource-packs'/pid/'manifest.json').read_text(encoding='utf8'))
+        assert len(manifest['assets'])==p['asset_count']
+        assert all(a['license']=='CC0 1.0' and a['asset_id'].startswith(pid.replace('-','_')+'_') for a in manifest['assets'])
+        assert len({a['sha256'] for a in manifest['assets']})==len(manifest['assets'])

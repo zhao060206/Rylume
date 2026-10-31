@@ -247,5 +247,6 @@
   "provenance": {
     "method": "original-discipline-template",
     "example": "medicine"
-  }
+  },
+  "generation_contract": {}
 }

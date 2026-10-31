@@ -25,9 +25,15 @@ def test_asset_catalog_completeness():
         assert c["name"]
         for item in c["items"]:
             assert item["type"] in OBJECT_TYPES, f"Type {item['type']} not in OBJECT_TYPES"
-            thumb = ROOT / item["thumbnail"].lstrip("/")
-            assert thumb.exists(), f"Thumbnail missing: {thumb}"
-            assert thumb.stat().st_size > 50
+            thumbnail=item["thumbnail"]
+            # Downloaded discipline packs expose an API URL whose file lives
+            # in the user's data directory; bundled assets use ui/library.
+            if thumbnail.startswith('/api/resources/file/'):
+                assert item.get('pack_id') and item.get('domain')
+            else:
+                thumb = ROOT / thumbnail.lstrip("/")
+                assert thumb.exists(), f"Thumbnail missing: {thumb}"
+                assert thumb.stat().st_size > 50
 
 def test_all_22_templates_instantiate_and_render():
     assert len(TEMPLATES) >= 22

@@ -9,10 +9,13 @@ from pathlib import Path
 import sys
 import zipfile
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 from scene_document import empty_scene,normalize_scene,audit_scene
 from resource_packs import safe_svg,reflow_pack_scene,SAFE_ATTRS
+from discipline_assets_extended import EXTRA_SYMBOLS,EXTRA_DEFINITIONS
 
 ROOT=Path(__file__).resolve().parents[1]
+PACK_VERSION='2.0.0'
 INK='#395B70';BLUE='#84B7C8';PALE='#DFEDF1';TEAL='#79A99A';GOLD='#D5AA6C';RED='#C67F76'
 def tag(name,**attrs):return '<'+name+' '+ ' '.join(k.replace('_','-')+'="'+html.escape(str(v),quote=True)+'"' for k,v in attrs.items())+'/>'
 def path(d,fill='none',stroke=INK,sw=2):return tag('path',d=d,fill=fill,stroke=stroke,stroke_width=sw,stroke_linecap='round',stroke_linejoin='round')
@@ -172,6 +175,11 @@ PACKS={
 'medicine':('医学','器官、诊疗与研究流程',['heart:心脏','lung:肺','brain:脑','kidney:肾脏','liver:肝脏','vessel:血管','capillary:毛细血管','syringe:注射器','tablet:药片','ultrasound:超声设备','mri:磁共振设备','ecg:心电图示意','patient:患者','hospital:医院','stethoscope:听诊器','biomarker:生物标志物','cohort:研究队列','iv:输液装置']),
 }
 
+SYMBOLS.update(EXTRA_SYMBOLS)
+for _pid,_definitions in EXTRA_DEFINITIONS.items():
+    _title,_description,_existing=PACKS[_pid]
+    PACKS[_pid]=(_title,_description,_existing+_definitions)
+
 # Objects: (asset, label, x, y); edges refer to object indices and state the mechanism.
 TEMPLATES={
 'chemistry':[
@@ -210,6 +218,55 @@ TEMPLATES={
  ('gas_exchange','肺部气体交换',[('lung','Alveolar compartment',25,23),('capillary','Pulmonary capillary',100,23),('heart','Systemic circulation',100,80),('vessel','Venous return',25,80)],[(0,1,'Oxygen diffusion'),(1,0,'Carbon dioxide diffusion'),(1,2,'Oxygenated blood'),(2,3,'Tissue exchange'),(3,1,'Return')]),
  ('imaging','影像采集与判读',[('patient','Participant',14,43),('mri','Imaging acquisition',69,43),('brain','Reconstructed image',128,10),('biomarker','Quantitative feature',128,80),('stethoscope','Clinical review',153,43)],[(0,1,'Acquire'),(1,2,'Reconstruct'),(2,3,'Segment and measure'),(2,4,'Interpret'),(3,4,'Support review')])],
 }
+
+TEMPLATES['chemistry'] += [
+ ('hplc_analysis','HPLC 分析流程',[('chem_microplate','样品制备',12,43),('chem_hplc','液相分离',68,43),('chem_spectrometer','光谱检测',124,10),('chromatogram','色谱峰',124,76),('chem_mass_spec','质谱确证',158,43)],[(0,1,'进样'),(1,2,'紫外检测'),(1,3,'保留时间'),(3,4,'结构确证')]),
+ ('nmr_structure','NMR 结构解析',[('chem_nmr_tube','样品管',12,43),('chem_spectrometer','核磁谱仪',68,43),('chem_orbital','化学位移',124,10),('chem_protein','结构模型',124,76),('chem_hbond','氢键约束',158,43)],[(0,1,'上机'),(1,2,'采集谱图'),(2,3,'归属'),(3,4,'约束验证')]),
+ ('fuel_cell_cycle','燃料电池能量循环',[('chem_gas_cylinder','燃料供给',10,20),('electrode','阳极',55,20),('chem_fuel_cell','膜电极',100,20),('electrode','阴极',145,20),('battery','负载',100,82),('chem_water','产物水',145,82)],[(0,1,'燃料'),(1,2,'氧化'),(2,3,'质子传导'),(3,4,'外电路'),(2,5,'生成水'),(4,1,'电子回流')]),
+ ('catalysis_cycle','催化反应循环',[('molecule','反应物',13,42),('chem_catalytic_surface','吸附位点',68,42),('chem_enzyme','过渡态',68,9),('chem_ligand','产物',124,42),('chem_catalyst','催化剂再生',124,83)],[(0,1,'吸附'),(1,2,'活化'),(2,3,'脱附'),(3,4,'产物释放'),(4,1,'再生')]),
+]
+
+TEMPLATES['physics'] += [
+ ('double_slit_interference','双缝干涉测量',[('laser','相干光源',10,43),('phys_double_slit','双缝',65,43),('phys_diffraction','干涉条纹',120,10),('screen','成像屏',120,76),('detector','探测器',158,43)],[(0,1,'入射'),(1,2,'衍射'),(2,3,'投影'),(3,4,'强度记录')]),
+ ('fiber_optic_link','光纤传输链路',[('laser','发射端',10,43),('phys_optical_fiber','光纤',65,43),('detector','接收端',120,43),('phys_waveguide','模式传输',65,10),('screen','信号分析',158,76)],[(0,1,'调制'),(1,2,'传输'),(1,3,'模式耦合'),(2,4,'解调')]),
+ ('transformer_grid','变压器并网',[('coil','发电机',10,43),('phys_transformer','升压变压器',65,43),('eng_grid','输电网',120,10),('resistor','负载',120,76),('detector','计量',158,43)],[(0,1,'交流输入'),(1,2,'升压'),(2,3,'配电'),(3,4,'负荷测量')]),
+ ('quantum_emission','量子点发光',[('phys_photon','激发光',10,43),('phys_quantum_dot','量子点',65,43),('phys_energy_levels','能级',120,10),('phys_wavefunction','发射态',120,76),('detector','光谱检测',158,43)],[(0,1,'激发'),(1,2,'带间跃迁'),(2,3,'辐射复合'),(3,4,'发射')]),
+]
+
+TEMPLATES['materials'] += [
+ ('battery_materials','电池材料与界面',[('mat_battery_material','正极颗粒',12,43),('mat_sep_membrane','隔膜',68,43),('mat_semiconductor','负极界面',124,10),('mat_band_structure','能带匹配',124,76),('mat_sem','截面表征',158,43)],[(0,1,'离子传输'),(1,2,'嵌入'),(0,3,'能级对齐'),(3,4,'界面分析')]),
+ ('semiconductor_fab','半导体制造流程',[('mat_semiconductor','晶圆',10,20),('mat_lithography','光刻',55,20),('mat_cvd','薄膜沉积',100,20),('mat_annealing','退火',145,20),('mat_sem','缺陷检测',100,82)],[(0,1,'图形化'),(1,2,'沉积'),(2,3,'激活'),(3,4,'检测'),(4,0,'反馈')]),
+ ('mechanical_failure','材料力学失效',[('tensile','拉伸试样',10,43),('mat_crack_tip','裂纹尖端',65,10),('fracture','断裂',65,76),('mat_stress_strain','应力应变',120,43),('mat_sem','断口形貌',158,43)],[(0,1,'应力集中'),(1,2,'裂纹扩展'),(0,3,'载荷记录'),(2,4,'断口分析')]),
+ ('polymer_hydrogel','聚合物水凝胶',[('mat_thermoplastic','单体',10,20),('mat_crosslink','交联',55,43),('mat_hydrogel','水凝胶网络',100,20),('mat_elastomer','溶胀',145,20),('mat_dsc','热分析',100,82)],[(0,1,'聚合'),(1,2,'成网'),(2,3,'吸水溶胀'),(2,4,'热性能')]),
+]
+
+TEMPLATES['engineering'] += [
+ ('pid_loop','PID 闭环控制',[('eng_thermocouple','温度传感器',12,43),('eng_pid','PID 控制器',66,43),('eng_motor_drive','执行器',120,10),('eng_heat_pump','被控对象',120,76),('eng_hmi','操作界面',158,43)],[(0,1,'测量'),(1,2,'控制量'),(2,3,'调节'),(3,0,'反馈'),(1,4,'状态监视')]),
+ ('scada_network','SCADA 数据链路',[('eng_flow_meter','现场仪表',10,43),('eng_plc','PLC',60,43),('eng_scada','SCADA',110,43),('eng_hmi','操作站',158,10),('server','历史数据库',158,76)],[(0,1,'采集'),(1,2,'上传'),(2,3,'监视'),(2,4,'归档')]),
+ ('heat_pump_cycle','热泵循环',[('heat_exchanger','蒸发器',10,20),('compressor','压缩机',60,20),('eng_cooling_tower','冷凝器',110,20),('valve','节流阀',158,20),('eng_hvac','建筑供热',110,82)],[(0,1,'低压蒸气'),(1,2,'压缩'),(2,3,'冷凝'),(3,0,'节流'),(2,4,'供热')]),
+ ('robotic_assembly','机器人装配单元',[('eng_conveyor','输送线',10,43),('eng_delta_robot','装配机器人',60,43),('eng_bolt','零件',110,10),('eng_inspection','视觉检测',110,76),('eng_agv','物料搬运',158,43)],[(0,1,'上料'),(1,2,'装配'),(2,3,'检测'),(3,4,'流转')]),
+]
+
+TEMPLATES['earth-environment'] += [
+ ('carbon_capture_chain','碳捕集与封存',[('cloud','排放源',10,20),('earth_carbon_capture','捕集装置',55,43),('pipe','输送管线',100,20),('aquifer','封存层',145,20),('station','监测站',100,82)],[(0,1,'烟气'),(1,2,'压缩输送'),(2,3,'注入'),(3,4,'泄漏监测')]),
+ ('remote_sensing_workflow','遥感监测流程',[('satellite','卫星平台',10,43),('earth_remote_sensing','传感器',60,43),('earth_gis','GIS 图层',110,43),('earth_land_cover','地表分类',158,10),('station','地面验证',158,76)],[(0,1,'观测'),(1,2,'反演'),(2,3,'制图'),(3,4,'地面核验')]),
+ ('water_treatment_chain','饮用水处理链',[('river','取水',10,43),('earth_water_treatment','处理厂',60,43),('reservoir','清水库',110,43),('pipe','配水管网',158,10),('station','水质监测',158,76)],[(0,1,'引水'),(1,2,'净化'),(2,3,'供水'),(3,4,'监测')]),
+ ('coastal_hazard','海岸灾害链',[('earth_cyclone','气旋',10,43),('earth_ocean_current','风暴潮',60,43),('earth_coast','海岸带',110,43),('earth_flood','淹没',158,10),('station','预警',158,76)],[(0,1,'风场驱动'),(1,2,'增水'),(2,3,'漫滩'),(3,4,'响应')]),
+]
+
+TEMPLATES['computing-math'] += [
+ ('cnn_pipeline','卷积网络流程',[('dataset','输入图像',10,43),('math_convolution','卷积',60,43),('math_fem','池化网格',110,10),('math_cnn','特征提取',110,76),('math_decision_tree','分类输出',158,43)],[(0,1,'局部感受野'),(1,2,'下采样'),(2,3,'特征图'),(3,4,'分类')]),
+ ('transformer_pipeline','Transformer 推理链',[('dataset','词元序列',10,43),('embedding','嵌入',60,43),('math_attention','自注意力',110,10),('math_transformer','编码层',110,76),('math_decision_tree','预测',158,43)],[(0,1,'分词'),(1,2,'上下文'),(2,3,'表示'),(3,4,'读出')]),
+ ('bayesian_workflow','贝叶斯推断',[('math_probability','先验',10,20),('math_bayes','似然',55,43),('math_probability','后验',100,20),('math_decision_tree','决策',145,43),('math_monte_carlo','后验采样',100,82)],[(0,1,'先验设定'),(1,2,'更新'),(2,3,'决策'),(2,4,'不确定性')]),
+ ('fem_workflow','有限元分析流程',[('mesh','几何模型',10,43),('math_fem','网格离散',60,43),('math_ode','求解器',110,10),('field','场变量',110,76),('math_filter','误差估计',158,43)],[(0,1,'离散'),(1,2,'组装'),(2,3,'求解'),(3,4,'校核')]),
+]
+
+TEMPLATES['medicine'] += [
+ ('diagnostic_pathway','诊断检查路径',[('patient','就诊',10,43),('med_lab_test','实验室检查',60,43),('med_ct','影像检查',110,10),('med_tumor','病理',110,76),('stethoscope','临床诊断',158,43)],[(0,1,'采样'),(1,2,'影像'),(2,3,'活检'),(3,4,'会诊')]),
+ ('vaccination_immunity','疫苗接种免疫',[('med_vaccine','疫苗',10,43),('med_antigen','抗原呈递',60,43),('med_immune','免疫细胞',110,10),('med_antibody','抗体',110,76),('med_lymph','免疫记忆',158,43)],[(0,1,'接种'),(1,2,'激活'),(2,3,'产生抗体'),(2,4,'记忆形成')]),
+ ('drug_delivery','药物递送与释放',[('med_capsule','药物载体',10,43),('med_artery','血液循环',60,43),('med_receptor','靶点结合',110,10),('med_nucleus','细胞内释放',110,76),('med_mitochondria','效应',158,43)],[(0,1,'给药'),(1,2,'靶向'),(2,3,'内化'),(3,4,'作用')]),
+ ('surgery_recovery','围手术期管理',[('med_ct','术前评估',10,43),('med_surgery','手术',60,43),('med_scalpel','器械操作',110,10),('med_defibrillator','生命监测',110,76),('patient','康复随访',158,43)],[(0,1,'规划'),(1,2,'操作'),(1,3,'监测'),(3,4,'随访')]),
+]
 
 def make_scene(pid,title,objects,edges,assets):
     scene=empty_scene(title,title);scene['layout']='network';scene['provenance']={'method':'original-discipline-template','example':pid}
@@ -272,17 +329,17 @@ def build(output):
             templates.append({'id':scene['id'],'title':name,'description':' · '.join(o[1] for o in objects),
                 'file':file,'thumbnail':thumb,'thumbnail_single':single,'canvas_mm':[180,120],'family':'network','includes':[o[1] for o in objects],
                 'keywords':[title,name],'object_count':len(objects),'relation_count':len(edges),'object_labels':[o[1] for o in objects]})
-        manifest={'schema_version':1,'id':pid,'version':'1.0.0','title':title,'domain':pid,'min_app_version':'3.1.0',
+        manifest={'schema_version':1,'id':pid,'version':PACK_VERSION,'title':title,'domain':pid,'min_app_version':'3.1.0',
             'license':'CC0-1.0','assets':list(assets.values()),'templates':templates}
         (folder/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
         (folder/'LICENSE.txt').write_text('Original artwork and template geometry: CC0 1.0 Universal.\nRylume contributors. https://creativecommons.org/publicdomain/zero/1.0/legalcode\nScientific mechanisms are schematic and should be checked against the intended research context.\n',encoding='utf8')
-        filename=f'rylume-pack-{pid}-1.0.0.zip';dest=output/filename
+        filename=f'rylume-pack-{pid}-{PACK_VERSION}.zip';dest=output/filename
         with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
             for p in sorted(folder.rglob('*')):
                 if p.is_file():
                     info=zipfile.ZipInfo(str(p.relative_to(folder)).replace('\\','/'),date_time=(2026,10,30,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o100644<<16
                     z.writestr(info,p.read_bytes())
-        catalog['packs'].append({'id':pid,'version':'1.0.0','title':title,'domain':pid,'min_app_version':'3.1.0',
+        catalog['packs'].append({'id':pid,'version':PACK_VERSION,'title':title,'domain':pid,'min_app_version':'3.1.0',
             'description':description,'asset_count':len(assets),'template_count':len(templates),'asset_name':filename,
             'sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'size':dest.stat().st_size})
     (output/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2),encoding='utf8')

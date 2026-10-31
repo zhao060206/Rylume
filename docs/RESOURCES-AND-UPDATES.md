@@ -20,7 +20,7 @@ GitHub 直连不可用时，软件会尝试内置的第三方备用线路。通�
 python tools/build_discipline_packs.py --output out/resource-packs
 ```
 
-修改资源后提升包的语义版本，重新生成目录。将 ZIP 和 `catalog.json` 上传到官方仓库 `resource-packs-v1` Release，并设为 **非 latest**。内置的 `assets/resource-catalog.json` 供离线展示目录，在线「刷新目录」读取发布资源目录。不要覆盖已发布版本的 ZIP；新增版本后再更新目录。
+修改资源后提升包的语义版本，重新生成目录。将新的 ZIP（文件名包含新版本）和 `catalog.json` 上传到官方仓库 `resource-packs-v1` Release，并设为 **非 latest**；旧版本 ZIP 保留，目录只指向最新包。内置的 `assets/resource-catalog.json` 供离线展示目录，在线「刷新目录」读取发布资源目录。
 
 资源包只允许 JSON、SVG、文本许可等数据，不包含执行脚本。原创资源与模板几何采用 CC0-1.0，原有第三方生物插画继续保留其各自许可。
 

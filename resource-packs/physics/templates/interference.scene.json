@@ -274,5 +274,6 @@
   "provenance": {
     "method": "original-discipline-template",
     "example": "physics"
-  }
+  },
+  "generation_contract": {}
 }

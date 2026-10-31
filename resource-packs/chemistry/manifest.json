@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "chemistry",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "化学",
   "domain": "chemistry",
   "min_app_version": "3.1.0",
@@ -438,6 +438,1206 @@
       "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
       "modifications": "Original vector artwork.",
       "sha256": "6f97253df539dc99a5cb085401c11a0488d1ff8d1ad607d4fca4c7a446dffb59"
+    },
+    {
+      "id": "chemistry_chem_volumetric_flask",
+      "asset_id": "chemistry_chem_volumetric_flask",
+      "label": "容量瓶",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_volumetric_flask.svg",
+      "keywords": [
+        "chem_volumetric_flask",
+        "容量瓶",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "2f66ac43df73d533fcc32ca29bc673bdacba6ace0efc57ec5e2f3a5565cbd331"
+    },
+    {
+      "id": "chemistry_chem_graduated_cylinder",
+      "asset_id": "chemistry_chem_graduated_cylinder",
+      "label": "量筒",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_graduated_cylinder.svg",
+      "keywords": [
+        "chem_graduated_cylinder",
+        "量筒",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "a40ccf1e16546d4a925824ade45734518780ed70d1f13d1eb22bf18575adbbf7"
+    },
+    {
+      "id": "chemistry_chem_pipette",
+      "asset_id": "chemistry_chem_pipette",
+      "label": "移液器",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_pipette.svg",
+      "keywords": [
+        "chem_pipette",
+        "移液器",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "38b2b80bbcfac8760252165cf450c8688449858aa852606eacd35ab7b75e296e"
+    },
+    {
+      "id": "chemistry_chem_microplate",
+      "asset_id": "chemistry_chem_microplate",
+      "label": "多孔板",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_microplate.svg",
+      "keywords": [
+        "chem_microplate",
+        "多孔板",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "48ca9eced5321d88ac5f5283bcb86e0e4002fb3d30918a540b0448f6eaeae986"
+    },
+    {
+      "id": "chemistry_chem_crucible",
+      "asset_id": "chemistry_chem_crucible",
+      "label": "坩埚",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_crucible.svg",
+      "keywords": [
+        "chem_crucible",
+        "坩埚",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "6cfc97c99abc24df2c20000c9a7a3d50c23c6c3f752d61f1751d46a9494b8656"
+    },
+    {
+      "id": "chemistry_chem_mortar",
+      "asset_id": "chemistry_chem_mortar",
+      "label": "研钵",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_mortar.svg",
+      "keywords": [
+        "chem_mortar",
+        "研钵",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "26a851289695e04e06c1a0b7a1ae1946852a08f6238b30727bfe5ace8af47fe9"
+    },
+    {
+      "id": "chemistry_chem_desiccator",
+      "asset_id": "chemistry_chem_desiccator",
+      "label": "干燥器",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_desiccator.svg",
+      "keywords": [
+        "chem_desiccator",
+        "干燥器",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "125b72ad798e605dde7d4ed8c5d3009cd7efd4d54405e23f2dcab7c66d5445df"
+    },
+    {
+      "id": "chemistry_chem_rotary_evap",
+      "asset_id": "chemistry_chem_rotary_evap",
+      "label": "旋转蒸发仪",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_rotary_evap.svg",
+      "keywords": [
+        "chem_rotary_evap",
+        "旋转蒸发仪",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "a97f05f3ad4d18db04722239a0376298000993139268545ee60096d02f22442c"
+    },
+    {
+      "id": "chemistry_chem_distillation",
+      "asset_id": "chemistry_chem_distillation",
+      "label": "蒸馏装置",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_distillation.svg",
+      "keywords": [
+        "chem_distillation",
+        "蒸馏装置",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "da9a6351d9f432af66fd99a4f25b9d51922c251dc1fa1a29321f90b490e1cab0"
+    },
+    {
+      "id": "chemistry_chem_reflux",
+      "asset_id": "chemistry_chem_reflux",
+      "label": "回流装置",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_reflux.svg",
+      "keywords": [
+        "chem_reflux",
+        "回流装置",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "bff4b1874aae5151fd344beee07188ecbbbdf5058a223e57229b5f35561173ee"
+    },
+    {
+      "id": "chemistry_chem_separatory",
+      "asset_id": "chemistry_chem_separatory",
+      "label": "分液漏斗",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_separatory.svg",
+      "keywords": [
+        "chem_separatory",
+        "分液漏斗",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "278efb5a41f5b8846bd7ac94f77435355b2c8451ad924b8f7d02ab8e30cc3ce1"
+    },
+    {
+      "id": "chemistry_chem_ph_meter",
+      "asset_id": "chemistry_chem_ph_meter",
+      "label": "pH 计",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_ph_meter.svg",
+      "keywords": [
+        "chem_ph_meter",
+        "pH 计",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "b8ddfbbaf5b97d7c49732185ebd8a0543ed1c2272505af7885ea0f9c5d7d598d"
+    },
+    {
+      "id": "chemistry_chem_spectrometer",
+      "asset_id": "chemistry_chem_spectrometer",
+      "label": "光谱仪",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_spectrometer.svg",
+      "keywords": [
+        "chem_spectrometer",
+        "光谱仪",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "ecbfcb8d90ac1707bba0c470e6d40e8308a659dc6e9eb48fd62514d68a2a5c3f"
+    },
+    {
+      "id": "chemistry_chem_nmr_tube",
+      "asset_id": "chemistry_chem_nmr_tube",
+      "label": "核磁管",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_nmr_tube.svg",
+      "keywords": [
+        "chem_nmr_tube",
+        "核磁管",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "8b8bb864cdd86dc2f2a377b0071313a06e3660959a871b19fb909fe4dd70c992"
+    },
+    {
+      "id": "chemistry_chem_mass_spec",
+      "asset_id": "chemistry_chem_mass_spec",
+      "label": "质谱仪",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_mass_spec.svg",
+      "keywords": [
+        "chem_mass_spec",
+        "质谱仪",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "781ff910e3b0289f4e2ecd15039973983b3c563a5c3d4acc0938d859bed95bfe"
+    },
+    {
+      "id": "chemistry_chem_hplc",
+      "asset_id": "chemistry_chem_hplc",
+      "label": "液相色谱仪",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_hplc.svg",
+      "keywords": [
+        "chem_hplc",
+        "液相色谱仪",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "269e6e4cdf79b5f9a872c825cf8e04773cd0ead85d84ed607ef8facd9d4311d5"
+    },
+    {
+      "id": "chemistry_chem_gc",
+      "asset_id": "chemistry_chem_gc",
+      "label": "气相色谱仪",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_gc.svg",
+      "keywords": [
+        "chem_gc",
+        "气相色谱仪",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "496f6e02a3a19f0ac58ac776c40d68dc6d38b96f10d4ccd525664a6287b3637d"
+    },
+    {
+      "id": "chemistry_chem_centrifuge",
+      "asset_id": "chemistry_chem_centrifuge",
+      "label": "离心机",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_centrifuge.svg",
+      "keywords": [
+        "chem_centrifuge",
+        "离心机",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "b72a41f1d07177cebd0a9808b56569df71321bdb4a09a8dde281d41b241d6c5e"
+    },
+    {
+      "id": "chemistry_chem_incubator",
+      "asset_id": "chemistry_chem_incubator",
+      "label": "恒温培养箱",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_incubator.svg",
+      "keywords": [
+        "chem_incubator",
+        "恒温培养箱",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "70ccede5d517193089f6691977fabfd449b8a89a94a56f21e55f4ac314ba1603"
+    },
+    {
+      "id": "chemistry_chem_autoclave",
+      "asset_id": "chemistry_chem_autoclave",
+      "label": "高压灭菌锅",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_autoclave.svg",
+      "keywords": [
+        "chem_autoclave",
+        "高压灭菌锅",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "cbc9cf3082a100018169c3c6468e63b37a4db847b504612efbd2106677101d55"
+    },
+    {
+      "id": "chemistry_chem_vacuum_pump",
+      "asset_id": "chemistry_chem_vacuum_pump",
+      "label": "真空泵",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_vacuum_pump.svg",
+      "keywords": [
+        "chem_vacuum_pump",
+        "真空泵",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "76d8f3e332752a395d8bdbe2ff63a8224543d610ca4aa372f7f9a8d3cdf150ae"
+    },
+    {
+      "id": "chemistry_chem_gas_cylinder",
+      "asset_id": "chemistry_chem_gas_cylinder",
+      "label": "气瓶",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_gas_cylinder.svg",
+      "keywords": [
+        "chem_gas_cylinder",
+        "气瓶",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "402d65d6954c45bc0f22cd1bd38bcc6ab8bf2c73e8bda869f7137a92db328d0e"
+    },
+    {
+      "id": "chemistry_chem_water",
+      "asset_id": "chemistry_chem_water",
+      "label": "水分子",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_water.svg",
+      "keywords": [
+        "chem_water",
+        "水分子",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "691f1f23b8091060b25092cd9e777ea0e6e138d7d487f9084aeb7e54ddc99131"
+    },
+    {
+      "id": "chemistry_chem_peptide",
+      "asset_id": "chemistry_chem_peptide",
+      "label": "肽链",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_peptide.svg",
+      "keywords": [
+        "chem_peptide",
+        "肽链",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "f969c177984d2e6e2c97465b91c97549d8c50504d0c978566cd0886a436fa67c"
+    },
+    {
+      "id": "chemistry_chem_protein",
+      "asset_id": "chemistry_chem_protein",
+      "label": "蛋白结构",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_protein.svg",
+      "keywords": [
+        "chem_protein",
+        "蛋白结构",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "21b303e279e75f2da8fca2fe2deafaebecc53cbf5c3d85ecf80b56e239a11be8"
+    },
+    {
+      "id": "chemistry_chem_enzyme",
+      "asset_id": "chemistry_chem_enzyme",
+      "label": "酶活性口袋",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_enzyme.svg",
+      "keywords": [
+        "chem_enzyme",
+        "酶活性口袋",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "c98668553373bfc89033de1ae28fd5dc4a317f40b1512f1924d24b165f2fe0c7"
+    },
+    {
+      "id": "chemistry_chem_ligand",
+      "asset_id": "chemistry_chem_ligand",
+      "label": "配体",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_ligand.svg",
+      "keywords": [
+        "chem_ligand",
+        "配体",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "e4d55288780064f0571416ff2583ba661ef70653b64b894fa8bcad9530b8202e"
+    },
+    {
+      "id": "chemistry_chem_micelle",
+      "asset_id": "chemistry_chem_micelle",
+      "label": "胶束",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_micelle.svg",
+      "keywords": [
+        "chem_micelle",
+        "胶束",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "1c20f9f889dd0de63a7b0b371272ac3e9f097ad60bb3966c3e742d0c46bed3e7"
+    },
+    {
+      "id": "chemistry_chem_liposome",
+      "asset_id": "chemistry_chem_liposome",
+      "label": "脂质体",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_liposome.svg",
+      "keywords": [
+        "chem_liposome",
+        "脂质体",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "5771ce2e77e73c990eed292b4155b089e50727a830a21a2c833b8379e785350b"
+    },
+    {
+      "id": "chemistry_chem_nanoparticle",
+      "asset_id": "chemistry_chem_nanoparticle",
+      "label": "纳米颗粒",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_nanoparticle.svg",
+      "keywords": [
+        "chem_nanoparticle",
+        "纳米颗粒",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "ab79a299e543323ed329d10016493b3a83cc84679ee6273582fb208b8983d2a5"
+    },
+    {
+      "id": "chemistry_chem_unit_cell",
+      "asset_id": "chemistry_chem_unit_cell",
+      "label": "晶胞",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_unit_cell.svg",
+      "keywords": [
+        "chem_unit_cell",
+        "晶胞",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "0963dc0416907519aeb44971b452f1ea92a69877e69a30545a978b3dec9a3db4"
+    },
+    {
+      "id": "chemistry_chem_hbond",
+      "asset_id": "chemistry_chem_hbond",
+      "label": "氢键",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_hbond.svg",
+      "keywords": [
+        "chem_hbond",
+        "氢键",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "b7838257195d243b38855a03dc8750dba2aea907182d166ca7bd98304f1a5d22"
+    },
+    {
+      "id": "chemistry_chem_chelate",
+      "asset_id": "chemistry_chem_chelate",
+      "label": "螯合物",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_chelate.svg",
+      "keywords": [
+        "chem_chelate",
+        "螯合物",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "2f1e68e3044dca239177d6bc27f2a5413ae4cced608f5efc02fbf10abe82e8c3"
+    },
+    {
+      "id": "chemistry_chem_alkene",
+      "asset_id": "chemistry_chem_alkene",
+      "label": "烯烃",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_alkene.svg",
+      "keywords": [
+        "chem_alkene",
+        "烯烃",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "941217c934551d643d1af447cd4a4a829e8e8fc90232aadf207b349d0f1116f3"
+    },
+    {
+      "id": "chemistry_chem_alkyne",
+      "asset_id": "chemistry_chem_alkyne",
+      "label": "炔烃",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_alkyne.svg",
+      "keywords": [
+        "chem_alkyne",
+        "炔烃",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "bb43a62b1a1dc435ccdb31740b6fab7fbf6f60ed47d77104542931aecee3c35c"
+    },
+    {
+      "id": "chemistry_chem_carbonyl",
+      "asset_id": "chemistry_chem_carbonyl",
+      "label": "羰基",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_carbonyl.svg",
+      "keywords": [
+        "chem_carbonyl",
+        "羰基",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "60bf180ea81a86b25e758674e4b540ff9783e7c6bf8fef5ef6261167c70eeb85"
+    },
+    {
+      "id": "chemistry_chem_amine",
+      "asset_id": "chemistry_chem_amine",
+      "label": "氨基",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_amine.svg",
+      "keywords": [
+        "chem_amine",
+        "氨基",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "5473933efff092b9300a8dbe8a8ce266f1e7bae8327ac0592aa53a15de1e30ce"
+    },
+    {
+      "id": "chemistry_chem_carboxyl",
+      "asset_id": "chemistry_chem_carboxyl",
+      "label": "羧基",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_carboxyl.svg",
+      "keywords": [
+        "chem_carboxyl",
+        "羧基",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "bc6d42282c0edf43a0240cad092fe25213efa8437dce3add0f922992502d8f35"
+    },
+    {
+      "id": "chemistry_chem_reaction_coordinate",
+      "asset_id": "chemistry_chem_reaction_coordinate",
+      "label": "反应坐标",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_reaction_coordinate.svg",
+      "keywords": [
+        "chem_reaction_coordinate",
+        "反应坐标",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "632a593fee515af94066018a5622864b362679bc2a986807e80dfa882f07b412"
+    },
+    {
+      "id": "chemistry_chem_activation_energy",
+      "asset_id": "chemistry_chem_activation_energy",
+      "label": "活化能",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_activation_energy.svg",
+      "keywords": [
+        "chem_activation_energy",
+        "活化能",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "f3c8c97aad5f219de2902817f93bdf210e91af44e13753a076041679738d3a66"
+    },
+    {
+      "id": "chemistry_chem_redox",
+      "asset_id": "chemistry_chem_redox",
+      "label": "氧化还原",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_redox.svg",
+      "keywords": [
+        "chem_redox",
+        "氧化还原",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "66534b504fbcc3b9ded54f80ff0f36bfc17bcae50cf28b8fc3953603919c6f97"
+    },
+    {
+      "id": "chemistry_chem_fuel_cell",
+      "asset_id": "chemistry_chem_fuel_cell",
+      "label": "燃料电池",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_fuel_cell.svg",
+      "keywords": [
+        "chem_fuel_cell",
+        "燃料电池",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "580be10758bfaafbc0a5968997ba8035d128b398bfdca7496e5eea5ac14e350e"
+    },
+    {
+      "id": "chemistry_chem_catalytic_surface",
+      "asset_id": "chemistry_chem_catalytic_surface",
+      "label": "催化表面",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_catalytic_surface.svg",
+      "keywords": [
+        "chem_catalytic_surface",
+        "催化表面",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "7df42ded6f7991700cd5c73aae527dd3d0f5812d4f6b87f01d605a3eb6b4e22c"
+    },
+    {
+      "id": "chemistry_chem_flow_reactor",
+      "asset_id": "chemistry_chem_flow_reactor",
+      "label": "连续流反应器",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_flow_reactor.svg",
+      "keywords": [
+        "chem_flow_reactor",
+        "连续流反应器",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "f169ada78940c897d2b178ea813c1e82da3da22a38e164912e8574d1b7134bc8"
+    },
+    {
+      "id": "chemistry_chem_calorimeter",
+      "asset_id": "chemistry_chem_calorimeter",
+      "label": "量热仪",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_calorimeter.svg",
+      "keywords": [
+        "chem_calorimeter",
+        "量热仪",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "714e2bc91e8ba8735596e16c9c0ce91076c5a35e4d26341f21ce861657463008"
+    },
+    {
+      "id": "chemistry_chem_periodic",
+      "asset_id": "chemistry_chem_periodic",
+      "label": "元素周期表",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_periodic.svg",
+      "keywords": [
+        "chem_periodic",
+        "元素周期表",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "771e7e2b1c3af20a81dd2d9c9ee1abd1ccda52ace8bab84ad4d478e241c5025c"
+    },
+    {
+      "id": "chemistry_chem_orbital",
+      "asset_id": "chemistry_chem_orbital",
+      "label": "电子轨道",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_orbital.svg",
+      "keywords": [
+        "chem_orbital",
+        "电子轨道",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "7a189b323243e0e338a43ac32f2c75fa060947c2cce57fbe9e40b1fba688463c"
+    },
+    {
+      "id": "chemistry_chem_crystal_polymorph",
+      "asset_id": "chemistry_chem_crystal_polymorph",
+      "label": "晶型转变",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_crystal_polymorph.svg",
+      "keywords": [
+        "chem_crystal_polymorph",
+        "晶型转变",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "835dd0beb01768643a38141ad5d11f06035c80619e615e9d153369323d7d2dd9"
+    },
+    {
+      "id": "chemistry_chem_solubility",
+      "asset_id": "chemistry_chem_solubility",
+      "label": "溶解度",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_solubility.svg",
+      "keywords": [
+        "chem_solubility",
+        "溶解度",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "5cf05b65e1d616deadb348ea4a8ecaf880aa71dc2e3f30834dd6854876667fb7"
+    },
+    {
+      "id": "chemistry_chem_titration_curve",
+      "asset_id": "chemistry_chem_titration_curve",
+      "label": "滴定曲线",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_titration_curve.svg",
+      "keywords": [
+        "chem_titration_curve",
+        "滴定曲线",
+        "化学"
+      ],
+      "author": "Rylume contributors",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author_url": "https://github.com/zhao060206/Rylume",
+      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
+      "modifications": "Original vector artwork.",
+      "sha256": "c9a044f130d1c7beb52ce6bd893ca9647ab4e91ab474078c3cbb16105c5330d2"
     },
     {
       "id": "chemistry_detector",

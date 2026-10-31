@@ -262,5 +262,6 @@
   "provenance": {
     "method": "original-discipline-template",
     "example": "materials"
-  }
+  },
+  "generation_contract": {}
 }
