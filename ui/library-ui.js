@@ -1,5 +1,5 @@
 import {showFloatingWindow} from './floating-windows.js';
-import {rankAssets,assetDisplayName,assetStyle,assetKey} from './asset-search.js';
+import {rankAssets,assetMatch,assetDisplayName,assetStyle,assetKey} from './asset-search.js';
 /** Thumbnail-first, offline scientific library and composition gallery. */
 export function filterAssets(assets,{domain='biology',category='',query=''}={}){
   return rankAssets(assets,{domain,category,query});
@@ -67,7 +67,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     const category=assetCategory || ($('asset-category')?.value || '');
     const assets=rankAssets(state.assets,{domain:assetDomain,category,query:q,style:$('asset-style')?.value||'',view:$('asset-view')?.value||'all',favorites,recent});
     list.replaceChildren();
-    if($('asset-count'))$('asset-count').textContent=`${state.assetDomains?.find(d=>d.id===assetDomain)?.title||'生物学'} / ${category||'全部素材'} · ${assets.length} 项`;
+    if($('asset-count'))$('asset-count').textContent=`${assetDomain==='all'?'全部学科':state.assetDomains?.find(d=>d.id===assetDomain)?.title||'生物学'} / ${category||'全部素材'} · ${assets.length} 项`;
     
     for(const item of assets.slice(0,assetLimit)){
       const card=el('div','asset-card');
@@ -80,7 +80,9 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
       b.setAttribute('aria-label','添加 '+assetDisplayName(item));
       b.append(img,el('span','asset-name',assetDisplayName(item)));
       const style=el('span','asset-style-tag',{native:'原生图元',flat:'简洁矢量',detailed:'精细插画'}[assetStyle(item)]);b.append(style);
-      b.title='点击添加到画布：'+item.label;
+      const approximate=q&&assetMatch(item,q).kind==='fuzzy';
+      if(approximate){card.classList.add('asset-approximate');b.append(el('span','asset-match-tag','近似匹配'));b.setAttribute('aria-description','近似匹配，请核对名称后添加。');}
+      b.title=(approximate?'近似匹配，请核对名称。':'')+'点击添加到画布：'+item.label;
       b.onclick=e=>{if(e.detail>1)return;insert(item);};
       card.draggable=true;
       card.ondragstart=e=>{
@@ -213,8 +215,8 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     state.colorways=data.colorways||[];
     state.references=data.references||[];
     state.assetDomains=data.asset_domains||[{id:'biology',label:'生物学',available:true,count:state.assets.length}];
-    if(!state.assetDomains.some(d=>d.id===assetDomain&&d.available))assetDomain='biology';
-    const domainSelect=$('asset-domain');if(domainSelect){domainSelect.replaceChildren();for(const d of state.assetDomains){const o=el('option','',(d.title||d.label)+(d.available?` (${d.count||0})`:' · 下载资源包'));o.value=d.id;domainSelect.append(o);}domainSelect.value=assetDomain;}
+    if(assetDomain!=='all'&&!state.assetDomains.some(d=>d.id===assetDomain&&d.available))assetDomain='biology';
+    const domainSelect=$('asset-domain');if(domainSelect){domainSelect.replaceChildren();const all=el('option','',`全部学科 (${state.assets.length})`);all.value='all';domainSelect.append(all);for(const d of state.assetDomains){const o=el('option','',(d.title||d.label)+(d.available?` (${d.count||0})`:' · 下载资源包'));o.value=d.id;domainSelect.append(o);}domainSelect.value=assetDomain;}
     const categorySelect=$('asset-category');
     if(categorySelect){
       categorySelect.replaceChildren(el('option','','全部分类'));
@@ -285,8 +287,10 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   $('template-detail-create')?.addEventListener('click',()=>{if(selectedTemplate)create(selectedTemplate,$('template-detail-size').value==='single'?[90,150]:null);});
   $('template-detail-apply')?.addEventListener('click',()=>{if(selectedTemplate){$('template-detail-dialog').close();preview(selectedTemplate);}});
 
-  $('asset-search')?.addEventListener('input', ()=>{assetLimit=60;renderAssets();});
-  $('asset-domain')?.addEventListener('change',e=>{if(!state.assetDomains.find(d=>d.id===e.target.value)?.available){requestResource(e.target.value);e.target.value=assetDomain;return;}assetDomain=e.target.value;assetCategory='';assetLimit=60;renderAssetChips();renderAssets();});
+  let searchTimer;const search=$('asset-search');
+  search?.addEventListener('input',event=>{if(event.isComposing)return;clearTimeout(searchTimer);searchTimer=setTimeout(()=>{assetLimit=60;renderAssets();},100);});
+  search?.addEventListener('compositionend',()=>{clearTimeout(searchTimer);assetLimit=60;renderAssets();});
+  $('asset-domain')?.addEventListener('change',e=>{if(e.target.value!=='all'&&!state.assetDomains.find(d=>d.id===e.target.value)?.available){requestResource(e.target.value);e.target.value=assetDomain;return;}assetDomain=e.target.value;assetCategory='';assetLimit=60;renderAssetChips();renderAssets();});
   $('asset-category')?.addEventListener('change', e=>{
     assetCategory=e.target.value;
     assetLimit=60;

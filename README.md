@@ -6,9 +6,15 @@
 
 ## 下载与启动
 
-在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-4.4.1-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
+在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-4.5.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
 
 也可以运行 `启动理象.cmd`。内置模板、素材和直接编辑可离线使用；AI 生成、批注修改和视觉审查需要在「设置 → 模型设置」中配置你自己的兼容服务。
+
+## 4.5：更多科研素材与模糊查找
+
+在「添加素材」中输入中文、英文、常用缩写或拼音别名即可查找。支持如“线粒题”“microsocpe”这样的近似词；多个词用空格分隔，例如 `线粒体 剖面`。准确结果排在前面，近似结果有明确标记；CD4、CD45、IL-6 等编号名称保持区分。学科、分类、收藏等筛选继续生效，「我的素材」使用相同的匹配规则。
+
+本轮新增 1,052 个素材，第三方矢量库增至 1,688 个（另有 32 个原生图元）。新增矢量素材保留原始 SVG、作者、许可、固定版本来源和摘要；导出继续附带署名。素材扩充与本机对照验证方法见 [素材与搜索验收](docs/ASSETS-AND-SEARCH-4.5.md)。
 
 ## 4.4：自己的素材，与统一的工作台
 

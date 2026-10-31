@@ -8,6 +8,8 @@ Optional discipline packs under `resource-packs/` contain original Rylume vector
 
 Curated Bioicons artwork has per-asset author, source URL, original digest, license and modification notes in `assets/bioicons/manifest.json` and `assets/bioicons/ATTRIBUTION.md`. Original SVG files are retained as `assets/bioicons/*.original.svg`; editable conversions are under `ui/library`. Licenses include CC BY 3.0, CC BY 4.0 and CC0 as specified per entry. Attribution must be retained where required; exported figures include credit sidecars.
 
+The 4.5 expansion uses the same individually licensed upstream Bioicons revision `d29e766ea7580b8063c4f47b29e872db40a4d979`, verified against GitHub's tree. The offline import tool uses CairoSVG 2.9.1 (LGPL-3.0-or-later) for visual validation during development; CairoSVG is not part of the desktop runtime. Per-file modification notes describe conversion checks, which do not certify scientific meaning.
+
 Third-party paper/reference images are deliberately excluded. Links in the reference catalog confer no license to redistribute the linked figures.
 
 ## MIT-licensed compatibility code

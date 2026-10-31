@@ -241,6 +241,8 @@ dialog.asset-library-dialog>.dialog-heading {flex-shrink:0}
 #asset-library-dialog #asset-list {flex:none;overflow:visible;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
 .toolbar .rail [data-tab=assets][aria-expanded=true] {background:var(--ui-tint);color:var(--ui-accent)}
 .toolbar .rail [data-tab=assets][aria-expanded=false] {background:transparent;color:var(--ui-secondary)}
+.asset-match-tag {font-size:10px;color:#886d3c;background:#f7f3e9;border-radius:3px;padding:1px 5px}
+.asset-search-hint {margin:6px 0!important;font-size:11px!important;line-height:1.6!important}
 .release-history {padding-bottom:16px}.release-entry {border-top:1px solid var(--ui-border);padding:18px 0 7px}
 .release-entry h3 {display:inline-block;font-size:15px;font-weight:550;color:var(--ui-ink);margin:0 14px 10px 0}
 .release-entry time {font-size:11px;color:var(--ui-muted)}

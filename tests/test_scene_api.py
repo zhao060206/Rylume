@@ -58,12 +58,14 @@ def test_catalog_disciplines_preserve_all_assets_and_category_provenance(studio)
     assert status==200
     domains={d['id']:d for d in catalog['asset_domains']}
     assert domains['biology']['available']
-    assert domains['biology']['count']==len(catalog['assets'])==668
+    assert domains['biology']['count']==sum(a['domain']=='biology' for a in catalog['assets'])>668
+    assert sum(d['count'] for d in domains.values())==len(catalog['assets'])
     assert any(a['type']=='cell' and a.get('state')=='plant_interphase' for a in catalog['assets'])
-    assert all(not domains[k]['available'] and domains[k]['count']==0 for k in ('materials','chemistry','engineering'))
-    assert all(a['domain']=='biology' and a['category_id'] for a in catalog['assets'])
+    assert not domains['materials']['available'] and domains['materials']['count']==0
+    assert all(domains[k]['available'] and domains[k]['count']>0 for k in ('chemistry','engineering','computing-math'))
+    assert all(a['domain'] in domains and a['category_id'] for a in catalog['assets'])
     artwork=[a for a in catalog['assets'] if a.get('asset_id')]
-    assert len({a['asset_id'] for a in artwork})==636
+    assert len({a['asset_id'] for a in artwork})==len(artwork)>1500
     equipment=[a for a in artwork if 'pipette' in a['asset_id'] or 'microscope' in a['asset_id']]
     assert equipment and all(a['category']=='实验器材与流程' for a in equipment)
 

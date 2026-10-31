@@ -2,3 +2,5 @@
 *.png binary
 *.ico binary
 *.svg text
+# Preserve upstream bytes: original SVG digests must survive Git checkout.
+assets/bioicons/*.original.svg binary

@@ -1,4 +1,5 @@
 import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
+import {assetMatch} from './asset-search.js';
 
 export const assetBusy = asset => ['queued','analyzing','tracing','verifying'].includes(asset?.state);
 export function candidateWarnings(candidate){
@@ -35,9 +36,9 @@ export function setupPersonalAssets({api,toast,library,state}){
  async function load(){try{assets=(await api('/api/personal-assets')).assets;if(!selected)selected=assets.find(a=>!a.archived)?.id||null;render();schedule();}catch(e){toast(e.message,true);}}
  function render(){
   const query=$('personal-search').value.trim().toLowerCase(),archive=$('personal-archived').checked;
-  const visible=assets.filter(a=>(archive||!a.archived)&&a.label.toLowerCase().includes(query));
+  const visible=assets.filter(a=>(archive||!a.archived)&&assetMatch(a,query).score>=0);
   const list=$('personal-items');list.replaceChildren();
-  for(const a of visible){const b=make('button','personal-item'+(a.id===selected?' active':''));b.type='button';b.setAttribute('aria-pressed',String(a.id===selected));const img=make('img');img.src=a.source_url;img.alt='';const copy=make('span');copy.append(make('strong','',a.label),make('small','',a.archived?'已收起':a.accepted_run?'已在素材库':states[a.state]||a.state));b.append(img,copy);b.onclick=()=>{selected=a.id;rendered='';render();};list.append(b);}
+  for(const a of visible){const b=make('button','personal-item'+(a.id===selected?' active':''));b.type='button';b.setAttribute('aria-pressed',String(a.id===selected));const img=make('img');img.src=a.source_url;img.alt='';const copy=make('span');copy.append(make('strong','',a.label),make('small','',a.archived?'已收起':a.accepted_run?'已在素材库':states[a.state]||a.state));if(query&&assetMatch(a,query).kind==='fuzzy')copy.append(make('small','asset-match-tag','近似匹配'));b.append(img,copy);b.onclick=()=>{selected=a.id;rendered='';render();};list.append(b);}
   if(!visible.length)list.append(make('p','muted small',query?'没有匹配的素材':'上传的素材会保存在这里。'));
   const a=assets.find(a=>a.id===selected);$('personal-empty').hidden=!!a;$('personal-content').hidden=!a;if(!a)return;
   const signature=JSON.stringify(a);if(signature===rendered)return;rendered=signature;
