@@ -14,6 +14,7 @@ import uuid
 from github_delivery import GitHubDelivery,DeliveryError,Cancelled,checked_zip,version_tuple,REPOSITORY,trusted_url
 from resource_packs import _write
 from product_identity import PRODUCT_VERSION
+from update_mirrors import MIRRORS,MirrorDelivery,verify_manifest
 
 class UpdateManager:
     def __init__(self,data_dir,install_dir=None,current_version=PRODUCT_VERSION,delivery=None,frozen=None,launcher=None):
@@ -21,6 +22,7 @@ class UpdateManager:
         self.install_dir=Path(install_dir or Path(sys.executable).parent).resolve()
         self.current=current_version;self.delivery=delivery or GitHubDelivery();self.lock=threading.RLock()
         self.frozen=bool(getattr(sys,'frozen',False)) if frozen is None else frozen
+        self.mirror_factory=MirrorDelivery
         self.launcher=launcher or subprocess.Popen;self.cancel_event=threading.Event();self.release=None;self.stage=None
         self.info={'state':'idle','current_version':self.current,'latest_version':None,'progress':0,'error':'','can_apply':False}
     def status(self):
@@ -37,16 +39,35 @@ class UpdateManager:
     def check(self):
         with self.lock:
             if self.info['state'] in ('checking','downloading','validating','ready','installing'):return self.status()
-            self._set(state='checking',error='')
+            self._set(state='checking',error='',message='',latest_version=None)
+            self.release=None
         def work():
             try:
+                manifest_url=f'https://github.com/{REPOSITORY}/releases/latest/download/update.json'
                 try:
-                    d=json.loads(self.delivery.read(f'https://github.com/{REPOSITORY}/releases/latest/download/update.json',limit=128*1024))
-                    if not isinstance(d,dict) or not d.get('tag_name') or not isinstance(d.get('assets'),list):raise DeliveryError('更新目录格式无效')
-                except Exception:d=json.loads(self.delivery.read(f'https://api.github.com/repos/{REPOSITORY}/releases/latest'))
+                    try:
+                        d=json.loads(self.delivery.read(manifest_url,limit=128*1024))
+                        if not isinstance(d,dict) or not d.get('tag_name') or not isinstance(d.get('assets'),list):raise DeliveryError('更新目录格式无效')
+                    except Exception:d=json.loads(self.delivery.read(f'https://api.github.com/repos/{REPOSITORY}/releases/latest'))
+                    source='GitHub 直连'
+                except Exception:
+                    d=None
+                    for index,prefix in enumerate(MIRRORS,1):
+                        self._set(message=f'GitHub 直连不可用，正在尝试备用线路 {index}/{len(MIRRORS)}')
+                        try:
+                            mirror=self.mirror_factory(prefix)
+                            raw=mirror.read(manifest_url,limit=128*1024)
+                            signature=mirror.read(manifest_url+'.sig',limit=1024)
+                            verify_manifest(raw,signature)
+                            d=json.loads(raw);source=f'备用线路 {index}（签名已验证）';break
+                        except Exception:continue
+                    if d is None:raise DeliveryError('GitHub 和备用线路均不可用，或备用线路的更新签名未通过验证；请稍后重试')
+                if not isinstance(d,dict) or not d.get('tag_name') or not isinstance(d.get('assets'),list):raise DeliveryError('更新目录格式无效')
                 version=d.get('tag_name','').removeprefix('v');new=version_tuple(version)>version_tuple(self.current)
                 if d.get('draft') or d.get('prerelease'):raise DeliveryError('此版本不是正式发行版')
-                if not new:self._set(state='up_to_date',latest_version=version);return
+                if not new:
+                    self.release=None
+                    self._set(state='up_to_date',latest_version=version,message='当前版本无需更新 · '+source);return
                 name=f'Rylume-{version}-Windows-x64.zip'
                 asset=next((a for a in d.get('assets',[]) if a.get('name')==name),None)
                 if not asset or not isinstance(asset.get('size'),int) or not 0<asset['size']<1024**3:raise DeliveryError('最新版缺少完整 Windows 安装包')
@@ -55,15 +76,17 @@ class UpdateManager:
                 digest=asset.get('digest','')
                 if not re.fullmatch('sha256:[0-9a-f]{64}',digest):
                     checksum=next((a for a in d['assets'] if a['name']=='SHA256SUMS.txt'),None)
-                    if not checksum:raise DeliveryError('此版本没有 SHA-256 校验文件')
+                    if not checksum or source!='GitHub 直连':raise DeliveryError('此版本没有可信的 SHA-256 校验值')
                     text=self.delivery.read(checksum['browser_download_url'],limit=16384).decode()
                     matches=[line.split()[0] for line in text.splitlines() if len(line.split())==2 and line.split()[1]==name]
                     if len(matches)!=1 or not re.fullmatch('[0-9a-f]{64}',matches[0]):raise DeliveryError('安装包校验记录无效')
                     digest='sha256:'+matches[0]
                 self.release={'version':version,'asset':asset,'sha256':digest[7:]}
                 self._set(state='available',latest_version=version,notes=str(d.get('body',''))[:8000],
-                    release_url=f'https://github.com/{REPOSITORY}/releases/tag/v{version}',total=asset['size'])
-            except Exception as exc:self._set(state='failed',error=str(exc) if isinstance(exc,DeliveryError) else '暂时无法检查 GitHub 更新，可以稍后重试')
+                    release_url=f'https://github.com/{REPOSITORY}/releases/tag/v{version}',total=asset['size'],message='更新信息来源：'+source)
+            except Exception as exc:
+                self.release=None
+                self._set(state='failed',latest_version=None,error=str(exc) if isinstance(exc,DeliveryError) else '暂时无法检查 GitHub 更新，可以稍后重试')
         threading.Thread(target=work,daemon=True,name='update-check').start();return self.status()
     def download(self):
         with self.lock:
@@ -74,8 +97,27 @@ class UpdateManager:
             stage=self.root/'staged'/uuid.uuid4().hex
             try:
                 release=self.release;asset=release['asset'];file=self.root/'downloads'/asset['name']
-                self.delivery.download(asset['browser_download_url'],file,release['sha256'],limit=1024**3,total=asset['size'],cancel=self.cancel_event,
-                    progress=lambda n,t:self._set(downloaded=n,total=t,progress=round(n/max(1,t)*85,1)))
+                def transfer(delivery):
+                    return delivery.download(asset['browser_download_url'],file,release['sha256'],limit=1024**3,total=asset['size'],cancel=self.cancel_event,
+                        progress=lambda n,t:self._set(downloaded=n,total=t,progress=round(n/max(1,t)*85,1)))
+                try:
+                    self._set(message='正在从 GitHub 直连下载')
+                    transfer(self.delivery)
+                except Cancelled:raise
+                except Exception as first:
+                    if self.cancel_event.is_set():raise Cancelled('更新下载已取消')
+                    if isinstance(first,DeliveryError) and ('SHA-256' in str(first) or '不完整' in str(first) or '过大' in str(first)):raise
+                    completed=False
+                    for index,prefix in enumerate(MIRRORS,1):
+                        self._set(message=f'GitHub 直连失败，正在尝试备用线路 {index}/{len(MIRRORS)}',downloaded=0,progress=0)
+                        try:
+                            transfer(self.mirror_factory(prefix));completed=True
+                            self._set(message=f'备用线路 {index} 下载完成，正在核验');break
+                        except Cancelled:raise
+                        except Exception as exc:
+                            if self.cancel_event.is_set():raise Cancelled('更新下载已取消')
+                            if isinstance(exc,DeliveryError) and ('SHA-256' in str(exc) or '不完整' in str(exc) or '过大' in str(exc)):raise
+                    if not completed:raise DeliveryError('GitHub 和备用线路均未能完成下载，请稍后重试')
                 self._set(state='validating',progress=88)
                 checked_zip(file,stage)
                 candidate=stage/'Rylume'

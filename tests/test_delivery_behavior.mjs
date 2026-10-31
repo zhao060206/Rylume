@@ -1,9 +1,14 @@
 import assert from 'node:assert/strict';
-import {byteSize,packAction,busyUpdate} from '../ui/delivery-ui.js';
+import {byteSize,packAction,busyUpdate,showUpdateNotice} from '../ui/delivery-ui.js';
 assert.equal(byteSize(2048),'2 KB');assert.equal(byteSize(1024*1024),'1.0 MB');
 assert.equal(packAction({compatible:true}),'install');assert.equal(packAction({compatible:false}),'upgrade');
 assert.equal(packAction({compatible:true,installed_version:'1.0.0'}),'use');
 assert.equal(packAction({compatible:true,installed_version:'1.0.0',update_available:true}),'update');
 assert.equal(packAction({compatible:true,task:{state:'downloading'}}),'cancel');
 assert.equal(busyUpdate('validating'),true);assert.equal(busyUpdate('ready'),false);
+assert.equal(showUpdateNotice({state:'available',latest_version:'4.3.0'},''),true);
+assert.equal(showUpdateNotice({state:'available',latest_version:'4.3.0'},'4.3.0'),false);
+assert.equal(showUpdateNotice({state:'available',latest_version:'4.4.0'},'4.3.0'),true);
+assert.equal(showUpdateNotice({state:'checking',latest_version:'4.3.0'},''),false);
+assert.equal(showUpdateNotice({state:'failed'},''),false);
 console.log('Delivery states, installed package actions, sizes and update safety checks passed');

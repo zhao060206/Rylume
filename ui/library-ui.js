@@ -51,7 +51,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
       a.href=item.source_url;a.target='_blank';a.rel='noreferrer';
       credits.append(a,el('p','small','导出时会自动附带图注来源说明。素材为纯矢量路径，可无损缩放、旋转与编辑。'));
     }
-    $('asset-dialog').showModal();
+    $('asset-dialog').show();
   }
 
   function renderAssetChips(){
@@ -128,7 +128,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
       $('template-preview').replaceChildren(sanitizedSvg(result.svg));
       $('template-check').textContent=`${result.scene.objects.length} 个对象，${result.scene.relations.length} 条关系 · ${result.audit.errors} 项错误，${result.audit.warnings} 项待核对`;
       if($('gallery-dialog').open)$('gallery-dialog').close();
-      $('template-preview-dialog').showModal();
+      $('template-preview-dialog').show();
     }catch(e){toast(e.message,true);}
   }
 
@@ -198,12 +198,12 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     if(options.length>1){variants.append(el('h3','','同类用途的其他起点'));for(const v of options){const b=el('button','button'+(v.id===t.id?' selected':''),v.title);b.onclick=()=>showTemplate(v);variants.append(b);}}
     $('template-detail-apply').hidden=!compatible(t);
     $('template-detail-create').textContent=t.library_group==='layout'?'用示例新建图版':'使用模板，开始编辑';
-    if(!$('template-detail-dialog').open)$('template-detail-dialog').showModal();
+    if(!$('template-detail-dialog').open)$('template-detail-dialog').show();
   }
 
   function openGallery(){
     renderTemplates();
-    $('gallery-dialog').showModal();
+    $('gallery-dialog').show();
   }
 
   function init(data){
@@ -342,7 +342,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     let zoom=$('reference-zoom');if(!zoom){zoom=el('button','button secondary','放大查看细节 / 适合窗口');zoom.id='reference-zoom';$('reference-detail-desc').after(zoom);}
     zoom.hidden=!ref.web_url;zoom.onclick=()=>wrap.classList.toggle('reference-zoomed');
     let source=$('reference-source-link');if(!source){source=el('a','source-link');source.id='reference-source-link';source.target='_blank';source.rel='noreferrer';$('reference-detail-desc').after(source);}source.textContent='打开论文原文与图注 ↗';source.href=ref.source_url;
-    $('reference-dialog').showModal();
+    $('reference-dialog').show();
   }
 
   function renderReferences(){

@@ -16,6 +16,7 @@ rapidocr-onnxruntime==1.2.3
 onnxruntime==1.27.0
 # HTTP capabilities present in the verified Windows bundle
 pyOpenSSL==26.2.0
+cryptography==48.0.1
 h2==4.3.0
 hpack==4.2.0
 hyperframe==6.1.0

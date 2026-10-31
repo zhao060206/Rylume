@@ -1,0 +1,13 @@
+/* Modeless library windows keep the figure available while browsing. */
+.workspace>.left-panel.floating-library{bottom:auto;height:min(680px,calc(100% - 55px));min-width:230px;min-height:100px;max-width:min(650px,100%);max-height:calc(100% - 55px);resize:both;overflow:auto;border:1px solid var(--line);border-radius:8px;box-shadow:0 10px 32px #24343e26;background:var(--panel)}
+.floating-library .panel-heading,.floating-library .dialog-heading{cursor:move;touch-action:none;user-select:none}
+.floating-library .floating-minimize{flex:none;font-size:19px;line-height:1}
+.workspace>.left-panel.is-minimized{height:64px!important;min-height:64px;resize:none;overflow:hidden}
+.left-panel.is-minimized .left-tab:not([hidden])>:not(.panel-heading){display:none!important}
+dialog.floating-library[open]{position:fixed;inset:auto;margin:0;top:12vh;left:20vw;max-width:calc(100vw - 12px);max-height:calc(100vh - 12px);min-width:230px;resize:both;z-index:30}
+dialog.floating-library.is-minimized{height:auto!important;min-height:0;resize:none;overflow:hidden;padding-bottom:6px}
+dialog.floating-library.is-minimized>:not(.dialog-heading){display:none!important}
+@media(max-width:640px){dialog.floating-library[open]{left:3vw;top:8vh;max-width:94vw}.workspace>.left-panel.floating-library{max-width:95%}}
+
+
+.floating-library .dialog-heading>:first-child,.floating-library .panel-heading>:first-child{flex:1;min-width:0}

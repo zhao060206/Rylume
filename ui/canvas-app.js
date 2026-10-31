@@ -1,3 +1,4 @@
+import {setupFloatingWindows} from './floating-windows.js';
 import {setupDocumentAssistant} from './document-assistant.js';
 import {setupOnboarding} from './onboarding.js';
 import {setupWorkspaceNavigation} from './workspace-navigation.js';
@@ -21,6 +22,7 @@ import {SceneEditor,sanitizedSvg} from './canvas-editor.js';
 const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,conflict:false,timer:null,reference:null,candidate:null,active:null};
 const ws=$('workspace');
+const floatingWindows=setupFloatingWindows();
 new MutationObserver(()=>syncPanelButtons(ws)).observe(ws,{attributes:true,attributeFilter:['class']});
 let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI,navigationUI,onboardingUI,documentsUI;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
@@ -95,13 +97,14 @@ function tab(name, toggle=false){
  if(name==='generate'&&composerUI){composerUI.open();return;}
  ws.dispatchEvent(new Event('workspace-panel-request'));
  if(name==='templates')libraryUI.renderTemplates();
- const collapse=toggle&&!ws.classList.contains('left-collapsed')&&document.querySelector(`[data-tab="${name}"]`)?.classList.contains('active');
+ const wasMinimized=document.querySelector('.left-panel')?.classList.contains('is-minimized');
+ const collapse=toggle&&!wasMinimized&&!ws.classList.contains('left-collapsed')&&document.querySelector(`[data-tab="${name}"]`)?.classList.contains('active');
  preserveCanvasView(editor,()=>{
   if(innerWidth<1440)ws.classList.add('properties-hidden');
   document.querySelectorAll('[data-tab]').forEach(n=>n.classList.toggle('active',n.dataset.tab===name));
   document.querySelectorAll('.left-tab').forEach(n=>n.hidden=n.id!==`panel-${name}`);
   ws.classList.toggle('left-collapsed',collapse);
- });syncPanelButtons(ws);
+ });floatingWindows.restorePanel();floatingWindows.constrainPanel();syncPanelButtons(ws);
 }
 function renderExamples(){const list=$('example-list');list.replaceChildren();(S.templates||[]).filter(t=>t.recommended&&t.library_group==='science').forEach(item=>{const b=el('button','example-card');const img=el('img','example-thumb');img.src=item.thumbnail;img.alt='';b.append(img);const text=el('span');text.append(el('span','example-name',item.title),el('span','example-description',item.usage));b.append(text);b.onclick=()=>libraryUI.showTemplate(item);list.append(b);});}
 function renderAssets(){libraryUI.renderAssets();}

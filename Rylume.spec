@@ -14,7 +14,7 @@ for folder in ('ui', 'assets'):
 binaries = []
 hiddenimports = ['svgelements', 'svgpathtools', 'framework', 'archetypes', 'archetypes_render', 'ring_render', 'literature', 'fitz', 'review', 'model_review', 'json_repair', 'rework', 'assist_guide', 'webview', 'clr', 'scene_document', 'scene_examples', 'scene_assets', 'scene_render', 'scene_planner', 'scene_service', 'scene_export', 'studio_storage', 'biology_glyphs', 'scientific_library', 'scene_templates', 'scene_storyboards', 'scene_flows', 'relation_visuals', 'annotation_service', 'annotation_planner']
 hiddenimports += ['template_library', 'document_workflows']
-hiddenimports += ['resource_packs','github_delivery','app_updates','desktop_delivery']
+hiddenimports += ['resource_packs','github_delivery','app_updates','desktop_delivery','update_mirrors']
 hiddenimports += ['figure_assets', 'figure_generation', 'figure_references', 'scientific_intent']
 hiddenimports += ['sketch_layout']
 hiddenimports += ['document_conversion', 'document_advisor', 'document_assistant', 'onboarding_state']
