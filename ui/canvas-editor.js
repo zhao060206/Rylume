@@ -99,14 +99,30 @@ export function nearestBoundary(o,point){
   choices.sort((a,b)=>{const p=boundaryPoint(o,a),q=boundaryPoint(o,b);return Math.hypot(p.x-point.x,p.y-point.y)-Math.hypot(q.x-point.x,q.y-point.y);});
   return choices[0];
 }
-export function connectionTarget(scene,point,zoom=1,exclude=null){
+// Screen-pixel tolerance gives the same feel at every view scale. Anchors stay
+// proportional in the document; helper points exist only in the editor overlay.
+export function connectionKeypoints(o){
+  const anchors=['n','e','s','w'].map(side=>({side,t:.5,kind:'midpoint'}));
+  if(o.type==='process'&&!['flow_decision','flow_terminator','flow_data','flow_document'].includes(o.state)||o.type==='image')
+    anchors.push({side:'n',t:0,kind:'corner'},{side:'n',t:1,kind:'corner'},{side:'s',t:1,kind:'corner'},{side:'s',t:0,kind:'corner'});
+  return anchors.map(({kind,...anchor})=>({anchor,kind,point:boundaryPoint(o,anchor)}));
+}
+export function connectionAnchor(o,point,zoom=1,free=false){
+  if(!free){
+    const tolerance=10/(PXMM*Math.max(.01,zoom));
+    const near=connectionKeypoints(o).map(k=>({...k,distance:Math.hypot(k.point.x-point.x,k.point.y-point.y)})).filter(k=>k.distance<=tolerance).sort((a,b)=>a.distance-b.distance)[0];
+    if(near)return {anchor:near.anchor,keypoint:near.kind};
+  }
+  return {anchor:nearestBoundary(o,point)};
+}
+export function connectionTarget(scene,point,zoom=1,exclude=null,free=false){
   const eligible=o=>o.id!==exclude&&o.visible!==false&&!o.locked&&o.role!=='context';
   const inside=hitObjects(scene,point).find(eligible);
-  if(inside)return {object:inside,anchor:nearestBoundary(inside,point)};
+  if(inside)return {object:inside,...connectionAnchor(inside,point,zoom,free)};
   const tolerance=10/(PXMM*zoom);
   const candidates=[...scene.objects].reverse().filter(eligible).map(object=>{
-    const anchor=nearestBoundary(object,point),p=boundaryPoint(object,anchor);
-    return {object,anchor,distance:Math.hypot(p.x-point.x,p.y-point.y)};
+    const picked=connectionAnchor(object,point,zoom,free),p=boundaryPoint(object,picked.anchor);
+    return {object,...picked,distance:Math.hypot(p.x-point.x,p.y-point.y)};
   }).filter(c=>c.distance<=tolerance).sort((a,b)=>a.distance-b.distance);
   return candidates[0]||null;
 }
@@ -313,6 +329,8 @@ export class SceneEditor {
     this.connectStart = null;
     this.connectAnchor = null;
     this.connectPreview = null;
+    this.connectHover = null;
+    this.connectionFree = false;
     if(tool==='connect'&&this.selected.size===1&&this.doc?.objects.some(o=>this.selected.has(o.id)&&!o.locked))this.connectStart=this.selectedIds[0];
     this.host.style.cursor = tool === 'pan' ? 'grab' : ['connect','text'].includes(tool) ? 'crosshair' : 'default';
     document.querySelectorAll('[data-tool]').forEach(b=>b.classList.toggle('active',b.dataset.tool===tool));
@@ -570,7 +588,6 @@ export class SceneEditor {
         group.append(node('rect',{x:g.label.x-width/2,y:g.label.y-2,width,height:2.7,fill:'#FFFFFF',rx:.3,'data-relation-label-for':r.id,cursor:'grab'}));
         group.append(node('text',{x:g.label.x,y:g.label.y,'text-anchor':'middle','font-size':7*25.4/72,'font-family':'Arial, Microsoft YaHei, sans-serif',fill:color,'data-relation-label-for':r.id,cursor:'grab'},label));
       }
-      if(r.uncertain)group.append(node('text',{x:g.label.x,y:g.label.y+3,'text-anchor':'middle','font-size':7*25.4/72,'font-family':'Arial, Microsoft YaHei, sans-serif',fill:'#A3783B'},'?'));
       edges.append(group);
     }
 
@@ -588,7 +605,7 @@ export class SceneEditor {
     const unit=1/(PXMM*this.zoom),handleSize=8*unit,lineWidth=unit;
     if(this.connectStart&&this.connectPreview){
       const a=this.doc.objects.find(o=>o.id===this.connectStart);
-      const target=connectionTarget(this.doc,this.connectPreview,this.zoom,this.connectStart),end=target?boundaryPoint(target.object,target.anchor):this.connectPreview;
+      const target=connectionTarget(this.doc,this.connectPreview,this.zoom,this.connectStart,this.connectionFree),end=target?boundaryPoint(target.object,target.anchor):this.connectPreview;
       const start=a?boundaryPoint(a,this.connectAnchor||nearestBoundary(a,end)):null;
       if(start)overlay.append(node('path',{d:`M ${start.x} ${start.y} L ${end.x} ${end.y}`,stroke:'#3d71c7','stroke-width':unit,'stroke-dasharray':`${4*unit} ${3*unit}`,fill:'none','pointer-events':'none'}));
     }
@@ -647,10 +664,12 @@ export class SceneEditor {
         }
       }
     }
-    const candidate=this.gesture?.candidate||(this.connectStart&&this.connectPreview?connectionTarget(this.doc,this.connectPreview,this.zoom,this.connectStart):null);
+    const candidate=this.gesture?.candidate||(this.connectStart&&this.connectPreview?connectionTarget(this.doc,this.connectPreview,this.zoom,this.connectStart,this.connectionFree):this.tool==='connect'&&this.connectHover?connectionTarget(this.doc,this.connectHover,this.zoom,null,this.connectionFree):null);
     if(candidate){const o=candidate.object,p=boundaryPoint(o,candidate.anchor);
       overlay.append(node('rect',{x:o.x,y:o.y,width:o.w,height:o.h,transform:`rotate(${o.rotation||0} ${o.x+o.w/2} ${o.y+o.h/2})`,fill:'none',stroke:'#287b68','stroke-width':2*unit,'stroke-dasharray':`${5*unit} ${3*unit}`,'data-snap-boundary':o.id,'pointer-events':'none'}));
+      if(!this.connectionFree)for(const k of connectionKeypoints(o))overlay.append(node('rect',{x:k.point.x-3*unit,y:k.point.y-3*unit,width:6*unit,height:6*unit,fill:'white',stroke:'#287b68','stroke-width':unit,'data-connection-keypoint':k.kind,'pointer-events':'none'}));
       overlay.append(node('circle',{cx:p.x,cy:p.y,r:5*unit,fill:'#287b68',stroke:'white','stroke-width':1.5*unit,'data-snap-point':o.id,'pointer-events':'none'}));
+      if(candidate.keypoint)overlay.append(node('text',{x:p.x+9*unit,y:p.y-9*unit,fill:'#216551','font-size':11*unit,'font-family':'Arial, Microsoft YaHei, sans-serif','paint-order':'stroke',stroke:'white','stroke-width':3*unit,'stroke-linejoin':'round','pointer-events':'none'},candidate.keypoint==='corner'?'端点 · Alt 自由连接':'中点 · Alt 自由连接'));
     }
     if(this.activeLabel&&this.selected.size===1&&this.selected.has(this.activeLabel.id)){
       const selector=this.activeLabel.kind==='relation'?'[data-relation-label-for]':'[data-label-for]';
@@ -668,6 +687,7 @@ export class SceneEditor {
     this.host.focus({ preventScroll: true });
     this.host.setPointerCapture(e.pointerId);
     const point = this.world(e);
+    this.connectionFree=!!e.altKey;
     const before = copy(this.doc);
 
     if (e.button === 1 || this.space || this.tool === 'pan') {
@@ -681,10 +701,19 @@ export class SceneEditor {
     const boundary=e.target.closest('[data-connect-boundary]');
     if(port||boundary){
       const id=port?.dataset.owner||boundary.dataset.connectBoundary,o=this.doc.objects.find(o=>o.id===id);
-      const anchor=port?{side:port.dataset.connectPort,t:.5}:nearestBoundary(o,point);
+      const anchor=port?{side:port.dataset.connectPort,t:.5}:connectionAnchor(o,point,this.zoom,e.altKey).anchor;
       this.connectStart=id;this.connectAnchor=anchor;this.connectPreview=point;this.gesture={kind:'connect',source:id,port:anchor.side,anchor,start:point};this.drawOverlay();return;
     }
-    if(e.altKey&&!e.target.closest('[data-handle],[data-edge-handle]')){
+    if(this.tool==='connect'){
+      const candidate=connectionTarget(this.doc,point,this.zoom,null,e.altKey);
+      if(candidate){
+        const id=candidate.object.id,anchor=candidate.anchor;
+        if(this.connectStart&&this.connectStart!==id)this.finishConnection(this.connectStart,id,'auto',anchor,this.connectAnchor);
+        else{this.connectStart=id;this.connectAnchor=anchor;this.connectPreview=point;this.gesture={kind:'connect',source:id,port:anchor.side,anchor,start:point};this.drawOverlay();}
+        return;
+      }
+    }
+    if(e.altKey&&this.tool!=='connect'&&!e.target.closest('[data-handle],[data-edge-handle]')){
       const hits=hitObjects(this.doc,point,true),current=hits.findIndex(o=>this.selected.has(o.id));
       if(hits.length){
         const picked=hits[Math.max(0,current)];this.setSelection([picked.id]);
@@ -718,10 +747,10 @@ export class SceneEditor {
       if (!o) return;
       if (this.tool === 'connect') {
         if (this.connectStart && this.connectStart !== id) {
-          this.finishConnection(this.connectStart,id,'auto',nearestBoundary(o,point),this.connectAnchor);
+          this.finishConnection(this.connectStart,id,'auto',connectionAnchor(o,point,this.zoom,e.altKey).anchor,this.connectAnchor);
         } else {
           this.connectStart = id;
-          this.connectAnchor=nearestBoundary(o,point);
+          this.connectAnchor=connectionAnchor(o,point,this.zoom,e.altKey).anchor;
           this.setSelection([id]);
           this.onStatus('请点击要连接的目标图元');
         }
@@ -755,7 +784,8 @@ export class SceneEditor {
 
   move(e) {
     if(!this.doc)return;
-    if(!this.gesture){if(this.tool==='connect'&&this.connectStart){this.connectPreview=this.world(e);this.drawOverlay();}return;}
+    this.connectionFree=!!e.altKey;
+    if(!this.gesture){if(this.tool==='connect'){this.connectHover=this.world(e);if(this.connectStart)this.connectPreview=this.connectHover;this.drawOverlay();}return;}
     const g = this.gesture;
     if (g.kind === 'pan') {
       this.offset = { x: g.offset.x + e.clientX - g.px, y: g.offset.y + e.clientY - g.py };
@@ -814,7 +844,7 @@ export class SceneEditor {
     } else if (g.kind === 'edge') {
       const r = this.doc.relations.find(r => r.id === g.id);
       if (r && g.handle === 'control') r.control = { x: point.x, y: point.y };
-      else if(r){g.candidate=connectionTarget(this.doc,point,this.zoom,r[g.handle==='start'?'target':'source']);g.preview=g.candidate?boundaryPoint(g.candidate.object,g.candidate.anchor):point;}
+      else if(r){g.candidate=connectionTarget(this.doc,point,this.zoom,r[g.handle==='start'?'target':'source'],e.altKey);g.preview=g.candidate?boundaryPoint(g.candidate.object,g.candidate.anchor):point;}
       this.draw();
     } else if (g.kind === 'marquee') {
       this.host.querySelector('#editor-marquee')?.remove();
@@ -835,7 +865,7 @@ export class SceneEditor {
     this.gesture = null;
     this.guides = [];
     if(g.kind==='connect'){
-      const target=connectionTarget(this.doc,this.world(e),this.zoom,g.source);
+      const target=connectionTarget(this.doc,this.world(e),this.zoom,g.source,e.altKey);
       if(target)this.finishConnection(g.source,target.object.id,g.port,target.anchor,g.anchor);
       else{this.setTool('connect');this.connectStart=g.source;this.connectAnchor=g.anchor;this.connectPreview=null;this.onStatus('点击另一个对象的边缘完成连线，或点“取消连线”。');this.host.dispatchEvent?.(new Event('editor-tool-change'));}
       return;
@@ -853,7 +883,7 @@ export class SceneEditor {
     if (g.kind === 'edge' && g.handle !== 'control') {
       const point = this.world(e);
       const relation=this.doc.relations.find(r=>r.id===g.id);
-      const target=connectionTarget(this.doc,point,this.zoom,relation?.[g.handle==='start'?'target':'source']);
+      const target=connectionTarget(this.doc,point,this.zoom,relation?.[g.handle==='start'?'target':'source'],e.altKey);
       if (target) {
         const r = this.doc.relations.find(r => r.id === g.id);
         if (r) {

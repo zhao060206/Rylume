@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const editor=await readFile(new URL('../ui/canvas-editor.js',import.meta.url),'utf8');
+const source=(await readFile(new URL('../ui/relation-ui.js',import.meta.url),'utf8')).replace("'./canvas-editor.js'",JSON.stringify('data:text/javascript;base64,'+Buffer.from(editor).toString('base64')));
+const {pendingRelationDefinitions,confirmedDefinition}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const r={id:'r',type:'activates',label:'old',uncertain:true,indirect:true,evidence:'Author evidence',source_anchor:{side:'n',t:0}};
+const scene={relations:[r,{id:'r2',type:'sequence',uncertain:false}]};
+assert.deepEqual(pendingRelationDefinitions(scene).map(r=>r.id),['r']);
+assert.deepEqual(pendingRelationDefinitions(scene,['r2']).map(r=>r.id),['r','r2']);
+assert.deepEqual(pendingRelationDefinitions(null),[]);
+const op=confirmedDefinition(r,'inhibits','  Author label  ');
+assert.deepEqual(op,{op:'update_relation',id:'r',changes:{type:'inhibits',label:'Author label',uncertain:false}});
+assert.equal(r.uncertain,true,'Preparing the explicit confirmation cannot change the document');
+assert.equal(r.indirect,true);assert.equal(r.evidence,'Author evidence');
+assert.throws(()=>confirmedDefinition(r,'made_up',''),/有效/);
+console.log('Explicit relation confirmation, reminder count, failed-save inclusion and preserved evidence passed');

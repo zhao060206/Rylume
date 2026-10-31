@@ -8,7 +8,7 @@ from scene_document import SceneError,normalize_scene,apply_operations,audit_sce
 from scene_render import render_scene,connection_geometry
 
 VISUAL={'x','y','w','h','rotation','font_size_pt','label_dx','label_dy','fill','stroke','stroke_pt'}
-EDGE= {'label','type','control','source_port','target_port','stroke','stroke_pt','indirect','uncertain'}
+EDGE= {'label','type','control','source_port','target_port','source_anchor','target_anchor','label_position','stroke','stroke_pt','indirect','uncertain'}
 
 def _text(value):
     if not isinstance(value,str):raise SceneError('批注文字格式无效')
@@ -42,6 +42,13 @@ def normalize_notes(scene,notes,draft=False):
         instruction=_text(raw.get('instruction',''))
         note=dict(id=nid,shape=shape,x=round(x,5),y=round(y,5),w=round(w,5),h=round(h,5),instruction=instruction,
                   original_instruction=_text(raw.get('original_instruction') or instruction))
+        policy=raw.get('image_generation','auto')
+        if policy not in ('auto','allow','deny'):raise SceneError('插画重绘选项无效')
+        if policy!='auto':note['image_generation']=policy
+        if 'image_target_ids' in raw:
+            approved=raw['image_target_ids'];known={o['id'] for o in scene['objects']}
+            if not isinstance(approved,list) or not approved or len(approved)>8 or any(not isinstance(i,str) or i not in known for i in approved):raise SceneError('重绘确认范围已失效，请重新确认对象')
+            note['image_target_ids']=list(dict.fromkeys(approved))
         if 'target_ids' in raw:
             ids=raw['target_ids'];known={o['id'] for o in scene['objects']}|{r['id'] for r in scene['relations']}
             if not isinstance(ids,list) or not ids or len(ids)>1000 or any(not isinstance(i,str) or i not in known for i in ids):
@@ -99,13 +106,13 @@ def _explicit(text,field):
     terms={'label':r'文字|标签|名称|改名|命名|label|rename|text','state':r'状态|磷酸化|二聚|修饰|state|phosph|dimer',
         'type':r'类型|图形|形状|素材|受体|激活|抑制|结合|转换|转运|关联|顺序|type|shape|receptor|activat|inhibit|bind|transport|convert',
         'compartment':r'区室|入核|进核|核内|核外|胞外|胞内|compartment|nuclear|cytoplasm',
-        'indirect':r'直接|间接|虚线|实线|indirect|direct|dash','uncertain':r'核对|确定|问号|uncertain|verify|confirm'}
+        'indirect':r'直接|间接|虚线|实线|indirect|direct|dash','uncertain':r'核对|确认|确定|定义|uncertain|verify|confirm'}
     term=terms.get(field,r'(?!)')
     if re.search(r'(?:不(?:要)?(?:改变|改动|修改)|保持).{0,6}(?:'+term+r').{0,3}(?:不变)?',text,re.I):return False
     if re.search(r'(?:'+term+r').{0,4}(?:不变|不改|unchanged)',text,re.I):return False
     return bool(re.search(term,text,re.I))
 
-def validate_candidate_operations(scene,notes,operations):
+def validate_candidate_operations(scene,notes,operations,*,image_authorizations=None):
     scene=normalize_scene(scene);notes=normalize_notes(scene,notes)
     if not isinstance(operations,list) or not operations or len(operations)>1000:raise SceneError('AI 没有提供可应用的修改')
     scopes={n['id']:set(resolve_note_targets(scene,n)) for n in notes};allowed=set().union(*scopes.values())
@@ -118,11 +125,17 @@ def validate_candidate_operations(scene,notes,operations):
         if op['op']=='update':
             if oid not in objects or oid not in allowed or objects[oid]['locked']:raise SceneError('AI 修改超出了批注范围或涉及锁定对象')
             permitted=VISUAL|{'label','state','type','compartment'}
+            if 'illustration' in changes:
+                from figure_assets import validate_illustration
+                asset=changes['illustration']
+                if not isinstance(asset,dict) or (image_authorizations or {}).get(oid)!=validate_illustration(asset.get('data')):
+                    raise SceneError('插画只能来自已授权的服务端局部重绘，不能直接使用模型图片补丁')
+                permitted=permitted|{'illustration'}
         else:
             if oid not in rels or oid not in allowed|connected:raise SceneError('AI 连线修改超出了批注范围')
             r=rels[oid]
             if objects[r['source']]['locked'] or objects[r['target']]['locked']:raise SceneError('不能修改连接到锁定对象的线')
-            permitted=EDGE if oid in allowed else {'control','source_port','target_port','stroke','stroke_pt'}
+            permitted=EDGE if oid in allowed else {'control','source_port','target_port','source_anchor','target_anchor','stroke','stroke_pt'}
         if changes.keys()-permitted:raise SceneError('候选试图改变稳定身份、关系端点或未授权属性')
         text='\n'.join(n['instruction'] for n in notes if oid in scopes[n['id']])
         for key in changes:
@@ -165,7 +178,11 @@ def _review(before,after,notes,operations,config):
     instruction=('你是独立科研图修改核验者。生成器的自报不是证据。逐条对比原始要求、原图、候选与实际属性变化。'
         '仅把有具体证据的完整满足项标verified，部分满足为unfulfilled，不能确认或缺证据为needs_review。不得把“有变化”当作满足要求。'
         '检查未授权科学改写及无关对象变化。返回JSON {checks:[{note_id,status:"verified|needs_review|unfulfilled",message,evidence}],unexpected_changes:false}。')
-    context=json.dumps({'notes':notes,'before':before,'after':after,'operations':operations},ensure_ascii=False);vision=config.get('vision') or {}
+    # Images travel through image inputs, never as megabytes of base64 text tokens.
+    readable_ops=copy.deepcopy(operations)
+    for op in readable_ops:
+        if 'illustration' in op.get('changes',{}):op['changes']['illustration']={'sha256':op['changes']['illustration']['sha256'],'kind':'generated-raster'}
+    context=json.dumps({'notes':notes,'before':scene_planner.scene_for_model(before),'after':scene_planner.scene_for_model(after),'operations':readable_ops},ensure_ascii=False);vision=config.get('vision') or {}
     if vision.get('base_url') and vision.get('model'):
         content=[{'type':'text','text':instruction+'\n框号对应批注顺序，第一张为原图，第二张为候选。\n'+context},
             {'type':'image_url','image_url':{'url':'data:image/png;base64,'+_image(before,notes)}},{'type':'image_url','image_url':{'url':'data:image/png;base64,'+_image(after,notes)}}]
@@ -174,7 +191,11 @@ def _review(before,after,notes,operations,config):
         response=pipeline._post_json(pipeline._endpoint(vision['base_url'],'/chat/completions'),pipeline._api_key(vision),req,timeout=90)
         data=pipeline._json_object(response['choices'][0]['message']['content']);mode='vision_and_structure'
     else:
-        data,_=scene_planner._request(config,[{'role':'system','content':instruction+'没有提供图像，只能核对结构和文字，不得声称视觉已验收。'},{'role':'user','content':context}],max_tokens=3000);mode='structure_and_text'
+        text_contract=('没有提供图像，只能核对结构和文字，不得声称视觉已验收。'
+            '若批注涉及插画重绘，这个通道的status仅评价可编辑的文字、结构、对象身份及未涉及区域是否保持；'
+            '像素细节将单独要求作者查看原图与候选后确认。结构和文字完全满足可标verified，但证据必须说明只核对了结构，不能声称看见了纹理。'
+            '结构或文字本身没有满足时仍必须标unfulfilled或needs_review，不可放行。')
+        data,_=scene_planner._request(config,[{'role':'system','content':instruction+text_contract},{'role':'user','content':context}],max_tokens=3000);mode='structure_and_text'
     if not isinstance(data,dict):raise SceneError('核验没有返回逐项结果')
     checks=[];changed=_changed(before,after)
     for note in notes:
@@ -189,7 +210,9 @@ def _review(before,after,notes,operations,config):
 def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max_rounds=3):
     original=normalize_scene(copy.deepcopy(scene));notes=normalize_notes(original,notes)
     if not notes:raise SceneError('请先添加批注')
+    import annotation_redraw as redraw
     max_rounds=max(1,min(3,int(max_rounds)));feedback=[];best=None;attempts=[];scopes={n['id']:resolve_note_targets(original,n) for n in notes}
+    image_cache={};failed_images={};image_capabilities=redraw.capabilities(original,notes,scopes)
     def cancel():
         if cancelled and cancelled():raise InterruptedError('已取消，原图保留')
     def progress(stage,message,round):
@@ -197,14 +220,48 @@ def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max
         if on_progress:on_progress(dict(stage=stage,message=message,round=round,max_rounds=max_rounds))
     for round_no in range(1,max_rounds+1):
         progress('planning',f'第 {round_no}/{max_rounds} 轮：根据 {len(notes)} 处批注修改',round_no)
-        system=('只返回科研图修改JSON {operations:[{op:"update|update_relation",id,changes:{...}}],summary:["具体变化"]}。'
+        system=('只返回科研图修改JSON {operations:[{op:"update|update_relation",id,changes:{...}}],redraw_requests:[{object_id,note_ids:["对应批注id"],instruction:"只针对这个对象的重绘要求"}],summary:["具体变化"]}。'
             '每轮均基于原图生成完整补丁。只改批注范围，其他对象的位置、样式、身份和科学含义不变。'
             '不得增加/删除对象，不改id、entity_id、source/target、requirements、原始描述和分组。'
             '只在明确要求时改label/state/type/compartment。视觉属性可改x/y/w/h/rotation/font_size_pt/label_dx/label_dy/fill/stroke/stroke_pt；'
-            '连线另可改control/source_port/target_port/indirect/uncertain。字号至少7pt。不能执行的要求如实说明，不可用无关的颜色或字号变化充数。')
+            '连线另可改control/source_port/target_port/source_anchor/target_anchor/label_position/indirect/uncertain。字号至少7pt。'
+            '文字、连线、颜色、尺寸和布局使用对象补丁；插画内部像素、纹理和形态重绘使用redraw_requests，最多8个独立主体，不生成整图。'
+            '不得在operations中自行填illustration、图片地址或base64。image_capabilities由用户原意决定，模型没有授权权限。'
+            'allow可提出重绘，ask需要用户确认后才能调用，deny禁止生图。无须重绘时redraw_requests为空。'
+            '用户明确要求重绘插画时必须提出对应主体的redraw_requests，不能用文字/颜色补丁冒充完成。'
+            '不能执行的要求如实说明，不可用无关的颜色或字号变化充数。')
         try:
-            data,_=scene_planner._request(config,[{'role':'system','content':system},{'role':'user','content':json.dumps({'scene':scene_planner.scene_for_model(original),'notes':notes,'scopes':scopes,'previous_feedback':feedback},ensure_ascii=False)}],max_tokens=5500)
-            cancel();operations=data.get('operations');proposed=validate_candidate_operations(original,notes,operations)
+            data,_=scene_planner._request(config,[{'role':'system','content':system},{'role':'user','content':json.dumps({'scene':scene_planner.scene_for_model(original),'notes':notes,'scopes':scopes,'image_capabilities':image_capabilities,'previous_feedback':feedback},ensure_ascii=False)}],max_tokens=5500)
+            cancel();operations=data.get('operations',[])
+            if not isinstance(operations,list) or any('illustration' in op.get('changes',{}) for op in operations if isinstance(op,dict)):
+                raise SceneError('规划器不得直接提交插画数据；请使用局部重绘请求')
+            proposed=validate_candidate_operations(original,notes,operations) if operations else copy.deepcopy(original)
+            requests,pending=redraw.resolve_requests(original,notes,scopes,data.get('redraw_requests',[]))
+            records=[];image_errors=[]
+            if pending:
+                return dict(base_revision=original['revision'],operations=operations,preview_scene=proposed,preview_svg=render_scene(proposed),
+                    summary=['此修改需要局部重绘插画，请先确认是否调用生图服务。'],checks=[dict(note_id=n['id'],status='needs_review',message='等待作者确认重绘范围或图像服务使用',evidence='本轮尚未调用生图服务') for n in notes],
+                    rounds=round_no,can_apply=False,pending_image_requests=pending,image_results=[],verification={'mode':'awaiting_image_permission','all_verified':False})
+            for request in requests:
+                identity=request['object_id'];cancel()
+                if identity not in image_cache and identity not in failed_images:
+                    if len(image_cache)+len(failed_images)>=redraw.MAX_OBJECTS:raise SceneError('本次批注已达到8个重绘对象上限，请分批处理')
+                    progress('redrawing','正在重绘插画：'+request['object_label']+'；文字和连线单独保留',round_no)
+                    try:
+                        asset=redraw.redraw_object(original,request,config,cancelled=cancelled or (lambda:False))
+                        image_cache[identity]=(asset,copy.deepcopy(request))
+                    except InterruptedError:raise
+                    except Exception as exc:failed_images[identity]=str(exc)[:600]
+                if identity in failed_images:
+                    image_errors.append(failed_images[identity]);continue
+                asset,first_request=image_cache[identity]
+                if first_request['instruction']!=request['instruction']:
+                    # Do not silently charge for repeated redraws during text-verification rounds.
+                    image_errors.append('该对象已完成一次重绘；新的画面要求需要作者另行确认后再提交，未重复调用生图。')
+                record={**first_request,'sha256':asset['sha256'],'source_sha256':next(o for o in original['objects'] if o['id']==identity).get('illustration',{}).get('sha256'),'model':(config.get('image') or {}).get('model','')}
+                records.append(record);operations.append(dict(op='update',id=identity,changes={'illustration':copy.deepcopy(asset)}))
+            auth=redraw.authorizations(original,notes,scopes,records)
+            proposed=validate_candidate_operations(original,notes,operations,image_authorizations=auth) if operations else copy.deepcopy(original)
             if not _changed(original,proposed):raise SceneError('候选没有实际改变图版')
         except InterruptedError:raise
         except Exception as exc:attempts.append(dict(round=round_no,stage='planning',error=str(exc)[:1000]));feedback=[{'error':str(exc)[:1000]}];continue
@@ -212,16 +269,28 @@ def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max
         try:checks,mode=_review(original,proposed,notes,operations,config);cancel()
         except InterruptedError:raise
         except Exception as exc:checks=[dict(note_id=n['id'],status='needs_review',message='独立核验未完成，不能确认已满足',evidence=str(exc)[:500]) for n in notes];mode='unavailable'
+        changed_images={r['object_id'] for r in records}
+        image_notes={nid for r in records for nid in r['note_ids']}
+        for check in checks:
+            note=next(n for n in notes if n['id']==check['note_id'])
+            cap=next(c for c in image_capabilities if c['note_id']==note['id'])
+            if cap['image_generation']=='allow' and cap['eligible_objects'] and not changed_images.intersection(scopes[note['id']]):
+                check.update(status='unfulfilled',message='批注要求重绘，但没有得到有效的新插画；原图保留',evidence='没有对应的已完成生图记录')
+            if image_errors and any(r['object_id'] in scopes[note['id']] for r in requests):
+                check.update(status='unfulfilled',message='插画重绘未完整满足要求',evidence='；'.join(dict.fromkeys(image_errors)))
+            elif note['id'] in image_notes and mode=='structure_and_text' and check['status']=='verified':
+                check.update(status='needs_review',reason_code='image_requires_visual_review',message='插画已重绘；本轮仅核对了结构与文字，请对照画面确认内部细节',evidence='生图返回与原图不同；未配置视觉核验模型，不能声称像素内容已自动验收')
         score=sum(c['status']=='verified' for c in checks);summary=data.get('summary') or ['请对比图版与逐条核验结果']
         if isinstance(summary,str):summary=[summary]
         result=dict(base_revision=original['revision'],operations=operations,preview_scene=proposed,preview_svg=render_scene(proposed),summary=[str(v)[:1000] for v in summary[:30]],
             checks=checks,rounds=round_no,can_apply=score==len(notes),verification=dict(mode=mode,all_verified=score==len(notes),verified=score,total=len(notes),scope_checked=True,attempts=copy.deepcopy(attempts)))
+        result.update(image_results=records,image_error='；'.join(dict.fromkeys(image_errors)),manual_visual_review_allowed=bool(records) and not image_errors and all(c['status']=='verified' or c.get('reason_code')=='image_requires_visual_review' for c in checks))
         if best is None or score>=best[0]:best=(score,result)
-        if score==len(notes):break
+        if score==len(notes) or result['manual_visual_review_allowed'] or image_errors:break
         feedback=checks
     cancel()
     if best:
         result=best[1];result['rounds']=round_no;result['verification']['attempts']=attempts;return result
     return dict(base_revision=original['revision'],operations=[],preview_scene=original,preview_svg=render_scene(original),summary=['没有获得可安全应用的候选，原图保留。'],
         checks=[dict(note_id=n['id'],status='unfulfilled',message='未得到符合范围和结构约束的修改',evidence=attempts[-1]['error'] if attempts else '') for n in notes],rounds=round_no,can_apply=False,
-        verification=dict(mode='unavailable',all_verified=False,attempts=attempts))
+        image_results=[],image_error='；'.join(dict.fromkeys(failed_images.values())),verification=dict(mode='unavailable',all_verified=False,attempts=attempts))

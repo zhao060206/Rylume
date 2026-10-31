@@ -18,6 +18,7 @@ hiddenimports += ['resource_packs','github_delivery','app_updates','desktop_deli
 hiddenimports += ['figure_assets', 'figure_generation', 'figure_references', 'scientific_intent']
 hiddenimports += ['sketch_layout']
 hiddenimports += ['document_conversion', 'document_advisor', 'document_assistant', 'onboarding_state']
+hiddenimports += ['annotation_redraw']
 # MarkItDown detects local files with Magika's ONNX data. PDFMiner requires CMaps.
 # Keep optional online/audio converters inactive; legacy Office uses local LibreOffice.
 for package in ('markitdown', 'magika', 'pdfminer', 'mammoth', 'markdownify', 'openpyxl', 'docx', 'pptx'):

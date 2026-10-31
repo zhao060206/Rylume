@@ -139,7 +139,7 @@ function renderProperties(){
   input(grid,'线上文字',r.label,'text',v=>change({label:v}));parent.append(el('p','property-description','拖动两端圆点，可连接对象边缘任意位置；中间圆点调整弯曲。线上文字可以单独拖动或双击改字。'));
   const meaning=section(parent,'作用方式与核对');
   input(meaning,'作用方式',String(!!r.indirect),'select',v=>change({indirect:v==='true'}),[['false','直接 · 实线'],['true','间接 · 虚线']]);
-  input(meaning,'含义状态',String(!!r.uncertain),'select',v=>change({uncertain:v==='true'}),[['true','待核对 · 问号'],['false','已核对']]);
+  input(meaning,'含义状态',String(!!r.uncertain),'select',v=>change({uncertain:v==='true'}),[['true','待作者核对'],['false','已核对并保存定义']]);
   const extra=section(advanced('更多连线设置'),'端点');
   for(const[key,label]of [['source_port','从哪里连出'],['target_port','连接到哪里']]){
     const anchorKey=key.replace('_port','_anchor'),a=r[anchorKey];
@@ -219,7 +219,7 @@ const editLabel=el('span','tool-caption','添加文字');$('add-text').append(ed
 window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(/^[A-Za-z0-9_-]+$/.test(id)&&id!==S.id)openJob(id);});
 workspaceUI=setupWorkspace({state:S,editor,api,toast,flush,follow,tab,openJob,renderAudit,renderHistory,renderReview:()=>reviewUI?.render()});
 workbenchUI=setupWorkbench({editor,workspace:ws});
-relationsUI=setupRelations(editor);
+relationsUI=setupRelations(editor,{flush,getDocumentId:()=>S.id});
 annotationUI=setupAnnotations({state:S,editor,api,flush,toast,workspace:ws,canSubmit:()=>documentUI.checkModels('vector'),onApplied:async data=>{
   if(data.scene?.id!==S.id)return;
   const before=clone(editor.scene);

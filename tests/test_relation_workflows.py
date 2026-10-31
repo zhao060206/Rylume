@@ -36,7 +36,7 @@ def test_indirectness_uncertainty_and_custom_text_remain_independent():
     g=root.find(".//s:g[@data-relation-id='r0']",ns)
     assert g.find("s:path[@data-indirect='true']",ns) is not None
     assert g.find("s:path[@data-endpoint='open-arrow']",ns) is not None
-    assert [t.text for t in g.findall('s:text',ns)]==['Author label','?']
+    assert [t.text for t in g.findall('s:text',ns)]==['Author label']
     assert 'Inhibition' in render_scene(scene)
     assert scene['relations'][0]['label']=='Author label'
 

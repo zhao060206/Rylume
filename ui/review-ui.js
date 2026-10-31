@@ -10,7 +10,7 @@ export function findingPresentation(f,scene){
     'outside-canvas':['图形超出了纸张',`${pair}有一部分位于纸张外。可以预览移回纸张后的效果。`,'layout',true],
     'empty-label':['这个对象还没有名称',`${pair}尚未填写文字。如果这是装饰元素，可以保留为空。`,'layout',false],
     'overlap':['两个图形有较多重叠',`${pair}的重叠可能是有意的结合状态。请先看一下，需要时再拖开。`,'layout',false],
-    'uncertain-relation':['这条连线的含义还没确定',`${pair}目前使用普通关联。可以在属性中选激活、抑制等类型，也可以暂时保留。`,'content',false],
+    'uncertain-relation':['这条连线需要作者核对',`${pair}的含义或证据待确认。点击顶部“连线待核对”，核对类型和说明后保存定义。`,'content',false],
     'compartment':['对象跨到了另一个区域',`${pair}的位置和记录的所属区域不同。请结合机制核对。`,'content',false],
     'required-object':['原始描述中的对象没有显示','请核对图层中是否隐藏了相关对象，或是否需要补回。','content',false],
     'required-relation':['原始描述中的连线没有显示','请对照研究描述确认是否有意删去，再决定是否补回。','content',false],

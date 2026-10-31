@@ -3,7 +3,7 @@ const labels={x:'水平位置',y:'垂直位置',w:'宽度',h:'高度',rotation:'
 const el=(t,c,text)=>{const n=document.createElement(t);if(c)n.className=c;if(text!=null)n.textContent=text;return n;};
 export function changeDescriptions(before,operations=[]){
   const all=[...(before?.objects||[]),...(before?.relations||[])];
-  return operations.map(op=>{const old=all.find(o=>o.id===op.id);if(!old)return (op.op==='add'?'新增对象：'+(op.object?.label||''):'图版调整');const changes=Object.entries(op.changes||{}).filter(([k,v])=>JSON.stringify(old[k])!==JSON.stringify(v));return (old.label||old.id)+'：'+changes.map(([k,v])=>(labels[k]||k)+' '+String(old[k]??'')+' → '+(typeof v==='object'?JSON.stringify(v):String(v))+(k==='font_size_pt'?' pt':'')).join('；');}).filter(Boolean);
+  return operations.map(op=>{const old=all.find(o=>o.id===op.id);if(!old)return (op.op==='add'?'新增对象：'+(op.object?.label||''):'图版调整');const changes=Object.entries(op.changes||{}).filter(([k,v])=>JSON.stringify(old[k])!==JSON.stringify(v));return (old.label||old.id)+'：'+changes.map(([k,v])=>k==='illustration'?'局部插画已重绘（文字与连线单独保留）':(labels[k]||k)+' '+String(old[k]??'')+' → '+(typeof v==='object'?JSON.stringify(v):String(v))+(k==='font_size_pt'?' pt':'')).join('；');}).filter(Boolean);
 }
 export function setupComparison(dialog,{beforeScene,afterScene,operations=[],notes=[]}={}){
   dialog.querySelector('.comparison-tools')?.remove();dialog.querySelector('.comparison-change-list')?.remove();

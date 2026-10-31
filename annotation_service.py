@@ -222,14 +222,23 @@ def dispatch(handler,method,path,app):
                 if _revision(body)!=current['revision'] or run['base_revision']!=current['revision']:raise RevisionConflict('图版已变化，请保留当前版本并重新生成候选')
                 if _notes(repo)['annotation_revision']!=run['annotation_revision']:raise RevisionConflict('批注要求已变化，请按最新批注重新生成')
                 candidate=run.get('candidate') or {}
-                if run['status']!='completed' or not candidate.get('can_apply') or not candidate.get('operations') or run.get('applied_revision'):raise SceneError('这个候选尚不能应用，请查看核验结果或重新生成')
+                manual=candidate.get('manual_visual_review_allowed') is True and body.get('author_visual_confirmed') is True
+                if manual:
+                    checks=candidate.get('checks') or []
+                    manual=bool(checks) and all(c.get('status')=='verified' or (c.get('status')=='needs_review' and c.get('reason_code')=='image_requires_visual_review') for c in checks)
+                if run['status']!='completed' or not (candidate.get('can_apply') or manual) or not candidate.get('operations') or run.get('applied_revision'):raise SceneError('这个候选尚不能应用，请查看核验结果或重新生成')
                 # Revalidate the stored operation list rather than trusting a client scene.
-                from annotation_planner import validate_candidate_operations
-                proposed=validate_candidate_operations(current,run['notes'],candidate['operations'])
+                from annotation_planner import validate_candidate_operations,resolve_note_targets
+                from annotation_redraw import authorizations
+                scopes={n['id']:resolve_note_targets(current,n) for n in run['notes']}
+                image_auth=authorizations(current,run['notes'],scopes,candidate.get('image_results') or [])
+                proposed=validate_candidate_operations(current,run['notes'],candidate['operations'],image_authorizations=image_auth)
                 run['pending_apply']={'revision':current['revision']+1,'scene_digest':_scene_digest(proposed)}
                 _atomic_json(_run_path(repo,run['id']),run)
                 result=repo.commit(proposed,current['revision']);_publish(app,job,result)
-                run.pop('pending_apply',None);run.update(applied_revision=result['revision'],applied_at=time.time());_atomic_json(_run_path(repo,run['id']),run)
+                run.pop('pending_apply',None);run.update(applied_revision=result['revision'],applied_at=time.time())
+                if manual:run['author_visual_confirmed']=True
+                _atomic_json(_run_path(repo,run['id']),run)
                 handler._json(200,{'ok':True,**result,'recovery':_recovery(repo)})
             return True
         if action=='annotation-rollback' and method=='POST':

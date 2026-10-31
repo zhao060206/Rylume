@@ -384,7 +384,6 @@ def _relation(scene,r,palette):
         width=_measure(label,7*PT_MM)
         p.append(f'<rect x="{g["label_x"]-width/2-.6:.4f}" y="{g["label_y"]-2:.4f}" width="{width+1.2:.4f}" height="2.7" rx=".3" fill="#FFFFFF"/>')
         p.append(_text(g['label_x'],g['label_y'],label,7,anchor='middle',fill=color))
-    if r.get('uncertain'):p.append(_text(g['label_x'],g['label_y']+3,'?',7,anchor='middle',fill='#A3783B'))
     return ''.join(p)+'</g>'
 
 
@@ -410,5 +409,5 @@ def render_scene(scene):
     p.extend(_relation(scene,r,palette) for r in scene['relations'] if objects[r['source']]['visible'] and objects[r['target']]['visible'])
     p.append('</g><g id="layer-objects">');p.extend(_object(o,palette,scene['style']['stroke_pt'],scene['style']['glyph_tint']) for o in scene['objects'] if o['visible'] and o.get('role')!='context');p.append('</g>')
     if scene['style'].get('show_title'):p.append(_text(cw/2,4,scene['title'],10,anchor='middle',bold=True))
-    if any(r.get('indirect') or r.get('uncertain') for r in scene['relations']):p.append(_text(cw-8,ch-2.5,'Dashed: indirect effect; ?: meaning to verify',7,anchor='end',fill='#82919A'))
+    if any(r.get('indirect') for r in scene['relations']):p.append(_text(cw-8,ch-2.5,'Dashed: indirect effect',7,anchor='end',fill='#82919A'))
     p.append('</svg>');return ''.join(p)
