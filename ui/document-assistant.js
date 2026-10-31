@@ -90,7 +90,7 @@ export function setupDocumentAssistant({state,editor,api,toast,composer}){
   try{for(let index=0;index<files.length;index++){
    const file=files[index];if(file.size>16*1024*1024){message(file.name+' 超过 16 MB，未上传。',true);continue;}
    message('正在保存 '+(index+1)+' / '+files.length+'：'+file.name);
-   try{const content=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result.split(',',2)[1]);reader.onerror=()=>reject(Error('文件读取失败'));reader.readAsDataURL(file);});const response=await api(DOCUMENT_API+'/upload',{name:file.name,data:content});selected.add(response.document.id);message(response.duplicate?'此文件已在库中，已选中。':'文件已保留，正在本机转换。');}catch(e){message(file.name+'：'+e.message,true);}
+   try{const content=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result.split(',',2)[1]);reader.onerror=()=>reject(Error('文件读取失败'));reader.readAsDataURL(file);});const response=await api(DOCUMENT_API+'/upload',{name:file.name,data:content});selected.add(response.document.id);listSignature='';message(response.duplicate?'此文件已在库中，已选中。':'文件已保留，正在本机转换。');}catch(e){message(file.name+'：'+e.message,true);}
   }}finally{uploading=false;$('document-files').value='';await refresh();controls();}
  }
  function usePrompt(text){
