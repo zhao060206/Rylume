@@ -6,7 +6,7 @@
 
 ## 下载与启动
 
-在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-3.8.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
+在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-3.9.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
 
 也可以运行 `启动理象.cmd`。内置模板、素材和直接编辑可离线使用；AI 生成、批注修改和视觉审查需要在「设置 → 模型设置」中配置你自己的兼容服务。
 
@@ -15,6 +15,16 @@
 「设置 → 资源与更新」按需从 GitHub 安装化学、物理、材料、工程、地球环境、计算机与数学和医学资源。首批 134 个原创素材、28 个可编辑模板；生物库继续内置。图版保存素材快照，卸载包后仍可编辑和导出。
 
 软件会提示正式新版，支持后台下载、校验以及保存后重启更新；启动失败自动恢复旧版。3.0 及更早版本需手动安装一次 3.1。详见 [资源与更新说明](docs/RESOURCES-AND-UPDATES.md)。
+
+## 3.9：第一次打开，也知道从哪里开始
+
+全新数据目录首次启动会出现可跳过的欢迎页。点击「用示例试一试」，即可在本机练习选中图形、修改文字、添加素材和导出；全程无需配置 AI。提示位于画布下方，每一步根据真实操作判断，文件导出取消或失败时不会误报完成。
+
+练习图独立保存在左侧，可暂停、继续或随时退出。完成或跳过后不再自动弹出；首页与「设置 → 新手引导」可再次打开。已有图版的用户升级后保持原有工作区。
+
+![首次使用欢迎页](docs/onboarding-3.9.png)
+
+详见 [新手引导说明与验收](docs/ONBOARDING-3.9.md)。
 
 ## 3.8：左侧图版导航与顶部绘图工具
 

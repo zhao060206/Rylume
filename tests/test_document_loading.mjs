@@ -24,3 +24,8 @@ const reopen=latestDocumentLoader({readVersion:()=>revision,async canLeave(){if(
  apply(result){reopened=result;},onError(error){throw error;}});
 assert.equal(await reopen('same-document'),true);assert.equal(loads,2);assert.equal(reopened.revision,2,'A reopen cannot apply a scene fetched before the last save');
 console.log('Atomic document switching preserves edits, ignores stale responses and retains the current document on load failure');
+
+let lessonActive=true;const delayedLesson=deferred();let lessonOpened=false;
+const openLesson=latestDocumentLoader({canLeave:async()=>true,load:()=>delayedLesson.promise,apply(){lessonOpened=true;},onError(){throw Error('Cancelled loads should not show errors');}});
+const lesson=openLesson('practice',{isCurrent:()=>lessonActive});await Promise.resolve();lessonActive=false;delayedLesson.resolve('practice');
+assert.equal(await lesson,false);assert.equal(lessonOpened,false,'Dismissing a guide while its document loads keeps the current document');

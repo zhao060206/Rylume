@@ -42,6 +42,7 @@ import scene_service
 from studio_storage import get_data_dir
 
 from product_identity import PRODUCT_DISPLAY, PRODUCT_VERSION, WINDOW_TITLE
+import onboarding_state
 
 APP_VERSION = PRODUCT_VERSION
 
@@ -2539,6 +2540,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._serve_file(UI_DIR / "canvas-studio.html", "text/html; charset=utf-8")
         if path in ("/legacy", "/legacy/", "/legacy/index.html"):
             return self._serve_file(UI_DIR / "index.html", "text/html; charset=utf-8")
+        if onboarding_state.dispatch(self, "GET", path, sys.modules[__name__]):
+            return
         if path.startswith("/api/") and scene_service.dispatch(self, "GET", path, sys.modules[__name__]):
             return
         if path.startswith("/ui/"):
@@ -2704,6 +2707,8 @@ class Handler(BaseHTTPRequestHandler):
         if ctype != "application/json":
             return self._json(415, {"ok": False, "error": "只接受 application/json"})
         path = self.path.split("?", 1)[0]
+        if onboarding_state.dispatch(self, "POST", path, sys.modules[__name__]):
+            return
         if scene_service.dispatch(self, "POST", path, sys.modules[__name__]):
             return
         try:

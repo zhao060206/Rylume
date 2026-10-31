@@ -1,3 +1,4 @@
+import {setupOnboarding} from './onboarding.js';
 import {setupWorkspaceNavigation} from './workspace-navigation.js';
 import {setupNovice} from './novice-guidance.js';
 import {setupCreationComposer} from './creation-composer.js';
@@ -20,13 +21,13 @@ const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,conflict:false,timer:null,reference:null,candidate:null,active:null};
 const ws=$('workspace');
 new MutationObserver(()=>syncPanelButtons(ws)).observe(ws,{attributes:true,attributeFilter:['class']});
-let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI,navigationUI;
+let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI,navigationUI,onboardingUI;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
 let toastTimer;function toast(message,error=false){$('toast').textContent=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
 async function api(path,body,method){const response=await fetch(path,{method:method||(body?'POST':'GET'),headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});const data=await response.json();if(!response.ok||data.ok===false){const error=new Error(data.error||'请求未完成');error.status=response.status;error.data=data;throw error;}return data;}
 function saveStatus(text,dirty=false){$('save-status').title=text;$('save-status').textContent=/^已保存/.test(text)?'已自动保存':text;$('save-status').classList.toggle('dirty',dirty);}
 function showError(error){S.saveError=error.message;S.saveFailures=(S.saveFailures||0)+1;documentUI?.changed();$('error-banner').hidden=false;$('error-text').textContent=error.message==='Failed to fetch'?'暂时连接不上本机服务。未保存修改已留在恢复副本中，可以重试或另存图版。':error.message;S.conflict=error.status===409;saveStatus(S.conflict?'版本冲突 · 恢复副本保留':'保存未完成 · 恢复副本保留',true);}
-const editor=new SceneEditor({host:$('canvas-host'),onChange(operations){S.pending.push(...clone(operations));S.dirty++;documentUI?.changed();saveStatus('正在编辑 · 待保存',true);clearTimeout(S.timer);S.timer=setTimeout(flush,500);renderTools();renderLayers();renderProperties();},onSelection(){noviceUI?.selection();renderProperties();renderLayers();workspaceUI?.selection();if(editor.selectedIds.length)editor.fitMode=false;renderTools();},onZoom(value){$('zoom-100').textContent=Math.round(value*100)+'%';},onStatus:toast});
+const editor=new SceneEditor({host:$('canvas-host'),onChange(operations){S.pending.push(...clone(operations));S.dirty++;documentUI?.changed();saveStatus('正在编辑 · 待保存',true);clearTimeout(S.timer);S.timer=setTimeout(flush,500);renderTools();renderLayers();renderProperties();onboardingUI?.refresh();},onSelection(){noviceUI?.selection();renderProperties();renderLayers();workspaceUI?.selection();if(editor.selectedIds.length)editor.fitMode=false;renderTools();onboardingUI?.refresh();},onZoom(value){$('zoom-100').textContent=Math.round(value*100)+'%';},onStatus:toast});
 async function flush(){
  clearTimeout(S.timer);if(!S.id||S.conflict)return false;
  if(S.saving){await new Promise(r=>setTimeout(r,100));return flush();}
@@ -59,7 +60,7 @@ const loadDocument=latestDocumentLoader({canLeave,readVersion:()=>S.id+':'+S.rev
  await documentUI?.opened(data);if(!current())return;
  await generationOpened;if(!current())return;noviceUI?.opened(data);modesUI?.opened();
 }});
-async function openJob(id){composerUI?.leavingHome();return loadDocument(id);}
+async function openJob(id,options){composerUI?.leavingHome();return loadDocument(id,options);}
 async function openLegacy(job,svg=''){
   editor.clear();annotationUI?.load(null);S.id=job.id;S.currentJob=job;S.revision=0;S.pending=[];S.audit=null;S.svg='';S.conflict=false;
   const host=$('canvas-host');host.classList.add('legacy-preview');
@@ -190,7 +191,7 @@ async function exportFile(format){
   if(result.warnings?.length)status.append(el('p','',result.warnings.join('；')));
   if(result.raster_objects?.length)status.append(el('p','',`这些对象以图片保存：${result.raster_objects.join('、')}`));
   const reveal=el('button','button','打开保存位置');reveal.onclick=()=>api('/api/reveal',{path:result.path,action:'select'}).catch(e=>toast(e.message,true));status.append(reveal);
-  toast('文件已保存到电脑。软件里的图版也已保留。');
+  onboardingUI?.exported(jobId);toast('文件已保存到电脑。软件里的图版也已保留。');
  }catch(e){if(S.id===jobId)status.replaceChildren(el('p','','保存没有完成：'+e.message),el('p','muted','图版仍在软件里，可以换一个格式或保存位置重试。'));toast(e.message,true);}
  finally{S.exporting=false;if(S.id!==jobId)status.replaceChildren();document.querySelectorAll('[data-export]').forEach(b=>b.disabled=false);}
 }
@@ -237,4 +238,5 @@ modesUI=setupWorkspaceModes({editor,state:S,tab,showRight:name=>workspaceUI.show
 generationUI=setupGenerationWorkflow({state:S,editor,api,flush,follow,canLeave,workspace:workspaceUI,checkModels:mode=>documentUI.checkModels(mode),toast,tab});
 composerUI=setupCreationComposer({state:S,toast,workflow:generationUI,workspace:workspaceUI});
 navigationUI=setupWorkspaceNavigation({state:S,editor,api,openJob,follow,tab,toast});
-boot().then(ok=>{if(ok)deliveryUI.ready();});
+onboardingUI=setupOnboarding({state:S,editor,api,flush,canLeave,openJob,refreshJobs,tab,toast});
+boot().then(async ok=>{if(ok){await onboardingUI.ready();deliveryUI.ready();}});

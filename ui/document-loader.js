@@ -1,8 +1,8 @@
 /** Load every dependency before switching documents; the latest request wins. */
 export function latestDocumentLoader({canLeave,load,apply,onError,readVersion=()=>null}){
  let epoch=0;
- return async function open(id){
-  const request=++epoch,current=()=>request===epoch;
+ return async function open(id,{isCurrent=()=>true}={}){
+  const request=++epoch,current=()=>request===epoch&&isCurrent();
   try{
    if(!await canLeave()||!current())return false;
    for(let attempt=0;attempt<4;attempt++){
