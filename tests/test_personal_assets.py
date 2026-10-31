@@ -107,9 +107,10 @@ def test_invalid_image_path_and_cancel_preserve_source(studio,monkeypatch):
 
 
 def test_release_history_is_offline_and_acknowledged_per_version(studio):
+    from product_identity import PRODUCT_VERSION
     code,notes=studio('/api/release-notes');assert code==200 and notes['unread']
-    assert notes['releases'][0]['version']==notes['current_version']=='4.5.0'
+    assert notes['releases'][0]['version']==notes['current_version']==PRODUCT_VERSION
     assert notes['releases'][0]['items'] and len(notes['releases'])>=5
     assert studio('/api/release-notes/acknowledge',{'version':'0.0.0'})[0]==400
-    assert studio('/api/release-notes/acknowledge',{'version':'4.5.0'})[0]==200
+    assert studio('/api/release-notes/acknowledge',{'version':PRODUCT_VERSION})[0]==200
     assert studio('/api/release-notes')[1]['unread'] is False
