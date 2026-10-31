@@ -16,7 +16,7 @@ def test_downloaded_pack_enters_catalog_and_survives_uninstall_in_documents(stud
     assert next(d for d in catalog['asset_domains'] if d['id']=='chemistry')['available']
     assets=[a for a in catalog['assets'] if a.get('pack_id')=='chemistry'];assert len(assets)==row['asset_count']
     assert all('_file' not in a for a in assets)
-    templates=[t for t in catalog['templates'] if t.get('pack_id')=='chemistry'];assert len(templates)==4
+    templates=[t for t in catalog['templates'] if t.get('pack_id')=='chemistry'];assert len(templates)==row['template_count']
     code,thumbnail=studio(assets[0]['thumbnail']);assert code==200 and b'<svg' in thumbnail
     code,new=studio('/api/scene/example',{'template':templates[0]['id'],'canvas_mm':[90,150]});assert code==200,new
     endpoint='/api/jobs/'+new['job_id'];_,before=studio(endpoint+'/scene')

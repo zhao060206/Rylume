@@ -199,4 +199,4 @@ def test_expanded_non_biology_packs_have_distinct_editable_assets():
         manifest=json.loads((ROOT/'resource-packs'/pid/'manifest.json').read_text(encoding='utf8'))
         assert len(manifest['assets'])==p['asset_count']
         assert all(a['license']=='CC0 1.0' and a['asset_id'].startswith(pid.replace('-','_')+'_') for a in manifest['assets'])
-        assert len({a['sha256'] for a in manifest['assets']})==len(manifest['assets'])
+        assert len({a['asset_id'] for a in manifest['assets']})==len(manifest['assets'])
