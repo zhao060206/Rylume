@@ -18,6 +18,12 @@ Third-party paper/reference images are deliberately excluded. Links in the refer
 
 The Windows release uses PyMuPDF 1.28.2 with MuPDF 1.28.2, Copyright Artifex Software and contributors, under GNU Affero General Public License v3. The full AGPL text is in `LICENSE`; matching PyMuPDF and MuPDF source archives, licensing and build instructions are separate release assets. Upstream: https://github.com/pymupdf/PyMuPDF and https://mupdf.com/.
 
+## Local document conversion
+
+Microsoft MarkItDown 0.1.9, Markdownify and openpyxl retain their MIT licenses. Mammoth and Cobble are BSD-2-Clause; Magika is Apache-2.0; PDFMiner.six and pdfplumber are MIT; DefusedXML uses the PSF license. Beautiful Soup and PDFium retain their upstream notices. Full notices and installed versions are included under `licenses/python-packages/`. LibreOffice is an optional separately installed system program and is not bundled.
+
+Document figure planning uses an original Rylume prompt inspired by the public planning and faithfulness approaches in PaperBanana (dwzhu-pku, Apache-2.0; llmsresearch, MIT) and Paper2Any (Apache-2.0). Source links and adaptations are recorded in `docs/DOCUMENT-ASSISTANT-4.0.md`; their prompt files are not redistributed as application code.
+
 ## Python and packaged libraries
 
 `licenses/Python-LICENSE.txt` contains Python's license. `licenses/python-packages.json` records installed package versions and copied notices, with full license files under `licenses/python-packages/`. The binary retains additional upstream notices shipped with its libraries, including NumPy/OpenBLAS, OpenCV, ONNX Runtime, pythonnet, pywebview and vtracer.
@@ -27,7 +33,9 @@ WebView2 Runtime and .NET are system prerequisites, not bundled Microsoft instal
 ## GEOS and certifi corresponding source
 
 The packaged Shapely 2.1.2 links dynamically to GEOS 3.13.1 (LGPL-2.1-or-later).
-certifi 2025.4.26 is under MPL-2.0. Their unmodified source archives are included
-in the dependency-sources release asset. The GEOS license and replacement shared
+certifi 2026.10.23 is under MPL-2.0; its unmodified source is included in the
+4.0.0 dependency-sources release asset. The unchanged PyMuPDF/MuPDF 1.28.2 and
+GEOS 3.13.1 sources remain available in the [3.0.0 dependency-sources asset](https://github.com/zhao060206/Rylume/releases/download/v3.0.0/Rylume-3.0.0-dependency-sources.zip).
+The GEOS license and replacement shared
 libraries remain under `_internal/shapely.libs`; Rylume does not restrict the
 replacement or debugging of those libraries as permitted by the LGPL.

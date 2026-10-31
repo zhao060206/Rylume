@@ -16,6 +16,7 @@
   <link href="/ui/creation-composer.css" rel="stylesheet"/>
   <link href="/ui/workspace-shell.css" rel="stylesheet"/>
   <link href="/ui/onboarding.css" rel="stylesheet"/>
+  <link href="/ui/document-assistant.css" rel="stylesheet"/>
  </head>
  <body>
   <svg aria-hidden="true" class="icon-defs">
@@ -283,6 +284,7 @@
    </div>
    <span class="mode-announcement" id="workspace-mode-status" role="status" aria-live="polite"></span>
 
+   <button type="button" class="button" id="toggle-documents" aria-expanded="false" title="上传论文与文档，规划绘图">文档助手</button>
    <button class="button primary" disabled="" id="toggle-export">
     <svg class="icon">
      <use href="#download">
@@ -1276,7 +1278,7 @@
       <textarea id="brief-input" maxlength="8000" aria-describedby="brief-help" placeholder="例如：画一张 JAK–STAT 信号通路图。细胞因子结合膜上的受体，激活 JAK，再激活 STAT。STAT 进入细胞核，调控基因表达。&#10;&#10;也可以说明排版、配色，以及哪些内容不要出现。"></textarea>
       <div class="input-meta"><span id="brief-count">0 / 8000</span><span hidden>原生矢量</span></div>
       <p id="brief-help" class="composer-help">写清主要对象、它们的关系和排列方式。不确定的地方可以留给后续核对。</p>
-      <div class="prompt-assists"><button type="button" class="button" id="composer-attach" aria-expanded="false"><svg class="icon"><use href="#plus"></use></svg>参考 / 草稿</button><button type="button" class="button" id="expand-brief"><svg class="icon"><use href="#spark"></use></svg>帮我优化描述</button><button type="button" class="text-button" id="open-guide">不知道怎么写？</button><button type="button" class="text-button" id="review-brief-candidate" hidden>查看优化候选</button></div>
+      <div class="prompt-assists"><button type="button" class="button" id="composer-attach" aria-expanded="false"><svg class="icon"><use href="#plus"></use></svg>参考 / 草稿</button><button type="button" class="button" id="expand-brief"><svg class="icon"><use href="#spark"></use></svg>帮我优化描述</button><button type="button" class="text-button" id="open-guide">不知道怎么写？</button><button type="button" class="text-button" id="review-brief-candidate" hidden>查看优化候选</button><button type="button" class="text-button" id="composer-documents">从文档提取</button><button type="button" class="text-button" id="restore-document-brief" hidden>恢复原描述</button></div>
       <details class="prompt-examples"><summary>试试这些描述</summary><div class="prompt-example-list"><button type="button" data-prompt-example="signal">信号通路</button><button type="button" data-prompt-example="workflow">实验流程</button><button type="button" data-prompt-example="cycle">循环过程</button></div><p id="prompt-example-copy" class="muted small" hidden></p><button type="button" id="use-prompt-example" class="text-button" hidden>使用这段示例</button></details>
       <details id="generation-origin-card" class="enhancement-card" hidden><summary>已采用优化描述 <span>原文保留，可随时停用</span></summary><label class="field-label" for="generation-enhanced-input">AI 生成时使用的补充说明</label><textarea id="generation-enhanced-input" maxlength="8000"></textarea><button type="button" id="discard-enhancement" class="text-button">停用优化，使用我的原文</button></details>
      </div>

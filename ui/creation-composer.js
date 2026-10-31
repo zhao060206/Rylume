@@ -1,17 +1,21 @@
 /** A single creation surface for home, menus, the rail, references and sketches. */
 export function setupCreationComposer({state,toast,workflow,workspace}){
  const $=id=>document.getElementById(id),dialog=$('creation-dialog'),input=$('brief-input'),composer=$('panel-generate'),home=$('home-composer-host');
- let selectedExample=null,homeDraft=null,inlineMounted=null,submission=null;
+ let selectedExample=null,homeDraft=null,inlineMounted=null,submission=null,promptBackup=null,lastAppliedPrompt=null;
  function snapshot(){return {text:input.value,originalBrief:state.originalBrief,enhancedFrom:state.enhancedFrom,enhancedBrief:state.enhancedBrief,
   referenceId:state.referenceId,reference:state.reference,referencePurpose:state.referencePurpose,layoutPolicy:state.layoutPolicy,sketchSource:state.sketchSource,
   preview:$('generation-reference-preview').getAttribute('src'),note:$('generation-reference-note').textContent,
-  size:$('new-size').value,dpi:$('generation-dpi').value,mode:workspace.getMode()};}
- function restore(){
-  const d=homeDraft||{text:'',size:'180x120',dpi:'300',mode:'vector'};
+  size:$('new-size').value,dpi:$('generation-dpi').value,mode:workspace.getMode(),archetype:state.archetype,literature:!!$('generation-literature').checked};}
+ function applyDraft(d){
   input.value=d.text;state.originalBrief=d.originalBrief||d.text;state.enhancedFrom=d.enhancedFrom||null;state.enhancedBrief=d.enhancedBrief||null;
+  state.archetype=d.archetype||null;$('generation-literature').checked=!!d.literature;
   $('new-size').value=d.size;$('generation-dpi').value=d.dpi;$('creation-size-summary').textContent=d.size.replace('x',' × ')+' mm';
-  workspace.setMode(d.mode);workflow.restoreInputs(d);input.dispatchEvent(new Event('change'));
+  workspace.setMode(d.mode);workflow.restoreInputs(d);$('review-brief-candidate').hidden=true;
+  try{localStorage.setItem('rylume-research-brief',d.text);}catch{}
+  input.dispatchEvent(new Event('change'));
  }
+ function restore(){applyDraft(homeDraft||{text:'',size:'180x120',dpi:'300',mode:'vector'});}
+ function canRestorePrompt(){return promptBackup&&(promptBackup.home?!$('welcome').hidden:$('welcome').hidden&&state.id===promptBackup.id);}
  const examples={
   signal:'画一张 JAK–STAT 信号通路图：细胞因子结合膜上的受体，激活 JAK，再激活 STAT。STAT 进入细胞核，调控基因表达。区分胞外、细胞质和细胞核；箭头标明激活与转运。',
   workflow:'画一张实验流程图：样本采集 → 样本预处理 → 测量 → 数据分析。按从左到右的顺序排列，每一步配一个简洁图形和名称。保留步骤间的顺序，不添加未说明的实验条件。',
@@ -25,6 +29,7 @@ export function setupCreationComposer({state,toast,workflow,workspace}){
   composer.classList.toggle('home-inline',inline);
   if(inline&&inlineMounted===false)restore();
   inlineMounted=inline;
+  $('restore-document-brief').hidden=!canRestorePrompt();
  }
  function open(){
   mount();
@@ -37,6 +42,7 @@ export function setupCreationComposer({state,toast,workflow,workspace}){
   if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)&&!e.isComposing){e.preventDefault();$('generate').click();}
  });
  $('composer-attach').onclick=()=>{const expanded=composer.classList.toggle('references-expanded');$('composer-attach').setAttribute('aria-expanded',String(expanded));};
+ $('restore-document-brief').onclick=()=>{if(!canRestorePrompt())return;applyDraft(promptBackup.draft);promptBackup=null;$('restore-document-brief').hidden=true;toast('已恢复替换前的描述和参考设置');};
  new MutationObserver(mount).observe($('welcome'),{attributes:true,attributeFilter:['hidden']});mount();
  $('new-size').addEventListener('change',()=>{$('creation-size-summary').textContent=$('new-size').value.replace('x',' × ')+' mm';});
  for(const b of document.querySelectorAll('[data-prompt-example]'))b.onclick=()=>{
@@ -69,5 +75,15 @@ export function setupCreationComposer({state,toast,workflow,workspace}){
   submission=null;
  });
  input.addEventListener('change',()=>{$('brief-count').textContent=input.value.length+' / '+input.maxLength;});
- return {open,close:()=>dialog.close(),leavingHome(){if(!$('welcome').hidden)homeDraft=snapshot();}};
+ return {open,close:()=>dialog.close(),usePrompt(text){
+  if(state.active||state.submitting){toast('正在生成，请等任务结束后再使用新提示词。',true);return false;}
+  if(typeof text!=='string'||!text.trim()||text.length>8000){toast('提示词需为 1–8000 字。',true);return false;}
+  const before=snapshot();
+  if(!canRestorePrompt()||JSON.stringify(before)!==lastAppliedPrompt)promptBackup={home:!$('welcome').hidden,id:state.id,draft:before};
+  applyDraft({text:text.trim(),size:$('new-size').value,dpi:$('generation-dpi').value,mode:'vector'});
+  input.dispatchEvent(new Event('input'));$('restore-document-brief').hidden=false;open();
+  lastAppliedPrompt=JSON.stringify(snapshot());
+  toast('已放入 AI 绘图描述。可以继续修改，再点击生成；原描述可恢复。');
+  return true;
+ },leavingHome(){if(!$('welcome').hidden)homeDraft=snapshot();}};
 }

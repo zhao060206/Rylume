@@ -1,0 +1,51 @@
+[
+  {
+    "repository": "dwzhu-pku/PaperBanana",
+    "path": "agents/planner_agent.py",
+    "blob_sha": "7af02334e0f457be8d8bdb7077daa9f3f8fee9a4",
+    "url": "https://github.com/dwzhu-pku/PaperBanana/blob/main/agents/planner_agent.py",
+    "bytes": 8625
+  },
+  {
+    "repository": "dwzhu-pku/PaperBanana",
+    "path": "agents/critic_agent.py",
+    "blob_sha": "16872800d14568fe46a3b86f34c5c8d90b2acb95",
+    "url": "https://github.com/dwzhu-pku/PaperBanana/blob/main/agents/critic_agent.py",
+    "bytes": 12953
+  },
+  {
+    "repository": "llmsresearch/paperbanana",
+    "path": "prompts/diagram/planner.txt",
+    "blob_sha": "e072b034f5b4a0942299c658c1bfcc6bd6a8e295",
+    "url": "https://github.com/llmsresearch/paperbanana/blob/main/prompts/diagram/planner.txt",
+    "bytes": 2758
+  },
+  {
+    "repository": "llmsresearch/paperbanana",
+    "path": "prompts/diagram/context_enricher.txt",
+    "blob_sha": "0843a78c345214a4dc702843026778c4e32a0e6f",
+    "url": "https://github.com/llmsresearch/paperbanana/blob/main/prompts/diagram/context_enricher.txt",
+    "bytes": 1822
+  },
+  {
+    "repository": "llmsresearch/paperbanana",
+    "path": "prompts/evaluation/faithfulness.txt",
+    "blob_sha": "3d09da466fe8beb9773d5a9f63c9907a97d7b591",
+    "url": "https://github.com/llmsresearch/paperbanana/blob/main/prompts/evaluation/faithfulness.txt",
+    "bytes": 3412
+  },
+  {
+    "repository": "OpenDCAI/Paper2Any",
+    "path": "dataflow_agent/promptstemplates/resources/pt_technical_route_desc_generator_repo.py",
+    "blob_sha": "c3e1df429c80f407e2e450e2369eba2e17a2ab15",
+    "url": "https://github.com/OpenDCAI/Paper2Any/blob/main/dataflow_agent/promptstemplates/resources/pt_technical_route_desc_generator_repo.py",
+    "bytes": 25449
+  },
+  {
+    "repository": "OpenDCAI/Paper2Any",
+    "path": "dataflow_agent/agentroles/paper2any_agents/diagram_planner.py",
+    "blob_sha": "0a60282312244e1669faeb2f52a7116b9fbae221",
+    "url": "https://github.com/OpenDCAI/Paper2Any/blob/main/dataflow_agent/agentroles/paper2any_agents/diagram_planner.py",
+    "bytes": 2424
+  }
+]

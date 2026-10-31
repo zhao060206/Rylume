@@ -1,3 +1,4 @@
+import {setupDocumentAssistant} from './document-assistant.js';
 import {setupOnboarding} from './onboarding.js';
 import {setupWorkspaceNavigation} from './workspace-navigation.js';
 import {setupNovice} from './novice-guidance.js';
@@ -21,7 +22,7 @@ const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,conflict:false,timer:null,reference:null,candidate:null,active:null};
 const ws=$('workspace');
 new MutationObserver(()=>syncPanelButtons(ws)).observe(ws,{attributes:true,attributeFilter:['class']});
-let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI,navigationUI,onboardingUI;
+let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI,navigationUI,onboardingUI,documentsUI;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
 let toastTimer;function toast(message,error=false){$('toast').textContent=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
 async function api(path,body,method){const response=await fetch(path,{method:method||(body?'POST':'GET'),headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});const data=await response.json();if(!response.ok||data.ok===false){const error=new Error(data.error||'请求未完成');error.status=response.status;error.data=data;throw error;}return data;}
@@ -238,5 +239,6 @@ modesUI=setupWorkspaceModes({editor,state:S,tab,showRight:name=>workspaceUI.show
 generationUI=setupGenerationWorkflow({state:S,editor,api,flush,follow,canLeave,workspace:workspaceUI,checkModels:mode=>documentUI.checkModels(mode),toast,tab});
 composerUI=setupCreationComposer({state:S,toast,workflow:generationUI,workspace:workspaceUI});
 navigationUI=setupWorkspaceNavigation({state:S,editor,api,openJob,follow,tab,toast});
+documentsUI=setupDocumentAssistant({state:S,editor,api,toast,composer:composerUI});
 onboardingUI=setupOnboarding({state:S,editor,api,flush,canLeave,openJob,refreshJobs,tab,toast});
 boot().then(async ok=>{if(ok){await onboardingUI.ready();deliveryUI.ready();}});

@@ -6,7 +6,7 @@
 
 ## 下载与启动
 
-在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-3.9.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
+在 [Releases](https://github.com/zhao060206/Rylume/releases/latest) 下载 **Rylume-4.0.0-Windows-x64.zip**，解压整个文件夹后双击 `Rylume.exe`。保留同目录下的 `_internal` 文件夹。需要 Windows 10/11 x64 和 Microsoft Edge WebView2 Runtime。
 
 也可以运行 `启动理象.cmd`。内置模板、素材和直接编辑可离线使用；AI 生成、批注修改和视觉审查需要在「设置 → 模型设置」中配置你自己的兼容服务。
 
@@ -15,6 +15,14 @@
 「设置 → 资源与更新」按需从 GitHub 安装化学、物理、材料、工程、地球环境、计算机与数学和医学资源。首批 134 个原创素材、28 个可编辑模板；生物库继续内置。图版保存素材快照，卸载包后仍可编辑和导出。
 
 软件会提示正式新版，支持后台下载、校验以及保存后重启更新；启动失败自动恢复旧版。3.0 及更早版本需手动安装一次 3.1。详见 [资源与更新说明](docs/RESOURCES-AND-UPDATES.md)。
+
+## 4.0：从文档规划科研插图
+
+右侧「文档助手」支持 PDF、PPTX、DOCX、文本及表格，本机转换为 Markdown 后，由自配文本模型推荐机理图、流程图、系统结构和其他合适图型。每条建议附原文位置、摘录、对象与布局、待确认项；提示词可编辑、复制或直接用于 AI 绘图，原来的创作描述可恢复。
+
+支持多文档、转换预览、扫描 PDF 本机 OCR、取消与建议历史。旧版 PPT/DOC 需要本机 LibreOffice。提示词研究参考 PaperBanana 与 Paper2Any 的公开实现，采用原创中文提示词及本地引用核验。详见 [文档助手与提示词依据](docs/DOCUMENT-ASSISTANT-4.0.md)。
+
+![文档助手与绘图工作区](docs/document-assistant-4.0.jpg)
 
 ## 3.9：第一次打开，也知道从哪里开始
 

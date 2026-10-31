@@ -1,5 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
-from PyInstaller.utils.hooks import collect_all
+from PyInstaller.utils.hooks import collect_all, collect_data_files, copy_metadata
 
 from pathlib import Path
 import sys
@@ -17,6 +17,13 @@ hiddenimports += ['template_library', 'document_workflows']
 hiddenimports += ['resource_packs','github_delivery','app_updates','desktop_delivery']
 hiddenimports += ['figure_assets', 'figure_generation', 'figure_references', 'scientific_intent']
 hiddenimports += ['sketch_layout']
+hiddenimports += ['document_conversion', 'document_advisor', 'document_assistant', 'onboarding_state']
+# MarkItDown detects local files with Magika's ONNX data. PDFMiner requires CMaps.
+# Keep optional online/audio converters inactive; legacy Office uses local LibreOffice.
+for package in ('markitdown', 'magika', 'pdfminer', 'mammoth', 'markdownify', 'openpyxl', 'docx', 'pptx'):
+    datas += collect_data_files(package)
+for distribution in ('markitdown', 'magika', 'pdfminer.six', 'mammoth', 'markdownify', 'openpyxl', 'beautifulsoup4', 'defusedxml', 'cobble', 'python-docx', 'python-pptx'):
+    datas += copy_metadata(distribution)
 datas += [('packaging/update-helper.ps1','packaging')]
 tmp_ret = collect_all('vtracer')
 datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
@@ -76,4 +83,5 @@ coll = COLLECT(
     upx_exclude=[],
     name='Rylume',
 )
+
 

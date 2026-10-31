@@ -12,7 +12,7 @@ const nodes=new Map(),element=id=>{if(!nodes.has(id))nodes.set(id,new Element())
 const observers=[];
 globalThis.MutationObserver=class {constructor(f){this.f=f;}observe(){observers.push(this.f);}};
 const doc=new EventTarget();doc.getElementById=element;doc.querySelectorAll=()=>[];globalThis.document=doc;
-const storage=new Map();globalThis.localStorage={removeItem:k=>storage.delete(k)};
+const storage=new Map();globalThis.localStorage={removeItem:k=>storage.delete(k),setItem:(k,v)=>storage.set(k,v)};
 const input=element('brief-input'),welcome=element('welcome');
 element('new-size').value='180x120';element('generation-dpi').value='300';
 let mode='vector',restored;
@@ -34,5 +34,27 @@ write('first submitted figure');doc.dispatchEvent(new Event('generation-submitte
 write('retry this figure');doc.dispatchEvent(new Event('generation-submitted'));leave();home();assert.equal(input.value,'retry this figure');
 let generated=0;element('generate').onclick=()=>generated++;
 const shortcut=new Event('keydown',{cancelable:true});Object.assign(shortcut,{key:'Enter',ctrlKey:true});element('panel-generate').dispatchEvent(shortcut);assert.equal(generated,1);assert.equal(shortcut.defaultPrevented,true);
+
+// Document suggestions are explicit draft replacements, with a recoverable original.
+write('original research with reference');state.referenceId='original-ref';state.archetype='original-type';mode='image';
+element('generation-literature').checked=true;element('review-brief-candidate').hidden=false;
+assert.equal(composer.usePrompt('Document suggestion one'),true);
+assert.equal(input.value,'Document suggestion one');assert.equal(mode,'vector');assert.equal(state.referenceId,undefined);
+assert.equal(state.archetype,null);assert.equal(element('generation-literature').checked,false);
+assert.equal(element('review-brief-candidate').hidden,true);
+assert.equal(element('restore-document-brief').hidden,false);
+assert.equal(composer.usePrompt('Document suggestion two'),true);
+element('restore-document-brief').click();
+assert.equal(input.value,'original research with reference');assert.equal(state.referenceId,'original-ref');
+assert.equal(storage.get('rylume-research-brief'),'original research with reference');
+assert.equal(mode,'image');assert.equal(state.archetype,'original-type');assert.equal(element('generation-literature').checked,true);
+// An author-edited suggestion becomes the next restorable draft.
+composer.usePrompt('suggestion');write('author edited suggestion');composer.usePrompt('another');element('restore-document-brief').click();
+assert.equal(input.value,'author edited suggestion');
+state.active=true;assert.equal(composer.usePrompt('blocked'),false);assert.equal(input.value,'author edited suggestion');state.active=false;
+assert.equal(composer.usePrompt('x'.repeat(8001)),false);assert.equal(composer.usePrompt('  '),false);
+// A restore control must never inject another document's draft.
+leave();state.id='doc-a';write('document A draft');composer.usePrompt('new A prompt');state.id='doc-b';mount();
+assert.equal(element('restore-document-brief').hidden,true);
 delete globalThis.document;delete globalThis.MutationObserver;delete globalThis.localStorage;
 console.log('Home creation preserves unfinished text, enhancement and references; completed submissions clear only their own draft; shortcuts work inline.');

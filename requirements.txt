@@ -22,3 +22,20 @@ hyperframe==6.1.0
 simplejson==4.2.0
 PySocks==1.7.1
 zstandard==0.25.0
+# Local document-to-Markdown pipeline (plugins and cloud converters disabled)
+markitdown[docx,pptx,pdf]==0.1.9
+magika==1.0.3
+mammoth==1.13.0
+markdownify==1.2.3
+beautifulsoup4==4.15.0
+pdfminer.six==20260107
+pdfplumber==0.11.10
+openpyxl==3.1.5
+python-docx==1.2.0
+defusedxml==0.7.1
+cobble==0.1.4
+soupsieve==2.9.2
+et_xmlfile==2.0.0
+pypdfium2==5.9.0
+certifi==2026.10.23
+charset-normalizer==3.4.7

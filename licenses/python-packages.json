@@ -1,5 +1,14 @@
 [
   {
+    "name": "beautifulsoup4",
+    "version": "4.15.0",
+    "license": "MIT License",
+    "notices": [
+      "python-packages/beautifulsoup4-4.15.0/licenses/AUTHORS",
+      "python-packages/beautifulsoup4-4.15.0/licenses/LICENSE"
+    ]
+  },
+  {
     "name": "bottle",
     "version": "0.13.4",
     "license": "MIT",
@@ -9,10 +18,10 @@
   },
   {
     "name": "certifi",
-    "version": "2025.4.26",
+    "version": "2026.10.23",
     "license": "MPL-2.0",
     "notices": [
-      "python-packages/certifi-2025.4.26/licenses/LICENSE"
+      "python-packages/certifi-2026.10.23/licenses/LICENSE"
     ]
   },
   {
@@ -41,6 +50,14 @@
     ]
   },
   {
+    "name": "cobble",
+    "version": "0.1.4",
+    "license": "See bundled upstream notice",
+    "notices": [
+      "python-packages/cobble-0.1.4/README-LICENSE.rst"
+    ]
+  },
+  {
     "name": "cryptography",
     "version": "48.0.1",
     "license": "Apache-2.0 OR BSD-3-Clause",
@@ -48,6 +65,24 @@
       "python-packages/cryptography-48.0.1/licenses/LICENSE",
       "python-packages/cryptography-48.0.1/licenses/LICENSE.APACHE",
       "python-packages/cryptography-48.0.1/licenses/LICENSE.BSD"
+    ]
+  },
+  {
+    "name": "defusedxml",
+    "version": "0.7.1",
+    "license": "PSFL",
+    "notices": [
+      "python-packages/defusedxml-0.7.1/LICENSE"
+    ]
+  },
+  {
+    "name": "et_xmlfile",
+    "version": "2.0.0",
+    "license": "MIT",
+    "notices": [
+      "python-packages/et_xmlfile-2.0.0/AUTHORS.txt",
+      "python-packages/et_xmlfile-2.0.0/LICENCE.python",
+      "python-packages/et_xmlfile-2.0.0/LICENCE.rst"
     ]
   },
   {
@@ -65,6 +100,30 @@
     "notices": [
       "python-packages/fonttools-4.63.0/licenses/LICENSE",
       "python-packages/fonttools-4.63.0/licenses/LICENSE.external"
+    ]
+  },
+  {
+    "name": "h2",
+    "version": "4.3.0",
+    "license": "The MIT License (MIT)\n\nCopyright (c) 2015-2020 Cory Benfield and contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "notices": [
+      "python-packages/h2-4.3.0/LICENSE"
+    ]
+  },
+  {
+    "name": "hpack",
+    "version": "4.2.0",
+    "license": "MIT",
+    "notices": [
+      "python-packages/hpack-4.2.0/LICENSE"
+    ]
+  },
+  {
+    "name": "hyperframe",
+    "version": "6.1.0",
+    "license": "The MIT License (MIT)\n\nCopyright (c) 2014 Cory Benfield\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "notices": [
+      "python-packages/hyperframe-6.1.0/LICENSE"
     ]
   },
   {
@@ -90,6 +149,38 @@
     "notices": [
       "python-packages/lxml-6.1.1/licenses/LICENSE.txt",
       "python-packages/lxml-6.1.1/licenses/LICENSES.txt"
+    ]
+  },
+  {
+    "name": "magika",
+    "version": "1.0.3",
+    "license": "Apache-2.0",
+    "notices": [
+      "python-packages/magika-1.0.3/LICENSE"
+    ]
+  },
+  {
+    "name": "mammoth",
+    "version": "1.13.0",
+    "license": "BSD-2-Clause",
+    "notices": [
+      "python-packages/mammoth-1.13.0/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "markdownify",
+    "version": "1.2.3",
+    "license": "See bundled upstream notice",
+    "notices": [
+      "python-packages/markdownify-1.2.3/LICENSE"
+    ]
+  },
+  {
+    "name": "markitdown",
+    "version": "0.1.9",
+    "license": "MIT",
+    "notices": [
+      "python-packages/markitdown-0.1.9/LICENSE"
     ]
   },
   {
@@ -127,6 +218,14 @@
     ]
   },
   {
+    "name": "openpyxl",
+    "version": "3.1.5",
+    "license": "MIT",
+    "notices": [
+      "python-packages/openpyxl-3.1.5/LICENCE.rst"
+    ]
+  },
+  {
     "name": "packaging",
     "version": "26.2",
     "license": "Apache-2.0 OR BSD-2-Clause",
@@ -134,6 +233,22 @@
       "python-packages/packaging-26.2/licenses/LICENSE",
       "python-packages/packaging-26.2/licenses/LICENSE.APACHE",
       "python-packages/packaging-26.2/licenses/LICENSE.BSD"
+    ]
+  },
+  {
+    "name": "pdfminer.six",
+    "version": "20260107",
+    "license": "MIT",
+    "notices": [
+      "python-packages/pdfminer.six-20260107/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "pdfplumber",
+    "version": "0.11.10",
+    "license": "See bundled upstream notice",
+    "notices": [
+      "python-packages/pdfplumber-0.11.10/licenses/LICENSE.txt"
     ]
   },
   {
@@ -185,12 +300,53 @@
     ]
   },
   {
-    "name": "pythonnet",
-    "version": "3.2.1",
+    "name": "pyOpenSSL",
+    "version": "26.2.0",
+    "license": "Apache License, Version 2.0",
+    "notices": [
+      "python-packages/pyOpenSSL-26.2.0/LICENSE"
+    ]
+  },
+  {
+    "name": "pypdfium2",
+    "version": "5.9.0",
+    "license": "BSD-3-Clause, Apache-2.0, dependency licenses",
+    "notices": [
+      "python-packages/pypdfium2-5.9.0/licenses/LICENSES/Apache-2.0.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/LICENSES/BSD-3-Clause.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/LICENSES/CC-BY-4.0.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/abseil.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/agg23.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/fast_float.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/freetype.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/icu.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/lcms.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/libjpeg_turbo.ijg",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/libjpeg_turbo.md",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/libopenjpeg.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/libpng.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/libtiff.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/llvm-libc.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/pdfium-binaries.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/pdfium.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/simdutf.txt",
+      "python-packages/pypdfium2-5.9.0/licenses/data/windows_x64/BUILD_LICENSES/zlib.txt"
+    ]
+  },
+  {
+    "name": "PySocks",
+    "version": "1.7.1",
+    "license": "BSD",
+    "notices": [
+      "python-packages/PySocks-1.7.1/LICENSE"
+    ]
+  },
+  {
+    "name": "python-docx",
+    "version": "1.2.0",
     "license": "MIT",
     "notices": [
-      "python-packages/pythonnet-3.2.1/licenses/AUTHORS.md",
-      "python-packages/pythonnet-3.2.1/licenses/LICENSE"
+      "python-packages/python-docx-1.2.0/licenses/LICENSE"
     ]
   },
   {
@@ -199,6 +355,15 @@
     "license": "MIT",
     "notices": [
       "python-packages/python-pptx-1.0.2/LICENSE"
+    ]
+  },
+  {
+    "name": "pythonnet",
+    "version": "3.2.1",
+    "license": "MIT",
+    "notices": [
+      "python-packages/pythonnet-3.2.1/licenses/AUTHORS.md",
+      "python-packages/pythonnet-3.2.1/licenses/LICENSE"
     ]
   },
   {
@@ -242,6 +407,22 @@
       "python-packages/shapely-2.1.2/licenses/LICENSE.txt",
       "python-packages/shapely-2.1.2/licenses/LICENSE_GEOS",
       "python-packages/shapely-2.1.2/licenses/LICENSE_win32"
+    ]
+  },
+  {
+    "name": "simplejson",
+    "version": "4.2.0",
+    "license": "MIT OR AFL-2.1",
+    "notices": [
+      "python-packages/simplejson-4.2.0/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "soupsieve",
+    "version": "2.9.2",
+    "license": "MIT",
+    "notices": [
+      "python-packages/soupsieve-2.9.2/licenses/LICENSE.md"
     ]
   },
   {
@@ -290,54 +471,6 @@
     "license": "BSD-2-Clause",
     "notices": [
       "python-packages/xlsxwriter-3.2.9/LICENSE.txt"
-    ]
-  },
-  {
-    "name": "pyOpenSSL",
-    "version": "26.2.0",
-    "license": "Apache License, Version 2.0",
-    "notices": [
-      "python-packages/pyOpenSSL-26.2.0/LICENSE"
-    ]
-  },
-  {
-    "name": "h2",
-    "version": "4.3.0",
-    "license": "The MIT License (MIT)\n\nCopyright (c) 2015-2020 Cory Benfield and contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
-    "notices": [
-      "python-packages/h2-4.3.0/LICENSE"
-    ]
-  },
-  {
-    "name": "hpack",
-    "version": "4.2.0",
-    "license": "MIT",
-    "notices": [
-      "python-packages/hpack-4.2.0/LICENSE"
-    ]
-  },
-  {
-    "name": "hyperframe",
-    "version": "6.1.0",
-    "license": "The MIT License (MIT)\n\nCopyright (c) 2014 Cory Benfield\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
-    "notices": [
-      "python-packages/hyperframe-6.1.0/LICENSE"
-    ]
-  },
-  {
-    "name": "simplejson",
-    "version": "4.2.0",
-    "license": "MIT OR AFL-2.1",
-    "notices": [
-      "python-packages/simplejson-4.2.0/LICENSE.txt"
-    ]
-  },
-  {
-    "name": "PySocks",
-    "version": "1.7.1",
-    "license": "BSD",
-    "notices": [
-      "python-packages/PySocks-1.7.1/LICENSE"
     ]
   },
   {
