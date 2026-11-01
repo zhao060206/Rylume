@@ -19,6 +19,9 @@ export function practiceScene(){
 /** One offline practice document. The coach occupies its own row, never a modal mask. */
 export function setupOnboarding({state,editor,api,flush,canLeave,openJob,refreshJobs,tab,toast}){
  const $=id=>document.getElementById(id),ws=$('workspace');
+ let interacted=false;
+ document.addEventListener('pointerdown',()=>interacted=true,{once:true,capture:true});
+ document.addEventListener('keydown',()=>interacted=true,{once:true,capture:true});
  let record={version:1,status:'unseen',step:'welcome',practice_job_id:null},active=false,busy=false,baseline=lessonBaseline(null),exported=false,persistQueue=Promise.resolve(),saveNotice=false,previousFocus=null,sessionEpoch=0;
  const welcome=document.createElement('dialog');welcome.id='onboarding-welcome';welcome.className='onboarding-welcome';welcome.setAttribute('aria-labelledby','onboarding-title');welcome.setAttribute('aria-describedby','onboarding-intro');
  welcome.innerHTML=`<button type="button" class="icon-button onboarding-close" id="onboarding-dismiss" aria-label="关闭新手引导">×</button>
@@ -43,7 +46,7 @@ export function setupOnboarding({state,editor,api,flush,canLeave,openJob,refresh
 
  const steps={
   select:{title:'先点选一个图形',copy:'点一下画布里的任意步骤框。出现选框后，就可以拖动它；连线会跟着移动。',action:'找到整张图'},
-  edit:{title:'让文字变成你的说法',copy:'在上方「修改文字」里改一个名称，例如把「准备样本」改为「采集样本」。按 Enter 或点击别处保存。',action:'去修改文字'},
+  edit:{title:'让文字变成你的说法',copy:'在右侧「修改文字」里改一个名称，例如把「准备样本」改为「采集样本」。按 Enter 或点击别处保存。',action:'去修改文字'},
   asset:{title:'再添一个素材',copy:'点击顶部「添加素材」，搜索或选择一个素材。点一下就会加入练习图，再拖到合适的位置。',action:'打开素材库'},
   export:{title:'把图保存成文件',copy:'点击右上角「导出图片」。PNG 适合直接使用，PPTX 可以继续改字。文件保存成功后，这一步才会完成。',action:'打开导出'}
  };
@@ -126,5 +129,5 @@ export function setupOnboarding({state,editor,api,flush,canLeave,openJob,refresh
  $('onboarding-ai').onclick=()=>{finish.close();$('open-settings').click();};
  replay.onclick=homeHelp.onclick=()=>openWelcome();
  new MutationObserver(update).observe($('welcome'),{attributes:true,attributeFilter:['hidden']});
- return {refresh:update,exported(jobId){if(active&&record.practice_job_id===jobId){exported=true;update();}},async ready(){try{const saved=(await api('/api/onboarding')).state;if(saved?.version===1)record=saved;if(['unseen','in_progress'].includes(record.status)&&!state.id&&$('welcome').hidden===false&&!document.querySelector('dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))openWelcome();}catch{ /* An unavailable guide must never block the workspace. */ }}};
+ return {refresh:update,exported(jobId){if(active&&record.practice_job_id===jobId){exported=true;update();}},async ready(){try{const saved=(await api('/api/onboarding')).state;if(saved?.version===1)record=saved;if(!interacted&&['unseen','in_progress'].includes(record.status)&&!state.id&&$('welcome').hidden===false&&!document.querySelector('dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))openWelcome();}catch{ /* An unavailable guide must never block the workspace. */ }}};
 }

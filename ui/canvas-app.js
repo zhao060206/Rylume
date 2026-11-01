@@ -1,5 +1,7 @@
 import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
 import {setupPersonalAssets} from './personal-assets.js';
+import {setupFigureImport} from './figure-import.js';
+import {setupWorkspaceExperience} from './workspace-experience.js';
 import {setupReleaseNotes} from './release-notes.js';
 import {setupDocumentAssistant} from './document-assistant.js';
 import {setupOnboarding} from './onboarding.js';
@@ -130,11 +132,9 @@ function renderProperties(){
  function advanced(title){const details=el('details','property-advanced');details.append(el('summary','',title));parent.append(details);return details;}
  if(objects.length){
   const o=objects[0];parent.append(el('p','property-description',objects.length>1?`已选 ${objects.length} 个对象。颜色和字号会同时应用到这些对象。`:o.locked?'此对象已锁定。可以在图层中解锁后编辑。':'在这里修改文字、颜色和状态；拖动图形调整位置。'));
-  const basic=section(parent,'文字与外观');
-  if(objects.length===1)input(basic,'名称',o.label,'text',v=>editor.changeSelection({label:v}));
-  input(basic,'字号 · pt',o.font_size_pt,'number',v=>{if(v<7||v>48){toast('字号可设为 7–48 pt');return renderProperties();}editor.changeSelection({font_size_pt:v});});
-  input(basic,'填充颜色',o.fill||'#dae8ed','color',v=>editor.changeSelection({fill:v}));input(basic,'轮廓颜色',o.stroke||'#326c82','color',v=>editor.changeSelection({stroke:v}));
-  const bio=section(parent,'状态与说明');
+  const basic=section(parent,'轮廓');
+  input(basic,'轮廓颜色',o.stroke||'#326c82','color',v=>editor.changeSelection({stroke:v}));
+  const bio=section(advanced('科学状态与说明'),'状态');
   if(o.type==='cell'){
    const plant=o.state?.startsWith('plant_'),prefix=plant?'plant_':'',phaseChoices=[['interphase','间期'],['prophase','前期'],['prometaphase','前中期'],['metaphase','中期'],['anaphase','后期'],['telophase','末期'],['cytokinesis','胞质分裂']].map(([value,label])=>[prefix+value,label]);
    const options=[['',plant?'通用细胞':'默认细胞'],...phaseChoices,...(plant?[]:[['apoptotic','凋亡']])];
@@ -151,7 +151,7 @@ function renderProperties(){
  }else if(relations.length){
   const r=relations[0],grid=section(parent,'连线表达什么'),change=c=>editor.applyOperations([{op:'update_relation',id:r.id,changes:c}]);
   grid.append(relationChoices(editor,{compact:true}));
-  input(grid,'线上文字',r.label,'text',v=>change({label:v}));parent.append(el('p','property-description','拖动两端圆点，可连接对象边缘任意位置；中间圆点调整弯曲。线上文字可以单独拖动或双击改字。'));
+  parent.append(el('p','property-description','拖动两端圆点，可连接对象边缘任意位置；中间圆点调整弯曲。线上文字可以单独拖动或双击改字。'));
   const meaning=section(parent,'作用方式与核对');
   input(meaning,'作用方式',String(!!r.indirect),'select',v=>change({indirect:v==='true'}),[['false','直接 · 实线'],['true','间接 · 虚线']]);
   input(meaning,'含义状态',String(!!r.uncertain),'select',v=>change({uncertain:v==='true'}),[['true','待作者核对'],['false','已核对并保存定义']]);
@@ -281,6 +281,8 @@ $('open-start').addEventListener('click',()=>{startupNavigationCancelled=true;lo
 documentsUI=setupDocumentAssistant({state:S,editor,api,toast,composer:composerUI});
 onboardingUI=setupOnboarding({state:S,editor,api,flush,canLeave,openJob,refreshJobs,tab,toast});
 const personalUI=setupPersonalAssets({api,toast,library:libraryUI,state:S});
+const figureImportUI=setupFigureImport({state:S,editor,api,flush,canLeave,openJob,refreshJobs,toast});
+const experienceUI=setupWorkspaceExperience({imports:figureImportUI,composer:composerUI,blank});
 const releaseUI=setupReleaseNotes({api,toast});
 // Keep command names and visible targets in sync as modules are added. A
 // broken target is reported for diagnostics but never blocks the editor.

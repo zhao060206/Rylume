@@ -222,7 +222,7 @@ function labelBaseline(o,lines,fs){
 }
 function labelLines(o) {
   const text = o.label || '', fs = Math.max(7, o.font_size_pt || 8) * 25.4 / 72;
-  const limit = (o.state||'').startsWith('flow_')?Math.max(5,o.w-(o.state==='flow_decision'?10:5)):Math.max(24, Math.min(42, (o.w || 18) + 12));
+  const limit = o.type==='text'?Math.max(5,o.w||18):(o.state||'').startsWith('flow_')?Math.max(5,o.w-(o.state==='flow_decision'?10:5)):Math.max(24, Math.min(42, (o.w || 18) + 12));
   const hasSpace = text.includes(' ');
   const words = hasSpace ? text.split(' ') : [...text];
   const spacer = hasSpace ? ' ' : '';
@@ -230,7 +230,7 @@ function labelLines(o) {
   const measure = str => measureMM(str,fs);
   for (const word of words) {
     const cand = current ? current + spacer + word : word;
-    if (current && measure(cand) > limit) { lines.push(current); current = word; }
+    if (current && measure(cand) > limit + .001) { lines.push(current); current = word; }
     else current = cand;
   }
   if (current) lines.push(current);
@@ -536,7 +536,7 @@ export class SceneEditor {
       group.append(body);
 
       const canonicalLabels=source?[...source.querySelectorAll('[data-label-for]')]:[];
-      const preserveLabels=old&&canonicalLabels.length&&old.label===o.label&&old.w===o.w&&old.h===o.h&&old.font_size_pt===o.font_size_pt;
+      const preserveLabels=old&&canonicalLabels.length&&old.label===o.label&&old.w===o.w&&old.h===o.h&&old.font_size_pt===o.font_size_pt&&(o.type!=='text'||old.fill===o.fill);
       if(preserveLabels){for(const original of canonicalLabels){const label=original.cloneNode(true);
         label.setAttribute('x',Number(label.getAttribute('x'))+o.x+o.w/2-old.x-old.w/2+(o.label_dx||0)-(old.label_dx||0));
         label.setAttribute('y',Number(label.getAttribute('y'))+o.y+o.h-old.y-old.h+(o.label_dy||0)-(old.label_dy||0));group.append(label);}}
@@ -549,7 +549,7 @@ export class SceneEditor {
           'text-anchor': 'middle',
           'font-family': 'Arial, Microsoft YaHei, sans-serif',
           'font-size': fs,
-          fill: '#253844'
+          fill: o.type==='text'?(o.fill||'#253844'):'#253844'
         }, lineText);
         group.append(label);
       });

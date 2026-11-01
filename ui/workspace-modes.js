@@ -6,7 +6,7 @@ export const normalizeWorkspaceMode = value => value === 'professional' ? value 
 export function defaultModeLayout(mode, width = 1280) {
   return normalizeWorkspaceMode(mode) === 'professional'
     ? {tab:'layers', inspector:'properties', leftCollapsed:width < 1100, propertiesHidden:false}
-    : {tab:'assets', inspector:'properties', leftCollapsed:true, propertiesHidden:true};
+    : {tab:'assets', inspector:'properties', leftCollapsed:true, propertiesHidden:false};
 }
 
 export function responsiveModeLayout(layout, width) {

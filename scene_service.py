@@ -256,6 +256,8 @@ def _repair(app, job):
 
 def dispatch(handler, method, path, app):
     """Return True only when the request belongs to the scene-v2 adapter."""
+    import figure_imports
+    if figure_imports.dispatch(handler, method, path, app): return True
     import personal_assets
     if personal_assets.dispatch(handler, method, path, app): return True
     import release_notes

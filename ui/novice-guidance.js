@@ -60,7 +60,7 @@ export function setupNovice({state,editor,api,toast,flush,canLeave,openJob,refre
       if(state.id&&!await canLeave())return;
       const result=await api('/api/scene/example',{template:'sb_socs_feedback',canvas_mm:[180,120]});
       await follow(result.job_id);editor.fit();
-      toast('示例已打开。先点一个图形，上方就能直接改字；修改只保存在这份副本中。');
+      toast('示例已打开。先点一个图形，右侧就能直接改字；修改只保存在这份副本中。');
     }catch(e){toast(e.message,true);}finally{starting=false;$('welcome-example').disabled=false;}
   };
   $('workflow-help').onclick=()=>$('beginner-help').click();

@@ -43,6 +43,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     
     for(const n of document.querySelectorAll('[data-inspector]'))n.setAttribute('aria-selected',String(n.dataset.inspector===name));
     $('property-content').hidden=name!=='properties';$('inspector-review').hidden=name!=='review';$('inspector-task').hidden=name!=='task';
+    $('properties').dataset.inspector=name;
     });syncPanelButtons($('workspace'));
     refresh();
   }
@@ -206,7 +207,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   }
   editor.host.addEventListener('wheel',e=>{if(!state.revision&&$('legacy-art')){e.preventDefault();legacyZoom(null,e.deltaY<0?1.1:1/1.1);}},{passive:false});
   setMode('vector');refresh();
-  return {refresh,showRight,setMode,legacyZoom,getMode:()=>mode,selection(){refresh();},payload(text){
+  return {refresh,showRight,setMode,legacyZoom,getMode:()=>mode,selection(){if(editor.selectedIds.length&&$('workspace').classList.contains('properties-hidden')&&!$('workspace').classList.contains('annotations-open'))showRight('properties');else refresh();},payload(text){
     const enhanced=generationBrief(state,text);
     if(mode==='image'&&enhanced.length>4000)throw Error('科研插画描述请控制在 4000 字以内；当前描述已保留。');
     const [width,height]=$('new-size').value.split('x').map(Number);

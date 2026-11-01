@@ -32,6 +32,7 @@ export function setupCreationComposer({state,toast,workflow,workspace}){
   $('restore-document-brief').hidden=!canRestorePrompt();
  }
  function open(){
+  document.dispatchEvent(new Event('creation-surface-requested'));
   mount();
   // Home is ready to type; the same inputs open in a dialog during editing.
   if($('welcome').hidden&&!dialog.open)dialog.showModal();

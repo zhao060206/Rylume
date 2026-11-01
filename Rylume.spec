@@ -25,6 +25,7 @@ hiddenimports += ['sketch_layout']
 hiddenimports += ['document_conversion', 'document_advisor', 'document_assistant', 'onboarding_state']
 hiddenimports += ['annotation_redraw']
 hiddenimports += ['personal_assets', 'release_notes']
+hiddenimports += ['figure_imports']
 datas += [('CHANGELOG.md', '.')]
 # MarkItDown detects local files with Magika's ONNX data. PDFMiner requires CMaps.
 # Keep optional online/audio converters inactive; legacy Office uses local LibreOffice.

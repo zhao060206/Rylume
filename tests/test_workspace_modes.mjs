@@ -4,7 +4,7 @@ import {normalizeWorkspaceMode,defaultModeLayout,responsiveModeLayout,modeReques
 assert.equal(normalizeWorkspaceMode(null),'simple');
 assert.equal(normalizeWorkspaceMode('unknown'),'simple');
 assert.equal(normalizeWorkspaceMode('professional'),'professional');
-assert.deepEqual(defaultModeLayout('simple'),{tab:'assets',inspector:'properties',leftCollapsed:true,propertiesHidden:true});
+assert.deepEqual(defaultModeLayout('simple'),{tab:'assets',inspector:'properties',leftCollapsed:true,propertiesHidden:false});
 assert.equal(defaultModeLayout('professional',1280).leftCollapsed,false);
 assert.equal(defaultModeLayout('professional',1000).leftCollapsed,true);
 const remembered={tab:'references',inspector:'review',leftCollapsed:false,propertiesHidden:false};

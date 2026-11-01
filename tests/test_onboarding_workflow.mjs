@@ -10,6 +10,7 @@ class Element extends EventTarget{
 }
 function get(id){if(!nodes.has(id)){const e=new Element();e.id=id;nodes.set(id,e);}return nodes.get(id);}
 const nativeCreate=tag=>new Element(tag),doc={body:new Element('body'),createElement:tag=>{const e=nativeCreate(tag);Object.defineProperty(e,'id',{get(){return this._id;},set(v){this._id=v;nodes.set(v,this);}});return e;},getElementById:get,querySelector:s=>s==='dialog[open]'?elements.find(e=>e.open):get(s),querySelectorAll:()=>elements.filter(e=>e.classes.has('onboarding-focus')),get activeElement(){return focused;}};
+const documentEvents=new EventTarget();doc.addEventListener=(...args)=>documentEvents.addEventListener(...args);doc.dispatchEvent=(...args)=>documentEvents.dispatchEvent(...args);
 globalThis.document=doc;globalThis.MutationObserver=class{observe(){}};
 get('welcome').hidden=false;const host=get('canvas-host');host.clientWidth=900;host.clientHeight=500;
 const state={id:null,revision:0},editor={host,scene:null,offset:{x:0,y:0},selectedIds:[],position(){},fit(){},setSelection(ids){this.selectedIds=ids;}};

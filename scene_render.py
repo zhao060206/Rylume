@@ -154,13 +154,13 @@ def _measure(text,fs):
 
 def _label_lines(o):
     text=o.get('label','');fs=max(7,o.get('font_size_pt',8))*PT_MM
-    limit=max(5,o['w']-(10 if o.get('state')=='flow_decision' else 5)) if o.get('state','').startswith('flow_') else max(24,min(42,o['w']+12))
+    limit=max(5,o['w']) if o.get('type')=='text' else max(5,o['w']-(10 if o.get('state')=='flow_decision' else 5)) if o.get('state','').startswith('flow_') else max(24,min(42,o['w']+12))
     lines=[];current=''
     words=text.split(' ') if ' ' in text else list(text)
     spacer=' ' if ' ' in text else ''
     for word in words:
         candidate=current+spacer+word if current else word
-        if current and _measure(candidate,fs)>limit:lines.append(current);current=word
+        if current and _measure(candidate,fs)>limit+.001:lines.append(current);current=word
         else:current=candidate
     if current:lines.append(current)
     return lines or [''],fs
@@ -367,7 +367,7 @@ def _object(o,palette,stroke_pt=.8,glyph_tint=.8):
         p.append(_text(bx,by+.86,'P',7,anchor='middle',fill='#7D5B26'))
     p.append('</g>')
     lines,fs=_label_lines(o)
-    for i,text in enumerate(lines):p.append(_text(x+w/2+(5 if o.get('state','').startswith('legend_') else 0)+o.get('label_dx',0),label_baseline(o,lines,fs)+i*fs*1.23,text,o.get('font_size_pt',8),anchor='middle',data_label_for=oid))
+    for i,text in enumerate(lines):p.append(_text(x+w/2+(5 if o.get('state','').startswith('legend_') else 0)+o.get('label_dx',0),label_baseline(o,lines,fs)+i*fs*1.23,text,o.get('font_size_pt',8),fill=o.get('fill','#2F4552') if kind=='text' else '#2F4552',anchor='middle',data_label_for=oid))
     p.append('</g>');return ''.join(p)
 
 

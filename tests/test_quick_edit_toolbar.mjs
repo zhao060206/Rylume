@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const html=await readFile(new URL('../ui/canvas-studio.html',import.meta.url),'utf8');
 const css=await readFile(new URL('../ui/quick-edit-toolbar.css',import.meta.url),'utf8');
+const experience=await readFile(new URL('../ui/workspace-experience.js',import.meta.url),'utf8');
 const toolbarStart=html.indexOf('class="toolbar" role="toolbar"');
 const quick=html.indexOf('class="quick-edit"');
 const actions=html.indexOf('class="canvas-actions"');
@@ -12,4 +13,6 @@ assert.ok(html.includes('id="toolbar-cancel"'),'Every drawing tool has an explic
 assert.ok(html.includes('id="toolbar-guidance"'),'The idle toolbar explains the next action');
 assert.match(html,/class="tool text-tool quick-overflow-action" data-command="duplicate"/);
 assert.match(html,/class="tool text-tool quick-overflow-action" data-command="delete"/);
-console.log('Quick editing stays inside the toolbar and has narrow-screen actions.');
+assert.match(experience,/\$\('property-content'\)\.before\(quick\)/,'Selection editing moves into the stationary inspector at runtime');
+assert.match(experience,/quick\.classList\.add\('inspector-quick-edit'\)/);
+console.log('Quick editing has a stable toolbar source, moves into the inspector, and retains narrow-screen actions.');

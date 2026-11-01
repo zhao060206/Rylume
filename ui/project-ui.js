@@ -2,6 +2,7 @@
 export function creationProject(path,state){
  const parent=path.match(/^\/api\/jobs\/([^/]+)\/(revise|redraw|retry|editable-copy)$/);
  if(parent)return {parentId:parent[1],projectId:state.projectData?.documents[parent[1]]??state.activeProject??''};
+ if(/^\/api\/(figure-imports\/imp_[a-f0-9]{24}\/accept|personal-templates\/tpl_[a-f0-9]{24}\/use)$/.test(path))return {projectId:state.activeProject||''};
  return ['/api/generate','/api/jobs','/api/scene/blank','/api/scene/example','/api/scene/import'].includes(path)?{projectId:state.activeProject||''}:null;
 }
 export function projectSections(jobs,data={},query=''){
