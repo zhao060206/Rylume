@@ -112,7 +112,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     $('model-status').textContent='正在读取配置…';$('models-dialog').showModal();
     try{
       modelConfig=(await api('/api/state')).config||{};const body=$('model-settings');body.replaceChildren();modelInputs={};
-      for(const [key,title,role] of [['text','文本模型','机制规划与 AI 修改'],['image','生图模型','科研插画与素材生成'],['vision','视觉模型','参考图分析与视觉审阅']]){
+      for(const [key,title,role] of [['text','文本模型','机制规划与 AI 修改'],['image','生图模型','科研插画与素材生成'],['vision','视觉模型','可选；留空时复用文本模型进行参考图分析与视觉审阅']]){
         const item=modelConfig[key]||{},section=el('section','settings-group');section.append(el('h3','',title),el('p','muted small',role));
         modelInputs[key]={base_url:field(section,`${title}服务地址`,item.base_url),model:field(section,`${title}名称`,item.model),api_key:field(section,`${title}密钥`,'','password')};
         modelInputs[key].api_key.placeholder=item.api_key_set?'已保存，留空保持不变':'粘贴 API Key';
@@ -131,7 +131,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
         for(const [v,t] of options){const o=el('option','',t);o.value=v;select.append(o);}select.value=value;label.append(select);grid.append(label);advancedInputs[key]=select;
       }
       advancedInputs.font=field(grid,'插画导出字体',modelConfig.font||'Arial');advanced.append(grid);body.append(advanced);
-      $('model-status').textContent='三种模型与原有服务配置共用，留空的密钥不会覆盖已保存值。';
+      $('model-status').textContent='视觉模型不是必填项；视觉模型地址或名称留空时，审查会复用文本模型。留空密钥不会覆盖已保存值。';
     }catch(e){$('model-status').textContent=e.message;}
   }
   $('open-settings').onclick=settings;$('empty-model-settings').onclick=settings;

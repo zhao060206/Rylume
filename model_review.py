@@ -800,6 +800,19 @@ def _geometry_guard(findings: list[dict], svg_bytes: bytes,
     return kept
 
 
+def vision_config(config: dict) -> dict:
+    """Return the configured visual reviewer, falling back to text.
+
+    An empty vision section may still contain timeout or UI metadata, so using
+    ``config.get('vision') or config.get('text')`` is not sufficient. The
+    endpoint and model fields decide whether the section is usable.
+    """
+    vision = dict(config.get("vision") or {})
+    if not vision.get("base_url") or not vision.get("model"):
+        vision = dict(config.get("text") or {})
+    return vision
+
+
 def review_figure(svg_bytes: bytes, config: dict, context: dict | None = None) -> tuple[list[dict], dict]:
     """Strict vision review of a rendered figure.
 
@@ -809,7 +822,7 @@ def review_figure(svg_bytes: bytes, config: dict, context: dict | None = None) -
     """
     started = time.time()
     data_url = _image_data_url(svg_bytes, config)
-    vision = config.get("vision") or config.get("text") or {}
+    vision = vision_config(config)
     if not (vision.get("base_url") and vision.get("model")):
         raise RuntimeError("未配置视觉模型（vision.base_url / vision.model）")
 

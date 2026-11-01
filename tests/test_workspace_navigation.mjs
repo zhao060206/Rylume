@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {recentSections,recentStatus} from '../ui/workspace-navigation.js';
+import {recentSections,recentStatus,normalizeRecentOrder} from '../ui/workspace-navigation.js';
 
 const now=new Date(2026,9,30,12),created=(day,hour=10)=>new Date(2026,9,day,hour).getTime()/1000;
 const jobs=[
@@ -19,4 +19,9 @@ assert.equal(recentStatus(jobs[2]).label,'生成中');
 assert.equal(recentStatus({status:'completed',illustration_result:{state:'partial'}}).label,'草稿');
 assert.equal(recentStatus({status:'cancelled'}).label,'已取消');
 assert.equal(jobs[0].id,'old','Sorting recent documents must not mutate the job store');
+assert.deepEqual(recentSections(jobs,'',now,{mode:'collection'}).map(g=>[g.label,g.jobs.map(j=>j.id)]),[
+ ['未分类',['running','failed','old']],['实验流程',['yesterday']]
+]);
+assert.deepEqual(normalizeRecentOrder(jobs,['yesterday','missing','running']),['yesterday','running','failed','old']);
+assert.deepEqual(recentSections(jobs,'',now,{order:['old','running']}).flatMap(g=>g.jobs).map(j=>j.id),['old','running','failed','yesterday']);
 console.log('Recent documents sort by date, retain in-flight and failed work, filter archives and search titles or collections.');

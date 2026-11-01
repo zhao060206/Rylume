@@ -1169,7 +1169,8 @@ def _run_autofix(job: dict, source: dict, instruction: str, config: dict) -> Non
         _inherit_source_config(config, source)
         # A repair loop is interactive: keep each review bounded so one slow
         # gateway cannot hold the whole job for many minutes per round.
-        vision_cfg = dict(config.get("vision") or {})
+        from model_review import vision_config
+        vision_cfg = vision_config(config)
         try:
             vision_cfg["timeout"] = min(float(vision_cfg.get("timeout") or 180), 60)
         except (TypeError, ValueError):
