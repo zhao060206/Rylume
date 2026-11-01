@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {projectSections,creationProject} from '../ui/project-ui.js';
+const jobs=[{id:'a',title:'通路图',created:10},{id:'b',title:'流程图',created:20},{id:'c',title:'已归档',archived:true,created:30}];
+const data={projects:[{id:'one',title:'论文一'},{id:'empty',title:'新项目'}],documents:{a:'one',b:'one',c:'one'},order:{one:['a','b']}};
+assert.deepEqual(projectSections(jobs,data).map(s=>[s.label,s.jobs.map(j=>j.id)]),[['论文一',['a','b']],['新项目',[]],['未归入项目',[]]]);
+assert.deepEqual(projectSections(jobs,data,'流程').map(s=>s.jobs.map(j=>j.id)),[['b']]);
+assert.equal(projectSections(jobs,data,'新项目')[0].id,'empty');
+assert.deepEqual(projectSections(jobs,{...data,documents:{a:'one'}}).at(-1).jobs.map(j=>j.id),['b']);
+assert.equal(jobs[0].id,'a');
+const state={activeProject:'one',projectData:{documents:{original:'two',unfiled:''}}};
+const submitted=creationProject('/api/generate',state);state.activeProject='changed';assert.equal(submitted.projectId,'one');
+assert.equal(creationProject('/api/jobs/original/redraw',state).projectId,'two');
+assert.equal(creationProject('/api/jobs/unfiled/revise',state).projectId,'');
+assert.equal(creationProject('/api/jobs/original/document-info',state),null);
+console.log('Projects retain empty folders, stable membership, stored order, search and archived-document filtering.');

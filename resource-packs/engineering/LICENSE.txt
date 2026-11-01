@@ -1,5 +1,438 @@
-Asset artwork is imported from online open-license sources and attributed per manifest item.
-ScanSci SVG library: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
-Material Design Icons: Apache-2.0 — https://www.apache.org/licenses/LICENSE-2.0
-Rylume sanitises the SVG element/attribute set for safe local editing; it does not claim authorship of source drawings.
-Scientific mechanisms are schematic and should be checked against the intended research context.
+Open-source artwork. The application does not claim authorship of these images.
+
+Quarantined legacy files are retained only for historical documents and are not offered in the palette.
+
+Per-asset attribution, original URLs, modifications and licences follow.
+
+
+Pump — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pump.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Valve — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/valve.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Pipe — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Tank — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tank.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Turbine — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/turbine.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Gear — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cog.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Motor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Sensor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/built_building.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Chip — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chip.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Actuator — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_robotics.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Robot — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/robot.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Heat exchanger — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Filter — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/filter.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Compressor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/built_settlement.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Fan — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/fan.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Nozzle — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Piston — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/piston.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Truss — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_heat_exchange.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Centrifugal pump — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pump.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Recip pump — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pump.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Boiler — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_wind.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Cooling tower — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tower-beach.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Distillation tower — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tower-beach.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Reactor vessel — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Pipeline — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Ball bearing — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Shaft — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Coupling — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Belt drive — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_heat_exchange.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Chain drive — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Spur gear — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cog.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Planetary gear — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cog.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Cam — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_wind.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Crank — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_electrolysis.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Linkage — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Hydraulic — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hydraulic-oil-level.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Pneumatic — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_mining.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Pressure gauge — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gauge.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Thermocouple — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_fuel_cells.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Flow meter — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/meter-electric.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+PLC — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_mining.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Inverter — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_mining.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+HMI — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_pumps_valves.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Conveyor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_wind.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Delta robot — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delta.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+AGV — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Drone — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/drone.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+3d printer — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/printer.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Cnc — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_electrolysis.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Lathe — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Milling — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_heat_exchange.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Welding robot — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/robot.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Assembly line — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/line-scan.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Inspection — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_robotics.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Laser cutter — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Battery pack — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/battery.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Motor drive — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Dc bus — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bus.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Grid — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Substation — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_pumps_valves.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Wind turbine — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wind-turbine.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Solar panel — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solar-panel.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+HVAC — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hvac.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Clean room — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/room-service.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Flange — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_electrolysis.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Gasket — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Bolt — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bolt.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+SCADA — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+PID — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/built_building.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Heat pump — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Heat sink — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Radiator — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radiator.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Pump curve — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pump.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Process valve — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/valve.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Pipe network — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+CFD mesh — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/view-grid.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Stress field — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-line.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Modal test — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Vibration monitor — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vibrate.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Gearbox — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Differential gear — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/car-shift-pattern.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Brake — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/car-brake-abs.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Clutch — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/car-clutch.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Spring damper — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Rolling contact — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-orbit.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Wind farm — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wind-turbine.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Solar tracker — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solar-panel.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Battery management system — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/battery.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+CAN bus — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/lan-connect.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+IoT gateway — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Robot gripper — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/robot.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Machine vision — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+LiDAR — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radar.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Torque sensor — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-right.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Encoder — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/counter.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Servo motor — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/engine.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Thermal camera — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+3D scan — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/scan-helper.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Fault tree — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/file-tree.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+FMEA analysis — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sitemap.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Server — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/server.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Engine — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/engine.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Propeller — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/propeller.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Automatic Gearbox — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/automatic-gearbox.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Manual Gearbox — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/manual-gearbox.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Gear — Phosphor Icons; MIT; https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE; https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/gear.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Wrench — Lucide Icons and contributors; ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE; https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/wrench.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Hammer — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/hammer.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Hammer Drill — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/hammer-drill.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Nut — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/nut.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Wheel — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/wheel.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Steering Wheel — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/steering-wheel.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Tools — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tools.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Conveyor Belt — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/conveyor_belt/materialsymbolsoutlined/conveyor_belt_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Assembly — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/assembly.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Robot Arm — Lucide Icons and contributors; ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE; https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/robot-arm.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Precision Manufacturing — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/precision_manufacturing/materialsymbolsoutlined/precision_manufacturing_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Manufacturing — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/manufacturing/materialsymbolsoutlined/manufacturing_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Architecture — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/architecture/materialsymbolsoutlined/architecture_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Power — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/power/materialsymbolsoutlined/power_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Cable — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/cable/materialsymbolsoutlined/cable_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Electric Meter — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/electric_meter/materialsymbolsoutlined/electric_meter_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Electrical Services — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/electrical_services/materialsymbolsoutlined/electrical_services_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Developer Board — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/developer_board/materialsymbolsoutlined/developer_board_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Solar Panel — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/solar-panel.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Wind Turbine — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-wind-turbine.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Nuclear Plant — Phosphor Icons; MIT; https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE; https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/nuclear-plant.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Heat Pump — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/heat_pump/materialsymbolsoutlined/heat_pump_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+EV Charging Station — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/ev_station/materialsymbolsoutlined/ev_station_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Battery Charging — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/battery_charging_full/materialsymbolsoutlined/battery_charging_full_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Crane — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/crane.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Tower Crane — Phosphor Icons; MIT; https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE; https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/crane-tower.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Forklift — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/forklift.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Bulldozer — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/bulldozer.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Backhoe — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/backhoe.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Tractor — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tractor.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Bridge — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-bridge.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Arch Bridge — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-bridge-2.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Tunnel — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-tunnel.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Factory — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-factory.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Warehouse — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-warehouse.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Foundation — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/foundation/materialsymbolsoutlined/foundation_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Roofing — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/roofing/materialsymbolsoutlined/roofing_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Plumbing — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/plumbing/materialsymbolsoutlined/plumbing_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Construction — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/construction/materialsymbolsoutlined/construction_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Engineering — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/engineering/materialsymbolsoutlined/engineering_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Dam — Lucide Icons and contributors; ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE; https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/dam.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Road — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/road.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Container — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/container.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Broadcast tower — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-broadcast-tower.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Pipe — Phosphor Icons; MIT; https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE; https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/pipe.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Pipeline — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/pipeline.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Valve — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/valve/materialsymbolsoutlined/valve_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Water Pump — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_pump/materialsymbolsoutlined/water_pump_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Propane Tank — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/propane_tank/materialsymbolsoutlined/propane_tank_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Oil Barrel — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/oil_barrel/materialsymbolsoutlined/oil_barrel_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Gas Meter — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/gas_meter/materialsymbolsoutlined/gas_meter_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Robot — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/robot.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Smart Robot — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/smart_toy/materialsymbolsoutlined/smart_toy_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Drone — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/drone.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Sensors — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/sensors/materialsymbolsoutlined/sensors_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Microchip — Lucide Icons and contributors; ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE; https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/microchip.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Circuitry — Phosphor Icons; MIT; https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE; https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/circuitry.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Cell Tower — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/cell_tower/materialsymbolsoutlined/cell_tower_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Train — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/train/materialsymbolsoutlined/train_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+
+Lucide-ISC.txt
+
+
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Phosphor-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2021 Phosphor Icons
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Tabler-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2026 Paweł Kuna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

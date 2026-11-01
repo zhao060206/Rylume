@@ -1,5 +1,564 @@
-Asset artwork is imported from online open-license sources and attributed per manifest item.
-ScanSci SVG library: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
-Material Design Icons: Apache-2.0 — https://www.apache.org/licenses/LICENSE-2.0
-Rylume sanitises the SVG element/attribute set for safe local editing; it does not claim authorship of source drawings.
-Scientific mechanisms are schematic and should be checked against the intended research context.
+Open-source artwork. The application does not claim authorship of these images.
+
+Quarantined legacy files are retained only for historical documents and are not offered in the palette.
+
+Per-asset attribution, original URLs, modifications and licences follow.
+
+
+Heart — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heart.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Lung — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Brain — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/brain.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Kidney — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Liver — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_respiratory.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Vessel — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Capillary — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Syringe — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Tablet — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tablet.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Ultrasound — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+MRI — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+ECG — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Patient — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Hospital — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hospital.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Stethoscope — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/stethoscope.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Biomarker — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Cohort — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Iv — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/iv-bag.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Synapse — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Axon — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Spine — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Skeleton — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Muscle — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Skin — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Stomach — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/stomach.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Intestine — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Pancreas — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Spleen — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_archaeon.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Bladder — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Uterus — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Ovary — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Eye — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Ear — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ear-hearing.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Tooth — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tooth.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Bone — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bone.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Joint — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_virus.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Artery — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Vein — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Lymph — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Immune — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Rbc — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_archaeon.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Platelet — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Antibody — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Antigen — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+DNA — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Chromosome — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Gene — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Membrane — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_cardiovascular_lymph.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Mitochondria — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Nucleus — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Ribosome — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Protein — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Enzyme — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Receptor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Cytokine — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Inflammation — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Infection — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_bacterium.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Bacteria — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bacteria.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Virus — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/virus.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Fungus — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Parasite — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Tumor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Metastasis — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Surgery — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Scalpel — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Forceps — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Endoscope — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Ventilator — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Defibrillator — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Pacemaker — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Dialysis — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_neural_sensory.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+CT — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Xray — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_cardiovascular_lymph.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+PET — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_neural_sensory.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Lab test — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Vaccine — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Capsule — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_virus.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Inhaler — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Cell — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Tissue section — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/microscope.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Organoid — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shape.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Stem cell — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sprout.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+T cell — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/account-group.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+B cell — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/account-group.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Macrophage — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bacteria.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Neutrophil — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bacteria.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Dendritic cell — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tree.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Complement system — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Blood-brain barrier — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blood-bag.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Synapse — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/brain.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+EEG — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/brain.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Ophthalmoscope — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_neural_sensory.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Dermatoscope — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Biopsy — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/needle.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Histology — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Cell culture plate — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Flow cytometry — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+PCR assay — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Sequencer — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Drug target — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pill.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Pharmacokinetic curve — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Dose-response — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/needle.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Placebo control — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pill.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Blinded trial — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye-off.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Randomization — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Survival curve — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-timeline.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Cohort flow — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_bacterium.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Risk score — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/alert.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+macrophage — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/macrophage.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+t lymphocyte — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/t-lymphocyte.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+b lymphocyte — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/b-lymphocyte.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+dendritic cell 1 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/dendritic-cell-1.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+erythrocyte — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/erythrocyte.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+antibody — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+antibody ligand 1 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-ligand-1.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+fibrin 1 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/fibrin-1.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+monocyte 1 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/monocyte-1.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+neutrophil granulocyte 1 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/neutrophil-granulocyte-1.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+eosinophil granulocyte 1 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/eosinophil-granulocyte-1.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+hematopoetic stem cell — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/hematopoetic-stem-cell.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+centrifuge — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/centrifuge.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+optical microscope — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/microscope.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+incubator — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/incubator.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+electrophoresis chamber — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/electrophoresis-chamber.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+gel electrophoresis — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/gel-electrophoresis.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+spectrophotometer — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/spectrophotometer.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+glassslide top — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/glassslide-top.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+analytical balance — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/scale.svg; Styles and transforms resolved into editable flat SVG paths; geometry and source colours retained.
+
+flow cytometer cell sorter — Derek Croote; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Derek-Croote/flow-cytometer-cell-sorter.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+microscope cartoon — Derek Croote; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Derek-Croote/microscope-cartoon.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+simple syringe cartoon — Derek Croote; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Derek-Croote/simple-syringe-cartoon.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+microfluidic chip — Marcel_Tisch; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Marcel_Tisch/microfluids_chip.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+HPLC instrument — Sasha_Sundstrom; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/Agilent_HPLC.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+FTIR spectrometer — Sasha_Sundstrom; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/FTIR-spectrometer.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+NMR spectrometer — Sasha_Sundstrom; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/NMR-spectrometer-2.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+gas chromatograph — Sasha_Sundstrom; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/gas-chromatograph-GC.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+mass spectrometer — Sasha_Sundstrom; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/mass-spectrometer-MS.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+1000 ml Erlenmeyer flask — Xavax; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Xavax/1000_ml_Erlenmeyer_flask.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+antibody 7 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-7.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+antibody 8 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-8.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+antibody 9 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-9.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+antibody ligand 2 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-ligand-2.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+antibody ligand 3 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-ligand-3.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+antibody ligand 4 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-ligand-4.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+fibrin 12 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/fibrin-12.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+adipocyte 2 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/adipocyte-2.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+adipocyte 3 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/adipocyte-3.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+adipocyte 4 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/adipocyte-4.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+deep venous system side — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/deep-venous-system-side.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+excess weight female naked — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/excess-weight-female-naked.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+excess weight male clothed — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/excess-weight-male-clothed.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+retina cell 1 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/retina-cell-1.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+retina cell 2 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/retina-cell-2.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+retina — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/retina.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+vein crosssection — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Human_physiology/Servier/vein-crosssection.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+paper chromatography — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/paper-chromatography.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+immunoglobulin 2 — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Blood_Immunology/DBCLS/immunoglobulin-2.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+eosinophil — Helicase_11; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Blood_Immunology/Helicase_11/eosinophil.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+t cell receptor — Helicase_11; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Blood_Immunology/Helicase_11/t_cell_receptor.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Anterior view of bones of right hand — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Anterior_view_of_bones_of_right_hand.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Anterior view of female pelvis — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Anterior_view_of_female_pelvis.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Anterior view of knee joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Anterior_view_of_knee_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Anterior view of male pelvis — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Anterior_view_of_male_pelvis.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Anterior view of the elbow joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Anterior_view_of_the_elbow_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Anterior view of the shoulder joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Anterior_view_of_the_shoulder_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Horizontal plane of the brain — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Horizontal_plane_of_the_brain.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Human female — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Human_female.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Lateral view of bones of right foot — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Lateral_view_of_bones_of_right_foot.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Lateral view of bones of right hand — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Lateral_view_of_bones_of_right_hand.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Lateral view of knee joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Lateral_view_of_knee_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Lateral view of ligaments of pelvis — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Lateral_view_of_ligaments_of_pelvis.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Lateral view of right hip bone — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Lateral_view_of_right_hip_bone.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Ligament of the shoulder joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Ligament_of_the_shoulder_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Medial view of bones of right foot — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Medial_view_of_bones_of_right_foot.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Medial view of ligaments of right foot — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Medial_view_of_ligaments_of_right_foot.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Medial view of right hip bone — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Medial_view_of_right_hip_bone.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Posterior view of bones of right foot — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Posterior_view_of_bones_of_right_foot.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Posterior view of bones of right hand — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Posterior_view_of_bones_of_right_hand.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Posterior view of female pelvis — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Posterior_view_of_female_pelvis.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Posterior view of knee joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Posterior_view_of_knee_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Posterior view of ligaments of pelvis — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Posterior_view_of_ligaments_of_pelvis.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Posterior view of male pelvis — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Posterior_view_of_male_pelvis.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Posterior view of the elbow joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/Posterior_view_of_the_elbow_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+anterior view of hip joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/anterior_view_of_hip_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+anterior view of hip joint ligament — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/anterior_view_of_hip_joint_ligament.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+frontal section through hip joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/frontal_section_through_hip_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+posterior view of hip joint — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/posterior_view_of_hip_joint.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+posterior view of hip joint ligament — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Human_physiology/DBCLS/posterior_view_of_hip_joint_ligament.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+24 well plate — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/24-well_plate.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Bench Female — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/Bench_Female.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Bench Male — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/Bench_Male.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+DNA sequencer — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/DNA_sequencer.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Scale Female — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/Scale_Female.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Scale Male — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/Scale_Male.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+Vaccine bottle — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/Vaccine_bottle.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+genome sequencer 5 — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/genome-sequencer-5.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+genome sequencer 8 — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/genome-sequencer-8.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+light microscope male — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/light-microscope-male.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+tube rack — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/tube-rack.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+1 5 TUBE — Helicase_11; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/Helicase_11/1_5_TUBE.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+blue bottle — Helicase_11; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/Helicase_11/blue_bottle.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+falcon 15 empty — Helicase_11; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/Helicase_11/falcon_15_empty.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+light green bottle — Helicase_11; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/Helicase_11/light_green_bottle.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+tube blood — Helicase_11; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/Helicase_11/tube_blood.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+falcon 15 — Pooja; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/Pooja/falcon_15.svg; Styles and transforms resolved into editable flat SVG paths; source colours and geometry retained.
+
+syringe with blood — va; CC0 1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Human_physiology/va/syringe_with_blood.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.16%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibodies — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibodies.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.13%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody 1 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-1.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.3%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody 10 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-10.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.36%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody 2 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-2.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 1.68%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody 3 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-3.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 2.19%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody 4 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-4.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.25%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody 5 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-5.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.23%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody 6 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-6.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.47%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody ligand 5 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-ligand-5.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.26%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody radio tag 1 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-radio-tag-1.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.28%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody radio tag 2 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-radio-tag-2.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 1.63%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody radio tag 3 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-radio-tag-3.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.23%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody radio tag 4 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-radio-tag-4.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 1.75%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+antibody radio tag 5 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-radio-tag-5.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.31%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+basophil granulocyte 4 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/basophil-granulocyte-4.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.49%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+basophil granulocyte — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/basophil-granulocyte.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.45%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+dendritic cell 2 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/dendritic-cell-2.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 2.53%, dark-outline recall 100.0%; silhouette recall 99.37% after whitespace normalization.
+
+eosinophil granulocyte 2 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/eosinophil-granulocyte-2.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 2.38%, dark-outline recall 99.58%; silhouette recall 99.99% after whitespace normalization.
+
+eosinophil granulocyte 3 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/eosinophil-granulocyte-3.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.6%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+eosinophil granulocyte 4 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/eosinophil-granulocyte-4.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 2.18%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+eosinophil granulocyte — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/eosinophil-granulocyte.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 0.53%, dark-outline recall 100.0%; silhouette recall 100.0% after whitespace normalization.
+
+erythrocyte 2 — Servier Medical Art; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Blood_Immunology/Servier/erythrocyte-2.svg; Styles and transforms flattened into editable paths with transformed stroke widths. Visual comparison passed; mean luminance difference 3.15%, dark-outline recall 96.3%; silhouette recall 97.12% after whitespace normalization.
+
+
+Lucide-ISC.txt
+
+
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Phosphor-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2021 Phosphor Icons
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Tabler-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2026 Paweł Kuna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

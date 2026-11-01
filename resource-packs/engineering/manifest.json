@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "engineering",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "title": "工程技术",
   "domain": "engineering",
-  "min_app_version": "3.1.0",
+  "min_app_version": "4.8.0",
   "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
@@ -32,7 +32,9 @@
       "source_file": "pump.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pump.svg",
-      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8"
+      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_valve",
@@ -59,7 +61,9 @@
       "source_file": "valve.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/valve.svg",
-      "sha256": "fd5421369d4f9c994fbad39551d8231b60ac6ce93c819a87298c84c05724829c"
+      "sha256": "fd5421369d4f9c994fbad39551d8231b60ac6ce93c819a87298c84c05724829c",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_pipe",
@@ -86,7 +90,9 @@
       "source_file": "pipe.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
-      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_tank",
@@ -113,7 +119,9 @@
       "source_file": "tank.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tank.svg",
-      "sha256": "96547ac396a5cbc4e658f6a57ae9b59183f637bd81686449d06995fe3d8e09e9"
+      "sha256": "96547ac396a5cbc4e658f6a57ae9b59183f637bd81686449d06995fe3d8e09e9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_turbine",
@@ -140,7 +148,9 @@
       "source_file": "turbine.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/turbine.svg",
-      "sha256": "4fe03267e0d880c3a5e050bd97dc48d0189c0a9b2bfee90386e0e525573a6740"
+      "sha256": "4fe03267e0d880c3a5e050bd97dc48d0189c0a9b2bfee90386e0e525573a6740",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_gear",
@@ -167,7 +177,9 @@
       "source_file": "cog.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cog.svg",
-      "sha256": "0125312d4e582eb4c3ee0049211ff71ce606e13dd4d2cf83285006f92caa8311"
+      "sha256": "0125312d4e582eb4c3ee0049211ff71ce606e13dd4d2cf83285006f92caa8311",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_motor",
@@ -194,7 +206,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_sensor",
@@ -221,7 +235,9 @@
       "source_file": "built_building.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/built_building.svg",
-      "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20"
+      "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_chip",
@@ -248,7 +264,9 @@
       "source_file": "chip.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chip.svg",
-      "sha256": "d673ce2afa74d6f1a47afd39425f70e2a1ee931cf0cba60887a972cabf6b5607"
+      "sha256": "d673ce2afa74d6f1a47afd39425f70e2a1ee931cf0cba60887a972cabf6b5607",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_actuator",
@@ -275,7 +293,9 @@
       "source_file": "eng_robotics.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_robotics.svg",
-      "sha256": "6ecb2c19e6a829ce8eaf0de0066d76be49c57ae67901ff0723f63da6cc6e9674"
+      "sha256": "6ecb2c19e6a829ce8eaf0de0066d76be49c57ae67901ff0723f63da6cc6e9674",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_robot",
@@ -302,7 +322,9 @@
       "source_file": "robot.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/robot.svg",
-      "sha256": "3fb2b3cf0a80f27ea6782bde343889645944f5ec6a3c977d4e05f5ed428fa255"
+      "sha256": "3fb2b3cf0a80f27ea6782bde343889645944f5ec6a3c977d4e05f5ed428fa255",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_heat_exchanger",
@@ -329,7 +351,9 @@
       "source_file": "heat-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg",
-      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_filter",
@@ -356,7 +380,9 @@
       "source_file": "filter.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/filter.svg",
-      "sha256": "49addd47f9fe63951fb2ecba09e4b1bb36cbbc312deb82215c634990d60b8193"
+      "sha256": "49addd47f9fe63951fb2ecba09e4b1bb36cbbc312deb82215c634990d60b8193",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_compressor",
@@ -383,7 +409,9 @@
       "source_file": "built_settlement.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/built_settlement.svg",
-      "sha256": "58bb9b80ad27c888d78890605cc5459b1c333a39324ed7b17747218ef706ce63"
+      "sha256": "58bb9b80ad27c888d78890605cc5459b1c333a39324ed7b17747218ef706ce63",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_fan",
@@ -410,7 +438,9 @@
       "source_file": "fan.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/fan.svg",
-      "sha256": "46e4871895c7b82a2e3c10a97f1043f12c638a356591c5a3329868b412f49fd1"
+      "sha256": "46e4871895c7b82a2e3c10a97f1043f12c638a356591c5a3329868b412f49fd1",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_nozzle",
@@ -437,7 +467,9 @@
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
-      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_piston",
@@ -464,7 +496,9 @@
       "source_file": "piston.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/piston.svg",
-      "sha256": "61bacebf123f6b9773b84db742e9106576168a0a89f752b403e452e35690aebf"
+      "sha256": "61bacebf123f6b9773b84db742e9106576168a0a89f752b403e452e35690aebf",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_truss",
@@ -491,7 +525,9 @@
       "source_file": "eng_heat_exchange.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_heat_exchange.svg",
-      "sha256": "9077d285378d1f637c3e73955284c0888ea354f5fa91cbffa9d40e4b77961ac4"
+      "sha256": "9077d285378d1f637c3e73955284c0888ea354f5fa91cbffa9d40e4b77961ac4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_centrifugal_pump",
@@ -518,7 +554,9 @@
       "source_file": "pump.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pump.svg",
-      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8"
+      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_recip_pump",
@@ -545,7 +583,9 @@
       "source_file": "pump.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pump.svg",
-      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8"
+      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_boiler",
@@ -572,7 +612,9 @@
       "source_file": "eng_wind.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_wind.svg",
-      "sha256": "f77159b962c7008157c6023d548a288c1e00935b4b7daf4f26bb46a3a9cedb79"
+      "sha256": "f77159b962c7008157c6023d548a288c1e00935b4b7daf4f26bb46a3a9cedb79",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_cooling_tower",
@@ -599,7 +641,9 @@
       "source_file": "tower-beach.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tower-beach.svg",
-      "sha256": "dd75b2491873741e80ef8de37ed5bda2c7f03e9da2b261292a6318ffd6b05d47"
+      "sha256": "dd75b2491873741e80ef8de37ed5bda2c7f03e9da2b261292a6318ffd6b05d47",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_distillation_tower",
@@ -626,7 +670,9 @@
       "source_file": "tower-beach.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tower-beach.svg",
-      "sha256": "dd75b2491873741e80ef8de37ed5bda2c7f03e9da2b261292a6318ffd6b05d47"
+      "sha256": "dd75b2491873741e80ef8de37ed5bda2c7f03e9da2b261292a6318ffd6b05d47",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_reactor_vessel",
@@ -653,7 +699,9 @@
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
-      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_pipeline",
@@ -680,7 +728,9 @@
       "source_file": "pipe.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
-      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_ball_bearing",
@@ -707,7 +757,9 @@
       "source_file": "eng_photovoltaic.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg",
-      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_shaft",
@@ -734,7 +786,9 @@
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
-      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_coupling",
@@ -761,7 +815,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_belt_drive",
@@ -788,7 +844,9 @@
       "source_file": "eng_heat_exchange.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_heat_exchange.svg",
-      "sha256": "9077d285378d1f637c3e73955284c0888ea354f5fa91cbffa9d40e4b77961ac4"
+      "sha256": "9077d285378d1f637c3e73955284c0888ea354f5fa91cbffa9d40e4b77961ac4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_chain_drive",
@@ -815,7 +873,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_spur_gear",
@@ -842,7 +902,9 @@
       "source_file": "cog.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cog.svg",
-      "sha256": "0125312d4e582eb4c3ee0049211ff71ce606e13dd4d2cf83285006f92caa8311"
+      "sha256": "0125312d4e582eb4c3ee0049211ff71ce606e13dd4d2cf83285006f92caa8311",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_planetary_gear",
@@ -869,7 +931,9 @@
       "source_file": "cog.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cog.svg",
-      "sha256": "0125312d4e582eb4c3ee0049211ff71ce606e13dd4d2cf83285006f92caa8311"
+      "sha256": "0125312d4e582eb4c3ee0049211ff71ce606e13dd4d2cf83285006f92caa8311",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_cam",
@@ -896,7 +960,9 @@
       "source_file": "eng_wind.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_wind.svg",
-      "sha256": "f77159b962c7008157c6023d548a288c1e00935b4b7daf4f26bb46a3a9cedb79"
+      "sha256": "f77159b962c7008157c6023d548a288c1e00935b4b7daf4f26bb46a3a9cedb79",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_crank",
@@ -923,7 +989,9 @@
       "source_file": "eng_electrolysis.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_electrolysis.svg",
-      "sha256": "f08c6c4ad85a04bd5bb89e02d716c01818a1b2043ef383b92b117b45e1b8c84b"
+      "sha256": "f08c6c4ad85a04bd5bb89e02d716c01818a1b2043ef383b92b117b45e1b8c84b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_linkage",
@@ -950,7 +1018,9 @@
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
-      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_hydraulic",
@@ -977,7 +1047,9 @@
       "source_file": "hydraulic-oil-level.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hydraulic-oil-level.svg",
-      "sha256": "96b6367904de14d393ca5e655d687a5a08b0801d6fe6a3bb5255c3ffa64e16eb"
+      "sha256": "96b6367904de14d393ca5e655d687a5a08b0801d6fe6a3bb5255c3ffa64e16eb",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_pneumatic",
@@ -1004,7 +1076,9 @@
       "source_file": "eng_mining.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_mining.svg",
-      "sha256": "f9d2e3aead3955d91c2ce49852508601d3c02114245da97c03e97db2799f2c22"
+      "sha256": "f9d2e3aead3955d91c2ce49852508601d3c02114245da97c03e97db2799f2c22",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_pressure_gauge",
@@ -1031,7 +1105,9 @@
       "source_file": "gauge.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gauge.svg",
-      "sha256": "fb31613d7a44b32eb9b627d98cf0bea7b79c93e435593e44d3b43967d51b06c7"
+      "sha256": "fb31613d7a44b32eb9b627d98cf0bea7b79c93e435593e44d3b43967d51b06c7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_thermocouple",
@@ -1058,7 +1134,9 @@
       "source_file": "eng_fuel_cells.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_fuel_cells.svg",
-      "sha256": "fb567c0b12bb534ded0ffe08a8d924d2f9f71ec23762053be05f9cf159257fe2"
+      "sha256": "fb567c0b12bb534ded0ffe08a8d924d2f9f71ec23762053be05f9cf159257fe2",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_flow_meter",
@@ -1085,7 +1163,9 @@
       "source_file": "meter-electric.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/meter-electric.svg",
-      "sha256": "e01ba4b943e17dcaa94f56e4e5c56b543c86df58333664224a5a660687e8fb21"
+      "sha256": "e01ba4b943e17dcaa94f56e4e5c56b543c86df58333664224a5a660687e8fb21",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_plc",
@@ -1112,7 +1192,9 @@
       "source_file": "eng_mining.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_mining.svg",
-      "sha256": "f9d2e3aead3955d91c2ce49852508601d3c02114245da97c03e97db2799f2c22"
+      "sha256": "f9d2e3aead3955d91c2ce49852508601d3c02114245da97c03e97db2799f2c22",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_inverter",
@@ -1139,7 +1221,9 @@
       "source_file": "eng_mining.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_mining.svg",
-      "sha256": "f9d2e3aead3955d91c2ce49852508601d3c02114245da97c03e97db2799f2c22"
+      "sha256": "f9d2e3aead3955d91c2ce49852508601d3c02114245da97c03e97db2799f2c22",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_hmi",
@@ -1166,7 +1250,9 @@
       "source_file": "eng_pumps_valves.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_pumps_valves.svg",
-      "sha256": "f4053ea30d264a77c28eb4d646db3aac7f184007284317cc5640276a6a540c8a"
+      "sha256": "f4053ea30d264a77c28eb4d646db3aac7f184007284317cc5640276a6a540c8a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_conveyor",
@@ -1193,7 +1279,9 @@
       "source_file": "eng_wind.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_wind.svg",
-      "sha256": "f77159b962c7008157c6023d548a288c1e00935b4b7daf4f26bb46a3a9cedb79"
+      "sha256": "f77159b962c7008157c6023d548a288c1e00935b4b7daf4f26bb46a3a9cedb79",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_delta_robot",
@@ -1220,7 +1308,9 @@
       "source_file": "delta.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delta.svg",
-      "sha256": "5f9471de8919ad646105b27fc2654c62730d2d7ffae3fd946a4ac2077dc31e89"
+      "sha256": "5f9471de8919ad646105b27fc2654c62730d2d7ffae3fd946a4ac2077dc31e89",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_agv",
@@ -1247,7 +1337,9 @@
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
-      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_drone",
@@ -1274,7 +1366,9 @@
       "source_file": "drone.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/drone.svg",
-      "sha256": "8fc344483b84af9cab3aad05dc3a4e6e25db12e17cf5caa09384dc88de4f931e"
+      "sha256": "8fc344483b84af9cab3aad05dc3a4e6e25db12e17cf5caa09384dc88de4f931e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_3d_printer",
@@ -1301,7 +1395,9 @@
       "source_file": "printer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/printer.svg",
-      "sha256": "d2a6fa8287401b63dd0329f4b59a2158c299eb358ead8b2dd760a544e26efa12"
+      "sha256": "d2a6fa8287401b63dd0329f4b59a2158c299eb358ead8b2dd760a544e26efa12",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_cnc",
@@ -1328,7 +1424,9 @@
       "source_file": "eng_electrolysis.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_electrolysis.svg",
-      "sha256": "f08c6c4ad85a04bd5bb89e02d716c01818a1b2043ef383b92b117b45e1b8c84b"
+      "sha256": "f08c6c4ad85a04bd5bb89e02d716c01818a1b2043ef383b92b117b45e1b8c84b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_lathe",
@@ -1355,7 +1453,9 @@
       "source_file": "eng_photovoltaic.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg",
-      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_milling",
@@ -1382,7 +1482,9 @@
       "source_file": "eng_heat_exchange.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_heat_exchange.svg",
-      "sha256": "9077d285378d1f637c3e73955284c0888ea354f5fa91cbffa9d40e4b77961ac4"
+      "sha256": "9077d285378d1f637c3e73955284c0888ea354f5fa91cbffa9d40e4b77961ac4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_welding_robot",
@@ -1409,7 +1511,9 @@
       "source_file": "robot.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/robot.svg",
-      "sha256": "3fb2b3cf0a80f27ea6782bde343889645944f5ec6a3c977d4e05f5ed428fa255"
+      "sha256": "3fb2b3cf0a80f27ea6782bde343889645944f5ec6a3c977d4e05f5ed428fa255",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_assembly_line",
@@ -1436,7 +1540,9 @@
       "source_file": "line-scan.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/line-scan.svg",
-      "sha256": "e895368600eca135baadd04b5592cf25f593ae5c438ab70c42e9c347835fb3e4"
+      "sha256": "e895368600eca135baadd04b5592cf25f593ae5c438ab70c42e9c347835fb3e4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_inspection",
@@ -1463,7 +1569,9 @@
       "source_file": "eng_robotics.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_robotics.svg",
-      "sha256": "6ecb2c19e6a829ce8eaf0de0066d76be49c57ae67901ff0723f63da6cc6e9674"
+      "sha256": "6ecb2c19e6a829ce8eaf0de0066d76be49c57ae67901ff0723f63da6cc6e9674",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_laser_cutter",
@@ -1490,7 +1598,9 @@
       "source_file": "laser-pointer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg",
-      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
+      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_battery_pack",
@@ -1517,7 +1627,9 @@
       "source_file": "battery.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/battery.svg",
-      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f"
+      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_motor_drive",
@@ -1544,7 +1656,9 @@
       "source_file": "eng_photovoltaic.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg",
-      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_dc_bus",
@@ -1571,7 +1685,9 @@
       "source_file": "bus.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bus.svg",
-      "sha256": "9f8624d5e454483f07d987c0012cc12851238a0fa3bc5bfc77544635e47281bd"
+      "sha256": "9f8624d5e454483f07d987c0012cc12851238a0fa3bc5bfc77544635e47281bd",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_grid",
@@ -1598,7 +1714,9 @@
       "source_file": "grid.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg",
-      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
+      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_substation",
@@ -1625,7 +1743,9 @@
       "source_file": "eng_pumps_valves.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_pumps_valves.svg",
-      "sha256": "f4053ea30d264a77c28eb4d646db3aac7f184007284317cc5640276a6a540c8a"
+      "sha256": "f4053ea30d264a77c28eb4d646db3aac7f184007284317cc5640276a6a540c8a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_wind_turbine",
@@ -1652,7 +1772,9 @@
       "source_file": "wind-turbine.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wind-turbine.svg",
-      "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f"
+      "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_solar_panel",
@@ -1679,7 +1801,9 @@
       "source_file": "solar-panel.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solar-panel.svg",
-      "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5"
+      "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_hvac",
@@ -1706,7 +1830,9 @@
       "source_file": "hvac.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hvac.svg",
-      "sha256": "3e89b221f6e746b0ddb2d92716e0d3515198111f40cd1f74178983a1dea612d9"
+      "sha256": "3e89b221f6e746b0ddb2d92716e0d3515198111f40cd1f74178983a1dea612d9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_clean_room",
@@ -1733,7 +1859,9 @@
       "source_file": "room-service.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/room-service.svg",
-      "sha256": "adf59c929dac38d994230a57bb3e46e0fd4fd9549d6b884a869c6382ad38c3a7"
+      "sha256": "adf59c929dac38d994230a57bb3e46e0fd4fd9549d6b884a869c6382ad38c3a7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_flange",
@@ -1760,7 +1888,9 @@
       "source_file": "eng_electrolysis.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_electrolysis.svg",
-      "sha256": "f08c6c4ad85a04bd5bb89e02d716c01818a1b2043ef383b92b117b45e1b8c84b"
+      "sha256": "f08c6c4ad85a04bd5bb89e02d716c01818a1b2043ef383b92b117b45e1b8c84b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_gasket",
@@ -1787,7 +1917,9 @@
       "source_file": "eng_photovoltaic.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg",
-      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_bolt",
@@ -1814,7 +1946,9 @@
       "source_file": "bolt.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bolt.svg",
-      "sha256": "446c4b1c1bce28deea79f11cc29dc7d07d22463d35e558e31aba7c5ffb3b4e1e"
+      "sha256": "446c4b1c1bce28deea79f11cc29dc7d07d22463d35e558e31aba7c5ffb3b4e1e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_scada",
@@ -1841,7 +1975,9 @@
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
-      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_pid",
@@ -1868,7 +2004,9 @@
       "source_file": "built_building.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/built_building.svg",
-      "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20"
+      "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_heat_pump",
@@ -1895,7 +2033,9 @@
       "source_file": "heat-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg",
-      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_heat_sink",
@@ -1922,7 +2062,9 @@
       "source_file": "heat-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg",
-      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_radiator",
@@ -1949,7 +2091,9 @@
       "source_file": "radiator.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radiator.svg",
-      "sha256": "821d16f5caf9cc890d15545870188275e7721e333609f67565edd832ceb2de42"
+      "sha256": "821d16f5caf9cc890d15545870188275e7721e333609f67565edd832ceb2de42",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_pump_curve",
@@ -1976,7 +2120,9 @@
       "source_file": "pump.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pump.svg",
-      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8"
+      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_valve_symbol",
@@ -2003,7 +2149,9 @@
       "source_file": "valve.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/valve.svg",
-      "sha256": "fd5421369d4f9c994fbad39551d8231b60ac6ce93c819a87298c84c05724829c"
+      "sha256": "fd5421369d4f9c994fbad39551d8231b60ac6ce93c819a87298c84c05724829c",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_pipe_network",
@@ -2030,7 +2178,9 @@
       "source_file": "pipe.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
-      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_cfd_mesh",
@@ -2057,7 +2207,9 @@
       "source_file": "view-grid.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/view-grid.svg",
-      "sha256": "0080edc7a27772b256e9e821d8b48625f8897c5ea373236f03a55c9c1b796bef"
+      "sha256": "0080edc7a27772b256e9e821d8b48625f8897c5ea373236f03a55c9c1b796bef",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_stress_field",
@@ -2084,7 +2236,9 @@
       "source_file": "vector-line.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-line.svg",
-      "sha256": "96631f806d6c72d91ca861aef313eeaced4cee45f1f18223e734003b109f1a2e"
+      "sha256": "96631f806d6c72d91ca861aef313eeaced4cee45f1f18223e734003b109f1a2e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_modal_test",
@@ -2111,7 +2265,9 @@
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
-      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_vibration",
@@ -2138,7 +2294,9 @@
       "source_file": "vibrate.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vibrate.svg",
-      "sha256": "574372086de454dde806ce61ae3cea12053783c37ff4f1850764ec6649ec7728"
+      "sha256": "574372086de454dde806ce61ae3cea12053783c37ff4f1850764ec6649ec7728",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_gearbox",
@@ -2165,7 +2323,9 @@
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
-      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_differential",
@@ -2192,7 +2352,9 @@
       "source_file": "car-shift-pattern.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/car-shift-pattern.svg",
-      "sha256": "92e2cb2015d16f6454c67e037abae8ed6f738369152617aa68e72cc85a6a7b0f"
+      "sha256": "92e2cb2015d16f6454c67e037abae8ed6f738369152617aa68e72cc85a6a7b0f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_brake",
@@ -2219,7 +2381,9 @@
       "source_file": "car-brake-abs.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/car-brake-abs.svg",
-      "sha256": "c1d076b627e5c620aa7825edb120a8c05edb0c79f1f42d2851038f23f699b086"
+      "sha256": "c1d076b627e5c620aa7825edb120a8c05edb0c79f1f42d2851038f23f699b086",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_clutch",
@@ -2246,7 +2410,9 @@
       "source_file": "car-clutch.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/car-clutch.svg",
-      "sha256": "965f9972d307bc5e65c146228a9dfd5df4bc8ea8304d03349f216a27d712a209"
+      "sha256": "965f9972d307bc5e65c146228a9dfd5df4bc8ea8304d03349f216a27d712a209",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_spring_damper",
@@ -2273,7 +2439,9 @@
       "source_file": "eng_photovoltaic.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_photovoltaic.svg",
-      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_rolling_contact",
@@ -2300,7 +2468,9 @@
       "source_file": "rotate-orbit.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-orbit.svg",
-      "sha256": "1ba409a43e26d14375a0eee9af5063c7fd886cb896da389192330878da253975"
+      "sha256": "1ba409a43e26d14375a0eee9af5063c7fd886cb896da389192330878da253975",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_wind_farm",
@@ -2327,7 +2497,9 @@
       "source_file": "wind-turbine.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wind-turbine.svg",
-      "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f"
+      "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_solar_tracker",
@@ -2354,7 +2526,9 @@
       "source_file": "solar-panel.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solar-panel.svg",
-      "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5"
+      "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_battery_bms",
@@ -2381,7 +2555,9 @@
       "source_file": "battery.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/battery.svg",
-      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f"
+      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_can_bus",
@@ -2408,7 +2584,9 @@
       "source_file": "lan-connect.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/lan-connect.svg",
-      "sha256": "3daa8e5c11de1a3b0f7e787e5bde768b30c826fe6cb544d61486ecac85fdedbc"
+      "sha256": "3daa8e5c11de1a3b0f7e787e5bde768b30c826fe6cb544d61486ecac85fdedbc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_iot_gateway",
@@ -2435,7 +2613,9 @@
       "source_file": "access-point.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
-      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
+      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_robot_gripper",
@@ -2462,7 +2642,9 @@
       "source_file": "robot.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/robot.svg",
-      "sha256": "3fb2b3cf0a80f27ea6782bde343889645944f5ec6a3c977d4e05f5ed428fa255"
+      "sha256": "3fb2b3cf0a80f27ea6782bde343889645944f5ec6a3c977d4e05f5ed428fa255",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_machine_vision",
@@ -2489,7 +2671,9 @@
       "source_file": "eye.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye.svg",
-      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3"
+      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_lidar",
@@ -2516,7 +2700,9 @@
       "source_file": "radar.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radar.svg",
-      "sha256": "1c81ab4186790cc65d92b1e5d91e10dcb396df0cd2db4f30c6e6ae93b3d8c353"
+      "sha256": "1c81ab4186790cc65d92b1e5d91e10dcb396df0cd2db4f30c6e6ae93b3d8c353",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_torque_sensor",
@@ -2543,7 +2729,9 @@
       "source_file": "rotate-right.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-right.svg",
-      "sha256": "7c0fdfe5c01d6f8455aad37288bb8d6dfc768054e31147dbef5a95c40baa0f23"
+      "sha256": "7c0fdfe5c01d6f8455aad37288bb8d6dfc768054e31147dbef5a95c40baa0f23",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_encoder",
@@ -2570,7 +2758,9 @@
       "source_file": "counter.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/counter.svg",
-      "sha256": "7b7f371e17a4478157b9ac564b5731688123f155222ad1323703851a1b21fede"
+      "sha256": "7b7f371e17a4478157b9ac564b5731688123f155222ad1323703851a1b21fede",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_servo",
@@ -2597,7 +2787,9 @@
       "source_file": "engine.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/engine.svg",
-      "sha256": "8194a6a2d82dfd52dd238d69d271fabef3d74128824e8fadedbc27a29a28576e"
+      "sha256": "8194a6a2d82dfd52dd238d69d271fabef3d74128824e8fadedbc27a29a28576e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_thermal_camera",
@@ -2624,7 +2816,9 @@
       "source_file": "thermometer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
-      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
+      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_3d_scan",
@@ -2651,7 +2845,9 @@
       "source_file": "scan-helper.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/scan-helper.svg",
-      "sha256": "413c01dcd675f97a39d629804f1fde2359c7e65aeccf8f2e75d5a45dd1dc1500"
+      "sha256": "413c01dcd675f97a39d629804f1fde2359c7e65aeccf8f2e75d5a45dd1dc1500",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_fault_tree",
@@ -2678,7 +2874,9 @@
       "source_file": "file-tree.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/file-tree.svg",
-      "sha256": "8efa7e48fa316fa851fa1bc46edcdcc116100043f22864453d7a0e5e9ff5cec9"
+      "sha256": "8efa7e48fa316fa851fa1bc46edcdcc116100043f22864453d7a0e5e9ff5cec9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_eng_fmea",
@@ -2705,7 +2903,9 @@
       "source_file": "sitemap.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sitemap.svg",
-      "sha256": "4ca10e40b22e7721463aeee6f715dae3950090815417dee6fc309d9f2bf596f4"
+      "sha256": "4ca10e40b22e7721463aeee6f715dae3950090815417dee6fc309d9f2bf596f4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "engineering_server",
@@ -2731,7 +2931,2184 @@
       "source_file": "server.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/server.svg",
-      "sha256": "7f4b9411d2da0051fdc1ca3d4fe9f815f3787c91682ed026863187b3fe96c0a8"
+      "sha256": "7f4b9411d2da0051fdc1ca3d4fe9f815f3787c91682ed026863187b3fe96c0a8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/engine.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_engine_tabler",
+      "asset_id": "engineering_verified_engineering_engine_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_engine_tabler.svg",
+      "keywords": [
+        "机械",
+        "发动机",
+        "动力",
+        "mechanical",
+        "engine",
+        "power"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "bc87ed1e39379b72c2f1edc7262d7e1fed56641561976b525c8e62adf7ef623c",
+      "label": "发动机",
+      "label_zh": "发动机",
+      "label_en": "Engine",
+      "source_file": "engine.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/propeller.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_propeller_tabler",
+      "asset_id": "engineering_verified_engineering_propeller_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_propeller_tabler.svg",
+      "keywords": [
+        "机械",
+        "螺旋桨",
+        "推进",
+        "mechanical",
+        "propeller",
+        "propulsion"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "338f8d6240a316366f4e2b8fc8df532b8f1cb90a3b112905df7e32c0e79e019e",
+      "label": "螺旋桨",
+      "label_zh": "螺旋桨",
+      "label_en": "Propeller",
+      "source_file": "propeller.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/automatic-gearbox.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_automatic_gearbox_tabler",
+      "asset_id": "engineering_verified_engineering_automatic_gearbox_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_automatic_gearbox_tabler.svg",
+      "keywords": [
+        "机械",
+        "变速器",
+        "传动",
+        "mechanical",
+        "gearbox",
+        "transmission"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "945e43f481c662b0fc848386c29aeb711da461d4e8494ef00dd282a3aeb1cdf5",
+      "label": "自动变速器",
+      "label_zh": "自动变速器",
+      "label_en": "Automatic Gearbox",
+      "source_file": "automatic-gearbox.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/manual-gearbox.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_manual_gearbox_tabler",
+      "asset_id": "engineering_verified_engineering_manual_gearbox_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_manual_gearbox_tabler.svg",
+      "keywords": [
+        "机械",
+        "变速器",
+        "传动",
+        "mechanical",
+        "gearbox",
+        "transmission"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9395d19017b69fe0f17f2972ef4f43ff4eaf57ac1d93b1f0c8fcec57f622a114",
+      "label": "手动变速器",
+      "label_zh": "手动变速器",
+      "label_en": "Manual Gearbox",
+      "source_file": "manual-gearbox.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Phosphor Icons",
+      "author_url": "https://phosphoricons.com",
+      "license": "MIT",
+      "license_url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/gear.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_gear_phosphor",
+      "asset_id": "engineering_verified_engineering_gear_phosphor",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_gear_phosphor.svg",
+      "keywords": [
+        "机械",
+        "齿轮",
+        "传动",
+        "mechanical",
+        "gear",
+        "transmission"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "306f5be06bf1dd9eca26842ad6282310d80bec0b95c0c78f0160821fb037abac",
+      "label": "齿轮",
+      "label_zh": "齿轮",
+      "label_en": "Gear",
+      "source_file": "gear.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/wrench.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_wrench_lucide",
+      "asset_id": "engineering_verified_engineering_wrench_lucide",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_wrench_lucide.svg",
+      "keywords": [
+        "机械",
+        "扳手",
+        "维修",
+        "mechanical",
+        "wrench",
+        "maintenance"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "39480a52fd5c7bfb0aaf43753a903c964d144313784aecaa315373303506ae94",
+      "label": "扳手",
+      "label_zh": "扳手",
+      "label_en": "Wrench",
+      "source_file": "wrench.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/hammer.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_hammer_tabler",
+      "asset_id": "engineering_verified_engineering_hammer_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_hammer_tabler.svg",
+      "keywords": [
+        "机械",
+        "锤子",
+        "工具",
+        "mechanical",
+        "hammer",
+        "tool"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "0431312c4b10a4ee347790657740959b84bc4213553c9a88fe65d4ad09e8125b",
+      "label": "锤子",
+      "label_zh": "锤子",
+      "label_en": "Hammer",
+      "source_file": "hammer.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/hammer-drill.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_hammer_drill_tabler",
+      "asset_id": "engineering_verified_engineering_hammer_drill_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_hammer_drill_tabler.svg",
+      "keywords": [
+        "机械",
+        "电钻",
+        "施工",
+        "mechanical",
+        "drill",
+        "construction"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "876d406d7d8fbd2ebcdc7f0da87ed01203979546d00a1b2ef24800a1a42e0897",
+      "label": "冲击钻",
+      "label_zh": "冲击钻",
+      "label_en": "Hammer Drill",
+      "source_file": "hammer-drill.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/nut.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_nut_tabler",
+      "asset_id": "engineering_verified_engineering_nut_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_nut_tabler.svg",
+      "keywords": [
+        "机械",
+        "螺母",
+        "紧固件",
+        "mechanical",
+        "nut",
+        "fastener"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9948240ec6910048f5b281ac1ea410b0deade8ad2a14af358a1faaf9e41fe706",
+      "label": "螺母",
+      "label_zh": "螺母",
+      "label_en": "Nut",
+      "source_file": "nut.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/wheel.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_wheel_tabler",
+      "asset_id": "engineering_verified_engineering_wheel_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_wheel_tabler.svg",
+      "keywords": [
+        "机械",
+        "车轮",
+        "转动",
+        "mechanical",
+        "wheel",
+        "rotation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "fc02339a64a15a8484cf45fac07c2519f4df4fc0d97bfbe0b039c171e163fa24",
+      "label": "车轮",
+      "label_zh": "车轮",
+      "label_en": "Wheel",
+      "source_file": "wheel.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/steering-wheel.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_steering_wheel_tabler",
+      "asset_id": "engineering_verified_engineering_steering_wheel_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_steering_wheel_tabler.svg",
+      "keywords": [
+        "机械",
+        "转向",
+        "车辆",
+        "mechanical",
+        "steering",
+        "vehicle"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2611f34a2f3f35f2fe4a433261c53af24ee80eef289ccb082915de4a445447b1",
+      "label": "方向盘",
+      "label_zh": "方向盘",
+      "label_en": "Steering Wheel",
+      "source_file": "steering-wheel.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tools.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_tools_tabler",
+      "asset_id": "engineering_verified_engineering_tools_tabler",
+      "type": "symbol",
+      "category": "机械部件",
+      "category_en": "Mechanical components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_tools_tabler.svg",
+      "keywords": [
+        "机械",
+        "工具",
+        "维修",
+        "mechanical",
+        "tools",
+        "maintenance"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "1eb190ebcc74b7979f2675fe040cd08f8f09a0e59ce7d7a5bf467a0b13d28487",
+      "label": "工具组",
+      "label_zh": "工具组",
+      "label_en": "Tools",
+      "source_file": "tools.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/conveyor_belt/materialsymbolsoutlined/conveyor_belt_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_conveyor_belt_material",
+      "asset_id": "engineering_verified_engineering_conveyor_belt_material",
+      "type": "symbol",
+      "category": "制造设备",
+      "category_en": "Manufacturing equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_conveyor_belt_material.svg",
+      "keywords": [
+        "制造",
+        "传送带",
+        "生产线",
+        "manufacturing",
+        "conveyor belt",
+        "production line"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "76cd0227b6d897ac646108d41ff0e2cae25d33a91242c1d4b474ce2d0203be02",
+      "label": "传送带",
+      "label_zh": "传送带",
+      "label_en": "Conveyor Belt",
+      "source_file": "conveyor_belt_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/assembly.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_assembly_tabler",
+      "asset_id": "engineering_verified_engineering_assembly_tabler",
+      "type": "symbol",
+      "category": "制造设备",
+      "category_en": "Manufacturing equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_assembly_tabler.svg",
+      "keywords": [
+        "制造",
+        "装配",
+        "生产线",
+        "manufacturing",
+        "assembly",
+        "production"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f5f6a011aa60cea7c61312e44fc911ab2760d6310f81a2124c4c74a46a7670d7",
+      "label": "装配",
+      "label_zh": "装配",
+      "label_en": "Assembly",
+      "source_file": "assembly.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/robot-arm.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_robot_arm_lucide",
+      "asset_id": "engineering_verified_engineering_robot_arm_lucide",
+      "type": "symbol",
+      "category": "机器人与传感器",
+      "category_en": "Robotics and sensors",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_robot_arm_lucide.svg",
+      "keywords": [
+        "机器人",
+        "机械臂",
+        "自动化",
+        "robotics",
+        "robot arm",
+        "automation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "73210879a70159df940a3c49f58d354930b9075e559378669a796af7cf19dd4a",
+      "label": "机械臂",
+      "label_zh": "机械臂",
+      "label_en": "Robot Arm",
+      "source_file": "robot-arm.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/precision_manufacturing/materialsymbolsoutlined/precision_manufacturing_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_precision_manufacturing_material",
+      "asset_id": "engineering_verified_engineering_precision_manufacturing_material",
+      "type": "symbol",
+      "category": "制造设备",
+      "category_en": "Manufacturing equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_precision_manufacturing_material.svg",
+      "keywords": [
+        "制造",
+        "精密加工",
+        "工业",
+        "manufacturing",
+        "precision manufacturing",
+        "industry"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "e30692429a3850114a2ed694ae2cf930148e644b48f5eb8e0230bdea23ce2809",
+      "label": "精密制造",
+      "label_zh": "精密制造",
+      "label_en": "Precision Manufacturing",
+      "source_file": "precision_manufacturing_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/manufacturing/materialsymbolsoutlined/manufacturing_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_manufacturing_material",
+      "asset_id": "engineering_verified_engineering_manufacturing_material",
+      "type": "symbol",
+      "category": "制造设备",
+      "category_en": "Manufacturing equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_manufacturing_material.svg",
+      "keywords": [
+        "制造",
+        "工业",
+        "生产",
+        "manufacturing",
+        "industry",
+        "production"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "eb9fe4a91625f215c29ff37ed704cfbcae93ea83aac68536f1dda0b0b14c54ed",
+      "label": "制造",
+      "label_zh": "制造",
+      "label_en": "Manufacturing",
+      "source_file": "manufacturing_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/architecture/materialsymbolsoutlined/architecture_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_architecture_material",
+      "asset_id": "engineering_verified_engineering_architecture_material",
+      "type": "symbol",
+      "category": "施工设备",
+      "category_en": "Construction equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_architecture_material.svg",
+      "keywords": [
+        "工程",
+        "建筑",
+        "设计",
+        "engineering",
+        "architecture",
+        "design"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "cb9ba1bc8a60b83001dba88f083738e6b5159b4b23dcf0f21ec6f41899919c3c",
+      "label": "建筑设计",
+      "label_zh": "建筑设计",
+      "label_en": "Architecture",
+      "source_file": "architecture_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/power/materialsymbolsoutlined/power_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_power_material",
+      "asset_id": "engineering_verified_engineering_power_material",
+      "type": "symbol",
+      "category": "电气设备",
+      "category_en": "Electrical equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_power_material.svg",
+      "keywords": [
+        "电气",
+        "电源",
+        "供电",
+        "electrical",
+        "power",
+        "supply"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2a0e96b725d9d64879714d565b43ad0f0bbfdb1fc0f407198601322e86af1231",
+      "label": "电源",
+      "label_zh": "电源",
+      "label_en": "Power",
+      "source_file": "power_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/cable/materialsymbolsoutlined/cable_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_cable_material",
+      "asset_id": "engineering_verified_engineering_cable_material",
+      "type": "symbol",
+      "category": "电气设备",
+      "category_en": "Electrical equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_cable_material.svg",
+      "keywords": [
+        "电气",
+        "电缆",
+        "输电",
+        "electrical",
+        "cable",
+        "power transmission"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9e7ac73fbd2491657a008d4b44b93ed52eafac4801e7045db61a1ba0c884d0b0",
+      "label": "电缆",
+      "label_zh": "电缆",
+      "label_en": "Cable",
+      "source_file": "cable_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/electric_meter/materialsymbolsoutlined/electric_meter_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_electric_meter_material",
+      "asset_id": "engineering_verified_engineering_electric_meter_material",
+      "type": "symbol",
+      "category": "电气设备",
+      "category_en": "Electrical equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_electric_meter_material.svg",
+      "keywords": [
+        "电气",
+        "电表",
+        "计量",
+        "electrical",
+        "electric meter",
+        "measurement"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "871ff0d1822cd1a70d377591c6e60cf070f1f8e51e4b33e1c8772b92d091fa6b",
+      "label": "电表",
+      "label_zh": "电表",
+      "label_en": "Electric Meter",
+      "source_file": "electric_meter_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/electrical_services/materialsymbolsoutlined/electrical_services_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_electrical_services_material",
+      "asset_id": "engineering_verified_engineering_electrical_services_material",
+      "type": "symbol",
+      "category": "电气设备",
+      "category_en": "Electrical equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_electrical_services_material.svg",
+      "keywords": [
+        "电气",
+        "电力",
+        "配电",
+        "electrical",
+        "power distribution",
+        "services"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "88022196a9b05203e60e2af9e1960e869030418f828a056b82495403ba9df426",
+      "label": "电力服务",
+      "label_zh": "电力服务",
+      "label_en": "Electrical Services",
+      "source_file": "electrical_services_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/developer_board/materialsymbolsoutlined/developer_board_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_developer_board_material",
+      "asset_id": "engineering_verified_engineering_developer_board_material",
+      "type": "symbol",
+      "category": "器官与医学器材",
+      "category_en": "Anatomy and medical equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_developer_board_material.svg",
+      "keywords": [
+        "电子",
+        "开发板",
+        "嵌入式",
+        "electronics",
+        "developer board",
+        "embedded"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "fb4b4168fb08c5397d5f84ea3609cf63e5783378f5de4e1a746f90523a64630a",
+      "label": "开发板",
+      "label_zh": "开发板",
+      "label_en": "Developer Board",
+      "source_file": "developer_board_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/solar-panel.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_solar_panel_tabler",
+      "asset_id": "engineering_verified_engineering_solar_panel_tabler",
+      "type": "symbol",
+      "category": "能源设备",
+      "category_en": "Energy equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_solar_panel_tabler.svg",
+      "keywords": [
+        "能源",
+        "光伏",
+        "太阳能",
+        "energy",
+        "solar panel",
+        "photovoltaic"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "15bbceaa1ddad310b243bbbbc4db3a4504b6f4178a9fb97f94c38fd4e9d6974f",
+      "label": "太阳能板",
+      "label_zh": "太阳能板",
+      "label_en": "Solar Panel",
+      "source_file": "solar-panel.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-wind-turbine.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_wind_turbine_tabler",
+      "asset_id": "engineering_verified_engineering_wind_turbine_tabler",
+      "type": "symbol",
+      "category": "能源设备",
+      "category_en": "Energy equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_wind_turbine_tabler.svg",
+      "keywords": [
+        "能源",
+        "风电",
+        "风力机",
+        "energy",
+        "wind turbine",
+        "wind power"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "5a5013f0a9118834f950b9285fed14788db6b37345541043603fba6e30edbcc4",
+      "label": "风力发电机",
+      "label_zh": "风力发电机",
+      "label_en": "Wind Turbine",
+      "source_file": "building-wind-turbine.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Phosphor Icons",
+      "author_url": "https://phosphoricons.com",
+      "license": "MIT",
+      "license_url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/nuclear-plant.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_nuclear_plant_phosphor",
+      "asset_id": "engineering_verified_engineering_nuclear_plant_phosphor",
+      "type": "symbol",
+      "category": "能源设备",
+      "category_en": "Energy equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_nuclear_plant_phosphor.svg",
+      "keywords": [
+        "能源",
+        "核电",
+        "核能",
+        "energy",
+        "nuclear plant",
+        "nuclear power"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b2c4e46979a2d85b8c18a1996608c9474e130358241c9963457370a3521e0dbb",
+      "label": "核电站",
+      "label_zh": "核电站",
+      "label_en": "Nuclear Plant",
+      "source_file": "nuclear-plant.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/heat_pump/materialsymbolsoutlined/heat_pump_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_heat_pump_material",
+      "asset_id": "engineering_verified_engineering_heat_pump_material",
+      "type": "symbol",
+      "category": "能源设备",
+      "category_en": "Energy equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_heat_pump_material.svg",
+      "keywords": [
+        "能源",
+        "热泵",
+        "供暖",
+        "energy",
+        "heat pump",
+        "HVAC"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f324c9558bddaae65a162358db72026ca8dc6eebc1f1ab60625ed58049ef1c07",
+      "label": "热泵",
+      "label_zh": "热泵",
+      "label_en": "Heat Pump",
+      "source_file": "heat_pump_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/ev_station/materialsymbolsoutlined/ev_station_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_ev_charging_station_material",
+      "asset_id": "engineering_verified_engineering_ev_charging_station_material",
+      "type": "symbol",
+      "category": "能源设备",
+      "category_en": "Energy equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_ev_charging_station_material.svg",
+      "keywords": [
+        "能源",
+        "电动汽车",
+        "充电",
+        "energy",
+        "EV charging",
+        "electric vehicle"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "029abb59b0d370455acb5c73af57689a9b930e4048a6f3fe2931592e0fe1489e",
+      "label": "充电站",
+      "label_zh": "充电站",
+      "label_en": "EV Charging Station",
+      "source_file": "ev_station_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/battery_charging_full/materialsymbolsoutlined/battery_charging_full_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_battery_charging_material",
+      "asset_id": "engineering_verified_engineering_battery_charging_material",
+      "type": "symbol",
+      "category": "能源设备",
+      "category_en": "Energy equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_battery_charging_material.svg",
+      "keywords": [
+        "能源",
+        "电池",
+        "储能",
+        "energy",
+        "battery",
+        "energy storage"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "531ac92b77e3303911dc0e1b9795b8ce60a7b5c0813010bce091417886cee7a3",
+      "label": "电池充电",
+      "label_zh": "电池充电",
+      "label_en": "Battery Charging",
+      "source_file": "battery_charging_full_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/crane.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_crane_tabler",
+      "asset_id": "engineering_verified_engineering_crane_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_crane_tabler.svg",
+      "keywords": [
+        "土木",
+        "起重机",
+        "施工",
+        "civil",
+        "crane",
+        "construction"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "58fd6e02a46dd853b394daadb575f257289b1282fb8d8f8d919527cc14ca4d81",
+      "label": "起重机",
+      "label_zh": "起重机",
+      "label_en": "Crane",
+      "source_file": "crane.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Phosphor Icons",
+      "author_url": "https://phosphoricons.com",
+      "license": "MIT",
+      "license_url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/crane-tower.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_tower_crane_phosphor",
+      "asset_id": "engineering_verified_engineering_tower_crane_phosphor",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_tower_crane_phosphor.svg",
+      "keywords": [
+        "土木",
+        "塔吊",
+        "施工",
+        "civil",
+        "tower crane",
+        "construction"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "3e1384d89446cca9f51414a2b245b72b85239f6b809c8679805c4e2fd31b5426",
+      "label": "塔吊",
+      "label_zh": "塔吊",
+      "label_en": "Tower Crane",
+      "source_file": "crane-tower.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/forklift.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_forklift_tabler",
+      "asset_id": "engineering_verified_engineering_forklift_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_forklift_tabler.svg",
+      "keywords": [
+        "工程",
+        "叉车",
+        "物流",
+        "engineering",
+        "forklift",
+        "logistics"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "cffbf7bac6726ede029ef45f0605f604707b888bbf35e2af966fc0694d3d7fe6",
+      "label": "叉车",
+      "label_zh": "叉车",
+      "label_en": "Forklift",
+      "source_file": "forklift.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/bulldozer.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_bulldozer_tabler",
+      "asset_id": "engineering_verified_engineering_bulldozer_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_bulldozer_tabler.svg",
+      "keywords": [
+        "土木",
+        "推土机",
+        "土方",
+        "civil",
+        "bulldozer",
+        "earthmoving"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "87f88da3b5aaffd35ca7c46a7cd603b8581fb80dff37df51e9aa02f00db6397b",
+      "label": "推土机",
+      "label_zh": "推土机",
+      "label_en": "Bulldozer",
+      "source_file": "bulldozer.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/backhoe.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_backhoe_tabler",
+      "asset_id": "engineering_verified_engineering_backhoe_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_backhoe_tabler.svg",
+      "keywords": [
+        "土木",
+        "挖掘机",
+        "土方",
+        "civil",
+        "excavator",
+        "earthmoving"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "de09bc54a5ae13ac806056ccb83bc044718e9509f6829052b322d26fdfa62aff",
+      "label": "挖掘机",
+      "label_zh": "挖掘机",
+      "label_en": "Backhoe",
+      "source_file": "backhoe.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tractor.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_tractor_tabler",
+      "asset_id": "engineering_verified_engineering_tractor_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_tractor_tabler.svg",
+      "keywords": [
+        "农业工程",
+        "拖拉机",
+        "农机",
+        "agricultural engineering",
+        "tractor",
+        "farm machinery"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "75c13717cbb03255d899bedb303c55350eba77b25be080bc6a4761fbdc93a305",
+      "label": "拖拉机",
+      "label_zh": "拖拉机",
+      "label_en": "Tractor",
+      "source_file": "tractor.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-bridge.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_bridge_tabler",
+      "asset_id": "engineering_verified_engineering_bridge_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_bridge_tabler.svg",
+      "keywords": [
+        "土木",
+        "桥梁",
+        "结构",
+        "civil",
+        "bridge",
+        "structure"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "99093795152730cd3ee3db06a829507d8927cea467efa7b85a1515ee96df2b61",
+      "label": "桥梁",
+      "label_zh": "桥梁",
+      "label_en": "Bridge",
+      "source_file": "building-bridge.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-bridge-2.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_arch_bridge_tabler",
+      "asset_id": "engineering_verified_engineering_arch_bridge_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_arch_bridge_tabler.svg",
+      "keywords": [
+        "土木",
+        "拱桥",
+        "结构",
+        "civil",
+        "arch bridge",
+        "structure"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "3c6bd0c86ec50c94a375eb6c39dafe789468715f44241ca5a27a1f8bd149eec2",
+      "label": "拱桥",
+      "label_zh": "拱桥",
+      "label_en": "Arch Bridge",
+      "source_file": "building-bridge-2.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-tunnel.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_tunnel_tabler",
+      "asset_id": "engineering_verified_engineering_tunnel_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_tunnel_tabler.svg",
+      "keywords": [
+        "土木",
+        "隧道",
+        "地下工程",
+        "civil",
+        "tunnel",
+        "underground"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "ccb2556dcaea4cba812d03d26098965f6e6b2dadc3f6d54973768e4760755998",
+      "label": "隧道",
+      "label_zh": "隧道",
+      "label_en": "Tunnel",
+      "source_file": "building-tunnel.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-factory.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_factory_tabler",
+      "asset_id": "engineering_verified_engineering_factory_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_factory_tabler.svg",
+      "keywords": [
+        "工程",
+        "工厂",
+        "工业",
+        "engineering",
+        "factory",
+        "industry"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9844c35d8ab77ccf6c21c42385e0efba0b9b594945d6fcf196ea8b8e940540ae",
+      "label": "工厂",
+      "label_zh": "工厂",
+      "label_en": "Factory",
+      "source_file": "building-factory.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-warehouse.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_warehouse_tabler",
+      "asset_id": "engineering_verified_engineering_warehouse_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_warehouse_tabler.svg",
+      "keywords": [
+        "工程",
+        "仓库",
+        "物流",
+        "engineering",
+        "warehouse",
+        "logistics"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "1b967e1f9724c8b2b849d9b9ff34056213d47f05da5387f538ba88d2f85fbafd",
+      "label": "仓库",
+      "label_zh": "仓库",
+      "label_en": "Warehouse",
+      "source_file": "building-warehouse.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/foundation/materialsymbolsoutlined/foundation_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_foundation_material",
+      "asset_id": "engineering_verified_engineering_foundation_material",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_foundation_material.svg",
+      "keywords": [
+        "土木",
+        "地基",
+        "基础工程",
+        "civil",
+        "foundation",
+        "geotechnical"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "133f480a3cfd3c163ca665521a6b72bd11030a0ebfc5e7c640814d28e0a2bc37",
+      "label": "地基",
+      "label_zh": "地基",
+      "label_en": "Foundation",
+      "source_file": "foundation_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/roofing/materialsymbolsoutlined/roofing_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_roofing_material",
+      "asset_id": "engineering_verified_engineering_roofing_material",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_roofing_material.svg",
+      "keywords": [
+        "土木",
+        "屋面",
+        "建筑施工",
+        "civil",
+        "roofing",
+        "construction"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "619d89d419257aaa2a017f472c380bb63218b786538777c19694e35bba6a164e",
+      "label": "屋面",
+      "label_zh": "屋面",
+      "label_en": "Roofing",
+      "source_file": "roofing_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/plumbing/materialsymbolsoutlined/plumbing_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_plumbing_material",
+      "asset_id": "engineering_verified_engineering_plumbing_material",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_plumbing_material.svg",
+      "keywords": [
+        "土木",
+        "给排水",
+        "管道",
+        "civil",
+        "plumbing",
+        "piping"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "7f5e5d063b591f39c22c34c83142ea5fffd69f18716b14a4d5dc96133480aafe",
+      "label": "管道系统",
+      "label_zh": "管道系统",
+      "label_en": "Plumbing",
+      "source_file": "plumbing_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/construction/materialsymbolsoutlined/construction_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_construction_material",
+      "asset_id": "engineering_verified_engineering_construction_material",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_construction_material.svg",
+      "keywords": [
+        "土木",
+        "施工",
+        "工地",
+        "civil",
+        "construction",
+        "site"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b92014dfb78c50208e2f8c4a6a0a19947e53873cc617bd818e8f9be607668323",
+      "label": "施工",
+      "label_zh": "施工",
+      "label_en": "Construction",
+      "source_file": "construction_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/engineering/materialsymbolsoutlined/engineering_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_engineering_material",
+      "asset_id": "engineering_verified_engineering_engineering_material",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_engineering_material.svg",
+      "keywords": [
+        "工程",
+        "工程学",
+        "设计",
+        "engineering",
+        "design"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f0909acd2cbe5b32fbf367c2b1ec1b67fa18f2c1b126600aff959847fcc28c84",
+      "label": "工程",
+      "label_zh": "工程",
+      "label_en": "Engineering",
+      "source_file": "engineering_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/dam.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_dam_lucide",
+      "asset_id": "engineering_verified_engineering_dam_lucide",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_dam_lucide.svg",
+      "keywords": [
+        "土木",
+        "水坝",
+        "水利",
+        "civil",
+        "dam",
+        "hydraulic engineering"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "fab75bc344ff0e9cb4c55315574e60be3634240c5beeb1ccfb99b4a4075e7790",
+      "label": "水坝",
+      "label_zh": "水坝",
+      "label_en": "Dam",
+      "source_file": "dam.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/road.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_road_tabler",
+      "asset_id": "engineering_verified_engineering_road_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_road_tabler.svg",
+      "keywords": [
+        "土木",
+        "道路",
+        "交通",
+        "civil",
+        "road",
+        "transport"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "ac16824e1b56f8de28d96a571bef6d87c0666d85dea2b42a64353287906a2db0",
+      "label": "道路",
+      "label_zh": "道路",
+      "label_en": "Road",
+      "source_file": "road.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/container.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_container_tabler",
+      "asset_id": "engineering_verified_engineering_container_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_container_tabler.svg",
+      "keywords": [
+        "物流",
+        "集装箱",
+        "运输",
+        "logistics",
+        "container",
+        "transport"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "1789bdb969e3d02ff3bf307b8251deed2ab96c076e6c3bdbd37eefceeba7ca61",
+      "label": "集装箱",
+      "label_zh": "集装箱",
+      "label_en": "Container",
+      "source_file": "container.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/building-broadcast-tower.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_transmission_tower_tabler",
+      "asset_id": "engineering_verified_engineering_transmission_tower_tabler",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_transmission_tower_tabler.svg",
+      "keywords": [
+        "土木",
+        "输电塔",
+        "电力设施",
+        "civil",
+        "transmission tower",
+        "utility"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b41dd6225347804cd68d2b888deb098f4e58a23cb60257f5919657609ccd4721",
+      "label": "广播塔",
+      "label_zh": "广播塔",
+      "label_en": "Broadcast tower",
+      "source_file": "building-broadcast-tower.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Phosphor Icons",
+      "author_url": "https://phosphoricons.com",
+      "license": "MIT",
+      "license_url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/pipe.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_pipe_phosphor",
+      "asset_id": "engineering_verified_engineering_pipe_phosphor",
+      "type": "symbol",
+      "category": "流体设备",
+      "category_en": "Fluid equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_pipe_phosphor.svg",
+      "keywords": [
+        "流体",
+        "管道",
+        "输送",
+        "fluids",
+        "pipe",
+        "transport"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "c0b689a946d38f157291aeade104d5de5bdc730e7cb5d9d0b51776d5e3f8b9ce",
+      "label": "管道",
+      "label_zh": "管道",
+      "label_en": "Pipe",
+      "source_file": "pipe.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/pipeline.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_pipeline_tabler",
+      "asset_id": "engineering_verified_engineering_pipeline_tabler",
+      "type": "symbol",
+      "category": "流体设备",
+      "category_en": "Fluid equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_pipeline_tabler.svg",
+      "keywords": [
+        "流体",
+        "管线",
+        "输送",
+        "fluids",
+        "pipeline",
+        "transport"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "5c7e51f8346d07d340ddab190942efc8c525b8c0cbf8f59f7d6b965f5d79a88d",
+      "label": "管线",
+      "label_zh": "管线",
+      "label_en": "Pipeline",
+      "source_file": "pipeline.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/valve/materialsymbolsoutlined/valve_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_valve_material",
+      "asset_id": "engineering_verified_engineering_valve_material",
+      "type": "symbol",
+      "category": "流体设备",
+      "category_en": "Fluid equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_valve_material.svg",
+      "keywords": [
+        "流体",
+        "阀门",
+        "控制",
+        "fluids",
+        "valve",
+        "flow control"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "56db00025640510d50f14e258b821c0c93f1df689e6ac2711b1b765b7b6b22f5",
+      "label": "阀门",
+      "label_zh": "阀门",
+      "label_en": "Valve",
+      "source_file": "valve_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_pump/materialsymbolsoutlined/water_pump_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_water_pump_material",
+      "asset_id": "engineering_verified_engineering_water_pump_material",
+      "type": "symbol",
+      "category": "流体设备",
+      "category_en": "Fluid equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_water_pump_material.svg",
+      "keywords": [
+        "流体",
+        "水泵",
+        "输送",
+        "fluids",
+        "water pump",
+        "pumping"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9be01cce48fccb58fa305302641100251f8170833da1271e23fef204e94cda36",
+      "label": "水泵",
+      "label_zh": "水泵",
+      "label_en": "Water Pump",
+      "source_file": "water_pump_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/propane_tank/materialsymbolsoutlined/propane_tank_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_propane_tank_material",
+      "asset_id": "engineering_verified_engineering_propane_tank_material",
+      "type": "symbol",
+      "category": "流体设备",
+      "category_en": "Fluid equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_propane_tank_material.svg",
+      "keywords": [
+        "流体",
+        "压力容器",
+        "燃气",
+        "fluids",
+        "propane tank",
+        "pressure vessel"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "42b2025b8829e3b7d1e4ce53b2538a7b732a1bfbdf24d5e2711d0f87cb3de771",
+      "label": "丙烷储罐",
+      "label_zh": "丙烷储罐",
+      "label_en": "Propane Tank",
+      "source_file": "propane_tank_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/oil_barrel/materialsymbolsoutlined/oil_barrel_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_oil_barrel_material",
+      "asset_id": "engineering_verified_engineering_oil_barrel_material",
+      "type": "symbol",
+      "category": "流体设备",
+      "category_en": "Fluid equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_oil_barrel_material.svg",
+      "keywords": [
+        "能源",
+        "石油",
+        "储运",
+        "energy",
+        "oil barrel",
+        "petroleum"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9074a268358b861c1c218ae71eff553f9b618e84301bea10eb2199ab0b1d54d0",
+      "label": "油桶",
+      "label_zh": "油桶",
+      "label_en": "Oil Barrel",
+      "source_file": "oil_barrel_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/gas_meter/materialsymbolsoutlined/gas_meter_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_gas_meter_material",
+      "asset_id": "engineering_verified_engineering_gas_meter_material",
+      "type": "symbol",
+      "category": "流体设备",
+      "category_en": "Fluid equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_gas_meter_material.svg",
+      "keywords": [
+        "流体",
+        "燃气",
+        "计量",
+        "fluids",
+        "gas meter",
+        "measurement"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "56d6eee122ff806a5f521fbedaac4d9eb079f65b7097b83ac96edcabc3ab47af",
+      "label": "燃气表",
+      "label_zh": "燃气表",
+      "label_en": "Gas Meter",
+      "source_file": "gas_meter_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/robot.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_robot_tabler",
+      "asset_id": "engineering_verified_engineering_robot_tabler",
+      "type": "symbol",
+      "category": "机器人与传感器",
+      "category_en": "Robotics and sensors",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_robot_tabler.svg",
+      "keywords": [
+        "机器人",
+        "自动化",
+        "机电",
+        "robotics",
+        "robot",
+        "automation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "a02524ff0935dba797ef80b45cb2947f27b7da62aa32e3d7ba032a8e02f1fde2",
+      "label": "机器人",
+      "label_zh": "机器人",
+      "label_en": "Robot",
+      "source_file": "robot.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/smart_toy/materialsymbolsoutlined/smart_toy_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_smart_robot_material",
+      "asset_id": "engineering_verified_engineering_smart_robot_material",
+      "type": "symbol",
+      "category": "机器人与传感器",
+      "category_en": "Robotics and sensors",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_smart_robot_material.svg",
+      "keywords": [
+        "机器人",
+        "人工智能",
+        "自动化",
+        "robotics",
+        "smart robot",
+        "AI"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "abc96c3f8f83ddbc7787ae119ea4281fe4f7b5e198d96bafb88894ebef6a41ff",
+      "label": "智能机器人",
+      "label_zh": "智能机器人",
+      "label_en": "Smart Robot",
+      "source_file": "smart_toy_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/drone.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_drone_tabler",
+      "asset_id": "engineering_verified_engineering_drone_tabler",
+      "type": "symbol",
+      "category": "机器人与传感器",
+      "category_en": "Robotics and sensors",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_drone_tabler.svg",
+      "keywords": [
+        "机器人",
+        "无人机",
+        "航空",
+        "robotics",
+        "drone",
+        "UAV"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "baa7d8651bd6da5cec5e43b270274d6e7e31b3752258e75aeb29a4cdf830cf35",
+      "label": "无人机",
+      "label_zh": "无人机",
+      "label_en": "Drone",
+      "source_file": "drone.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/sensors/materialsymbolsoutlined/sensors_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_sensors_material",
+      "asset_id": "engineering_verified_engineering_sensors_material",
+      "type": "symbol",
+      "category": "器官与医学器材",
+      "category_en": "Anatomy and medical equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_sensors_material.svg",
+      "keywords": [
+        "控制",
+        "传感器",
+        "测量",
+        "control",
+        "sensors",
+        "measurement"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "37ad875ff46e2b999548613bd66b87dfac8eace11013bf0a9c0a873812336ad3",
+      "label": "传感器",
+      "label_zh": "传感器",
+      "label_en": "Sensors",
+      "source_file": "sensors_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/microchip.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_microchip_lucide",
+      "asset_id": "engineering_verified_engineering_microchip_lucide",
+      "type": "symbol",
+      "category": "器官与医学器材",
+      "category_en": "Anatomy and medical equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_microchip_lucide.svg",
+      "keywords": [
+        "电子",
+        "芯片",
+        "集成电路",
+        "electronics",
+        "microchip",
+        "integrated circuit"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "af516cadb0afa5bccbd5739dfae10d45338f71bb18b5688df10f598570c463a6",
+      "label": "微芯片",
+      "label_zh": "微芯片",
+      "label_en": "Microchip",
+      "source_file": "microchip.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Phosphor Icons",
+      "author_url": "https://phosphoricons.com",
+      "license": "MIT",
+      "license_url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/circuitry.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_circuitry_phosphor",
+      "asset_id": "engineering_verified_engineering_circuitry_phosphor",
+      "type": "symbol",
+      "category": "器官与医学器材",
+      "category_en": "Anatomy and medical equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_circuitry_phosphor.svg",
+      "keywords": [
+        "电子",
+        "电路",
+        "系统",
+        "electronics",
+        "circuitry",
+        "system"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "ffc5030ee624423a715e95f6f78557fe52d3c9e2e8e82b131b7ce0ee3df767cb",
+      "label": "电路",
+      "label_zh": "电路",
+      "label_en": "Circuitry",
+      "source_file": "circuitry.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/cell_tower/materialsymbolsoutlined/cell_tower_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_cell_tower_material",
+      "asset_id": "engineering_verified_engineering_cell_tower_material",
+      "type": "symbol",
+      "category": "器官与医学器材",
+      "category_en": "Anatomy and medical equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_cell_tower_material.svg",
+      "keywords": [
+        "通信",
+        "基站",
+        "信号",
+        "communication",
+        "cell tower",
+        "signal"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "0b0b9039fc3a33abae170101fb44281fa4c015ba962c85bd5f0e7da522edf920",
+      "label": "通信塔",
+      "label_zh": "通信塔",
+      "label_en": "Cell Tower",
+      "source_file": "cell_tower_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/train/materialsymbolsoutlined/train_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "engineering_verified_engineering_train_material",
+      "asset_id": "engineering_verified_engineering_train_material",
+      "type": "symbol",
+      "category": "土木设施",
+      "category_en": "Civil infrastructure",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/engineering_verified_engineering_train_material.svg",
+      "keywords": [
+        "交通",
+        "铁路",
+        "运输",
+        "transport",
+        "train",
+        "railway"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "6a9949a4629165034f51223cb707bb955a5f83af6c1b59d62742bb8b9f20dd9c",
+      "label": "列车",
+      "label_zh": "列车",
+      "label_en": "Train",
+      "source_file": "train_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
     }
   ],
   "templates": [
@@ -2766,7 +5143,9 @@
         "Control valve",
         "Filter",
         "Flow sensor"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "engineering_template_control",
@@ -2797,7 +5176,9 @@
         "Actuator",
         "Plant",
         "Feedback sensor"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "engineering_template_heat_recovery",
@@ -2830,7 +5211,9 @@
         "Cooled outlet",
         "Cold inlet",
         "Heated outlet"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "engineering_template_structure",
@@ -2863,7 +5246,9 @@
         "Strain sensors",
         "Acquisition",
         "Load control"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "engineering_template_pid_loop",
@@ -2896,7 +5281,9 @@
         "执行器",
         "被控对象",
         "操作界面"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "engineering_template_scada_network",
@@ -2929,7 +5316,9 @@
         "SCADA",
         "操作站",
         "历史数据库"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "engineering_template_heat_pump_cycle",
@@ -2962,7 +5351,9 @@
         "冷凝器",
         "节流阀",
         "建筑供热"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "engineering_template_robotic_assembly",
@@ -2995,7 +5386,11 @@
         "零件",
         "视觉检测",
         "物料搬运"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     }
-  ]
+  ],
+  "available_asset_count": 64,
+  "available_template_count": 0
 }

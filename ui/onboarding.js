@@ -126,5 +126,5 @@ export function setupOnboarding({state,editor,api,flush,canLeave,openJob,refresh
  $('onboarding-ai').onclick=()=>{finish.close();$('open-settings').click();};
  replay.onclick=homeHelp.onclick=()=>openWelcome();
  new MutationObserver(update).observe($('welcome'),{attributes:true,attributeFilter:['hidden']});
- return {refresh:update,exported(jobId){if(active&&record.practice_job_id===jobId){exported=true;update();}},async ready(){try{const saved=(await api('/api/onboarding')).state;if(saved?.version===1)record=saved;if(['unseen','in_progress'].includes(record.status)&&!state.id&&$('welcome').hidden===false)openWelcome();}catch{ /* An unavailable guide must never block the workspace. */ }}};
+ return {refresh:update,exported(jobId){if(active&&record.practice_job_id===jobId){exported=true;update();}},async ready(){try{const saved=(await api('/api/onboarding')).state;if(saved?.version===1)record=saved;if(['unseen','in_progress'].includes(record.status)&&!state.id&&$('welcome').hidden===false&&!document.querySelector('dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName))openWelcome();}catch{ /* An unavailable guide must never block the workspace. */ }}};
 }

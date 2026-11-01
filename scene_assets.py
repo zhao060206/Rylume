@@ -174,11 +174,13 @@ TYPE_CORRECTIONS.update({
 
 def asset_catalog():
     """Return categorized assets for UI palette display."""
-    from scientific_library import library
+    from scientific_library import library, available_for_insertion
     bio_items = []
     for aid, item in library().items():
+        if not available_for_insertion(item):continue
         copy_item = dict(item)
         copy_item['category'] = _asset_category(copy_item)
+        if copy_item['category']!=item.get('category'):copy_item.pop('category_en',None)
         copy_item.setdefault('domain','biology')
         if aid in TYPE_CORRECTIONS:
             copy_item['type'] = TYPE_CORRECTIONS[aid]
@@ -204,7 +206,8 @@ def asset_catalog():
         native_items = []
         for n in native_group["items"]:
             item_copy = dict(n)
-            item_copy.setdefault("thumbnail", f"/ui/library/native_{item_copy['type']}.svg")
+            suffix='_'+item_copy['state'] if item_copy.get('state') else ''
+            item_copy.setdefault("thumbnail", f"/ui/library/native_{item_copy['type']}{suffix}.svg")
             item_copy.setdefault("license", "原生矢量")
             item_copy.setdefault("category", cname)
             item_copy['domain'] = 'biology'

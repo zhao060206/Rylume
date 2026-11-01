@@ -1,0 +1,50 @@
+{
+  "rice.svg": {
+    "zh": "米饭",
+    "en": "Cooked rice"
+  },
+  "plate.svg": {
+    "zh": "餐盘",
+    "en": "Plate"
+  },
+  "glass-water.svg": {
+    "zh": "一杯水",
+    "en": "Glass of water"
+  },
+  "terminal.svg": {
+    "zh": "终端",
+    "en": "Terminal"
+  },
+  "magnet-straight.svg": {
+    "zh": "马蹄形磁体图标",
+    "en": "Horseshoe magnet icon"
+  },
+  "alloy.svg": {
+    "zh": "合金结构示意",
+    "en": "Alloy schematic"
+  },
+  "crystal-bars.svg": {
+    "zh": "柱状晶体图标",
+    "en": "Crystal bars icon"
+  },
+  "particles-foam.svg": {
+    "zh": "泡沫颗粒示意",
+    "en": "Foam particle schematic"
+  },
+  "atom-core.svg": {
+    "zh": "原子核图标",
+    "en": "Atomic nucleus icon"
+  },
+  "hydrophobic-droplet-hydrophilic-surface.svg": {
+    "quarantine": "Contact-sheet review: depicted contact angle does not clearly support the hydrophilic surface label"
+  },
+  "hydrophilic-droplet-hydrophobic-surface.svg": {
+    "quarantine": "Contact-sheet review: depicted contact angle does not clearly support the hydrophobic surface label"
+  },
+  "nucleotide-a-ul.svg": {
+    "quarantine": "Nucleotide base identity cannot be confirmed from the unlabelled artwork"
+  },
+  "hypotonic-erythrocyte-2.svg": {
+    "quarantine": "Depicted spiculated cell is ambiguous relative to the upstream hypotonic label"
+  }
+}

@@ -22,7 +22,7 @@ SAFE_TAGS={'svg','g','path','rect','circle','ellipse','line','polyline','polygon
 SAFE_ATTRS={'viewBox','x','y','x1','y1','x2','y2','cx','cy','r','rx','ry','width','height','d','points','transform',
     'fill','stroke','stroke-width','stroke-linecap','stroke-linejoin','fill-rule','opacity','fill-opacity','stroke-opacity',
     'font-size','font-family','font-weight','text-anchor','dominant-baseline'}
-META_KEYS=('asset_id','label','label_en','author','author_url','license','license_url','source_url','source_kind','source_file','modifications')
+META_KEYS=('asset_id','label','label_zh','label_en','author','author_url','license','license_url','source_url','source_kind','source_file','modifications')
 _current=None;_guard=threading.RLock()
 
 @lru_cache(maxsize=512)
@@ -138,8 +138,13 @@ class ResourceManager:
         except (OSError,ValueError):return copy.deepcopy(default)
     def installed(self):return self._json(self.root/'installed.json',{})
     def catalog(self):
-        d=self._json(self.root/'catalog.json',self._json(self.builtin,{'schema_version':1,'packs':[]}))
-        return self.validate_catalog(d)
+        bundled=self.validate_catalog(self._json(self.builtin,{'schema_version':1,'packs':[]}))
+        try:cached=self.validate_catalog(self._json(self.root/'catalog.json',bundled))
+        except DeliveryError:cached=bundled
+        packs={p['id']:p for p in bundled['packs']}
+        for p in cached['packs']:
+            if p['id'] not in packs or version_tuple(p['version'])>version_tuple(packs[p['id']]['version']):packs[p['id']]=p
+        return {'schema_version':1,'packs':list(packs.values())}
     @staticmethod
     def validate_catalog(d):
         if not isinstance(d,dict) or d.get('schema_version')!=1 or not isinstance(d.get('packs'),list) or len(d['packs'])>100:raise DeliveryError('资源目录格式不支持')
@@ -230,6 +235,10 @@ class ResourceManager:
                     raise DeliveryError('素材缺少可追溯的在线来源')
                 if not item.get('license') or not item.get('license_url'):
                     raise DeliveryError('素材缺少许可信息')
+                if version_tuple(manifest['version']) >= (3,0,0):
+                    if hashlib.sha256(file.read_bytes()).hexdigest()!=item.get('sha256'):raise DeliveryError('素材图片与目录校验值不一致')
+                    if item.get('catalog_status') not in ('source-matched','quarantined'):raise DeliveryError('素材缺少图片与名称对应核对记录')
+                    if item.get('catalog_status')=='source-matched' and (not item.get('label_zh') or not item.get('source_file')):raise DeliveryError('素材缺少已核对的双语名称或原始文件名')
                 safe_svg(file.read_text(encoding='utf8'))
             else:
                 scene=json.loads(file.read_text(encoding='utf8'))

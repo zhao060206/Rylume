@@ -264,6 +264,8 @@ def dispatch(handler, method, path, app):
     if desktop_delivery.dispatch(handler,method,path,app):return True
     import annotation_service
     import document_workflows
+    import project_store
+    if project_store.dispatch(handler,method,path,app):return True
     if document_workflows.dispatch(handler,method,path,app):return True
     if annotation_service.dispatch(handler,method,path,app):return True
     try:
@@ -319,7 +321,7 @@ def dispatch(handler, method, path, app):
             packs=configure(app.DATA_DIR)
             handler._json(200,{"ok":True,"assets":assets,"examples":EXAMPLES,
                 "templates":[{**t,**manifest.get(t['id'],{}),'thumbnail':'/ui/library/'+t['id']+'.svg',
-                    'thumbnail_single':'/ui/library/'+t['id']+'-single.svg'} for t in TEMPLATES]+[{k:v for k,v in t.items() if not k.startswith('_')} for t in packs.templates()],
+                    'thumbnail_single':'/ui/library/'+t['id']+'-single.svg'} for t in TEMPLATES]+[{k:v for k,v in t.items() if not k.startswith('_')} for t in packs.templates() if t.get('catalog_status')!='quarantined'],
                 "colorways":COLORWAYS,"references":references,
                 "asset_domains":[{'id':pid,'title':title,'count':sum(a.get('domain')==pid for a in assets),
                     'available':pid=='biology' or any(a.get('domain')==pid for a in assets)} for pid,title in DOMAIN_TITLES.items()]})

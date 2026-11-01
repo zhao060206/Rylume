@@ -4,6 +4,7 @@ import {setupReleaseNotes} from './release-notes.js';
 import {setupDocumentAssistant} from './document-assistant.js';
 import {setupOnboarding} from './onboarding.js';
 import {setupWorkspaceNavigation} from './workspace-navigation.js';
+import {creationProject} from './project-ui.js';
 import {setupNovice} from './novice-guidance.js';
 import {setupCreationComposer} from './creation-composer.js';
 import {authorBrief} from './brief-state.js';
@@ -35,11 +36,14 @@ let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliver
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
 let toastTimer;function toast(message,error=false){$('toast').textContent=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
 async function api(path,body,method){
+ const creation=body?creationProject(path,S):null;
  const controller=new AbortController(),timer=(method==='PATCH'||path==='/api/updates/apply')?setTimeout(()=>controller.abort(),30000):null;let response,data;
  try{response=await fetch(path,{method:method||(body?'POST':'GET'),headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined,signal:controller.signal});
   try{data=await response.json();}catch{throw Error(`本机服务返回异常（HTTP ${response.status}），修改已保留，请重试保存。`);}
  }catch(error){if(error.name==='AbortError')throw Error('连接本机服务超时，修改已保留。请重试保存或另存副本。');throw error;}finally{clearTimeout(timer);}
- if(!response.ok||data.ok===false){const error=new Error(data.error||'请求未完成');error.status=response.status;error.data=data;throw error;}return data;
+ if(!response.ok||data.ok===false){const error=new Error(data.error||'请求未完成');error.status=response.status;error.data=data;throw error;}
+ if(data.job_id&&creation?.projectId&&data.job_id!==creation.parentId&&navigationUI){try{await navigationUI.attachNew(data.job_id,creation.projectId);}catch(error){toast('图版已创建，但归入项目未成功：'+error.message,true);}}
+ return data;
 }
 function saveStatus(text,dirty=false){$('save-status').title=text;$('save-status').textContent=text;$('save-status').classList.toggle('dirty',dirty);document.dispatchEvent(new Event('document-save-state'));}
 function showError(error){S.saveError=error.message==='Failed to fetch'?'暂时连接不上本机服务。修改已留在恢复副本中，可以重试或另存图版。':error.message;S.saveFailures=(S.saveFailures||0)+1;documentUI?.changed();$('error-banner').hidden=false;$('error-text').textContent=S.saveError;S.conflict=error.status===409;saveStatus(S.conflict?'版本冲突 · 恢复副本保留':'保存未完成 · 恢复副本保留',true);}
@@ -52,7 +56,7 @@ const saver=createDocumentSaver({state:S,status:saveStatus,
 async function flush(){editor.finishEditing?.();return saver.flush();}
 const saveControls=setupSaveControls({state:S,flush,toast});
 async function canLeave(){return !S.pending.length&&!S.saving&&!S.inlineEditing||await flush();}
-async function refreshJobs(){S.jobs=(await api('/api/jobs?limit=1000')).jobs||[];renderHistory();navigationUI?.render();}
+async function refreshJobs(){S.jobs=(await api('/api/jobs?limit=1000')).jobs||[];await navigationUI?.refresh();renderHistory();navigationUI?.render();}
 const loadDocument=latestDocumentLoader({canLeave,readVersion:()=>S.id+':'+S.revision,onError:error=>toast(error.message,true),async load(id){
  let data,legacy=false,svg='';
  try{data=await api(`/api/jobs/${id}/scene`);}catch(error){if(!error.data?.legacy)throw error;legacy=true;}
@@ -232,7 +236,7 @@ async function exportFile(format){
 function updateCount(){$('brief-count').textContent=`${$('brief-input').value.length} / ${$('brief-input').maxLength}`;}
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>tab(b.dataset.tab,true));document.querySelectorAll('[data-tool]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tool]').forEach(n=>n.classList.toggle('active',n===b));if(b.dataset.tool==='connect'&&editor.scene?.objects.filter(o=>editor.selectedIds.includes(o.id)).length===2){editor.connectSelection(editor.relationType);editor.setTool('select');}else editor.setTool(b.dataset.tool);});document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
 for(const[id,fn]of [['toggle-left',()=>{preserveCanvasView(editor,()=>ws.classList.toggle('left-collapsed'));syncPanelButtons(ws); }],['toggle-properties',()=>ws.classList.toggle('properties-hidden')],['close-properties',()=>{preserveCanvasView(editor,()=>ws.classList.add('properties-hidden'));syncPanelButtons(ws); }],['undo',()=>editor.undo()],['redo',()=>editor.redo()],['group',()=>editor.groupSelection()],['ungroup',()=>editor.ungroupSelection()],['add-text',()=>editor.insertTextAtCenter()],['zoom-fit',()=>S.revision?editor.fit():workspaceUI?.legacyZoom(1)],['zoom-100',()=>S.revision?editor.setZoom(1):workspaceUI?.legacyZoom(1)],['zoom-in',()=>S.revision?editor.zoomBy(1.15):workspaceUI?.legacyZoom(null,1.15)],['zoom-out',()=>S.revision?editor.zoomBy(1/1.15):workspaceUI?.legacyZoom(null,1/1.15)],['welcome-example',()=>libraryUI.showTemplate(S.templates.find(t=>t.id==='sb_socs_feedback'))],['welcome-blank',blank],['new-blank',blank]])$(id).onclick=fn;
-$('align').onchange=e=>{if(e.target.value.startsWith('distribute-'))editor.distributeSelection(e.target.value.at(-1));else if(e.target.value)editor.alignSelection(e.target.value);e.target.value='';};$('brief-input').oninput=()=>{authorBrief(S,$('brief-input').value);generationUI?.refresh();try{localStorage.setItem('rylume-research-brief',$('brief-input').value);}catch{}updateCount();};$('asset-search').oninput=renderAssets;$('history-search').oninput=renderHistory;
+$('align').onchange=e=>{if(e.target.value.startsWith('distribute-'))editor.distributeSelection(e.target.value.at(-1));else if(e.target.value)editor.alignSelection(e.target.value);e.target.value='';};$('brief-input').oninput=()=>{authorBrief(S,$('brief-input').value);generationUI?.refresh();try{localStorage.setItem('rylume-research-brief',$('brief-input').value);}catch{}updateCount();};$('history-search').oninput=renderHistory;
 // generate handled by generationUI
 $('cancel-job').onclick=()=>{if(S.active)api(`/api/jobs/${S.active}/cancel`,{}).then(()=>$('generation-text').textContent='正在取消…').catch(e=>toast(e.message,true));};$('open-history').onclick=async()=>{await refreshJobs();$('history-dialog').showModal();};$('toggle-export').onclick=()=>{const dialog=$('export-menu');if(dialog.open){dialog.close();return;}dialog.hidden=false;dialog.showModal();$('export-status').replaceChildren();if(S.exporting)$('export-status').textContent='上一份文件还在保存，请稍候。';$('export-revision').textContent='导出当前图版，原图仍可继续编辑。';};
 $('close-export').onclick=$('continue-editing').onclick=()=>$('export-menu').close();$('export-menu').addEventListener('close',()=>$('export-menu').hidden=true);document.querySelectorAll('[data-export]').forEach(b=>b.onclick=()=>exportFile(b.dataset.export));$('open-audit').onclick=()=>workspaceUI?.showRight('review');

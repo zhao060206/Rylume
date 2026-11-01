@@ -31,7 +31,7 @@ const aliases=new Map();for(const group of synonyms){const terms=group.map(norma
 const indexes=new WeakMap();
 
 function searchIndex(asset){
- const signature=[asset.label,asset.type,asset.category,JSON.stringify(asset.keywords),JSON.stringify(asset.aliases)].join('|');
+ const signature=[asset.label,asset.label_zh,asset.label_en,asset.type,asset.category,JSON.stringify(asset.keywords),JSON.stringify(asset.aliases)].join('|');
  const old=indexes.get(asset);if(old?.signature===signature)return old;
  const name=normalized(asset.label),display=normalized(assetDisplayName(asset));
  const keywords=normalized([asset.label_en,Array.isArray(asset.keywords)?asset.keywords.join(' '):asset.keywords,Array.isArray(asset.aliases)?asset.aliases.join(' '):asset.aliases].filter(Boolean).join(' '));
@@ -106,7 +106,7 @@ export function assetDisplayName(a,locale='zh'){
     const raw=String(a.asset_id||a.type||'').replace(/^(bio|chemistry|physics|materials|engineering|earth_environment|computing_math|medicine)_/i,'').replace(/^(chem|phys|mat|eng|earth|math|med)_/i,'').replace(/[_-]+/g,' ');
     return raw.replace(/\b\w/g,c=>c.toUpperCase());
   }
-  let label=String(a.label||a.type).replace(/_/g,' ').replace(/\s+/g,' ').trim();
+  let label=String(a.label_zh||a.label||a.type).replace(/_/g,' ').replace(/\s+/g,' ').trim();
   const translations={'ions':'离子','pink transporter':'转运蛋白 · 粉色','simple receptor':'受体示意','cell membrane semi circle':'细胞膜截面','t cell receptor':'T 细胞受体'};
   for(const[from,to]of Object.entries(translations))if(normalized(label).startsWith(from))label=to+label.slice(from.length);
   label=label.replace(/^受体\s*·\s*simple receptor\s*(\d*)$/i,(_,n)=>'受体示意'+(n?' · '+n:''))
@@ -117,6 +117,7 @@ export function assetDisplayName(a,locale='zh'){
 export function rankAssets(assets,{domain='biology',category='',query='',style='',favorites=[],recent=[],view='all',fuzzy=true}={}){
   const favorite=new Set(favorites),recency=new Map(recent.map((id,i)=>[id,recent.length-i]));
   return assets.map((a,index)=>{
+    if(a.catalog_status==='quarantined')return null;
     const key=assetKey(a);
     const kit=view==='signaling'?['ligand','receptor','receptor_dimer','gpcr','kinase','protein','lipid','tf','dna','mrna','membrane','nucleus','nuclear_pore']:view==='trafficking'?['cell','membrane','nucleus','vesicle','mvb','vesicle_fusion','mitochondrion','golgi','er']:null;
     if((domain!=='all'&&(a.domain||'biology')!==domain)||(category&&a.category!==category)||(style&&assetStyle(a)!==style)||(view==='favorites'&&!favorite.has(key))||(view==='recent'&&!recency.has(key))||(kit&&(a.asset_id||!kit.includes(a.type))))return null;

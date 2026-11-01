@@ -1,5 +1,364 @@
-Asset artwork is imported from online open-license sources and attributed per manifest item.
-ScanSci SVG library: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
-Material Design Icons: Apache-2.0 — https://www.apache.org/licenses/LICENSE-2.0
-Rylume sanitises the SVG element/attribute set for safe local editing; it does not claim authorship of source drawings.
-Scientific mechanisms are schematic and should be checked against the intended research context.
+Open-source artwork. The application does not claim authorship of these images.
+
+Quarantined legacy files are retained only for historical documents and are not offered in the palette.
+
+Per-asset attribution, original URLs, modifications and licences follow.
+
+
+Particle — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Lattice — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Vacancy — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Dislocation — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_semiconductors.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Layers — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Graphene — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Nanotube — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Polymer — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/polymer.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Composite — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Pore — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Membrane — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Grain — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grain.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Fiber — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Film — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/film.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Substrate — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Tensile — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Fracture — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Powder — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grain.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Bcc — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Fcc — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Hcp — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Grain boundary — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grain.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Twin boundary — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Precipitate — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Inclusion — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Crack tip — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Fatigue — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Creep — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_semiconductors.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Corrosion — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Oxide layer — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Coating — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Thin film — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/film.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Sputtering — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_semiconductors.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+CVD — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Lithography — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Annealing — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Quenching — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Sintering — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Additive — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Extrusion — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Injection — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Rolling — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-orbit.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Forging — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Weld — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Laminate — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Fiber reinf — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Foam — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Aerogel — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Metamaterial — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Shape memory — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shape.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Piezoelectric — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Semiconductor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Superconductor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Magnetic — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Battery material — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/battery.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Catalyst support — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Sep membrane — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_semiconductors.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Hydrogel — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Elastomer — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Thermoplastic — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Thermoset — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Copolymer — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Crosslink — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Crystallization — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Phase sep — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-sankey.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Band structure — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Stress strain — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-line.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Nanoindentation — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+AFM — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+TEM — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+SEM — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+XRD — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Dsc — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Unit cell — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Amorphous structure — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Nanofiber — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Nanoplatelet — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Core-shell particle — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/circle-multiple.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Micropattern — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Surface roughness — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/texture.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Contact angle — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/angle-acute.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Wettability — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water-percent.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Diffusion profile — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Phase field — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-sankey.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Thermogravimetric curve — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Dynamic mechanical analysis — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Thermal conductivity — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Electrical resistivity — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/resistor.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Hardness test — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Fracture toughness — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Compression test — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-collapse.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Shear test — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-line.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Tribology — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-orbit.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Powder bed — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grain.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Electrospinning — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Sol-gel process — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Spray coating — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/spray.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Plasma treatment — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Etching — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers-triple.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Ion implantation — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/needle.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Laser cladding — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Melt spinning — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/fire.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Molecular dynamics — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/molecule.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Droplet — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Concrete bag — Delapouite; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/concrete-bag.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+emulsion — OpenClipart; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/emulsion.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Foam particle schematic — OpenClipart; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/particles-foam.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+metal plate — Delapouite; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/metal-plate.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+crystal growth — Lorc; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystal-growth.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Alloy schematic — OpenClipart; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/alloy.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+crystal cluster — Lorc; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystal-cluster.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Crystal — Lorc; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystal-shine.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Crystal bars icon — Lorc; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystal-bars.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+crystallization — Lorc; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystalize.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Hexagon array — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/hexagons.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Dot grid — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/grid-dots.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+minerals — Faithtoken; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/faithtoken/minerals.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Cube — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cube.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+edge crack — Lorc; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/edge-crack.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+glass crack — Lorc; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/cracked-glass.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Atomic nucleus icon — Delapouite; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/atom-core.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+nanoparticle — Rahel-Khdhr; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Nanotechnology/Rahel-Khdhr/Nanoparticle.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+particle suspension — OpenClipart; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/particles-suspension.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+silver nanoparticle — Rahel-Khdhr; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Nanotechnology/Rahel-Khdhr/Silver_Nanoparticle.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+solid particles — OpenClipart; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/particles-solids.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Spring — Delapouite; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/spring.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+droplet on hydrophilic surface — Margot Riggi; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Imaging/Margot_Riggi/hydrophobic-droplet-hydrophilic-surface.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+droplet on hydrophobic surface — Margot Riggi; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Imaging/Margot_Riggi/hydrophilic-droplet-hydrophobic-surface.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+
+Lucide-ISC.txt
+
+
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Phosphor-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2021 Phosphor Icons
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Tabler-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2026 Paweł Kuna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

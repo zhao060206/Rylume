@@ -14,11 +14,13 @@ def test_downloaded_pack_enters_catalog_and_survives_uninstall_in_documents(stud
     wait(manager.status,lambda s:s['packs'][0]['task']['state']=='installed')
     code,catalog=studio('/api/scene/catalog');assert code==200
     assert next(d for d in catalog['asset_domains'] if d['id']=='chemistry')['available']
-    assets=[a for a in catalog['assets'] if a.get('pack_id')=='chemistry'];assert len(assets)==row['asset_count']
+    assets=[a for a in catalog['assets'] if a.get('pack_id')=='chemistry'];assert len(assets)==row['available_asset_count']
     assert all('_file' not in a for a in assets)
-    templates=[t for t in catalog['templates'] if t.get('pack_id')=='chemistry'];assert len(templates)==row['template_count']
+    templates=[t for t in catalog['templates'] if t.get('pack_id')=='chemistry'];assert not templates
     code,thumbnail=studio(assets[0]['thumbnail']);assert code==200 and b'<svg' in thumbnail
-    code,new=studio('/api/scene/example',{'template':templates[0]['id'],'canvas_mm':[90,150]});assert code==200,new
+    from scene_document import empty_scene
+    scene=empty_scene(width_mm=90,height_mm=150);scene['objects']=[{'id':'real_apparatus','type':'symbol','label':assets[0]['label_zh'],'asset_id':assets[0]['asset_id'],'x':20,'y':30,'w':24,'h':30}]
+    code,new=studio('/api/scene/import',{'scene':scene});assert code==200,new
     endpoint='/api/jobs/'+new['job_id'];_,before=studio(endpoint+'/scene')
     assert before['scene']['canvas']['width_mm']==90 and all(o['asset_snapshot'] for o in before['scene']['objects'])
     assert before['audit']['warnings']==0

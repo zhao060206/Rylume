@@ -1,5 +1,454 @@
-Asset artwork is imported from online open-license sources and attributed per manifest item.
-ScanSci SVG library: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
-Material Design Icons: Apache-2.0 — https://www.apache.org/licenses/LICENSE-2.0
-Rylume sanitises the SVG element/attribute set for safe local editing; it does not claim authorship of source drawings.
-Scientific mechanisms are schematic and should be checked against the intended research context.
+Open-source artwork. The application does not claim authorship of these images.
+
+Quarantined legacy files are retained only for historical documents and are not offered in the palette.
+
+Per-asset attribution, original URLs, modifications and licences follow.
+
+
+Mountain — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_cloud.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+River — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_fire.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Aquifer — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_reef.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Soil — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_mineral.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Cloud — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cloud.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Rain — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-rainy.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Sun — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sun-angle.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Volcano — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Tree — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tree.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Leaf — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/leaf.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Wetland — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Ocean — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Sediment — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_profile.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Glacier — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_cloud.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Watershed — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Pollutant — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_strata.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Station — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Satellite — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/satellite.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Layers — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Plate — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_pollution.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Subduction — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_coast.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Ridge — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Fault — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/file-tree.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Fold — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_aggregate.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Erosion — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Weathering — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_strata.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Landslide — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/landslide.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Debris flow — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_lake.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Flood — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_stormwater.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Drought — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_storm.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Wildfire — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_stormwater.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Desertification — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Coast — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Delta — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delta.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Coral — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_desert.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Mangrove — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_radiation.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Grassland — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Forest — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/forest.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Peatland — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_river.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Permafrost — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_grassland.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Atmosphere — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Greenhouse — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/greenhouse.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Carbon cycle — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_reef.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Nitrogen cycle — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_fire.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Water cycle — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Groundwater — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Infiltration — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_landforms.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Evapotranspiration — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_storm.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Runoff — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_profile.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+River network — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/network.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Lake — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_wetland.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Reservoir — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Dam — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Irrigation — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Cropland — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_monitoring.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Urban heat — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/city.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Air quality — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-conditioner.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Wind field — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wind-turbine.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Lightning — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/lightning-bolt.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Cyclone — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Monsoon — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+El nino — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Sea ice — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ice-cream.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Ocean current — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Plastic — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_supply.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Oil spill — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/oil.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Eutrophication — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_geography.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Biodiversity — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/earth.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Remote sensing — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/remote.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+GIS — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_monitoring.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Buoy — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_river.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Ice core — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ice-cream.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Sediment core — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/circle-multiple.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Water treatment — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Carbon capture — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Geology column — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Magma chamber — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Volcanic arc — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Seismic wave — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Seismometer — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/signal.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Gully erosion — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/terrain.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Sand dune — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/terrain.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Hurricane — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-hurricane.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Rain gauge — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-rainy.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Weather radar — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-cloudy.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Solar radiation — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solar-panel.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Ozone layer — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield-sun.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Aerosol — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+PM2.5 particles — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-filter.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Wastewater treatment — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water-pump.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Bioremediation — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_wastewater.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Compost — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/compost.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Landfill — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delete.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Recycling — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Forest carbon sink — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/forest.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Species network — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Food web — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/food-apple.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Phytoplankton — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_wetland.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Ocean acidification — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Ocean thermal front — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Tide — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Soil moisture — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Erosion control — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_landforms.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Urban growth — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/city.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Biodiversity index — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/earth.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Database — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/database.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Mesh — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_transport.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Pipe — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Land-cover class — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/land-fields.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Reservoir — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_thermal_power.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Mountain — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/mountain.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Volcano — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/volcano.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Iceberg — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/iceberg.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Diamond — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/diamond.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Geothermal Landform — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/mountain_steam/materialsymbolsoutlined/mountain_steam_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Landscape — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/landscape/materialsymbolsoutlined/landscape_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Landslide — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/landslide/materialsymbolsoutlined/landslide_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Earthquake — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/earthquake/materialsymbolsoutlined/earthquake_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Droplet — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/droplet.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Water Bucket — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/bucket-droplet.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Ripple — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/ripple.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Water Body — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water/materialsymbolsoutlined/water_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Water pH — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_ph/materialsymbolsoutlined/water_ph_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Water EC — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_ec/materialsymbolsoutlined/water_ec_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Water ORP — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_orp/materialsymbolsoutlined/water_orp_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Water VOC — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_voc/materialsymbolsoutlined/water_voc_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Salinity — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/salinity/materialsymbolsoutlined/salinity_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Ocean Waves — Phosphor Icons; MIT; https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE; https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/waves.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Fish — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/fish.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Shell — Lucide Icons and contributors; ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE; https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/shell.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Cloud — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Rain — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud-rain.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Snowfall — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud-snow.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Storm Cloud — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud-storm.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Fog — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud-fog.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Tornado — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tornado.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Cyclone — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/cyclone/materialsymbolsoutlined/cyclone_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Wind — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/wind.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Windsock — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/windsock.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Air — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/air/materialsymbolsoutlined/air_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+CO2 — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/co2/materialsymbolsoutlined/co2_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Hail — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/weather_hail/materialsymbolsoutlined/weather_hail_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Heavy Rain — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/rainy_heavy/materialsymbolsoutlined/rainy_heavy_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Forest — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/forest/materialsymbolsoutlined/forest_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Agriculture — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/agriculture/materialsymbolsoutlined/agriculture_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Eco — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/eco/materialsymbolsoutlined/eco_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Compost — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/compost/materialsymbolsoutlined/compost_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Tree — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tree.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Trees — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/trees.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Leaf — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/leaf.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Plant — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/plant.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Seedling — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/seedling.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Flower — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/flower.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Butterfly — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/butterfly.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Insect — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/bug.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Animal Track — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/paw.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Deer — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/deer.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Bird — Lucide Icons and contributors; ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE; https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/bird.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Tent — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tent.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Compass — Lucide Icons and contributors; ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE; https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/compass.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Binoculars — Lucide Icons and contributors; ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE; https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/binoculars.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Map — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/map.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Latitude — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/world-latitude.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Longitude — Paweł Kuna and Tabler Icons contributors; MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE; https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/world-longitude.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Field Drone — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/drone/materialsymbolsoutlined/drone_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Radar Remote Sensing — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/radar/materialsymbolsoutlined/radar_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Remote Sensing Satellite — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/satellite/materialsymbolsoutlined/satellite_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Tsunami — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/tsunami/materialsymbolsoutlined/tsunami_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Flood — Google Material Design; Apache-2.0; https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE; https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/flood/materialsymbolsoutlined/flood_24px.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Flooded House — Fonticons, Inc. (Font Awesome); CC BY 4.0; https://fontawesome.com/license/free; https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/house-flood-water.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Cracked House — Fonticons, Inc. (Font Awesome); CC BY 4.0; https://fontawesome.com/license/free; https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/house-chimney-crack.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Oil Well — Fonticons, Inc. (Font Awesome); CC BY 4.0; https://fontawesome.com/license/free; https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/oil-well.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+Icicles — Fonticons, Inc. (Font Awesome); CC BY 4.0; https://fontawesome.com/license/free; https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/icicles.svg; Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.
+
+
+Lucide-ISC.txt
+
+
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Phosphor-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2021 Phosphor Icons
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Tabler-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2026 Paweł Kuna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

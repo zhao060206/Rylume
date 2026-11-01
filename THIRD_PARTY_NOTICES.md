@@ -41,3 +41,6 @@ GEOS 3.13.1 sources remain available in the [3.0.0 dependency-sources asset](htt
 The GEOS license and replacement shared
 libraries remain under `_internal/shapely.libs`; Rylume does not restrict the
 replacement or debugging of those libraries as permitted by the LGPL.
+# Source-matched artwork in 4.8.0
+
+New discipline assets retain the original author, pinned source URL, source filename, licence and modification notes in each pack's manifest and LICENSE.txt. Tabler and Phosphor MIT notices and the Lucide ISC notice are included under licenses/artwork. Creative Commons and public-domain assets retain their per-item attribution and licence links. Rylume does not claim authorship of these images. Legacy files with unverified names are retained for old documents but quarantined from the palette and model proposals.

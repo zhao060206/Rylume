@@ -14,7 +14,19 @@ def library():
     result.update(manager().assets())
     from personal_assets import manager as personal_store
     result.update(personal_store(manager().data_dir).catalog())
+    review_path=ROOT/'assets/asset-catalog-review.json'
+    review=json.loads(review_path.read_text(encoding='utf8')) if review_path.exists() else {}
+    for aid,item in result.items():
+        checked=review.get(aid)
+        if checked and checked.get('source_url')==item.get('source_url'):
+            item.update(checked)
     return result
+
+
+def available_for_insertion(item):
+    # Old scene IDs deliberately stay in library()/glyph(), while unverified
+    # artwork cannot be selected again or proposed by the model.
+    return not item.get('asset_id') or item.get('catalog_status')=='source-matched' or item.get('personal')
 
 @lru_cache(maxsize=256)
 def glyph(asset_id,fill=None,stroke=None):

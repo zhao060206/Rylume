@@ -18,6 +18,10 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   let filter='',structure='',group='recommended',legacy=false,drafts=false,assetCategory='',assetDomain='biology',pending=null,detail=null,assetLimit=60,selectedTemplate=null;
   let assetLocale='zh';try{assetLocale=localStorage.getItem('rylume-asset-locale')==='en'?'en':'zh';}catch{}
   const assetName=a=>assetDisplayName(a,assetLocale);
+  const t=(zh,en)=>assetLocale==='en'?en:zh;
+  const domainNames={biology:'Biology',chemistry:'Chemistry',physics:'Physics',materials:'Materials science',engineering:'Engineering', 'earth-environment':'Earth and environment','computing-math':'Computing and mathematics',medicine:'Medicine'};
+  const domainName=id=>assetLocale==='en'?(domainNames[id]||'Scientific artwork'):(state.assetDomains?.find(d=>d.id===id)?.title||'生物学');
+  const categoryName=value=>assetLocale==='en'?(state.assets.find(a=>a.category===value)?.category_en||'Scientific artwork'):value;
   let favorites=[],recent=[],creatingDocument=null;
   try{favorites=JSON.parse(localStorage.getItem('rylume-favorite-assets')||'[]');recent=JSON.parse(localStorage.getItem('rylume-recent-assets')||'[]');}catch{}
   function remember(){try{localStorage.setItem('rylume-favorite-assets',JSON.stringify(favorites));localStorage.setItem('rylume-recent-assets',JSON.stringify(recent));}catch{toast('素材偏好暂未保存；图版不受影响');}}
@@ -39,7 +43,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     editor.insertObject(item.type,assetName(item),item,position);editor.ensureSelectionVisible();
     recent=[assetKey(item),...recent.filter(k=>k!==assetKey(item))].slice(0,60);remember();
     editor.host.focus({preventScroll:true});
-    toast('已添加 '+item.label+' · 可拖动位置，双击改字');
+    toast(t('已添加 ','Added ')+assetName(item)+t(' · 可拖动位置，双击改字',' · Drag to move; double-click to edit text'));
   }
 
   function assetDetail(item){
@@ -50,9 +54,10 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     credits.replaceChildren();
     credits.append(el('p','',`${item.author||'理象原创图元'} · ${item.license||'CC BY 3.0'}`));
     if(item.source_url){
-      const a=el('a','source-link','查看原始素材与许可 ↗');
+      const a=el('a','source-link',t('查看原始素材与许可 ↗','View original artwork and licence ↗'));
       a.href=item.source_url;a.target='_blank';a.rel='noreferrer';
-      credits.append(a,el('p','small','导出时会自动附带图注来源说明。素材为纯矢量路径，可无损缩放、旋转与编辑。'));
+      credits.append(a,el('p','small',t('导出时会附带素材来源说明。请按原始许可保留署名。','Exports include source credits. Retain attribution required by the original licence.')));
+      credits.append(el('p','small',t('原始文件：','Original file: ')+(item.source_file||item.source_url.split('/').at(-1))));
     }
     showFloatingWindow($('asset-dialog'));
   }
@@ -60,7 +65,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   function renderAssetChips(){
     const select=$('asset-category');if(!select)return;
     const assets=filterAssets(state.assets,{domain:assetDomain}),counts=new Map();for(const a of assets)counts.set(a.category,(counts.get(a.category)||0)+1);
-    select.replaceChildren();for(const [value,title] of [['',`全部分类 (${assets.length})`],...[...counts].map(([c,n])=>[c,`${c} (${n})`])]){const o=el('option','',title);o.value=value;select.append(o);}select.value=assetCategory;
+    select.replaceChildren();for(const [value,title] of [['',`${t('全部分类','All categories')} (${assets.length})`],...[...counts].map(([c,n])=>[c,`${categoryName(c)} (${n})`])]){const o=el('option','',title);o.value=value;select.append(o);}select.value=assetCategory;
   }
 
   function renderAssets(){
@@ -69,7 +74,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     const category=assetCategory || ($('asset-category')?.value || '');
     const assets=rankAssets(state.assets,{domain:assetDomain,category,query:q,style:$('asset-style')?.value||'',view:$('asset-view')?.value||'all',favorites,recent});
     list.replaceChildren();
-    if($('asset-count'))$('asset-count').textContent=`${assetDomain==='all'?'全部学科':state.assetDomains?.find(d=>d.id===assetDomain)?.title||'生物学'} / ${category||'全部素材'} · ${assets.length} 项`;
+    if($('asset-count'))$('asset-count').textContent=`${assetDomain==='all'?t('全部学科','All disciplines'):domainName(assetDomain)} / ${category?categoryName(category):t('全部素材','All assets')} · ${assets.length} ${t('项','assets')}`;
     
     for(const item of assets.slice(0,assetLimit)){
       const card=el('div','asset-card');
@@ -79,33 +84,33 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
       img.alt='';
       img.loading='lazy';
       img.draggable=false;
-      b.setAttribute('aria-label','添加 '+assetName(item));
+      b.setAttribute('aria-label',t('添加 ','Add ')+assetName(item));
       b.append(img,el('span','asset-name',assetName(item)));
-      const style=el('span','asset-style-tag',{native:'原生图元',flat:'简洁矢量',detailed:'精细插画'}[assetStyle(item)]);b.append(style);
+      const style=el('span','asset-style-tag',{native:t('基础图元','Basic shape'),flat:t('简洁矢量','Vector artwork'),detailed:t('精细插画','Detailed illustration')}[assetStyle(item)]);b.append(style);
       const approximate=q&&assetMatch(item,q).kind==='fuzzy';
-      if(approximate){card.classList.add('asset-approximate');b.append(el('span','asset-match-tag','近似匹配'));b.setAttribute('aria-description','近似匹配，请核对名称后添加。');}
-      b.title=(approximate?'近似匹配，请核对名称。':'')+'点击添加到画布：'+assetName(item);
+      if(approximate){card.classList.add('asset-approximate');b.append(el('span','asset-match-tag',t('近似匹配','Approximate match')));b.setAttribute('aria-description',t('近似匹配，请核对名称后添加。','Approximate match; verify the name before inserting.'));}
+      b.title=(approximate?t('近似匹配，请核对名称。','Approximate match. '):'')+t('点击添加到画布：','Insert into canvas: ')+assetName(item);
       b.onclick=e=>{if(e.detail>1)return;insert(item);};
       card.draggable=true;
       card.ondragstart=e=>{
         e.dataTransfer.setData('application/cell-asset',JSON.stringify(item));
         e.dataTransfer.effectAllowed='copy';
       };
-      const info=el('button','asset-license','i');info.setAttribute('aria-label','查看 '+assetName(item)+' 的来源与详情');
-      info.title='查看素材出处与大图';
+      const info=el('button','asset-license','i');info.setAttribute('aria-label',t('查看来源与详情：','Source and details: ')+assetName(item));
+      info.title=t('查看素材出处与大图','View source and preview');
       info.onclick=()=>assetDetail(item);
-      const favorite=el('button','asset-favorite',favorites.includes(assetKey(item))?'已收藏':'收藏');favorite.setAttribute('aria-label',(favorites.includes(assetKey(item))?'取消收藏 ':'收藏 ')+assetName(item));favorite.setAttribute('aria-pressed',String(favorites.includes(assetKey(item))));favorite.onclick=()=>{const key=assetKey(item);favorites=favorites.includes(key)?favorites.filter(x=>x!==key):[...favorites,key];remember();renderAssets();};
+      const favorite=el('button','asset-favorite',favorites.includes(assetKey(item))?t('已收藏','Saved'):t('收藏','Save'));favorite.setAttribute('aria-label',(favorites.includes(assetKey(item))?t('取消收藏 ','Unsave '):t('收藏 ','Save '))+assetName(item));favorite.setAttribute('aria-pressed',String(favorites.includes(assetKey(item))));favorite.onclick=()=>{const key=assetKey(item);favorites=favorites.includes(key)?favorites.filter(x=>x!==key):[...favorites,key];remember();renderAssets();};
       card.append(b,info,favorite);
       list.append(card);
     }
     if(assets.length>assetLimit){
-      const more=el('button','button secondary asset-load-more',`再看 60 个 · 还有 ${assets.length-assetLimit} 个`);
+      const more=el('button','button secondary asset-load-more',t(`再看 60 个 · 还有 ${assets.length-assetLimit} 个`,`Show 60 more · ${assets.length-assetLimit} remaining`));
       more.onclick=()=>{const y=list.scrollTop;assetLimit+=60;renderAssets();list.scrollTop=y;};
       list.append(more);
     }
     if(!assets.length){
-      list.append(el('p','muted','没有找到匹配的素材。可以换一个关键词，或清空筛选。'));
-      const reset=el('button','button full','清空搜索与筛选');reset.onclick=()=>{assetCategory='';$('asset-search').value='';$('asset-view').value='all';$('asset-style').value='';renderAssetChips();renderAssets();};list.append(reset);
+      list.append(el('p','muted',t('没有找到匹配的素材。可以换一个关键词，或清空筛选。','No matching assets. Try another term or clear the filters.')));
+      const reset=el('button','button full',t('清空搜索与筛选','Clear search and filters'));reset.onclick=()=>{assetCategory='';$('asset-search').value='';$('asset-view').value='all';$('asset-style').value='';renderAssetChips();renderAssets();};list.append(reset);
     }
   }
 
@@ -211,8 +216,29 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     showFloatingWindow($('gallery-dialog'));
   }
 
+  function localizeAssets(){
+    $('asset-library-title').textContent=t('素材库','Asset library');
+    $('panel-assets').querySelector(':scope > p.muted').textContent=t('点击素材放到图上；拖动可移动，双击文字可改字。','Click an asset to insert it. Drag to move; double-click its label to edit.');
+    for(const[id,zh,en]of [['asset-domain','学科','Discipline'],['asset-category','分类','Category']]){document.querySelector(`label[for="${id}"]`).textContent=t(zh,en);$(id).setAttribute('aria-label',t(zh,en));}
+    $('asset-search').placeholder=t('搜索名称或近似词，例如：线粒体','Search names or approximate terms, e.g. mitochondrion');
+    $('asset-search').setAttribute('aria-label',t('搜索科研素材','Search scientific assets'));
+    $('asset-search-hint').textContent=t('支持中文、英文、常用缩写与模糊查找；多个词用空格分开。','Search either language, common abbreviations or misspellings. Separate terms with spaces.');
+    for(const[locale,id]of [['zh','asset-language-zh'],['en','asset-language-en']]){$(id)?.setAttribute('aria-pressed',String(assetLocale===locale));}
+    const domainSelect=$('asset-domain');domainSelect.replaceChildren();
+    for(const[id,label]of [['all',t('全部学科','All disciplines')],...(state.assetDomains||[]).map(d=>[d.id,domainName(d.id)])]){const d=state.assetDomains?.find(d=>d.id===id),o=el('option','',label+(id==='all'?` (${state.assets.length})`:d?.available?` (${d.count||0})`:t(' · 下载资源包',' · Download pack')));o.value=id;domainSelect.append(o);}domainSelect.value=assetDomain;
+    for(const[id,choices]of [['asset-view',[['all',t('全部素材','All assets')],['favorites',t('我的收藏','Saved assets')],['recent',t('最近使用','Recently used')],['signaling',t('机制通路套装','Signalling kit')],['trafficking',t('细胞转运套装','Trafficking kit')]]],['asset-style',[['',t('全部风格','All styles')],['native',t('基础图元','Basic shapes')],['flat',t('简洁矢量','Vector artwork')],['detailed',t('精细插画','Detailed illustration')]]]]){const select=$(id);if(!select)continue;const value=select.value;select.replaceChildren();for(const[key,label]of choices){const option=el('option','',label);option.value=key;select.append(option);}select.value=value;}
+    $('asset-view')?.setAttribute('aria-label',t('浏览范围','Browse'));$('asset-style')?.setAttribute('aria-label',t('视觉风格','Style'));
+    const summary=$('panel-assets').querySelector('.asset-filter-disclosure > summary');if(summary)summary.textContent=t('风格与收藏筛选','Style and saved filters');
+    $('insert-detail-asset').textContent=t('添加到画布','Insert into canvas');
+    $('asset-detail-image').alt=t('素材预览','Asset preview');
+    for(const[id,zh,en]of [['open-personal-assets','我的素材','My assets'],['upload-personal-assets','上传素材','Upload asset']])if($(id))$(id).textContent=t(zh,en);
+    $('download-discipline-assets').hidden=assetDomain==='biology'||assetDomain==='all';$('download-discipline-assets').textContent=t('下载或更新此学科素材','Download or update this discipline');
+    renderAssetChips();renderAssets();
+  }
+  function setAssetLocale(locale){assetLocale=locale;try{localStorage.setItem('rylume-asset-locale',locale);}catch{}localizeAssets();if(detail&&$('asset-dialog').open)assetDetail(detail);document.dispatchEvent(new CustomEvent('asset-language-change',{detail:{locale}}));}
   function init(data){
-    if(!$('asset-language-toggle')){const toggle=el('button','button secondary','中文 / EN');toggle.id='asset-language-toggle';toggle.type='button';toggle.setAttribute('aria-label','切换素材中文或英文标签');toggle.setAttribute('aria-pressed',String(assetLocale==='en'));toggle.onclick=()=>{assetLocale=assetLocale==='zh'?'en':'zh';try{localStorage.setItem('rylume-asset-locale',assetLocale);}catch{}toggle.setAttribute('aria-pressed',String(assetLocale==='en'));renderAssets();if(detail)assetDetail(detail);};$('asset-search')?.before(toggle);}
+    if(!$('asset-language-toggle')){const toggle=el('div','asset-language-switch');toggle.id='asset-language-toggle';toggle.setAttribute('role','group');toggle.setAttribute('aria-label','中文 / English');for(const[locale,title]of [['zh','中文'],['en','English']]){const b=el('button','',title);b.type='button';b.id='asset-language-'+locale;b.onclick=()=>setAssetLocale(locale);toggle.append(b);}$('asset-search')?.before(toggle);}
+    if(!$('download-discipline-assets')){const download=el('button','button full');download.id='download-discipline-assets';download.onclick=()=>requestResource(assetDomain);$('asset-list').after(download);}
     if(!$('asset-style')){const row=el('div','asset-filters');for(const[id,label,choices]of [['asset-view','浏览范围',[['all','全部素材'],['favorites','我的收藏'],['recent','最近使用'],['signaling','机制通路套装'],['trafficking','细胞转运套装']]],['asset-style','视觉风格',[['','全部风格'],['native','原生图元'],['flat','简洁矢量'],['detailed','精细插画']]]]){const select=el('select');select.id=id;select.setAttribute('aria-label',label);for(const[value,title]of choices){const option=el('option','',title);option.value=value;select.append(option);}select.onchange=()=>{assetLimit=60;renderAssets();};row.append(select);}const filters=el('details','panel-disclosure asset-filter-disclosure'),summary=el('summary','','风格与收藏筛选');filters.append(summary,row);$('asset-search').after(filters);}
     state.templates=data.templates||[];
     state.colorways=data.colorways||[];
@@ -271,8 +297,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
         const label=el('label','legacy-layout-toggle');const check=el('input');check.type='checkbox';check.checked=drafts;check.onchange=()=>{drafts=check.checked;filter='';renderGalleryFilters();renderTemplates();};label.append(check,'显示扩展草图（尚未精修）');filtersContainer.append(label);
       }
     }
-    renderAssetChips();
-    renderAssets();
+    localizeAssets();
     renderTemplates();
     renderReferences();
   }
@@ -293,7 +318,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   let searchTimer;const search=$('asset-search');
   search?.addEventListener('input',event=>{if(event.isComposing)return;clearTimeout(searchTimer);searchTimer=setTimeout(()=>{assetLimit=60;renderAssets();},100);});
   search?.addEventListener('compositionend',()=>{clearTimeout(searchTimer);assetLimit=60;renderAssets();});
-  $('asset-domain')?.addEventListener('change',e=>{if(e.target.value!=='all'&&!state.assetDomains.find(d=>d.id===e.target.value)?.available){requestResource(e.target.value);e.target.value=assetDomain;return;}assetDomain=e.target.value;assetCategory='';assetLimit=60;renderAssetChips();renderAssets();});
+  $('asset-domain')?.addEventListener('change',e=>{if(e.target.value!=='all'&&!state.assetDomains.find(d=>d.id===e.target.value)?.available){requestResource(e.target.value);e.target.value=assetDomain;return;}assetDomain=e.target.value;assetCategory='';assetLimit=60;localizeAssets();});
   $('asset-category')?.addEventListener('change', e=>{
     assetCategory=e.target.value;
     assetLimit=60;

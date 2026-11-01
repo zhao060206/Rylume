@@ -193,10 +193,12 @@ def test_expanded_non_biology_packs_have_distinct_editable_assets():
     catalog=json.loads((ROOT/'assets/resource-catalog.json').read_text(encoding='utf8'))
     rows={p['id']:p for p in catalog['packs']}
     assert set(rows)=={'chemistry','physics','materials','engineering','earth-environment','computing-math','medicine'}
-    assert sum(p['asset_count'] for p in rows.values())==729
-    assert all(p['version']=='2.2.0' and p['template_count']==8 for p in rows.values())
+    assert sum(p['available_asset_count'] for p in rows.values())>300
+    assert all(p['version']=='3.0.0' and p['template_count']==8 for p in rows.values())
     for pid,p in rows.items():
         manifest=json.loads((ROOT/'resource-packs'/pid/'manifest.json').read_text(encoding='utf8'))
         assert len(manifest['assets'])==p['asset_count']
-        assert all(a['license'] in ('CC BY 4.0','Apache-2.0') and a['source_kind']=='online-open-license' and a['source_url'].startswith('https://') and a['asset_id'].startswith(pid.replace('-','_')+'_') for a in manifest['assets'])
+        assert all(a['license'] in ('CC BY 4.0','Apache-2.0','CC BY 3.0','CC0-1.0','CC0 1.0','MIT','ISC') and a['source_kind']=='online-open-license' and a['source_url'].startswith('https://') and a['asset_id'].startswith(pid.replace('-','_')+'_') for a in manifest['assets'])
+        assert sum(a['catalog_status']=='source-matched' for a in manifest['assets'])==p['available_asset_count']
+        assert all(t['catalog_status']=='quarantined' for t in manifest['templates'])
         assert len({a['asset_id'] for a in manifest['assets']})==len(manifest['assets'])

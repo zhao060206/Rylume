@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "earth-environment",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "title": "地球与环境",
   "domain": "earth-environment",
-  "min_app_version": "3.1.0",
+  "min_app_version": "4.8.0",
   "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
@@ -32,7 +32,9 @@
       "source_file": "atm_cloud.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_cloud.svg",
-      "sha256": "9d3cdda2c57ed65330f786d54e491b1aa656c78b290fb6d9c591d4a424ed7e42"
+      "sha256": "9d3cdda2c57ed65330f786d54e491b1aa656c78b290fb6d9c591d4a424ed7e42",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_river",
@@ -59,7 +61,9 @@
       "source_file": "hazard_fire.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_fire.svg",
-      "sha256": "a2d33e494714d913adcb98430dfa9c5f47113b579f03d6f8f06ed6219b2374f4"
+      "sha256": "a2d33e494714d913adcb98430dfa9c5f47113b579f03d6f8f06ed6219b2374f4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_aquifer",
@@ -86,7 +90,9 @@
       "source_file": "env_reef.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_reef.svg",
-      "sha256": "b353283bc88fc6ebfe51cccd31d3c6e1ba3b9cbc272ef41217af73424f965432"
+      "sha256": "b353283bc88fc6ebfe51cccd31d3c6e1ba3b9cbc272ef41217af73424f965432",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_soil",
@@ -113,7 +119,9 @@
       "source_file": "geo_mineral.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_mineral.svg",
-      "sha256": "571b7a6cf185d34fa1bb695f27fcaee211c3d5954c9f134402b5768a149c23cb"
+      "sha256": "571b7a6cf185d34fa1bb695f27fcaee211c3d5954c9f134402b5768a149c23cb",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_cloud",
@@ -140,7 +148,9 @@
       "source_file": "cloud.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cloud.svg",
-      "sha256": "79b7da3ddabe3d10205fb8e2fc822234892d4118baaebd7cd5938aa0239bff62"
+      "sha256": "79b7da3ddabe3d10205fb8e2fc822234892d4118baaebd7cd5938aa0239bff62",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_rain",
@@ -167,7 +177,9 @@
       "source_file": "weather-rainy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-rainy.svg",
-      "sha256": "c30741be3c4e71287d303ae950595757483b62e1d31e960b9350839dfdc8518a"
+      "sha256": "c30741be3c4e71287d303ae950595757483b62e1d31e960b9350839dfdc8518a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_sun",
@@ -194,7 +206,9 @@
       "source_file": "sun-angle.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sun-angle.svg",
-      "sha256": "d2a03c9260aed3dc97a43a8aafa18dd706858edd2b2773fdeb5bd384bdc4a6b5"
+      "sha256": "d2a03c9260aed3dc97a43a8aafa18dd706858edd2b2773fdeb5bd384bdc4a6b5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_volcano",
@@ -221,7 +235,9 @@
       "source_file": "volcano.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg",
-      "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1"
+      "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_tree",
@@ -248,7 +264,9 @@
       "source_file": "tree.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tree.svg",
-      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b"
+      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_leaf",
@@ -275,7 +293,9 @@
       "source_file": "leaf.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/leaf.svg",
-      "sha256": "5c9ca60ab8fe75126f4108b04635085b1486b7b6f73569a6449be1d465fdc698"
+      "sha256": "5c9ca60ab8fe75126f4108b04635085b1486b7b6f73569a6449be1d465fdc698",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_wetland",
@@ -302,7 +322,9 @@
       "source_file": "geo_volcano.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg",
-      "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc"
+      "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_ocean",
@@ -329,7 +351,9 @@
       "source_file": "waves.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
-      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
+      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_sediment",
@@ -356,7 +380,9 @@
       "source_file": "geo_soil_profile.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_profile.svg",
-      "sha256": "57e96e45a926df7cb988bebfaf21722980d4cc91bb8e787c19cefa9653919837"
+      "sha256": "57e96e45a926df7cb988bebfaf21722980d4cc91bb8e787c19cefa9653919837",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_glacier",
@@ -383,7 +409,9 @@
       "source_file": "atm_cloud.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_cloud.svg",
-      "sha256": "9d3cdda2c57ed65330f786d54e491b1aa656c78b290fb6d9c591d4a424ed7e42"
+      "sha256": "9d3cdda2c57ed65330f786d54e491b1aa656c78b290fb6d9c591d4a424ed7e42",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_watershed",
@@ -410,7 +438,9 @@
       "source_file": "geo_glacier.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
-      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
+      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_pollutant",
@@ -437,7 +467,9 @@
       "source_file": "geo_strata.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_strata.svg",
-      "sha256": "2dac77f70241b53229a88ece95575f6dce19a6dde9c08afb8fdbbba885db36d0"
+      "sha256": "2dac77f70241b53229a88ece95575f6dce19a6dde9c08afb8fdbbba885db36d0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_station",
@@ -464,7 +496,9 @@
       "source_file": "geo_glacier.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
-      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
+      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_satellite",
@@ -491,7 +525,9 @@
       "source_file": "satellite.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/satellite.svg",
-      "sha256": "5be68123d12cbb2c8d8f9078d5b2066dedf8b28f45d09438f1ce7bd9ad14a93d"
+      "sha256": "5be68123d12cbb2c8d8f9078d5b2066dedf8b28f45d09438f1ce7bd9ad14a93d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_layers",
@@ -518,7 +554,9 @@
       "source_file": "layers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg",
-      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
+      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_plate",
@@ -545,7 +583,9 @@
       "source_file": "atm_pollution.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_pollution.svg",
-      "sha256": "43a3c48f0ebe5ba835dbb1b650d15216ffc36326b883da40492d748a23a92524"
+      "sha256": "43a3c48f0ebe5ba835dbb1b650d15216ffc36326b883da40492d748a23a92524",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_subduction",
@@ -572,7 +612,9 @@
       "source_file": "env_coast.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_coast.svg",
-      "sha256": "79fb17a67f0c63d614b5de5080802fda013c5a6183bdc7317caa008fff31dc80"
+      "sha256": "79fb17a67f0c63d614b5de5080802fda013c5a6183bdc7317caa008fff31dc80",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_ridge",
@@ -599,7 +641,9 @@
       "source_file": "water_membrane.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg",
-      "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f"
+      "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_fault",
@@ -626,7 +670,9 @@
       "source_file": "file-tree.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/file-tree.svg",
-      "sha256": "8efa7e48fa316fa851fa1bc46edcdcc116100043f22864453d7a0e5e9ff5cec9"
+      "sha256": "8efa7e48fa316fa851fa1bc46edcdcc116100043f22864453d7a0e5e9ff5cec9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_fold",
@@ -653,7 +699,9 @@
       "source_file": "geo_soil_aggregate.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_aggregate.svg",
-      "sha256": "29fecb068d2c77b07cfa1a72f662764ac0f3112a445e4df43c30c23827f64676"
+      "sha256": "29fecb068d2c77b07cfa1a72f662764ac0f3112a445e4df43c30c23827f64676",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_erosion",
@@ -680,7 +728,9 @@
       "source_file": "map_sampling.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg",
-      "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522"
+      "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_weathering",
@@ -707,7 +757,9 @@
       "source_file": "geo_strata.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_strata.svg",
-      "sha256": "2dac77f70241b53229a88ece95575f6dce19a6dde9c08afb8fdbbba885db36d0"
+      "sha256": "2dac77f70241b53229a88ece95575f6dce19a6dde9c08afb8fdbbba885db36d0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_landslide",
@@ -734,7 +786,9 @@
       "source_file": "landslide.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/landslide.svg",
-      "sha256": "cbd984d8d85721c6a3df921988fdf456607df44778fa4ff449399805caa1b7ca"
+      "sha256": "cbd984d8d85721c6a3df921988fdf456607df44778fa4ff449399805caa1b7ca",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_debris_flow",
@@ -761,7 +815,9 @@
       "source_file": "env_lake.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_lake.svg",
-      "sha256": "6049df2084b795ea145ac32b2fe237449ee2e934f5a5889bae6321303c27e2fd"
+      "sha256": "6049df2084b795ea145ac32b2fe237449ee2e934f5a5889bae6321303c27e2fd",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_flood",
@@ -788,7 +844,9 @@
       "source_file": "water_stormwater.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_stormwater.svg",
-      "sha256": "f9208cf59502d8c85f09d74534158d456d1771cef3c4c882d80644588268acb9"
+      "sha256": "f9208cf59502d8c85f09d74534158d456d1771cef3c4c882d80644588268acb9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_drought",
@@ -815,7 +873,9 @@
       "source_file": "hazard_storm.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_storm.svg",
-      "sha256": "885bab56a31f1a9b9592c5ecfb0ac47bbad422e4ddc0caeba96dc49a86817698"
+      "sha256": "885bab56a31f1a9b9592c5ecfb0ac47bbad422e4ddc0caeba96dc49a86817698",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_wildfire",
@@ -842,7 +902,9 @@
       "source_file": "water_stormwater.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_stormwater.svg",
-      "sha256": "f9208cf59502d8c85f09d74534158d456d1771cef3c4c882d80644588268acb9"
+      "sha256": "f9208cf59502d8c85f09d74534158d456d1771cef3c4c882d80644588268acb9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_desertification",
@@ -869,7 +931,9 @@
       "source_file": "geo_volcano.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg",
-      "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc"
+      "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_coast",
@@ -896,7 +960,9 @@
       "source_file": "geo_glacier.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
-      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
+      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_delta",
@@ -923,7 +989,9 @@
       "source_file": "delta.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delta.svg",
-      "sha256": "5f9471de8919ad646105b27fc2654c62730d2d7ffae3fd946a4ac2077dc31e89"
+      "sha256": "5f9471de8919ad646105b27fc2654c62730d2d7ffae3fd946a4ac2077dc31e89",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_coral",
@@ -950,7 +1018,9 @@
       "source_file": "env_desert.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_desert.svg",
-      "sha256": "4d423ceb8f1cfdaa1b7b9704f8315d1582ec7b0bf10a76542bdb0b4b07a7a23e"
+      "sha256": "4d423ceb8f1cfdaa1b7b9704f8315d1582ec7b0bf10a76542bdb0b4b07a7a23e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_mangrove",
@@ -977,7 +1047,9 @@
       "source_file": "atm_radiation.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_radiation.svg",
-      "sha256": "ba3be599ad92ae98cf11740ab478edfeb5a60a9c4cb8e7179639c07c354aab39"
+      "sha256": "ba3be599ad92ae98cf11740ab478edfeb5a60a9c4cb8e7179639c07c354aab39",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_grassland",
@@ -1004,7 +1076,9 @@
       "source_file": "hazard_slope.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg",
-      "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5"
+      "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_forest",
@@ -1031,7 +1105,9 @@
       "source_file": "forest.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/forest.svg",
-      "sha256": "581ed871c2b3d06f61c94239bc69edb40aa4b24de6892109a67197cb8d3e29c7"
+      "sha256": "581ed871c2b3d06f61c94239bc69edb40aa4b24de6892109a67197cb8d3e29c7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_peatland",
@@ -1058,7 +1134,9 @@
       "source_file": "env_river.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_river.svg",
-      "sha256": "0eed15c43138ada1b724bfc2e2166e4c2e103d7ca51dc6baa1349f9eca2d2063"
+      "sha256": "0eed15c43138ada1b724bfc2e2166e4c2e103d7ca51dc6baa1349f9eca2d2063",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_permafrost",
@@ -1085,7 +1163,9 @@
       "source_file": "env_grassland.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_grassland.svg",
-      "sha256": "05ff1e69539a7f6951f3f41d76562e7c3879e44f19fa536c4b5a7a28d3780838"
+      "sha256": "05ff1e69539a7f6951f3f41d76562e7c3879e44f19fa536c4b5a7a28d3780838",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_atmosphere",
@@ -1112,7 +1192,9 @@
       "source_file": "map_sampling.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg",
-      "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522"
+      "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_greenhouse",
@@ -1139,7 +1221,9 @@
       "source_file": "greenhouse.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/greenhouse.svg",
-      "sha256": "129a95e711dd1686615ac069e78abf837cff23b3696d24418a623734536bccca"
+      "sha256": "129a95e711dd1686615ac069e78abf837cff23b3696d24418a623734536bccca",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_carbon_cycle",
@@ -1166,7 +1250,9 @@
       "source_file": "env_reef.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_reef.svg",
-      "sha256": "b353283bc88fc6ebfe51cccd31d3c6e1ba3b9cbc272ef41217af73424f965432"
+      "sha256": "b353283bc88fc6ebfe51cccd31d3c6e1ba3b9cbc272ef41217af73424f965432",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_nitrogen_cycle",
@@ -1193,7 +1279,9 @@
       "source_file": "hazard_fire.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_fire.svg",
-      "sha256": "a2d33e494714d913adcb98430dfa9c5f47113b579f03d6f8f06ed6219b2374f4"
+      "sha256": "a2d33e494714d913adcb98430dfa9c5f47113b579f03d6f8f06ed6219b2374f4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_water_cycle",
@@ -1220,7 +1308,9 @@
       "source_file": "water.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
-      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
+      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_groundwater",
@@ -1247,7 +1337,9 @@
       "source_file": "env_urban_habitat.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg",
-      "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74"
+      "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_infiltration",
@@ -1274,7 +1366,9 @@
       "source_file": "geo_landforms.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_landforms.svg",
-      "sha256": "9c3d345d101aec4ecf6e0d0e2376d937a33fb80431ebe2b549fb6c9337e583f3"
+      "sha256": "9c3d345d101aec4ecf6e0d0e2376d937a33fb80431ebe2b549fb6c9337e583f3",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_evapotranspiration",
@@ -1301,7 +1395,9 @@
       "source_file": "hazard_storm.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_storm.svg",
-      "sha256": "885bab56a31f1a9b9592c5ecfb0ac47bbad422e4ddc0caeba96dc49a86817698"
+      "sha256": "885bab56a31f1a9b9592c5ecfb0ac47bbad422e4ddc0caeba96dc49a86817698",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_runoff",
@@ -1328,7 +1424,9 @@
       "source_file": "geo_soil_profile.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_profile.svg",
-      "sha256": "57e96e45a926df7cb988bebfaf21722980d4cc91bb8e787c19cefa9653919837"
+      "sha256": "57e96e45a926df7cb988bebfaf21722980d4cc91bb8e787c19cefa9653919837",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_river_network",
@@ -1355,7 +1453,9 @@
       "source_file": "network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/network.svg",
-      "sha256": "b27a5fb6cd9a8efd84205e78bb75d2c0616b40fd74613c03e422f3e72e0c36e9"
+      "sha256": "b27a5fb6cd9a8efd84205e78bb75d2c0616b40fd74613c03e422f3e72e0c36e9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_lake",
@@ -1382,7 +1482,9 @@
       "source_file": "env_wetland.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_wetland.svg",
-      "sha256": "e545d073df1ae26377cecc400e727c7b757a7cc48e422ddf7e8b8fb30d0ce36b"
+      "sha256": "e545d073df1ae26377cecc400e727c7b757a7cc48e422ddf7e8b8fb30d0ce36b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_reservoir",
@@ -1409,7 +1511,9 @@
       "source_file": "hazard_slope.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg",
-      "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5"
+      "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_dam",
@@ -1436,7 +1540,9 @@
       "source_file": "hazard_slope.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg",
-      "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5"
+      "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_irrigation",
@@ -1463,7 +1569,9 @@
       "source_file": "env_urban_habitat.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg",
-      "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74"
+      "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_cropland",
@@ -1490,7 +1598,9 @@
       "source_file": "env_monitoring.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_monitoring.svg",
-      "sha256": "12e957ce7adff0159fff6c579d82258544b86f68697fb718e817d0a990dbc3cc"
+      "sha256": "12e957ce7adff0159fff6c579d82258544b86f68697fb718e817d0a990dbc3cc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_urban_heat",
@@ -1517,7 +1627,9 @@
       "source_file": "city.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/city.svg",
-      "sha256": "e5b1c48b73c4725dbefc2875f05d40c58bec2386f33fa6b1e3660e99dbec6c79"
+      "sha256": "e5b1c48b73c4725dbefc2875f05d40c58bec2386f33fa6b1e3660e99dbec6c79",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_air_quality",
@@ -1544,7 +1656,9 @@
       "source_file": "air-conditioner.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-conditioner.svg",
-      "sha256": "f04f32d505a8c047ff69bc50e65d26fc35d3143ddc90ddbd0340112ced86f916"
+      "sha256": "f04f32d505a8c047ff69bc50e65d26fc35d3143ddc90ddbd0340112ced86f916",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_wind_field",
@@ -1571,7 +1685,9 @@
       "source_file": "wind-turbine.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wind-turbine.svg",
-      "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f"
+      "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_lightning",
@@ -1598,7 +1714,9 @@
       "source_file": "lightning-bolt.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/lightning-bolt.svg",
-      "sha256": "aab85cfe2bc37c7fb81a6955a275b6fb299c908867812482d1fe08df43258392"
+      "sha256": "aab85cfe2bc37c7fb81a6955a275b6fb299c908867812482d1fe08df43258392",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_cyclone",
@@ -1625,7 +1743,9 @@
       "source_file": "water_membrane.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg",
-      "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f"
+      "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_monsoon",
@@ -1652,7 +1772,9 @@
       "source_file": "water_membrane.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg",
-      "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f"
+      "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_el_nino",
@@ -1679,7 +1801,9 @@
       "source_file": "env_urban_habitat.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg",
-      "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74"
+      "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_sea_ice",
@@ -1706,7 +1830,9 @@
       "source_file": "ice-cream.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ice-cream.svg",
-      "sha256": "a0f875f0315c6f22dde0baedcdd4be86efd91fd0b9444bed5934a33e675273dc"
+      "sha256": "a0f875f0315c6f22dde0baedcdd4be86efd91fd0b9444bed5934a33e675273dc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_ocean_current",
@@ -1733,7 +1859,9 @@
       "source_file": "waves.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
-      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
+      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_plastic",
@@ -1760,7 +1888,9 @@
       "source_file": "water_supply.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_supply.svg",
-      "sha256": "c8930b405146618a6ff4d6b50ab7271dacefbc82f3ddb1a07283bb739b8637b3"
+      "sha256": "c8930b405146618a6ff4d6b50ab7271dacefbc82f3ddb1a07283bb739b8637b3",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_oil_spill",
@@ -1787,7 +1917,9 @@
       "source_file": "oil.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/oil.svg",
-      "sha256": "996556c2dbfd51c2771df1f3185bf45e1ba723bdc039d78566c68262e46e959b"
+      "sha256": "996556c2dbfd51c2771df1f3185bf45e1ba723bdc039d78566c68262e46e959b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_eutrophication",
@@ -1814,7 +1946,9 @@
       "source_file": "map_geography.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_geography.svg",
-      "sha256": "af235d101fed944272d60fd8e04f5262aac86a622026a3a61e0df1a5ee339be7"
+      "sha256": "af235d101fed944272d60fd8e04f5262aac86a622026a3a61e0df1a5ee339be7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_biodiversity",
@@ -1841,7 +1975,9 @@
       "source_file": "earth.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/earth.svg",
-      "sha256": "0062e447258806dbbc4e0d768399518f9853059c0e39b782b3ea5b912190efe7"
+      "sha256": "0062e447258806dbbc4e0d768399518f9853059c0e39b782b3ea5b912190efe7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_remote_sensing",
@@ -1868,7 +2004,9 @@
       "source_file": "remote.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/remote.svg",
-      "sha256": "5c9b1bdcca995868ab60176050f18292d149c424ea05f97f57ccf9e626b3cd3f"
+      "sha256": "5c9b1bdcca995868ab60176050f18292d149c424ea05f97f57ccf9e626b3cd3f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_gis",
@@ -1895,7 +2033,9 @@
       "source_file": "env_monitoring.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_monitoring.svg",
-      "sha256": "12e957ce7adff0159fff6c579d82258544b86f68697fb718e817d0a990dbc3cc"
+      "sha256": "12e957ce7adff0159fff6c579d82258544b86f68697fb718e817d0a990dbc3cc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_buoy",
@@ -1922,7 +2062,9 @@
       "source_file": "env_river.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_river.svg",
-      "sha256": "0eed15c43138ada1b724bfc2e2166e4c2e103d7ca51dc6baa1349f9eca2d2063"
+      "sha256": "0eed15c43138ada1b724bfc2e2166e4c2e103d7ca51dc6baa1349f9eca2d2063",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_ice_core",
@@ -1949,7 +2091,9 @@
       "source_file": "ice-cream.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ice-cream.svg",
-      "sha256": "a0f875f0315c6f22dde0baedcdd4be86efd91fd0b9444bed5934a33e675273dc"
+      "sha256": "a0f875f0315c6f22dde0baedcdd4be86efd91fd0b9444bed5934a33e675273dc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_sediment_core",
@@ -1976,7 +2120,9 @@
       "source_file": "circle-multiple.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/circle-multiple.svg",
-      "sha256": "d812c9cb0ef6f75aa1eec14606a99e5d5824fc6177982b81ecefe4a7f45fb825"
+      "sha256": "d812c9cb0ef6f75aa1eec14606a99e5d5824fc6177982b81ecefe4a7f45fb825",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_water_treatment",
@@ -2003,7 +2149,9 @@
       "source_file": "water.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
-      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
+      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_carbon_capture",
@@ -2030,7 +2178,9 @@
       "source_file": "geo_volcano.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg",
-      "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc"
+      "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_geology_column",
@@ -2057,7 +2207,9 @@
       "source_file": "layers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg",
-      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
+      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_magma",
@@ -2084,7 +2236,9 @@
       "source_file": "volcano.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg",
-      "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1"
+      "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_volcanic_arc",
@@ -2111,7 +2265,9 @@
       "source_file": "volcano.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg",
-      "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1"
+      "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_seismic_wave",
@@ -2138,7 +2294,9 @@
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
-      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_seismometer",
@@ -2165,7 +2323,9 @@
       "source_file": "signal.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/signal.svg",
-      "sha256": "785a3dcf861d637eafa606ae4b88464ad4acfc59114085a712dc0f8bb1e17990"
+      "sha256": "785a3dcf861d637eafa606ae4b88464ad4acfc59114085a712dc0f8bb1e17990",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_gully",
@@ -2192,7 +2352,9 @@
       "source_file": "terrain.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/terrain.svg",
-      "sha256": "12f453c32d27b0989a5e852249fc353a17f597a77328215b0e9878377d5764b5"
+      "sha256": "12f453c32d27b0989a5e852249fc353a17f597a77328215b0e9878377d5764b5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_sand_dune",
@@ -2219,7 +2381,9 @@
       "source_file": "terrain.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/terrain.svg",
-      "sha256": "12f453c32d27b0989a5e852249fc353a17f597a77328215b0e9878377d5764b5"
+      "sha256": "12f453c32d27b0989a5e852249fc353a17f597a77328215b0e9878377d5764b5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_hurricane",
@@ -2246,7 +2410,9 @@
       "source_file": "weather-hurricane.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-hurricane.svg",
-      "sha256": "76ec534ad41f6e6edd308b96a2bf862de73d6ddcd7467ab1e131b3d8de303dee"
+      "sha256": "76ec534ad41f6e6edd308b96a2bf862de73d6ddcd7467ab1e131b3d8de303dee",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_rain_gauge",
@@ -2273,7 +2439,9 @@
       "source_file": "weather-rainy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-rainy.svg",
-      "sha256": "c30741be3c4e71287d303ae950595757483b62e1d31e960b9350839dfdc8518a"
+      "sha256": "c30741be3c4e71287d303ae950595757483b62e1d31e960b9350839dfdc8518a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_weather_radar",
@@ -2300,7 +2468,9 @@
       "source_file": "weather-cloudy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-cloudy.svg",
-      "sha256": "bcebc42f24b483f905ea4cca17b2e9e7a96158c09a5468fd60c9d1fe3ee33f90"
+      "sha256": "bcebc42f24b483f905ea4cca17b2e9e7a96158c09a5468fd60c9d1fe3ee33f90",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_solar_radiation",
@@ -2327,7 +2497,9 @@
       "source_file": "solar-panel.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solar-panel.svg",
-      "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5"
+      "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_ozone",
@@ -2354,7 +2526,9 @@
       "source_file": "shield-sun.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield-sun.svg",
-      "sha256": "2f526ef5a991c3050851808b77188b9967131275e7657045284d92249e27ec63"
+      "sha256": "2f526ef5a991c3050851808b77188b9967131275e7657045284d92249e27ec63",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_aerosol",
@@ -2381,7 +2555,9 @@
       "source_file": "blur.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg",
-      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
+      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_pm25",
@@ -2408,7 +2584,9 @@
       "source_file": "air-filter.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-filter.svg",
-      "sha256": "cd247932b4681069740e21ed78e7f55dce499f9a24e48641ce294437f5dc31bf"
+      "sha256": "cd247932b4681069740e21ed78e7f55dce499f9a24e48641ce294437f5dc31bf",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_wastewater",
@@ -2435,7 +2613,9 @@
       "source_file": "water-pump.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water-pump.svg",
-      "sha256": "7f6ab2db230d9398e8f3ecfd4ebb2d5d42e21c1b95b6b0c27e4570a9ee6c3781"
+      "sha256": "7f6ab2db230d9398e8f3ecfd4ebb2d5d42e21c1b95b6b0c27e4570a9ee6c3781",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_bioremediation",
@@ -2462,7 +2642,9 @@
       "source_file": "water_wastewater.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_wastewater.svg",
-      "sha256": "f397085bce941f36cff57cc7576a704449ff868893acb7f4dfc5eb7846df08d5"
+      "sha256": "f397085bce941f36cff57cc7576a704449ff868893acb7f4dfc5eb7846df08d5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_compost",
@@ -2489,7 +2671,9 @@
       "source_file": "compost.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/compost.svg",
-      "sha256": "3642fadf9ce439427fed47f719feba534bb1d80d408254a3b76ea6f7548d4a5d"
+      "sha256": "3642fadf9ce439427fed47f719feba534bb1d80d408254a3b76ea6f7548d4a5d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_landfill",
@@ -2516,7 +2700,9 @@
       "source_file": "delete.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delete.svg",
-      "sha256": "773406386de6d1060b497194723844fdc30f456cee6c0da4bdbe12d2feeed8d6"
+      "sha256": "773406386de6d1060b497194723844fdc30f456cee6c0da4bdbe12d2feeed8d6",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_recycling",
@@ -2543,7 +2729,9 @@
       "source_file": "geo_glacier.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
-      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
+      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_forest_carbon",
@@ -2570,7 +2758,9 @@
       "source_file": "forest.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/forest.svg",
-      "sha256": "581ed871c2b3d06f61c94239bc69edb40aa4b24de6892109a67197cb8d3e29c7"
+      "sha256": "581ed871c2b3d06f61c94239bc69edb40aa4b24de6892109a67197cb8d3e29c7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_species_network",
@@ -2597,7 +2787,9 @@
       "source_file": "graph.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph.svg",
-      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e"
+      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_food_web",
@@ -2624,7 +2816,9 @@
       "source_file": "food-apple.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/food-apple.svg",
-      "sha256": "36bf040e46e139068ea917878befd59d348ae139538613a3b57b2009628eebd8"
+      "sha256": "36bf040e46e139068ea917878befd59d348ae139538613a3b57b2009628eebd8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_phytoplankton",
@@ -2651,7 +2845,9 @@
       "source_file": "env_wetland.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_wetland.svg",
-      "sha256": "e545d073df1ae26377cecc400e727c7b757a7cc48e422ddf7e8b8fb30d0ce36b"
+      "sha256": "e545d073df1ae26377cecc400e727c7b757a7cc48e422ddf7e8b8fb30d0ce36b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_ocean_acidification",
@@ -2678,7 +2874,9 @@
       "source_file": "waves.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
-      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
+      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_thermal_front",
@@ -2705,7 +2903,9 @@
       "source_file": "thermometer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
-      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
+      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_tide",
@@ -2732,7 +2932,9 @@
       "source_file": "waves.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
-      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
+      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_soil_moisture",
@@ -2759,7 +2961,9 @@
       "source_file": "map_sampling.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg",
-      "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522"
+      "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_erosion_control",
@@ -2786,7 +2990,9 @@
       "source_file": "geo_landforms.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_landforms.svg",
-      "sha256": "9c3d345d101aec4ecf6e0d0e2376d937a33fb80431ebe2b549fb6c9337e583f3"
+      "sha256": "9c3d345d101aec4ecf6e0d0e2376d937a33fb80431ebe2b549fb6c9337e583f3",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_urban_growth",
@@ -2813,7 +3019,9 @@
       "source_file": "city.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/city.svg",
-      "sha256": "e5b1c48b73c4725dbefc2875f05d40c58bec2386f33fa6b1e3660e99dbec6c79"
+      "sha256": "e5b1c48b73c4725dbefc2875f05d40c58bec2386f33fa6b1e3660e99dbec6c79",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_biodiversity_index",
@@ -2840,7 +3048,9 @@
       "source_file": "earth.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/earth.svg",
-      "sha256": "0062e447258806dbbc4e0d768399518f9853059c0e39b782b3ea5b912190efe7"
+      "sha256": "0062e447258806dbbc4e0d768399518f9853059c0e39b782b3ea5b912190efe7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_database",
@@ -2866,7 +3076,9 @@
       "source_file": "database.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/database.svg",
-      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427"
+      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_mesh",
@@ -2892,7 +3104,9 @@
       "source_file": "process_transport.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_transport.svg",
-      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_pipe",
@@ -2918,7 +3132,9 @@
       "source_file": "pipe.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
-      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_earth_land_cover",
@@ -2944,7 +3160,9 @@
       "source_file": "land-fields.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/land-fields.svg",
-      "sha256": "33762996ed882e55f5f4a9036f81c97ff5833abcd5d58cd56fd514c1014e8fc2"
+      "sha256": "33762996ed882e55f5f4a9036f81c97ff5833abcd5d58cd56fd514c1014e8fc2",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "earth_environment_reservoir",
@@ -2970,7 +3188,2153 @@
       "source_file": "eng_thermal_power.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_thermal_power.svg",
-      "sha256": "978ab2369eb8d40ee625396787f996f05774310f022fd795da81fc4f291398d1"
+      "sha256": "978ab2369eb8d40ee625396787f996f05774310f022fd795da81fc4f291398d1",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/mountain.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_mountain_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_mountain_tabler",
+      "type": "symbol",
+      "category": "地质与地貌",
+      "category_en": "Geology and landforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_mountain_tabler.svg",
+      "keywords": [
+        "地质",
+        "山地",
+        "地形",
+        "geology",
+        "mountain",
+        "terrain"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "78bef099ea8760d6897ec5857fdecec5ced5e719970cad9eb9f26783a72754e1",
+      "label": "山地",
+      "label_zh": "山地",
+      "label_en": "Mountain",
+      "source_file": "mountain.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/volcano.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_volcano_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_volcano_tabler",
+      "type": "symbol",
+      "category": "地质与地貌",
+      "category_en": "Geology and landforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_volcano_tabler.svg",
+      "keywords": [
+        "地质",
+        "火山",
+        "岩浆",
+        "geology",
+        "volcano",
+        "magma"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "8f0c3c0197928e6b5dd20fb693bdf871581e5bde90dc5ddc79d674911e5ff599",
+      "label": "火山",
+      "label_zh": "火山",
+      "label_en": "Volcano",
+      "source_file": "volcano.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/iceberg.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_iceberg_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_iceberg_tabler",
+      "type": "symbol",
+      "category": "地质与地貌",
+      "category_en": "Geology and landforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_iceberg_tabler.svg",
+      "keywords": [
+        "冰冻圈",
+        "冰山",
+        "海洋",
+        "cryosphere",
+        "iceberg",
+        "ocean"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "23e07cbb86787bc8bb9d8a0f7a681ab33e6bd887054d84c8cb12cfe5cdc33637",
+      "label": "冰山",
+      "label_zh": "冰山",
+      "label_en": "Iceberg",
+      "source_file": "iceberg.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/diamond.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_mineral_crystal_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_mineral_crystal_tabler",
+      "type": "symbol",
+      "category": "地质与地貌",
+      "category_en": "Geology and landforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_mineral_crystal_tabler.svg",
+      "keywords": [
+        "地质",
+        "矿物",
+        "晶体",
+        "geology",
+        "mineral",
+        "crystal"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "0a65db992f18b6df1ceddd9a22f7dc42e6adf76519d031cbe60090074e243250",
+      "label": "钻石",
+      "label_zh": "钻石",
+      "label_en": "Diamond",
+      "source_file": "diamond.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/mountain_steam/materialsymbolsoutlined/mountain_steam_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_geothermal_landform_material",
+      "asset_id": "earth_environment_verified_earth_environment_geothermal_landform_material",
+      "type": "symbol",
+      "category": "地质与地貌",
+      "category_en": "Geology and landforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_geothermal_landform_material.svg",
+      "keywords": [
+        "地质",
+        "地热",
+        "火山",
+        "温泉",
+        "geology",
+        "geothermal",
+        "volcano",
+        "hot spring"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "645e099c23ead1d4ccd6833204c5253fa9110ab8a45fb15f9909f1403602c1c3",
+      "label": "地热地貌",
+      "label_zh": "地热地貌",
+      "label_en": "Geothermal Landform",
+      "source_file": "mountain_steam_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/landscape/materialsymbolsoutlined/landscape_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_landscape_material",
+      "asset_id": "earth_environment_verified_earth_environment_landscape_material",
+      "type": "symbol",
+      "category": "地质与地貌",
+      "category_en": "Geology and landforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_landscape_material.svg",
+      "keywords": [
+        "地质",
+        "地貌",
+        "景观",
+        "geology",
+        "landscape",
+        "landform"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "77063b56f64db80f865260f0af42aaaef00723757df6901fb43792fd529301d8",
+      "label": "地貌",
+      "label_zh": "地貌",
+      "label_en": "Landscape",
+      "source_file": "landscape_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/landslide/materialsymbolsoutlined/landslide_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_landslide_material",
+      "asset_id": "earth_environment_verified_earth_environment_landslide_material",
+      "type": "symbol",
+      "category": "地质与地貌",
+      "category_en": "Geology and landforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_landslide_material.svg",
+      "keywords": [
+        "地质灾害",
+        "滑坡",
+        "坡体",
+        "geohazard",
+        "landslide",
+        "slope failure"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "1a108015f6d684b0638e7dc65ddc23d835ed6390c892a26037fa6ebeee0166d2",
+      "label": "滑坡",
+      "label_zh": "滑坡",
+      "label_en": "Landslide",
+      "source_file": "landslide_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/earthquake/materialsymbolsoutlined/earthquake_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_earthquake_material",
+      "asset_id": "earth_environment_verified_earth_environment_earthquake_material",
+      "type": "symbol",
+      "category": "地质与地貌",
+      "category_en": "Geology and landforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_earthquake_material.svg",
+      "keywords": [
+        "地质灾害",
+        "地震",
+        "断裂",
+        "geohazard",
+        "earthquake",
+        "fault"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "8900c6d5ee7fe6a2162573a25f26b00e6c4578cdd4157390eb5e0c0feaf49adf",
+      "label": "地震",
+      "label_zh": "地震",
+      "label_en": "Earthquake",
+      "source_file": "earthquake_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/droplet.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_droplet_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_droplet_tabler",
+      "type": "symbol",
+      "category": "水文",
+      "category_en": "Hydrology",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_droplet_tabler.svg",
+      "keywords": [
+        "水文",
+        "水",
+        "降水",
+        "hydrology",
+        "water",
+        "droplet"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "e11b0fc40149140328fb7b6aef2d93be36b6a481e02becd8cb74e65f3bfd26ac",
+      "label": "水滴",
+      "label_zh": "水滴",
+      "label_en": "Droplet",
+      "source_file": "droplet.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/bucket-droplet.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_water_bucket_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_water_bucket_tabler",
+      "type": "symbol",
+      "category": "水文",
+      "category_en": "Hydrology",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_water_bucket_tabler.svg",
+      "keywords": [
+        "水文",
+        "集水",
+        "采样",
+        "hydrology",
+        "water sampling",
+        "bucket"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "a51f9e8610c8151c8a2ffefdcde62dceabb2d0961d5589861b2e8c01f5382268",
+      "label": "集水桶",
+      "label_zh": "集水桶",
+      "label_en": "Water Bucket",
+      "source_file": "bucket-droplet.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/ripple.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_ripple_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_ripple_tabler",
+      "type": "symbol",
+      "category": "水文",
+      "category_en": "Hydrology",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_ripple_tabler.svg",
+      "keywords": [
+        "水文",
+        "水波",
+        "液面",
+        "hydrology",
+        "ripple",
+        "water surface"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "df8876b88c8049a026ab0882cae50f8ab84947e35eaad769da2a006b311ed9ab",
+      "label": "水波",
+      "label_zh": "水波",
+      "label_en": "Ripple",
+      "source_file": "ripple.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water/materialsymbolsoutlined/water_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_water_body_material",
+      "asset_id": "earth_environment_verified_earth_environment_water_body_material",
+      "type": "symbol",
+      "category": "水文",
+      "category_en": "Hydrology",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_water_body_material.svg",
+      "keywords": [
+        "水文",
+        "水体",
+        "地表水",
+        "hydrology",
+        "water body",
+        "surface water"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f77b4e250103c3868c25e67cccbd74cd2979478c6627413250a262336be3d86c",
+      "label": "水体",
+      "label_zh": "水体",
+      "label_en": "Water Body",
+      "source_file": "water_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_ph/materialsymbolsoutlined/water_ph_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_water_ph_material",
+      "asset_id": "earth_environment_verified_earth_environment_water_ph_material",
+      "type": "symbol",
+      "category": "水文",
+      "category_en": "Hydrology",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_water_ph_material.svg",
+      "keywords": [
+        "水质",
+        "pH",
+        "酸碱度",
+        "water quality",
+        "pH",
+        "acidity"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b1317c685023042c746f795c9e2d81dfd91eb5703c167f804dbeea3b98d57c68",
+      "label": "水体酸碱度",
+      "label_zh": "水体酸碱度",
+      "label_en": "Water pH",
+      "source_file": "water_ph_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_ec/materialsymbolsoutlined/water_ec_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_water_ec_material",
+      "asset_id": "earth_environment_verified_earth_environment_water_ec_material",
+      "type": "symbol",
+      "category": "水文",
+      "category_en": "Hydrology",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_water_ec_material.svg",
+      "keywords": [
+        "水质",
+        "电导率",
+        "盐分",
+        "water quality",
+        "electrical conductivity",
+        "salinity"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "984e5ce4966cec65faedec32e61a31fa2a7a5b027d826821e0d0858a10234a17",
+      "label": "电导率",
+      "label_zh": "电导率",
+      "label_en": "Water EC",
+      "source_file": "water_ec_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_orp/materialsymbolsoutlined/water_orp_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_water_orp_material",
+      "asset_id": "earth_environment_verified_earth_environment_water_orp_material",
+      "type": "symbol",
+      "category": "水文",
+      "category_en": "Hydrology",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_water_orp_material.svg",
+      "keywords": [
+        "水质",
+        "氧化还原",
+        "监测",
+        "water quality",
+        "ORP",
+        "monitoring"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2f66ec7d84f50573431b31e887443f004b354dd89cc94aecbfd853fe0c5d18c8",
+      "label": "氧化还原电位",
+      "label_zh": "氧化还原电位",
+      "label_en": "Water ORP",
+      "source_file": "water_orp_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/water_voc/materialsymbolsoutlined/water_voc_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_water_voc_material",
+      "asset_id": "earth_environment_verified_earth_environment_water_voc_material",
+      "type": "symbol",
+      "category": "水文",
+      "category_en": "Hydrology",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_water_voc_material.svg",
+      "keywords": [
+        "水质",
+        "有机物",
+        "污染",
+        "water quality",
+        "VOC",
+        "pollution"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2c59a4d524aef5fa38da74822fa561a9501a8646391423af47d8bdc0e361c22f",
+      "label": "挥发性有机物",
+      "label_zh": "挥发性有机物",
+      "label_en": "Water VOC",
+      "source_file": "water_voc_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/salinity/materialsymbolsoutlined/salinity_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_salinity_material",
+      "asset_id": "earth_environment_verified_earth_environment_salinity_material",
+      "type": "symbol",
+      "category": "水文",
+      "category_en": "Hydrology",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_salinity_material.svg",
+      "keywords": [
+        "海洋",
+        "盐度",
+        "水质",
+        "oceanography",
+        "salinity",
+        "water quality"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9cd27c945711f582404bcb50d44b3f46f602eafc1c94a0dab799ba945a161da3",
+      "label": "盐度",
+      "label_zh": "盐度",
+      "label_en": "Salinity",
+      "source_file": "salinity_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Phosphor Icons",
+      "author_url": "https://phosphoricons.com",
+      "license": "MIT",
+      "license_url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/waves.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_ocean_waves_phosphor",
+      "asset_id": "earth_environment_verified_earth_environment_ocean_waves_phosphor",
+      "type": "symbol",
+      "category": "海洋生物与环境",
+      "category_en": "Marine life and environment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_ocean_waves_phosphor.svg",
+      "keywords": [
+        "海洋",
+        "海浪",
+        "波动",
+        "oceanography",
+        "ocean waves",
+        "swell"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "82fb2b25c26e52f1ec4306b57e15a7edd597a8c2cf9330e078d04762981055e5",
+      "label": "海浪",
+      "label_zh": "海浪",
+      "label_en": "Ocean Waves",
+      "source_file": "waves.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/fish.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_fish_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_fish_tabler",
+      "type": "symbol",
+      "category": "海洋生物与环境",
+      "category_en": "Marine life and environment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_fish_tabler.svg",
+      "keywords": [
+        "生态",
+        "鱼类",
+        "水生生物",
+        "ecology",
+        "fish",
+        "aquatic"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "46777ea5de14248890dd8b2a688a33309ed8adff66b55eae9244556dfc9f2fca",
+      "label": "鱼类",
+      "label_zh": "鱼类",
+      "label_en": "Fish",
+      "source_file": "fish.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/shell.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_shell_lucide",
+      "asset_id": "earth_environment_verified_earth_environment_shell_lucide",
+      "type": "symbol",
+      "category": "海洋生物与环境",
+      "category_en": "Marine life and environment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_shell_lucide.svg",
+      "keywords": [
+        "海洋",
+        "贝壳",
+        "底栖生物",
+        "oceanography",
+        "shell",
+        "benthic"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "8a7d769049151c6205b0d5db7217d27ba90f23ac845119a0f9efaf16986b4c6e",
+      "label": "贝壳",
+      "label_zh": "贝壳",
+      "label_en": "Shell",
+      "source_file": "shell.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_cloud_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_cloud_tabler",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_cloud_tabler.svg",
+      "keywords": [
+        "大气",
+        "云",
+        "天气",
+        "atmosphere",
+        "cloud",
+        "weather"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "56e477622b9f240a9ac17cf51752a6e2413e93e2f115595f9d755bd78f616e9d",
+      "label": "云",
+      "label_zh": "云",
+      "label_en": "Cloud",
+      "source_file": "cloud.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud-rain.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_rain_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_rain_tabler",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_rain_tabler.svg",
+      "keywords": [
+        "大气",
+        "降水",
+        "天气",
+        "atmosphere",
+        "rain",
+        "precipitation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "494c3673d48a0cd666f2c3196c04f2c86585218ace490e25730b748076dd10c9",
+      "label": "降雨",
+      "label_zh": "降雨",
+      "label_en": "Rain",
+      "source_file": "cloud-rain.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud-snow.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_snowfall_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_snowfall_tabler",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_snowfall_tabler.svg",
+      "keywords": [
+        "大气",
+        "降雪",
+        "天气",
+        "atmosphere",
+        "snowfall",
+        "weather"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "8d4d5849fa997fefb3ce81ae362e3142b7b28c1a55ef8ac832f80c3293c98dd9",
+      "label": "降雪",
+      "label_zh": "降雪",
+      "label_en": "Snowfall",
+      "source_file": "cloud-snow.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud-storm.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_storm_cloud_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_storm_cloud_tabler",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_storm_cloud_tabler.svg",
+      "keywords": [
+        "大气",
+        "雷暴",
+        "对流",
+        "atmosphere",
+        "storm cloud",
+        "convection"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "88da2249366204452086b46197943f4af5c0f18da80b974136f8f8173145918b",
+      "label": "雷暴云",
+      "label_zh": "雷暴云",
+      "label_en": "Storm Cloud",
+      "source_file": "cloud-storm.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cloud-fog.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_fog_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_fog_tabler",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_fog_tabler.svg",
+      "keywords": [
+        "大气",
+        "雾",
+        "能见度",
+        "atmosphere",
+        "fog",
+        "visibility"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "885ae1fef8c2212c71f0a855680206cf28b4bd66844849dd64cf4f737e8a5170",
+      "label": "雾",
+      "label_zh": "雾",
+      "label_en": "Fog",
+      "source_file": "cloud-fog.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tornado.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_tornado_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_tornado_tabler",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_tornado_tabler.svg",
+      "keywords": [
+        "大气",
+        "龙卷风",
+        "强对流",
+        "atmosphere",
+        "tornado",
+        "severe convection"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "184f62ad4657eb6f61afcb6ea51c801450c4e2c324975b2fd2f0863a6ad86a41",
+      "label": "龙卷风",
+      "label_zh": "龙卷风",
+      "label_en": "Tornado",
+      "source_file": "tornado.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/cyclone/materialsymbolsoutlined/cyclone_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_cyclone_material",
+      "asset_id": "earth_environment_verified_earth_environment_cyclone_material",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_cyclone_material.svg",
+      "keywords": [
+        "大气",
+        "气旋",
+        "热带风暴",
+        "atmosphere",
+        "cyclone",
+        "tropical storm"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "c066a72adcd167097de0f21e6eb6c65b72f5b92bb701db7bfff6b4ff729dc6a1",
+      "label": "气旋",
+      "label_zh": "气旋",
+      "label_en": "Cyclone",
+      "source_file": "cyclone_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/wind.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_wind_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_wind_tabler",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_wind_tabler.svg",
+      "keywords": [
+        "大气",
+        "风",
+        "气流",
+        "atmosphere",
+        "wind",
+        "airflow"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "ad334c735db2a330fee85ed5c739bf22fae7d61a642c55aba963cf38881c2833",
+      "label": "风",
+      "label_zh": "风",
+      "label_en": "Wind",
+      "source_file": "wind.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/windsock.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_windsock_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_windsock_tabler",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_windsock_tabler.svg",
+      "keywords": [
+        "大气",
+        "风向",
+        "观测",
+        "atmosphere",
+        "windsock",
+        "wind direction"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b0d5ba0ad04792abe9e7908ee1269f763fb14ec35270dd57d366df4024ca5a98",
+      "label": "风向袋",
+      "label_zh": "风向袋",
+      "label_en": "Windsock",
+      "source_file": "windsock.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/air/materialsymbolsoutlined/air_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_air_material",
+      "asset_id": "earth_environment_verified_earth_environment_air_material",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_air_material.svg",
+      "keywords": [
+        "大气",
+        "空气",
+        "气流",
+        "atmosphere",
+        "air",
+        "airflow"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "5da0902c8cd3cddf97bf19bf692694afa4c7d527a46b94437599b1d5babd885f",
+      "label": "空气",
+      "label_zh": "空气",
+      "label_en": "Air",
+      "source_file": "air_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/co2/materialsymbolsoutlined/co2_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_co2_material",
+      "asset_id": "earth_environment_verified_earth_environment_co2_material",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_co2_material.svg",
+      "keywords": [
+        "气候",
+        "温室气体",
+        "碳循环",
+        "climate",
+        "CO2",
+        "greenhouse gas"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "87078eb5d185ed23cf79d0cfc6986f78074816b6f05b2fa532a7ba811423970f",
+      "label": "二氧化碳",
+      "label_zh": "二氧化碳",
+      "label_en": "CO2",
+      "source_file": "co2_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/weather_hail/materialsymbolsoutlined/weather_hail_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_hail_material",
+      "asset_id": "earth_environment_verified_earth_environment_hail_material",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_hail_material.svg",
+      "keywords": [
+        "大气",
+        "冰雹",
+        "强对流",
+        "atmosphere",
+        "hail",
+        "convection"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "38eff3dc121da61fc7117dd5ba73285fbcdd83e530854225d1e04c57324f6c6b",
+      "label": "冰雹",
+      "label_zh": "冰雹",
+      "label_en": "Hail",
+      "source_file": "weather_hail_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/rainy_heavy/materialsymbolsoutlined/rainy_heavy_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_heavy_rain_material",
+      "asset_id": "earth_environment_verified_earth_environment_heavy_rain_material",
+      "type": "symbol",
+      "category": "天气与大气",
+      "category_en": "Weather and atmosphere",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_heavy_rain_material.svg",
+      "keywords": [
+        "大气",
+        "暴雨",
+        "降水",
+        "atmosphere",
+        "heavy rain",
+        "precipitation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "d557917a4502d663822e392cda982283c7cba02415c6ee8f9aca69c07b499fe6",
+      "label": "暴雨",
+      "label_zh": "暴雨",
+      "label_en": "Heavy Rain",
+      "source_file": "rainy_heavy_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/forest/materialsymbolsoutlined/forest_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_forest_material",
+      "asset_id": "earth_environment_verified_earth_environment_forest_material",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_forest_material.svg",
+      "keywords": [
+        "生态",
+        "森林",
+        "植被",
+        "ecology",
+        "forest",
+        "vegetation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "14e67847d463b02149b52391064de716cd9296d0cfa5213405f360909aa81566",
+      "label": "森林",
+      "label_zh": "森林",
+      "label_en": "Forest",
+      "source_file": "forest_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/agriculture/materialsymbolsoutlined/agriculture_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_agriculture_material",
+      "asset_id": "earth_environment_verified_earth_environment_agriculture_material",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_agriculture_material.svg",
+      "keywords": [
+        "生态",
+        "农业",
+        "农田",
+        "ecology",
+        "agriculture",
+        "cropland"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "cde19d2ed3eabfe04a44e8a5279f9afb5d0a485d75efbfebd3acb41f271e25f6",
+      "label": "农业",
+      "label_zh": "农业",
+      "label_en": "Agriculture",
+      "source_file": "agriculture_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/eco/materialsymbolsoutlined/eco_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_eco_material",
+      "asset_id": "earth_environment_verified_earth_environment_eco_material",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_eco_material.svg",
+      "keywords": [
+        "生态",
+        "环境",
+        "可持续",
+        "ecology",
+        "environment",
+        "sustainability"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "eb5ef54815eccc33fe0c4e2b1a06f344c54cfbde2f05c771aaf34a251467ffb6",
+      "label": "生态",
+      "label_zh": "生态",
+      "label_en": "Eco",
+      "source_file": "eco_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/compost/materialsymbolsoutlined/compost_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_compost_material",
+      "asset_id": "earth_environment_verified_earth_environment_compost_material",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_compost_material.svg",
+      "keywords": [
+        "生态",
+        "土壤",
+        "养分循环",
+        "ecology",
+        "compost",
+        "nutrient cycle"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "01c4364aa872d4c9e68e4994a75152c6fd1dd056d25c896fc7fdcce9a82fcb0a",
+      "label": "堆肥",
+      "label_zh": "堆肥",
+      "label_en": "Compost",
+      "source_file": "compost_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tree.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_tree_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_tree_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_tree_tabler.svg",
+      "keywords": [
+        "生态",
+        "树木",
+        "植被",
+        "ecology",
+        "tree",
+        "vegetation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "6648358d1eb4e71ecf1fc508ed1794d68778de4ef7bfa31897dd987b77ab233a",
+      "label": "树",
+      "label_zh": "树",
+      "label_en": "Tree",
+      "source_file": "tree.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/trees.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_trees_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_trees_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_trees_tabler.svg",
+      "keywords": [
+        "生态",
+        "树林",
+        "群落",
+        "ecology",
+        "trees",
+        "stand"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2a9c214fd5f295414887812dded835a69a7cbdcc2a62a74179af5a52b91a4a20",
+      "label": "树林",
+      "label_zh": "树林",
+      "label_en": "Trees",
+      "source_file": "trees.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/leaf.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_leaf_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_leaf_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_leaf_tabler.svg",
+      "keywords": [
+        "生态",
+        "叶片",
+        "光合作用",
+        "ecology",
+        "leaf",
+        "photosynthesis"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "4f719e4e65509ce900fbb9819df82617c91bbedaea7890bdb563181fed9bdf9f",
+      "label": "叶片",
+      "label_zh": "叶片",
+      "label_en": "Leaf",
+      "source_file": "leaf.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/plant.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_plant_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_plant_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_plant_tabler.svg",
+      "keywords": [
+        "生态",
+        "植物",
+        "植被",
+        "ecology",
+        "plant",
+        "vegetation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "ee8a71e265f1ad89b8213daa115581cce06faa9be979c886c5bf3c087b2370a2",
+      "label": "植物",
+      "label_zh": "植物",
+      "label_en": "Plant",
+      "source_file": "plant.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/seedling.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_seedling_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_seedling_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_seedling_tabler.svg",
+      "keywords": [
+        "生态",
+        "幼苗",
+        "更新",
+        "ecology",
+        "seedling",
+        "regeneration"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9f79c29823d82e47bfcd82e4cc035dda17fcb92522183dcd02d91f9b30d911a9",
+      "label": "幼苗",
+      "label_zh": "幼苗",
+      "label_en": "Seedling",
+      "source_file": "seedling.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/flower.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_flower_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_flower_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_flower_tabler.svg",
+      "keywords": [
+        "生态",
+        "花",
+        "植物繁殖",
+        "ecology",
+        "flower",
+        "pollination"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "e2ac632689f3026f73fe65d3aaa810b82b7be0f6c80bd9be82ede783a3bf4b98",
+      "label": "花",
+      "label_zh": "花",
+      "label_en": "Flower",
+      "source_file": "flower.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/butterfly.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_butterfly_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_butterfly_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_butterfly_tabler.svg",
+      "keywords": [
+        "生态",
+        "昆虫",
+        "传粉",
+        "ecology",
+        "butterfly",
+        "pollinator"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "cd5d44e57f5d06e721015698a93e6f293f24692d05449c728b477ff2e86061b9",
+      "label": "蝴蝶",
+      "label_zh": "蝴蝶",
+      "label_en": "Butterfly",
+      "source_file": "butterfly.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/bug.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_insect_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_insect_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_insect_tabler.svg",
+      "keywords": [
+        "生态",
+        "昆虫",
+        "生物多样性",
+        "ecology",
+        "insect",
+        "biodiversity"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "cc190a1b4cc7306d8bd273e2ce1dda1e209abde890eddb37885389346bf5d15e",
+      "label": "昆虫",
+      "label_zh": "昆虫",
+      "label_en": "Insect",
+      "source_file": "bug.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/paw.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_animal_track_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_animal_track_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_animal_track_tabler.svg",
+      "keywords": [
+        "生态",
+        "野生动物",
+        "足迹",
+        "ecology",
+        "wildlife",
+        "track"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "fe3f35eac57811a76d21f4ba502f04d2326961cb63ce51eba257affc6790dc0b",
+      "label": "动物足迹",
+      "label_zh": "动物足迹",
+      "label_en": "Animal Track",
+      "source_file": "paw.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/deer.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_deer_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_deer_tabler",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_deer_tabler.svg",
+      "keywords": [
+        "生态",
+        "野生动物",
+        "有蹄类",
+        "ecology",
+        "deer",
+        "wildlife"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "eb8a153a3a1f3e1482e3649153b3242d2ddab83421eaa457e0197aff831261ec",
+      "label": "鹿",
+      "label_zh": "鹿",
+      "label_en": "Deer",
+      "source_file": "deer.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/bird.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_bird_lucide",
+      "asset_id": "earth_environment_verified_earth_environment_bird_lucide",
+      "type": "symbol",
+      "category": "生态与生物",
+      "category_en": "Ecology and organisms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_bird_lucide.svg",
+      "keywords": [
+        "生态",
+        "鸟类",
+        "生物多样性",
+        "ecology",
+        "bird",
+        "biodiversity"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "cd973c6f60d7f86182e2c93c8a5450ab7549df712b14b47acbe24eb710a50768",
+      "label": "鸟",
+      "label_zh": "鸟",
+      "label_en": "Bird",
+      "source_file": "bird.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/tent.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_tent_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_tent_tabler",
+      "type": "symbol",
+      "category": "野外观测",
+      "category_en": "Field observations",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_tent_tabler.svg",
+      "keywords": [
+        "野外",
+        "营地",
+        "考察",
+        "fieldwork",
+        "tent",
+        "camp"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "63ad58316d14d6560c151b650e55b647c73424a3c9f599206da7d3c8cf04e100",
+      "label": "帐篷",
+      "label_zh": "帐篷",
+      "label_en": "Tent",
+      "source_file": "tent.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/compass.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_compass_lucide",
+      "asset_id": "earth_environment_verified_earth_environment_compass_lucide",
+      "type": "symbol",
+      "category": "野外观测",
+      "category_en": "Field observations",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_compass_lucide.svg",
+      "keywords": [
+        "野外",
+        "定向",
+        "罗盘",
+        "fieldwork",
+        "compass",
+        "orientation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "518f1149413283246edfa05f0793d4dab5603be288c1ead9f7467c35596b8d7d",
+      "label": "罗盘",
+      "label_zh": "罗盘",
+      "label_en": "Compass",
+      "source_file": "compass.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/binoculars.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_binoculars_lucide",
+      "asset_id": "earth_environment_verified_earth_environment_binoculars_lucide",
+      "type": "symbol",
+      "category": "野外观测",
+      "category_en": "Field observations",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_binoculars_lucide.svg",
+      "keywords": [
+        "野外",
+        "观察",
+        "监测",
+        "fieldwork",
+        "binoculars",
+        "observation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "1c5b2c59de2156d3beaa6161a743becfb08ed9cb22cdee19088f23afefdafb5b",
+      "label": "双筒望远镜",
+      "label_zh": "双筒望远镜",
+      "label_en": "Binoculars",
+      "source_file": "binoculars.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/map.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_map_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_map_tabler",
+      "type": "symbol",
+      "category": "野外观测",
+      "category_en": "Field observations",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_map_tabler.svg",
+      "keywords": [
+        "地理",
+        "地图",
+        "制图",
+        "geography",
+        "map",
+        "cartography"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "572a7cc20e9b5b81fb57987de400af5d0ba6499993bb6f6d5869830ea52a8d30",
+      "label": "地图",
+      "label_zh": "地图",
+      "label_en": "Map",
+      "source_file": "map.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/world-latitude.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_latitude_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_latitude_tabler",
+      "type": "symbol",
+      "category": "野外观测",
+      "category_en": "Field observations",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_latitude_tabler.svg",
+      "keywords": [
+        "地理",
+        "纬度",
+        "坐标",
+        "geography",
+        "latitude",
+        "coordinate"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "6af5858557a827f9bef24ba07df62f490324b4dc0b5640637fe1aa14037b0760",
+      "label": "纬度",
+      "label_zh": "纬度",
+      "label_en": "Latitude",
+      "source_file": "world-latitude.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/world-longitude.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_longitude_tabler",
+      "asset_id": "earth_environment_verified_earth_environment_longitude_tabler",
+      "type": "symbol",
+      "category": "野外观测",
+      "category_en": "Field observations",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_longitude_tabler.svg",
+      "keywords": [
+        "地理",
+        "经度",
+        "坐标",
+        "geography",
+        "longitude",
+        "coordinate"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "1d3583678b6624fee6dcd318301610fd5998baa318b5332796198279d18477bf",
+      "label": "经度",
+      "label_zh": "经度",
+      "label_en": "Longitude",
+      "source_file": "world-longitude.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/drone/materialsymbolsoutlined/drone_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_field_drone_material",
+      "asset_id": "earth_environment_verified_earth_environment_field_drone_material",
+      "type": "symbol",
+      "category": "野外观测",
+      "category_en": "Field observations",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_field_drone_material.svg",
+      "keywords": [
+        "野外",
+        "无人机",
+        "遥感",
+        "fieldwork",
+        "drone",
+        "remote sensing"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "8f71645d5f7d996bc862fae7b0ca4112e11606ddfe5e79a345c8674a00c6d6b9",
+      "label": "野外无人机",
+      "label_zh": "野外无人机",
+      "label_en": "Field Drone",
+      "source_file": "drone_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/radar/materialsymbolsoutlined/radar_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_radar_remote_sensing_material",
+      "asset_id": "earth_environment_verified_earth_environment_radar_remote_sensing_material",
+      "type": "symbol",
+      "category": "野外观测",
+      "category_en": "Field observations",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_radar_remote_sensing_material.svg",
+      "keywords": [
+        "遥感",
+        "雷达",
+        "监测",
+        "remote sensing",
+        "radar",
+        "monitoring"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f6406eb76582ae3531a058b93ad8df0f817deb9f33659d611bcebe71cef03818",
+      "label": "雷达遥感",
+      "label_zh": "雷达遥感",
+      "label_en": "Radar Remote Sensing",
+      "source_file": "radar_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/satellite/materialsymbolsoutlined/satellite_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_remote_sensing_satellite_material",
+      "asset_id": "earth_environment_verified_earth_environment_remote_sensing_satellite_material",
+      "type": "symbol",
+      "category": "野外观测",
+      "category_en": "Field observations",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_remote_sensing_satellite_material.svg",
+      "keywords": [
+        "遥感",
+        "卫星",
+        "对地观测",
+        "remote sensing",
+        "satellite",
+        "Earth observation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "4b20903db049511f4bf1859067101b339541f855edfef829dc8f1dec8f3273c0",
+      "label": "遥感卫星",
+      "label_zh": "遥感卫星",
+      "label_en": "Remote Sensing Satellite",
+      "source_file": "satellite_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/tsunami/materialsymbolsoutlined/tsunami_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_tsunami_material",
+      "asset_id": "earth_environment_verified_earth_environment_tsunami_material",
+      "type": "symbol",
+      "category": "自然灾害",
+      "category_en": "Natural hazards",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_tsunami_material.svg",
+      "keywords": [
+        "灾害",
+        "海啸",
+        "海浪",
+        "hazard",
+        "tsunami",
+        "wave"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "41e71b0c5ac7012160647b1f39cba760a2039258ca9d2ba403b67abaa2d8f0ea",
+      "label": "海啸",
+      "label_zh": "海啸",
+      "label_en": "Tsunami",
+      "source_file": "tsunami_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/flood/materialsymbolsoutlined/flood_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_flood_material",
+      "asset_id": "earth_environment_verified_earth_environment_flood_material",
+      "type": "symbol",
+      "category": "自然灾害",
+      "category_en": "Natural hazards",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_flood_material.svg",
+      "keywords": [
+        "灾害",
+        "洪水",
+        "水文",
+        "hazard",
+        "flood",
+        "hydrology"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "1ec73da6f433719fa01249802578a703dd2d5494b31934220c2d270be0b1d7e4",
+      "label": "洪水",
+      "label_zh": "洪水",
+      "label_en": "Flood",
+      "source_file": "flood_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Fonticons, Inc. (Font Awesome)",
+      "author_url": "https://fontawesome.com",
+      "license": "CC BY 4.0",
+      "license_url": "https://fontawesome.com/license/free",
+      "source_url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/house-flood-water.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_flooded_house_fontawesome",
+      "asset_id": "earth_environment_verified_earth_environment_flooded_house_fontawesome",
+      "type": "symbol",
+      "category": "自然灾害",
+      "category_en": "Natural hazards",
+      "default_dim": [
+        26,
+        20.8
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_flooded_house_fontawesome.svg",
+      "keywords": [
+        "灾害",
+        "洪涝",
+        "淹没",
+        "hazard",
+        "flood",
+        "inundation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "bc17ace8c278155972b8fa52e9cbcb8746ae459e632b86c060d05fd0e23eba99",
+      "label": "洪水淹没",
+      "label_zh": "洪水淹没",
+      "label_en": "Flooded House",
+      "source_file": "house-flood-water.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Fonticons, Inc. (Font Awesome)",
+      "author_url": "https://fontawesome.com",
+      "license": "CC BY 4.0",
+      "license_url": "https://fontawesome.com/license/free",
+      "source_url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/house-chimney-crack.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_cracked_house_fontawesome",
+      "asset_id": "earth_environment_verified_earth_environment_cracked_house_fontawesome",
+      "type": "symbol",
+      "category": "自然灾害",
+      "category_en": "Natural hazards",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_cracked_house_fontawesome.svg",
+      "keywords": [
+        "灾害",
+        "地震",
+        "结构损伤",
+        "hazard",
+        "earthquake",
+        "structural damage"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "c441cde3406f4d9856d8b904769313a57fbf2f988f903d8e700d7105388fad7c",
+      "label": "房屋开裂",
+      "label_zh": "房屋开裂",
+      "label_en": "Cracked House",
+      "source_file": "house-chimney-crack.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Fonticons, Inc. (Font Awesome)",
+      "author_url": "https://fontawesome.com",
+      "license": "CC BY 4.0",
+      "license_url": "https://fontawesome.com/license/free",
+      "source_url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/oil-well.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_oil_well_fontawesome",
+      "asset_id": "earth_environment_verified_earth_environment_oil_well_fontawesome",
+      "type": "symbol",
+      "category": "自然灾害",
+      "category_en": "Natural hazards",
+      "default_dim": [
+        26,
+        23.11
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_oil_well_fontawesome.svg",
+      "keywords": [
+        "能源",
+        "石油",
+        "钻探",
+        "energy",
+        "oil well",
+        "drilling"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "ab777ed7807b2dccc65974a951bbe0e1077e0aebb2757e84a63a0b4175b10c5d",
+      "label": "油井",
+      "label_zh": "油井",
+      "label_en": "Oil Well",
+      "source_file": "oil-well.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Fonticons, Inc. (Font Awesome)",
+      "author_url": "https://fontawesome.com",
+      "license": "CC BY 4.0",
+      "license_url": "https://fontawesome.com/license/free",
+      "source_url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/icicles.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "earth_environment_verified_earth_environment_icicles_fontawesome",
+      "asset_id": "earth_environment_verified_earth_environment_icicles_fontawesome",
+      "type": "symbol",
+      "category": "冰雪",
+      "category_en": "Ice and snow",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/earth_environment_verified_earth_environment_icicles_fontawesome.svg",
+      "keywords": [
+        "冰冻圈",
+        "冰",
+        "寒冷",
+        "cryosphere",
+        "ice",
+        "cold"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "49f939a1c47b1f6900446a925a76e72859522de31ca5ed89ec631c32c4a7f3e4",
+      "label": "冰柱",
+      "label_zh": "冰柱",
+      "label_en": "Icicles",
+      "source_file": "icicles.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
     }
   ],
   "templates": [
@@ -3005,7 +5369,9 @@
         "Surface runoff",
         "Receiving water",
         "Groundwater"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "earth_environment_template_carbon_cycle",
@@ -3038,7 +5404,9 @@
         "Soil carbon",
         "River transport",
         "Aquatic carbon"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "earth_environment_template_remediation",
@@ -3071,7 +5439,9 @@
         "Treated outflow",
         "Sediment retention",
         "Plant uptake"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "earth_environment_template_earth_observation",
@@ -3104,7 +5474,9 @@
         "Study catchment",
         "Aligned observations",
         "Spatial model"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "earth_environment_template_carbon_capture_chain",
@@ -3137,7 +5509,9 @@
         "输送管线",
         "封存层",
         "监测站"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "earth_environment_template_remote_sensing_workflow",
@@ -3170,7 +5544,9 @@
         "GIS 图层",
         "地表分类",
         "地面验证"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "earth_environment_template_water_treatment_chain",
@@ -3203,7 +5579,9 @@
         "清水库",
         "配水管网",
         "水质监测"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "earth_environment_template_coastal_hazard",
@@ -3236,7 +5614,11 @@
         "海岸带",
         "淹没",
         "预警"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     }
-  ]
+  ],
+  "available_asset_count": 63,
+  "available_template_count": 0
 }

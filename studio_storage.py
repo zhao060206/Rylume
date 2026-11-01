@@ -59,7 +59,15 @@ def durable_replace(source,destination):
     with _REPLACE_LOCK:
         recover_pending_replacements(destination.parent,recursive=False)
         try:
-            os.replace(_long_path(source),_long_path(destination));return
+            for attempt in range(6):
+                try:
+                    os.replace(_long_path(source),_long_path(destination));return
+                except OSError as exc:
+                    # Antivirus/indexing and short-lived readers on Windows
+                    # can briefly deny a same-directory atomic rename. Keep
+                    # both files and retry; never delete the saved original.
+                    if getattr(exc,'winerror',None) not in (5,32,33) or attempt==5:raise
+                    time.sleep(.02*2**attempt)
         except OSError as exc:
             if getattr(exc,'winerror',None)!=17 and exc.errno!=getattr(__import__('errno'),'EXDEV'):
                 raise

@@ -94,11 +94,12 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                "reference_purpose":config.get('reference_purpose','layout'),
                "layout_policy":config.get('layout_policy','preserve')}
     try:
-        from scientific_library import library
+        from scientific_library import library,available_for_insertion
         import re
         tokens={word.lower() for word in re.findall(r'[A-Za-z][A-Za-z0-9-]{2,}|[\u4e00-\u9fff]{2,}',text)}
         candidates=[]
         for asset in library().values():
+            if not available_for_insertion(asset):continue
             description=' '.join(str(asset.get(k,'')) for k in ('asset_id','label','name','category','tags')).lower()
             rank=sum(len(token) for token in tokens if token in description)
             if rank:candidates.append((rank,asset))

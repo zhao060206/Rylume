@@ -2686,6 +2686,9 @@ class Handler(BaseHTTPRequestHandler):
     def do_PUT(self):  # noqa: N802
         return self._scene_mutation('PUT')
 
+    def do_DELETE(self):  # noqa: N802
+        return self._scene_mutation('DELETE')
+
     def _scene_mutation(self, method):
         if hasattr(self, "_body_cache"):
             del self._body_cache

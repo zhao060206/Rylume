@@ -1,0 +1,21 @@
+<svg viewBox="0 0 438 275" width="438" height="275" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <g>
+      <path d="M153.61,163.08a71.43,71.43,0,1,1,131.92-.7" transform="translate(0 -25.85)" fill="#8edd33" />
+      <rect x="0.5" y="137.5" width="437" height="8" fill="#eaeaea" />
+      <path d="M437,163.85v7H1v-7H437m1-1H0v9H438v-9Z" transform="translate(0 -25.85)" fill="#595959" />
+    </g>
+    <g>
+      <g>
+        <path d="M291,163.35A137.4,137.4,0,1,1,278.49,106,137.5,137.5,0,0,1,291,163.35Z" transform="translate(0 -25.85)" fill="#ff9a2c" />
+      </g>
+      <path d="M181.16,162.85H177.8a29.89,29.89,0,0,0,.84-5.87,28,28,0,0,0-34.57-27.19l-.79-3.26A31.33,31.33,0,0,1,182,157,27.08,27.08,0,0,1,181.16,162.85Z" transform="translate(0 -25.85)" fill="#fff" />
+      <line x1="154" y1="137" x2="155.5" y2="137.01" fill="none" stroke="#ff6c22" stroke-width="1.5" />
+      <line x1="158.56" y1="137.02" x2="291.47" y2="137.49" fill="none" stroke="#ff6c22" stroke-width="1.5" />
+      <line x1="293" y1="137.49" x2="294.5" y2="137.5" fill="none" stroke="#ff6c22" stroke-width="1.5" />
+      <line x1="153.59" y1="137.69" x2="153.24" y2="136.23" fill="none" stroke="#ff6c22" stroke-width="1.5" />
+      <line x1="152.54" y1="133.38" x2="122.21" y2="9.38" fill="none" stroke="#ff6c22" stroke-width="1.5" />
+      <line x1="121.86" y1="7.96" x2="121.5" y2="6.5" fill="none" stroke="#ff6c22" stroke-width="1.5" />
+    </g>
+  </g>
+</svg>

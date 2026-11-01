@@ -19,9 +19,13 @@ def test_library_expansion_has_traceable_originals_and_no_missing_category():
     assert len(library())>=630
     catalog=asset_catalog()
     ids=[a['asset_id'] for c in catalog for a in c['items'] if a.get('asset_id')]
-    assert len(ids)==len(set(ids))==len(library())
+    from scientific_library import available_for_insertion
+    assert len(ids)==len(set(ids))==sum(bool(available_for_insertion(a)) for a in library().values())
+    assert all(available_for_insertion(library()[aid]) for aid in ids)
+    assert all(aid in library() for aid,a in library().items() if a.get('catalog_status')=='quarantined')
     assert len(catalog)>=15
-    for aid,a in library().items():
+    for a in json.loads((ROOT/'assets/bioicons/manifest.json').read_text(encoding='utf8')):
+        aid=a['asset_id']
         assert re.fullmatch(r'[A-Za-z][A-Za-z0-9_]*',aid)
         assert a['license'] in ('CC BY 3.0','CC BY 4.0','CC0 1.0')
         assert hashlib.sha256((ROOT/'assets/bioicons'/f'{aid}.original.svg').read_bytes()).hexdigest()==a['sha256']

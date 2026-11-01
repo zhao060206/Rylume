@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "physics",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "title": "物理学",
   "domain": "physics",
-  "min_app_version": "3.1.0",
+  "min_app_version": "4.8.0",
   "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
@@ -32,7 +32,9 @@
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
-      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_mirror",
@@ -59,7 +61,9 @@
       "source_file": "mirror.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/mirror.svg",
-      "sha256": "51a67507aa59b9c5d9c3ae559b6a0678aa95ab3c7cc33c82eab5a747b272f8d0"
+      "sha256": "51a67507aa59b9c5d9c3ae559b6a0678aa95ab3c7cc33c82eab5a747b272f8d0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_laser",
@@ -86,7 +90,9 @@
       "source_file": "laser-pointer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg",
-      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
+      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_prism",
@@ -113,7 +119,9 @@
       "source_file": "astro_spacecraft.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_spacecraft.svg",
-      "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a"
+      "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_slit",
@@ -140,7 +148,9 @@
       "source_file": "astro_compact_objects.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_compact_objects.svg",
-      "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42"
+      "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_screen",
@@ -167,7 +177,9 @@
       "source_file": "screen-rotation.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/screen-rotation.svg",
-      "sha256": "bb23cbff050c290e57415584bb588e24d300a2af292b6397344dcd4c3b884a7c"
+      "sha256": "bb23cbff050c290e57415584bb588e24d300a2af292b6397344dcd4c3b884a7c",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_atom",
@@ -194,7 +206,9 @@
       "source_file": "atom.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/atom.svg",
-      "sha256": "2d5e7f4dc620ddddbab95e49cd9fc292a14155beb4404b95c1ef447aebaae654"
+      "sha256": "2d5e7f4dc620ddddbab95e49cd9fc292a14155beb4404b95c1ef447aebaae654",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_wave",
@@ -221,7 +235,9 @@
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
-      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_magnet",
@@ -248,7 +264,9 @@
       "source_file": "magnet.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg",
-      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
+      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_coil",
@@ -275,7 +293,9 @@
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
-      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_pendulum",
@@ -302,7 +322,9 @@
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
-      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_spring",
@@ -329,7 +351,9 @@
       "source_file": "astro_spacecraft.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_spacecraft.svg",
-      "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a"
+      "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_mass",
@@ -356,7 +380,9 @@
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
-      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_charge",
@@ -383,7 +409,9 @@
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
-      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_capacitor",
@@ -410,7 +438,9 @@
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
-      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_resistor",
@@ -437,7 +467,9 @@
       "source_file": "resistor.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/resistor.svg",
-      "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a"
+      "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_detector",
@@ -464,7 +496,9 @@
       "source_file": "access-point.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
-      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
+      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_polarizer",
@@ -491,7 +525,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_incline",
@@ -518,7 +554,9 @@
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
-      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_pulley",
@@ -545,7 +583,9 @@
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
-      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_collision",
@@ -572,7 +612,9 @@
       "source_file": "astro_compact_objects.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_compact_objects.svg",
-      "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42"
+      "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_projectile",
@@ -599,7 +641,9 @@
       "source_file": "arrow-projectile.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-projectile.svg",
-      "sha256": "f1f7124f333a93efbfd5876e0ab642053cfb7a26978f794e77f47677d49e5ff5"
+      "sha256": "f1f7124f333a93efbfd5876e0ab642053cfb7a26978f794e77f47677d49e5ff5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_gyroscope",
@@ -626,7 +670,9 @@
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
-      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_torque",
@@ -653,7 +699,9 @@
       "source_file": "rotate-right.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-right.svg",
-      "sha256": "7c0fdfe5c01d6f8455aad37288bb8d6dfc768054e31147dbef5a95c40baa0f23"
+      "sha256": "7c0fdfe5c01d6f8455aad37288bb8d6dfc768054e31147dbef5a95c40baa0f23",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_friction",
@@ -680,7 +728,9 @@
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
-      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_free_body",
@@ -707,7 +757,9 @@
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
-      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_center_mass",
@@ -734,7 +786,9 @@
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
-      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_orbit",
@@ -761,7 +815,9 @@
       "source_file": "orbit.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/orbit.svg",
-      "sha256": "53796b4728c7e70df03a0e7ef793a139db9915ead3717caafc175bd680b7ea63"
+      "sha256": "53796b4728c7e70df03a0e7ef793a139db9915ead3717caafc175bd680b7ea63",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_thermometer",
@@ -788,7 +844,9 @@
       "source_file": "thermometer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
-      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
+      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_heat_flow",
@@ -815,7 +873,9 @@
       "source_file": "heat-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg",
-      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_entropy",
@@ -842,7 +902,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_phase_diagram",
@@ -869,7 +931,9 @@
       "source_file": "chart-sankey.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-sankey.svg",
-      "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd"
+      "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_ideal_gas",
@@ -896,7 +960,9 @@
       "source_file": "gas-cylinder.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gas-cylinder.svg",
-      "sha256": "95455eb65ffac0e12f242ebb1430e27de4f4bc9db68370f62e4b17130cc0d349"
+      "sha256": "95455eb65ffac0e12f242ebb1430e27de4f4bc9db68370f62e4b17130cc0d349",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_diffusion",
@@ -923,7 +989,9 @@
       "source_file": "blur.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg",
-      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
+      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_heat_engine",
@@ -950,7 +1018,9 @@
       "source_file": "heat-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg",
-      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_diffraction",
@@ -977,7 +1047,9 @@
       "source_file": "astro_spacecraft.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_spacecraft.svg",
-      "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a"
+      "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_double_slit",
@@ -1004,7 +1076,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_convex_lens",
@@ -1031,7 +1105,9 @@
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
-      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_concave_mirror",
@@ -1058,7 +1134,9 @@
       "source_file": "mirror.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/mirror.svg",
-      "sha256": "51a67507aa59b9c5d9c3ae559b6a0678aa95ab3c7cc33c82eab5a747b272f8d0"
+      "sha256": "51a67507aa59b9c5d9c3ae559b6a0678aa95ab3c7cc33c82eab5a747b272f8d0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_optical_fiber",
@@ -1085,7 +1163,9 @@
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
-      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_spectrometer",
@@ -1112,7 +1192,9 @@
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
-      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_electric_field",
@@ -1139,7 +1221,9 @@
       "source_file": "electric-switch.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/electric-switch.svg",
-      "sha256": "25cd1f980fab83045545c554c64311dc392f850f25855419ec7b32d0f9ff7d0e"
+      "sha256": "25cd1f980fab83045545c554c64311dc392f850f25855419ec7b32d0f9ff7d0e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_magnetic_field",
@@ -1166,7 +1250,9 @@
       "source_file": "magnet.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg",
-      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
+      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_lorentz",
@@ -1193,7 +1279,9 @@
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
-      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_transformer",
@@ -1220,7 +1308,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_inductor",
@@ -1247,7 +1337,9 @@
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
-      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_diode",
@@ -1274,7 +1366,9 @@
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
-      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_transistor",
@@ -1301,7 +1395,9 @@
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
-      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_logic_gate",
@@ -1328,7 +1424,9 @@
       "source_file": "gate.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gate.svg",
-      "sha256": "10b1417f50a0dfd7d5d07b1dd24cc1e819c1d7b237b43400f3c053e0ac3d9440"
+      "sha256": "10b1417f50a0dfd7d5d07b1dd24cc1e819c1d7b237b43400f3c053e0ac3d9440",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_antenna",
@@ -1355,7 +1453,9 @@
       "source_file": "antenna.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/antenna.svg",
-      "sha256": "88019372e64e68087d0abec5f167243f0b594226996a406ea9dbdf24cb297be6"
+      "sha256": "88019372e64e68087d0abec5f167243f0b594226996a406ea9dbdf24cb297be6",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_waveguide",
@@ -1382,7 +1482,9 @@
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
-      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_energy_levels",
@@ -1409,7 +1511,9 @@
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
-      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_wavefunction",
@@ -1436,7 +1540,9 @@
       "source_file": "astro_compact_objects.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_compact_objects.svg",
-      "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42"
+      "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_quantum_dot",
@@ -1463,7 +1569,9 @@
       "source_file": "dot-net.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dot-net.svg",
-      "sha256": "b0d4358ac9c9241e4434f099543ec5eff6a617447169fe88580e8c54aa52ebbd"
+      "sha256": "b0d4358ac9c9241e4434f099543ec5eff6a617447169fe88580e8c54aa52ebbd",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_spin",
@@ -1490,7 +1598,9 @@
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
-      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_entanglement",
@@ -1517,7 +1627,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_photon",
@@ -1544,7 +1656,9 @@
       "source_file": "astro_launch_landing.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_launch_landing.svg",
-      "sha256": "12116d80837b13df520371346223278906f75456dea47f517d4fcc989fb770bd"
+      "sha256": "12116d80837b13df520371346223278906f75456dea47f517d4fcc989fb770bd",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_band_gap",
@@ -1571,7 +1685,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_tunneling",
@@ -1598,7 +1714,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_qubit",
@@ -1625,7 +1743,9 @@
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
-      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_laser_cavity",
@@ -1652,7 +1772,9 @@
       "source_file": "laser-pointer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg",
-      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
+      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_cryostat",
@@ -1679,7 +1801,9 @@
       "source_file": "astro_stars.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_stars.svg",
-      "sha256": "787829f9bc14b93570a80358912453abe85c7cfdfadee1ef81a4c28af6b047e3"
+      "sha256": "787829f9bc14b93570a80358912453abe85c7cfdfadee1ef81a4c28af6b047e3",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_interferometer",
@@ -1706,7 +1830,9 @@
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
-      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_plasma",
@@ -1733,7 +1859,9 @@
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
-      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_fluid",
@@ -1760,7 +1888,9 @@
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
-      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_viscosity",
@@ -1787,7 +1917,9 @@
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
-      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_surface_tension",
@@ -1814,7 +1946,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_double_pendulum",
@@ -1841,7 +1975,9 @@
       "source_file": "astro_galaxies.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_galaxies.svg",
-      "sha256": "a5f31aa2ecfc35f398e551981caec9744b807dced556469b15269f747c3f0f78"
+      "sha256": "a5f31aa2ecfc35f398e551981caec9744b807dced556469b15269f747c3f0f78",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_normal_mode",
@@ -1868,7 +2004,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_phonon",
@@ -1895,7 +2033,9 @@
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
-      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_kinetic_energy",
@@ -1922,7 +2062,9 @@
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
-      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_potential_well",
@@ -1949,7 +2091,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_vector",
@@ -1976,7 +2120,9 @@
       "source_file": "vector-arrange-above.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-arrange-above.svg",
-      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_wave_packet",
@@ -2003,7 +2149,9 @@
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
-      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_fourier",
@@ -2030,7 +2178,9 @@
       "source_file": "chart-line.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
-      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_electric_circuit",
@@ -2057,7 +2207,9 @@
       "source_file": "electric-switch.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/electric-switch.svg",
-      "sha256": "25cd1f980fab83045545c554c64311dc392f850f25855419ec7b32d0f9ff7d0e"
+      "sha256": "25cd1f980fab83045545c554c64311dc392f850f25855419ec7b32d0f9ff7d0e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_current_density",
@@ -2084,7 +2236,9 @@
       "source_file": "current-dc.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/current-dc.svg",
-      "sha256": "b2e17b195b023bce66684df95c8a836c0a48eb4695bc8ed0c931bc79274c7d1e"
+      "sha256": "b2e17b195b023bce66684df95c8a836c0a48eb4695bc8ed0c931bc79274c7d1e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_gauss",
@@ -2111,7 +2265,9 @@
       "source_file": "vector-circle.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-circle.svg",
-      "sha256": "f79ca835981b1cf69a1089f95eef4c4689cbd0f2b7093c5127a0c85619dc120f"
+      "sha256": "f79ca835981b1cf69a1089f95eef4c4689cbd0f2b7093c5127a0c85619dc120f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_capacitor_charge",
@@ -2138,7 +2294,9 @@
       "source_file": "astro_stars.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_stars.svg",
-      "sha256": "787829f9bc14b93570a80358912453abe85c7cfdfadee1ef81a4c28af6b047e3"
+      "sha256": "787829f9bc14b93570a80358912453abe85c7cfdfadee1ef81a4c28af6b047e3",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_rlc",
@@ -2165,7 +2323,9 @@
       "source_file": "resistor.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/resistor.svg",
-      "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a"
+      "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_em_wave",
@@ -2192,7 +2352,9 @@
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
-      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_bloch",
@@ -2219,7 +2381,9 @@
       "source_file": "circle-double.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/circle-double.svg",
-      "sha256": "5a148400426d701d72703c8686ddc3850744fa1de3ae3f2cb29275e0ba4b1de2"
+      "sha256": "5a148400426d701d72703c8686ddc3850744fa1de3ae3f2cb29275e0ba4b1de2",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_harmonic",
@@ -2246,7 +2410,9 @@
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
-      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_spring_mass",
@@ -2273,7 +2439,9 @@
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
-      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_projectile_range",
@@ -2300,7 +2468,9 @@
       "source_file": "arrow-projectile.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-projectile.svg",
-      "sha256": "f1f7124f333a93efbfd5876e0ab642053cfb7a26978f794e77f47677d49e5ff5"
+      "sha256": "f1f7124f333a93efbfd5876e0ab642053cfb7a26978f794e77f47677d49e5ff5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_pressure",
@@ -2327,7 +2497,9 @@
       "source_file": "gauge.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gauge.svg",
-      "sha256": "fb31613d7a44b32eb9b627d98cf0bea7b79c93e435593e44d3b43967d51b06c7"
+      "sha256": "fb31613d7a44b32eb9b627d98cf0bea7b79c93e435593e44d3b43967d51b06c7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_bernoulli",
@@ -2354,7 +2526,9 @@
       "source_file": "pipe.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
-      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_reynolds",
@@ -2381,7 +2555,9 @@
       "source_file": "water.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
-      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
+      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_heatmap",
@@ -2408,7 +2584,9 @@
       "source_file": "grid.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg",
-      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
+      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_blackbody",
@@ -2435,7 +2613,9 @@
       "source_file": "white-balance-sunny.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/white-balance-sunny.svg",
-      "sha256": "6baf56db75f52d16f428ee1a37ed2f9f320536b22ca068d4864bc6a5c595b4f1"
+      "sha256": "6baf56db75f52d16f428ee1a37ed2f9f320536b22ca068d4864bc6a5c595b4f1",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_radiation",
@@ -2462,7 +2642,9 @@
       "source_file": "radioactive.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radioactive.svg",
-      "sha256": "1591b0d6ac624d195a2dba99ae2ff3df367341b6ec8a69e5d164e1a51f65c063"
+      "sha256": "1591b0d6ac624d195a2dba99ae2ff3df367341b6ec8a69e5d164e1a51f65c063",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_doppler",
@@ -2489,7 +2671,9 @@
       "source_file": "wave.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wave.svg",
-      "sha256": "48e7ff1141f49a7c76c3ba28e3afabcd0a857b0640ebf82268c962af3734bb11"
+      "sha256": "48e7ff1141f49a7c76c3ba28e3afabcd0a857b0640ebf82268c962af3734bb11",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_polarization_ellipse",
@@ -2516,7 +2700,9 @@
       "source_file": "ellipse.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ellipse.svg",
-      "sha256": "e38e5b464ec784df7c55f21f10a3ba9fa3dda01a97604bdce9261bb1f5b74949"
+      "sha256": "e38e5b464ec784df7c55f21f10a3ba9fa3dda01a97604bdce9261bb1f5b74949",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_fresnel",
@@ -2543,7 +2729,9 @@
       "source_file": "triangle-outline.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/triangle-outline.svg",
-      "sha256": "ed042089028441b4866f515552d37521fd14a5c876b753a5a7e351735209d53d"
+      "sha256": "ed042089028441b4866f515552d37521fd14a5c876b753a5a7e351735209d53d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_microscope",
@@ -2570,7 +2758,9 @@
       "source_file": "microscope.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/microscope.svg",
-      "sha256": "436386fdc11b200be10f4b8bf709c8c914c3a675f94d0b8f122f4dbc24cb4235"
+      "sha256": "436386fdc11b200be10f4b8bf709c8c914c3a675f94d0b8f122f4dbc24cb4235",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_telescope",
@@ -2597,7 +2787,9 @@
       "source_file": "telescope.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/telescope.svg",
-      "sha256": "94571a48261810de5792175d54b2bfa8a996bb00a461b03f874f1d03b314d413"
+      "sha256": "94571a48261810de5792175d54b2bfa8a996bb00a461b03f874f1d03b314d413",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_neutrino",
@@ -2624,7 +2816,9 @@
       "source_file": "atom.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/atom.svg",
-      "sha256": "2d5e7f4dc620ddddbab95e49cd9fc292a14155beb4404b95c1ef447aebaae654"
+      "sha256": "2d5e7f4dc620ddddbab95e49cd9fc292a14155beb4404b95c1ef447aebaae654",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_decay",
@@ -2651,7 +2845,9 @@
       "source_file": "radioactive.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radioactive.svg",
-      "sha256": "1591b0d6ac624d195a2dba99ae2ff3df367341b6ec8a69e5d164e1a51f65c063"
+      "sha256": "1591b0d6ac624d195a2dba99ae2ff3df367341b6ec8a69e5d164e1a51f65c063",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_feynman",
@@ -2678,7 +2874,9 @@
       "source_file": "graph-outline.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph-outline.svg",
-      "sha256": "dd312410e7732c4dde3b14e9ad4f0045fbd6e48192c26306fe20400002391be6"
+      "sha256": "dd312410e7732c4dde3b14e9ad4f0045fbd6e48192c26306fe20400002391be6",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_phys_detector_array",
@@ -2705,7 +2903,9 @@
       "source_file": "access-point.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
-      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
+      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_beam_splitter",
@@ -2731,7 +2931,9 @@
       "source_file": "animal_mammal.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/animal_mammal.svg",
-      "sha256": "7f4dd5fa8949070946c85f4a1629a902cabf077c7245220f0c68a1ef53c093b2"
+      "sha256": "7f4dd5fa8949070946c85f4a1629a902cabf077c7245220f0c68a1ef53c093b2",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_sensor",
@@ -2757,7 +2959,9 @@
       "source_file": "built_building.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/built_building.svg",
-      "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20"
+      "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "physics_eng_grid",
@@ -2783,7 +2987,2379 @@
       "source_file": "grid.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg",
-      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
+      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/pendulum.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_pendulum_tabler",
+      "asset_id": "physics_verified_physics_pendulum_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_pendulum_tabler.svg",
+      "keywords": [
+        "力学",
+        "单摆",
+        "振动",
+        "周期",
+        "mechanics",
+        "pendulum",
+        "oscillation",
+        "period"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b07abb9ab4fff75ba692b1c3788f71217bb6059547834962d1ef870fd957f74f",
+      "label": "单摆",
+      "label_zh": "单摆",
+      "label_en": "Pendulum",
+      "source_file": "pendulum.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/weight.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_weight_tabler",
+      "asset_id": "physics_verified_physics_weight_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_weight_tabler.svg",
+      "keywords": [
+        "力学",
+        "质量",
+        "重力",
+        "砝码",
+        "mass",
+        "weight",
+        "gravity"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "455fd569680fc6948a18ce99cb9e420e30ca98eadbd4596eb4dff66a2a343156",
+      "label": "砝码",
+      "label_zh": "砝码",
+      "label_en": "Weight",
+      "source_file": "weight.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/scale.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_balance_scale_tabler",
+      "asset_id": "physics_verified_physics_balance_scale_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_balance_scale_tabler.svg",
+      "keywords": [
+        "力学",
+        "天平",
+        "称量",
+        "质量",
+        "balance",
+        "scale",
+        "mass",
+        "measurement"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "a0248e8ea0b5bed6cd4b2292ec8153b8da5b4a6d2bb622f4b0367b67f76a2de1",
+      "label": "天平",
+      "label_zh": "天平",
+      "label_en": "Balance Scale",
+      "source_file": "scale.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/gauge.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_pressure_gauge_tabler",
+      "asset_id": "physics_verified_physics_pressure_gauge_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_pressure_gauge_tabler.svg",
+      "keywords": [
+        "力学",
+        "压力",
+        "仪表",
+        "测量",
+        "pressure",
+        "gauge",
+        "measurement"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2aa3f7b07e292a89ce2366304f600d08d7ebe97698447098a51087b0821565e9",
+      "label": "压力表",
+      "label_zh": "压力表",
+      "label_en": "Pressure Gauge",
+      "source_file": "gauge.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/axis-x.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_x_axis_tabler",
+      "asset_id": "physics_verified_physics_x_axis_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_x_axis_tabler.svg",
+      "keywords": [
+        "坐标轴",
+        "X轴",
+        "参考系",
+        "axis",
+        "coordinate",
+        "reference frame"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f757151720834b19d4fb01f2baa6e29f24856f4d527a7690325d2c9649205feb",
+      "label": "横坐标轴",
+      "label_zh": "横坐标轴",
+      "label_en": "Horizontal axis",
+      "source_file": "axis-x.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/axis-y.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_y_axis_tabler",
+      "asset_id": "physics_verified_physics_y_axis_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_y_axis_tabler.svg",
+      "keywords": [
+        "坐标轴",
+        "Y轴",
+        "参考系",
+        "axis",
+        "coordinate",
+        "reference frame"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f625ed0ec5e7d6838851fee5ba767a10779b8fd8f0f4f3555246bfd0e02cba9b",
+      "label": "纵坐标轴",
+      "label_zh": "纵坐标轴",
+      "label_en": "Vertical axis",
+      "source_file": "axis-y.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/ruler-2.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_folding_ruler_tabler",
+      "asset_id": "physics_verified_physics_folding_ruler_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_folding_ruler_tabler.svg",
+      "keywords": [
+        "坐标",
+        "参考系",
+        "测量",
+        "coordinate",
+        "coordinate system",
+        "reference frame"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "49becfa92b41ec43781405eb4a1afa77d38ec7f0a50fdd1048f0b759a0ed1889",
+      "label": "折尺",
+      "label_zh": "折尺",
+      "label_en": "Folding Ruler",
+      "source_file": "ruler-2.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/ruler.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_ruler_tabler",
+      "asset_id": "physics_verified_physics_ruler_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_ruler_tabler.svg",
+      "keywords": [
+        "长度",
+        "测量",
+        "标尺",
+        "length",
+        "ruler",
+        "measurement"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "e273237ff2cffda65a4836bddb3920ef4ba091dee08c2eee92b1b0bbbb1c0c16",
+      "label": "直尺",
+      "label_zh": "直尺",
+      "label_en": "Ruler",
+      "source_file": "ruler.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/ruler-measure.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_protractor_tabler",
+      "asset_id": "physics_verified_physics_protractor_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_protractor_tabler.svg",
+      "keywords": [
+        "角度",
+        "测量",
+        "量角器",
+        "angle",
+        "protractor",
+        "measurement"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "80e970f755d115102778d9b12e2fa6e3150f8c2079b7a950b4221bf1ed072c59",
+      "label": "测量尺",
+      "label_zh": "测量尺",
+      "label_en": "Measuring ruler",
+      "source_file": "ruler-measure.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/math-function.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_function_tabler",
+      "asset_id": "physics_verified_physics_function_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_function_tabler.svg",
+      "keywords": [
+        "数学",
+        "函数",
+        "关系",
+        "mathematics",
+        "function",
+        "equation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "33f44604394229daf9f660e484ec5cfe6493fcb4157482e17fbf1fe68db2bfb7",
+      "label": "函数",
+      "label_zh": "函数",
+      "label_en": "Function",
+      "source_file": "math-function.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/math-pi.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_pi_tabler",
+      "asset_id": "physics_verified_physics_pi_tabler",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_pi_tabler.svg",
+      "keywords": [
+        "数学",
+        "圆周率",
+        "常数",
+        "mathematics",
+        "pi",
+        "constant"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "62d46e232222f5126e14f009217db8d9a8fef50b8ea27764e2d634cfc42473ff",
+      "label": "圆周率",
+      "label_zh": "圆周率",
+      "label_en": "Pi",
+      "source_file": "math-pi.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Fonticons, Inc. (Font Awesome)",
+      "author_url": "https://fontawesome.com",
+      "license": "CC BY 4.0",
+      "license_url": "https://fontawesome.com/license/free",
+      "source_url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/weight-hanging.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_suspended_weight_fontawesome",
+      "asset_id": "physics_verified_physics_suspended_weight_fontawesome",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_suspended_weight_fontawesome.svg",
+      "keywords": [
+        "力学",
+        "悬挂",
+        "质量",
+        "重力",
+        "suspended",
+        "weight",
+        "gravity"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "937c015a2d16992d9a282d4688f1094f28b6353e540f5eaeffdec98a7f0e6c98",
+      "label": "悬挂重物",
+      "label_zh": "悬挂重物",
+      "label_en": "Suspended Weight",
+      "source_file": "weight-hanging.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/axis-3d.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_3d_axes_lucide",
+      "asset_id": "physics_verified_physics_3d_axes_lucide",
+      "type": "symbol",
+      "category": "力学器材",
+      "category_en": "Mechanics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_3d_axes_lucide.svg",
+      "keywords": [
+        "三维",
+        "坐标轴",
+        "空间",
+        "3D",
+        "axes",
+        "coordinate"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "c3553c94844eee9f6f8c7db3bb5d8e8ee71435831f33d4411d3e44f490bfcae4",
+      "label": "三维坐标轴",
+      "label_zh": "三维坐标轴",
+      "label_en": "Three-dimensional axes",
+      "source_file": "axis-3d.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/lens-convex.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_convex_lens_tabler",
+      "asset_id": "physics_verified_physics_convex_lens_tabler",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_convex_lens_tabler.svg",
+      "keywords": [
+        "光学",
+        "凸透镜",
+        "会聚",
+        "成像",
+        "optics",
+        "convex lens",
+        "focusing"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "47a2334bdcb54489c8554364a494da2219f084bc32674ee20a727e706a1179c4",
+      "label": "凸透镜",
+      "label_zh": "凸透镜",
+      "label_en": "Convex Lens",
+      "source_file": "lens-convex.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/lens-concave.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_concave_lens_tabler",
+      "asset_id": "physics_verified_physics_concave_lens_tabler",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_concave_lens_tabler.svg",
+      "keywords": [
+        "光学",
+        "凹透镜",
+        "发散",
+        "成像",
+        "optics",
+        "concave lens",
+        "diverging"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "39fe0bcd0ce309ecc489c46f3329a4ccc82d92bf70f66cb853c587b913e31ca4",
+      "label": "凹透镜",
+      "label_zh": "凹透镜",
+      "label_en": "Concave Lens",
+      "source_file": "lens-concave.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/prism.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_prism_tabler",
+      "asset_id": "physics_verified_physics_prism_tabler",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_prism_tabler.svg",
+      "keywords": [
+        "光学",
+        "棱镜",
+        "折射",
+        "色散",
+        "optics",
+        "prism",
+        "refraction",
+        "dispersion"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "d17c0f014ed3e2f37023e006f7256e3a38ad96ae4b4678e971a09f19c6456ea0",
+      "label": "棱镜",
+      "label_zh": "棱镜",
+      "label_en": "Prism",
+      "source_file": "prism.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/prism-light.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_dispersing_prism_tabler",
+      "asset_id": "physics_verified_physics_dispersing_prism_tabler",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_dispersing_prism_tabler.svg",
+      "keywords": [
+        "光学",
+        "棱镜",
+        "光谱",
+        "色散",
+        "optics",
+        "prism",
+        "spectrum",
+        "dispersion"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "d069498fe312f9ee6af0a172308bee694e41833c525a5b62659733df62e81b4f",
+      "label": "色散棱镜",
+      "label_zh": "色散棱镜",
+      "label_en": "Dispersing Prism",
+      "source_file": "prism-light.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/aperture.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_aperture_tabler",
+      "asset_id": "physics_verified_physics_aperture_tabler",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_aperture_tabler.svg",
+      "keywords": [
+        "光学",
+        "光圈",
+        "孔径",
+        "成像",
+        "optics",
+        "aperture",
+        "imaging"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "3da3a0f459698620532c88e4fc5868ddbc9301a3a320bfd3591e3633667f8fbc",
+      "label": "光圈",
+      "label_zh": "光圈",
+      "label_en": "Aperture",
+      "source_file": "aperture.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/focus-2.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_focal_point_tabler",
+      "asset_id": "physics_verified_physics_focal_point_tabler",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_focal_point_tabler.svg",
+      "keywords": [
+        "光学",
+        "焦点",
+        "焦距",
+        "成像",
+        "optics",
+        "focus",
+        "focal point"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "cad80fff7e1a48d29cbab0d0db9e88715f1de27391216e7f3dfccc56277f7945",
+      "label": "焦点",
+      "label_zh": "焦点",
+      "label_en": "Focal Point",
+      "source_file": "focus-2.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/device-3d-lens.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_lens_system_tabler",
+      "asset_id": "physics_verified_physics_lens_system_tabler",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_lens_system_tabler.svg",
+      "keywords": [
+        "光学",
+        "透镜",
+        "光路",
+        "成像",
+        "optics",
+        "lens",
+        "optical system"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "4c1316b233be2ea6989e350ad86af08bbf68192904784e9aab15c0501046c2c6",
+      "label": "光学透镜组",
+      "label_zh": "光学透镜组",
+      "label_en": "Lens System",
+      "source_file": "device-3d-lens.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/laser.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_laser_lucide",
+      "asset_id": "physics_verified_physics_laser_lucide",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_laser_lucide.svg",
+      "keywords": [
+        "光学",
+        "激光",
+        "相干光",
+        "optics",
+        "laser",
+        "coherent light"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "4422db9c32ea2d97c191f954807dd01ee139f15fdf21c433e5f47c5f65ed6e2a",
+      "label": "激光",
+      "label_zh": "激光",
+      "label_en": "Laser",
+      "source_file": "laser.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/glasses.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_eyeglasses_lucide",
+      "asset_id": "physics_verified_physics_eyeglasses_lucide",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_eyeglasses_lucide.svg",
+      "keywords": [
+        "光学",
+        "透镜",
+        "视力",
+        "optics",
+        "glasses",
+        "lens"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9e5cfc15a58424ac8bd0604bdb318178928364581c69f4dbe6a89f990b131911",
+      "label": "眼镜",
+      "label_zh": "眼镜",
+      "label_en": "Eyeglasses",
+      "source_file": "glasses.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/lightbulb/materialsymbolsoutlined/lightbulb_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_light_bulb_material",
+      "asset_id": "physics_verified_physics_light_bulb_material",
+      "type": "symbol",
+      "category": "光学器材",
+      "category_en": "Optics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_light_bulb_material.svg",
+      "keywords": [
+        "光学",
+        "光源",
+        "照明",
+        "optics",
+        "light source",
+        "bulb"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "61145e18a158d2ca8225b60be3e0e9e36beccaebea6316fe6796a58e2ef758d4",
+      "label": "灯泡",
+      "label_zh": "灯泡",
+      "label_en": "Light Bulb",
+      "source_file": "lightbulb_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-ammeter.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_ammeter_tabler",
+      "asset_id": "physics_verified_physics_ammeter_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_ammeter_tabler.svg",
+      "keywords": [
+        "电学",
+        "电流",
+        "测量",
+        "电路符号",
+        "electricity",
+        "ammeter",
+        "current"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "06d11602342f9559619a66641b43fe480b56bef1841b02113ae56ca184c1bf89",
+      "label": "电流表",
+      "label_zh": "电流表",
+      "label_en": "Ammeter",
+      "source_file": "circuit-ammeter.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-voltmeter.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_voltmeter_tabler",
+      "asset_id": "physics_verified_physics_voltmeter_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_voltmeter_tabler.svg",
+      "keywords": [
+        "电学",
+        "电压",
+        "测量",
+        "电路符号",
+        "electricity",
+        "voltmeter",
+        "voltage"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "29f2bebcd1e648d5d9ecd3e02bfe187e0f134902051c8f952fd86a5f8e01a565",
+      "label": "电压表",
+      "label_zh": "电压表",
+      "label_en": "Voltmeter",
+      "source_file": "circuit-voltmeter.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-resistor.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_resistor_tabler",
+      "asset_id": "physics_verified_physics_resistor_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_resistor_tabler.svg",
+      "keywords": [
+        "电学",
+        "电阻",
+        "电路符号",
+        "electricity",
+        "resistor",
+        "circuit symbol"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2858f37d0b56dba9b169039927263f873c723e7d814027239cf31efd016f575c",
+      "label": "电阻",
+      "label_zh": "电阻",
+      "label_en": "Resistor",
+      "source_file": "circuit-resistor.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-capacitor.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_capacitor_tabler",
+      "asset_id": "physics_verified_physics_capacitor_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_capacitor_tabler.svg",
+      "keywords": [
+        "电学",
+        "电容",
+        "电路符号",
+        "electricity",
+        "capacitor",
+        "circuit symbol"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "3dac4fa90c31fb671b687c6f06a991c3a0366495a07e34c81d1cc697b27f6621",
+      "label": "电容",
+      "label_zh": "电容",
+      "label_en": "Capacitor",
+      "source_file": "circuit-capacitor.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-capacitor-polarized.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_polarized_capacitor_tabler",
+      "asset_id": "physics_verified_physics_polarized_capacitor_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_polarized_capacitor_tabler.svg",
+      "keywords": [
+        "电学",
+        "电解电容",
+        "极性",
+        "电路符号",
+        "electricity",
+        "polarized capacitor"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "910682ae410ec0dc5ae5ac0f92b4e61974bb1fb7065f5dde7ddc81dbd3140ec1",
+      "label": "极性电容",
+      "label_zh": "极性电容",
+      "label_en": "Polarized Capacitor",
+      "source_file": "circuit-capacitor-polarized.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-inductor.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_inductor_tabler",
+      "asset_id": "physics_verified_physics_inductor_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_inductor_tabler.svg",
+      "keywords": [
+        "电学",
+        "电感",
+        "线圈",
+        "电路符号",
+        "electricity",
+        "inductor",
+        "coil"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "8642e266519d1c3642174bae4178db46c1557723952c8278caa87593b07757ab",
+      "label": "电感",
+      "label_zh": "电感",
+      "label_en": "Inductor",
+      "source_file": "circuit-inductor.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-diode.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_diode_tabler",
+      "asset_id": "physics_verified_physics_diode_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_diode_tabler.svg",
+      "keywords": [
+        "电学",
+        "二极管",
+        "单向导电",
+        "电路符号",
+        "electricity",
+        "diode"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "a5bc0b5e9fd1c07033c2cd92790d94e63b51f7a0ad2aba9374c75c7cae19836e",
+      "label": "二极管",
+      "label_zh": "二极管",
+      "label_en": "Diode",
+      "source_file": "circuit-diode.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-diode-zener.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_zener_diode_tabler",
+      "asset_id": "physics_verified_physics_zener_diode_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_zener_diode_tabler.svg",
+      "keywords": [
+        "电学",
+        "稳压二极管",
+        "电路符号",
+        "electricity",
+        "zener diode"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "62098cf651683840aa5b013ccf8e909155c1d5df9282f06e70d3e5a50e6a9bd1",
+      "label": "稳压二极管",
+      "label_zh": "稳压二极管",
+      "label_en": "Zener Diode",
+      "source_file": "circuit-diode-zener.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-battery.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_battery_circuit_tabler",
+      "asset_id": "physics_verified_physics_battery_circuit_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_battery_circuit_tabler.svg",
+      "keywords": [
+        "电学",
+        "电池",
+        "电源",
+        "电路符号",
+        "electricity",
+        "battery",
+        "power source"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "a00c25557f9de506a6aece826fcfe276996326e39734ee7ccb703224254fa1bd",
+      "label": "电池组",
+      "label_zh": "电池组",
+      "label_en": "Battery Circuit",
+      "source_file": "circuit-battery.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-bulb.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_circuit_bulb_tabler",
+      "asset_id": "physics_verified_physics_circuit_bulb_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_circuit_bulb_tabler.svg",
+      "keywords": [
+        "电学",
+        "灯泡",
+        "负载",
+        "电路符号",
+        "electricity",
+        "bulb",
+        "load"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2e28ae35f86dca5abe96b8526ecbd38215177ce6770d367942cef6736ecc31d7",
+      "label": "电路灯泡",
+      "label_zh": "电路灯泡",
+      "label_en": "Circuit Bulb",
+      "source_file": "circuit-bulb.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-motor.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_electric_motor_tabler",
+      "asset_id": "physics_verified_physics_electric_motor_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_electric_motor_tabler.svg",
+      "keywords": [
+        "电学",
+        "电动机",
+        "机电能量转换",
+        "electricity",
+        "motor",
+        "electromechanical"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2d62d0294d7e124ac7e8e04e364374efe0641d14efdf25f37e23805ea34e43f7",
+      "label": "电动机",
+      "label_zh": "电动机",
+      "label_en": "Electric Motor",
+      "source_file": "circuit-motor.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-switch-closed.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_closed_switch_tabler",
+      "asset_id": "physics_verified_physics_closed_switch_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_closed_switch_tabler.svg",
+      "keywords": [
+        "电学",
+        "开关",
+        "闭合",
+        "电路符号",
+        "electricity",
+        "switch",
+        "closed circuit"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "8ef8c1069549c0372502ea22776b39e898e7a1d78ad391bc6da2e076b06d295e",
+      "label": "闭合开关",
+      "label_zh": "闭合开关",
+      "label_en": "Closed Switch",
+      "source_file": "circuit-switch-closed.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-ground.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_ground_tabler",
+      "asset_id": "physics_verified_physics_ground_tabler",
+      "type": "symbol",
+      "category": "电路符号",
+      "category_en": "Circuit symbols",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_ground_tabler.svg",
+      "keywords": [
+        "电学",
+        "接地",
+        "回路",
+        "电路符号",
+        "electricity",
+        "ground",
+        "earth"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "d4d7e11e69a508cf918045d805dbaf13a93651022b721de4f5d66979422f71e7",
+      "label": "接地",
+      "label_zh": "接地",
+      "label_en": "Ground",
+      "source_file": "circuit-ground.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/magnet.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_magnet_tabler",
+      "asset_id": "physics_verified_physics_magnet_tabler",
+      "type": "symbol",
+      "category": "磁学",
+      "category_en": "Magnetism",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_magnet_tabler.svg",
+      "keywords": [
+        "磁学",
+        "磁铁",
+        "磁场",
+        "magnetism",
+        "magnet",
+        "magnetic field"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "1d26377bab985c51ac54382b0605f5e8a5a44c20690c1878c9a7877d45bb11be",
+      "label": "磁铁",
+      "label_zh": "磁铁",
+      "label_en": "Magnet",
+      "source_file": "magnet.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/magnetic.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_horseshoe_magnet_tabler",
+      "asset_id": "physics_verified_physics_horseshoe_magnet_tabler",
+      "type": "symbol",
+      "category": "磁学",
+      "category_en": "Magnetism",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_horseshoe_magnet_tabler.svg",
+      "keywords": [
+        "磁学",
+        "马蹄形磁铁",
+        "磁场",
+        "magnetism",
+        "horseshoe magnet",
+        "magnetic field"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f0b53f8f36e126f43b8ed348608f80f3b4f3a5e1f037ce31f2aef1f8ddd9cad2",
+      "label": "马蹄形磁铁",
+      "label_zh": "马蹄形磁铁",
+      "label_en": "Horseshoe Magnet",
+      "source_file": "magnetic.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Phosphor Icons",
+      "author_url": "https://phosphoricons.com",
+      "license": "MIT",
+      "license_url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/magnet-straight.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_bar_magnet_phosphor",
+      "asset_id": "physics_verified_physics_bar_magnet_phosphor",
+      "type": "symbol",
+      "category": "磁学",
+      "category_en": "Magnetism",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_bar_magnet_phosphor.svg",
+      "keywords": [
+        "磁学",
+        "条形磁铁",
+        "磁极",
+        "magnetism",
+        "bar magnet",
+        "magnetic pole"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "7062fc4ba9f10f84765acd2603a5dfba3cd59ec9fd91cf5e718bef88ad04147a",
+      "label": "马蹄形磁体图标",
+      "label_zh": "马蹄形磁体图标",
+      "label_en": "Horseshoe magnet icon",
+      "source_file": "magnet-straight.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Source artwork contact-sheet comparison and explicit bilingual naming"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/compass.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_compass_tabler",
+      "asset_id": "physics_verified_physics_compass_tabler",
+      "type": "symbol",
+      "category": "磁学",
+      "category_en": "Magnetism",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_compass_tabler.svg",
+      "keywords": [
+        "磁学",
+        "地磁",
+        "指南针",
+        "定向",
+        "magnetism",
+        "compass",
+        "geomagnetism"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "5d67a04442a9b5f7640dab20a65f7212b1606e0939b6ce061e6409de2bee9f1b",
+      "label": "指南针",
+      "label_zh": "指南针",
+      "label_en": "Compass",
+      "source_file": "compass.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/thermometer.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_thermometer_tabler",
+      "asset_id": "physics_verified_physics_thermometer_tabler",
+      "type": "symbol",
+      "category": "热学",
+      "category_en": "Thermodynamics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_thermometer_tabler.svg",
+      "keywords": [
+        "热学",
+        "温度",
+        "测量",
+        "thermodynamics",
+        "thermometer",
+        "temperature"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b5c2e5d28c34f020f2f31a278f82068fade3957871abc70f6a54f74f97878c9b",
+      "label": "温度计",
+      "label_zh": "温度计",
+      "label_en": "Thermometer",
+      "source_file": "thermometer.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/flame.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_flame_tabler",
+      "asset_id": "physics_verified_physics_flame_tabler",
+      "type": "symbol",
+      "category": "热学",
+      "category_en": "Thermodynamics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_flame_tabler.svg",
+      "keywords": [
+        "热学",
+        "燃烧",
+        "热量",
+        "thermodynamics",
+        "flame",
+        "combustion",
+        "heat"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "ec9705c5067342bd9b2903f6bd2b022754c7b783e5fc54fff45cfbfb11db435c",
+      "label": "火焰",
+      "label_zh": "火焰",
+      "label_en": "Flame",
+      "source_file": "flame.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/snowflake.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_snowflake_tabler",
+      "asset_id": "physics_verified_physics_snowflake_tabler",
+      "type": "symbol",
+      "category": "热学",
+      "category_en": "Thermodynamics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_snowflake_tabler.svg",
+      "keywords": [
+        "热学",
+        "低温",
+        "结晶",
+        "thermodynamics",
+        "snowflake",
+        "low temperature"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "994647eef2dd7708c6853853d9dbc256c9c0ce97dc3d95df6698d2d1068f991b",
+      "label": "雪花",
+      "label_zh": "雪花",
+      "label_en": "Snowflake",
+      "source_file": "snowflake.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/heat/materialsymbolsoutlined/heat_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_heat_material",
+      "asset_id": "physics_verified_physics_heat_material",
+      "type": "symbol",
+      "category": "热学",
+      "category_en": "Thermodynamics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_heat_material.svg",
+      "keywords": [
+        "热学",
+        "热量",
+        "热传递",
+        "thermodynamics",
+        "heat",
+        "thermal"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "4942edd983cdd6161287fbc916479b502c26b090e02c66193224341cb9dfae56",
+      "label": "热量",
+      "label_zh": "热量",
+      "label_en": "Heat",
+      "source_file": "heat_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/thermostat/materialsymbolsoutlined/thermostat_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_thermostat_material",
+      "asset_id": "physics_verified_physics_thermostat_material",
+      "type": "symbol",
+      "category": "热学",
+      "category_en": "Thermodynamics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_thermostat_material.svg",
+      "keywords": [
+        "热学",
+        "恒温",
+        "控制",
+        "thermodynamics",
+        "thermostat",
+        "temperature control"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "3800637e6a2268da61226f6d3cbb88f7e172eafccb172d277ad277ad4eb83069",
+      "label": "恒温器",
+      "label_zh": "恒温器",
+      "label_en": "Thermostat",
+      "source_file": "thermostat_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/device_thermostat/materialsymbolsoutlined/device_thermostat_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_temperature_controller_material",
+      "asset_id": "physics_verified_physics_temperature_controller_material",
+      "type": "symbol",
+      "category": "热学",
+      "category_en": "Thermodynamics",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_temperature_controller_material.svg",
+      "keywords": [
+        "热学",
+        "温控",
+        "传感器",
+        "thermodynamics",
+        "temperature controller",
+        "sensor"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b5f8c32979a275bb722a7592d83cf01f3f8cd9b35743562b7de030d99a788f3d",
+      "label": "温控器",
+      "label_zh": "温控器",
+      "label_en": "Temperature Controller",
+      "source_file": "device_thermostat_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/wave-sine.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_sine_wave_tabler",
+      "asset_id": "physics_verified_physics_sine_wave_tabler",
+      "type": "symbol",
+      "category": "波形",
+      "category_en": "Waveforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_sine_wave_tabler.svg",
+      "keywords": [
+        "波动",
+        "正弦波",
+        "周期",
+        "waves",
+        "sine wave",
+        "oscillation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "5807a5701064410755a645f7399bf4aabba67a43686a185e021bf68b61a3e0cb",
+      "label": "正弦波",
+      "label_zh": "正弦波",
+      "label_en": "Sine Wave",
+      "source_file": "wave-sine.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/wave-square.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_square_wave_tabler",
+      "asset_id": "physics_verified_physics_square_wave_tabler",
+      "type": "symbol",
+      "category": "波形",
+      "category_en": "Waveforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_square_wave_tabler.svg",
+      "keywords": [
+        "波动",
+        "方波",
+        "信号",
+        "waves",
+        "square wave",
+        "signal"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2747a304a4a24cd349531fe186f379a48a2272d4a23c089fb904a76ac3773fea",
+      "label": "方波",
+      "label_zh": "方波",
+      "label_en": "Square Wave",
+      "source_file": "wave-square.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/wave-saw-tool.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_sawtooth_wave_tabler",
+      "asset_id": "physics_verified_physics_sawtooth_wave_tabler",
+      "type": "symbol",
+      "category": "波形",
+      "category_en": "Waveforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_sawtooth_wave_tabler.svg",
+      "keywords": [
+        "波动",
+        "锯齿波",
+        "信号",
+        "waves",
+        "sawtooth wave",
+        "signal"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "5b5a791c2da4ecc6e916ef34caa4e2a5244fdb7d5d10a03f21195958d58c2a11",
+      "label": "锯齿波",
+      "label_zh": "锯齿波",
+      "label_en": "Sawtooth Wave",
+      "source_file": "wave-saw-tool.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/waveform.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_waveform_tabler",
+      "asset_id": "physics_verified_physics_waveform_tabler",
+      "type": "symbol",
+      "category": "波形",
+      "category_en": "Waveforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_waveform_tabler.svg",
+      "keywords": [
+        "波动",
+        "波形",
+        "信号",
+        "waves",
+        "waveform",
+        "signal"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "9a8a0f7ea4ad67374fc139ad01170075d40b2f8bedd9c28ecd72b7ec73bc8c00",
+      "label": "波形",
+      "label_zh": "波形",
+      "label_en": "Waveform",
+      "source_file": "waveform.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/vibration/materialsymbolsoutlined/vibration_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_vibration_material",
+      "asset_id": "physics_verified_physics_vibration_material",
+      "type": "symbol",
+      "category": "波形",
+      "category_en": "Waveforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_vibration_material.svg",
+      "keywords": [
+        "波动",
+        "振动",
+        "机械波",
+        "waves",
+        "vibration",
+        "mechanical wave"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2e52fe783b9a30a3f8e8d2089c3ef29521b54bf167c40a74fd18fd4a1378b703",
+      "label": "振动",
+      "label_zh": "振动",
+      "label_en": "Vibration",
+      "source_file": "vibration_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Phosphor Icons",
+      "author_url": "https://phosphoricons.com",
+      "license": "MIT",
+      "license_url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/phosphor-icons/core/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/wave-triangle.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_triangle_wave_phosphor",
+      "asset_id": "physics_verified_physics_triangle_wave_phosphor",
+      "type": "symbol",
+      "category": "波形",
+      "category_en": "Waveforms",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_triangle_wave_phosphor.svg",
+      "keywords": [
+        "波动",
+        "三角波",
+        "信号",
+        "waves",
+        "triangle wave",
+        "signal"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "3b8917fb0c268b4504262780da01cf4a7f3fea761737b0a95b36ba1be4057902",
+      "label": "三角波",
+      "label_zh": "三角波",
+      "label_en": "Triangle Wave",
+      "source_file": "wave-triangle.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/atom.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_atom_tabler",
+      "asset_id": "physics_verified_physics_atom_tabler",
+      "type": "symbol",
+      "category": "原子与辐射",
+      "category_en": "Atoms and radiation",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_atom_tabler.svg",
+      "keywords": [
+        "量子",
+        "原子",
+        "电子",
+        "quantum",
+        "atom",
+        "electron"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "fe109512c28a65899fb8f5e4b7e88415adc914ab15ce44556ffa0b6a5380f5f5",
+      "label": "原子",
+      "label_zh": "原子",
+      "label_en": "Atom",
+      "source_file": "atom.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/atom-2.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_atomic_orbital_tabler",
+      "asset_id": "physics_verified_physics_atomic_orbital_tabler",
+      "type": "symbol",
+      "category": "原子与辐射",
+      "category_en": "Atoms and radiation",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_atomic_orbital_tabler.svg",
+      "keywords": [
+        "量子",
+        "原子轨道",
+        "电子云",
+        "quantum",
+        "atomic orbital",
+        "electron cloud"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b8e227dc4d91ee05c976e3b62a263400eb9777612a3747c40b1e916e8f13ca91",
+      "label": "原子轨道",
+      "label_zh": "原子轨道",
+      "label_en": "Atomic Orbital",
+      "source_file": "atom-2.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/radioactive.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_radioactive_tabler",
+      "asset_id": "physics_verified_physics_radioactive_tabler",
+      "type": "symbol",
+      "category": "原子与辐射",
+      "category_en": "Atoms and radiation",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_radioactive_tabler.svg",
+      "keywords": [
+        "核物理",
+        "放射性",
+        "衰变",
+        "nuclear",
+        "radioactive",
+        "decay"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "e83e3e3216d5d2d8f4adcab2b03134f0bbb598e2af3c0ea5a735317aa4e16568",
+      "label": "放射性",
+      "label_zh": "放射性",
+      "label_en": "Radioactive",
+      "source_file": "radioactive.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/radiation.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_radiation_lucide",
+      "asset_id": "physics_verified_physics_radiation_lucide",
+      "type": "symbol",
+      "category": "原子与辐射",
+      "category_en": "Atoms and radiation",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_radiation_lucide.svg",
+      "keywords": [
+        "核物理",
+        "辐射",
+        "电离",
+        "nuclear",
+        "radiation",
+        "ionizing"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "c87d044d5ff0204b4ea93ef9b6cc8ce55d2eb3c041dd1e80583a016116355855",
+      "label": "辐射",
+      "label_zh": "辐射",
+      "label_en": "Radiation",
+      "source_file": "radiation.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/biohazard.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_biohazard_lucide",
+      "asset_id": "physics_verified_physics_biohazard_lucide",
+      "type": "symbol",
+      "category": "原子与辐射",
+      "category_en": "Atoms and radiation",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_biohazard_lucide.svg",
+      "keywords": [
+        "实验室",
+        "生物危害",
+        "安全",
+        "laboratory",
+        "biohazard",
+        "safety"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "cefea2b2af272f68af9012639a2e7a04e7ae49089562b19a5b95bd5107771401",
+      "label": "生物危害",
+      "label_zh": "生物危害",
+      "label_en": "Biohazard",
+      "source_file": "biohazard.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/dna.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_dna_double_helix_tabler",
+      "asset_id": "physics_verified_physics_dna_double_helix_tabler",
+      "type": "symbol",
+      "category": "原子与辐射",
+      "category_en": "Atoms and radiation",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_dna_double_helix_tabler.svg",
+      "keywords": [
+        "生物物理",
+        "DNA",
+        "双螺旋",
+        "biophysics",
+        "DNA",
+        "double helix"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "c6c64f4cae44684688ec753153a5ff6804efcffde4f76b3eaafb19705de28b91",
+      "label": "脱氧核糖核酸双螺旋",
+      "label_zh": "脱氧核糖核酸双螺旋",
+      "label_en": "DNA double helix",
+      "source_file": "dna.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/flask.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_flask_tabler",
+      "asset_id": "physics_verified_physics_flask_tabler",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_flask_tabler.svg",
+      "keywords": [
+        "实验",
+        "烧瓶",
+        "化学",
+        "laboratory",
+        "flask",
+        "chemistry"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "02216a7c99a185edf7b83072870a5c6b42125d5e9e489a63e0061b9e6ee5f368",
+      "label": "烧瓶",
+      "label_zh": "烧瓶",
+      "label_en": "Flask",
+      "source_file": "flask.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/flask-2.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_erlenmeyer_flask_tabler",
+      "asset_id": "physics_verified_physics_erlenmeyer_flask_tabler",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_erlenmeyer_flask_tabler.svg",
+      "keywords": [
+        "实验",
+        "锥形瓶",
+        "化学",
+        "laboratory",
+        "Erlenmeyer flask",
+        "chemistry"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "0a3e4bcb79e801d64b90969e76a68ab7f0372f53f92eb943955d3bc1172aace7",
+      "label": "锥形瓶",
+      "label_zh": "锥形瓶",
+      "label_en": "Erlenmeyer Flask",
+      "source_file": "flask-2.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/test-pipe.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_test_tube_tabler",
+      "asset_id": "physics_verified_physics_test_tube_tabler",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_test_tube_tabler.svg",
+      "keywords": [
+        "实验",
+        "试管",
+        "样品",
+        "laboratory",
+        "test tube",
+        "sample"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "cb3c2580cb11cdd136d42310c3816fee1c46892f78c4100ad0546025b75deb4e",
+      "label": "试管",
+      "label_zh": "试管",
+      "label_en": "Test Tube",
+      "source_file": "test-pipe.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/test-pipe-2.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_test_tube_rack_tabler",
+      "asset_id": "physics_verified_physics_test_tube_rack_tabler",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_test_tube_rack_tabler.svg",
+      "keywords": [
+        "实验",
+        "试管架",
+        "样品",
+        "laboratory",
+        "test tube rack",
+        "sample"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b9a6297a133bdde015653d6619be63094678c2030348b05836da834f72218fa9",
+      "label": "试管架",
+      "label_zh": "试管架",
+      "label_en": "Test Tube Rack",
+      "source_file": "test-pipe-2.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Paweł Kuna and Tabler Icons contributors",
+      "author_url": "https://tabler.io/icons",
+      "license": "MIT",
+      "license_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tabler/tabler-icons/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/microscope.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_microscope_tabler",
+      "asset_id": "physics_verified_physics_microscope_tabler",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_microscope_tabler.svg",
+      "keywords": [
+        "实验",
+        "显微镜",
+        "光学仪器",
+        "laboratory",
+        "microscope",
+        "optics"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "7cdf43b53b6b9bf2c7104a0f5ae951b31b479639c9fbd23444a2bca67b6f07d4",
+      "label": "显微镜",
+      "label_zh": "显微镜",
+      "label_en": "Microscope",
+      "source_file": "microscope.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/pipette.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_pipette_lucide",
+      "asset_id": "physics_verified_physics_pipette_lucide",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_pipette_lucide.svg",
+      "keywords": [
+        "实验",
+        "移液",
+        "液体",
+        "laboratory",
+        "pipette",
+        "liquid handling"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "54a2b6cde63883fa05f5320ca52e25791379d65e454dfeb820827c6b6bb21e14",
+      "label": "移液管",
+      "label_zh": "移液管",
+      "label_en": "Pipette",
+      "source_file": "pipette.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lucide Icons and contributors",
+      "author_url": "https://lucide.dev",
+      "license": "ISC",
+      "license_url": "https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/flask-round.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_round_bottom_flask_lucide",
+      "asset_id": "physics_verified_physics_round_bottom_flask_lucide",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_round_bottom_flask_lucide.svg",
+      "keywords": [
+        "实验",
+        "圆底烧瓶",
+        "化学",
+        "laboratory",
+        "round-bottom flask",
+        "chemistry"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "0cdd88ed999e2301bee4f239f946686555bddd76c3e6344b2670d467e6e3ed4e",
+      "label": "圆底烧瓶",
+      "label_zh": "圆底烧瓶",
+      "label_en": "Round-Bottom Flask",
+      "source_file": "flask-round.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Fonticons, Inc. (Font Awesome)",
+      "author_url": "https://fontawesome.com",
+      "license": "CC BY 4.0",
+      "license_url": "https://fontawesome.com/license/free",
+      "source_url": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/vial.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_vial_fontawesome",
+      "asset_id": "physics_verified_physics_vial_fontawesome",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_vial_fontawesome.svg",
+      "keywords": [
+        "实验",
+        "样品瓶",
+        "试剂",
+        "laboratory",
+        "vial",
+        "reagent"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "ad38d1064929f5fa129a3243d512483d5c4bec26380fd9106839ddfe50cd6774",
+      "label": "样品瓶",
+      "label_zh": "样品瓶",
+      "label_en": "Vial",
+      "source_file": "vial.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/science/materialsymbolsoutlined/science_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_science_flask_material",
+      "asset_id": "physics_verified_physics_science_flask_material",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_science_flask_material.svg",
+      "keywords": [
+        "实验",
+        "烧瓶",
+        "科学",
+        "laboratory",
+        "flask",
+        "science"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "2d8ce8c6a61be144cc6f72dc15ad62593119985b6a9f6e4d3655c1f23a537de3",
+      "label": "实验烧瓶",
+      "label_zh": "实验烧瓶",
+      "label_en": "Science Flask",
+      "source_file": "science_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/experiment/materialsymbolsoutlined/experiment_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_experiment_material",
+      "asset_id": "physics_verified_physics_experiment_material",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_experiment_material.svg",
+      "keywords": [
+        "实验",
+        "研究",
+        "科学方法",
+        "experiment",
+        "research",
+        "scientific method"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "4a06bfe2ee6a89b0e0888e6496300531c1b7b7e454d31204b76ea170e6c8eaf5",
+      "label": "实验",
+      "label_zh": "实验",
+      "label_en": "Experiment",
+      "source_file": "experiment_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Google Material Design",
+      "author_url": "https://fonts.google.com/icons",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/google/material-design-icons/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/biotech/materialsymbolsoutlined/biotech_24px.svg",
+      "modifications": "Sanitized to standalone SVG: stripped comments/classes/style blocks/metadata; normalized currentColor; removed non-allowed elements and attributes; preserved viewBox.",
+      "id": "physics_verified_physics_biotech_material",
+      "asset_id": "physics_verified_physics_biotech_material",
+      "type": "symbol",
+      "category": "实验器材",
+      "category_en": "Laboratory equipment",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/physics_verified_physics_biotech_material.svg",
+      "keywords": [
+        "实验",
+        "生物技术",
+        "生命科学",
+        "biotech",
+        "life science",
+        "laboratory"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "d9ac4e9b4a551201716dfac851a4dc3e5ae07db414df9cf3e100c47dfb891fce",
+      "label": "生物技术",
+      "label_zh": "生物技术",
+      "label_en": "Biotech",
+      "source_file": "biotech_24px.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
     }
   ],
   "templates": [
@@ -2818,7 +5394,9 @@
         "Reference arm",
         "Measurement arm",
         "Interference signal"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "physics_template_polarization",
@@ -2851,7 +5429,9 @@
         "Rotating analyser",
         "Intensity",
         "Incident field"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "physics_template_oscillation",
@@ -2884,7 +5464,9 @@
         "Periodic drive",
         "Displacement sensor",
         "Response"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "physics_template_induction",
@@ -2917,7 +5499,9 @@
         "Electrical load",
         "Current measurement",
         "Changing flux"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "physics_template_double_slit_interference",
@@ -2950,7 +5534,9 @@
         "干涉条纹",
         "成像屏",
         "探测器"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "physics_template_fiber_optic_link",
@@ -2983,7 +5569,9 @@
         "接收端",
         "模式传输",
         "信号分析"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "physics_template_transformer_grid",
@@ -3016,7 +5604,9 @@
         "输电网",
         "负载",
         "计量"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "physics_template_quantum_emission",
@@ -3049,7 +5639,11 @@
         "能级",
         "发射态",
         "光谱检测"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     }
-  ]
+  ],
+  "available_asset_count": 69,
+  "available_template_count": 0
 }

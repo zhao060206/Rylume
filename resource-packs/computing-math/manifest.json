@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "computing-math",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "title": "计算机与数学",
   "domain": "computing-math",
-  "min_app_version": "3.1.0",
+  "min_app_version": "4.8.0",
   "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
@@ -32,7 +32,9 @@
       "source_file": "database.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/database.svg",
-      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427"
+      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_server",
@@ -59,7 +61,9 @@
       "source_file": "server.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/server.svg",
-      "sha256": "7f4b9411d2da0051fdc1ca3d4fe9f815f3787c91682ed026863187b3fe96c0a8"
+      "sha256": "7f4b9411d2da0051fdc1ca3d4fe9f815f3787c91682ed026863187b3fe96c0a8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_neuron",
@@ -86,7 +90,9 @@
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
-      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_network",
@@ -113,7 +119,9 @@
       "source_file": "network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/network.svg",
-      "sha256": "b27a5fb6cd9a8efd84205e78bb75d2c0616b40fd74613c03e422f3e72e0c36e9"
+      "sha256": "b27a5fb6cd9a8efd84205e78bb75d2c0616b40fd74613c03e422f3e72e0c36e9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_tree_graph",
@@ -140,7 +148,9 @@
       "source_file": "tree.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tree.svg",
-      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b"
+      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_tensor",
@@ -167,7 +177,9 @@
       "source_file": "lab_field_sampling.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
-      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_matrix",
@@ -194,7 +206,9 @@
       "source_file": "matrix.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/matrix.svg",
-      "sha256": "56f24402943df7b59bb743d150fe10d8acb6af1ebd9b02ad1820eb42b2db04d9"
+      "sha256": "56f24402943df7b59bb743d150fe10d8acb6af1ebd9b02ad1820eb42b2db04d9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_embedding",
@@ -221,7 +235,9 @@
       "source_file": "vector-arrange-above.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-arrange-above.svg",
-      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_gpu",
@@ -248,7 +264,9 @@
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
-      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_dataset",
@@ -275,7 +293,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_loss",
@@ -302,7 +322,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_optimizer",
@@ -329,7 +351,9 @@
       "source_file": "process_modifier.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_modifier.svg",
-      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f"
+      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_decision",
@@ -356,7 +380,9 @@
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
-      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_mesh",
@@ -383,7 +409,9 @@
       "source_file": "process_transport.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_transport.svg",
-      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_field",
@@ -410,7 +438,9 @@
       "source_file": "lab_microfluidics.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg",
-      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_code",
@@ -437,7 +467,9 @@
       "source_file": "code-array.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/code-array.svg",
-      "sha256": "eb3ea3c399ee5aebd7b5ecd46746e647b62e9f8593719a527f3de401a8373b63"
+      "sha256": "eb3ea3c399ee5aebd7b5ecd46746e647b62e9f8593719a527f3de401a8373b63",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_split",
@@ -464,7 +496,9 @@
       "source_file": "lab_electrochemistry.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
-      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_chip",
@@ -491,7 +525,9 @@
       "source_file": "chip.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chip.svg",
-      "sha256": "d673ce2afa74d6f1a47afd39425f70e2a1ee931cf0cba60887a972cabf6b5607"
+      "sha256": "d673ce2afa74d6f1a47afd39425f70e2a1ee931cf0cba60887a972cabf6b5607",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_cloud",
@@ -518,7 +554,9 @@
       "source_file": "cloud.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cloud.svg",
-      "sha256": "79b7da3ddabe3d10205fb8e2fc822234892d4118baaebd7cd5938aa0239bff62"
+      "sha256": "79b7da3ddabe3d10205fb8e2fc822234892d4118baaebd7cd5938aa0239bff62",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_cluster",
@@ -545,7 +583,9 @@
       "source_file": "scatter-plot.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/scatter-plot.svg",
-      "sha256": "bbd55dcedfde89b014fb31a5f28f5b65db6cc63b644e15ea6fc6873d0f6ea7d3"
+      "sha256": "bbd55dcedfde89b014fb31a5f28f5b65db6cc63b644e15ea6fc6873d0f6ea7d3",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_container",
@@ -572,7 +612,9 @@
       "source_file": "docker.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/docker.svg",
-      "sha256": "ed5f24089a58ebc72012b01dbaa9a5c5309024ccddd2b5e71d40d0141cf3829a"
+      "sha256": "ed5f24089a58ebc72012b01dbaa9a5c5309024ccddd2b5e71d40d0141cf3829a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_vm",
@@ -599,7 +641,9 @@
       "source_file": "lab_chromatography.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg",
-      "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
+      "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_firewall",
@@ -626,7 +670,9 @@
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
-      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_router",
@@ -653,7 +699,9 @@
       "source_file": "router.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/router.svg",
-      "sha256": "fc7e0dd418a0a2e8e12dc087f99feec3c0a8ef1f6589f29703583f9bbeb7765f"
+      "sha256": "fc7e0dd418a0a2e8e12dc087f99feec3c0a8ef1f6589f29703583f9bbeb7765f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_switch",
@@ -680,7 +728,9 @@
       "source_file": "switch.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/switch.svg",
-      "sha256": "92043f8b054d899ae7d581c5276e134b6488cf7a9fb3c7116875da5a53fa40cc"
+      "sha256": "92043f8b054d899ae7d581c5276e134b6488cf7a9fb3c7116875da5a53fa40cc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_api",
@@ -707,7 +757,9 @@
       "source_file": "api.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/api.svg",
-      "sha256": "ce073ff1bc3370e99608f4a71d474472c033c6ce1c828d89085b92184538ece5"
+      "sha256": "ce073ff1bc3370e99608f4a71d474472c033c6ce1c828d89085b92184538ece5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_microservice",
@@ -734,7 +786,9 @@
       "source_file": "process_biological.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_biological.svg",
-      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb"
+      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_queue",
@@ -761,7 +815,9 @@
       "source_file": "queue-first-in-last-out.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/queue-first-in-last-out.svg",
-      "sha256": "88ca23c84962c2b92d6460ccd9836feaae24fa953af8656c8d989f37db0f0bb4"
+      "sha256": "88ca23c84962c2b92d6460ccd9836feaae24fa953af8656c8d989f37db0f0bb4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_cache",
@@ -788,7 +844,9 @@
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
-      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_load_balancer",
@@ -815,7 +873,9 @@
       "source_file": "process_chemical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg",
-      "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
+      "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_consensus",
@@ -842,7 +902,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_blockchain",
@@ -869,7 +931,9 @@
       "source_file": "lab_microfluidics.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg",
-      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_hash",
@@ -896,7 +960,9 @@
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
-      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_encryption",
@@ -923,7 +989,9 @@
       "source_file": "lab_vessels.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_vessels.svg",
-      "sha256": "34b59a242bcb4c1b9833fdfe09c663bb77b34d3e04fba966bd41a9d280b6eb91"
+      "sha256": "34b59a242bcb4c1b9833fdfe09c663bb77b34d3e04fba966bd41a9d280b6eb91",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_graph",
@@ -950,7 +1018,9 @@
       "source_file": "graph.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph.svg",
-      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e"
+      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_heap",
@@ -977,7 +1047,9 @@
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
-      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_stack",
@@ -1004,7 +1076,9 @@
       "source_file": "stack-exchange.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/stack-exchange.svg",
-      "sha256": "c61ad2472d51f7e47e6b6606accc348e5da7bd510588912b78f9487249782e64"
+      "sha256": "c61ad2472d51f7e47e6b6606accc348e5da7bd510588912b78f9487249782e64",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_linked_list",
@@ -1031,7 +1105,9 @@
       "source_file": "list-box.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/list-box.svg",
-      "sha256": "79a16b0f993c78af8861bd815a2fc9a25ee50bdcf74244bd69349891c1da863a"
+      "sha256": "79a16b0f993c78af8861bd815a2fc9a25ee50bdcf74244bd69349891c1da863a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_hash_table",
@@ -1058,7 +1134,9 @@
       "source_file": "table.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/table.svg",
-      "sha256": "65c30acc086a8790a0d8f647ad3701d9c74499ee2d86489e9a0af6c9d6ea4968"
+      "sha256": "65c30acc086a8790a0d8f647ad3701d9c74499ee2d86489e9a0af6c9d6ea4968",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_binary_search",
@@ -1085,7 +1163,9 @@
       "source_file": "lab_field_sampling.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
-      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_sorting",
@@ -1112,7 +1192,9 @@
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
-      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_recursion",
@@ -1139,7 +1221,9 @@
       "source_file": "process_biological.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_biological.svg",
-      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb"
+      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_dp",
@@ -1166,7 +1250,9 @@
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
-      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_gradient",
@@ -1193,7 +1279,9 @@
       "source_file": "gradient-horizontal.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gradient-horizontal.svg",
-      "sha256": "557a22838ca737c60b2ad84933bb13fb3b72c63049ed582101c46651f947dd93"
+      "sha256": "557a22838ca737c60b2ad84933bb13fb3b72c63049ed582101c46651f947dd93",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_cnn",
@@ -1220,7 +1308,9 @@
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
-      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_transformer",
@@ -1247,7 +1337,9 @@
       "source_file": "lab_vessels.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_vessels.svg",
-      "sha256": "34b59a242bcb4c1b9833fdfe09c663bb77b34d3e04fba966bd41a9d280b6eb91"
+      "sha256": "34b59a242bcb4c1b9833fdfe09c663bb77b34d3e04fba966bd41a9d280b6eb91",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_attention",
@@ -1274,7 +1366,9 @@
       "source_file": "eye.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye.svg",
-      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3"
+      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_autoencoder",
@@ -1301,7 +1395,9 @@
       "source_file": "process_biological.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_biological.svg",
-      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb"
+      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_gan",
@@ -1328,7 +1424,9 @@
       "source_file": "process_biological.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_biological.svg",
-      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb"
+      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_diffusion",
@@ -1355,7 +1453,9 @@
       "source_file": "blur.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg",
-      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
+      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_rl",
@@ -1382,7 +1482,9 @@
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
-      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_agent",
@@ -1409,7 +1511,9 @@
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
-      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_bayes",
@@ -1436,7 +1540,9 @@
       "source_file": "lab_microfluidics.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg",
-      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_hmm",
@@ -1463,7 +1569,9 @@
       "source_file": "process_modifier.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_modifier.svg",
-      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f"
+      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_pca",
@@ -1490,7 +1598,9 @@
       "source_file": "lab_vessels.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_vessels.svg",
-      "sha256": "34b59a242bcb4c1b9833fdfe09c663bb77b34d3e04fba966bd41a9d280b6eb91"
+      "sha256": "34b59a242bcb4c1b9833fdfe09c663bb77b34d3e04fba966bd41a9d280b6eb91",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_svm",
@@ -1517,7 +1627,9 @@
       "source_file": "process_transport.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_transport.svg",
-      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_decision_tree",
@@ -1544,7 +1656,9 @@
       "source_file": "tree.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tree.svg",
-      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b"
+      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_random_forest",
@@ -1571,7 +1685,9 @@
       "source_file": "shuffle.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shuffle.svg",
-      "sha256": "ff652bcf706f9c5315f650c77bbd035683ef51f1846eead387555d70dcd7ecae"
+      "sha256": "ff652bcf706f9c5315f650c77bbd035683ef51f1846eead387555d70dcd7ecae",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_clustering",
@@ -1598,7 +1714,9 @@
       "source_file": "lab_microfluidics.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg",
-      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_manifold",
@@ -1625,7 +1743,9 @@
       "source_file": "lab_electrochemistry.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
-      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_topology",
@@ -1652,7 +1772,9 @@
       "source_file": "lab_field_sampling.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
-      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_vector_space",
@@ -1679,7 +1801,9 @@
       "source_file": "vector-arrange-above.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-arrange-above.svg",
-      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_probability",
@@ -1706,7 +1830,9 @@
       "source_file": "chart-bell-curve.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
-      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_monte_carlo",
@@ -1733,7 +1859,9 @@
       "source_file": "lab_electrochemistry.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
-      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_optimization",
@@ -1760,7 +1888,9 @@
       "source_file": "process_transport.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_transport.svg",
-      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_sparse",
@@ -1787,7 +1917,9 @@
       "source_file": "process_modifier.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_modifier.svg",
-      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f"
+      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_fem",
@@ -1814,7 +1946,9 @@
       "source_file": "process_modifier.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_modifier.svg",
-      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f"
+      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_ode",
@@ -1841,7 +1975,9 @@
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
-      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_fft",
@@ -1868,7 +2004,9 @@
       "source_file": "lab_electron_microscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
-      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_convolution",
@@ -1895,7 +2033,9 @@
       "source_file": "lab_microfluidics.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg",
-      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_filter",
@@ -1922,7 +2062,9 @@
       "source_file": "filter.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/filter.svg",
-      "sha256": "49addd47f9fe63951fb2ecba09e4b1bb36cbbc312deb82215c634990d60b8193"
+      "sha256": "49addd47f9fe63951fb2ecba09e4b1bb36cbbc312deb82215c634990d60b8193",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_signal",
@@ -1949,7 +2091,9 @@
       "source_file": "signal.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/signal.svg",
-      "sha256": "785a3dcf861d637eafa606ae4b88464ad4acfc59114085a712dc0f8bb1e17990"
+      "sha256": "785a3dcf861d637eafa606ae4b88464ad4acfc59114085a712dc0f8bb1e17990",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_data_frame",
@@ -1976,7 +2120,9 @@
       "source_file": "database.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/database.svg",
-      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427"
+      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_table",
@@ -2003,7 +2149,9 @@
       "source_file": "table.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/table.svg",
-      "sha256": "65c30acc086a8790a0d8f647ad3701d9c74499ee2d86489e9a0af6c9d6ea4968"
+      "sha256": "65c30acc086a8790a0d8f647ad3701d9c74499ee2d86489e9a0af6c9d6ea4968",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_feature_vector",
@@ -2030,7 +2178,9 @@
       "source_file": "vector-square.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-square.svg",
-      "sha256": "11709cb2b4448a7a00aa90deded8e510eab841627e74bca7a9c29fac824744db"
+      "sha256": "11709cb2b4448a7a00aa90deded8e510eab841627e74bca7a9c29fac824744db",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_kernel",
@@ -2057,7 +2207,9 @@
       "source_file": "function.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/function.svg",
-      "sha256": "aeabc7201d680b7dd263aa92eadbaf643e59106a9195981bdf0e9f0ad0d8c056"
+      "sha256": "aeabc7201d680b7dd263aa92eadbaf643e59106a9195981bdf0e9f0ad0d8c056",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_regression",
@@ -2084,7 +2236,9 @@
       "source_file": "chart-line.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
-      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_confusion_matrix",
@@ -2111,7 +2265,9 @@
       "source_file": "grid.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg",
-      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
+      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_roc",
@@ -2138,7 +2294,9 @@
       "source_file": "chart-line.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
-      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_pr_curve",
@@ -2165,7 +2323,9 @@
       "source_file": "chart-bell-curve.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
-      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_clustering_map",
@@ -2192,7 +2352,9 @@
       "source_file": "map.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/map.svg",
-      "sha256": "85c1489b55e3095d851aa549e3d4da176dbce6caff38718d6ab96a7cc2dbefab"
+      "sha256": "85c1489b55e3095d851aa549e3d4da176dbce6caff38718d6ab96a7cc2dbefab",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_embedding_space",
@@ -2219,7 +2381,9 @@
       "source_file": "vector-arrange-above.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-arrange-above.svg",
-      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_attention_map",
@@ -2246,7 +2410,9 @@
       "source_file": "eye.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye.svg",
-      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3"
+      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_tokenizer",
@@ -2273,7 +2439,9 @@
       "source_file": "process_transport.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_transport.svg",
-      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_language_model",
@@ -2300,7 +2468,9 @@
       "source_file": "translate.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/translate.svg",
-      "sha256": "db84ab5ec9b706715a118f117405f616e04ac10337e24ff8f527b84e0abb8111"
+      "sha256": "db84ab5ec9b706715a118f117405f616e04ac10337e24ff8f527b84e0abb8111",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_prompt",
@@ -2327,7 +2497,9 @@
       "source_file": "message-text.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/message-text.svg",
-      "sha256": "2458aa772099ec386055735f8e8319ee3f7db15755be0c0df7f91d37e8df1626"
+      "sha256": "2458aa772099ec386055735f8e8319ee3f7db15755be0c0df7f91d37e8df1626",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_rag",
@@ -2354,7 +2526,9 @@
       "source_file": "database-search.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/database-search.svg",
-      "sha256": "4a843e2d8394d5ca729ce8b37d8009e2ea2c9992775dbf50cae62b0445ad0246"
+      "sha256": "4a843e2d8394d5ca729ce8b37d8009e2ea2c9992775dbf50cae62b0445ad0246",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_vector_db",
@@ -2381,7 +2555,9 @@
       "source_file": "vector-arrange-above.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-arrange-above.svg",
-      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_api_call",
@@ -2408,7 +2584,9 @@
       "source_file": "api.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/api.svg",
-      "sha256": "ce073ff1bc3370e99608f4a71d474472c033c6ce1c828d89085b92184538ece5"
+      "sha256": "ce073ff1bc3370e99608f4a71d474472c033c6ce1c828d89085b92184538ece5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_pipeline",
@@ -2435,7 +2613,9 @@
       "source_file": "pipe.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
-      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_container_image",
@@ -2462,7 +2642,9 @@
       "source_file": "docker.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/docker.svg",
-      "sha256": "ed5f24089a58ebc72012b01dbaa9a5c5309024ccddd2b5e71d40d0141cf3829a"
+      "sha256": "ed5f24089a58ebc72012b01dbaa9a5c5309024ccddd2b5e71d40d0141cf3829a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_kubernetes",
@@ -2489,7 +2671,9 @@
       "source_file": "kubernetes.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/kubernetes.svg",
-      "sha256": "811861dbca28070a75c4d229cb13f24a37720fe5fb4382bc5824ae052c76a3ee"
+      "sha256": "811861dbca28070a75c4d229cb13f24a37720fe5fb4382bc5824ae052c76a3ee",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_monitor",
@@ -2516,7 +2700,9 @@
       "source_file": "monitor-dashboard.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/monitor-dashboard.svg",
-      "sha256": "39c44376cb9cd327095c8e1b430308d64775b9d210a9079d1979ee9262558dfd"
+      "sha256": "39c44376cb9cd327095c8e1b430308d64775b9d210a9079d1979ee9262558dfd",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_log",
@@ -2543,7 +2729,9 @@
       "source_file": "text-box.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/text-box.svg",
-      "sha256": "e1c5e644955c32ba402f9b55bd94770d918aa04a0f6248b740232337eabe1c60"
+      "sha256": "e1c5e644955c32ba402f9b55bd94770d918aa04a0f6248b740232337eabe1c60",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_unit_test",
@@ -2570,7 +2758,9 @@
       "source_file": "test-tube.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg",
-      "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
+      "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_version_control",
@@ -2597,7 +2787,9 @@
       "source_file": "source-branch.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/source-branch.svg",
-      "sha256": "a8b8760a1983eada391a52150e04475841f3fd8681d3d6a8b18f994299d05652"
+      "sha256": "a8b8760a1983eada391a52150e04475841f3fd8681d3d6a8b18f994299d05652",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_branch",
@@ -2624,7 +2816,9 @@
       "source_file": "source-branch.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/source-branch.svg",
-      "sha256": "a8b8760a1983eada391a52150e04475841f3fd8681d3d6a8b18f994299d05652"
+      "sha256": "a8b8760a1983eada391a52150e04475841f3fd8681d3d6a8b18f994299d05652",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_ci",
@@ -2651,7 +2845,9 @@
       "source_file": "source-branch-check.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/source-branch-check.svg",
-      "sha256": "ce9a97dfa5206372130a57520849f349f3bd89a21c658debf7bc75e4863e42a0"
+      "sha256": "ce9a97dfa5206372130a57520849f349f3bd89a21c658debf7bc75e4863e42a0",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_graph_search",
@@ -2678,7 +2874,9 @@
       "source_file": "graph.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph.svg",
-      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e"
+      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_shortest_path",
@@ -2705,7 +2903,9 @@
       "source_file": "transit-connection.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/transit-connection.svg",
-      "sha256": "1ad921c8e404e2dc222b5f93aa084bde8e8b7192832d3b169e143631ad289f20"
+      "sha256": "1ad921c8e404e2dc222b5f93aa084bde8e8b7192832d3b169e143631ad289f20",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_integral",
@@ -2732,7 +2932,9 @@
       "source_file": "sigma.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sigma.svg",
-      "sha256": "17a6e6f6d54679f0cb0da5c1f5b079c7bb2d0ca84f6b2acf11277e8975eb7a57"
+      "sha256": "17a6e6f6d54679f0cb0da5c1f5b079c7bb2d0ca84f6b2acf11277e8975eb7a57",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "computing_math_math_probability_dist",
@@ -2759,7 +2961,1179 @@
       "source_file": "chart-bell-curve.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
-      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
+    },
+    {
+      "id": "computing_math_verified_database",
+      "asset_id": "computing_math_verified_database",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_database.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "database",
+        "数据库"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/database.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427",
+      "label": "数据库",
+      "label_zh": "数据库",
+      "label_en": "database",
+      "source_file": "database.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_database_search",
+      "asset_id": "computing_math_verified_database_search",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_database_search.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "database-search",
+        "数据库检索"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/database-search.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "4a843e2d8394d5ca729ce8b37d8009e2ea2c9992775dbf50cae62b0445ad0246",
+      "label": "数据库检索",
+      "label_zh": "数据库检索",
+      "label_en": "database search",
+      "source_file": "database-search.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_server",
+      "asset_id": "computing_math_verified_server",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_server.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "server",
+        "服务器"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/server.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "7f4b9411d2da0051fdc1ca3d4fe9f815f3787c91682ed026863187b3fe96c0a8",
+      "label": "服务器",
+      "label_zh": "服务器",
+      "label_en": "server",
+      "source_file": "server.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_cloud",
+      "asset_id": "computing_math_verified_cloud",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_cloud.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "cloud",
+        "云"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cloud.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "79b7da3ddabe3d10205fb8e2fc822234892d4118baaebd7cd5938aa0239bff62",
+      "label": "云",
+      "label_zh": "云",
+      "label_en": "cloud",
+      "source_file": "cloud.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_network",
+      "asset_id": "computing_math_verified_network",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_network.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "network",
+        "网络"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/network.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "b27a5fb6cd9a8efd84205e78bb75d2c0616b40fd74613c03e422f3e72e0c36e9",
+      "label": "网络",
+      "label_zh": "网络",
+      "label_en": "network",
+      "source_file": "network.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_graph",
+      "asset_id": "computing_math_verified_graph",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_graph.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "graph",
+        "图结构"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e",
+      "label": "图结构",
+      "label_zh": "图结构",
+      "label_en": "graph",
+      "source_file": "graph.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_graph_outline",
+      "asset_id": "computing_math_verified_graph_outline",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_graph_outline.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "graph-outline",
+        "图结构轮廓"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph-outline.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "dd312410e7732c4dde3b14e9ad4f0045fbd6e48192c26306fe20400002391be6",
+      "label": "图结构轮廓",
+      "label_zh": "图结构轮廓",
+      "label_en": "graph outline",
+      "source_file": "graph-outline.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_matrix",
+      "asset_id": "computing_math_verified_matrix",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_matrix.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "matrix",
+        "矩阵"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/matrix.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "56f24402943df7b59bb743d150fe10d8acb6af1ebd9b02ad1820eb42b2db04d9",
+      "label": "矩阵",
+      "label_zh": "矩阵",
+      "label_en": "matrix",
+      "source_file": "matrix.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_chip",
+      "asset_id": "computing_math_verified_chip",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_chip.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "chip",
+        "芯片"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chip.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "d673ce2afa74d6f1a47afd39425f70e2a1ee931cf0cba60887a972cabf6b5607",
+      "label": "芯片",
+      "label_zh": "芯片",
+      "label_en": "chip",
+      "source_file": "chip.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_code_array",
+      "asset_id": "computing_math_verified_code_array",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_code_array.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "code-array",
+        "代码数组"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/code-array.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "eb3ea3c399ee5aebd7b5ecd46746e647b62e9f8593719a527f3de401a8373b63",
+      "label": "代码数组",
+      "label_zh": "代码数组",
+      "label_en": "code array",
+      "source_file": "code-array.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_api",
+      "asset_id": "computing_math_verified_api",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_api.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "api",
+        "应用程序接口"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/api.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "ce073ff1bc3370e99608f4a71d474472c033c6ce1c828d89085b92184538ece5",
+      "label": "应用程序接口",
+      "label_zh": "应用程序接口",
+      "label_en": "api",
+      "source_file": "api.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_router",
+      "asset_id": "computing_math_verified_router",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_router.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "router",
+        "路由器"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/router.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "fc7e0dd418a0a2e8e12dc087f99feec3c0a8ef1f6589f29703583f9bbeb7765f",
+      "label": "路由器",
+      "label_zh": "路由器",
+      "label_en": "router",
+      "source_file": "router.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_switch",
+      "asset_id": "computing_math_verified_switch",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_switch.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "switch",
+        "开关"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/switch.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "92043f8b054d899ae7d581c5276e134b6488cf7a9fb3c7116875da5a53fa40cc",
+      "label": "开关",
+      "label_zh": "开关",
+      "label_en": "switch",
+      "source_file": "switch.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_docker",
+      "asset_id": "computing_math_verified_docker",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_docker.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "docker",
+        "容器平台标识"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/docker.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "ed5f24089a58ebc72012b01dbaa9a5c5309024ccddd2b5e71d40d0141cf3829a",
+      "label": "容器平台标识",
+      "label_zh": "容器平台标识",
+      "label_en": "docker",
+      "source_file": "docker.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_kubernetes",
+      "asset_id": "computing_math_verified_kubernetes",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_kubernetes.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "kubernetes",
+        "容器编排平台标识"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/kubernetes.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "811861dbca28070a75c4d229cb13f24a37720fe5fb4382bc5824ae052c76a3ee",
+      "label": "容器编排平台标识",
+      "label_zh": "容器编排平台标识",
+      "label_en": "kubernetes",
+      "source_file": "kubernetes.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_table",
+      "asset_id": "computing_math_verified_table",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_table.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "table",
+        "数据表"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/table.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "65c30acc086a8790a0d8f647ad3701d9c74499ee2d86489e9a0af6c9d6ea4968",
+      "label": "数据表",
+      "label_zh": "数据表",
+      "label_en": "table",
+      "source_file": "table.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_filter",
+      "asset_id": "computing_math_verified_filter",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_filter.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "filter",
+        "过滤器符号"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/filter.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "49addd47f9fe63951fb2ecba09e4b1bb36cbbc312deb82215c634990d60b8193",
+      "label": "过滤器符号",
+      "label_zh": "过滤器符号",
+      "label_en": "filter",
+      "source_file": "filter.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_signal",
+      "asset_id": "computing_math_verified_signal",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_signal.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "signal",
+        "信号强度"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/signal.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "785a3dcf861d637eafa606ae4b88464ad4acfc59114085a712dc0f8bb1e17990",
+      "label": "信号强度",
+      "label_zh": "信号强度",
+      "label_en": "signal",
+      "source_file": "signal.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_monitor_dashboard",
+      "asset_id": "computing_math_verified_monitor_dashboard",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_monitor_dashboard.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "monitor-dashboard",
+        "监控面板"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/monitor-dashboard.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "39c44376cb9cd327095c8e1b430308d64775b9d210a9079d1979ee9262558dfd",
+      "label": "监控面板",
+      "label_zh": "监控面板",
+      "label_en": "monitor dashboard",
+      "source_file": "monitor-dashboard.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_text_box",
+      "asset_id": "computing_math_verified_text_box",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_text_box.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "text-box",
+        "文本框"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/text-box.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "e1c5e644955c32ba402f9b55bd94770d918aa04a0f6248b740232337eabe1c60",
+      "label": "文本框",
+      "label_zh": "文本框",
+      "label_en": "text box",
+      "source_file": "text-box.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_source_branch",
+      "asset_id": "computing_math_verified_source_branch",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_source_branch.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "source-branch",
+        "代码分支"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/source-branch.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "a8b8760a1983eada391a52150e04475841f3fd8681d3d6a8b18f994299d05652",
+      "label": "代码分支",
+      "label_zh": "代码分支",
+      "label_en": "source branch",
+      "source_file": "source-branch.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_source_branch_check",
+      "asset_id": "computing_math_verified_source_branch_check",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_source_branch_check.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "source-branch-check",
+        "分支检查"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/source-branch-check.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "ce9a97dfa5206372130a57520849f349f3bd89a21c658debf7bc75e4863e42a0",
+      "label": "分支检查",
+      "label_zh": "分支检查",
+      "label_en": "source branch check",
+      "source_file": "source-branch-check.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_transit_connection",
+      "asset_id": "computing_math_verified_transit_connection",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_transit_connection.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "transit-connection",
+        "线路连接"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/transit-connection.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "1ad921c8e404e2dc222b5f93aa084bde8e8b7192832d3b169e143631ad289f20",
+      "label": "线路连接",
+      "label_zh": "线路连接",
+      "label_en": "transit connection",
+      "source_file": "transit-connection.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_sigma",
+      "asset_id": "computing_math_verified_sigma",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_sigma.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "sigma",
+        "求和符号"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sigma.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "17a6e6f6d54679f0cb0da5c1f5b079c7bb2d0ca84f6b2acf11277e8975eb7a57",
+      "label": "求和符号",
+      "label_zh": "求和符号",
+      "label_en": "sigma",
+      "source_file": "sigma.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_chart_bell_curve",
+      "asset_id": "computing_math_verified_chart_bell_curve",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_chart_bell_curve.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "chart-bell-curve",
+        "钟形分布曲线"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c",
+      "label": "钟形分布曲线",
+      "label_zh": "钟形分布曲线",
+      "label_en": "chart bell curve",
+      "source_file": "chart-bell-curve.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_chart_line",
+      "asset_id": "computing_math_verified_chart_line",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_chart_line.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "chart-line",
+        "折线图"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404",
+      "label": "折线图",
+      "label_zh": "折线图",
+      "label_en": "chart line",
+      "source_file": "chart-line.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_scatter_plot",
+      "asset_id": "computing_math_verified_scatter_plot",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_scatter_plot.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "scatter-plot",
+        "散点图"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/scatter-plot.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "bbd55dcedfde89b014fb31a5f28f5b65db6cc63b644e15ea6fc6873d0f6ea7d3",
+      "label": "散点图",
+      "label_zh": "散点图",
+      "label_en": "scatter plot",
+      "source_file": "scatter-plot.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_function",
+      "asset_id": "computing_math_verified_function",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_function.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "function",
+        "函数"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/function.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "aeabc7201d680b7dd263aa92eadbaf643e59106a9195981bdf0e9f0ad0d8c056",
+      "label": "函数",
+      "label_zh": "函数",
+      "label_en": "function",
+      "source_file": "function.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_grid",
+      "asset_id": "computing_math_verified_grid",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_grid.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "grid",
+        "网格"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e",
+      "label": "网格",
+      "label_zh": "网格",
+      "label_en": "grid",
+      "source_file": "grid.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_map",
+      "asset_id": "computing_math_verified_map",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_map.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "map",
+        "地图"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/map.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "85c1489b55e3095d851aa549e3d4da176dbce6caff38718d6ab96a7cc2dbefab",
+      "label": "地图",
+      "label_zh": "地图",
+      "label_en": "map",
+      "source_file": "map.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_vector_square",
+      "asset_id": "computing_math_verified_vector_square",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_vector_square.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "vector-square",
+        "矩形顶点"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-square.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "11709cb2b4448a7a00aa90deded8e510eab841627e74bca7a9c29fac824744db",
+      "label": "矩形顶点",
+      "label_zh": "矩形顶点",
+      "label_en": "vector square",
+      "source_file": "vector-square.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_sitemap",
+      "asset_id": "computing_math_verified_sitemap",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_sitemap.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "sitemap",
+        "层级图"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sitemap.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "4ca10e40b22e7721463aeee6f715dae3950090815417dee6fc309d9f2bf596f4",
+      "label": "层级图",
+      "label_zh": "层级图",
+      "label_en": "sitemap",
+      "source_file": "sitemap.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_eye",
+      "asset_id": "computing_math_verified_eye",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_eye.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "eye",
+        "眼睛"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3",
+      "label": "眼睛",
+      "label_zh": "眼睛",
+      "label_en": "eye",
+      "source_file": "eye.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_translate",
+      "asset_id": "computing_math_verified_translate",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_translate.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "translate",
+        "翻译符号"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/translate.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "db84ab5ec9b706715a118f117405f616e04ac10337e24ff8f527b84e0abb8111",
+      "label": "翻译符号",
+      "label_zh": "翻译符号",
+      "label_en": "translate",
+      "source_file": "translate.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_message_text",
+      "asset_id": "computing_math_verified_message_text",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_message_text.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "message-text",
+        "文字消息"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/message-text.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "2458aa772099ec386055735f8e8319ee3f7db15755be0c0df7f91d37e8df1626",
+      "label": "文字消息",
+      "label_zh": "文字消息",
+      "label_en": "message text",
+      "source_file": "message-text.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_pipe",
+      "asset_id": "computing_math_verified_pipe",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_pipe.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "pipe",
+        "管道"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b",
+      "label": "管道",
+      "label_zh": "管道",
+      "label_en": "pipe",
+      "source_file": "pipe.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_lan_connect",
+      "asset_id": "computing_math_verified_lan_connect",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_lan_connect.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "lan-connect",
+        "局域网连接"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/lan-connect.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "3daa8e5c11de1a3b0f7e787e5bde768b30c826fe6cb544d61486ecac85fdedbc",
+      "label": "局域网连接",
+      "label_zh": "局域网连接",
+      "label_en": "lan connect",
+      "source_file": "lan-connect.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_access_point",
+      "asset_id": "computing_math_verified_access_point",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_access_point.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "access-point",
+        "无线接入点"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b",
+      "label": "无线接入点",
+      "label_zh": "无线接入点",
+      "label_en": "access point",
+      "source_file": "access-point.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "id": "computing_math_verified_vector_curve",
+      "asset_id": "computing_math_verified_vector_curve",
+      "type": "symbol",
+      "file": "assets/computing_math_verified_vector_curve.svg",
+      "category": "计算设备与数据",
+      "category_en": "Computing and data",
+      "default_dim": [
+        24,
+        24
+      ],
+      "keywords": [
+        "vector-curve",
+        "曲线控制点"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "author_url": "https://pictogrammers.com/",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-curve.svg",
+      "source_kind": "online-open-license",
+      "modifications": "Original SVG sanitised; geometry retained",
+      "sha256": "42d1b51e33adba87020d64a449701767d569ada7b1eaff3e06467abb4390993d",
+      "label": "曲线控制点",
+      "label_zh": "曲线控制点",
+      "label_en": "vector curve",
+      "source_file": "vector-curve.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
     }
   ],
   "templates": [
@@ -2794,7 +4168,9 @@
         "Training model",
         "Validation loss",
         "Parameter update"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "computing_math_template_message_passing",
@@ -2825,7 +4201,9 @@
         "Node features",
         "Aggregation",
         "Graph embedding"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "computing_math_template_simulation",
@@ -2858,7 +4236,9 @@
         "Computed field",
         "Boundary conditions",
         "Convergence check"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "computing_math_template_reproducibility",
@@ -2891,7 +4271,9 @@
         "Execution environment",
         "Result artifacts",
         "Provenance"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "computing_math_template_cnn_pipeline",
@@ -2924,7 +4306,9 @@
         "池化网格",
         "特征提取",
         "分类输出"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "computing_math_template_transformer_pipeline",
@@ -2957,7 +4341,9 @@
         "自注意力",
         "编码层",
         "预测"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "computing_math_template_bayesian_workflow",
@@ -2990,7 +4376,9 @@
         "后验",
         "决策",
         "后验采样"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "computing_math_template_fem_workflow",
@@ -3023,7 +4411,11 @@
         "求解器",
         "场变量",
         "误差估计"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     }
-  ]
+  ],
+  "available_asset_count": 39,
+  "available_template_count": 0
 }

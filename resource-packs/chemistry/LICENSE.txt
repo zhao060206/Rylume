@@ -1,5 +1,496 @@
-Asset artwork is imported from online open-license sources and attributed per manifest item.
-ScanSci SVG library: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
-Material Design Icons: Apache-2.0 — https://www.apache.org/licenses/LICENSE-2.0
-Rylume sanitises the SVG element/attribute set for safe local editing; it does not claim authorship of source drawings.
-Scientific mechanisms are schematic and should be checked against the intended research context.
+Open-source artwork. The application does not claim authorship of these images.
+
+Quarantined legacy files are retained only for historical documents and are not offered in the palette.
+
+Per-asset attribution, original URLs, modifications and licences follow.
+
+
+Beaker — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/beaker.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Flask — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Tube — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Burette — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Condenser — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Funnel — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Round flask — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Molecule — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/molecule.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Benzene — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Catalyst — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Electrode — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Battery — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/battery.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Chromatogram — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Stirrer — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Balance — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Droplet — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Crystal — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/crystal-ball.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Column — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_mass_spectrometry.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Volumetric flask — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Graduated cylinder — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cylinder.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Pipette — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Microplate — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Crucible — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Mortar — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/mortar-pestle.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Desiccator — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Rotary evap — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Distillation — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Reflux — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Separatory — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Ph meter — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ph.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Spectrometer — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+NMR tube — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Mass spec — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+HPLC — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+GC — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Centrifuge — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Incubator — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_mass_spectrometry.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Autoclave — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Vacuum pump — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vacuum.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Gas cylinder — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gas-cylinder.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Water — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Peptide — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Protein — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Enzyme — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Ligand — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Micelle — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_mass_spectrometry.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Liposome — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Nanoparticle — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Unit cell — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Hbond — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Chelate — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Alkene — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Alkyne — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Carbonyl — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Amine — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Carboxyl — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Reaction coordinate — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sitemap.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Activation energy — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Redox — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Fuel cell — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/fuel.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Catalytic surface — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Flow reactor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Calorimeter — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Periodic — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/periodic-table.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Orbital — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Crystal polymorph — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/crystal-ball.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Solubility — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Titration curve — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Thermometer — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Solid-phase reaction — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solid.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Liquid-liquid extraction — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/liquid-spot.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+PCR tube — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+PCR cycle — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+DNA double helix — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+RNA strand — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+SDS-PAGE — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/file-document.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+TLC plate — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+UV-visible spectrum — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-sunny.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+IR spectrum — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Fume hood — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-filter.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Glovebox — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hand-back-right.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Gas flow — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gas-cylinder.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Pressure reactor — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gauge.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Photoreactor — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Microwave reactor — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/microwave.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Magnetic separation — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Filter paper — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/filter.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Crystallization — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Buffer solution — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gate-buffer.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Osmometer — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Reaction kinetics — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Arrhenius plot — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Electrophoresis — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Binding curve — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-curve.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Adsorption isotherm — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Molarity — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Stoichiometry — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Reaction network — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sitemap.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Detector — Pictogrammers / Material Design Icons; Apache-2.0; https://www.apache.org/licenses/LICENSE-2.0; https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg; Imported from the online Material Design Icons library and sanitised for safe local editing.
+
+Potentiostat — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_pumps_valves.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+Catalyst — ScanSci contributors; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg; Imported from the online ScanSci SVG library and sanitised for safe local editing.
+
+analytical balance — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/scale.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+autoclave — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/autoclave.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+centrifuge — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/centrifuge.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+confocal laser scanning microscope — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/confocal-scanning-laser-microscope-CSLM.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+electrophoresis chamber — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/electrophoresis-chamber.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+flow cytometer cell sorter — Derek-Croote; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Derek-Croote/flow-cytometer-cell-sorter.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+gas chromatograph — Sasha Sundstrom; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/gas-chromatograph-GC.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+gel electrophoresis — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/gel-electrophoresis.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+HPLC instrument — Sasha Sundstrom; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/Agilent_HPLC.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+laboratory agitator — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/agitator.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+magnetic stirrer — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/magnet-stirringplate.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+microfluidic chip — Marcel Tisch; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Marcel_Tisch/microfluids_chip.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+optical microscope — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/microscope.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+paper chromatography — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/paper-chromatography.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+scanning electron microscope — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/scanning-electron-microscope-sem.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+sonicator — KeHan; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/KeHan/sonicator.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+transmission electron microscope — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/transmission-electron-microscope-tem.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+vortex mixer — KeHan; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/KeHan/vortex_mixer.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+water bath — KeHan; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/KeHan/water_bath.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+incubator — KeHan; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/KeHan/incubator.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+laboratory shaker — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/shaker.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+ammeter — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-ammeter.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+battery cell — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-battery.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+capacitor — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-capacitor.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+pH meter — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/ph-meter.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+resistor — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-resistor.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+voltmeter — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/circuit-voltmeter.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Allihn condenser — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/condenser-bubble.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+beaker with liquid — nUll; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/nUll/Beaker_water.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Büchner funnel — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/buechnerfunnel.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+burette — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/burette-assembled.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+dropper — OpenClipart; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/OpenClipart/dropper.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Erlenmeyer flask — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/erlenmeyer-glass.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+filter funnel — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/funnel-paper.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+graduated cylinder — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Chemistry/DBCLS/graded-measuring-cylinder.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+measuring jug — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/measuring-jug.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+micropipette — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/micropipette.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+pipette bulb — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/pipette-bulb.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+reagent bottle — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Chemistry/DBCLS/Reagent_bottle.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+round-bottom flask — OpenClipart; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/round-bottomed-flask-2-500ml.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+rubber stopper — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/rubber-bung.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+separatory funnel — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/separating-funnel.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+spray bottle — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/spraybottle.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+straight condenser — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/condenser-straigh.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+test tube — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/testtube-glass.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+tweezers — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/tweezer.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+U-tube — OpenClipart; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/u-tube.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+vacuum flask — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/vacuum-flask.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+volumetric pipette — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/pipette-glass.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+biohazard — Lucide contributors; ISC; https://opensource.org/licenses/ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/biohazard.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+clean bench — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/cleanbench.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+corrosive hazard — UNECE; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/UNECE/corrosive.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+cryogenic hazard — David-Eccles--gringer-; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/David-Eccles--gringer-/cryogenic-text.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+electrical hazard — David-Eccles--gringer-; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/David-Eccles--gringer-/electrical-text.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+environmental hazard — David-Eccles--gringer-; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/David-Eccles--gringer-/ecotoxic.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+explosive hazard — UNECE; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/UNECE/explosive.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+fire extinguisher — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/fire-extinguisher.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+flammable hazard — UNECE; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/UNECE/flammable.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+gas under pressure — UNECE; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/UNECE/gas-under-pressure.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+health hazard — UNECE; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/UNECE/health-hazard.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+hot surface hazard — David-Eccles--gringer-; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/David-Eccles--gringer-/hot-surface-text.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+ionizing radiation — David-Eccles--gringer-; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/David-Eccles--gringer-/radiation-text.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+laboratory freezer — DBCLS; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Lab_apparatus/DBCLS/freezer.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+laser hazard — David-Eccles--gringer-; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/David-Eccles--gringer-/laser-text.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+NFPA hazard diamond — Emmett Leddin; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/Emmett_Leddin/NFPA-diamond.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+oxidizer hazard — David-Eccles--gringer-; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/David-Eccles--gringer-/oxidiser.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+toxic hazard — David-Eccles--gringer-; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Safety_symbols/David-Eccles--gringer-/toxic.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+coarse-grained model — Simon Dürr; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Molecular_modelling/Simon_Dürr/coarse-graining.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Coulomb interaction — Emmett Leddin; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Molecular_modelling/Emmett_Leddin/coulomb.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+Morse potential — Д.Ильин; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Molecular_modelling/Д.Ильин/Morse-potential.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+QM/MM hybrid model — Simon Dürr; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Molecular_modelling/Simon_Dürr/qmmm.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+van der Waals interaction — Emmett Leddin; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Molecular_modelling/Emmett_Leddin/van-der-waals.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+atom structure — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/atom.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+bond angle — Emmett Leddin; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Molecular_modelling/Emmett_Leddin/angle.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+chemical bond — Emmett Leddin; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Molecular_modelling/Emmett_Leddin/bond.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+dihedral angle — Emmett Leddin; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Molecular_modelling/Emmett_Leddin/dihedral.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+molecule model — Lorc; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/molecule.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+protein backbone schematic — Simon Dürr; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Molecular_modelling/Simon_Dürr/protein-backbone-schematic.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+six-membered ring — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/hexagon.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+face mask — Font Awesome; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/FortAwesome/Font-Awesome/blob/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/mask-face.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+lab coat — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/labcoat.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+safety goggles — Font Awesome; CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; https://github.com/FortAwesome/Font-Awesome/blob/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/glasses.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+distillation apparatus — OpenClipart; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/OpenClipart/distillation.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+filtration setup — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/filtration-1.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+mortar and pestle — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Chemistry/Servier/mortar.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+cuvette — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/cuvette.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+FTIR spectrometer — Sasha Sundstrom; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/FTIR-spectrometer.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+laser — Lucide contributors; ISC; https://opensource.org/licenses/ISC; https://github.com/lucide-icons/lucide/blob/a630cec77eac6568b989e87e4947a8bfe45caacd/icons/laser.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+mass spectrometer — Sasha Sundstrom; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/mass-spectrometer-MS.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+NMR spectrometer — Sasha Sundstrom; CC0-1.0; https://creativecommons.org/publicdomain/zero/1.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Lab_apparatus/Sasha_Sundstrom/NMR-spectrometer-2.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+prism — Delapouite; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/prism.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+sine wave signal — Tabler Icons contributors; MIT; https://opensource.org/licenses/MIT; https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/wave-sine.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+spectrophotometer — Servier; CC BY 3.0; https://creativecommons.org/licenses/by/3.0/; https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-3.0/Lab_apparatus/Servier/spectrophotometer.svg; Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.
+
+
+Lucide-ISC.txt
+
+
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Phosphor-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2021 Phosphor Icons
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+Tabler-MIT.txt
+
+
+MIT License
+
+Copyright (c) 2020-2026 Paweł Kuna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

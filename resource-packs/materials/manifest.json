@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "id": "materials",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "title": "材料科学",
   "domain": "materials",
-  "min_app_version": "3.1.0",
+  "min_app_version": "4.8.0",
   "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
@@ -32,7 +32,9 @@
       "source_file": "mat_composites.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg",
-      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_lattice",
@@ -59,7 +61,9 @@
       "source_file": "mat_polymers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg",
-      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_vacancy",
@@ -86,7 +90,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_dislocation",
@@ -113,7 +119,9 @@
       "source_file": "mat_semiconductors.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_semiconductors.svg",
-      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176"
+      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_layers",
@@ -140,7 +148,9 @@
       "source_file": "layers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg",
-      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
+      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_graphene",
@@ -167,7 +177,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_nanotube",
@@ -194,7 +206,9 @@
       "source_file": "mat_catalytic_interfaces.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg",
-      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_polymer",
@@ -221,7 +235,9 @@
       "source_file": "polymer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/polymer.svg",
-      "sha256": "5541436fd6d2038d282f33ebef45df7dc6ec11e47a675cbe48e6a56fc922d05f"
+      "sha256": "5541436fd6d2038d282f33ebef45df7dc6ec11e47a675cbe48e6a56fc922d05f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_composite",
@@ -248,7 +264,9 @@
       "source_file": "mat_catalytic_interfaces.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg",
-      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_pore",
@@ -275,7 +293,9 @@
       "source_file": "mat_porous.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg",
-      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_membrane",
@@ -302,7 +322,9 @@
       "source_file": "mat_porous.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg",
-      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_grain",
@@ -329,7 +351,9 @@
       "source_file": "grain.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grain.svg",
-      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841"
+      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_fiber",
@@ -356,7 +380,9 @@
       "source_file": "mat_crystals.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg",
-      "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
+      "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_film",
@@ -383,7 +409,9 @@
       "source_file": "film.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/film.svg",
-      "sha256": "6c77eb5d7cda3e55caf5a379cdfa680744ed69d0150498fb5e2482d42b68f801"
+      "sha256": "6c77eb5d7cda3e55caf5a379cdfa680744ed69d0150498fb5e2482d42b68f801",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_substrate",
@@ -410,7 +438,9 @@
       "source_file": "lab_electron_microscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
-      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_tensile",
@@ -437,7 +467,9 @@
       "source_file": "mat_crystals.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg",
-      "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
+      "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_fracture",
@@ -464,7 +496,9 @@
       "source_file": "lab_electron_microscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
-      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_powder",
@@ -491,7 +525,9 @@
       "source_file": "grain.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grain.svg",
-      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841"
+      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_bcc",
@@ -518,7 +554,9 @@
       "source_file": "mat_porous.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg",
-      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_fcc",
@@ -545,7 +583,9 @@
       "source_file": "lab_electron_microscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
-      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_hcp",
@@ -572,7 +612,9 @@
       "source_file": "mat_catalytic_interfaces.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg",
-      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_grain_boundary",
@@ -599,7 +641,9 @@
       "source_file": "grain.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grain.svg",
-      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841"
+      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_twin_boundary",
@@ -626,7 +670,9 @@
       "source_file": "mat_catalytic_interfaces.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg",
-      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_precipitate",
@@ -653,7 +699,9 @@
       "source_file": "mat_layered.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg",
-      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_inclusion",
@@ -680,7 +728,9 @@
       "source_file": "mat_layered.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg",
-      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_crack_tip",
@@ -707,7 +757,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_fatigue",
@@ -734,7 +786,9 @@
       "source_file": "mat_polymers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg",
-      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_creep",
@@ -761,7 +815,9 @@
       "source_file": "mat_semiconductors.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_semiconductors.svg",
-      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176"
+      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_corrosion",
@@ -788,7 +844,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_oxide_layer",
@@ -815,7 +873,9 @@
       "source_file": "mat_composites.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg",
-      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_coating",
@@ -842,7 +902,9 @@
       "source_file": "mat_composites.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg",
-      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_thin_film",
@@ -869,7 +931,9 @@
       "source_file": "film.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/film.svg",
-      "sha256": "6c77eb5d7cda3e55caf5a379cdfa680744ed69d0150498fb5e2482d42b68f801"
+      "sha256": "6c77eb5d7cda3e55caf5a379cdfa680744ed69d0150498fb5e2482d42b68f801",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_sputtering",
@@ -896,7 +960,9 @@
       "source_file": "mat_semiconductors.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_semiconductors.svg",
-      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176"
+      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_cvd",
@@ -923,7 +989,9 @@
       "source_file": "mat_layered.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg",
-      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_lithography",
@@ -950,7 +1018,9 @@
       "source_file": "mat_particles.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg",
-      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_annealing",
@@ -977,7 +1047,9 @@
       "source_file": "lab_electron_microscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
-      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_quenching",
@@ -1004,7 +1076,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_sintering",
@@ -1031,7 +1105,9 @@
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
-      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_additive",
@@ -1058,7 +1134,9 @@
       "source_file": "mat_polymers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg",
-      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_extrusion",
@@ -1085,7 +1163,9 @@
       "source_file": "mat_polymers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg",
-      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_injection",
@@ -1112,7 +1192,9 @@
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
-      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_rolling",
@@ -1139,7 +1221,9 @@
       "source_file": "rotate-orbit.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-orbit.svg",
-      "sha256": "1ba409a43e26d14375a0eee9af5063c7fd886cb896da389192330878da253975"
+      "sha256": "1ba409a43e26d14375a0eee9af5063c7fd886cb896da389192330878da253975",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_forging",
@@ -1166,7 +1250,9 @@
       "source_file": "mat_particles.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg",
-      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_weld",
@@ -1193,7 +1279,9 @@
       "source_file": "mat_porous.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg",
-      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_laminate",
@@ -1220,7 +1308,9 @@
       "source_file": "mat_particles.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg",
-      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_fiber_reinf",
@@ -1247,7 +1337,9 @@
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
-      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_foam",
@@ -1274,7 +1366,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_aerogel",
@@ -1301,7 +1395,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_metamaterial",
@@ -1328,7 +1424,9 @@
       "source_file": "mat_catalytic_interfaces.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg",
-      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_shape_memory",
@@ -1355,7 +1453,9 @@
       "source_file": "shape.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shape.svg",
-      "sha256": "2cc65609a7264af800b4ef718c868548d18c50ae39e14f6d0fc97078854a66ee"
+      "sha256": "2cc65609a7264af800b4ef718c868548d18c50ae39e14f6d0fc97078854a66ee",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_piezoelectric",
@@ -1382,7 +1482,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_semiconductor",
@@ -1409,7 +1511,9 @@
       "source_file": "mat_catalytic_interfaces.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg",
-      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_superconductor",
@@ -1436,7 +1540,9 @@
       "source_file": "mat_catalytic_interfaces.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg",
-      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_magnetic",
@@ -1463,7 +1569,9 @@
       "source_file": "magnet.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg",
-      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
+      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_battery_material",
@@ -1490,7 +1598,9 @@
       "source_file": "battery.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/battery.svg",
-      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f"
+      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_catalyst_support",
@@ -1517,7 +1627,9 @@
       "source_file": "mat_particles.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg",
-      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_sep_membrane",
@@ -1544,7 +1656,9 @@
       "source_file": "mat_semiconductors.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_semiconductors.svg",
-      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176"
+      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_hydrogel",
@@ -1571,7 +1685,9 @@
       "source_file": "mat_layered.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg",
-      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_elastomer",
@@ -1598,7 +1714,9 @@
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
-      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_thermoplastic",
@@ -1625,7 +1743,9 @@
       "source_file": "mat_polymers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg",
-      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_thermoset",
@@ -1652,7 +1772,9 @@
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
-      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_copolymer",
@@ -1679,7 +1801,9 @@
       "source_file": "mat_polymers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_polymers.svg",
-      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_crosslink",
@@ -1706,7 +1830,9 @@
       "source_file": "mat_layered.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg",
-      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_crystallization",
@@ -1733,7 +1859,9 @@
       "source_file": "lab_electron_microscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
-      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_phase_sep",
@@ -1760,7 +1888,9 @@
       "source_file": "chart-sankey.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-sankey.svg",
-      "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd"
+      "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_band_structure",
@@ -1787,7 +1917,9 @@
       "source_file": "mat_particles.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg",
-      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_stress_strain",
@@ -1814,7 +1946,9 @@
       "source_file": "vector-line.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-line.svg",
-      "sha256": "96631f806d6c72d91ca861aef313eeaced4cee45f1f18223e734003b109f1a2e"
+      "sha256": "96631f806d6c72d91ca861aef313eeaced4cee45f1f18223e734003b109f1a2e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_nanoindentation",
@@ -1841,7 +1975,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_afm",
@@ -1868,7 +2004,9 @@
       "source_file": "mat_layered.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg",
-      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_tem",
@@ -1895,7 +2033,9 @@
       "source_file": "mat_layered.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_layered.svg",
-      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_sem",
@@ -1922,7 +2062,9 @@
       "source_file": "mat_porous.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg",
-      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_xrd",
@@ -1949,7 +2091,9 @@
       "source_file": "mat_catalytic_interfaces.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_catalytic_interfaces.svg",
-      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_dsc",
@@ -1976,7 +2120,9 @@
       "source_file": "mat_particles.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg",
-      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_unit_cell",
@@ -2003,7 +2149,9 @@
       "source_file": "mat_particles.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_particles.svg",
-      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_amorphous",
@@ -2030,7 +2178,9 @@
       "source_file": "mat_composites.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg",
-      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_nanofiber",
@@ -2057,7 +2207,9 @@
       "source_file": "mat_composites.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_composites.svg",
-      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_nanoplatelet",
@@ -2084,7 +2236,9 @@
       "source_file": "layers.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg",
-      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
+      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_core_shell",
@@ -2111,7 +2265,9 @@
       "source_file": "circle-multiple.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/circle-multiple.svg",
-      "sha256": "d812c9cb0ef6f75aa1eec14606a99e5d5824fc6177982b81ecefe4a7f45fb825"
+      "sha256": "d812c9cb0ef6f75aa1eec14606a99e5d5824fc6177982b81ecefe4a7f45fb825",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_micropattern",
@@ -2138,7 +2294,9 @@
       "source_file": "mat_porous.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg",
-      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_surface_roughness",
@@ -2165,7 +2323,9 @@
       "source_file": "texture.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/texture.svg",
-      "sha256": "397d0b875b157ea04a256884fd9d2c2d1c44f852592c136302871fb8b5860564"
+      "sha256": "397d0b875b157ea04a256884fd9d2c2d1c44f852592c136302871fb8b5860564",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_contact_angle",
@@ -2192,7 +2352,9 @@
       "source_file": "angle-acute.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/angle-acute.svg",
-      "sha256": "6235afa023fee63e6e1da1a6a7b6267baac9caed7c3bc0c5fb38a0b948e1f2f8"
+      "sha256": "6235afa023fee63e6e1da1a6a7b6267baac9caed7c3bc0c5fb38a0b948e1f2f8",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_wettability",
@@ -2219,7 +2381,9 @@
       "source_file": "water-percent.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water-percent.svg",
-      "sha256": "768bbd6908fc67ffde36f998175e02ffa0896a822e9ad910d099ad65878ec4c1"
+      "sha256": "768bbd6908fc67ffde36f998175e02ffa0896a822e9ad910d099ad65878ec4c1",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_diffusion_profile",
@@ -2246,7 +2410,9 @@
       "source_file": "blur.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg",
-      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
+      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_phase_field",
@@ -2273,7 +2439,9 @@
       "source_file": "chart-sankey.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-sankey.svg",
-      "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd"
+      "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_tga",
@@ -2300,7 +2468,9 @@
       "source_file": "chart-line.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
-      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_dma",
@@ -2327,7 +2497,9 @@
       "source_file": "chart-line.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
-      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_thermal_conductivity",
@@ -2354,7 +2526,9 @@
       "source_file": "thermometer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
-      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
+      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_electrical_resistivity",
@@ -2381,7 +2555,9 @@
       "source_file": "resistor.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/resistor.svg",
-      "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a"
+      "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_hardness",
@@ -2408,7 +2584,9 @@
       "source_file": "shield.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield.svg",
-      "sha256": "30ea8605cd87e72aaa7946781a54ca00e56b3aa926163296aada400c59f04d05"
+      "sha256": "30ea8605cd87e72aaa7946781a54ca00e56b3aa926163296aada400c59f04d05",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_toughness",
@@ -2435,7 +2613,9 @@
       "source_file": "shield.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield.svg",
-      "sha256": "30ea8605cd87e72aaa7946781a54ca00e56b3aa926163296aada400c59f04d05"
+      "sha256": "30ea8605cd87e72aaa7946781a54ca00e56b3aa926163296aada400c59f04d05",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_compression",
@@ -2462,7 +2642,9 @@
       "source_file": "arrow-collapse.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-collapse.svg",
-      "sha256": "a776a8e0482fd2dc52e84195c976e8de489b16927c311911a8771d72a5dabccc"
+      "sha256": "a776a8e0482fd2dc52e84195c976e8de489b16927c311911a8771d72a5dabccc",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_shear",
@@ -2489,7 +2671,9 @@
       "source_file": "vector-line.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-line.svg",
-      "sha256": "96631f806d6c72d91ca861aef313eeaced4cee45f1f18223e734003b109f1a2e"
+      "sha256": "96631f806d6c72d91ca861aef313eeaced4cee45f1f18223e734003b109f1a2e",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_tribology",
@@ -2516,7 +2700,9 @@
       "source_file": "rotate-orbit.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-orbit.svg",
-      "sha256": "1ba409a43e26d14375a0eee9af5063c7fd886cb896da389192330878da253975"
+      "sha256": "1ba409a43e26d14375a0eee9af5063c7fd886cb896da389192330878da253975",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_powder_bed",
@@ -2543,7 +2729,9 @@
       "source_file": "grain.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grain.svg",
-      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841"
+      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_electrospinning",
@@ -2570,7 +2758,9 @@
       "source_file": "mat_porous.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_porous.svg",
-      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_solgel",
@@ -2597,7 +2787,9 @@
       "source_file": "flask.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg",
-      "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
+      "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_spray_coating",
@@ -2624,7 +2816,9 @@
       "source_file": "spray.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/spray.svg",
-      "sha256": "291d27294c50e50cf56593d4beadfb2891c4ba70364255314a5c02e842549194"
+      "sha256": "291d27294c50e50cf56593d4beadfb2891c4ba70364255314a5c02e842549194",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_plasma_treatment",
@@ -2651,7 +2845,9 @@
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
-      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_etching",
@@ -2678,7 +2874,9 @@
       "source_file": "layers-triple.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers-triple.svg",
-      "sha256": "320db2c72c4f86374b8ec872999d6bae2ef044ea2af9bf03fa8ae3ec8c2c8355"
+      "sha256": "320db2c72c4f86374b8ec872999d6bae2ef044ea2af9bf03fa8ae3ec8c2c8355",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_ion_implant",
@@ -2705,7 +2903,9 @@
       "source_file": "needle.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/needle.svg",
-      "sha256": "4f0c11a15df1a5bfbdb26343955fc1cd0d45193ad9b6768b6ebd501344d4b3f6"
+      "sha256": "4f0c11a15df1a5bfbdb26343955fc1cd0d45193ad9b6768b6ebd501344d4b3f6",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_laser_cladding",
@@ -2732,7 +2932,9 @@
       "source_file": "laser-pointer.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg",
-      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
+      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_melt_spinning",
@@ -2759,7 +2961,9 @@
       "source_file": "fire.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/fire.svg",
-      "sha256": "4267ba5326998a50999596bba85dd86d69b97c4edaa3a6f12e286af115c42fee"
+      "sha256": "4267ba5326998a50999596bba85dd86d69b97c4edaa3a6f12e286af115c42fee",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_mat_molecular_dynamics",
@@ -2786,7 +2990,9 @@
       "source_file": "molecule.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/molecule.svg",
-      "sha256": "d70e939fb7c63059457492fc8bd53a98cba0365702f118d156c9287bdec09098"
+      "sha256": "d70e939fb7c63059457492fc8bd53a98cba0365702f118d156c9287bdec09098",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
     },
     {
       "id": "materials_droplet",
@@ -2812,7 +3018,822 @@
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
       "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
-      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Legacy source-to-label mapping was not verified"
+    },
+    {
+      "author": "Delapouite",
+      "author_url": "http://delapouite.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/concrete-bag.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_cement_concrete",
+      "asset_id": "materials_verified_mat_cement_concrete",
+      "type": "symbol",
+      "category": "材料与构件",
+      "category_en": "Materials and components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_cement_concrete.svg",
+      "keywords": [
+        "水泥",
+        "cement",
+        "混凝土",
+        "concrete",
+        "胶凝",
+        "binder"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "3fffc4061d13dc99c6d920d5446197b3111b1b72adc3612e157274fad2995e6b",
+      "label": "混凝土袋",
+      "label_zh": "混凝土袋",
+      "label_en": "Concrete bag",
+      "source_file": "concrete-bag.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "OpenClipart",
+      "author_url": "https://openclipart.org/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/emulsion.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_emulsion",
+      "asset_id": "materials_verified_mat_emulsion",
+      "type": "symbol",
+      "category": "材料与构件",
+      "category_en": "Materials and components",
+      "default_dim": [
+        26,
+        20.39
+      ],
+      "file": "assets/materials_verified_mat_emulsion.svg",
+      "keywords": [
+        "乳液",
+        "emulsion",
+        "多相",
+        "multiphase",
+        "液滴",
+        "droplet"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "0506add381bc7f69851860a4a323c046e7bf777f0b25db23086d834a5e5074c9",
+      "label": "乳液/多相体系",
+      "label_zh": "乳液/多相体系",
+      "label_en": "emulsion",
+      "source_file": "emulsion.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "OpenClipart",
+      "author_url": "https://openclipart.org/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/particles-foam.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_foam_material",
+      "asset_id": "materials_verified_mat_foam_material",
+      "type": "symbol",
+      "category": "材料与构件",
+      "category_en": "Materials and components",
+      "default_dim": [
+        26,
+        20.39
+      ],
+      "file": "assets/materials_verified_mat_foam_material.svg",
+      "keywords": [
+        "泡沫",
+        "foam",
+        "多孔",
+        "porous",
+        "气泡",
+        "bubble"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "68a7fadfb3277712e2d1484ef00cab48193f41ab6024bd40ffb08840f77ace22",
+      "label": "泡沫颗粒示意",
+      "label_zh": "泡沫颗粒示意",
+      "label_en": "Foam particle schematic",
+      "source_file": "particles-foam.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Source artwork contact-sheet comparison and explicit bilingual naming"
+    },
+    {
+      "author": "Delapouite",
+      "author_url": "http://delapouite.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/metal-plate.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_metal_plate",
+      "asset_id": "materials_verified_mat_metal_plate",
+      "type": "symbol",
+      "category": "材料与构件",
+      "category_en": "Materials and components",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_metal_plate.svg",
+      "keywords": [
+        "金属板",
+        "metal plate",
+        "板材",
+        "sheet",
+        "基体",
+        "substrate"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "43c9c4fe5c8e410c64b6235e6e86a0d6210c64b3f8b96897ab46e0de629e4bdb",
+      "label": "金属板",
+      "label_zh": "金属板",
+      "label_en": "metal plate",
+      "source_file": "metal-plate.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lorc",
+      "author_url": "http://lorcblog.blogspot.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystal-growth.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_crystal_growth",
+      "asset_id": "materials_verified_mat_crystal_growth",
+      "type": "symbol",
+      "category": "晶体生长",
+      "category_en": "Crystal growth",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_crystal_growth.svg",
+      "keywords": [
+        "晶体生长",
+        "crystal growth",
+        "成核",
+        "nucleation",
+        "结晶"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "41c9b556f7e0a16e5ffed32f3c104b5b1189cca10b606b70a032e9fcd456ccff",
+      "label": "晶体生长",
+      "label_zh": "晶体生长",
+      "label_en": "crystal growth",
+      "source_file": "crystal-growth.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "OpenClipart",
+      "author_url": "https://openclipart.org/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/alloy.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_alloy_microstructure",
+      "asset_id": "materials_verified_mat_alloy_microstructure",
+      "type": "symbol",
+      "category": "晶体与点阵",
+      "category_en": "Crystals and lattices",
+      "default_dim": [
+        26,
+        20.39
+      ],
+      "file": "assets/materials_verified_mat_alloy_microstructure.svg",
+      "keywords": [
+        "合金",
+        "alloy",
+        "显微组织",
+        "microstructure",
+        "晶粒",
+        "grain"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "79f6747e7428f109771c45aa2d09335e8feb92a1d42a74eeb042e22f665fef56",
+      "label": "合金结构示意",
+      "label_zh": "合金结构示意",
+      "label_en": "Alloy schematic",
+      "source_file": "alloy.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Source artwork contact-sheet comparison and explicit bilingual naming"
+    },
+    {
+      "author": "Lorc",
+      "author_url": "http://lorcblog.blogspot.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystal-cluster.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_crystal_cluster",
+      "asset_id": "materials_verified_mat_crystal_cluster",
+      "type": "symbol",
+      "category": "晶体与点阵",
+      "category_en": "Crystals and lattices",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_crystal_cluster.svg",
+      "keywords": [
+        "晶簇",
+        "crystal cluster",
+        "多晶",
+        "polycrystal",
+        "形貌",
+        "morphology"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "31255e9647fa0d6e5503d70d6fec2e0bd57f49bf8ff36792afb86a7a86406b2d",
+      "label": "晶簇",
+      "label_zh": "晶簇",
+      "label_en": "crystal cluster",
+      "source_file": "crystal-cluster.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lorc",
+      "author_url": "http://lorcblog.blogspot.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystal-shine.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_crystal_facets",
+      "asset_id": "materials_verified_mat_crystal_facets",
+      "type": "symbol",
+      "category": "晶体与点阵",
+      "category_en": "Crystals and lattices",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_crystal_facets.svg",
+      "keywords": [
+        "解理",
+        "cleavage",
+        "晶面",
+        "facet",
+        "光学",
+        "optical"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "3ed961b9fbec11e126b4b4f2c2c5388a2e4443fd5525bed3d010e1c26be0a686",
+      "label": "晶体",
+      "label_zh": "晶体",
+      "label_en": "Crystal",
+      "source_file": "crystal-shine.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lorc",
+      "author_url": "http://lorcblog.blogspot.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystal-bars.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_crystal_lattice_bars",
+      "asset_id": "materials_verified_mat_crystal_lattice_bars",
+      "type": "symbol",
+      "category": "晶体与点阵",
+      "category_en": "Crystals and lattices",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_crystal_lattice_bars.svg",
+      "keywords": [
+        "晶格",
+        "crystal lattice",
+        "晶体",
+        "crystal",
+        "点阵",
+        "lattice"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "0597eb8ad71e7ce930fba4034d5a94a5c7fc0b0f8a93967e691f628ede7c31ee",
+      "label": "柱状晶体图标",
+      "label_zh": "柱状晶体图标",
+      "label_en": "Crystal bars icon",
+      "source_file": "crystal-bars.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Source artwork contact-sheet comparison and explicit bilingual naming"
+    },
+    {
+      "author": "Lorc",
+      "author_url": "http://lorcblog.blogspot.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/crystalize.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_crystallization",
+      "asset_id": "materials_verified_mat_crystallization",
+      "type": "symbol",
+      "category": "晶体与点阵",
+      "category_en": "Crystals and lattices",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_crystallization.svg",
+      "keywords": [
+        "结晶",
+        "crystallization",
+        "相变",
+        "phase transition",
+        "晶体"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "61627ed597b9d8fac1d7549a752c399b1e7e95d271351c25ce4f48c505022925",
+      "label": "结晶",
+      "label_zh": "结晶",
+      "label_en": "crystallization",
+      "source_file": "crystalize.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Tabler Icons contributors",
+      "author_url": "https://github.com/tabler/tabler-icons",
+      "license": "MIT",
+      "license_url": "https://opensource.org/licenses/MIT",
+      "source_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/hexagons.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_honeycomb_lattice",
+      "asset_id": "materials_verified_mat_honeycomb_lattice",
+      "type": "symbol",
+      "category": "晶体与点阵",
+      "category_en": "Crystals and lattices",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_honeycomb_lattice.svg",
+      "keywords": [
+        "蜂窝",
+        "honeycomb",
+        "二维材料",
+        "2D material",
+        "晶格",
+        "lattice"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "de557805a4381fa6d94bdd7db8abaa6b896aedc07c914f105389196e0af55e94",
+      "label": "六边形阵列",
+      "label_zh": "六边形阵列",
+      "label_en": "Hexagon array",
+      "source_file": "hexagons.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Tabler Icons contributors",
+      "author_url": "https://github.com/tabler/tabler-icons",
+      "license": "MIT",
+      "license_url": "https://opensource.org/licenses/MIT",
+      "source_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/grid-dots.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_lattice_points",
+      "asset_id": "materials_verified_mat_lattice_points",
+      "type": "symbol",
+      "category": "晶体与点阵",
+      "category_en": "Crystals and lattices",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_lattice_points.svg",
+      "keywords": [
+        "点阵",
+        "lattice",
+        "晶格",
+        "crystal",
+        "网格",
+        "grid"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "c0197d327564219d33da833c4df1d7fb86ff3a78c07b92f3564f0e80fb5f1da1",
+      "label": "点阵",
+      "label_zh": "点阵",
+      "label_en": "Dot grid",
+      "source_file": "grid-dots.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Faithtoken",
+      "author_url": "http://fungustoken.deviantart.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/faithtoken/minerals.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_minerals",
+      "asset_id": "materials_verified_mat_minerals",
+      "type": "symbol",
+      "category": "晶体与点阵",
+      "category_en": "Crystals and lattices",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_minerals.svg",
+      "keywords": [
+        "矿石",
+        "mineral",
+        "矿物",
+        "ore",
+        "无机",
+        "inorganic"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "165e50bbdeb502bca7d082934b31167cce656cf3f1160ec096ea85c26d108d25",
+      "label": "矿石/矿物",
+      "label_zh": "矿石/矿物",
+      "label_en": "minerals",
+      "source_file": "minerals.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Tabler Icons contributors",
+      "author_url": "https://github.com/tabler/tabler-icons",
+      "license": "MIT",
+      "license_url": "https://opensource.org/licenses/MIT",
+      "source_url": "https://github.com/tabler/tabler-icons/blob/ed177a085b652fe04ec4f37ced867c94621e7840/icons/outline/cube.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_unit_cell_cube",
+      "asset_id": "materials_verified_mat_unit_cell_cube",
+      "type": "symbol",
+      "category": "晶体结构",
+      "category_en": "Crystal structures",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_unit_cell_cube.svg",
+      "keywords": [
+        "晶胞",
+        "unit cell",
+        "立方",
+        "cubic",
+        "晶体结构"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "fd2951f8afefe5510550e80fc6b1bbc80af814762a325f4cf36cdc6d1e56bcaa",
+      "label": "立方体",
+      "label_zh": "立方体",
+      "label_en": "Cube",
+      "source_file": "cube.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lorc",
+      "author_url": "http://lorcblog.blogspot.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/edge-crack.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_edge_crack",
+      "asset_id": "materials_verified_mat_edge_crack",
+      "type": "symbol",
+      "category": "裂纹与缺陷",
+      "category_en": "Cracks and defects",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_edge_crack.svg",
+      "keywords": [
+        "边缘裂纹",
+        "edge crack",
+        "断裂力学",
+        "fracture mechanics",
+        "应力",
+        "stress"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f5b651d3ada46dff8e82a7cc671a3251b576c144a36ad8d417597b1c28beeba9",
+      "label": "边缘裂纹",
+      "label_zh": "边缘裂纹",
+      "label_en": "edge crack",
+      "source_file": "edge-crack.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Lorc",
+      "author_url": "http://lorcblog.blogspot.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/lorc/cracked-glass.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_glass_crack",
+      "asset_id": "materials_verified_mat_glass_crack",
+      "type": "symbol",
+      "category": "裂纹与缺陷",
+      "category_en": "Cracks and defects",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_glass_crack.svg",
+      "keywords": [
+        "玻璃",
+        "glass",
+        "裂纹",
+        "crack",
+        "脆性",
+        "brittle"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "a2f39f1696e4dba7dde5185328f3eb126e3f67d7f39d52355cb79c6750ed5409",
+      "label": "玻璃裂纹",
+      "label_zh": "玻璃裂纹",
+      "label_en": "glass crack",
+      "source_file": "cracked-glass.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Delapouite",
+      "author_url": "http://delapouite.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/atom-core.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_atomic_nucleus",
+      "asset_id": "materials_verified_mat_atomic_nucleus",
+      "type": "symbol",
+      "category": "纳米材料",
+      "category_en": "Nanomaterials",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_atomic_nucleus.svg",
+      "keywords": [
+        "原子核",
+        "nucleus",
+        "原子",
+        "atom",
+        "电子",
+        "electron"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "0185c6ae828799279e00d7f25c543c87f6853b2d462110c1606b2352343edf09",
+      "label": "原子核图标",
+      "label_zh": "原子核图标",
+      "label_en": "Atomic nucleus icon",
+      "source_file": "atom-core.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Source artwork contact-sheet comparison and explicit bilingual naming"
+    },
+    {
+      "author": "Rahel-Khdhr",
+      "author_url": "https://linktr.ee/rahe1",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Nanotechnology/Rahel-Khdhr/Nanoparticle.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_nanoparticle",
+      "asset_id": "materials_verified_mat_nanoparticle",
+      "type": "symbol",
+      "category": "纳米材料",
+      "category_en": "Nanomaterials",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_nanoparticle.svg",
+      "keywords": [
+        "纳米颗粒",
+        "nanoparticle",
+        "胶体",
+        "colloid",
+        "尺寸",
+        "size"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "387d1ba143e4f9b64ed4df3051e9083a0352b67e9f59fdc52049ba5cd134ef25",
+      "label": "纳米颗粒",
+      "label_zh": "纳米颗粒",
+      "label_en": "nanoparticle",
+      "source_file": "Nanoparticle.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "OpenClipart",
+      "author_url": "https://openclipart.org/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/particles-suspension.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_particle_suspension",
+      "asset_id": "materials_verified_mat_particle_suspension",
+      "type": "symbol",
+      "category": "纳米材料",
+      "category_en": "Nanomaterials",
+      "default_dim": [
+        26,
+        20.39
+      ],
+      "file": "assets/materials_verified_mat_particle_suspension.svg",
+      "keywords": [
+        "悬浮液",
+        "suspension",
+        "颗粒",
+        "particle",
+        "分散",
+        "dispersion"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f2d1eb1f71f846adc794b903de0317cb2f4286801e179131aeba09a9d7c7261a",
+      "label": "悬浮液",
+      "label_zh": "悬浮液",
+      "label_en": "particle suspension",
+      "source_file": "particles-suspension.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Rahel-Khdhr",
+      "author_url": "https://linktr.ee/rahe1",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Nanotechnology/Rahel-Khdhr/Silver_Nanoparticle.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_silver_nanoparticle",
+      "asset_id": "materials_verified_mat_silver_nanoparticle",
+      "type": "symbol",
+      "category": "纳米材料",
+      "category_en": "Nanomaterials",
+      "default_dim": [
+        26,
+        25.75
+      ],
+      "file": "assets/materials_verified_mat_silver_nanoparticle.svg",
+      "keywords": [
+        "银纳米",
+        "silver",
+        "抗菌",
+        "antimicrobial",
+        "等离子体",
+        "plasmonic"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "a14109f315b37d3f7d2279e199d7493dc901b4ea1ed6930f67b319f6dcd02a5d",
+      "label": "银纳米颗粒",
+      "label_zh": "银纳米颗粒",
+      "label_en": "silver nanoparticle",
+      "source_file": "Silver_Nanoparticle.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "OpenClipart",
+      "author_url": "https://openclipart.org/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-0/Chemistry/OpenClipart/particles-solids.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_solid_particles",
+      "asset_id": "materials_verified_mat_solid_particles",
+      "type": "symbol",
+      "category": "纳米材料",
+      "category_en": "Nanomaterials",
+      "default_dim": [
+        26,
+        20.39
+      ],
+      "file": "assets/materials_verified_mat_solid_particles.svg",
+      "keywords": [
+        "颗粒",
+        "particle",
+        "粉体",
+        "powder",
+        "堆积",
+        "packing"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "b8d8ea845fc5c8d5307a0e9f8c36b3880b69142a32cf4ea5467d8544eef89ffd",
+      "label": "固体颗粒",
+      "label_zh": "固体颗粒",
+      "label_en": "solid particles",
+      "source_file": "particles-solids.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Delapouite",
+      "author_url": "http://delapouite.com",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/spring.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_elastomer_spring",
+      "asset_id": "materials_verified_mat_elastomer_spring",
+      "type": "symbol",
+      "category": "聚合物与弹性体",
+      "category_en": "Polymers and elastomers",
+      "default_dim": [
+        26.0,
+        26.0
+      ],
+      "file": "assets/materials_verified_mat_elastomer_spring.svg",
+      "keywords": [
+        "弹性体",
+        "elastomer",
+        "弹簧",
+        "spring",
+        "形变",
+        "deformation"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "3d0f1d8a19fa5e48914b9287e030db5be23b82a8bb4f84e7af6d28653e998c5e",
+      "label": "弹簧",
+      "label_zh": "弹簧",
+      "label_en": "Spring",
+      "source_file": "spring.svg",
+      "catalog_status": "source-matched",
+      "review_basis": "Pinned upstream filename with explicit bilingual naming; no substitute artwork"
+    },
+    {
+      "author": "Margot Riggi",
+      "author_url": "https://www.margotriggi.com/",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Imaging/Margot_Riggi/hydrophobic-droplet-hydrophilic-surface.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_droplet_on_hydrophilic_surface",
+      "asset_id": "materials_verified_mat_droplet_on_hydrophilic_surface",
+      "type": "symbol",
+      "category": "表面与薄层",
+      "category_en": "Surfaces and layers",
+      "default_dim": [
+        26,
+        16.32
+      ],
+      "file": "assets/materials_verified_mat_droplet_on_hydrophilic_surface.svg",
+      "keywords": [
+        "亲水",
+        "hydrophilic",
+        "润湿",
+        "wetting",
+        "表面",
+        "surface"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "20c3c09dff9e0bcac18668ed6cb79042fdafe911666b4b94063d95599d93024d",
+      "label": "亲水表面液滴",
+      "label_zh": "亲水表面液滴",
+      "label_en": "droplet on hydrophilic surface",
+      "source_file": "hydrophobic-droplet-hydrophilic-surface.svg",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contact-sheet review: depicted contact angle does not clearly support the hydrophilic surface label"
+    },
+    {
+      "author": "Margot Riggi",
+      "author_url": "https://www.margotriggi.com/",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/duerrsimon/bioicons/blob/d29e766ea7580b8063c4f47b29e872db40a4d979/static/icons/cc-by-4.0/Imaging/Margot_Riggi/hydrophilic-droplet-hydrophobic-surface.svg",
+      "modifications": "Sanitized to Rylume safe_svg subset: CSS flattened; class/style/defs/clipPath/mask/filter/gradient references removed or flattened to solid color; visible text dropped; viewBox and width/height normalized; currentColor resolved to #000000.",
+      "id": "materials_verified_mat_droplet_on_hydrophobic_surface",
+      "asset_id": "materials_verified_mat_droplet_on_hydrophobic_surface",
+      "type": "symbol",
+      "category": "表面与薄层",
+      "category_en": "Surfaces and layers",
+      "default_dim": [
+        26,
+        16.32
+      ],
+      "file": "assets/materials_verified_mat_droplet_on_hydrophobic_surface.svg",
+      "keywords": [
+        "疏水",
+        "hydrophobic",
+        "接触角",
+        "contact angle",
+        "润湿",
+        "wetting"
+      ],
+      "source_kind": "online-open-license",
+      "sha256": "f42f0ccb0b8e438237f68ba7d80fe39cd5db039ef77275240a79ee8eebfdbe48",
+      "label": "疏水表面液滴",
+      "label_zh": "疏水表面液滴",
+      "label_en": "droplet on hydrophobic surface",
+      "source_file": "hydrophilic-droplet-hydrophobic-surface.svg",
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contact-sheet review: depicted contact angle does not clearly support the hydrophobic surface label"
     }
   ],
   "templates": [
@@ -2847,7 +3868,9 @@
         "Mix and cure",
         "Mechanical test",
         "Failure analysis"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "materials_template_membrane",
@@ -2878,7 +3901,9 @@
         "Selective membrane",
         "Retentate",
         "Permeate"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "materials_template_film",
@@ -2911,7 +3936,9 @@
         "Film growth",
         "Substrate",
         "Microstructure"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "materials_template_defects",
@@ -2944,7 +3971,9 @@
         "Dislocation motion",
         "Crack propagation",
         "Applied load"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "materials_template_battery_materials",
@@ -2977,7 +4006,9 @@
         "负极界面",
         "能带匹配",
         "截面表征"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "materials_template_semiconductor_fab",
@@ -3010,7 +4041,9 @@
         "薄膜沉积",
         "退火",
         "缺陷检测"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "materials_template_mechanical_failure",
@@ -3043,7 +4076,9 @@
         "断裂",
         "应力应变",
         "断口形貌"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     },
     {
       "id": "materials_template_polymer_hydrogel",
@@ -3076,7 +4111,11 @@
         "水凝胶网络",
         "溶胀",
         "热分析"
-      ]
+      ],
+      "catalog_status": "quarantined",
+      "catalog_reason": "Contains legacy unverified artwork"
     }
-  ]
+  ],
+  "available_asset_count": 22,
+  "available_template_count": 0
 }

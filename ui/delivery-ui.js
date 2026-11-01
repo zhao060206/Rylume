@@ -54,13 +54,13 @@ export function setupDelivery({api,toast,flush,state,saveCopy,documentTitle,relo
     if(!data)return;
     const key=JSON.stringify([data,focused]);if(key===renderedPacks)return;renderedPacks=key;
     const active=document.activeElement,focusPack=active?.closest?.('[data-pack]')?.dataset.pack,focusAction=active?.textContent;
-    resourceStatus.textContent=data.refreshing?'正在刷新 GitHub 目录…':data.error||'官方 GitHub 资源包 · 原创可编辑矢量';refresh.disabled=data.refreshing;
+    resourceStatus.textContent=data.refreshing?'正在刷新 GitHub 目录…':data.error||'开源素材资源包 · 保留原作者来源与许可';refresh.disabled=data.refreshing;
     rows.replaceChildren();
     const builtin=el('article','pack-row');builtin.append(el('div','pack-number','01'));const bio=el('div','pack-copy');bio.append(el('h3','','生物学'),el('p','muted small','细胞、分子、组织与机制图 · 已随软件提供'));builtin.append(bio,el('span','pack-installed','内置'));rows.append(builtin);
     data.packs.forEach((p,i)=>{
       const row=el('article','pack-row'+(focused===p.id?' focused':''));row.dataset.pack=p.id;
       const count=el('span','pack-number',String(i+2).padStart(2,'0')),copy=el('div','pack-copy'),h=el('h3','',p.title);
-      copy.append(h,el('p','muted small',p.description),el('p','pack-meta',`${p.asset_count} 个素材 · ${p.template_count} 个模板 · ${byteSize(p.size)} · v${p.version}`));
+      copy.append(h,el('p','muted small',p.description),el('p','pack-meta',`${p.available_asset_count??p.asset_count} 个可用素材 · ${p.available_template_count??p.template_count} 个可用模板 · ${byteSize(p.size)} · v${p.version}`));
       const action=packAction(p),buttons=el('div','pack-actions');
       if(action==='cancel'){
         const status=el('p','muted small',({queued:'等待下载',downloading:'正在下载',validating:'正在核对素材与模板',installing:'正在安装'})[p.task.state]);
@@ -70,6 +70,7 @@ export function setupDelivery({api,toast,flush,state,saveCopy,documentTitle,relo
         h.append(el('span','pack-installed','已安装 v'+p.installed_version));
         const use=el('button','button','素材'),templates=el('button','button','模板'),remove=el('button','text-button','卸载');
         use.onclick=()=>{dialog.close();openAssets(p.id);};templates.onclick=()=>{dialog.close();openTemplates(p.id);};
+        templates.hidden=p.available_template_count===0;
         remove.onclick=async()=>{if(!confirm(`卸载「${p.title}」资源包？已保存图版中的素材快照会保留。`))return;if(!await saveBeforeDestructiveAction(state,flush))return toast('当前图版尚未保存，已停止卸载素材包',true);await perform('/api/resources/uninstall',{id:p.id});await syncCatalog();};buttons.append(use,templates,remove);
       }else{
         const b=el('button','button'+(focused===p.id?' primary':''),action==='upgrade'?'先更新软件':action==='update'?'更新资源包':p.task?.state==='failed'?'重新下载':'下载');
