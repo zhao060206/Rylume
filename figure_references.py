@@ -132,7 +132,7 @@ def analyze(data_url, config, purpose):
     if not section.get("base_url") or not section.get("model"):
         section = config.get("text") or {}
     if not section.get("base_url") or not section.get("model"):
-        raise SceneError("请配置视觉模型后识别参考图；原图已经保存")
+        raise SceneError("请配置视觉模型或文本模型后识别参考图；原图已经保存")
     response = pipeline._post_json(pipeline._endpoint(section["base_url"], "/chat/completions"),
                                   pipeline._api_key(section), {
         "model": section["model"], "temperature": 0, "max_tokens": 6000,
