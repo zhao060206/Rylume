@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 import io
+import csv
+import html
+import json
 import os
 import re
 import shutil
@@ -9,6 +12,7 @@ import subprocess
 import tempfile
 import time
 import zipfile
+from xml.etree import ElementTree
 from pathlib import Path
 
 MAX_UPLOAD = 16 * 1024 * 1024
@@ -93,13 +97,88 @@ def _office_convert(path, folder):
     return output
 
 
+def _fallback_convert_local(path):
+    """Small dependency-free parser used when MarkItDown is not installed.
+
+    It deliberately returns plain, traceable text instead of pretending to
+    reproduce every rich Office feature.  The optional MarkItDown path remains
+    the preferred converter; this fallback keeps the document assistant useful
+    in a clean portable install and makes the limitation visible in metadata.
+    """
+    ext = path.suffix.lower()
+    if ext in {'.txt', '.md', '.markdown', '.rtf'}:
+        text = path.read_text(encoding='utf8', errors='replace')
+        if ext == '.rtf':
+            text = re.sub(r'\\[a-z]+\d* ?', '', text)
+            text = text.replace('{', '').replace('}', '')
+        return text
+    if ext in {'.html', '.htm'}:
+        raw = path.read_text(encoding='utf8', errors='replace')
+        raw = re.sub(r'(?is)<(script|style).*?</\1>', '', raw)
+        raw = re.sub(r'(?i)</?(?:h[1-6]|p|div|li|br|tr|section)[^>]*>', '\n', raw)
+        return html.unescape(re.sub(r'(?s)<[^>]+>', '', raw))
+    if ext == '.csv':
+        rows = list(csv.reader(path.read_text(encoding='utf-8-sig', errors='replace').splitlines()))
+        if not rows:
+            return ''
+        width = max(len(row) for row in rows)
+        lines = ['| ' + ' | '.join((row + [''] * width)[:width]) + ' |' for row in rows]
+        lines.insert(1, '| ' + ' | '.join('---' for _ in range(width)) + ' |')
+        return '\n'.join(lines)
+    if ext in {'.json', '.xml'}:
+        raw = path.read_text(encoding='utf8', errors='replace')
+        if ext == '.json':
+            try:
+                return json.dumps(json.loads(raw), ensure_ascii=False, indent=2)
+            except json.JSONDecodeError:
+                return raw
+        try:
+            return ElementTree.tostring(ElementTree.fromstring(raw), encoding='unicode')
+        except ElementTree.ParseError:
+            return raw
+    if ext in {'.docx', '.odt'}:
+        with zipfile.ZipFile(path) as archive:
+            name = 'word/document.xml' if ext == '.docx' else 'content.xml'
+            root = ElementTree.fromstring(archive.read(name))
+        chunks = []
+        for paragraph in root.iter():
+            if paragraph.tag.rsplit('}', 1)[-1] in {'p', 'text:p'}:
+                value = ''.join(node.text or '' for node in paragraph.iter() if node.tag.rsplit('}', 1)[-1] in {'t', 'text:span'})
+                if value.strip():
+                    style = next((node.attrib.get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}val', '') for node in paragraph.iter() if node.tag.rsplit('}', 1)[-1] == 'pStyle'), '')
+                    chunks.append(('# ' if style.lower().startswith('heading') else '') + value.strip())
+        return '\n\n'.join(chunks)
+    if ext in {'.pptx', '.odp'}:
+        prefix = 'ppt/slides/slide' if ext == '.pptx' else 'content.xml'
+        with zipfile.ZipFile(path) as archive:
+            if ext == '.pptx':
+                names = sorted((n for n in archive.namelist() if re.fullmatch(r'ppt/slides/slide\d+\.xml', n)), key=lambda n: int(re.search(r'(\d+)', n).group(1)))
+                slides = []
+                for index, name in enumerate(names, 1):
+                    root = ElementTree.fromstring(archive.read(name))
+                    text = ' '.join(node.text or '' for node in root.iter() if node.tag.rsplit('}', 1)[-1] == 't')
+                    if text.strip(): slides.append(f'<!-- Slide number: {index} -->\n{text.strip()}')
+                return '\n\n'.join(slides)
+            return ElementTree.tostring(ElementTree.fromstring(archive.read(prefix)), encoding='unicode')
+    raise ConversionError('当前环境缺少文档兼容解析器，请将文件另存为 TXT、PDF 或安装 MarkItDown 后重试。')
+
+
 def convert_document(path, *, cancelled=lambda: False, progress=lambda *_: None, ocr=False):
-    from markitdown import MarkItDown, StreamInfo
     path = Path(path)
     check_container(path)
     started = time.monotonic()
     warnings, parts, scanned = [], [], []
-    engine = MarkItDown(enable_plugins=False)
+    try:
+        from markitdown import MarkItDown, StreamInfo
+        engine = MarkItDown(enable_plugins=False)
+        converter_name = 'Microsoft MarkItDown 0.1.9'
+    except ImportError:
+        # Portable builds may omit this optional package. The fallback keeps
+        # the upload action useful and records the reduced conversion path.
+        engine = None
+        StreamInfo = None
+        converter_name = 'Microsoft MarkItDown 0.1.9 兼容回退解析器'
+        warnings.append('未检测到 MarkItDown，已使用本机兼容回退解析器')
 
     def check():
         if cancelled():
@@ -122,7 +201,7 @@ def convert_document(path, *, cancelled=lambda: False, progress=lambda *_: None,
             check_container(source)
         check()
         ext = source.suffix.lower()
-        converter = 'Microsoft MarkItDown 0.1.9' + (' + LibreOffice' if source != path else '')
+        converter = converter_name + (' + LibreOffice' if source != path else '')
         if ext == '.pdf':
             import fitz
             with fitz.open(source) as pdf:
@@ -146,6 +225,8 @@ def convert_document(path, *, cancelled=lambda: False, progress=lambda *_: None,
                         data = single.tobytes()
                         single.close()
                         try:
+                            if engine is None:
+                                raise RuntimeError('MarkItDown unavailable')
                             md = engine.convert_stream(io.BytesIO(data), stream_info=StreamInfo(extension='.pdf')).text_content
                         except Exception:
                             md = raw
@@ -180,7 +261,10 @@ def convert_document(path, *, cancelled=lambda: False, progress=lambda *_: None,
             converter = 'openpyxl → Markdown'
             page_count = len(parts)
         else:
-            result = _clean(engine.convert_local(source).text_content)
+            if engine is None:
+                result = _clean(_fallback_convert_local(source))
+            else:
+                result = _clean(engine.convert_local(source).text_content)
             if ext == '.pptx':
                 slides = re.split(r'(?=<!--\s*Slide number:\s*\d+\s*-->)', result)
                 for index, slide in enumerate(s for s in slides if s.strip()):

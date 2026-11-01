@@ -21,6 +21,7 @@ import {setupWorkspace,historyMatches,canApplySavedScene} from './workspace-ui.j
 import {setupWorkbench} from './editor-workbench.js';
 import {setupLibrary} from './library-ui.js';
 import {SceneEditor,sanitizedSvg} from './canvas-editor.js';
+import {installUiContract} from './ui-contract.js';
 const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,conflict:false,timer:null,reference:null,candidate:null,active:null};
 let startupNavigationCancelled=false;
@@ -180,7 +181,29 @@ function renderLegacyHistory(){
  }
  if(!list.children.length)list.append(el('p','muted','没有匹配的图版，可以更换关键词或分类。'));
 }
-function renderAudit(){const a=S.audit,content=$('audit-content');content.replaceChildren();$('open-audit').textContent=a?.findings?.filter(f=>f.status!=='acknowledged').length?`排版与内容建议 · ${a.findings.filter(f=>f.status!=='acknowledged').length}`:'查看排版建议';$('open-audit').classList.remove('warning');if(!a){workspaceUI?.refresh();return;}content.append(el('div','check-summary',`修订 r${S.revision} · ${a.errors} 项错误 · ${a.warnings} 项提示`));for(const f of a.findings||[]){const card=el('div','finding '+f.severity);card.append(el('strong','','对象与几何检查'),el('div','',f.message));if(f.object_ids?.length){const b=el('button','',`定位 ${f.object_ids.join(' · ')}`);b.onclick=()=>{$('audit-dialog').close();editor.setSelection(f.object_ids);};card.append(b);}content.append(card);}if(!a.findings?.length)content.append(el('p','muted','当前检查没有发现对象与几何问题。科学含义仍由作者核对。'));const v=a.vision||{};content.append(el('h3','',`视觉建议 · ${v.status==='completed'?'已返回':v.status==='running'?'正在审阅':v.status==='unavailable'?'服务不可用':'尚未请求'}`));if(v.error)content.append(el('p','muted small',v.error));for(const [index,f]of (v.findings||[]).entries()){if(f.status==='dismissed')continue;const n=el('div','finding');n.append(el('strong','','模型意见 · 待核验'),el('div','',f.message));if(f.evidence)n.append(el('p','muted small',f.evidence));const dismiss=el('button','','核验后排除此建议');dismiss.onclick=async()=>{try{const data=await api(`/api/jobs/${S.id}/review-finding`,{base_revision:S.revision,index,reason:'作者核验后排除'});S.audit=data.audit;renderAudit();}catch(e){toast(e.message,true);}};n.append(dismiss);content.append(n);}if(v.raw){const details=el('details'),summary=el('summary','','审阅原文与诊断');details.append(summary,el('p','muted small',`模型：${v.model||'—'} · 修订 r${v.revision||S.revision}`),el('pre','review-raw',v.raw));for(const f of (v.findings||[]).filter(f=>f.status==='dismissed'))details.append(el('p','muted small',`已排除：${f.message}；${f.resolution||''}`));content.append(details);}content.append(el('p','muted small',a.author_confirmed?'作者已核对当前修订。':'当前修订尚未标记为作者核对。'));workspaceUI?.refresh();}
+function renderAudit(){
+ const a=S.audit,content=$('audit-content');content.replaceChildren();
+ const findings=a?.findings||[],pending=findings.filter(f=>f.status!=='acknowledged').length;
+ $('open-audit').textContent=pending?`排版与内容建议 · ${pending}`:'查看排版建议';
+ $('open-audit').classList.toggle('warning',!!pending);
+ const repairable=findings.some(f=>f.object_ids?.length&&['error','warning'].includes(f.severity));
+ $('repair-geometry').hidden=!repairable;
+ $('repair-geometry').disabled=!S.revision||!!S.saving||!!S.pending.length;
+ $('repair-geometry').textContent=repairable?'自动修复可确认的几何问题':'没有可自动修复的几何问题';
+ const visionButton=$('vision-review'),v=a?.vision||{};
+ visionButton.textContent=v.status==='running'?'正在获取视觉建议…':v.status==='completed'?'重新获取视觉建议':'获取视觉建议';
+ visionButton.disabled=!S.revision||v.status==='running';
+ $('confirm-author').disabled=!S.revision||!!a?.author_confirmed;
+ if(!a){workspaceUI?.refresh();return;}
+ content.append(el('div','check-summary',`修订 r${S.revision} · ${a.errors||0} 项错误 · ${a.warnings||0} 项提示`));
+ for(const f of findings){const card=el('div','finding '+f.severity);card.append(el('strong','','对象与几何检查'),el('div','',f.message));if(f.object_ids?.length){const b=el('button','',`定位 ${f.object_ids.join(' · ')}`);b.onclick=()=>{$('audit-dialog').close();editor.setSelection(f.object_ids);editor.revealSelection?.();};card.append(b);}content.append(card);}
+ if(!findings.length)content.append(el('p','muted','当前检查没有发现对象与几何问题。科学含义仍由作者核对。'));
+ content.append(el('h3','',`视觉建议 · ${v.status==='completed'?'已返回':v.status==='running'?'正在审阅':v.status==='unavailable'?'服务不可用':'尚未请求'}`));
+ if(v.error)content.append(el('p','muted small',v.error));
+ for(const [index,f]of (v.findings||[]).entries()){if(f.status==='dismissed')continue;const n=el('div','finding');n.append(el('strong','','模型意见 · 待核验'),el('div','',f.message));if(f.evidence)n.append(el('p','muted small',f.evidence));const dismiss=el('button','','核验后排除此建议');dismiss.onclick=async()=>{try{const data=await api(`/api/jobs/${S.id}/review-finding`,{base_revision:S.revision,index,reason:'作者核验后排除'});S.audit=data.audit;renderAudit();}catch(e){toast(e.message,true);}};n.append(dismiss);content.append(n);}
+ if(v.raw){const details=el('details'),summary=el('summary','','审阅原文与诊断');details.append(summary,el('p','muted small',`模型：${v.model||'—'} · 修订 r${v.revision||S.revision}`),el('pre','review-raw',v.raw));for(const f of (v.findings||[]).filter(f=>f.status==='dismissed'))details.append(el('p','muted small',`已排除：${f.message}；${f.resolution||''}`));content.append(details);}
+ content.append(el('p','muted small',a.author_confirmed?'作者已核对当前修订。':'当前修订尚未标记为作者核对。'));workspaceUI?.refresh();
+}
 async function openAI(){if(!S.revision||!editor.selectedIds.length)return toast('请先选择要修改的对象');if(!await flush())return;await annotationUI.forSelection([...editor.selectedIds]);}
 
 
@@ -253,4 +276,9 @@ documentsUI=setupDocumentAssistant({state:S,editor,api,toast,composer:composerUI
 onboardingUI=setupOnboarding({state:S,editor,api,flush,canLeave,openJob,refreshJobs,tab,toast});
 const personalUI=setupPersonalAssets({api,toast,library:libraryUI,state:S});
 const releaseUI=setupReleaseNotes({api,toast});
+// Keep command names and visible targets in sync as modules are added. A
+// broken target is reported for diagnostics but never blocks the editor.
+const uiContract=installUiContract({onIssue:issue=>console.warn('[Rylume UI contract]',issue.message)});
+window.__RYLUME_UI_CONTRACT__=uiContract;
+document.addEventListener('ui-action-error',event=>toast(event.detail?.message||'当前操作暂不可用',true));
 boot().then(async ok=>{if(ok){await onboardingUI.ready();deliveryUI.ready();releaseUI.ready();}});

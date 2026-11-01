@@ -3,6 +3,14 @@ import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
 export function setupWorkbench({editor,workspace}){
   const $=id=>document.getElementById(id);let savedPanels=null;
   document.querySelectorAll('[data-command]').forEach(b=>b.onclick=() => $(b.dataset.command)?.click());
+  // Panel commands live in the compact “更多” menu. Keep them usable even
+  // when the professional-mode module is unavailable or loads later.
+  document.querySelectorAll('[data-panel-command]').forEach(b=>b.onclick=() => {
+    const value=b.dataset.panelCommand;
+    const target=[...document.querySelectorAll('[data-tab]')].find(node=>node.dataset.tab===value);
+    if(target) target.click();
+    else b.dispatchEvent(new CustomEvent('ui-action-error',{bubbles:true,detail:{message:'这个面板暂不可用'}}));
+  });
   const menus=[...document.querySelectorAll('.app-menu')];
   for(const menu of menus){menu.addEventListener('toggle',()=>{if(menu.open)for(const other of menus)if(other!==menu)other.open=false;});menu.addEventListener('click',e=>{if(e.target.closest('button'))menu.open=false;});}
   document.addEventListener('pointerdown',e=>{for(const m of menus)if(!m.contains(e.target))m.open=false;});
