@@ -27,11 +27,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_cloud.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "atm_cloud.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_cloud.svg",
       "sha256": "9d3cdda2c57ed65330f786d54e491b1aa656c78b290fb6d9c591d4a424ed7e42"
     },
     {
@@ -54,11 +54,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_fire.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "hazard_fire.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_fire.svg",
       "sha256": "a2d33e494714d913adcb98430dfa9c5f47113b579f03d6f8f06ed6219b2374f4"
     },
     {
@@ -81,11 +81,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_reef.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_reef.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_reef.svg",
       "sha256": "b353283bc88fc6ebfe51cccd31d3c6e1ba3b9cbc272ef41217af73424f965432"
     },
     {
@@ -108,11 +108,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_mineral.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_mineral.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_mineral.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_mineral.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_mineral.svg",
       "sha256": "571b7a6cf185d34fa1bb695f27fcaee211c3d5954c9f134402b5768a149c23cb"
     },
     {
@@ -135,11 +135,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cloud.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cloud.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "cloud.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cloud.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cloud.svg",
       "sha256": "79b7da3ddabe3d10205fb8e2fc822234892d4118baaebd7cd5938aa0239bff62"
     },
     {
@@ -162,11 +162,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-rainy.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-rainy.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "weather-rainy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-rainy.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-rainy.svg",
       "sha256": "c30741be3c4e71287d303ae950595757483b62e1d31e960b9350839dfdc8518a"
     },
     {
@@ -189,11 +189,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sun-angle.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sun-angle.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "sun-angle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sun-angle.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sun-angle.svg",
       "sha256": "d2a03c9260aed3dc97a43a8aafa18dd706858edd2b2773fdeb5bd384bdc4a6b5"
     },
     {
@@ -216,11 +216,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "volcano.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg",
       "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1"
     },
     {
@@ -243,11 +243,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tree.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "tree.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tree.svg",
       "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b"
     },
     {
@@ -270,11 +270,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/leaf.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/leaf.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "leaf.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/leaf.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/leaf.svg",
       "sha256": "5c9ca60ab8fe75126f4108b04635085b1486b7b6f73569a6449be1d465fdc698"
     },
     {
@@ -297,11 +297,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_volcano.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg",
       "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc"
     },
     {
@@ -324,11 +324,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "waves.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
       "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
     },
     {
@@ -351,11 +351,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_profile.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_profile.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_soil_profile.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_profile.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_profile.svg",
       "sha256": "57e96e45a926df7cb988bebfaf21722980d4cc91bb8e787c19cefa9653919837"
     },
     {
@@ -378,11 +378,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_cloud.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "atm_cloud.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_cloud.svg",
       "sha256": "9d3cdda2c57ed65330f786d54e491b1aa656c78b290fb6d9c591d4a424ed7e42"
     },
     {
@@ -405,11 +405,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_glacier.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
       "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
     },
     {
@@ -432,11 +432,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_strata.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_strata.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_strata.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_strata.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_strata.svg",
       "sha256": "2dac77f70241b53229a88ece95575f6dce19a6dde9c08afb8fdbbba885db36d0"
     },
     {
@@ -459,11 +459,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_glacier.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
       "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
     },
     {
@@ -486,11 +486,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/satellite.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/satellite.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "satellite.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/satellite.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/satellite.svg",
       "sha256": "5be68123d12cbb2c8d8f9078d5b2066dedf8b28f45d09438f1ce7bd9ad14a93d"
     },
     {
@@ -513,11 +513,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "layers.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg",
       "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
     },
     {
@@ -540,11 +540,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_pollution.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_pollution.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "atm_pollution.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_pollution.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_pollution.svg",
       "sha256": "43a3c48f0ebe5ba835dbb1b650d15216ffc36326b883da40492d748a23a92524"
     },
     {
@@ -567,11 +567,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_coast.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_coast.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_coast.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_coast.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_coast.svg",
       "sha256": "79fb17a67f0c63d614b5de5080802fda013c5a6183bdc7317caa008fff31dc80"
     },
     {
@@ -594,11 +594,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "water_membrane.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg",
       "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f"
     },
     {
@@ -621,11 +621,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-tree.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/file-tree.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "file-tree.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-tree.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/file-tree.svg",
       "sha256": "8efa7e48fa316fa851fa1bc46edcdcc116100043f22864453d7a0e5e9ff5cec9"
     },
     {
@@ -648,11 +648,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_aggregate.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_aggregate.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_soil_aggregate.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_aggregate.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_aggregate.svg",
       "sha256": "29fecb068d2c77b07cfa1a72f662764ac0f3112a445e4df43c30c23827f64676"
     },
     {
@@ -675,11 +675,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "map_sampling.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg",
       "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522"
     },
     {
@@ -702,11 +702,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_strata.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_strata.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_strata.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_strata.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_strata.svg",
       "sha256": "2dac77f70241b53229a88ece95575f6dce19a6dde9c08afb8fdbbba885db36d0"
     },
     {
@@ -729,11 +729,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/landslide.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/landslide.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "landslide.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/landslide.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/landslide.svg",
       "sha256": "cbd984d8d85721c6a3df921988fdf456607df44778fa4ff449399805caa1b7ca"
     },
     {
@@ -756,11 +756,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_lake.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_lake.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_lake.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_lake.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_lake.svg",
       "sha256": "6049df2084b795ea145ac32b2fe237449ee2e934f5a5889bae6321303c27e2fd"
     },
     {
@@ -783,11 +783,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_stormwater.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_stormwater.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "water_stormwater.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_stormwater.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_stormwater.svg",
       "sha256": "f9208cf59502d8c85f09d74534158d456d1771cef3c4c882d80644588268acb9"
     },
     {
@@ -810,11 +810,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_storm.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_storm.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "hazard_storm.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_storm.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_storm.svg",
       "sha256": "885bab56a31f1a9b9592c5ecfb0ac47bbad422e4ddc0caeba96dc49a86817698"
     },
     {
@@ -837,11 +837,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_stormwater.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_stormwater.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "water_stormwater.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_stormwater.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_stormwater.svg",
       "sha256": "f9208cf59502d8c85f09d74534158d456d1771cef3c4c882d80644588268acb9"
     },
     {
@@ -864,11 +864,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_volcano.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg",
       "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc"
     },
     {
@@ -891,11 +891,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_glacier.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
       "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
     },
     {
@@ -918,11 +918,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delta.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delta.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "delta.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delta.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delta.svg",
       "sha256": "5f9471de8919ad646105b27fc2654c62730d2d7ffae3fd946a4ac2077dc31e89"
     },
     {
@@ -945,11 +945,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_desert.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_desert.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_desert.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_desert.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_desert.svg",
       "sha256": "4d423ceb8f1cfdaa1b7b9704f8315d1582ec7b0bf10a76542bdb0b4b07a7a23e"
     },
     {
@@ -972,11 +972,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_radiation.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_radiation.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "atm_radiation.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_radiation.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/atm_radiation.svg",
       "sha256": "ba3be599ad92ae98cf11740ab478edfeb5a60a9c4cb8e7179639c07c354aab39"
     },
     {
@@ -999,11 +999,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "hazard_slope.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg",
       "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5"
     },
     {
@@ -1026,11 +1026,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/forest.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/forest.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "forest.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/forest.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/forest.svg",
       "sha256": "581ed871c2b3d06f61c94239bc69edb40aa4b24de6892109a67197cb8d3e29c7"
     },
     {
@@ -1053,11 +1053,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_river.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_river.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_river.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_river.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_river.svg",
       "sha256": "0eed15c43138ada1b724bfc2e2166e4c2e103d7ca51dc6baa1349f9eca2d2063"
     },
     {
@@ -1080,11 +1080,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_grassland.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_grassland.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_grassland.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_grassland.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_grassland.svg",
       "sha256": "05ff1e69539a7f6951f3f41d76562e7c3879e44f19fa536c4b5a7a28d3780838"
     },
     {
@@ -1107,11 +1107,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "map_sampling.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg",
       "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522"
     },
     {
@@ -1134,11 +1134,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/greenhouse.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/greenhouse.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "greenhouse.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/greenhouse.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/greenhouse.svg",
       "sha256": "129a95e711dd1686615ac069e78abf837cff23b3696d24418a623734536bccca"
     },
     {
@@ -1161,11 +1161,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_reef.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_reef.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_reef.svg",
       "sha256": "b353283bc88fc6ebfe51cccd31d3c6e1ba3b9cbc272ef41217af73424f965432"
     },
     {
@@ -1188,11 +1188,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_fire.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "hazard_fire.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_fire.svg",
       "sha256": "a2d33e494714d913adcb98430dfa9c5f47113b579f03d6f8f06ed6219b2374f4"
     },
     {
@@ -1215,11 +1215,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "water.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
       "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
     },
     {
@@ -1242,11 +1242,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_urban_habitat.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg",
       "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74"
     },
     {
@@ -1269,11 +1269,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_landforms.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_landforms.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_landforms.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_landforms.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_landforms.svg",
       "sha256": "9c3d345d101aec4ecf6e0d0e2376d937a33fb80431ebe2b549fb6c9337e583f3"
     },
     {
@@ -1296,11 +1296,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_storm.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_storm.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "hazard_storm.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_storm.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_storm.svg",
       "sha256": "885bab56a31f1a9b9592c5ecfb0ac47bbad422e4ddc0caeba96dc49a86817698"
     },
     {
@@ -1323,11 +1323,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_profile.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_profile.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_soil_profile.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_profile.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_soil_profile.svg",
       "sha256": "57e96e45a926df7cb988bebfaf21722980d4cc91bb8e787c19cefa9653919837"
     },
     {
@@ -1350,11 +1350,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/network.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/network.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "network.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/network.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/network.svg",
       "sha256": "b27a5fb6cd9a8efd84205e78bb75d2c0616b40fd74613c03e422f3e72e0c36e9"
     },
     {
@@ -1377,11 +1377,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_wetland.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_wetland.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_wetland.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_wetland.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_wetland.svg",
       "sha256": "e545d073df1ae26377cecc400e727c7b757a7cc48e422ddf7e8b8fb30d0ce36b"
     },
     {
@@ -1404,11 +1404,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "hazard_slope.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg",
       "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5"
     },
     {
@@ -1431,11 +1431,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "hazard_slope.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/hazard_slope.svg",
       "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5"
     },
     {
@@ -1458,11 +1458,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_urban_habitat.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg",
       "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74"
     },
     {
@@ -1485,11 +1485,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_monitoring.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_monitoring.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_monitoring.svg",
       "sha256": "12e957ce7adff0159fff6c579d82258544b86f68697fb718e817d0a990dbc3cc"
     },
     {
@@ -1512,11 +1512,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/city.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/city.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "city.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/city.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/city.svg",
       "sha256": "e5b1c48b73c4725dbefc2875f05d40c58bec2386f33fa6b1e3660e99dbec6c79"
     },
     {
@@ -1539,11 +1539,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-conditioner.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-conditioner.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "air-conditioner.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-conditioner.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-conditioner.svg",
       "sha256": "f04f32d505a8c047ff69bc50e65d26fc35d3143ddc90ddbd0340112ced86f916"
     },
     {
@@ -1566,11 +1566,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wind-turbine.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wind-turbine.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "wind-turbine.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wind-turbine.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wind-turbine.svg",
       "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f"
     },
     {
@@ -1593,11 +1593,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/lightning-bolt.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/lightning-bolt.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "lightning-bolt.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/lightning-bolt.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/lightning-bolt.svg",
       "sha256": "aab85cfe2bc37c7fb81a6955a275b6fb299c908867812482d1fe08df43258392"
     },
     {
@@ -1620,11 +1620,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "water_membrane.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg",
       "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f"
     },
     {
@@ -1647,11 +1647,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "water_membrane.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_membrane.svg",
       "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f"
     },
     {
@@ -1674,11 +1674,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_urban_habitat.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_urban_habitat.svg",
       "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74"
     },
     {
@@ -1701,11 +1701,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ice-cream.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ice-cream.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "ice-cream.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ice-cream.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ice-cream.svg",
       "sha256": "a0f875f0315c6f22dde0baedcdd4be86efd91fd0b9444bed5934a33e675273dc"
     },
     {
@@ -1728,11 +1728,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "waves.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
       "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
     },
     {
@@ -1755,11 +1755,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_supply.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_supply.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "water_supply.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_supply.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_supply.svg",
       "sha256": "c8930b405146618a6ff4d6b50ab7271dacefbc82f3ddb1a07283bb739b8637b3"
     },
     {
@@ -1782,11 +1782,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/oil.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/oil.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "oil.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/oil.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/oil.svg",
       "sha256": "996556c2dbfd51c2771df1f3185bf45e1ba723bdc039d78566c68262e46e959b"
     },
     {
@@ -1809,11 +1809,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_geography.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_geography.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "map_geography.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_geography.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_geography.svg",
       "sha256": "af235d101fed944272d60fd8e04f5262aac86a622026a3a61e0df1a5ee339be7"
     },
     {
@@ -1836,11 +1836,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/earth.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/earth.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "earth.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/earth.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/earth.svg",
       "sha256": "0062e447258806dbbc4e0d768399518f9853059c0e39b782b3ea5b912190efe7"
     },
     {
@@ -1863,11 +1863,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/remote.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/remote.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "remote.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/remote.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/remote.svg",
       "sha256": "5c9b1bdcca995868ab60176050f18292d149c424ea05f97f57ccf9e626b3cd3f"
     },
     {
@@ -1890,11 +1890,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_monitoring.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_monitoring.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_monitoring.svg",
       "sha256": "12e957ce7adff0159fff6c579d82258544b86f68697fb718e817d0a990dbc3cc"
     },
     {
@@ -1917,11 +1917,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_river.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_river.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_river.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_river.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_river.svg",
       "sha256": "0eed15c43138ada1b724bfc2e2166e4c2e103d7ca51dc6baa1349f9eca2d2063"
     },
     {
@@ -1944,11 +1944,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ice-cream.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ice-cream.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "ice-cream.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ice-cream.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ice-cream.svg",
       "sha256": "a0f875f0315c6f22dde0baedcdd4be86efd91fd0b9444bed5934a33e675273dc"
     },
     {
@@ -1971,11 +1971,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-multiple.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/circle-multiple.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "circle-multiple.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-multiple.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/circle-multiple.svg",
       "sha256": "d812c9cb0ef6f75aa1eec14606a99e5d5824fc6177982b81ecefe4a7f45fb825"
     },
     {
@@ -1998,11 +1998,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "water.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
       "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
     },
     {
@@ -2025,11 +2025,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_volcano.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_volcano.svg",
       "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc"
     },
     {
@@ -2052,11 +2052,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "layers.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/layers.svg",
       "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
     },
     {
@@ -2079,11 +2079,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "volcano.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg",
       "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1"
     },
     {
@@ -2106,11 +2106,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "volcano.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/volcano.svg",
       "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1"
     },
     {
@@ -2133,11 +2133,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
     },
     {
@@ -2160,11 +2160,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/signal.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/signal.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "signal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/signal.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/signal.svg",
       "sha256": "785a3dcf861d637eafa606ae4b88464ad4acfc59114085a712dc0f8bb1e17990"
     },
     {
@@ -2187,11 +2187,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/terrain.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/terrain.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "terrain.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/terrain.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/terrain.svg",
       "sha256": "12f453c32d27b0989a5e852249fc353a17f597a77328215b0e9878377d5764b5"
     },
     {
@@ -2214,11 +2214,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/terrain.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/terrain.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "terrain.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/terrain.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/terrain.svg",
       "sha256": "12f453c32d27b0989a5e852249fc353a17f597a77328215b0e9878377d5764b5"
     },
     {
@@ -2241,11 +2241,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-hurricane.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-hurricane.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "weather-hurricane.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-hurricane.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-hurricane.svg",
       "sha256": "76ec534ad41f6e6edd308b96a2bf862de73d6ddcd7467ab1e131b3d8de303dee"
     },
     {
@@ -2268,11 +2268,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-rainy.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-rainy.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "weather-rainy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-rainy.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-rainy.svg",
       "sha256": "c30741be3c4e71287d303ae950595757483b62e1d31e960b9350839dfdc8518a"
     },
     {
@@ -2295,11 +2295,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-cloudy.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-cloudy.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "weather-cloudy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-cloudy.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-cloudy.svg",
       "sha256": "bcebc42f24b483f905ea4cca17b2e9e7a96158c09a5468fd60c9d1fe3ee33f90"
     },
     {
@@ -2322,11 +2322,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solar-panel.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solar-panel.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "solar-panel.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solar-panel.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solar-panel.svg",
       "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5"
     },
     {
@@ -2349,11 +2349,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield-sun.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield-sun.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "shield-sun.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield-sun.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield-sun.svg",
       "sha256": "2f526ef5a991c3050851808b77188b9967131275e7657045284d92249e27ec63"
     },
     {
@@ -2376,11 +2376,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "blur.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg",
       "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
     },
     {
@@ -2403,11 +2403,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-filter.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-filter.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "air-filter.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-filter.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-filter.svg",
       "sha256": "cd247932b4681069740e21ed78e7f55dce499f9a24e48641ce294437f5dc31bf"
     },
     {
@@ -2430,11 +2430,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water-pump.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water-pump.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "water-pump.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water-pump.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water-pump.svg",
       "sha256": "7f6ab2db230d9398e8f3ecfd4ebb2d5d42e21c1b95b6b0c27e4570a9ee6c3781"
     },
     {
@@ -2457,11 +2457,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_wastewater.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_wastewater.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "water_wastewater.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_wastewater.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/water_wastewater.svg",
       "sha256": "f397085bce941f36cff57cc7576a704449ff868893acb7f4dfc5eb7846df08d5"
     },
     {
@@ -2484,11 +2484,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/compost.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/compost.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "compost.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/compost.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/compost.svg",
       "sha256": "3642fadf9ce439427fed47f719feba534bb1d80d408254a3b76ea6f7548d4a5d"
     },
     {
@@ -2511,11 +2511,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delete.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delete.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "delete.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delete.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/delete.svg",
       "sha256": "773406386de6d1060b497194723844fdc30f456cee6c0da4bdbe12d2feeed8d6"
     },
     {
@@ -2538,11 +2538,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_glacier.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_glacier.svg",
       "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
     },
     {
@@ -2565,11 +2565,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/forest.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/forest.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "forest.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/forest.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/forest.svg",
       "sha256": "581ed871c2b3d06f61c94239bc69edb40aa4b24de6892109a67197cb8d3e29c7"
     },
     {
@@ -2592,11 +2592,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "graph.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph.svg",
       "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e"
     },
     {
@@ -2619,11 +2619,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/food-apple.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/food-apple.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "food-apple.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/food-apple.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/food-apple.svg",
       "sha256": "36bf040e46e139068ea917878befd59d348ae139538613a3b57b2009628eebd8"
     },
     {
@@ -2646,11 +2646,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_wetland.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_wetland.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "env_wetland.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_wetland.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/env_wetland.svg",
       "sha256": "e545d073df1ae26377cecc400e727c7b757a7cc48e422ddf7e8b8fb30d0ce36b"
     },
     {
@@ -2673,11 +2673,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "waves.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
       "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
     },
     {
@@ -2700,11 +2700,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "thermometer.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
       "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
     },
     {
@@ -2727,11 +2727,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "waves.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/waves.svg",
       "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
     },
     {
@@ -2754,11 +2754,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "map_sampling.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/map_sampling.svg",
       "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522"
     },
     {
@@ -2781,11 +2781,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_landforms.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_landforms.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "geo_landforms.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_landforms.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/geo_landforms.svg",
       "sha256": "9c3d345d101aec4ecf6e0d0e2376d937a33fb80431ebe2b549fb6c9337e583f3"
     },
     {
@@ -2808,11 +2808,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/city.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/city.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "city.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/city.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/city.svg",
       "sha256": "e5b1c48b73c4725dbefc2875f05d40c58bec2386f33fa6b1e3660e99dbec6c79"
     },
     {
@@ -2835,11 +2835,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/earth.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/earth.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "earth.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/earth.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/earth.svg",
       "sha256": "0062e447258806dbbc4e0d768399518f9853059c0e39b782b3ea5b912190efe7"
     },
     {
@@ -2861,11 +2861,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/database.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "database.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/database.svg",
       "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427"
     },
     {
@@ -2887,11 +2887,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_transport.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "process_transport.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_transport.svg",
       "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
     },
     {
@@ -2913,11 +2913,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "pipe.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
       "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
     },
     {
@@ -2939,11 +2939,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/land-fields.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/land-fields.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "land-fields.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/land-fields.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/land-fields.svg",
       "sha256": "33762996ed882e55f5f4a9036f81c97ff5833abcd5d58cd56fd514c1014e8fc2"
     },
     {
@@ -2965,11 +2965,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_thermal_power.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_thermal_power.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "eng_thermal_power.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_thermal_power.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_thermal_power.svg",
       "sha256": "978ab2369eb8d40ee625396787f996f05774310f022fd795da81fc4f291398d1"
     }
   ],

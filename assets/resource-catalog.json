@@ -11,8 +11,8 @@
       "asset_count": 101,
       "template_count": 8,
       "asset_name": "rylume-pack-chemistry-2.2.0.zip",
-      "sha256": "a6401eae1fa975ef063e484dacd6167031c8a60688c7f42cbc7a0f104939571b",
-      "size": 125396
+      "sha256": "2d07b07f275fb38a03627d2ba9d6a7543c862150426c0a36f53674712d613b55",
+      "size": 126004
     },
     {
       "id": "physics",
@@ -24,8 +24,8 @@
       "asset_count": 103,
       "template_count": 8,
       "asset_name": "rylume-pack-physics-2.2.0.zip",
-      "sha256": "ad82f40a6aeffba4d6013e54029e68848d92b7283fd35f84304c99a225a9d599",
-      "size": 124171
+      "sha256": "8d7f57faca8839f10517943368c006ef1b9a6f9b1d2ca4eed7a37f1610808238",
+      "size": 124758
     },
     {
       "id": "materials",
@@ -37,8 +37,8 @@
       "asset_count": 104,
       "template_count": 8,
       "asset_name": "rylume-pack-materials-2.2.0.zip",
-      "sha256": "7b4afbf5cf7c52a6c5d909c2a9630287c0309a6451bc8754b53d647a94ddbc81",
-      "size": 144406
+      "sha256": "372ff75f744ed15680e978359dd28be578af608831e9ca55d195b0db45723697",
+      "size": 145059
     },
     {
       "id": "engineering",
@@ -50,8 +50,8 @@
       "asset_count": 101,
       "template_count": 8,
       "asset_name": "rylume-pack-engineering-2.2.0.zip",
-      "sha256": "62bef76c73d1e1e79f4c18023bbe69acec5ca071982d390ad59cb6f5154ec85f",
-      "size": 113444
+      "sha256": "59bac54a21ac43a06e885c4a0a4d50718928ba8aa2a8728e4ab8135d4eb1529f",
+      "size": 113989
     },
     {
       "id": "earth-environment",
@@ -63,8 +63,8 @@
       "asset_count": 110,
       "template_count": 8,
       "asset_name": "rylume-pack-earth-environment-2.2.0.zip",
-      "sha256": "1636558b707bccb8d6120bc93335adb75763d0e60ad54fce2926ec82f7de734d",
-      "size": 193316
+      "sha256": "013a97f584eec108eb02842089a149cbe483827db55e91a54c6b257f82140b69",
+      "size": 193875
     },
     {
       "id": "computing-math",
@@ -76,8 +76,8 @@
       "asset_count": 102,
       "template_count": 8,
       "asset_name": "rylume-pack-computing-math-2.2.0.zip",
-      "sha256": "2d26aaaba8234068e9944331854cedae770609115a45cce63a3457b86666f3e0",
-      "size": 129927
+      "sha256": "2bbd7811738a4917d5ae81b0b97a6a42ae365f19a0802d3390bed84b9a61bef7",
+      "size": 130485
     },
     {
       "id": "medicine",
@@ -89,8 +89,8 @@
       "asset_count": 108,
       "template_count": 8,
       "asset_name": "rylume-pack-medicine-2.2.0.zip",
-      "sha256": "30f10ac06e8802dd6403e6e13e5a86fb71c0ee75526c465a8eee1e0675763367",
-      "size": 229772
+      "sha256": "6eb0ace262d8369fe7108737165741d07b33e6b9f5a1bd356b5601c4f4c3a10a",
+      "size": 230358
     }
   ]
 }

@@ -27,11 +27,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/beaker.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/beaker.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "beaker.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/beaker.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/beaker.svg",
       "sha256": "6e1e2818cbb0792ec1c669ad77b93ad7526d1159d42f802509684b1f05c74915"
     },
     {
@@ -54,11 +54,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "flask.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg",
       "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
     },
     {
@@ -81,11 +81,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
@@ -108,11 +108,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
@@ -135,11 +135,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_electrochemistry.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
@@ -162,11 +162,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
@@ -189,11 +189,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "flask.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg",
       "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
     },
     {
@@ -216,11 +216,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/molecule.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/molecule.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "molecule.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/molecule.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/molecule.svg",
       "sha256": "d70e939fb7c63059457492fc8bd53a98cba0365702f118d156c9287bdec09098"
     },
     {
@@ -243,11 +243,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
@@ -270,11 +270,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
@@ -297,11 +297,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
@@ -324,11 +324,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/battery.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "battery.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/battery.svg",
       "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f"
     },
     {
@@ -351,11 +351,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_chromatography.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg",
       "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
     },
     {
@@ -378,11 +378,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_electrochemistry.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
@@ -405,11 +405,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "process_chemical.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg",
       "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
     },
     {
@@ -432,11 +432,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
@@ -459,11 +459,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/crystal-ball.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/crystal-ball.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "crystal-ball.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/crystal-ball.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/crystal-ball.svg",
       "sha256": "426a7a35b938fe1f08175b28519faac4b2dd55ce2ed9253725c6c53dd578c436"
     },
     {
@@ -486,11 +486,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_mass_spectrometry.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_mass_spectrometry.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_mass_spectrometry.svg",
       "sha256": "e66875b17191a136a1519809f3e999f55a1fb1a133ab681cad8a02dfe20e4e97"
     },
     {
@@ -513,11 +513,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "flask.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg",
       "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
     },
     {
@@ -540,11 +540,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cylinder.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cylinder.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "cylinder.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cylinder.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/cylinder.svg",
       "sha256": "b11087e88cea5c965dbbb240b93d7ccb6e27576879e7aa21f1b85550f40da9f9"
     },
     {
@@ -567,11 +567,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_electron_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
       "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
@@ -594,11 +594,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_electron_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electron_microscopy.svg",
       "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
@@ -621,11 +621,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
@@ -648,11 +648,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mortar-pestle.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/mortar-pestle.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "mortar-pestle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mortar-pestle.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/mortar-pestle.svg",
       "sha256": "b66510a302b639849a8ecdd76da39f250899ef586d33295d3d7775833b43b91c"
     },
     {
@@ -675,11 +675,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_field_sampling.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
       "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
@@ -702,11 +702,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
@@ -729,11 +729,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
@@ -756,11 +756,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_electrochemistry.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
@@ -783,11 +783,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_field_sampling.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
       "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
@@ -810,11 +810,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ph.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ph.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "ph.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ph.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ph.svg",
       "sha256": "ee22edbcc708a61cda5feb3fac1663203ea229105fadf4f3785c61aa55d34d25"
     },
     {
@@ -837,11 +837,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
@@ -864,11 +864,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_chromatography.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg",
       "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
     },
     {
@@ -891,11 +891,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "mat_crystals.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg",
       "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
     },
     {
@@ -918,11 +918,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
@@ -945,11 +945,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_electrochemistry.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
@@ -972,11 +972,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_microfluidics.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg",
       "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
     },
     {
@@ -999,11 +999,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_mass_spectrometry.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_mass_spectrometry.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_mass_spectrometry.svg",
       "sha256": "e66875b17191a136a1519809f3e999f55a1fb1a133ab681cad8a02dfe20e4e97"
     },
     {
@@ -1026,11 +1026,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
@@ -1053,11 +1053,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vacuum.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vacuum.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "vacuum.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vacuum.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vacuum.svg",
       "sha256": "d9ed4b144c5ce5cfa2b0bc304b021ffdbb8fb215f4c2d0e5c45ee0e16982ed59"
     },
     {
@@ -1080,11 +1080,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gas-cylinder.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "gas-cylinder.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gas-cylinder.svg",
       "sha256": "95455eb65ffac0e12f242ebb1430e27de4f4bc9db68370f62e4b17130cc0d349"
     },
     {
@@ -1107,11 +1107,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "water.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
       "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
     },
     {
@@ -1134,11 +1134,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
@@ -1161,11 +1161,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_chromatography.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg",
       "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
     },
     {
@@ -1188,11 +1188,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_electrochemistry.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
@@ -1215,11 +1215,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_field_sampling.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
       "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
@@ -1242,11 +1242,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_mass_spectrometry.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_mass_spectrometry.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_mass_spectrometry.svg",
       "sha256": "e66875b17191a136a1519809f3e999f55a1fb1a133ab681cad8a02dfe20e4e97"
     },
     {
@@ -1269,11 +1269,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
@@ -1296,11 +1296,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
@@ -1323,11 +1323,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
@@ -1350,11 +1350,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
@@ -1377,11 +1377,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
@@ -1404,11 +1404,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "mat_small_molecules.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_small_molecules.svg",
       "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
@@ -1431,11 +1431,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "process_chemical.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg",
       "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
     },
     {
@@ -1458,11 +1458,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
@@ -1485,11 +1485,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_electrochemistry.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_electrochemistry.svg",
       "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
@@ -1512,11 +1512,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
@@ -1539,11 +1539,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sitemap.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "sitemap.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sitemap.svg",
       "sha256": "4ca10e40b22e7721463aeee6f715dae3950090815417dee6fc309d9f2bf596f4"
     },
     {
@@ -1566,11 +1566,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
@@ -1593,11 +1593,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_molecular_assays.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
@@ -1620,11 +1620,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fuel.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/fuel.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "fuel.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fuel.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/fuel.svg",
       "sha256": "00324a28d825d9b63e212250ef306ad88fa79005ff0e6547ab26fefa79af911e"
     },
     {
@@ -1647,11 +1647,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
@@ -1674,11 +1674,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_microfluidics.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_microfluidics.svg",
       "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
     },
     {
@@ -1701,11 +1701,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_field_sampling.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_field_sampling.svg",
       "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
@@ -1728,11 +1728,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/periodic-table.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/periodic-table.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "periodic-table.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/periodic-table.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/periodic-table.svg",
       "sha256": "60f5a0ce8cb739cb2fdd0796db3fc0c21604d03dfb3c61d0662a0ca597a86824"
     },
     {
@@ -1755,11 +1755,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "mat_crystals.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg",
       "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
     },
     {
@@ -1782,11 +1782,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/crystal-ball.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/crystal-ball.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "crystal-ball.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/crystal-ball.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/crystal-ball.svg",
       "sha256": "426a7a35b938fe1f08175b28519faac4b2dd55ce2ed9253725c6c53dd578c436"
     },
     {
@@ -1809,11 +1809,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
@@ -1836,11 +1836,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-bell-curve.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
       "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
     },
     {
@@ -1863,11 +1863,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "thermometer.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
       "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
     },
     {
@@ -1890,11 +1890,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solid.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solid.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "solid.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solid.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/solid.svg",
       "sha256": "84408899012b8954bab9bbbbbb72be2594226241e2973bbf25b01638ea04b819"
     },
     {
@@ -1917,11 +1917,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/liquid-spot.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/liquid-spot.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "liquid-spot.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/liquid-spot.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/liquid-spot.svg",
       "sha256": "0b0cef5fe09b2c31e7dfb573f4d3f4492a1ebc74d1573ada0a33ff89d1194d15"
     },
     {
@@ -1944,11 +1944,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "test-tube.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg",
       "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
     },
     {
@@ -1971,11 +1971,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "test-tube.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg",
       "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
     },
     {
@@ -1998,11 +1998,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "dna.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg",
       "sha256": "2edf4c8a7cc5ec0454d94baa37f976aba8f27f2436485f3a6fd96f589aee6cdb"
     },
     {
@@ -2025,11 +2025,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_centrifugation.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_centrifugation.svg",
       "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
@@ -2052,11 +2052,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-document.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/file-document.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "file-document.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-document.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/file-document.svg",
       "sha256": "9371dfd39cd01692ab6a825c8517db82a672ba2e6298cb342b4052396687afa4"
     },
     {
@@ -2079,11 +2079,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-line.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
       "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
     },
     {
@@ -2106,11 +2106,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-sunny.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-sunny.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "weather-sunny.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-sunny.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/weather-sunny.svg",
       "sha256": "eaa4c2cf9d7a8e41181e193da123591644b46791736d694d281decd2fafb2f2a"
     },
     {
@@ -2133,11 +2133,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-line.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
       "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
     },
     {
@@ -2160,11 +2160,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-filter.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-filter.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "air-filter.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-filter.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/air-filter.svg",
       "sha256": "cd247932b4681069740e21ed78e7f55dce499f9a24e48641ce294437f5dc31bf"
     },
     {
@@ -2187,11 +2187,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hand-back-right.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hand-back-right.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "hand-back-right.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hand-back-right.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hand-back-right.svg",
       "sha256": "cee64dea0dd7acbb9440e9584ef14d14e22b9517711f5baa5c97e02f52636d60"
     },
     {
@@ -2214,11 +2214,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gas-cylinder.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "gas-cylinder.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gas-cylinder.svg",
       "sha256": "95455eb65ffac0e12f242ebb1430e27de4f4bc9db68370f62e4b17130cc0d349"
     },
     {
@@ -2241,11 +2241,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gauge.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "gauge.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gauge.svg",
       "sha256": "fb31613d7a44b32eb9b627d98cf0bea7b79c93e435593e44d3b43967d51b06c7"
     },
     {
@@ -2268,11 +2268,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_light_microscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_light_microscopy.svg",
       "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
@@ -2295,11 +2295,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microwave.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/microwave.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "microwave.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microwave.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/microwave.svg",
       "sha256": "4b4d7188a4b99b970582c1fc4eef795ded9e830e3c1f260c3253c7b90dc4192b"
     },
     {
@@ -2322,11 +2322,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "magnet.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg",
       "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
     },
     {
@@ -2349,11 +2349,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/filter.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/filter.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "filter.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/filter.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/filter.svg",
       "sha256": "49addd47f9fe63951fb2ecba09e4b1bb36cbbc312deb82215c634990d60b8193"
     },
     {
@@ -2376,11 +2376,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
@@ -2403,11 +2403,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gate-buffer.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gate-buffer.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "gate-buffer.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gate-buffer.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gate-buffer.svg",
       "sha256": "f1148a2475ef50d5ff39530cca29d68e663996295c7b85de30a499dce39e8510"
     },
     {
@@ -2430,11 +2430,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "process_chemical.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg",
       "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
     },
     {
@@ -2457,11 +2457,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-bell-curve.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
       "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
     },
     {
@@ -2484,11 +2484,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-bell-curve.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
       "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
     },
     {
@@ -2511,11 +2511,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "dna.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg",
       "sha256": "2edf4c8a7cc5ec0454d94baa37f976aba8f27f2436485f3a6fd96f589aee6cdb"
     },
     {
@@ -2538,11 +2538,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-curve.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-curve.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "vector-curve.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-curve.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-curve.svg",
       "sha256": "42d1b51e33adba87020d64a449701767d569ada7b1eaff3e06467abb4390993d"
     },
     {
@@ -2565,11 +2565,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-bell-curve.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
       "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
     },
     {
@@ -2592,11 +2592,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "mat_crystals.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/mat_crystals.svg",
       "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
     },
     {
@@ -2619,11 +2619,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_chromatography.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_chromatography.svg",
       "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
     },
     {
@@ -2646,11 +2646,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sitemap.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "sitemap.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sitemap.svg",
       "sha256": "4ca10e40b22e7721463aeee6f715dae3950090815417dee6fc309d9f2bf596f4"
     },
     {
@@ -2672,11 +2672,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "access-point.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
       "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
     },
     {
@@ -2698,11 +2698,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_pumps_valves.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "eng_pumps_valves.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/eng_pumps_valves.svg",
       "sha256": "f4053ea30d264a77c28eb4d646db3aac7f184007284317cc5640276a6a540c8a"
     },
     {
@@ -2724,11 +2724,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "process_chemical.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_chemical.svg",
       "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
     }
   ],

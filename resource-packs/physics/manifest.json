@@ -27,11 +27,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
       "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
     },
     {
@@ -54,11 +54,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mirror.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/mirror.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "mirror.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mirror.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/mirror.svg",
       "sha256": "51a67507aa59b9c5d9c3ae559b6a0678aa95ab3c7cc33c82eab5a747b272f8d0"
     },
     {
@@ -81,11 +81,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "laser-pointer.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg",
       "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
     },
     {
@@ -108,11 +108,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_spacecraft.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_spacecraft.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_spacecraft.svg",
       "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a"
     },
     {
@@ -135,11 +135,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_compact_objects.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_compact_objects.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_compact_objects.svg",
       "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42"
     },
     {
@@ -162,11 +162,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/screen-rotation.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/screen-rotation.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "screen-rotation.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/screen-rotation.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/screen-rotation.svg",
       "sha256": "bb23cbff050c290e57415584bb588e24d300a2af292b6397344dcd4c3b884a7c"
     },
     {
@@ -189,11 +189,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/atom.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/atom.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "atom.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/atom.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/atom.svg",
       "sha256": "2d5e7f4dc620ddddbab95e49cd9fc292a14155beb4404b95c1ef447aebaae654"
     },
     {
@@ -216,11 +216,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
     },
     {
@@ -243,11 +243,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "magnet.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg",
       "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
     },
     {
@@ -270,11 +270,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
@@ -297,11 +297,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
@@ -324,11 +324,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_spacecraft.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_spacecraft.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_spacecraft.svg",
       "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a"
     },
     {
@@ -351,11 +351,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
@@ -378,11 +378,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
@@ -405,11 +405,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
       "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
@@ -432,11 +432,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/resistor.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "resistor.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/resistor.svg",
       "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a"
     },
     {
@@ -459,11 +459,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "access-point.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
       "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
     },
     {
@@ -486,11 +486,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
@@ -513,11 +513,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
@@ -540,11 +540,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
@@ -567,11 +567,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_compact_objects.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_compact_objects.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_compact_objects.svg",
       "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42"
     },
     {
@@ -594,11 +594,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-projectile.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-projectile.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "arrow-projectile.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-projectile.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-projectile.svg",
       "sha256": "f1f7124f333a93efbfd5876e0ab642053cfb7a26978f794e77f47677d49e5ff5"
     },
     {
@@ -621,11 +621,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
@@ -648,11 +648,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-right.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-right.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "rotate-right.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-right.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/rotate-right.svg",
       "sha256": "7c0fdfe5c01d6f8455aad37288bb8d6dfc768054e31147dbef5a95c40baa0f23"
     },
     {
@@ -675,11 +675,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
@@ -702,11 +702,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
       "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
@@ -729,11 +729,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
@@ -756,11 +756,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/orbit.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/orbit.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "orbit.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/orbit.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/orbit.svg",
       "sha256": "53796b4728c7e70df03a0e7ef793a139db9915ead3717caafc175bd680b7ea63"
     },
     {
@@ -783,11 +783,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "thermometer.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/thermometer.svg",
       "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
     },
     {
@@ -810,11 +810,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "heat-wave.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg",
       "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
     },
     {
@@ -837,11 +837,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
       "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
@@ -864,11 +864,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-sankey.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-sankey.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-sankey.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-sankey.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-sankey.svg",
       "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd"
     },
     {
@@ -891,11 +891,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gas-cylinder.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "gas-cylinder.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gas-cylinder.svg",
       "sha256": "95455eb65ffac0e12f242ebb1430e27de4f4bc9db68370f62e4b17130cc0d349"
     },
     {
@@ -918,11 +918,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "blur.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blur.svg",
       "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
     },
     {
@@ -945,11 +945,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "heat-wave.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heat-wave.svg",
       "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
     },
     {
@@ -972,11 +972,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_spacecraft.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_spacecraft.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_spacecraft.svg",
       "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a"
     },
     {
@@ -999,11 +999,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
@@ -1026,11 +1026,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
@@ -1053,11 +1053,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mirror.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/mirror.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "mirror.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mirror.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/mirror.svg",
       "sha256": "51a67507aa59b9c5d9c3ae559b6a0678aa95ab3c7cc33c82eab5a747b272f8d0"
     },
     {
@@ -1080,11 +1080,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
@@ -1107,11 +1107,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
@@ -1134,11 +1134,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/electric-switch.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/electric-switch.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "electric-switch.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/electric-switch.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/electric-switch.svg",
       "sha256": "25cd1f980fab83045545c554c64311dc392f850f25855419ec7b32d0f9ff7d0e"
     },
     {
@@ -1161,11 +1161,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "magnet.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/magnet.svg",
       "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
     },
     {
@@ -1188,11 +1188,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
       "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
@@ -1215,11 +1215,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
@@ -1242,11 +1242,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
       "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
     },
     {
@@ -1269,11 +1269,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
       "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
@@ -1296,11 +1296,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
       "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
@@ -1323,11 +1323,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gate.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gate.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "gate.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gate.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gate.svg",
       "sha256": "10b1417f50a0dfd7d5d07b1dd24cc1e819c1d7b237b43400f3c053e0ac3d9440"
     },
     {
@@ -1350,11 +1350,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/antenna.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/antenna.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "antenna.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/antenna.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/antenna.svg",
       "sha256": "88019372e64e68087d0abec5f167243f0b594226996a406ea9dbdf24cb297be6"
     },
     {
@@ -1377,11 +1377,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
@@ -1404,11 +1404,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
@@ -1431,11 +1431,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_compact_objects.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_compact_objects.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_compact_objects.svg",
       "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42"
     },
     {
@@ -1458,11 +1458,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dot-net.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dot-net.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "dot-net.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dot-net.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dot-net.svg",
       "sha256": "b0d4358ac9c9241e4434f099543ec5eff6a617447169fe88580e8c54aa52ebbd"
     },
     {
@@ -1485,11 +1485,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_multiscale.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_multiscale.svg",
       "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
     },
     {
@@ -1512,11 +1512,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
       "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
@@ -1539,11 +1539,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_launch_landing.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_launch_landing.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_launch_landing.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_launch_landing.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_launch_landing.svg",
       "sha256": "12116d80837b13df520371346223278906f75456dea47f517d4fcc989fb770bd"
     },
     {
@@ -1566,11 +1566,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
@@ -1593,11 +1593,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
@@ -1620,11 +1620,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_network.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_network.svg",
       "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
@@ -1647,11 +1647,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "laser-pointer.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/laser-pointer.svg",
       "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
     },
     {
@@ -1674,11 +1674,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_stars.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_stars.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_stars.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_stars.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_stars.svg",
       "sha256": "787829f9bc14b93570a80358912453abe85c7cfdfadee1ef81a4c28af6b047e3"
     },
     {
@@ -1701,11 +1701,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_diffraction.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_diffraction.svg",
       "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
@@ -1728,11 +1728,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
       "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
@@ -1755,11 +1755,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_small_bodies.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_small_bodies.svg",
       "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
@@ -1782,11 +1782,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
@@ -1809,11 +1809,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_architecture.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_architecture.svg",
       "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
@@ -1836,11 +1836,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_galaxies.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_galaxies.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_galaxies.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_galaxies.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_galaxies.svg",
       "sha256": "a5f31aa2ecfc35f398e551981caec9744b807dced556469b15269f747c3f0f78"
     },
     {
@@ -1863,11 +1863,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
       "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
@@ -1890,11 +1890,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "info_workflow.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/info_workflow.svg",
       "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
@@ -1917,11 +1917,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_planets.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_planets.svg",
       "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
@@ -1944,11 +1944,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "process_physical.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/process_physical.svg",
       "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
@@ -1971,11 +1971,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-arrange-above.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "vector-arrange-above.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-arrange-above.svg",
       "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
     },
     {
@@ -1998,11 +1998,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
     },
     {
@@ -2025,11 +2025,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-line.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
       "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
     },
     {
@@ -2052,11 +2052,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/electric-switch.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/electric-switch.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "electric-switch.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/electric-switch.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/electric-switch.svg",
       "sha256": "25cd1f980fab83045545c554c64311dc392f850f25855419ec7b32d0f9ff7d0e"
     },
     {
@@ -2079,11 +2079,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/current-dc.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/current-dc.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "current-dc.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/current-dc.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/current-dc.svg",
       "sha256": "b2e17b195b023bce66684df95c8a836c0a48eb4695bc8ed0c931bc79274c7d1e"
     },
     {
@@ -2106,11 +2106,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-circle.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-circle.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "vector-circle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-circle.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vector-circle.svg",
       "sha256": "f79ca835981b1cf69a1089f95eef4c4689cbd0f2b7093c5127a0c85619dc120f"
     },
     {
@@ -2133,11 +2133,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_stars.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_stars.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "astro_stars.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_stars.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/astro_stars.svg",
       "sha256": "787829f9bc14b93570a80358912453abe85c7cfdfadee1ef81a4c28af6b047e3"
     },
     {
@@ -2160,11 +2160,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/resistor.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "resistor.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/resistor.svg",
       "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a"
     },
     {
@@ -2187,11 +2187,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
     },
     {
@@ -2214,11 +2214,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-double.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/circle-double.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "circle-double.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-double.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/circle-double.svg",
       "sha256": "5a148400426d701d72703c8686ddc3850744fa1de3ae3f2cb29275e0ba4b1de2"
     },
     {
@@ -2241,11 +2241,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "sine-wave.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sine-wave.svg",
       "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
     },
     {
@@ -2268,11 +2268,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_spectroscopy.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_spectroscopy.svg",
       "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
@@ -2295,11 +2295,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-projectile.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-projectile.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "arrow-projectile.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-projectile.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-projectile.svg",
       "sha256": "f1f7124f333a93efbfd5876e0ab642053cfb7a26978f794e77f47677d49e5ff5"
     },
     {
@@ -2322,11 +2322,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gauge.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "gauge.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/gauge.svg",
       "sha256": "fb31613d7a44b32eb9b627d98cf0bea7b79c93e435593e44d3b43967d51b06c7"
     },
     {
@@ -2349,11 +2349,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "pipe.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pipe.svg",
       "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
     },
     {
@@ -2376,11 +2376,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "water.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/water.svg",
       "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
     },
     {
@@ -2403,11 +2403,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "grid.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg",
       "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
     },
     {
@@ -2430,11 +2430,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/white-balance-sunny.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/white-balance-sunny.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "white-balance-sunny.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/white-balance-sunny.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/white-balance-sunny.svg",
       "sha256": "6baf56db75f52d16f428ee1a37ed2f9f320536b22ca068d4864bc6a5c595b4f1"
     },
     {
@@ -2457,11 +2457,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radioactive.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radioactive.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "radioactive.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radioactive.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radioactive.svg",
       "sha256": "1591b0d6ac624d195a2dba99ae2ff3df367341b6ec8a69e5d164e1a51f65c063"
     },
     {
@@ -2484,11 +2484,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wave.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wave.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "wave.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wave.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/wave.svg",
       "sha256": "48e7ff1141f49a7c76c3ba28e3afabcd0a857b0640ebf82268c962af3734bb11"
     },
     {
@@ -2511,11 +2511,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ellipse.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ellipse.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "ellipse.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ellipse.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ellipse.svg",
       "sha256": "e38e5b464ec784df7c55f21f10a3ba9fa3dda01a97604bdce9261bb1f5b74949"
     },
     {
@@ -2538,11 +2538,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/triangle-outline.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/triangle-outline.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "triangle-outline.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/triangle-outline.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/triangle-outline.svg",
       "sha256": "ed042089028441b4866f515552d37521fd14a5c876b753a5a7e351735209d53d"
     },
     {
@@ -2565,11 +2565,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microscope.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/microscope.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "microscope.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microscope.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/microscope.svg",
       "sha256": "436386fdc11b200be10f4b8bf709c8c914c3a675f94d0b8f122f4dbc24cb4235"
     },
     {
@@ -2592,11 +2592,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/telescope.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/telescope.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "telescope.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/telescope.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/telescope.svg",
       "sha256": "94571a48261810de5792175d54b2bfa8a996bb00a461b03f874f1d03b314d413"
     },
     {
@@ -2619,11 +2619,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/atom.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/atom.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "atom.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/atom.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/atom.svg",
       "sha256": "2d5e7f4dc620ddddbab95e49cd9fc292a14155beb4404b95c1ef447aebaae654"
     },
     {
@@ -2646,11 +2646,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radioactive.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radioactive.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "radioactive.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radioactive.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/radioactive.svg",
       "sha256": "1591b0d6ac624d195a2dba99ae2ff3df367341b6ec8a69e5d164e1a51f65c063"
     },
     {
@@ -2673,11 +2673,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph-outline.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph-outline.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "graph-outline.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph-outline.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/graph-outline.svg",
       "sha256": "dd312410e7732c4dde3b14e9ad4f0045fbd6e48192c26306fe20400002391be6"
     },
     {
@@ -2700,11 +2700,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "access-point.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/access-point.svg",
       "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
     },
     {
@@ -2726,11 +2726,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/animal_mammal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/animal_mammal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "animal_mammal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/animal_mammal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/animal_mammal.svg",
       "sha256": "7f4dd5fa8949070946c85f4a1629a902cabf077c7245220f0c68a1ef53c093b2"
     },
     {
@@ -2752,11 +2752,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/built_building.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "built_building.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/built_building.svg",
       "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20"
     },
     {
@@ -2778,11 +2778,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "grid.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/grid.svg",
       "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
     }
   ],

@@ -27,11 +27,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heart.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heart.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "heart.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heart.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/heart.svg",
       "sha256": "9d63cd842c043c59995b5c1a5b1f8b45d1bfd9ce7bd8f95b4978e81464ec74b2"
     },
     {
@@ -54,11 +54,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_eukaryotic.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
     },
     {
@@ -81,11 +81,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/brain.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "brain.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/brain.svg",
       "sha256": "08f604915b1e6ab6187a109f1efa443a9d12d76484b3e4bc9e23badee1126dec"
     },
     {
@@ -108,11 +108,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_musculoskeletal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
@@ -135,11 +135,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_respiratory.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_respiratory.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_respiratory.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_respiratory.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_respiratory.svg",
       "sha256": "8159eff82ba20dcc3f2eb48410427898545cb45c0fbb04551f906508b17252eb"
     },
     {
@@ -162,11 +162,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_urogenital.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg",
       "sha256": "0e215860d09dc1c52051f652c124f17873e6bb57d6a4dcf647421efe0f66408f"
     },
     {
@@ -189,11 +189,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_molecular_assays.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
@@ -216,11 +216,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_digestive.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
@@ -243,11 +243,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tablet.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tablet.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "tablet.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tablet.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tablet.svg",
       "sha256": "663fbc51db92fe5738a0c128fd4a1e98ec96a2efe1e82fccd4cdec7a65a74d3e"
     },
     {
@@ -270,11 +270,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_microalga.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
@@ -297,11 +297,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_digestive.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
@@ -324,11 +324,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_skin_tissue.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
@@ -351,11 +351,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "people_actions.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg",
       "sha256": "29df23cc3fb9dfd137603a4e35453f3f411250b7730088d3044ff5894008aaf5"
     },
     {
@@ -378,11 +378,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hospital.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hospital.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "hospital.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hospital.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/hospital.svg",
       "sha256": "18b5d51cf9db3424298b8788be7b72d18927d55f8c949c0156bcaccdba50553f"
     },
     {
@@ -405,11 +405,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stethoscope.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/stethoscope.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "stethoscope.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stethoscope.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/stethoscope.svg",
       "sha256": "4c3fe6dfc58ecd76800e9977530b50089d6937ce448efd3c2819f27aa0a59c37"
     },
     {
@@ -432,11 +432,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_eukaryotic.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
     },
     {
@@ -459,11 +459,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_protist.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg",
       "sha256": "5b9651d2b76985091189b6d21ce482b0ace84b335df671825612adc563aab99e"
     },
     {
@@ -486,11 +486,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/iv-bag.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/iv-bag.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "iv-bag.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/iv-bag.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/iv-bag.svg",
       "sha256": "de0ab070d47aa7fd5d0ab70d4dce8d79793d23e6559860e6fa6b5fa3edac7ea3"
     },
     {
@@ -513,11 +513,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_molecular_assays.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
@@ -540,11 +540,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "people_actions.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg",
       "sha256": "29df23cc3fb9dfd137603a4e35453f3f411250b7730088d3044ff5894008aaf5"
     },
     {
@@ -567,11 +567,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_microalga.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
@@ -594,11 +594,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_organelle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
@@ -621,11 +621,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_skin_tissue.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
@@ -648,11 +648,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_musculoskeletal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
@@ -675,11 +675,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stomach.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/stomach.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "stomach.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stomach.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/stomach.svg",
       "sha256": "c6fff53d28049673b259c0d840c8ea24dfaea33122213960acfc29a2844a9115"
     },
     {
@@ -702,11 +702,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_urogenital.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg",
       "sha256": "0e215860d09dc1c52051f652c124f17873e6bb57d6a4dcf647421efe0f66408f"
     },
     {
@@ -729,11 +729,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_molecular_assays.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
@@ -756,11 +756,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_archaeon.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_archaeon.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_archaeon.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_archaeon.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_archaeon.svg",
       "sha256": "d38b061d52455541f2b451c0349c702eebfa6853076c6ea8e7616b5e71ec0c62"
     },
     {
@@ -783,11 +783,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_organelle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
@@ -810,11 +810,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_digestive.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
@@ -837,11 +837,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "people_actions.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg",
       "sha256": "29df23cc3fb9dfd137603a4e35453f3f411250b7730088d3044ff5894008aaf5"
     },
     {
@@ -864,11 +864,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "eye.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye.svg",
       "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3"
     },
     {
@@ -891,11 +891,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ear-hearing.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ear-hearing.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "ear-hearing.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ear-hearing.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/ear-hearing.svg",
       "sha256": "845ac2b813ca7b5c41483aede90c9f9dd25b557d1e9908de138b654d9a957542"
     },
     {
@@ -918,11 +918,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tooth.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tooth.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "tooth.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tooth.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tooth.svg",
       "sha256": "2c658a8837eefab3bb18787d5fffb5f563e84d144a5c255f9ed018c03dbbb168"
     },
     {
@@ -945,11 +945,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bone.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bone.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "bone.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bone.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bone.svg",
       "sha256": "ede545a130c013bbe34f6cd0082cf264d3937444cbf3ecd75ca967b1e62e90bf"
     },
     {
@@ -972,11 +972,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_virus.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_virus.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_virus.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_virus.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_virus.svg",
       "sha256": "a294f89dd572c6b585c87a23840049e570fde1a093b554e554cf8fb86e44e2b6"
     },
     {
@@ -999,11 +999,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_endocrine.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg",
       "sha256": "d6f1d359c1d5cac88ed976040db7a5dc4d864f4b86420fecc9aa9bb0686b0b87"
     },
     {
@@ -1026,11 +1026,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_skin_tissue.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
@@ -1053,11 +1053,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_endocrine.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg",
       "sha256": "d6f1d359c1d5cac88ed976040db7a5dc4d864f4b86420fecc9aa9bb0686b0b87"
     },
     {
@@ -1080,11 +1080,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_organelle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
@@ -1107,11 +1107,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_archaeon.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_archaeon.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_archaeon.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_archaeon.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_archaeon.svg",
       "sha256": "d38b061d52455541f2b451c0349c702eebfa6853076c6ea8e7616b5e71ec0c62"
     },
     {
@@ -1134,11 +1134,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_musculoskeletal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
@@ -1161,11 +1161,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_skin_tissue.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
@@ -1188,11 +1188,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_organelle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
@@ -1215,11 +1215,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "dna.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg",
       "sha256": "2edf4c8a7cc5ec0454d94baa37f976aba8f27f2436485f3a6fd96f589aee6cdb"
     },
     {
@@ -1242,11 +1242,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_musculoskeletal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
@@ -1269,11 +1269,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_musculoskeletal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
@@ -1296,11 +1296,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_cardiovascular_lymph.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_cardiovascular_lymph.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_cardiovascular_lymph.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_cardiovascular_lymph.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_cardiovascular_lymph.svg",
       "sha256": "a40718549ed80e37d0e7346b934919d45d23d61dc3680a2798cdb7c770576019"
     },
     {
@@ -1323,11 +1323,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_microalga.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
@@ -1350,11 +1350,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_eukaryotic.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
     },
     {
@@ -1377,11 +1377,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_organelle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
@@ -1404,11 +1404,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_eukaryotic.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
     },
     {
@@ -1431,11 +1431,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_digestive.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
@@ -1458,11 +1458,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_organelle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
@@ -1485,11 +1485,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_musculoskeletal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
@@ -1512,11 +1512,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_molecular_assays.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
@@ -1539,11 +1539,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_bacterium.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_bacterium.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_bacterium.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_bacterium.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_bacterium.svg",
       "sha256": "25cc33e6830329fe53dc3b079a125c1af9b040acdda2e4a488d292f608aa373d"
     },
     {
@@ -1566,11 +1566,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bacteria.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "bacteria.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bacteria.svg",
       "sha256": "050e48d40bf051f812e9f21ec901851d0cbb666f74407e782e702b8e55579626"
     },
     {
@@ -1593,11 +1593,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/virus.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/virus.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "virus.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/virus.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/virus.svg",
       "sha256": "0fb365ba87cff538f267ab0c8e4b44dc0911a649f1e365a01bbc4c7d096be6cf"
     },
     {
@@ -1620,11 +1620,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_skin_tissue.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
@@ -1647,11 +1647,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_urogenital.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg",
       "sha256": "0e215860d09dc1c52051f652c124f17873e6bb57d6a4dcf647421efe0f66408f"
     },
     {
@@ -1674,11 +1674,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_microalga.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
@@ -1701,11 +1701,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_digestive.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_digestive.svg",
       "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
@@ -1728,11 +1728,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "lab_molecular_assays.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/lab_molecular_assays.svg",
       "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
@@ -1755,11 +1755,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_endocrine.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg",
       "sha256": "d6f1d359c1d5cac88ed976040db7a5dc4d864f4b86420fecc9aa9bb0686b0b87"
     },
     {
@@ -1782,11 +1782,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_musculoskeletal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
@@ -1809,11 +1809,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_microalga.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_microalga.svg",
       "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
@@ -1836,11 +1836,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_endocrine.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_endocrine.svg",
       "sha256": "d6f1d359c1d5cac88ed976040db7a5dc4d864f4b86420fecc9aa9bb0686b0b87"
     },
     {
@@ -1863,11 +1863,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_urogenital.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_urogenital.svg",
       "sha256": "0e215860d09dc1c52051f652c124f17873e6bb57d6a4dcf647421efe0f66408f"
     },
     {
@@ -1890,11 +1890,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_musculoskeletal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
@@ -1917,11 +1917,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_neural_sensory.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_neural_sensory.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_neural_sensory.svg",
       "sha256": "be1ba8cf16a227f4c3fda354c4cd10cc3d939bfd37d56706491a9ae37dd4d812"
     },
     {
@@ -1944,11 +1944,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_protist.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg",
       "sha256": "5b9651d2b76985091189b6d21ce482b0ace84b335df671825612adc563aab99e"
     },
     {
@@ -1971,11 +1971,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_cardiovascular_lymph.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_cardiovascular_lymph.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_cardiovascular_lymph.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_cardiovascular_lymph.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_cardiovascular_lymph.svg",
       "sha256": "a40718549ed80e37d0e7346b934919d45d23d61dc3680a2798cdb7c770576019"
     },
     {
@@ -1998,11 +1998,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_neural_sensory.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_neural_sensory.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_neural_sensory.svg",
       "sha256": "be1ba8cf16a227f4c3fda354c4cd10cc3d939bfd37d56706491a9ae37dd4d812"
     },
     {
@@ -2025,11 +2025,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "test-tube.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg",
       "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
     },
     {
@@ -2052,11 +2052,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "people_actions.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/people_actions.svg",
       "sha256": "29df23cc3fb9dfd137603a4e35453f3f411250b7730088d3044ff5894008aaf5"
     },
     {
@@ -2079,11 +2079,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_virus.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_virus.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_virus.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_virus.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_virus.svg",
       "sha256": "a294f89dd572c6b585c87a23840049e570fde1a093b554e554cf8fb86e44e2b6"
     },
     {
@@ -2106,11 +2106,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_skin_tissue.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_skin_tissue.svg",
       "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
@@ -2133,11 +2133,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_organelle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_organelle.svg",
       "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
@@ -2160,11 +2160,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microscope.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/microscope.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "microscope.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microscope.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/microscope.svg",
       "sha256": "436386fdc11b200be10f4b8bf709c8c914c3a675f94d0b8f122f4dbc24cb4235"
     },
     {
@@ -2187,11 +2187,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shape.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shape.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "shape.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shape.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shape.svg",
       "sha256": "2cc65609a7264af800b4ef718c868548d18c50ae39e14f6d0fc97078854a66ee"
     },
     {
@@ -2214,11 +2214,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sprout.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sprout.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "sprout.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sprout.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/sprout.svg",
       "sha256": "ac0a3c198bb422d6790df66941669d4227782b958e36651ec964f339142d1635"
     },
     {
@@ -2241,11 +2241,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/account-group.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/account-group.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "account-group.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/account-group.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/account-group.svg",
       "sha256": "751971707efb7bf4f6a27e8d138aa13bcb67d7dfff4d829748d49f3e6467284d"
     },
     {
@@ -2268,11 +2268,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/account-group.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/account-group.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "account-group.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/account-group.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/account-group.svg",
       "sha256": "751971707efb7bf4f6a27e8d138aa13bcb67d7dfff4d829748d49f3e6467284d"
     },
     {
@@ -2295,11 +2295,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bacteria.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "bacteria.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bacteria.svg",
       "sha256": "050e48d40bf051f812e9f21ec901851d0cbb666f74407e782e702b8e55579626"
     },
     {
@@ -2322,11 +2322,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bacteria.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "bacteria.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bacteria.svg",
       "sha256": "050e48d40bf051f812e9f21ec901851d0cbb666f74407e782e702b8e55579626"
     },
     {
@@ -2349,11 +2349,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tree.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "tree.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tree.svg",
       "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b"
     },
     {
@@ -2376,11 +2376,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "shield.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/shield.svg",
       "sha256": "30ea8605cd87e72aaa7946781a54ca00e56b3aa926163296aada400c59f04d05"
     },
     {
@@ -2403,11 +2403,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blood-bag.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blood-bag.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "blood-bag.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blood-bag.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/blood-bag.svg",
       "sha256": "3e16cbae751b3d449536ad7f3ee505ae92ea019cdd3160672d78f0d0554b37ca"
     },
     {
@@ -2430,11 +2430,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/brain.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "brain.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/brain.svg",
       "sha256": "08f604915b1e6ab6187a109f1efa443a9d12d76484b3e4bc9e23badee1126dec"
     },
     {
@@ -2457,11 +2457,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/brain.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "brain.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/brain.svg",
       "sha256": "08f604915b1e6ab6187a109f1efa443a9d12d76484b3e4bc9e23badee1126dec"
     },
     {
@@ -2484,11 +2484,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_neural_sensory.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_neural_sensory.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_neural_sensory.svg",
       "sha256": "be1ba8cf16a227f4c3fda354c4cd10cc3d939bfd37d56706491a9ae37dd4d812"
     },
     {
@@ -2511,11 +2511,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "cell_eukaryotic.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/cell_eukaryotic.svg",
       "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
     },
     {
@@ -2538,11 +2538,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/needle.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "needle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/needle.svg",
       "sha256": "4f0c11a15df1a5bfbdb26343955fc1cd0d45193ad9b6768b6ebd501344d4b3f6"
     },
     {
@@ -2565,11 +2565,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_protist.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg",
       "sha256": "5b9651d2b76985091189b6d21ce482b0ace84b335df671825612adc563aab99e"
     },
     {
@@ -2592,11 +2592,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "flask.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/flask.svg",
       "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
     },
     {
@@ -2619,11 +2619,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "anatomy_musculoskeletal.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/anatomy_musculoskeletal.svg",
       "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
@@ -2646,11 +2646,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "test-tube.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/test-tube.svg",
       "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
     },
     {
@@ -2673,11 +2673,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "dna.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/dna.svg",
       "sha256": "2edf4c8a7cc5ec0454d94baa37f976aba8f27f2436485f3a6fd96f589aee6cdb"
     },
     {
@@ -2700,11 +2700,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pill.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pill.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "pill.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pill.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pill.svg",
       "sha256": "2467d232a3e27eb8f3e11112f8b667e145db5aaec851c784d9fc4c096cb2b02b"
     },
     {
@@ -2727,11 +2727,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-line.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-line.svg",
       "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
     },
     {
@@ -2754,11 +2754,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/needle.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "needle.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/needle.svg",
       "sha256": "4f0c11a15df1a5bfbdb26343955fc1cd0d45193ad9b6768b6ebd501344d4b3f6"
     },
     {
@@ -2781,11 +2781,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pill.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pill.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "pill.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pill.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/pill.svg",
       "sha256": "2467d232a3e27eb8f3e11112f8b667e145db5aaec851c784d9fc4c096cb2b02b"
     },
     {
@@ -2808,11 +2808,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye-off.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye-off.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "eye-off.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye-off.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/eye-off.svg",
       "sha256": "72a905d6b2cd78bfe7284319d16d9b0de9c623fc0836ff6204acc551ae9c036c"
     },
     {
@@ -2835,11 +2835,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_protist.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_protist.svg",
       "sha256": "5b9651d2b76985091189b6d21ce482b0ace84b335df671825612adc563aab99e"
     },
     {
@@ -2862,11 +2862,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-timeline.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-timeline.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "chart-timeline.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-timeline.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-timeline.svg",
       "sha256": "b66bacf4a703245c025571443565d00b039be5df58f21642d2d1de2d0ad29392"
     },
     {
@@ -2889,11 +2889,11 @@
       "author": "ScanSci contributors",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_bacterium.svg",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_bacterium.svg",
       "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
       "source_file": "microbe_bacterium.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_bacterium.svg",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/microbe_bacterium.svg",
       "sha256": "25cc33e6830329fe53dc3b079a125c1af9b040acdda2e4a488d292f608aa373d"
     },
     {
@@ -2916,11 +2916,11 @@
       "author": "Pictogrammers / Material Design Icons",
       "license": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/alert.svg",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/alert.svg",
       "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
       "source_file": "alert.svg",
       "source_kind": "online-open-license",
-      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/alert.svg",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/alert.svg",
       "sha256": "1a493483019cab176761450460542cd32c5b02f49eca200d63abfb5bfe792b85"
     }
   ],

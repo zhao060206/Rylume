@@ -18,10 +18,12 @@ from resource_packs import safe_svg
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ROOT = ROOT / 'assets' / 'online-sources' / 'scansci'
-SOURCE_BASE = 'https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/'
+# Pin the source revisions so attribution remains reproducible after upstream
+# repositories move their default branches.
+SOURCE_BASE = 'https://github.com/Rimagination/scansci-svg/blob/f4dd394eb0797681fcfdf43f230483dcf8c144ac/skill/assets/library/'
 LICENSE_URL = 'https://creativecommons.org/licenses/by/4.0/'
 MDI_ROOT = ROOT / 'assets' / 'online-sources' / 'mdi'
-MDI_BASE = 'https://github.com/Templarian/MaterialDesign/blob/master/svg/'
+MDI_BASE = 'https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/'
 MDI_LICENSE_URL = 'https://www.apache.org/licenses/LICENSE-2.0'
 
 SAFE_ATTRS = {
