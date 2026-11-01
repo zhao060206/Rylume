@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"25\" y1=\"12\" x2=\"25\" y2=\"55\" stroke=\"#395B70\" stroke-width=\"6\" stroke-linecap=\"round\" /><rect x=\"20\" y=\"7\" width=\"10\" height=\"12\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"25\" cy=\"60\" r=\"8\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"25\" y1=\"68\" x2=\"25\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><rect x=\"56\" y=\"21\" width=\"28\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M62 33 L68 25 L74 33 L80 25\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><text x=\"70\" y=\"52\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">mV</text><circle cx=\"82\" cy=\"73\" r=\"8\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"82\" y=\"77\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">T</text></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><rect x=\"187\" y=\"82\" width=\"26\" height=\"185\" rx=\"0\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><text x=\"200\" y=\"285\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Arial, sans-serif\" font-size=\"17\" text-anchor=\"middle\">PEM</text></g><g><rect x=\"163\" y=\"82\" width=\"24\" height=\"185\" rx=\"0\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"213\" y=\"82\" width=\"24\" height=\"185\" rx=\"0\" fill=\"#a99cc7\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"85\" y=\"82\" width=\"78\" height=\"185\" rx=\"7\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M98 106 H130 V143 H99 V181 H130 V243\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"4\" /><rect x=\"237\" y=\"82\" width=\"78\" height=\"185\" rx=\"7\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M268 106 H300 V143 H269 V181 H300 V243\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"4\" /></g><g><path d=\"M174 82 V48 H225 V82\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"3\" /><circle cx=\"200\" cy=\"48\" r=\"13\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><text x=\"200\" y=\"53\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Arial, sans-serif\" font-size=\"13\" text-anchor=\"middle\">R</text></g><g><line x1=\"37\" y1=\"115\" x2=\"82\" y2=\"115\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><polygon points=\"82.0,115.0 74.8,118.5 74.8,111.5\" fill=\"#58a6b3\" stroke=\"#58a6b3\" stroke-width=\"1\" /><text x=\"49\" y=\"100\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Arial, sans-serif\" font-size=\"18\" text-anchor=\"middle\">H<tspan font-size=\"12.6\">2</tspan><tspan font-size=\"18\" /></text><line x1=\"362\" y1=\"115\" x2=\"317\" y2=\"115\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><polygon points=\"317.0,115.0 324.2,111.5 324.2,118.5\" fill=\"#58a6b3\" stroke=\"#58a6b3\" stroke-width=\"1\" /><text x=\"348\" y=\"100\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Arial, sans-serif\" font-size=\"18\" text-anchor=\"middle\">O<tspan font-size=\"12.6\">2</tspan><tspan font-size=\"18\" /></text><line x1=\"316\" y1=\"237\" x2=\"362\" y2=\"237\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><polygon points=\"362.0,237.0 354.8,240.5 354.8,233.5\" fill=\"#58a6b3\" stroke=\"#58a6b3\" stroke-width=\"1\" /><text x=\"345\" y=\"261\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Arial, sans-serif\" font-size=\"17\" text-anchor=\"middle\">H<tspan font-size=\"11.899999999999999\">2</tspan><tspan font-size=\"17\" />O</text></g><g><line x1=\"171\" y1=\"173\" x2=\"229\" y2=\"173\" stroke=\"#2b5662\" stroke-width=\"2.5\" /><polygon points=\"229.0,173.0 221.8,176.5 221.8,169.5\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"1\" /><text x=\"199\" y=\"162\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Arial, sans-serif\" font-size=\"15\" text-anchor=\"middle\">H<tspan font-size=\"10.5\">+</tspan><tspan font-size=\"15\" /></text></g></g></svg>",
         "meta": {
           "asset_id": "engineering_eng_thermocouple",
           "label": "热电偶",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Thermocouple",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_fuel_cells.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_fuel_cells.svg",
+          "source_kind": "online-open-license",
+          "source_file": "eng_fuel_cells.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_eng_thermocouple",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"35\" width=\"22\" height=\"18\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"44\" r=\"12\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"44\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"69\" y=\"35\" width=\"22\" height=\"18\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"32\" y1=\"44\" x2=\"38\" y2=\"44\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"38\" y1=\"44\" x2=\"33.4951556604879\" y2=\"46.169418695587794\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"38\" y1=\"44\" x2=\"33.4951556604879\" y2=\"41.830581304412206\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"56\" y1=\"44\" x2=\"69\" y2=\"44\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"69\" y1=\"44\" x2=\"64.49515566048791\" y2=\"46.169418695587794\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"69\" y1=\"44\" x2=\"64.49515566048791\" y2=\"41.830581304412206\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M80 53 L80 80 L50 80\" fill=\"none\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"50\" y1=\"80\" x2=\"21\" y2=\"80\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"21\" y1=\"80\" x2=\"25.504844339512097\" y2=\"77.8305813044122\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"21\" y1=\"80\" x2=\"25.504844339512097\" y2=\"82.1694186955878\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M21 80 L21 53\" fill=\"none\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"21\" y1=\"53\" x2=\"21\" y2=\"53\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"21\" y1=\"53\" x2=\"18.29709339629274\" y2=\"54.30165121735268\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"21\" y1=\"53\" x2=\"18.29709339629274\" y2=\"51.69834878264732\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"50\" y=\"29\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">PID</text></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><path d=\"M67 98L243 98L243 270L67 270Z\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M243 98L329 56L329 227L243 270Z\" fill=\"#b7cdd3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M67 98L152 56L329 56L243 98Z\" fill=\"#f5f7f3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"83\" y=\"118\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"83\" y=\"156\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"83\" y=\"194\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"132\" y=\"118\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"132\" y=\"156\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"132\" y=\"194\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"181\" y=\"118\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"181\" y=\"156\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"181\" y=\"194\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /></g><g><path d=\"M260 119L313 93L313 115L260 141Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M260 158L313 132L313 154L260 180Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M260 197L313 171L313 193L260 219Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"140\" y=\"232\" width=\"48\" height=\"38\" rx=\"0\" fill=\"#2b5662\" /><path d=\"M164 233L164 269\" fill=\"none\" stroke=\"#d8e4e6\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "engineering_eng_pid",
           "label": "PID 控制",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "PID",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+          "source_kind": "online-open-license",
+          "source_file": "built_building.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_eng_pid",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"52\" cy=\"50\" r=\"27\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"52\" y=\"59\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"25\" font-weight=\"700\" text-anchor=\"middle\">M</text><rect x=\"12\" y=\"32\" width=\"25\" height=\"36\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M17 50 Q21 39 25 50 T33 50\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"70\" y1=\"50\" x2=\"83\" y2=\"50\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"83\" y1=\"50\" x2=\"78.49515566048791\" y2=\"52.169418695587794\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"83\" y1=\"50\" x2=\"78.49515566048791\" y2=\"47.830581304412206\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"83\" y1=\"26\" x2=\"83\" y2=\"74\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><text x=\"26\" y=\"26\" fill=\"#84B7C8\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">VFD</text></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><polygon points=\"114,201 129,201 111,276 96,276\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"305,201 321,201 343,276 328,276\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"110\" y1=\"252\" x2=\"330\" y2=\"252\" stroke=\"#2b5662\" stroke-width=\"6\" /></g><g><polygon points=\"74,81 305,81 344,210 112,210\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><polygon points=\"84,91 130,91 137,112 90,112\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"137,91 183,91 190,112 143,112\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"190,91 236,91 243,112 196,112\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"243,91 289,91 296,112 249,112\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"93,118 139,118 146,139 99,139\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"146,118 192,118 199,139 152,139\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"199,118 245,118 252,139 205,139\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"252,118 298,118 305,139 258,139\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"102,145 148,145 155,166 108,166\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"155,145 201,145 208,166 161,166\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"208,145 254,145 261,166 214,166\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"261,145 307,145 314,166 267,166\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"111,172 157,172 164,193 117,193\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"164,172 210,172 217,193 170,193\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"217,172 263,172 270,193 223,193\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"270,172 316,172 323,193 276,193\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M317 210 V243 Q317 263 285 263 H250\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"4\" /><rect x=\"221\" y=\"247\" width=\"29\" height=\"29\" rx=\"4\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "engineering_eng_motor_drive",
           "label": "电机驱动",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Motor drive",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+          "source_kind": "online-open-license",
+          "source_file": "eng_photovoltaic.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_eng_motor_drive",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"25\" width=\"31\" height=\"43\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"25\" cy=\"47\" r=\"11\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"25\" y1=\"47\" x2=\"34.0\" y2=\"47.0\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"25\" y1=\"47\" x2=\"29.5\" y2=\"54.79422863405995\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"25\" y1=\"47\" x2=\"20.5\" y2=\"54.79422863405995\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"25\" y1=\"47\" x2=\"16.0\" y2=\"47.0\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"25\" y1=\"47\" x2=\"20.499999999999996\" y2=\"39.20577136594005\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"25\" y1=\"47\" x2=\"29.5\" y2=\"39.20577136594005\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><rect x=\"59\" y=\"25\" width=\"31\" height=\"43\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M65 60 L75 45 L85 60 M70 47 L70 35 M80 47 L80 35\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"47\" y1=\"37\" x2=\"58\" y2=\"37\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"58\" y1=\"37\" x2=\"53.4951556604879\" y2=\"39.169418695587794\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"58\" y1=\"37\" x2=\"53.4951556604879\" y2=\"34.830581304412206\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"58\" y1=\"58\" x2=\"47\" y2=\"58\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"47\" y1=\"58\" x2=\"51.5048443395121\" y2=\"55.830581304412206\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"47\" y1=\"58\" x2=\"51.5048443395121\" y2=\"60.16941869558779\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"50\" y=\"84\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">热泵</text></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8.5 4.5L5.4 9.5L8.5 14.7L5.2 20.5L3.4 19.6L6.1 14.7L3 9.5L6.7 3.6L8.5 4.5M14.7 4.4L11.6 9.5L14.7 14.5L11.4 20.3L9.6 19.4L12.3 14.5L9.2 9.5L12.9 3.5L14.7 4.4M21 4.4L17.9 9.5L21 14.5L17.7 20.3L15.9 19.4L18.6 14.5L15.5 9.5L19.2 3.5L21 4.4\" /></svg>",
         "meta": {
           "asset_id": "engineering_eng_heat_pump",
           "label": "热泵",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Heat pump",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+          "source_kind": "online-open-license",
+          "source_file": "heat-wave.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_eng_heat_pump",
@@ -184,16 +196,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"15\" y=\"14\" width=\"70\" height=\"51\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"23\" y=\"21\" width=\"54\" height=\"32\" fill=\"#FFFFFF\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M28 34 L37 25 L46 39 L56 28 L66 36 L72 31\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"29\" cy=\"64\" r=\"5\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"71\" cy=\"64\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"70\" x2=\"56\" y2=\"70\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"65\" x2=\"50\" y2=\"70\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"44\" y1=\"77\" x2=\"56\" y2=\"77\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><path d=\"M170 76 C113 76 76 109 76 165 C76 222 118 259 173 259 C227 259 262 223 262 172 L262 74 H299 V44 H229 V128 C214 92 192 77 170 76 Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><circle cx=\"170\" cy=\"167\" r=\"64\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><g transform=\"rotate(0 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(60 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(120 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(180 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(240 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(300 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><circle cx=\"170\" cy=\"167\" r=\"18\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><circle cx=\"170\" cy=\"167\" r=\"10\" fill=\"#f4f8f8\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"63\" y1=\"167\" x2=\"147\" y2=\"167\" stroke=\"#2b5662\" stroke-width=\"2.5\" /><polygon points=\"147.0,167.0 139.8,170.5 139.8,163.5\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"1\" /></g><g><line x1=\"270\" y1=\"58\" x2=\"311\" y2=\"58\" stroke=\"#2b5662\" stroke-width=\"2.5\" /><polygon points=\"311.0,58.0 303.8,61.5 303.8,54.5\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"1\" /></g><g><rect x=\"101\" y=\"260\" width=\"139\" height=\"16\" rx=\"4\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "engineering_eng_hmi",
           "label": "人机界面",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "HMI",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+          "source_kind": "online-open-license",
+          "source_file": "eng_pumps_valves.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_eng_hmi",

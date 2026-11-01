@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "id": "engineering",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "title": "工程技术",
   "domain": "engineering",
   "min_app_version": "3.1.0",
-  "license": "CC0-1.0",
+  "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
       "id": "engineering_pump",
@@ -24,13 +24,15 @@
         "泵",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "2946cf04705948303d736a14caba0ff290dfdd9909e34c273fc99f8f3044a6a2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pump.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pump.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pump.svg",
+      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8"
     },
     {
       "id": "engineering_valve",
@@ -49,13 +51,15 @@
         "阀门",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "052de65e198bde1aa626dfede181db9136f86ad43730d044bd62ef7a1818b48f"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/valve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "valve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/valve.svg",
+      "sha256": "fd5421369d4f9c994fbad39551d8231b60ac6ce93c819a87298c84c05724829c"
     },
     {
       "id": "engineering_pipe",
@@ -74,13 +78,15 @@
         "弯管",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "1f8f81e69cf82b9b4d18d139d416528d93e4b68ae48e3f098e2486bad9c6389e"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pipe.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
     },
     {
       "id": "engineering_tank",
@@ -99,13 +105,15 @@
         "储罐",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "8a14fa0e0793338bbcd2e8abf1bc4c25f02b93d9a0c916bf83ba9db9befa6235"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tank.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "tank.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tank.svg",
+      "sha256": "96547ac396a5cbc4e658f6a57ae9b59183f637bd81686449d06995fe3d8e09e9"
     },
     {
       "id": "engineering_turbine",
@@ -124,13 +132,15 @@
         "涡轮",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "1cc2735fba543402ec925aebe3c5ff6c97c6f7c2a543000d954a4d07f6840be2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/turbine.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "turbine.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/turbine.svg",
+      "sha256": "4fe03267e0d880c3a5e050bd97dc48d0189c0a9b2bfee90386e0e525573a6740"
     },
     {
       "id": "engineering_gear",
@@ -149,13 +159,15 @@
         "齿轮",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "41f3f29542309609cdfafa394316bd087a2e5b5b1bcde117fa0c7d5d5a359637"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cog.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "cog.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cog.svg",
+      "sha256": "0125312d4e582eb4c3ee0049211ff71ce606e13dd4d2cf83285006f92caa8311"
     },
     {
       "id": "engineering_motor",
@@ -174,13 +186,15 @@
         "电动机",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "ee73cd57bb5e5e7700380743d16deeb8f16d5f75b34c2cd442372f606d7fc49b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "engineering_sensor",
@@ -199,13 +213,15 @@
         "传感器",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "2a682096cfdd8cfcb6c3da38077ef32c8030a5bc3d956b14a864b05803314d50"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "built_building.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+      "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20"
     },
     {
       "id": "engineering_chip",
@@ -224,13 +240,15 @@
         "控制芯片",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "d95f811dcdc70976eb7396b97b8dcbebec4313b1f65b85af78a9dfba28583eff"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chip.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chip.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chip.svg",
+      "sha256": "d673ce2afa74d6f1a47afd39425f70e2a1ee931cf0cba60887a972cabf6b5607"
     },
     {
       "id": "engineering_actuator",
@@ -249,13 +267,15 @@
         "执行器",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "dac81c9c227790fa4a1407db477985b17d3860bc7814abdd110d368fc1aaa55b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_robotics.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_robotics.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_robotics.svg",
+      "sha256": "6ecb2c19e6a829ce8eaf0de0066d76be49c57ae67901ff0723f63da6cc6e9674"
     },
     {
       "id": "engineering_robot",
@@ -274,13 +294,15 @@
         "机械臂",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "c4d87c8fb974aa0a598c43e0387634ff8d1e1edb846bb5e5f5f6caeff27a7db7"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/robot.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "robot.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/robot.svg",
+      "sha256": "3fb2b3cf0a80f27ea6782bde343889645944f5ec6a3c977d4e05f5ed428fa255"
     },
     {
       "id": "engineering_heat_exchanger",
@@ -299,13 +321,15 @@
         "换热器",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "5776f13d351bfef88fd4183391f00f8e06787d442432ea08931b158085b8f024"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "heat-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
     },
     {
       "id": "engineering_filter",
@@ -324,13 +348,15 @@
         "过滤器",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "1f647fbcde25bed87ffe12d80c65c4eba8eaac29ef84c43e253f64702abc3af3"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/filter.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "filter.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/filter.svg",
+      "sha256": "49addd47f9fe63951fb2ecba09e4b1bb36cbbc312deb82215c634990d60b8193"
     },
     {
       "id": "engineering_compressor",
@@ -349,13 +375,15 @@
         "压缩机",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "8462ed0e025e452db32993a5e9242536916ec9a4be02958f74806a82e0097ac5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_settlement.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "built_settlement.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_settlement.svg",
+      "sha256": "58bb9b80ad27c888d78890605cc5459b1c333a39324ed7b17747218ef706ce63"
     },
     {
       "id": "engineering_fan",
@@ -374,13 +402,15 @@
         "风机",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "28d111a2e6eb485ac16e3bb8c81b9f96265ffa8acf5fa6a06cbdcd4da36d7fd1"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fan.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "fan.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fan.svg",
+      "sha256": "46e4871895c7b82a2e3c10a97f1043f12c638a356591c5a3329868b412f49fd1"
     },
     {
       "id": "engineering_nozzle",
@@ -399,13 +429,15 @@
         "喷嘴",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "22b2fdefa47de221710fd4206bb591965f7d088f4bff78ba451c2897bdf119ac"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_workflow.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
       "id": "engineering_piston",
@@ -424,13 +456,15 @@
         "活塞",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "b7e7237d014ed6ffb43eeee9dc512d57e575f0afd7f58fbdc119e4d45ce5d52a"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/piston.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "piston.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/piston.svg",
+      "sha256": "61bacebf123f6b9773b84db742e9106576168a0a89f752b403e452e35690aebf"
     },
     {
       "id": "engineering_truss",
@@ -449,19 +483,21 @@
         "桁架",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "8435c1474715ce9efaa697e34d48d414b108b1051e1da4346514dcb58883ac1e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_heat_exchange.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_heat_exchange.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_heat_exchange.svg",
+      "sha256": "9077d285378d1f637c3e73955284c0888ea354f5fa91cbffa9d40e4b77961ac4"
     },
     {
       "id": "engineering_eng_centrifugal_pump",
       "asset_id": "engineering_eng_centrifugal_pump",
       "label": "离心泵",
-      "label_en": "Eng centrifugal pump",
+      "label_en": "Centrifugal pump",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -474,19 +510,21 @@
         "离心泵",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "08a389eac93dd31b853574fac9a7114beb2f63e596c1e5fe41b5db4f579bac05"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pump.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pump.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pump.svg",
+      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8"
     },
     {
       "id": "engineering_eng_recip_pump",
       "asset_id": "engineering_eng_recip_pump",
       "label": "往复泵",
-      "label_en": "Eng recip pump",
+      "label_en": "Recip pump",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -499,19 +537,21 @@
         "往复泵",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "6872bef86f810f55411073b245ae597802f71236e688efad8328f8f83d397592"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pump.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pump.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pump.svg",
+      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8"
     },
     {
       "id": "engineering_eng_boiler",
       "asset_id": "engineering_eng_boiler",
       "label": "锅炉",
-      "label_en": "Eng boiler",
+      "label_en": "Boiler",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -524,19 +564,21 @@
         "锅炉",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "2d2b1e41fe32b2912a2d1c197378c054c50d7bde96ea91921c5fd7a873af9782"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_wind.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_wind.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_wind.svg",
+      "sha256": "f77159b962c7008157c6023d548a288c1e00935b4b7daf4f26bb46a3a9cedb79"
     },
     {
       "id": "engineering_eng_cooling_tower",
       "asset_id": "engineering_eng_cooling_tower",
       "label": "冷却塔",
-      "label_en": "Eng cooling tower",
+      "label_en": "Cooling tower",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -549,19 +591,21 @@
         "冷却塔",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "297f18c713eb1b219422f7d095d01c700e31211fba37adf34a77cc52eccd97d8"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tower-beach.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "tower-beach.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tower-beach.svg",
+      "sha256": "dd75b2491873741e80ef8de37ed5bda2c7f03e9da2b261292a6318ffd6b05d47"
     },
     {
       "id": "engineering_eng_distillation_tower",
       "asset_id": "engineering_eng_distillation_tower",
       "label": "精馏塔",
-      "label_en": "Eng distillation tower",
+      "label_en": "Distillation tower",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -574,19 +618,21 @@
         "精馏塔",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "2d0ec938cef26c1c3be89adaf71b4e7e3ee2e7223107297faf871a59296b7d3c"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tower-beach.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "tower-beach.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tower-beach.svg",
+      "sha256": "dd75b2491873741e80ef8de37ed5bda2c7f03e9da2b261292a6318ffd6b05d47"
     },
     {
       "id": "engineering_eng_reactor_vessel",
       "asset_id": "engineering_eng_reactor_vessel",
       "label": "反应釜",
-      "label_en": "Eng reactor vessel",
+      "label_en": "Reactor vessel",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -599,19 +645,21 @@
         "反应釜",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "065e8e4f3d1bf1a6675f1a1bd4842179a8d523ab88e010d727a70d5f11682bec"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_workflow.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
       "id": "engineering_eng_pipeline",
       "asset_id": "engineering_eng_pipeline",
       "label": "管路系统",
-      "label_en": "Eng pipeline",
+      "label_en": "Pipeline",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -624,19 +672,21 @@
         "管路系统",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "c9216dbc4dbd75a8f613c1382e01d038797cd0681f1d8c92953d725114016635"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pipe.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
     },
     {
       "id": "engineering_eng_ball_bearing",
       "asset_id": "engineering_eng_ball_bearing",
       "label": "滚动轴承",
-      "label_en": "Eng ball bearing",
+      "label_en": "Ball bearing",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -649,19 +699,21 @@
         "滚动轴承",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "a47cba06f92d06195951e4962dba1cb673d9aaabe29f7400a37e117380ca9a2a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_photovoltaic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
     },
     {
       "id": "engineering_eng_shaft",
       "asset_id": "engineering_eng_shaft",
       "label": "传动轴",
-      "label_en": "Eng shaft",
+      "label_en": "Shaft",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -674,19 +726,21 @@
         "传动轴",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "5d14ee3a9db410e37a30c67043318941f54b82d10b5e4122419b3abb8612b49d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_multiscale.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
     },
     {
       "id": "engineering_eng_coupling",
       "asset_id": "engineering_eng_coupling",
       "label": "联轴器",
-      "label_en": "Eng coupling",
+      "label_en": "Coupling",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -699,19 +753,21 @@
         "联轴器",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "463f596301e2dfa817f27f77fe51be8dd37ded2642b8f0cde12d1c026616c919"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "engineering_eng_belt_drive",
       "asset_id": "engineering_eng_belt_drive",
       "label": "带传动",
-      "label_en": "Eng belt drive",
+      "label_en": "Belt drive",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -724,19 +780,21 @@
         "带传动",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "327e3d91575649d68ad852f4427348b08a79da4f544ddece2afe485be06428ca"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_heat_exchange.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_heat_exchange.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_heat_exchange.svg",
+      "sha256": "9077d285378d1f637c3e73955284c0888ea354f5fa91cbffa9d40e4b77961ac4"
     },
     {
       "id": "engineering_eng_chain_drive",
       "asset_id": "engineering_eng_chain_drive",
       "label": "链传动",
-      "label_en": "Eng chain drive",
+      "label_en": "Chain drive",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -749,19 +807,21 @@
         "链传动",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "271c415e1b939c25d1b8dd79b0d3768a90d56b16ab0705c8c38d14f80bb96fa1"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "engineering_eng_spur_gear",
       "asset_id": "engineering_eng_spur_gear",
       "label": "齿轮啮合",
-      "label_en": "Eng spur gear",
+      "label_en": "Spur gear",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -774,19 +834,21 @@
         "齿轮啮合",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "e192e282d478bafd52b65516dcce47b19bb56c7e93b1ed327e5f63c2a50fe346"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cog.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "cog.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cog.svg",
+      "sha256": "0125312d4e582eb4c3ee0049211ff71ce606e13dd4d2cf83285006f92caa8311"
     },
     {
       "id": "engineering_eng_planetary_gear",
       "asset_id": "engineering_eng_planetary_gear",
       "label": "行星齿轮",
-      "label_en": "Eng planetary gear",
+      "label_en": "Planetary gear",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -799,19 +861,21 @@
         "行星齿轮",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "b4e6b9be8d4e2ed584b2f44f3e919d46a90f5da8594958cdbeb04c4f29d85f5a"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cog.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "cog.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cog.svg",
+      "sha256": "0125312d4e582eb4c3ee0049211ff71ce606e13dd4d2cf83285006f92caa8311"
     },
     {
       "id": "engineering_eng_cam",
       "asset_id": "engineering_eng_cam",
       "label": "凸轮机构",
-      "label_en": "Eng cam",
+      "label_en": "Cam",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -824,19 +888,21 @@
         "凸轮机构",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "703f314328fa65ed3fcd6418a1a9d3634bf9d88554c2d336d385127842e111a1"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_wind.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_wind.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_wind.svg",
+      "sha256": "f77159b962c7008157c6023d548a288c1e00935b4b7daf4f26bb46a3a9cedb79"
     },
     {
       "id": "engineering_eng_crank",
       "asset_id": "engineering_eng_crank",
       "label": "曲柄滑块",
-      "label_en": "Eng crank",
+      "label_en": "Crank",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -849,19 +915,21 @@
         "曲柄滑块",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "c65da03dab6961dfca75bb41a432c1d54f88cac10b631d0d65f2b37dbc2991e7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_electrolysis.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_electrolysis.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_electrolysis.svg",
+      "sha256": "f08c6c4ad85a04bd5bb89e02d716c01818a1b2043ef383b92b117b45e1b8c84b"
     },
     {
       "id": "engineering_eng_linkage",
       "asset_id": "engineering_eng_linkage",
       "label": "四杆机构",
-      "label_en": "Eng linkage",
+      "label_en": "Linkage",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -874,19 +942,21 @@
         "四杆机构",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "6c3e97729509fd6932a6e26b2d0b06b9109f46ac54cd63a0ee60e3890f79f0eb"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_multiscale.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
     },
     {
       "id": "engineering_eng_hydraulic",
       "asset_id": "engineering_eng_hydraulic",
       "label": "液压缸",
-      "label_en": "Eng hydraulic",
+      "label_en": "Hydraulic",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -899,19 +969,21 @@
         "液压缸",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "c65cbe4c723d4a5c74d7d85d0b2b1adf85addc8a38c07411986c223e62afb338"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hydraulic-oil-level.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "hydraulic-oil-level.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hydraulic-oil-level.svg",
+      "sha256": "96b6367904de14d393ca5e655d687a5a08b0801d6fe6a3bb5255c3ffa64e16eb"
     },
     {
       "id": "engineering_eng_pneumatic",
       "asset_id": "engineering_eng_pneumatic",
       "label": "气动阀",
-      "label_en": "Eng pneumatic",
+      "label_en": "Pneumatic",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -924,19 +996,21 @@
         "气动阀",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "cc56024c7ad1108395cc0c43ecf3ce6a62aa85df27aeb5a5c8b9568f2a99d309"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_mining.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_mining.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_mining.svg",
+      "sha256": "f9d2e3aead3955d91c2ce49852508601d3c02114245da97c03e97db2799f2c22"
     },
     {
       "id": "engineering_eng_pressure_gauge",
       "asset_id": "engineering_eng_pressure_gauge",
       "label": "压力表",
-      "label_en": "Eng pressure gauge",
+      "label_en": "Pressure gauge",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -949,19 +1023,21 @@
         "压力表",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "d4653c21a546665d1085e2fec42026658212bba9900ead91e4b6aa5786350db3"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "gauge.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "sha256": "fb31613d7a44b32eb9b627d98cf0bea7b79c93e435593e44d3b43967d51b06c7"
     },
     {
       "id": "engineering_eng_thermocouple",
       "asset_id": "engineering_eng_thermocouple",
       "label": "热电偶",
-      "label_en": "Eng thermocouple",
+      "label_en": "Thermocouple",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -974,19 +1050,21 @@
         "热电偶",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "f5323c8802e72f8cf78d3a7572d4795867042b5c0bf74bdc367461ab7ce9bad0"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_fuel_cells.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_fuel_cells.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_fuel_cells.svg",
+      "sha256": "fb567c0b12bb534ded0ffe08a8d924d2f9f71ec23762053be05f9cf159257fe2"
     },
     {
       "id": "engineering_eng_flow_meter",
       "asset_id": "engineering_eng_flow_meter",
       "label": "流量计",
-      "label_en": "Eng flow meter",
+      "label_en": "Flow meter",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -999,19 +1077,21 @@
         "流量计",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "0b773a7f4589c04ea85bb22872c54c9deec1b27d531b040075868f8b0b3b0a69"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/meter-electric.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "meter-electric.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/meter-electric.svg",
+      "sha256": "e01ba4b943e17dcaa94f56e4e5c56b543c86df58333664224a5a660687e8fb21"
     },
     {
       "id": "engineering_eng_plc",
       "asset_id": "engineering_eng_plc",
       "label": "可编程控制器",
-      "label_en": "Eng PLC",
+      "label_en": "PLC",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1024,19 +1104,21 @@
         "可编程控制器",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "253b769f3142cfa105900db5df1ec84f641bb074b7075c56ed3243fb5c05eb75"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_mining.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_mining.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_mining.svg",
+      "sha256": "f9d2e3aead3955d91c2ce49852508601d3c02114245da97c03e97db2799f2c22"
     },
     {
       "id": "engineering_eng_inverter",
       "asset_id": "engineering_eng_inverter",
       "label": "变频器",
-      "label_en": "Eng inverter",
+      "label_en": "Inverter",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1049,19 +1131,21 @@
         "变频器",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "6b6ad5d9ca3e3cede3623b247d6f7236cf21657d51c0fee432aff7c0a9929b50"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_mining.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_mining.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_mining.svg",
+      "sha256": "f9d2e3aead3955d91c2ce49852508601d3c02114245da97c03e97db2799f2c22"
     },
     {
       "id": "engineering_eng_hmi",
       "asset_id": "engineering_eng_hmi",
       "label": "人机界面",
-      "label_en": "Eng HMI",
+      "label_en": "HMI",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1074,19 +1158,21 @@
         "人机界面",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "8ba582c49e39ff351633731d7416506d983e91b9ccbaf3be2f74512d0a20e67b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_pumps_valves.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+      "sha256": "f4053ea30d264a77c28eb4d646db3aac7f184007284317cc5640276a6a540c8a"
     },
     {
       "id": "engineering_eng_conveyor",
       "asset_id": "engineering_eng_conveyor",
       "label": "输送带",
-      "label_en": "Eng conveyor",
+      "label_en": "Conveyor",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1099,19 +1185,21 @@
         "输送带",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "5cfc73c7b22a4f89dd7975a59eb5afd2597cdfd4c9d2b3ab2ed666b92d511498"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_wind.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_wind.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_wind.svg",
+      "sha256": "f77159b962c7008157c6023d548a288c1e00935b4b7daf4f26bb46a3a9cedb79"
     },
     {
       "id": "engineering_eng_delta_robot",
       "asset_id": "engineering_eng_delta_robot",
       "label": "并联机器人",
-      "label_en": "Eng delta robot",
+      "label_en": "Delta robot",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1124,19 +1212,21 @@
         "并联机器人",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "7e489c41241f2f08ef4b6ac418941281e48bb01519c975e1a3fe8373e79dafb1"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delta.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "delta.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delta.svg",
+      "sha256": "5f9471de8919ad646105b27fc2654c62730d2d7ffae3fd946a4ac2077dc31e89"
     },
     {
       "id": "engineering_eng_agv",
       "asset_id": "engineering_eng_agv",
       "label": "移动机器人",
-      "label_en": "Eng AGV",
+      "label_en": "AGV",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1149,19 +1239,21 @@
         "移动机器人",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "7120e9164ee4d1391202d3db21859efd4d2f28aa3920875dacb1c3d10e076e61"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
       "id": "engineering_eng_drone",
       "asset_id": "engineering_eng_drone",
       "label": "巡检无人机",
-      "label_en": "Eng drone",
+      "label_en": "Drone",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1174,19 +1266,21 @@
         "巡检无人机",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "12569691469ec0d818c62f2b733af88daeb0ef23c37a6d8f9f38e91c182b6b19"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/drone.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "drone.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/drone.svg",
+      "sha256": "8fc344483b84af9cab3aad05dc3a4e6e25db12e17cf5caa09384dc88de4f931e"
     },
     {
       "id": "engineering_eng_3d_printer",
       "asset_id": "engineering_eng_3d_printer",
       "label": "3D 打印机",
-      "label_en": "Eng 3d printer",
+      "label_en": "3d printer",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1199,19 +1293,21 @@
         "3D 打印机",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "770e3b8d5d57dfa8527a7b6c4a9982b1ec40d5d7e3aa33d8077eaab66a393fbb"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/printer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "printer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/printer.svg",
+      "sha256": "d2a6fa8287401b63dd0329f4b59a2158c299eb358ead8b2dd760a544e26efa12"
     },
     {
       "id": "engineering_eng_cnc",
       "asset_id": "engineering_eng_cnc",
       "label": "数控机床",
-      "label_en": "Eng cnc",
+      "label_en": "Cnc",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1224,19 +1320,21 @@
         "数控机床",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "f2678b9111f8de738494743fae90b912492b96516c3760d082eb7c4b7573bf5c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_electrolysis.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_electrolysis.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_electrolysis.svg",
+      "sha256": "f08c6c4ad85a04bd5bb89e02d716c01818a1b2043ef383b92b117b45e1b8c84b"
     },
     {
       "id": "engineering_eng_lathe",
       "asset_id": "engineering_eng_lathe",
       "label": "车床",
-      "label_en": "Eng lathe",
+      "label_en": "Lathe",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1249,19 +1347,21 @@
         "车床",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "ce2ea66a5d6c489e10f6f0ff9815b7bef8d68f507eeef9b17cc53e611769e95c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_photovoltaic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
     },
     {
       "id": "engineering_eng_milling",
       "asset_id": "engineering_eng_milling",
       "label": "铣削加工",
-      "label_en": "Eng milling",
+      "label_en": "Milling",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1274,19 +1374,21 @@
         "铣削加工",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "2bc3c452a72141b62066c2e86ceb953be19789c355b0cfe9a146bdfc8f941869"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_heat_exchange.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_heat_exchange.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_heat_exchange.svg",
+      "sha256": "9077d285378d1f637c3e73955284c0888ea354f5fa91cbffa9d40e4b77961ac4"
     },
     {
       "id": "engineering_eng_welding_robot",
       "asset_id": "engineering_eng_welding_robot",
       "label": "焊接机器人",
-      "label_en": "Eng welding robot",
+      "label_en": "Welding robot",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1299,19 +1401,21 @@
         "焊接机器人",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "271993e35a912d7138cb1541b8366cc39e2c2b3cb01e73b9569a920ccca8b0fe"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/robot.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "robot.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/robot.svg",
+      "sha256": "3fb2b3cf0a80f27ea6782bde343889645944f5ec6a3c977d4e05f5ed428fa255"
     },
     {
       "id": "engineering_eng_assembly_line",
       "asset_id": "engineering_eng_assembly_line",
       "label": "装配线",
-      "label_en": "Eng assembly line",
+      "label_en": "Assembly line",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1324,19 +1428,21 @@
         "装配线",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "cc0e0e2599bab5e3cc6f1bc457783624e7a603a9b4a8aa2e8f4970efb9d2edab"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/line-scan.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "line-scan.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/line-scan.svg",
+      "sha256": "e895368600eca135baadd04b5592cf25f593ae5c438ab70c42e9c347835fb3e4"
     },
     {
       "id": "engineering_eng_inspection",
       "asset_id": "engineering_eng_inspection",
       "label": "质量检测",
-      "label_en": "Eng inspection",
+      "label_en": "Inspection",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1349,19 +1455,21 @@
         "质量检测",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "2923d2b70ac24a102f2881ef11ca01ba4ee6a0e46ddc295277be4c78987abd21"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_robotics.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_robotics.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_robotics.svg",
+      "sha256": "6ecb2c19e6a829ce8eaf0de0066d76be49c57ae67901ff0723f63da6cc6e9674"
     },
     {
       "id": "engineering_eng_laser_cutter",
       "asset_id": "engineering_eng_laser_cutter",
       "label": "激光切割",
-      "label_en": "Eng laser cutter",
+      "label_en": "Laser cutter",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1374,19 +1482,21 @@
         "激光切割",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "e693f124d4a4c2e86291e4bd35d5296f927b26a794b72e22ab1393accfafe03d"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "laser-pointer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
     },
     {
       "id": "engineering_eng_battery_pack",
       "asset_id": "engineering_eng_battery_pack",
       "label": "电池包",
-      "label_en": "Eng battery pack",
+      "label_en": "Battery pack",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1399,19 +1509,21 @@
         "电池包",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "71d9b8957f819fe067e22c8bc68313d1637b64ff075926e2d51a2d6fc80d35f2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "battery.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f"
     },
     {
       "id": "engineering_eng_motor_drive",
       "asset_id": "engineering_eng_motor_drive",
       "label": "电机驱动",
-      "label_en": "Eng motor drive",
+      "label_en": "Motor drive",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1424,19 +1536,21 @@
         "电机驱动",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "ba823873e709cda863c3220a67dd23268f7fb9e33929cecb80b4dba10535269e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_photovoltaic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
     },
     {
       "id": "engineering_eng_dc_bus",
       "asset_id": "engineering_eng_dc_bus",
       "label": "直流母线",
-      "label_en": "Eng dc bus",
+      "label_en": "Dc bus",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1449,19 +1563,21 @@
         "直流母线",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "939c89f4bb1600c2cd376b60ae59f057a6fb1a41190ae7551b3672bbc1986093"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bus.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "bus.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bus.svg",
+      "sha256": "9f8624d5e454483f07d987c0012cc12851238a0fa3bc5bfc77544635e47281bd"
     },
     {
       "id": "engineering_eng_grid",
       "asset_id": "engineering_eng_grid",
       "label": "输电网络",
-      "label_en": "Eng grid",
+      "label_en": "Grid",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1474,19 +1590,21 @@
         "输电网络",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "c478ae48c10557631eac1ecdb40a8d628f7a99fee2d86e03bc63712010e78a30"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "grid.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
     },
     {
       "id": "engineering_eng_substation",
       "asset_id": "engineering_eng_substation",
       "label": "变电站",
-      "label_en": "Eng substation",
+      "label_en": "Substation",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1499,19 +1617,21 @@
         "变电站",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "7f662c49e295db83a5978e17f64bb120aa4f3597a96e7f0b5e3b32b3e10c1b95"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_pumps_valves.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+      "sha256": "f4053ea30d264a77c28eb4d646db3aac7f184007284317cc5640276a6a540c8a"
     },
     {
       "id": "engineering_eng_wind_turbine",
       "asset_id": "engineering_eng_wind_turbine",
       "label": "风力机",
-      "label_en": "Eng wind turbine",
+      "label_en": "Wind turbine",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1524,19 +1644,21 @@
         "风力机",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "54dba3ef4328bd3e1866c1cbfbb72b0879368649164b1e483af6b453cb278f09"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wind-turbine.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "wind-turbine.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wind-turbine.svg",
+      "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f"
     },
     {
       "id": "engineering_eng_solar_panel",
       "asset_id": "engineering_eng_solar_panel",
       "label": "光伏组件",
-      "label_en": "Eng solar panel",
+      "label_en": "Solar panel",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1549,19 +1671,21 @@
         "光伏组件",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "d5ab0d42712409634e888285f03758e3904260bd2c270909e6e23a87464ca206"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solar-panel.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "solar-panel.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solar-panel.svg",
+      "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5"
     },
     {
       "id": "engineering_eng_hvac",
       "asset_id": "engineering_eng_hvac",
       "label": "暖通空调",
-      "label_en": "Eng HVAC",
+      "label_en": "HVAC",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1574,19 +1698,21 @@
         "暖通空调",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "00635dad097c9fcbea899bc2a91efe5916b5c403168d7442fe07d94b9af9dd0d"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hvac.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "hvac.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hvac.svg",
+      "sha256": "3e89b221f6e746b0ddb2d92716e0d3515198111f40cd1f74178983a1dea612d9"
     },
     {
       "id": "engineering_eng_clean_room",
       "asset_id": "engineering_eng_clean_room",
       "label": "洁净室",
-      "label_en": "Eng clean room",
+      "label_en": "Clean room",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1599,19 +1725,21 @@
         "洁净室",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "e1976cd2702fc557435e75701a03f6e3e5d97a37701a11050193fe301f82fd09"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/room-service.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "room-service.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/room-service.svg",
+      "sha256": "adf59c929dac38d994230a57bb3e46e0fd4fd9549d6b884a869c6382ad38c3a7"
     },
     {
       "id": "engineering_eng_flange",
       "asset_id": "engineering_eng_flange",
       "label": "法兰",
-      "label_en": "Eng flange",
+      "label_en": "Flange",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1624,19 +1752,21 @@
         "法兰",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "767cdab0a738b4914618bd1bc04126389f14328b8167cc193bbb23fa2d363515"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_electrolysis.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_electrolysis.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_electrolysis.svg",
+      "sha256": "f08c6c4ad85a04bd5bb89e02d716c01818a1b2043ef383b92b117b45e1b8c84b"
     },
     {
       "id": "engineering_eng_gasket",
       "asset_id": "engineering_eng_gasket",
       "label": "密封垫",
-      "label_en": "Eng gasket",
+      "label_en": "Gasket",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1649,19 +1779,21 @@
         "密封垫",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "420b9d76b6ae755eccbbaefc76e850273291de79c4c28986f826bb16acd2e071"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_photovoltaic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
     },
     {
       "id": "engineering_eng_bolt",
       "asset_id": "engineering_eng_bolt",
       "label": "螺栓",
-      "label_en": "Eng bolt",
+      "label_en": "Bolt",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1674,19 +1806,21 @@
         "螺栓",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "b1585e2b3f5669ee307daa0393509c53338350bbefcbf263fcf5922b464bc4b1"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bolt.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "bolt.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bolt.svg",
+      "sha256": "446c4b1c1bce28deea79f11cc29dc7d07d22463d35e558e31aba7c5ffb3b4e1e"
     },
     {
       "id": "engineering_eng_scada",
       "asset_id": "engineering_eng_scada",
       "label": "SCADA 系统",
-      "label_en": "Eng SCADA",
+      "label_en": "SCADA",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1699,19 +1833,21 @@
         "SCADA 系统",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "aa69a563c80b8fce3c79214ee6b1b0a9dae95c5b59101d3b942b4c6415c98114"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
       "id": "engineering_eng_pid",
       "asset_id": "engineering_eng_pid",
       "label": "PID 控制",
-      "label_en": "Eng PID",
+      "label_en": "PID",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1724,19 +1860,21 @@
         "PID 控制",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "3b27560de70405a867df77f05855903013d5b8a47eadf4c88c5df50b54db5e65"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "built_building.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+      "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20"
     },
     {
       "id": "engineering_eng_heat_pump",
       "asset_id": "engineering_eng_heat_pump",
       "label": "热泵",
-      "label_en": "Eng heat pump",
+      "label_en": "Heat pump",
       "category": "流体、机械与控制",
       "type": "symbol",
       "default_dim": [
@@ -1749,13 +1887,825 @@
         "热泵",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "f64ad0d4f3955249989a35afcb18582f6d8544694ad8c8b655fd22b62d41ea8b"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "heat-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
+    },
+    {
+      "id": "engineering_eng_heat_sink",
+      "asset_id": "engineering_eng_heat_sink",
+      "label": "散热器",
+      "label_en": "Heat sink",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_heat_sink.svg",
+      "keywords": [
+        "eng_heat_sink",
+        "散热器",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "heat-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
+    },
+    {
+      "id": "engineering_eng_radiator",
+      "asset_id": "engineering_eng_radiator",
+      "label": "换热散热片",
+      "label_en": "Radiator",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_radiator.svg",
+      "keywords": [
+        "eng_radiator",
+        "换热散热片",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radiator.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "radiator.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radiator.svg",
+      "sha256": "821d16f5caf9cc890d15545870188275e7721e333609f67565edd832ceb2de42"
+    },
+    {
+      "id": "engineering_eng_pump_curve",
+      "asset_id": "engineering_eng_pump_curve",
+      "label": "泵性能曲线",
+      "label_en": "Pump curve",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_pump_curve.svg",
+      "keywords": [
+        "eng_pump_curve",
+        "泵性能曲线",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pump.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pump.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pump.svg",
+      "sha256": "56ce7166c80c09e94e4987a98a274980729144263a4e4bff8a50f6b4881337a8"
+    },
+    {
+      "id": "engineering_eng_valve_symbol",
+      "asset_id": "engineering_eng_valve_symbol",
+      "label": "过程阀符号",
+      "label_en": "Process valve",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_valve_symbol.svg",
+      "keywords": [
+        "eng_valve_symbol",
+        "过程阀符号",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/valve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "valve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/valve.svg",
+      "sha256": "fd5421369d4f9c994fbad39551d8231b60ac6ce93c819a87298c84c05724829c"
+    },
+    {
+      "id": "engineering_eng_pipe_network",
+      "asset_id": "engineering_eng_pipe_network",
+      "label": "管网",
+      "label_en": "Pipe network",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_pipe_network.svg",
+      "keywords": [
+        "eng_pipe_network",
+        "管网",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pipe.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
+    },
+    {
+      "id": "engineering_eng_cfd_mesh",
+      "asset_id": "engineering_eng_cfd_mesh",
+      "label": "CFD 网格",
+      "label_en": "CFD mesh",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_cfd_mesh.svg",
+      "keywords": [
+        "eng_cfd_mesh",
+        "CFD 网格",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/view-grid.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "view-grid.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/view-grid.svg",
+      "sha256": "0080edc7a27772b256e9e821d8b48625f8897c5ea373236f03a55c9c1b796bef"
+    },
+    {
+      "id": "engineering_eng_stress_field",
+      "asset_id": "engineering_eng_stress_field",
+      "label": "应力场",
+      "label_en": "Stress field",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_stress_field.svg",
+      "keywords": [
+        "eng_stress_field",
+        "应力场",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-line.svg",
+      "sha256": "96631f806d6c72d91ca861aef313eeaced4cee45f1f18223e734003b109f1a2e"
+    },
+    {
+      "id": "engineering_eng_modal_test",
+      "asset_id": "engineering_eng_modal_test",
+      "label": "模态测试",
+      "label_en": "Modal test",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_modal_test.svg",
+      "keywords": [
+        "eng_modal_test",
+        "模态测试",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sine-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+    },
+    {
+      "id": "engineering_eng_vibration",
+      "asset_id": "engineering_eng_vibration",
+      "label": "振动监测",
+      "label_en": "Vibration monitor",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_vibration.svg",
+      "keywords": [
+        "eng_vibration",
+        "振动监测",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vibrate.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vibrate.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vibrate.svg",
+      "sha256": "574372086de454dde806ce61ae3cea12053783c37ff4f1850764ec6649ec7728"
+    },
+    {
+      "id": "engineering_eng_gearbox",
+      "asset_id": "engineering_eng_gearbox",
+      "label": "齿轮箱",
+      "label_en": "Gearbox",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_gearbox.svg",
+      "keywords": [
+        "eng_gearbox",
+        "齿轮箱",
+        "工程技术"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_multiscale.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
+    },
+    {
+      "id": "engineering_eng_differential",
+      "asset_id": "engineering_eng_differential",
+      "label": "差速器",
+      "label_en": "Differential gear",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_differential.svg",
+      "keywords": [
+        "eng_differential",
+        "差速器",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/car-shift-pattern.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "car-shift-pattern.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/car-shift-pattern.svg",
+      "sha256": "92e2cb2015d16f6454c67e037abae8ed6f738369152617aa68e72cc85a6a7b0f"
+    },
+    {
+      "id": "engineering_eng_brake",
+      "asset_id": "engineering_eng_brake",
+      "label": "制动器",
+      "label_en": "Brake",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_brake.svg",
+      "keywords": [
+        "eng_brake",
+        "制动器",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/car-brake-abs.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "car-brake-abs.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/car-brake-abs.svg",
+      "sha256": "c1d076b627e5c620aa7825edb120a8c05edb0c79f1f42d2851038f23f699b086"
+    },
+    {
+      "id": "engineering_eng_clutch",
+      "asset_id": "engineering_eng_clutch",
+      "label": "离合器",
+      "label_en": "Clutch",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_clutch.svg",
+      "keywords": [
+        "eng_clutch",
+        "离合器",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/car-clutch.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "car-clutch.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/car-clutch.svg",
+      "sha256": "965f9972d307bc5e65c146228a9dfd5df4bc8ea8304d03349f216a27d712a209"
+    },
+    {
+      "id": "engineering_eng_spring_damper",
+      "asset_id": "engineering_eng_spring_damper",
+      "label": "弹簧阻尼器",
+      "label_en": "Spring damper",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_spring_damper.svg",
+      "keywords": [
+        "eng_spring_damper",
+        "弹簧阻尼器",
+        "工程技术"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_photovoltaic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_photovoltaic.svg",
+      "sha256": "313d69f96cddc15f4794a9823b2e159278c945de9a10f1d9ca4a14e42a70c3ac"
+    },
+    {
+      "id": "engineering_eng_rolling_contact",
+      "asset_id": "engineering_eng_rolling_contact",
+      "label": "滚动接触",
+      "label_en": "Rolling contact",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_rolling_contact.svg",
+      "keywords": [
+        "eng_rolling_contact",
+        "滚动接触",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-orbit.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "rotate-orbit.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-orbit.svg",
+      "sha256": "1ba409a43e26d14375a0eee9af5063c7fd886cb896da389192330878da253975"
+    },
+    {
+      "id": "engineering_eng_wind_farm",
+      "asset_id": "engineering_eng_wind_farm",
+      "label": "风电场",
+      "label_en": "Wind farm",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_wind_farm.svg",
+      "keywords": [
+        "eng_wind_farm",
+        "风电场",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wind-turbine.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "wind-turbine.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wind-turbine.svg",
+      "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f"
+    },
+    {
+      "id": "engineering_eng_solar_tracker",
+      "asset_id": "engineering_eng_solar_tracker",
+      "label": "太阳能跟踪器",
+      "label_en": "Solar tracker",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_solar_tracker.svg",
+      "keywords": [
+        "eng_solar_tracker",
+        "太阳能跟踪器",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solar-panel.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "solar-panel.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solar-panel.svg",
+      "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5"
+    },
+    {
+      "id": "engineering_eng_battery_bms",
+      "asset_id": "engineering_eng_battery_bms",
+      "label": "电池管理系统",
+      "label_en": "Battery management system",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_battery_bms.svg",
+      "keywords": [
+        "eng_battery_bms",
+        "电池管理系统",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "battery.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f"
+    },
+    {
+      "id": "engineering_eng_can_bus",
+      "asset_id": "engineering_eng_can_bus",
+      "label": "CAN 总线",
+      "label_en": "CAN bus",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_can_bus.svg",
+      "keywords": [
+        "eng_can_bus",
+        "CAN 总线",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/lan-connect.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "lan-connect.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/lan-connect.svg",
+      "sha256": "3daa8e5c11de1a3b0f7e787e5bde768b30c826fe6cb544d61486ecac85fdedbc"
+    },
+    {
+      "id": "engineering_eng_iot_gateway",
+      "asset_id": "engineering_eng_iot_gateway",
+      "label": "物联网网关",
+      "label_en": "IoT gateway",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_iot_gateway.svg",
+      "keywords": [
+        "eng_iot_gateway",
+        "物联网网关",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "access-point.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
+    },
+    {
+      "id": "engineering_eng_robot_gripper",
+      "asset_id": "engineering_eng_robot_gripper",
+      "label": "机器人夹爪",
+      "label_en": "Robot gripper",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_robot_gripper.svg",
+      "keywords": [
+        "eng_robot_gripper",
+        "机器人夹爪",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/robot.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "robot.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/robot.svg",
+      "sha256": "3fb2b3cf0a80f27ea6782bde343889645944f5ec6a3c977d4e05f5ed428fa255"
+    },
+    {
+      "id": "engineering_eng_machine_vision",
+      "asset_id": "engineering_eng_machine_vision",
+      "label": "机器视觉",
+      "label_en": "Machine vision",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_machine_vision.svg",
+      "keywords": [
+        "eng_machine_vision",
+        "机器视觉",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "eye.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3"
+    },
+    {
+      "id": "engineering_eng_lidar",
+      "asset_id": "engineering_eng_lidar",
+      "label": "激光雷达",
+      "label_en": "LiDAR",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_lidar.svg",
+      "keywords": [
+        "eng_lidar",
+        "激光雷达",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radar.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "radar.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radar.svg",
+      "sha256": "1c81ab4186790cc65d92b1e5d91e10dcb396df0cd2db4f30c6e6ae93b3d8c353"
+    },
+    {
+      "id": "engineering_eng_torque_sensor",
+      "asset_id": "engineering_eng_torque_sensor",
+      "label": "扭矩传感器",
+      "label_en": "Torque sensor",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_torque_sensor.svg",
+      "keywords": [
+        "eng_torque_sensor",
+        "扭矩传感器",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-right.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "rotate-right.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-right.svg",
+      "sha256": "7c0fdfe5c01d6f8455aad37288bb8d6dfc768054e31147dbef5a95c40baa0f23"
+    },
+    {
+      "id": "engineering_eng_encoder",
+      "asset_id": "engineering_eng_encoder",
+      "label": "编码器",
+      "label_en": "Encoder",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_encoder.svg",
+      "keywords": [
+        "eng_encoder",
+        "编码器",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/counter.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "counter.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/counter.svg",
+      "sha256": "7b7f371e17a4478157b9ac564b5731688123f155222ad1323703851a1b21fede"
+    },
+    {
+      "id": "engineering_eng_servo",
+      "asset_id": "engineering_eng_servo",
+      "label": "伺服电机",
+      "label_en": "Servo motor",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_servo.svg",
+      "keywords": [
+        "eng_servo",
+        "伺服电机",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/engine.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "engine.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/engine.svg",
+      "sha256": "8194a6a2d82dfd52dd238d69d271fabef3d74128824e8fadedbc27a29a28576e"
+    },
+    {
+      "id": "engineering_eng_thermal_camera",
+      "asset_id": "engineering_eng_thermal_camera",
+      "label": "热成像相机",
+      "label_en": "Thermal camera",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_thermal_camera.svg",
+      "keywords": [
+        "eng_thermal_camera",
+        "热成像相机",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "thermometer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
+    },
+    {
+      "id": "engineering_eng_3d_scan",
+      "asset_id": "engineering_eng_3d_scan",
+      "label": "三维扫描",
+      "label_en": "3D scan",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_3d_scan.svg",
+      "keywords": [
+        "eng_3d_scan",
+        "三维扫描",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/scan-helper.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "scan-helper.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/scan-helper.svg",
+      "sha256": "413c01dcd675f97a39d629804f1fde2359c7e65aeccf8f2e75d5a45dd1dc1500"
+    },
+    {
+      "id": "engineering_eng_fault_tree",
+      "asset_id": "engineering_eng_fault_tree",
+      "label": "故障树",
+      "label_en": "Fault tree",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_fault_tree.svg",
+      "keywords": [
+        "eng_fault_tree",
+        "故障树",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-tree.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "file-tree.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-tree.svg",
+      "sha256": "8efa7e48fa316fa851fa1bc46edcdcc116100043f22864453d7a0e5e9ff5cec9"
+    },
+    {
+      "id": "engineering_eng_fmea",
+      "asset_id": "engineering_eng_fmea",
+      "label": "FMEA 分析",
+      "label_en": "FMEA analysis",
+      "category": "流体、机械与控制",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/eng_fmea.svg",
+      "keywords": [
+        "eng_fmea",
+        "FMEA 分析",
+        "工程技术"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sitemap.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "sha256": "4ca10e40b22e7721463aeee6f715dae3950090815417dee6fc309d9f2bf596f4"
     },
     {
       "id": "engineering_server",
@@ -1773,13 +2723,15 @@
         "server",
         "工程技术"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-      "modifications": "Original vector artwork.",
-      "sha256": "70504842c57c6e8b136224a47375c7e3d7166d515d739e648c49ef572701a8c5"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/server.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "server.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/server.svg",
+      "sha256": "7f4b9411d2da0051fdc1ca3d4fe9f815f3787c91682ed026863187b3fe96c0a8"
     }
   ],
   "templates": [

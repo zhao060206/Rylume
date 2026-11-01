@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M22 66 C4 63 7 38 26 38 C25 12 65 10 71 35 C96 30 102 66 80 67 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.5 20Q4.22 20 2.61 18.43 1 16.85 1 14.58 1 12.63 2.17 11.1 3.35 9.57 5.25 9.15 5.88 6.85 7.75 5.43 9.63 4 12 4 14.93 4 16.96 6.04 19 8.07 19 11 20.73 11.2 21.86 12.5 23 13.78 23 15.5 23 17.38 21.69 18.69 20.38 20 18.5 20Z\" /></svg>",
         "meta": {
           "asset_id": "earth_environment_cloud",
           "label": "云",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "Cloud",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cloud.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cloud.svg",
+          "source_kind": "online-open-license",
+          "source_file": "cloud.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_cloud",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4 85 L38 20 L57 48 L72 13 L98 85 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M27 40 L38 20 L50 38 L40 34 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M63 34 L72 13 L82 37 L72 30 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "svg": "<svg width=\"800\" height=\"640\" viewBox=\"0 0 400 320\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><g transform=\"translate(197 125) scale(1.58)\"><path d=\"M-66 18C-90 17 -91 -15 -68 -19C-65 -45 -29 -48 -17 -33C-1 -65 44 -51 47 -24C75 -25 86 12 61 21Z\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M-58 11C-20 18 17 10 58 13\" fill=\"none\" stroke=\"#b9cfd7\" stroke-width=\"5\" /></g></g><g><path d=\"M91 192L79 223\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"3.5\" /><path d=\"M132 206L120 237\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"3.5\" /><path d=\"M173 188L161 219\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"3.5\" /><path d=\"M214 205L202 236\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"3.5\" /><path d=\"M256 190L244 221\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"3.5\" /><path d=\"M298 202L286 233\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"3.5\" /></g><g><path d=\"M99 266Q108 255 117 266M108 260L107 250\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2\" /><path d=\"M178 266Q187 255 196 266M187 260L186 250\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2\" /><path d=\"M267 266Q276 255 285 266M276 260L275 250\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "earth_environment_mountain",
           "label": "山地",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "Mountain",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+          "source_kind": "online-open-license",
+          "source_file": "atm_cloud.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_mountain",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M37 4 C94 34 1 40 57 65 C83 80 43 90 51 98 L75 98 C66 86 100 79 77 64 C17 34 100 32 58 4 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "svg": "<svg width=\"800\" height=\"640\" viewBox=\"0 0 400 320\" xmlns=\"http://www.w3.org/2000/svg\">\n  <g stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <g>\n      <path d=\"M30 243 C48 229 91 225 125 227 C160 220 195 216 227 220 C268 214 317 222 347 235 C358 239 371 248 369 254 C361 265 327 270 302 272 C251 279 210 278 167 275 C122 275 85 272 55 264 C39 260 27 253 30 243 Z\" fill=\"#b0a17f\" />\n      <path d=\"M219 222 C260 215 306 222 338 232 C352 236 363 243 367 249 C345 252 319 251 294 255 C267 258 251 252 224 250 C216 239 211 232 219 222 Z\" fill=\"#a7b185\" />\n      <path d=\"M31 243 C67 231 94 228 128 230 C159 223 187 223 219 227 C205 234 213 242 240 250 C259 256 261 266 253 276 C197 278 162 273 126 273 C79 270 41 261 31 253 Z\" fill=\"#706d60\" />\n      <path d=\"M41 244 C71 237 100 238 132 238 C164 231 185 233 204 238 C188 243 163 244 146 248 C118 253 75 251 41 249 Z\" fill=\"#8e8b7b\" />\n      <path d=\"M188 231 C210 226 232 228 249 234 C246 239 240 242 246 247 C229 244 216 244 205 246 C194 243 188 237 188 231 Z\" fill=\"#927359\" />\n    </g>\n    <g>\n      <g>\n        <path d=\"M336 231 C337 211 337 191 336 167\" fill=\"none\" stroke=\"#827a5c\" stroke-width=\"3\" />\n        <path d=\"M336 120 C332 136 328 139 327 146 L332 144 C327 155 322 160 316 163 L325 162 C321 172 312 179 306 181 C313 184 319 183 324 181 C319 190 313 195 307 198 C318 202 328 198 336 200 C344 202 356 202 363 198 C355 194 351 188 346 181 C352 182 357 183 361 179 C352 176 346 166 344 161 L352 162 C344 153 344 148 341 141 L345 143 C341 135 339 128 336 120 Z\" fill=\"#9caf91\" />\n        <path d=\"M336 141 C337 159 334 179 336 198 C346 201 356 201 363 198 C355 194 351 188 346 181 C352 182 357 183 361 179 C352 176 346 166 344 161 L352 162 C344 153 344 148 341 141 Z\" fill=\"#869f83\" />\n      </g>\n      <g>\n        <path d=\"M280 233 C282 206 281 163 280 115\" fill=\"none\" stroke=\"#857655\" stroke-width=\"4\" />\n        <path d=\"M280 78 C275 97 272 103 266 111 L274 109 C269 121 263 126 256 130 C263 131 267 129 270 128 C265 139 255 148 247 151 C256 154 261 151 267 149 C260 160 250 168 242 171 C251 177 265 172 278 174 C290 174 304 179 315 173 C305 168 299 161 294 151 C300 153 306 154 311 151 C302 145 295 138 291 128 L299 130 C292 120 289 112 286 104 L291 107 C286 98 283 88 280 78 Z\" fill=\"#789882\" />\n        <path d=\"M280 103 C279 126 282 149 278 174 C290 174 304 179 315 173 C305 168 299 161 294 151 C300 153 306 154 311 151 C302 145 295 138 291 128 L299 130 C292 120 289 112 286 104 Z\" fill=\"#5c806e\" />\n        <path d=\"M269 137 Q280 144 296 144 M261 159 Q277 164 295 161\" fill=\"none\" stroke=\"#a1b298\" stroke-width=\"1.5\" />\n      </g>\n      <g>\n        <path d=\"M306 247 C305 223 307 194 305 168\" fill=\"none\" stroke=\"#7e684b\" stroke-width=\"5\" />\n        <path d=\"M306 127 C301 141 300 148 294 155 L301 153 C296 166 290 171 282 175 C288 178 294 175 297 174 C290 186 283 192 274 197 C282 201 289 199 294 197 C288 209 279 215 271 219 C281 224 296 220 305 222 C317 223 332 225 342 219 C331 214 325 205 320 197 C326 198 332 200 338 196 C327 190 322 183 316 174 C321 176 327 176 330 174 C321 168 316 160 312 152 L317 154 C312 145 309 137 306 127 Z\" fill=\"#527e68\" />\n        <path d=\"M306 148 C305 169 309 188 305 222 C317 223 332 225 342 219 C331 214 325 205 320 197 C326 198 332 200 338 196 C327 190 322 183 316 174 C321 176 327 176 330 174 C321 168 316 160 312 152 Z\" fill=\"#3f6958\" />\n        <path d=\"M291 185 Q299 184 303 180 M283 212 Q298 213 304 205 M318 214 L325 216\" fill=\"none\" stroke=\"#7e9a79\" stroke-width=\"1.8\" />\n      </g>\n    </g>\n    <g>\n      <path d=\"M195 207 C176 187 187 173 171 157 C155 141 166 126 151 113 C138 101 140 88 152 82 C163 77 168 68 164 61 C158 48 171 37 185 40 C198 42 202 54 213 52 C228 44 242 52 244 63 C259 60 272 72 267 86 C264 96 251 102 239 99 C230 98 223 105 225 113 C231 135 211 142 213 159 C214 178 206 194 205 207 Z\" fill=\"#b8bbb3\" opacity=\".72\" />\n      <path d=\"M199 204 C197 183 203 174 191 159 C181 146 187 137 181 125 C172 111 176 98 188 96 C200 95 200 83 195 77 C189 70 194 62 202 63 C214 65 216 78 224 81 C233 86 233 96 224 104 C213 115 222 121 211 137 C202 152 210 162 207 176 L205 205 Z\" fill=\"#d3d0c2\" opacity=\".8\" />\n      <path d=\"M229 225 C227 208 240 195 234 182 C229 169 237 161 245 156 C254 150 250 139 258 134 C270 127 280 137 276 146 C270 157 261 153 258 168 C256 186 242 198 240 212 L237 227 Z\" fill=\"#b4b6aa\" opacity=\".62\" />\n    </g>\n    <g fill=\"#4d5149\">\n      <g>\n        <path d=\"M128 237 C132 222 132 199 131 182 C121 174 112 163 108 153 L111 151 C117 161 124 167 131 171 L130 133 L133 127 C136 143 137 160 136 175 C143 167 148 158 151 150 L154 151 C152 165 144 176 136 183 C137 203 137 223 140 239 Z\" />\n        <path d=\"M134 202 L146 193 L152 181 L155 183 L149 197 L136 209 Z\" />\n      </g>\n      <g>\n        <path d=\"M78 249 C84 226 83 204 83 183 C73 175 63 160 59 150 L63 148 C69 158 75 166 83 171 L81 126 L84 119 L87 128 L88 151 C96 145 102 134 105 123 L109 125 C106 141 98 154 89 161 C88 177 90 192 89 205 C97 200 103 192 107 183 L110 185 C106 198 100 206 90 212 C90 225 91 238 97 251 C91 253 83 253 78 249 Z\" />\n        <path d=\"M85 142 C87 170 87 190 87 214 L84 242\" fill=\"none\" stroke=\"#878779\" stroke-width=\"1.4\" />\n        <path d=\"M63 150 L76 169 M96 146 L103 133\" fill=\"none\" stroke=\"#767c6f\" stroke-width=\"1.2\" />\n      </g>\n    </g>\n    <g>\n      <g>\n        <path d=\"M171 237 C159 228 160 217 165 206 C170 195 177 188 175 176 C181 180 184 186 183 191 C192 180 189 167 194 153 C195 169 207 178 207 191 C208 198 204 203 208 207 C216 202 218 192 217 186 C229 198 226 211 224 218 C229 215 232 208 232 203 C242 219 232 234 221 240 C204 245 185 243 171 237 Z\" fill=\"#d88045\" />\n        <path d=\"M176 235 C169 225 175 216 182 209 C187 204 189 195 189 188 C198 197 194 208 201 214 C207 212 211 206 212 201 C217 211 214 220 220 222 C226 222 229 215 229 215 C228 231 217 239 205 240 C194 241 184 239 176 235 Z\" fill=\"#efb257\" />\n        <path d=\"M187 235 C184 227 193 222 193 214 C197 220 201 224 201 228 C207 225 209 221 208 216 C217 228 214 237 204 238 Z\" fill=\"#f6d997\" />\n      </g>\n      <g>\n        <path d=\"M221 242 C218 232 230 225 229 217 C226 209 231 199 236 196 C235 208 245 214 244 224 C249 221 251 214 250 210 C262 222 258 232 251 240 C243 246 230 247 221 242 Z\" fill=\"#d98d48\" />\n        <path d=\"M227 241 C226 234 236 227 235 220 C244 226 237 234 246 232 C250 230 251 226 251 226 C251 238 241 245 227 241 Z\" fill=\"#f2c771\" />\n      </g>\n      <g>\n        <path d=\"M155 241 C149 233 159 225 157 218 C165 223 162 229 166 231 C170 229 170 225 170 224 C175 234 169 241 163 243 Z\" fill=\"#df9a4a\" />\n        <path d=\"M257 247 C251 241 258 235 260 230 C259 237 266 237 265 242 C270 239 270 235 270 235 C276 244 266 251 257 247 Z\" fill=\"#df9a4a\" />\n      </g>\n    </g>\n    <g>\n      <path d=\"M115 252 C131 250 150 252 167 257 L181 261 L177 267 C155 262 135 258 115 259 Z\" fill=\"#4f5149\" />\n      <path d=\"M120 253 C138 253 156 257 175 262\" fill=\"none\" stroke=\"#9a9480\" stroke-width=\"1.6\" />\n      <path d=\"M133 254 L132 258 M148 257 L146 261 M164 259 L162 263\" fill=\"none\" stroke=\"#343f3b\" stroke-width=\"1.4\" />\n      <path d=\"M98 261 L105 263 M184 252 L190 253 M62 246 L70 245 M143 234 L149 232\" fill=\"none\" stroke=\"#545b50\" stroke-width=\"2\" />\n    </g>\n    <g fill=\"none\" stroke=\"#6d875c\" stroke-width=\"1.5\">\n      <path d=\"M326 254 Q321 247 320 244 M326 254 Q326 245 331 242 M326 254 Q332 249 336 249 M348 250 Q345 244 342 243 M348 250 L352 243\" />\n    </g>\n  </g>\n</svg>",
         "meta": {
           "asset_id": "earth_environment_river",
           "label": "河流",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "River",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+          "source_kind": "online-open-license",
+          "source_file": "hazard_fire.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_river",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5 31 Q17 19 30 31 T55 31 T80 31 L95 31\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M5 50 Q17 38 30 50 T55 50 T80 50 L95 50\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M5 69 Q17 57 30 69 T55 69 T80 69 L95 69\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M5 86 Q17 74 30 86 T55 86 T80 86 L95 86\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20,12H22V14H20C18.62,14 17.26,13.65 16,13C13.5,14.3 10.5,14.3 8,13C6.74,13.65 5.37,14 4,14H2V12H4C5.39,12 6.78,11.53 8,10.67C10.44,12.38 13.56,12.38 16,10.67C17.22,11.53 18.61,12 20,12M20,6H22V8H20C18.62,8 17.26,7.65 16,7C13.5,8.3 10.5,8.3 8,7C6.74,7.65 5.37,8 4,8H2V6H4C5.39,6 6.78,5.53 8,4.67C10.44,6.38 13.56,6.38 16,4.67C17.22,5.53 18.61,6 20,6M20,18H22V20H20C18.62,20 17.26,19.65 16,19C13.5,20.3 10.5,20.3 8,19C6.74,19.65 5.37,20 4,20H2V18H4C5.39,18 6.78,17.53 8,16.67C10.44,18.38 13.56,18.38 16,16.67C17.22,17.53 18.61,18 20,18Z\" /></svg>",
         "meta": {
           "asset_id": "earth_environment_ocean",
           "label": "海洋",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "Ocean",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+          "source_kind": "online-open-license",
+          "source_file": "waves.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_ocean",
@@ -184,16 +196,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"12\" width=\"84\" height=\"76\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M9 32 L91 32 M9 59 L91 59\" fill=\"none\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M10 64 Q30 53 50 64 T90 64 L90 86 L10 86 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"30\" y1=\"8\" x2=\"30\" y2=\"74\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg width=\"800\" height=\"640\" viewBox=\"0 0 400 320\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><rect x=\"40\" y=\"65\" width=\"320\" height=\"200\" rx=\"14\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"0\" opacity=\".3\" /></g><g><path d=\"M40 243Q83 225 118 238Q157 212 210 230Q273 206 322 232L360 249L360 277L40 277Z\" fill=\"#e9d2a8\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M40 262Q121 245 174 260Q252 241 360 261\" fill=\"none\" stroke=\"#b49478\" stroke-width=\"2\" /></g><g><g transform=\"translate(142 238) scale(1.1)\"><path d=\"M0 0L-1 -51M-1 -20L-27 -40L-30 -62M-18 -33L-11 -55M-1 -33L20 -53L21 -73M11 -44L34 -44L42 -59\" fill=\"none\" stroke=\"#e8ad66\" stroke-width=\"8\" /></g><g transform=\"translate(198 233) scale(0.72)\"><path d=\"M0 0L-1 -51M-1 -20L-27 -40L-30 -62M-18 -33L-11 -55M-1 -33L20 -53L21 -73M11 -44L34 -44L42 -59\" fill=\"none\" stroke=\"#e8ad66\" stroke-width=\"8\" /></g><path d=\"M219 244C213 213 223 194 244 196C260 184 289 204 288 233L285 246Z\" fill=\"#a99cc7\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M232 240Q225 211 235 207\" fill=\"none\" stroke=\"#7e729d\" stroke-width=\"1.4\" /><path d=\"M244 240Q237 211 247 207\" fill=\"none\" stroke=\"#7e729d\" stroke-width=\"1.4\" /><path d=\"M256 240Q249 211 259 207\" fill=\"none\" stroke=\"#7e729d\" stroke-width=\"1.4\" /><path d=\"M268 240Q261 211 271 207\" fill=\"none\" stroke=\"#7e729d\" stroke-width=\"1.4\" /></g><g><g transform=\"translate(64 249) scale(1)\"><path d=\"M0 0Q-12 -25 -19 -27Q-5 -20 0 0Q-3 -38 3 -45Q8 -25 0 0Q14 -32 23 -30Q12 -15 0 0\" fill=\"#79ad92\" stroke=\"#2b5662\" stroke-width=\"1.3\" /></g><g transform=\"translate(82 249) scale(0.8)\"><path d=\"M0 0Q-12 -25 -19 -27Q-5 -20 0 0Q-3 -38 3 -45Q8 -25 0 0Q14 -32 23 -30Q12 -15 0 0\" fill=\"#79ad92\" stroke=\"#2b5662\" stroke-width=\"1.3\" /></g><g transform=\"translate(313 249) scale(1.25)\"><path d=\"M0 0Q-12 -25 -19 -27Q-5 -20 0 0Q-3 -38 3 -45Q8 -25 0 0Q14 -32 23 -30Q12 -15 0 0\" fill=\"#79ad92\" stroke=\"#2b5662\" stroke-width=\"1.3\" /></g><g transform=\"translate(337 249) scale(0.95)\"><path d=\"M0 0Q-12 -25 -19 -27Q-5 -20 0 0Q-3 -38 3 -45Q8 -25 0 0Q14 -32 23 -30Q12 -15 0 0\" fill=\"#79ad92\" stroke=\"#2b5662\" stroke-width=\"1.3\" /></g></g><g><g transform=\"translate(109 125) scale(0.85)\"><path d=\"M-24 0Q0 -20 24 0Q0 20 -24 0L-38 -13L-38 13Z\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"12\" cy=\"-3\" rx=\"2\" ry=\"2\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"0\" /><path d=\"M1 -9L-4 -17L10 -10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"1\" /></g><g transform=\"translate(291 153) scale(0.7)\"><path d=\"M-24 0Q0 -20 24 0Q0 20 -24 0L-38 -13L-38 13Z\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"12\" cy=\"-3\" rx=\"2\" ry=\"2\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"0\" /><path d=\"M1 -9L-4 -17L10 -10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"1\" /></g></g></g></svg>",
         "meta": {
           "asset_id": "earth_environment_aquifer",
           "label": "含水层",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "Aquifer",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+          "source_kind": "online-open-license",
+          "source_file": "env_reef.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_aquifer",

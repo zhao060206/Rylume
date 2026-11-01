@@ -3,94 +3,94 @@
   "packs": [
     {
       "id": "chemistry",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "title": "化学",
       "domain": "chemistry",
       "min_app_version": "3.1.0",
       "description": "实验器材、分子与反应",
-      "asset_count": 71,
+      "asset_count": 101,
       "template_count": 8,
-      "asset_name": "rylume-pack-chemistry-2.1.0.zip",
-      "sha256": "c2b99e1f380beb15fcc20672454873788bc44f9a76f25d58a6be18557dc3b5c3",
-      "size": 79980
+      "asset_name": "rylume-pack-chemistry-2.2.0.zip",
+      "sha256": "a6401eae1fa975ef063e484dacd6167031c8a60688c7f42cbc7a0f104939571b",
+      "size": 125396
     },
     {
       "id": "physics",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "title": "物理学",
       "domain": "physics",
       "min_app_version": "3.1.0",
       "description": "光学、电磁与力学",
-      "asset_count": 73,
+      "asset_count": 103,
       "template_count": 8,
-      "asset_name": "rylume-pack-physics-2.1.0.zip",
-      "sha256": "8d6775cdc9bba86c631f95ebc43444126993fdbaf80930169e17be86af4d2c8a",
-      "size": 78178
+      "asset_name": "rylume-pack-physics-2.2.0.zip",
+      "sha256": "ad82f40a6aeffba4d6013e54029e68848d92b7283fd35f84304c99a225a9d599",
+      "size": 124171
     },
     {
       "id": "materials",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "title": "材料科学",
       "domain": "materials",
       "min_app_version": "3.1.0",
       "description": "微结构、缺陷与制造",
-      "asset_count": 74,
+      "asset_count": 104,
       "template_count": 8,
-      "asset_name": "rylume-pack-materials-2.1.0.zip",
-      "sha256": "a045e417e9efe8729e899dee1dc26ef97088c186a6568a2d251f35fc90b62ce6",
-      "size": 83274
+      "asset_name": "rylume-pack-materials-2.2.0.zip",
+      "sha256": "7b4afbf5cf7c52a6c5d909c2a9630287c0309a6451bc8754b53d647a94ddbc81",
+      "size": 144406
     },
     {
       "id": "engineering",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "title": "工程技术",
       "domain": "engineering",
       "min_app_version": "3.1.0",
       "description": "流体、机械与控制",
-      "asset_count": 71,
+      "asset_count": 101,
       "template_count": 8,
-      "asset_name": "rylume-pack-engineering-2.1.0.zip",
-      "sha256": "d45fd42ac834ec129c23b24cd5a535830354e24fa1e39e6aa95915d243e943b4",
-      "size": 83471
+      "asset_name": "rylume-pack-engineering-2.2.0.zip",
+      "sha256": "62bef76c73d1e1e79f4c18023bbe69acec5ca071982d390ad59cb6f5154ec85f",
+      "size": 113444
     },
     {
       "id": "earth-environment",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "title": "地球与环境",
       "domain": "earth-environment",
       "min_app_version": "3.1.0",
       "description": "地质、水循环与生态",
-      "asset_count": 80,
+      "asset_count": 110,
       "template_count": 8,
-      "asset_name": "rylume-pack-earth-environment-2.1.0.zip",
-      "sha256": "3be9c448f1c2bb0e25355a0eac1f02cf397bed280b4cbac913cd90f7aa6d0bd4",
-      "size": 90764
+      "asset_name": "rylume-pack-earth-environment-2.2.0.zip",
+      "sha256": "1636558b707bccb8d6120bc93335adb75763d0e60ad54fce2926ec82f7de734d",
+      "size": 193316
     },
     {
       "id": "computing-math",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "title": "计算机与数学",
       "domain": "computing-math",
       "min_app_version": "3.1.0",
       "description": "数据、算法与数值计算",
-      "asset_count": 72,
+      "asset_count": 102,
       "template_count": 8,
-      "asset_name": "rylume-pack-computing-math-2.1.0.zip",
-      "sha256": "feed942ffb4106ee2c198fa4e8daecc0db8b57b23dbf10889960a3f6d1596028",
-      "size": 89067
+      "asset_name": "rylume-pack-computing-math-2.2.0.zip",
+      "sha256": "2d26aaaba8234068e9944331854cedae770609115a45cce63a3457b86666f3e0",
+      "size": 129927
     },
     {
       "id": "medicine",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "title": "医学",
       "domain": "medicine",
       "min_app_version": "3.1.0",
       "description": "器官、诊疗与研究流程",
-      "asset_count": 78,
+      "asset_count": 108,
       "template_count": 8,
-      "asset_name": "rylume-pack-medicine-2.1.0.zip",
-      "sha256": "9710eacf1416ac0dbbec1e870fc7a0d479e755613016d8bd76eda42699d53374",
-      "size": 90387
+      "asset_name": "rylume-pack-medicine-2.2.0.zip",
+      "sha256": "30f10ac06e8802dd6403e6e13e5a86fb71c0ee75526c465a8eee1e0675763367",
+      "size": 229772
     }
   ]
 }

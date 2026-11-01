@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "id": "physics",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "title": "物理学",
   "domain": "physics",
   "min_app_version": "3.1.0",
-  "license": "CC0-1.0",
+  "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
       "id": "physics_lens",
@@ -24,13 +24,15 @@
         "透镜",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "49137de8efdf2aa5a2cc9a87dd2e48894e72012b18c89206110ec3c7db329f77"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_multiscale.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
     },
     {
       "id": "physics_mirror",
@@ -49,13 +51,15 @@
         "反射镜",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "ba60c3db448769a27443247108cbb009de011d9ae5d8592ba70f6ef6eadea989"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mirror.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "mirror.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mirror.svg",
+      "sha256": "51a67507aa59b9c5d9c3ae559b6a0678aa95ab3c7cc33c82eab5a747b272f8d0"
     },
     {
       "id": "physics_laser",
@@ -74,13 +78,15 @@
         "激光器",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "c996534e1c0e4a23f1539274415e76d86859e0d2f1aa80f07f07931226aeb5ad"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "laser-pointer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
     },
     {
       "id": "physics_prism",
@@ -99,13 +105,15 @@
         "棱镜",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "eae4c3ef4d69847587bb2a24c196384b333e8bbe39184577bd5c3898336a0293"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_spacecraft.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a"
     },
     {
       "id": "physics_slit",
@@ -124,13 +132,15 @@
         "狭缝",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "8649329b055b107006399e148e47b77c1d1723e85cd0f2fcbdfff37a58a0d8d5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_compact_objects.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42"
     },
     {
       "id": "physics_screen",
@@ -149,13 +159,15 @@
         "成像屏",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "421e30960d65966fac608f2698db06fbe0a0fdfc46576da9a61646d634767937"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/screen-rotation.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "screen-rotation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/screen-rotation.svg",
+      "sha256": "bb23cbff050c290e57415584bb588e24d300a2af292b6397344dcd4c3b884a7c"
     },
     {
       "id": "physics_atom",
@@ -174,13 +186,15 @@
         "原子模型",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "fbc9dab9fad260a63397f054d3253bdc675c5729b13ad8b80c27fe327c8bf6d4"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/atom.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "atom.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/atom.svg",
+      "sha256": "2d5e7f4dc620ddddbab95e49cd9fc292a14155beb4404b95c1ef447aebaae654"
     },
     {
       "id": "physics_wave",
@@ -199,13 +213,15 @@
         "波动",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "d87118b079c3e079f07a70360cd5f05e76ecf9457924aa0d049ca215601b7ca0"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sine-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
     },
     {
       "id": "physics_magnet",
@@ -224,13 +240,15 @@
         "磁铁",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "b29d86ffd2ef125a14f298a1ccd31773645cb11c10551b33dd6278b15859f5b3"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "magnet.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
     },
     {
       "id": "physics_coil",
@@ -249,13 +267,15 @@
         "线圈",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "6e824688a45e48f9e3e9368c6aba4c4b7ea53b7ccca2b042718e5b98d25244d5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_planets.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
       "id": "physics_pendulum",
@@ -274,13 +294,15 @@
         "单摆",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "a6a661878f8fddd9a27f2129a7d7aa60e80c0f5c5c003550d4359a0cbbe91434"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_planets.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
       "id": "physics_spring",
@@ -299,13 +321,15 @@
         "弹簧",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "c4d862f7a8914786cbf3a91ae373b66e72c85fdc164891158fefbf02aa777bac"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_spacecraft.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a"
     },
     {
       "id": "physics_mass",
@@ -324,13 +348,15 @@
         "质量块",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "89999abb73557fc552d1d4ecc840fdda1b047ca938fe6f8bb1dab185f2c72610"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_diffraction.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
       "id": "physics_charge",
@@ -349,13 +375,15 @@
         "点电荷",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "addd9b1da2a75f4e779a64c4b8f31fe1b35715862d51da151d47474f89c3696f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_diffraction.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
       "id": "physics_capacitor",
@@ -374,13 +402,15 @@
         "电容",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "7fd6d9346fc8db1b3e11e5d384f01085f12bfb19e5d578113be0a3ac9be807ca"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
       "id": "physics_resistor",
@@ -399,13 +429,15 @@
         "电阻",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "5cb69f839bf77462c4434b7990484687edbd0df1d2d4ab70930acd389840829f"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "resistor.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a"
     },
     {
       "id": "physics_detector",
@@ -424,13 +456,15 @@
         "探测器",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "d5a69d6af216c12d26af2bf9d9ee478d7a13e776bd4cee5750af875585875b90"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "access-point.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
     },
     {
       "id": "physics_polarizer",
@@ -449,19 +483,21 @@
         "偏振片",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "710b66b3f5d3daa5c61f1d4e467ee9bf66c9aef311ccb42ee42020f4acaa72ae"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "physics_phys_incline",
       "asset_id": "physics_phys_incline",
       "label": "斜面",
-      "label_en": "Phys incline",
+      "label_en": "Incline",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -474,19 +510,21 @@
         "斜面",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "6509f6d2d43390541bbcdc0afcbd2cf2da4995c577864bd0444eac917ec9fd62"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_small_bodies.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
       "id": "physics_phys_pulley",
       "asset_id": "physics_phys_pulley",
       "label": "滑轮",
-      "label_en": "Phys pulley",
+      "label_en": "Pulley",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -499,19 +537,21 @@
         "滑轮",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "d71df1b46e2fd5c3c0b1b21613b839819e71b617a542eccd4c7273024bfc3804"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_diffraction.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
       "id": "physics_phys_collision",
       "asset_id": "physics_phys_collision",
       "label": "碰撞",
-      "label_en": "Phys collision",
+      "label_en": "Collision",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -524,19 +564,21 @@
         "碰撞",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "5ca1d95095113832ae49ec8129e1e424ec5ca3b8eca2ec1e41954aa5928758b7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_compact_objects.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42"
     },
     {
       "id": "physics_phys_projectile",
       "asset_id": "physics_phys_projectile",
       "label": "抛体运动",
-      "label_en": "Phys projectile",
+      "label_en": "Projectile",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -549,19 +591,21 @@
         "抛体运动",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "500d35d2432e59b68ea9d2e7f4e3046bba50ba5a2e049753a795a1ca4a31afb1"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-projectile.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "arrow-projectile.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-projectile.svg",
+      "sha256": "f1f7124f333a93efbfd5876e0ab642053cfb7a26978f794e77f47677d49e5ff5"
     },
     {
       "id": "physics_phys_gyroscope",
       "asset_id": "physics_phys_gyroscope",
       "label": "陀螺仪",
-      "label_en": "Phys gyroscope",
+      "label_en": "Gyroscope",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -574,19 +618,21 @@
         "陀螺仪",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "3914a5b4e2b85189dbd84604f8e540d929e54cfe9c8d97d79fd57d495b146147"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_small_bodies.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
       "id": "physics_phys_torque",
       "asset_id": "physics_phys_torque",
       "label": "力矩",
-      "label_en": "Phys torque",
+      "label_en": "Torque",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -599,19 +645,21 @@
         "力矩",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "7eba80e7114eb6eda9e02843f152c1d660506b20f32565cfe1024625d63c1e49"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-right.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "rotate-right.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-right.svg",
+      "sha256": "7c0fdfe5c01d6f8455aad37288bb8d6dfc768054e31147dbef5a95c40baa0f23"
     },
     {
       "id": "physics_phys_friction",
       "asset_id": "physics_phys_friction",
       "label": "摩擦力",
-      "label_en": "Phys friction",
+      "label_en": "Friction",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -624,19 +672,21 @@
         "摩擦力",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "ad9d05db9af45ca4e6eed49f1a31ee21852b0e7cd449d9980e202065c80f9e05"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_planets.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
       "id": "physics_phys_free_body",
       "asset_id": "physics_phys_free_body",
       "label": "受力分析",
-      "label_en": "Phys free body",
+      "label_en": "Free body",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -649,19 +699,21 @@
         "受力分析",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "15b643ec3b77c63f7d75d1e6f9d14067de1a5f89971c227fb0d7daf75b0ab63d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_workflow.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
       "id": "physics_phys_center_mass",
       "asset_id": "physics_phys_center_mass",
       "label": "质心",
-      "label_en": "Phys center mass",
+      "label_en": "Center mass",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -674,19 +726,21 @@
         "质心",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "6611cf6ab93417dcd5bb9f0b090393238e1857bd2e9982a0da6a76640c00125d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_planets.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
       "id": "physics_phys_orbit",
       "asset_id": "physics_phys_orbit",
       "label": "轨道运动",
-      "label_en": "Phys orbit",
+      "label_en": "Orbit",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -699,19 +753,21 @@
         "轨道运动",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "b072f8b3ba6081cb47bd97523e12db7ba75a54f22e8872f928775dbe216c115f"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/orbit.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "orbit.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/orbit.svg",
+      "sha256": "53796b4728c7e70df03a0e7ef793a139db9915ead3717caafc175bd680b7ea63"
     },
     {
       "id": "physics_phys_thermometer",
       "asset_id": "physics_phys_thermometer",
       "label": "温度计",
-      "label_en": "Phys thermometer",
+      "label_en": "Thermometer",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -724,19 +780,21 @@
         "温度计",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "e09dd37c9b310bb22afa335dc556a2a4946502bd7eea85b235d35291d27edfb9"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "thermometer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
     },
     {
       "id": "physics_phys_heat_flow",
       "asset_id": "physics_phys_heat_flow",
       "label": "热流",
-      "label_en": "Phys heat flow",
+      "label_en": "Heat flow",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -749,19 +807,21 @@
         "热流",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "b9f54dab915a87f69c89d7a3af750574479ff3703b28eab53f2d6034e88bec92"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "heat-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
     },
     {
       "id": "physics_phys_entropy",
       "asset_id": "physics_phys_entropy",
       "label": "熵增",
-      "label_en": "Phys entropy",
+      "label_en": "Entropy",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -774,19 +834,21 @@
         "熵增",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "7babc9f1e0f3439264b69d640d3de981d5eaa7437781e28705f71b3215a2fb76"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "physics_phys_phase_diagram",
       "asset_id": "physics_phys_phase_diagram",
       "label": "相图",
-      "label_en": "Phys phase diagram",
+      "label_en": "Phase diagram",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -799,19 +861,21 @@
         "相图",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "7fdd4618e81857abb87f15f74e58ff0084ac5c4320137e3697b0bc436cf0b3ec"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-sankey.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-sankey.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-sankey.svg",
+      "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd"
     },
     {
       "id": "physics_phys_ideal_gas",
       "asset_id": "physics_phys_ideal_gas",
       "label": "理想气体",
-      "label_en": "Phys ideal gas",
+      "label_en": "Ideal gas",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -824,19 +888,21 @@
         "理想气体",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "35ae91c08c7c1e037c2a360fd2db4c48fe7ddb4050549e25df74256536aa7478"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "gas-cylinder.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "sha256": "95455eb65ffac0e12f242ebb1430e27de4f4bc9db68370f62e4b17130cc0d349"
     },
     {
       "id": "physics_phys_diffusion",
       "asset_id": "physics_phys_diffusion",
       "label": "扩散",
-      "label_en": "Phys diffusion",
+      "label_en": "Diffusion",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -849,19 +915,21 @@
         "扩散",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "fe36bdc6f4fcffd6e3b3833de46fa93185e5f533e0a846d9235f6d7bec294ed6"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "blur.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
     },
     {
       "id": "physics_phys_heat_engine",
       "asset_id": "physics_phys_heat_engine",
       "label": "热机",
-      "label_en": "Phys heat engine",
+      "label_en": "Heat engine",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -874,19 +942,21 @@
         "热机",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "ef9264359f310c235e87674e7d44d9fe07890cc80439a4c10aa4abf4e3795d61"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "heat-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heat-wave.svg",
+      "sha256": "65ec1d8b02ce1d51883dab9e0ebb0d71301507cd7b179b24071e79993d407d8a"
     },
     {
       "id": "physics_phys_diffraction",
       "asset_id": "physics_phys_diffraction",
       "label": "衍射",
-      "label_en": "Phys diffraction",
+      "label_en": "Diffraction",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -899,19 +969,21 @@
         "衍射",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "3660b2f9cab471ef027aa8220ebc7a18f9f1bab5b6f5fb999ca100f2dc0067c1"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_spacecraft.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_spacecraft.svg",
+      "sha256": "611ad53c349921813630c8d8f7dae0ba46513a05600f14edb8393763a0044e7a"
     },
     {
       "id": "physics_phys_double_slit",
       "asset_id": "physics_phys_double_slit",
       "label": "双缝干涉",
-      "label_en": "Phys double slit",
+      "label_en": "Double slit",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -924,19 +996,21 @@
         "双缝干涉",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "cb4c00cb2ae6b1f69f498dd6d60d9b2bd05e6c47a61ab25631b7a16e6d7bf962"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "physics_phys_convex_lens",
       "asset_id": "physics_phys_convex_lens",
       "label": "凸透镜",
-      "label_en": "Phys convex lens",
+      "label_en": "Convex lens",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -949,19 +1023,21 @@
         "凸透镜",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "9dbd6692f6a21b2860183812ce1e55a2edd79bfe432e3c3bbace8072b6484845"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_small_bodies.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
       "id": "physics_phys_concave_mirror",
       "asset_id": "physics_phys_concave_mirror",
       "label": "凹面镜",
-      "label_en": "Phys concave mirror",
+      "label_en": "Concave mirror",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -974,19 +1050,21 @@
         "凹面镜",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "e2459242db915b5186480ba3508f0f2e1a3fd7bb8091bbacd47f5c9ae63e108f"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mirror.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "mirror.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mirror.svg",
+      "sha256": "51a67507aa59b9c5d9c3ae559b6a0678aa95ab3c7cc33c82eab5a747b272f8d0"
     },
     {
       "id": "physics_phys_optical_fiber",
       "asset_id": "physics_phys_optical_fiber",
       "label": "光纤",
-      "label_en": "Phys optical fiber",
+      "label_en": "Optical fiber",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -999,19 +1077,21 @@
         "光纤",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "624b1284d7974e43c650bbdac7159b17468c41487c0bee63a9aa586fdc4e18b8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_small_bodies.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
       "id": "physics_phys_spectrometer",
       "asset_id": "physics_phys_spectrometer",
       "label": "光谱仪",
-      "label_en": "Phys spectrometer",
+      "label_en": "Spectrometer",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1024,19 +1104,21 @@
         "光谱仪",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "de60a7c6301699cb8af25e6cf91bd56732f6b1147d4e2d745e3718c1886b2fc6"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_spectroscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
       "id": "physics_phys_electric_field",
       "asset_id": "physics_phys_electric_field",
       "label": "电场",
-      "label_en": "Phys electric field",
+      "label_en": "Electric field",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1049,19 +1131,21 @@
         "电场",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "998937750aff43711d4198bf8fc5442cef4e55319d72cbe3f8d12a88616ae3f5"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/electric-switch.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "electric-switch.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/electric-switch.svg",
+      "sha256": "25cd1f980fab83045545c554c64311dc392f850f25855419ec7b32d0f9ff7d0e"
     },
     {
       "id": "physics_phys_magnetic_field",
       "asset_id": "physics_phys_magnetic_field",
       "label": "磁场",
-      "label_en": "Phys magnetic field",
+      "label_en": "Magnetic field",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1074,19 +1158,21 @@
         "磁场",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "5ed2e4344471748aa4daccd681cb9a95036121e32d4719068a38d3b51995d833"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "magnet.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
     },
     {
       "id": "physics_phys_lorentz",
       "asset_id": "physics_phys_lorentz",
       "label": "洛伦兹力",
-      "label_en": "Phys lorentz",
+      "label_en": "Lorentz",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1099,19 +1185,21 @@
         "洛伦兹力",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "d81be1cd84e8380090e1837c00a3ac3f070b93ff653c0670046e0827a03f4afc"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_workflow.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
       "id": "physics_phys_transformer",
       "asset_id": "physics_phys_transformer",
       "label": "变压器",
-      "label_en": "Phys transformer",
+      "label_en": "Transformer",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1124,19 +1212,21 @@
         "变压器",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "70416fea031695c568ddd026ba81ccc0e6ec74c894bb25affba695f469716e03"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "physics_phys_inductor",
       "asset_id": "physics_phys_inductor",
       "label": "电感",
-      "label_en": "Phys inductor",
+      "label_en": "Inductor",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1149,19 +1239,21 @@
         "电感",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "fe126d60fd757cb497a242e7b7f73e4562065d663626f985f1e67d66787ca08e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_multiscale.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
     },
     {
       "id": "physics_phys_diode",
       "asset_id": "physics_phys_diode",
       "label": "二极管",
-      "label_en": "Phys diode",
+      "label_en": "Diode",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1174,19 +1266,21 @@
         "二极管",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "d9fca694987ae2ec8ad5083707d7c48fe9865bdd379273a06fdbb60bd62bc7eb"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
       "id": "physics_phys_transistor",
       "asset_id": "physics_phys_transistor",
       "label": "晶体管",
-      "label_en": "Phys transistor",
+      "label_en": "Transistor",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1199,19 +1293,21 @@
         "晶体管",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "760d354086d3a36fb17183548bc6f20db2b8898d0ba0006de58bec8413d38def"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
       "id": "physics_phys_logic_gate",
       "asset_id": "physics_phys_logic_gate",
       "label": "逻辑门",
-      "label_en": "Phys logic gate",
+      "label_en": "Logic gate",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1224,19 +1320,21 @@
         "逻辑门",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "8fc24c187fac1df62fef8cab6335a71c43f913c7997c9de1d9da966e859450c4"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gate.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "gate.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gate.svg",
+      "sha256": "10b1417f50a0dfd7d5d07b1dd24cc1e819c1d7b237b43400f3c053e0ac3d9440"
     },
     {
       "id": "physics_phys_antenna",
       "asset_id": "physics_phys_antenna",
       "label": "天线",
-      "label_en": "Phys antenna",
+      "label_en": "Antenna",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1249,19 +1347,21 @@
         "天线",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "ca262f2b1df94dd1f6a0d2f2b8dd43f329847861b34afe208908efb106d6b6b2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/antenna.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "antenna.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/antenna.svg",
+      "sha256": "88019372e64e68087d0abec5f167243f0b594226996a406ea9dbdf24cb297be6"
     },
     {
       "id": "physics_phys_waveguide",
       "asset_id": "physics_phys_waveguide",
       "label": "波导",
-      "label_en": "Phys waveguide",
+      "label_en": "Waveguide",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1274,19 +1374,21 @@
         "波导",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "8f7883730d344f926649731c09295777824b5701a7eed678644eb037d15b0d0a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_diffraction.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
       "id": "physics_phys_energy_levels",
       "asset_id": "physics_phys_energy_levels",
       "label": "能级",
-      "label_en": "Phys energy levels",
+      "label_en": "Energy levels",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1299,19 +1401,21 @@
         "能级",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "cd93297f0eb35e2cb7fd8b793c72aca15e0dd93f26a099142c817e54687b4f7b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_planets.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
     },
     {
       "id": "physics_phys_wavefunction",
       "asset_id": "physics_phys_wavefunction",
       "label": "波函数",
-      "label_en": "Phys wavefunction",
+      "label_en": "Wavefunction",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1324,19 +1428,21 @@
         "波函数",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "3fa3bee1ca1188602b7bb4ad105a1e346d610a018303769a29c9dec0972ee22a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_compact_objects.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_compact_objects.svg",
+      "sha256": "0676969581a007d7d55060288502ba7b9f0d672b086579f7a1afb5e2cf0bbe42"
     },
     {
       "id": "physics_phys_quantum_dot",
       "asset_id": "physics_phys_quantum_dot",
       "label": "量子点",
-      "label_en": "Phys quantum dot",
+      "label_en": "Quantum dot",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1349,19 +1455,21 @@
         "量子点",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "f71651587150754acb1c470b5df9c7be92eebfae11d741cfe78ff105ca7190ae"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dot-net.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "dot-net.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dot-net.svg",
+      "sha256": "b0d4358ac9c9241e4434f099543ec5eff6a617447169fe88580e8c54aa52ebbd"
     },
     {
       "id": "physics_phys_spin",
       "asset_id": "physics_phys_spin",
       "label": "自旋",
-      "label_en": "Phys spin",
+      "label_en": "Spin",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1374,19 +1482,21 @@
         "自旋",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "7daf220040dd402643eb08b63fc30437bf36d64b111d2dc1a41cb8dd64fdbdb5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_multiscale.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
     },
     {
       "id": "physics_phys_entanglement",
       "asset_id": "physics_phys_entanglement",
       "label": "量子纠缠",
-      "label_en": "Phys entanglement",
+      "label_en": "Entanglement",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1399,19 +1509,21 @@
         "量子纠缠",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "cd798f15acc3ad250b721d34ffa4907a6ae1fe63b177881b997fd929aef8bd0f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "physics_phys_photon",
       "asset_id": "physics_phys_photon",
       "label": "光子",
-      "label_en": "Phys photon",
+      "label_en": "Photon",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1424,19 +1536,21 @@
         "光子",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "606a7fe42f8eeef12e6013752591ab34cb4e28a3008bcd971ba22601655bdc50"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_launch_landing.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_launch_landing.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_launch_landing.svg",
+      "sha256": "12116d80837b13df520371346223278906f75456dea47f517d4fcc989fb770bd"
     },
     {
       "id": "physics_phys_band_gap",
       "asset_id": "physics_phys_band_gap",
       "label": "带隙",
-      "label_en": "Phys band gap",
+      "label_en": "Band gap",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1449,19 +1563,21 @@
         "带隙",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "729d4c8dd200b8426448f9e0dad093fda28d2e7fe98dc1815fc08ae5d6296a62"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "physics_phys_tunneling",
       "asset_id": "physics_phys_tunneling",
       "label": "量子隧穿",
-      "label_en": "Phys tunneling",
+      "label_en": "Tunneling",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1474,19 +1590,21 @@
         "量子隧穿",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "3aadc781a6cf54d9230db82846ce46d74a2239ff09086c640db4e1f1674f0df5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "physics_phys_qubit",
       "asset_id": "physics_phys_qubit",
       "label": "量子比特",
-      "label_en": "Phys qubit",
+      "label_en": "Qubit",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1499,19 +1617,21 @@
         "量子比特",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "2f8d9fd2a9117630e2534ce7b43df3a695897c7810e97da4b6aa496ab5b1596a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
       "id": "physics_phys_laser_cavity",
       "asset_id": "physics_phys_laser_cavity",
       "label": "激光谐振腔",
-      "label_en": "Phys laser cavity",
+      "label_en": "Laser cavity",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1524,19 +1644,21 @@
         "激光谐振腔",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "7e582e0878f9c7001ed12e91417182a9c667a84010acdbc7f3a864dc5bf4c518"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "laser-pointer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
     },
     {
       "id": "physics_phys_cryostat",
       "asset_id": "physics_phys_cryostat",
       "label": "低温恒温器",
-      "label_en": "Phys cryostat",
+      "label_en": "Cryostat",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1549,19 +1671,21 @@
         "低温恒温器",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "aba7f739c878d0ad464da4151c83394c615211c62664f6a145a6265239d4dafc"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_stars.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_stars.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_stars.svg",
+      "sha256": "787829f9bc14b93570a80358912453abe85c7cfdfadee1ef81a4c28af6b047e3"
     },
     {
       "id": "physics_phys_interferometer",
       "asset_id": "physics_phys_interferometer",
       "label": "干涉仪",
-      "label_en": "Phys interferometer",
+      "label_en": "Interferometer",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1574,19 +1698,21 @@
         "干涉仪",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "2408cff03776ecff3811b565c82be57d1ba20de6a656794fee3c67d38c71291e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_diffraction.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
       "id": "physics_phys_plasma",
       "asset_id": "physics_phys_plasma",
       "label": "等离子体",
-      "label_en": "Phys plasma",
+      "label_en": "Plasma",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1599,19 +1725,21 @@
         "等离子体",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "a406bdab0f4be8e8ed8611c6711c478ebe8d9931f60812587ddc6722d78bd96b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_workflow.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
       "id": "physics_phys_fluid",
       "asset_id": "physics_phys_fluid",
       "label": "流体",
-      "label_en": "Phys fluid",
+      "label_en": "Fluid",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1624,19 +1752,21 @@
         "流体",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "495d8d70851cb0e28ef958de40ef63f955022bc63dc47f2e853c3c8ead606941"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_small_bodies.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+      "sha256": "7dfb4d5e826c85766b63adb67e70114a336258932aada058a9a0497cb92c3135"
     },
     {
       "id": "physics_phys_viscosity",
       "asset_id": "physics_phys_viscosity",
       "label": "黏度",
-      "label_en": "Phys viscosity",
+      "label_en": "Viscosity",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1649,19 +1779,21 @@
         "黏度",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "c47dda00bdc804f12b18425e47e3f5833d4ad6ba3c355f1180a159d30da30597"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_spectroscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
       "id": "physics_phys_surface_tension",
       "asset_id": "physics_phys_surface_tension",
       "label": "表面张力",
-      "label_en": "Phys surface tension",
+      "label_en": "Surface tension",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1674,19 +1806,21 @@
         "表面张力",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "cc78cca3679f18dcfece978f53a5ab5d04a7fd8950d8b83acb2c91b2f6fbe0e9"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "physics_phys_double_pendulum",
       "asset_id": "physics_phys_double_pendulum",
       "label": "双摆",
-      "label_en": "Phys double pendulum",
+      "label_en": "Double pendulum",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1699,19 +1833,21 @@
         "双摆",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "0dee11f21825ff0b4d67bbde5e0d17f4e095539e76c78c8c57eef58db2fe9515"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_galaxies.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_galaxies.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_galaxies.svg",
+      "sha256": "a5f31aa2ecfc35f398e551981caec9744b807dced556469b15269f747c3f0f78"
     },
     {
       "id": "physics_phys_normal_mode",
       "asset_id": "physics_phys_normal_mode",
       "label": "简正模",
-      "label_en": "Phys normal mode",
+      "label_en": "Normal mode",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1724,19 +1860,21 @@
         "简正模",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "fa827b8597a8dc3f5ca88b2dc914886b9467c519e07eaab22e255e602f82a878"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "physics_phys_phonon",
       "asset_id": "physics_phys_phonon",
       "label": "声子",
-      "label_en": "Phys phonon",
+      "label_en": "Phonon",
       "category": "光学、电磁与力学",
       "type": "symbol",
       "default_dim": [
@@ -1749,13 +1887,825 @@
         "声子",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "3b02c54a91f56e7a352f753161d56457a42f27c0cd3626712240bff6a148622d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_workflow.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
+    },
+    {
+      "id": "physics_phys_kinetic_energy",
+      "asset_id": "physics_phys_kinetic_energy",
+      "label": "动能示意",
+      "label_en": "Kinetic energy",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_kinetic_energy.svg",
+      "keywords": [
+        "phys_kinetic_energy",
+        "动能示意",
+        "物理学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_planets.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_planets.svg",
+      "sha256": "6d8b3ac43f0537aa47eb5500741d8f69bb1825b99601100777bcc85c4a326435"
+    },
+    {
+      "id": "physics_phys_potential_well",
+      "asset_id": "physics_phys_potential_well",
+      "label": "势阱",
+      "label_en": "Potential well",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_potential_well.svg",
+      "keywords": [
+        "phys_potential_well",
+        "势阱",
+        "物理学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+    },
+    {
+      "id": "physics_phys_vector",
+      "asset_id": "physics_phys_vector",
+      "label": "矢量分解",
+      "label_en": "Vector decomposition",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_vector.svg",
+      "keywords": [
+        "phys_vector",
+        "矢量分解",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-arrange-above.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
+    },
+    {
+      "id": "physics_phys_wave_packet",
+      "asset_id": "physics_phys_wave_packet",
+      "label": "波包",
+      "label_en": "Wave packet",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_wave_packet.svg",
+      "keywords": [
+        "phys_wave_packet",
+        "波包",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sine-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+    },
+    {
+      "id": "physics_phys_fourier",
+      "asset_id": "physics_phys_fourier",
+      "label": "傅里叶谱",
+      "label_en": "Fourier spectrum",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_fourier.svg",
+      "keywords": [
+        "phys_fourier",
+        "傅里叶谱",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+    },
+    {
+      "id": "physics_phys_electric_circuit",
+      "asset_id": "physics_phys_electric_circuit",
+      "label": "电路回路",
+      "label_en": "Electric circuit",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_electric_circuit.svg",
+      "keywords": [
+        "phys_electric_circuit",
+        "电路回路",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/electric-switch.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "electric-switch.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/electric-switch.svg",
+      "sha256": "25cd1f980fab83045545c554c64311dc392f850f25855419ec7b32d0f9ff7d0e"
+    },
+    {
+      "id": "physics_phys_current_density",
+      "asset_id": "physics_phys_current_density",
+      "label": "电流密度",
+      "label_en": "Current density",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_current_density.svg",
+      "keywords": [
+        "phys_current_density",
+        "电流密度",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/current-dc.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "current-dc.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/current-dc.svg",
+      "sha256": "b2e17b195b023bce66684df95c8a836c0a48eb4695bc8ed0c931bc79274c7d1e"
+    },
+    {
+      "id": "physics_phys_gauss",
+      "asset_id": "physics_phys_gauss",
+      "label": "高斯定律",
+      "label_en": "Gauss law",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_gauss.svg",
+      "keywords": [
+        "phys_gauss",
+        "高斯定律",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-circle.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-circle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-circle.svg",
+      "sha256": "f79ca835981b1cf69a1089f95eef4c4689cbd0f2b7093c5127a0c85619dc120f"
+    },
+    {
+      "id": "physics_phys_capacitor_charge",
+      "asset_id": "physics_phys_capacitor_charge",
+      "label": "电容充电",
+      "label_en": "Capacitor charging",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_capacitor_charge.svg",
+      "keywords": [
+        "phys_capacitor_charge",
+        "电容充电",
+        "物理学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_stars.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "astro_stars.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_stars.svg",
+      "sha256": "787829f9bc14b93570a80358912453abe85c7cfdfadee1ef81a4c28af6b047e3"
+    },
+    {
+      "id": "physics_phys_rlc",
+      "asset_id": "physics_phys_rlc",
+      "label": "RLC 电路",
+      "label_en": "RLC circuit",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_rlc.svg",
+      "keywords": [
+        "phys_rlc",
+        "RLC 电路",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "resistor.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a"
+    },
+    {
+      "id": "physics_phys_em_wave",
+      "asset_id": "physics_phys_em_wave",
+      "label": "电磁波",
+      "label_en": "Electromagnetic wave",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_em_wave.svg",
+      "keywords": [
+        "phys_em_wave",
+        "电磁波",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sine-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+    },
+    {
+      "id": "physics_phys_bloch",
+      "asset_id": "physics_phys_bloch",
+      "label": "布洛赫球",
+      "label_en": "Bloch sphere",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_bloch.svg",
+      "keywords": [
+        "phys_bloch",
+        "布洛赫球",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-double.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "circle-double.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-double.svg",
+      "sha256": "5a148400426d701d72703c8686ddc3850744fa1de3ae3f2cb29275e0ba4b1de2"
+    },
+    {
+      "id": "physics_phys_harmonic",
+      "asset_id": "physics_phys_harmonic",
+      "label": "简谐振动",
+      "label_en": "Simple harmonic motion",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_harmonic.svg",
+      "keywords": [
+        "phys_harmonic",
+        "简谐振动",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sine-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+    },
+    {
+      "id": "physics_phys_spring_mass",
+      "asset_id": "physics_phys_spring_mass",
+      "label": "弹簧质量系统",
+      "label_en": "Mass-spring system",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_spring_mass.svg",
+      "keywords": [
+        "phys_spring_mass",
+        "弹簧质量系统",
+        "物理学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_spectroscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
+    },
+    {
+      "id": "physics_phys_projectile_range",
+      "asset_id": "physics_phys_projectile_range",
+      "label": "抛体射程",
+      "label_en": "Projectile range",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_projectile_range.svg",
+      "keywords": [
+        "phys_projectile_range",
+        "抛体射程",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-projectile.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "arrow-projectile.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-projectile.svg",
+      "sha256": "f1f7124f333a93efbfd5876e0ab642053cfb7a26978f794e77f47677d49e5ff5"
+    },
+    {
+      "id": "physics_phys_pressure",
+      "asset_id": "physics_phys_pressure",
+      "label": "压强分布",
+      "label_en": "Pressure field",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_pressure.svg",
+      "keywords": [
+        "phys_pressure",
+        "压强分布",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "gauge.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "sha256": "fb31613d7a44b32eb9b627d98cf0bea7b79c93e435593e44d3b43967d51b06c7"
+    },
+    {
+      "id": "physics_phys_bernoulli",
+      "asset_id": "physics_phys_bernoulli",
+      "label": "伯努利流线",
+      "label_en": "Bernoulli streamlines",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_bernoulli.svg",
+      "keywords": [
+        "phys_bernoulli",
+        "伯努利流线",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pipe.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
+    },
+    {
+      "id": "physics_phys_reynolds",
+      "asset_id": "physics_phys_reynolds",
+      "label": "雷诺数",
+      "label_en": "Reynolds number",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_reynolds.svg",
+      "keywords": [
+        "phys_reynolds",
+        "雷诺数",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "water.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
+    },
+    {
+      "id": "physics_phys_heatmap",
+      "asset_id": "physics_phys_heatmap",
+      "label": "物理场热图",
+      "label_en": "Physical-field heatmap",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_heatmap.svg",
+      "keywords": [
+        "phys_heatmap",
+        "物理场热图",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "grid.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
+    },
+    {
+      "id": "physics_phys_blackbody",
+      "asset_id": "physics_phys_blackbody",
+      "label": "黑体辐射",
+      "label_en": "Blackbody radiation",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_blackbody.svg",
+      "keywords": [
+        "phys_blackbody",
+        "黑体辐射",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/white-balance-sunny.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "white-balance-sunny.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/white-balance-sunny.svg",
+      "sha256": "6baf56db75f52d16f428ee1a37ed2f9f320536b22ca068d4864bc6a5c595b4f1"
+    },
+    {
+      "id": "physics_phys_radiation",
+      "asset_id": "physics_phys_radiation",
+      "label": "辐射通量",
+      "label_en": "Radiative flux",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_radiation.svg",
+      "keywords": [
+        "phys_radiation",
+        "辐射通量",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radioactive.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "radioactive.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radioactive.svg",
+      "sha256": "1591b0d6ac624d195a2dba99ae2ff3df367341b6ec8a69e5d164e1a51f65c063"
+    },
+    {
+      "id": "physics_phys_doppler",
+      "asset_id": "physics_phys_doppler",
+      "label": "多普勒效应",
+      "label_en": "Doppler effect",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_doppler.svg",
+      "keywords": [
+        "phys_doppler",
+        "多普勒效应",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wave.svg",
+      "sha256": "48e7ff1141f49a7c76c3ba28e3afabcd0a857b0640ebf82268c962af3734bb11"
+    },
+    {
+      "id": "physics_phys_polarization_ellipse",
+      "asset_id": "physics_phys_polarization_ellipse",
+      "label": "偏振椭圆",
+      "label_en": "Polarization ellipse",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_polarization_ellipse.svg",
+      "keywords": [
+        "phys_polarization_ellipse",
+        "偏振椭圆",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ellipse.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "ellipse.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ellipse.svg",
+      "sha256": "e38e5b464ec784df7c55f21f10a3ba9fa3dda01a97604bdce9261bb1f5b74949"
+    },
+    {
+      "id": "physics_phys_fresnel",
+      "asset_id": "physics_phys_fresnel",
+      "label": "菲涅耳反射",
+      "label_en": "Fresnel reflection",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_fresnel.svg",
+      "keywords": [
+        "phys_fresnel",
+        "菲涅耳反射",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/triangle-outline.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "triangle-outline.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/triangle-outline.svg",
+      "sha256": "ed042089028441b4866f515552d37521fd14a5c876b753a5a7e351735209d53d"
+    },
+    {
+      "id": "physics_phys_microscope",
+      "asset_id": "physics_phys_microscope",
+      "label": "显微镜光路",
+      "label_en": "Microscope ray path",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_microscope.svg",
+      "keywords": [
+        "phys_microscope",
+        "显微镜光路",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microscope.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "microscope.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microscope.svg",
+      "sha256": "436386fdc11b200be10f4b8bf709c8c914c3a675f94d0b8f122f4dbc24cb4235"
+    },
+    {
+      "id": "physics_phys_telescope",
+      "asset_id": "physics_phys_telescope",
+      "label": "望远镜光路",
+      "label_en": "Telescope ray path",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_telescope.svg",
+      "keywords": [
+        "phys_telescope",
+        "望远镜光路",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/telescope.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "telescope.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/telescope.svg",
+      "sha256": "94571a48261810de5792175d54b2bfa8a996bb00a461b03f874f1d03b314d413"
+    },
+    {
+      "id": "physics_phys_neutrino",
+      "asset_id": "physics_phys_neutrino",
+      "label": "中微子示意",
+      "label_en": "Neutrino schematic",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_neutrino.svg",
+      "keywords": [
+        "phys_neutrino",
+        "中微子示意",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/atom.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "atom.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/atom.svg",
+      "sha256": "2d5e7f4dc620ddddbab95e49cd9fc292a14155beb4404b95c1ef447aebaae654"
+    },
+    {
+      "id": "physics_phys_decay",
+      "asset_id": "physics_phys_decay",
+      "label": "放射性衰变",
+      "label_en": "Radioactive decay",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_decay.svg",
+      "keywords": [
+        "phys_decay",
+        "放射性衰变",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radioactive.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "radioactive.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/radioactive.svg",
+      "sha256": "1591b0d6ac624d195a2dba99ae2ff3df367341b6ec8a69e5d164e1a51f65c063"
+    },
+    {
+      "id": "physics_phys_feynman",
+      "asset_id": "physics_phys_feynman",
+      "label": "费曼图",
+      "label_en": "Feynman diagram",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_feynman.svg",
+      "keywords": [
+        "phys_feynman",
+        "费曼图",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph-outline.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "graph-outline.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph-outline.svg",
+      "sha256": "dd312410e7732c4dde3b14e9ad4f0045fbd6e48192c26306fe20400002391be6"
+    },
+    {
+      "id": "physics_phys_detector_array",
+      "asset_id": "physics_phys_detector_array",
+      "label": "探测器阵列",
+      "label_en": "Detector array",
+      "category": "光学、电磁与力学",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/phys_detector_array.svg",
+      "keywords": [
+        "phys_detector_array",
+        "探测器阵列",
+        "物理学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "access-point.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
     },
     {
       "id": "physics_beam_splitter",
@@ -1773,13 +2723,15 @@
         "beam_splitter",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "72c27b7170a6a706e3bafa6b94f22b0872a6af1a770dafcd6b3d0c091e321f15"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/animal_mammal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "animal_mammal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/animal_mammal.svg",
+      "sha256": "7f4dd5fa8949070946c85f4a1629a902cabf077c7245220f0c68a1ef53c093b2"
     },
     {
       "id": "physics_sensor",
@@ -1797,13 +2749,15 @@
         "sensor",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "2a682096cfdd8cfcb6c3da38077ef32c8030a5bc3d956b14a864b05803314d50"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "built_building.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+      "sha256": "0a8999126aff3b9fae6af25f96d027eafe71e11cf78640cd511d01ec3a5d2e20"
     },
     {
       "id": "physics_eng_grid",
@@ -1821,13 +2775,15 @@
         "eng_grid",
         "物理学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-      "modifications": "Original vector artwork.",
-      "sha256": "c478ae48c10557631eac1ecdb40a8d628f7a99fee2d86e03bc63712010e78a30"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "grid.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
     }
   ],
   "templates": [

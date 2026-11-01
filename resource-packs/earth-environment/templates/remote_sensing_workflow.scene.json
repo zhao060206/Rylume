@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"37\" y=\"34\" width=\"26\" height=\"32\" fill=\"#D5AA6C\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"4\" y=\"25\" width=\"28\" height=\"50\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"68\" y=\"25\" width=\"28\" height=\"50\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M38 28 Q50 6 64 28 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"50\" y1=\"9\" x2=\"50\" y2=\"2\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"13\" y1=\"27\" x2=\"13\" y2=\"73\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"23\" y1=\"27\" x2=\"23\" y2=\"73\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"77\" y1=\"27\" x2=\"77\" y2=\"73\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"87\" y1=\"27\" x2=\"87\" y2=\"73\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5,18L8.5,13.5L11,16.5L14.5,12L19,18M5,12V10A5,5 0 0,0 10,5H12A7,7 0 0,1 5,12M5,5H8A3,3 0 0,1 5,8M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z\" /></svg>",
         "meta": {
           "asset_id": "earth_environment_satellite",
           "label": "遥感卫星",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "Satellite",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/satellite.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/satellite.svg",
+          "source_kind": "online-open-license",
+          "source_file": "satellite.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_satellite",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"31\" y=\"18\" width=\"30\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><polygon points=\"14,8 25,8 20,18 51,18 74,18\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><polygon points=\"43,18 59,18 68,8 34,8\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><line x1=\"14\" y1=\"26\" x2=\"20\" y2=\"48\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"78\" y1=\"26\" x2=\"75\" y2=\"48\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><path d=\"M27 48 Q50 42 73 48 L91 86 Q50 95 9 86 Z\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"40\" cy=\"66\" r=\"5\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"57\" cy=\"73\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"66\" cy=\"58\" r=\"5\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"76\" y=\"22\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">遥感</text></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12,0C8.96,0 6.21,1.23 4.22,3.22L5.63,4.63C7.26,3 9.5,2 12,2C14.5,2 16.74,3 18.36,4.64L19.77,3.23C17.79,1.23 15.04,0 12,0M7.05,6.05L8.46,7.46C9.37,6.56 10.62,6 12,6C13.38,6 14.63,6.56 15.54,7.46L16.95,6.05C15.68,4.78 13.93,4 12,4C10.07,4 8.32,4.78 7.05,6.05M12,15A2,2 0 0,1 10,13A2,2 0 0,1 12,11A2,2 0 0,1 14,13A2,2 0 0,1 12,15M15,9H9A1,1 0 0,0 8,10V22A1,1 0 0,0 9,23H15A1,1 0 0,0 16,22V10A1,1 0 0,0 15,9Z\" /></svg>",
         "meta": {
           "asset_id": "earth_environment_earth_remote_sensing",
           "label": "遥感",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "Remote sensing",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/remote.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/remote.svg",
+          "source_kind": "online-open-license",
+          "source_file": "remote.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_earth_remote_sensing",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 32 L50 18 L92 32 L50 47 Z\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M8 49 L50 34 L92 49 L50 64 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M8 66 L50 51 L92 66 L50 81 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"20\" y1=\"32\" x2=\"20\" y2=\"68\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><line x1=\"77\" y1=\"32\" x2=\"77\" y2=\"67\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><circle cx=\"38\" cy=\"58\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"93\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">GIS</text></svg>",
+        "svg": "<svg width=\"800\" height=\"640\" viewBox=\"0 0 400 320\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><path d=\"M39 217Q151 193 361 217L361 279L39 279Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M42 232Q134 218 202 232T358 230\" fill=\"none\" stroke=\"#edf4f3\" stroke-width=\"2\" /></g><g><path d=\"M93 237L93 91\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"5\" /><path d=\"M71 237L93 210L115 237\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"3\" /><rect x=\"78\" y=\"139\" width=\"31\" height=\"25\" rx=\"2\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M93 104L129 104\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M114 104L128 96L136 104L128 110Z\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M93 91L93 70\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"93\" cy=\"65\" rx=\"5\" ry=\"5\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M79 77L105 77\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"77\" cy=\"77\" rx=\"5\" ry=\"5\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"109\" cy=\"77\" rx=\"5\" ry=\"5\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><ellipse cx=\"265\" cy=\"233\" rx=\"38\" ry=\"12\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"245\" y=\"214\" width=\"40\" height=\"18\" rx=\"5\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M265 214L265 152\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"4\" /><rect x=\"248\" y=\"180\" width=\"34\" height=\"21\" rx=\"2\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M265 152L285 152\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"286\" cy=\"152\" rx=\"5\" ry=\"5\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><g><path d=\"M265 239L265 266\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"10\" /><path d=\"M265 239L265 266\" fill=\"none\" stroke=\"#d8e4e6\" stroke-width=\"6\" /></g><rect x=\"256\" y=\"260\" width=\"18\" height=\"16\" rx=\"3\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M135 130Q194 99 247 142\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2\" /><path d=\"M137 149Q155 153 149 169M143 138Q172 147 162 175\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2\" /></g><g><path d=\"M305 244L305 276\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"1.5\" /><path d=\"M300 244L310 244\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"1.5\" /><path d=\"M300 276L310 276\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"1.5\" /></g></g></svg>",
         "meta": {
           "asset_id": "earth_environment_earth_gis",
           "label": "GIS 图层",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "GIS",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+          "source_kind": "online-open-license",
+          "source_file": "env_monitoring.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_earth_gis",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 87 Q28 74 50 87 T92 87 L92 94 L8 94 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"15\" y1=\"64\" x2=\"15\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"29\" y1=\"64\" x2=\"29\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"43\" y1=\"64\" x2=\"43\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"57\" y1=\"64\" x2=\"57\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"71\" y1=\"64\" x2=\"71\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"85\" y1=\"64\" x2=\"85\" y2=\"82\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"10\" y1=\"56\" x2=\"90\" y2=\"56\" stroke=\"#84B7C8\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><circle cx=\"22\" cy=\"55\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"55\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"78\" cy=\"55\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"78\" cy=\"23\" r=\"9\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"42\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">农田</text></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20 2H4C2.9 2 2 2.9 2 4V20C2 21.1 2.9 22 4 22H20C21.1 22 22 21.1 22 20V4C22 2.9 21.1 2 20 2M15.3 4C14.5 5.1 14 6.5 14 8H10C10 6.4 10.8 4.9 12 4H15.3M14 14H10C10 12.5 9.5 11.1 8.7 10H12C13.2 10.9 14 12.4 14 14M4 4H9.3C8.5 5.1 8 6.5 8 8H4V4M4 10H6C7.2 10.9 8 12.3 8 14H4V10M4 20V16H9.3C8.5 17.1 8 18.5 8 20H4M10 20C10 18.4 10.8 16.9 12 16H15.3C14.5 17.1 14 18.5 14 20H10M20 20H16C16 18.4 16.8 16.9 18 16H20V20M20 14H16C16 12.5 15.5 11.1 14.7 10H20V14M20 8H16C16 6.4 16.8 4.9 18 4H20V8Z\" /></svg>",
         "meta": {
           "asset_id": "earth_environment_earth_land_cover",
           "label": "earth land cover",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "Land-cover class",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/land-fields.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/land-fields.svg",
+          "source_kind": "online-open-license",
+          "source_file": "land-fields.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_earth_land_cover",
@@ -184,16 +196,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"50\" y1=\"87\" x2=\"50\" y2=\"19\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"29\" y1=\"88\" x2=\"71\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M50 20 L77 16 L77 35 L50 39 Z\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"50\" cy=\"57\" r=\"10\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"12\" y1=\"42\" x2=\"45\" y2=\"42\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"20\" y1=\"30\" x2=\"20\" y2=\"53\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg width=\"800\" height=\"640\" viewBox=\"0 0 400 320\" xmlns=\"http://www.w3.org/2000/svg\">\n<g stroke-linecap=\"round\" stroke-linejoin=\"round\">\n <g><path d=\"M30 251 C68 223 123 190 177 158 C199 147 225 144 249 157 C289 182 332 219 372 252 C357 276 280 286 210 282 C143 287 69 277 30 262 Z\" fill=\"#b1ad95\" /></g>\n <g>\n  <path d=\"M103 193 C120 165 142 143 155 119 C169 96 180 83 194 71 C205 80 209 96 220 105 C236 93 245 76 257 60 C270 70 276 94 290 108 C307 123 316 146 332 171 L346 226 L269 233 L161 220 Z\" fill=\"#99aaa6\" />\n  <path d=\"M257 60 C258 84 246 103 256 126 C268 151 268 176 283 191 L326 225 L346 226 L332 171 C316 146 307 123 290 108 C276 94 270 70 257 60 Z\" fill=\"#7e9794\" />\n  <path d=\"M172 97 L194 71 C205 80 209 96 220 105 L210 119 L203 105 L195 110 L190 101 L179 117 Z M235 91 L257 60 C270 70 276 94 290 108 L275 105 L274 121 L261 108 L251 118 L251 95 L239 110 Z\" fill=\"#e8eee8\" />\n </g>\n <g>\n  <path d=\"M180 132 C191 119 207 122 220 122 C232 121 241 113 249 103 C258 124 259 143 251 163 C244 182 229 193 226 209 C224 225 241 235 240 249 C239 263 216 270 192 268 C169 267 153 258 156 244 C159 228 179 217 182 202 C185 187 171 180 167 165 C163 151 173 140 180 132 Z\" fill=\"#d8e9e4\" />\n  <path d=\"M249 103 C258 124 259 143 251 163 C244 182 229 193 226 209 C224 225 241 235 240 249 C239 263 216 270 192 268 C169 267 153 258 156 244 C164 254 180 258 198 258 C217 259 227 253 227 245 C227 230 209 222 212 205 C215 185 235 176 241 157 C247 139 244 119 249 103 Z\" fill=\"#a9cdd1\" />\n  <path d=\"M156 244 C164 254 180 258 198 258 C217 259 227 253 227 245 C228 256 218 263 199 265 C180 265 163 260 156 253 Z\" fill=\"#87b4bd\" />\n  <path d=\"M179 142 C180 158 190 169 194 181 C202 202 190 214 179 230\" fill=\"none\" stroke=\"#edf3ec\" stroke-width=\"3\" />\n </g>\n <g>\n  <path d=\"M30 251 C44 224 55 194 69 177 C84 158 92 130 106 109 C121 116 129 139 140 150 C154 167 153 184 164 198 C171 208 173 214 172 224 C154 232 148 244 152 255 C119 261 77 264 30 251 Z\" fill=\"#929f95\" />\n  <path d=\"M106 109 C109 134 98 153 111 173 C128 194 127 218 152 235 C158 230 166 226 172 224 C173 214 171 208 164 198 C153 184 154 167 140 150 C129 139 121 116 106 109 Z\" fill=\"#6f8984\" />\n  <path d=\"M93 129 L106 109 C115 115 121 126 126 135 L116 134 L113 148 L105 135 L96 143 Z\" fill=\"#e3eae2\" />\n </g>\n <g fill=\"none\" stroke=\"#8e9180\" stroke-width=\"3\">\n  <path d=\"M172 223 C156 232 149 242 153 254 M257 164 C247 184 233 195 232 209 C230 221 244 235 244 248\" />\n </g>\n <g fill=\"none\" stroke=\"#78a7b1\" stroke-width=\"1.5\">\n  <path d=\"M179 158 C190 163 202 160 213 155 L210 160 M185 177 Q198 184 213 176 M174 229 Q184 236 200 232 L197 237 M177 243 Q188 247 204 244 M227 139 Q236 143 247 139\" />\n </g>\n <g>\n  <path d=\"M149 252 C157 269 177 278 199 277 L205 268 C182 272 164 265 156 253 Z M215 267 L211 277 C228 277 246 266 249 253 L240 252 C236 260 227 265 215 267 Z\" fill=\"#99937b\" />\n  <path d=\"M159 263 L165 260 L171 264 L170 268 L163 268 Z M180 273 L185 267 L192 269 L193 274 Z M227 269 L231 264 L237 264 L237 269 Z\" fill=\"#c6c3aa\" />\n </g>\n <g><path d=\"M205 268 L215 267 C209 277 223 278 238 278 C259 278 276 281 287 286 L265 290 C255 286 244 284 231 284 C209 284 194 278 205 268 Z\" fill=\"#97bec3\" /></g>\n</g></svg>",
         "meta": {
           "asset_id": "earth_environment_station",
           "label": "环境监测站",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-          "modifications": "Original vector artwork."
+          "label_en": "Station",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+          "source_kind": "online-open-license",
+          "source_file": "geo_glacier.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "earth_environment_station",

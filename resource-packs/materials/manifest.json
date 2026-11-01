@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "id": "materials",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "title": "材料科学",
   "domain": "materials",
   "min_app_version": "3.1.0",
-  "license": "CC0-1.0",
+  "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
       "id": "materials_particle",
@@ -24,13 +24,15 @@
         "纳米颗粒",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "f4c3c3a8709232ca0dae7af499cd8c728368349adfcc5121bcce4a72b7f646d8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_composites.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
     },
     {
       "id": "materials_lattice",
@@ -49,13 +51,15 @@
         "晶格",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "e5a0253adc2accac4a572e4932db75586e589c13b70dc7763be0844a3d71f0fa"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_polymers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
     },
     {
       "id": "materials_vacancy",
@@ -74,13 +78,15 @@
         "空位缺陷",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "2ec2cf8258fe0118b67e26bbdb73ce4947ae7da2803026cbf963739acec52bd5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "materials_dislocation",
@@ -99,13 +105,15 @@
         "位错",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "6f2bf4e5f630579517b1ec38b351526efa1e18cbd491d966d315e44e6748b699"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_semiconductors.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_semiconductors.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_semiconductors.svg",
+      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176"
     },
     {
       "id": "materials_layers",
@@ -124,13 +132,15 @@
         "层状材料",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "e1cac03f46ce389d283f35502b95808cd5c1378781c7072308dfd63e33fddcd3"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "layers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
     },
     {
       "id": "materials_graphene",
@@ -149,13 +159,15 @@
         "石墨烯晶格",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "02ebd97c7a4f0c9669f2ebc95afa23d1c7148b1a43db7913480258cbe2055b92"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "materials_nanotube",
@@ -174,13 +186,15 @@
         "纳米管",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "5e34644f53cbf1f4e8032300ead6adeb60a693e1f02abccfec52b22afc9fb3b1"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_catalytic_interfaces.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
     },
     {
       "id": "materials_polymer",
@@ -199,13 +213,15 @@
         "聚合物链",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "484006d56f6b45f4b988f90db0dcb59fa8a33b4e01f09dee1886df8f2277a8c7"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/polymer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "polymer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/polymer.svg",
+      "sha256": "5541436fd6d2038d282f33ebef45df7dc6ec11e47a675cbe48e6a56fc922d05f"
     },
     {
       "id": "materials_composite",
@@ -224,13 +240,15 @@
         "复合材料",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "519430af69ef6da0bb6595b18c0e8c25f79098e4915b0bbe6ba53fb9dc5745fd"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_catalytic_interfaces.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
     },
     {
       "id": "materials_pore",
@@ -249,13 +267,15 @@
         "多孔材料",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "acd00d98cd39e57633acdfd2b0179edbad1537e66ea4fa9a14acb1c3ef6d4dea"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_porous.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
     },
     {
       "id": "materials_membrane",
@@ -274,13 +294,15 @@
         "多孔膜",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "363f108a56e7530fb29b2ac636d12c923be4f8e4bddbc80f607a76feb557a143"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_porous.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
     },
     {
       "id": "materials_grain",
@@ -299,13 +321,15 @@
         "多晶晶粒",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "3bb308cb89979d27a2853a32d4efca8746c397c645839847252e26f20796d502"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grain.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "grain.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grain.svg",
+      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841"
     },
     {
       "id": "materials_fiber",
@@ -324,13 +348,15 @@
         "纤维",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "c8f906519870b0d8a506d9f0e788e0e913e57a8fad177d9d701484bb54f2842f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_crystals.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
     },
     {
       "id": "materials_film",
@@ -349,13 +375,15 @@
         "薄膜",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "fe5108f47bfcfaf52d23893da7a3f9c198b827227c06134b237e5b8344eb66d8"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/film.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "film.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/film.svg",
+      "sha256": "6c77eb5d7cda3e55caf5a379cdfa680744ed69d0150498fb5e2482d42b68f801"
     },
     {
       "id": "materials_substrate",
@@ -374,13 +402,15 @@
         "基底",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "68421e3a4d757d914373d6b3e7d6f2fc6f056c9e68d6d65b67fc973ad60d7884"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electron_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
       "id": "materials_tensile",
@@ -399,13 +429,15 @@
         "拉伸试样",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "71dc6988034daaeb16edf222d73e5cc2750b4c1bf8f48717b510dc6b52c7fbfb"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_crystals.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
     },
     {
       "id": "materials_fracture",
@@ -424,13 +456,15 @@
         "裂纹扩展",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "b7aebc56465a5cb689989a9531fcd94cbf1f556cae95514bc1cbb870d1bf14ef"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electron_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
       "id": "materials_powder",
@@ -449,19 +483,21 @@
         "粉末颗粒",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "e161c0d70717ceeaf17068757d81ae7c438f3bee301b80dda458e4e4df741236"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grain.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "grain.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grain.svg",
+      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841"
     },
     {
       "id": "materials_mat_bcc",
       "asset_id": "materials_mat_bcc",
       "label": "体心立方晶格",
-      "label_en": "Mat bcc",
+      "label_en": "Bcc",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -474,19 +510,21 @@
         "体心立方晶格",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "606b240fe775d2f59075343a4e2145bbda6451b54ac3b50431ad488fa97b8d10"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_porous.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
     },
     {
       "id": "materials_mat_fcc",
       "asset_id": "materials_mat_fcc",
       "label": "面心立方晶格",
-      "label_en": "Mat fcc",
+      "label_en": "Fcc",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -499,19 +537,21 @@
         "面心立方晶格",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "ebb5fd01b70359ab6675b2ebd3dee8e3e2207f5f16b84079a539bd95c29f9dad"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electron_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
       "id": "materials_mat_hcp",
       "asset_id": "materials_mat_hcp",
       "label": "六方密排晶格",
-      "label_en": "Mat hcp",
+      "label_en": "Hcp",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -524,19 +564,21 @@
         "六方密排晶格",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "f47a9356f10b302b73bcd52965f7fcaceec4dc4d61a5549d29f0019af3276b94"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_catalytic_interfaces.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
     },
     {
       "id": "materials_mat_grain_boundary",
       "asset_id": "materials_mat_grain_boundary",
       "label": "晶界",
-      "label_en": "Mat grain boundary",
+      "label_en": "Grain boundary",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -549,19 +591,21 @@
         "晶界",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "35167dbccf93b4e4ea358de2b12feab06f504be930f21a59d0ee3881efe7df68"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grain.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "grain.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grain.svg",
+      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841"
     },
     {
       "id": "materials_mat_twin_boundary",
       "asset_id": "materials_mat_twin_boundary",
       "label": "孪晶界",
-      "label_en": "Mat twin boundary",
+      "label_en": "Twin boundary",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -574,19 +618,21 @@
         "孪晶界",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "409b9ce07077bb8803b2becab930659631e2cf3297b33acd98d2a96c7f569176"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_catalytic_interfaces.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
     },
     {
       "id": "materials_mat_precipitate",
       "asset_id": "materials_mat_precipitate",
       "label": "析出相",
-      "label_en": "Mat precipitate",
+      "label_en": "Precipitate",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -599,19 +645,21 @@
         "析出相",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "b514f8ffd181b7a7b715ec8f814580831a8766feca6e35764766d47c1883977e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_layered.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
     },
     {
       "id": "materials_mat_inclusion",
       "asset_id": "materials_mat_inclusion",
       "label": "夹杂物",
-      "label_en": "Mat inclusion",
+      "label_en": "Inclusion",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -624,19 +672,21 @@
         "夹杂物",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "382694a6207bd346d8afa2e8bd01703e35dadd50be312511cb159c36caa8ddbd"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_layered.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
     },
     {
       "id": "materials_mat_crack_tip",
       "asset_id": "materials_mat_crack_tip",
       "label": "裂纹尖端",
-      "label_en": "Mat crack tip",
+      "label_en": "Crack tip",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -649,19 +699,21 @@
         "裂纹尖端",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "4372775204c555d2699b191114b04e0465e1ae4d8cc3611193c842b408f7c47b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "materials_mat_fatigue",
       "asset_id": "materials_mat_fatigue",
       "label": "疲劳曲线",
-      "label_en": "Mat fatigue",
+      "label_en": "Fatigue",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -674,19 +726,21 @@
         "疲劳曲线",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "c53a663f7784f3728fae6ab10f342c6e9408a7b416d6f78e8e1b9d58ffb80160"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_polymers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
     },
     {
       "id": "materials_mat_creep",
       "asset_id": "materials_mat_creep",
       "label": "蠕变曲线",
-      "label_en": "Mat creep",
+      "label_en": "Creep",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -699,19 +753,21 @@
         "蠕变曲线",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "6a3b275deeac0ac937eaf93fa209900c8b459f5057ffee7c9f012cad4a5b7f2f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_semiconductors.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_semiconductors.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_semiconductors.svg",
+      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176"
     },
     {
       "id": "materials_mat_corrosion",
       "asset_id": "materials_mat_corrosion",
       "label": "腐蚀",
-      "label_en": "Mat corrosion",
+      "label_en": "Corrosion",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -724,19 +780,21 @@
         "腐蚀",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "04a40d4505407659e429a6e8b5ac69d360b04d990c425f4941816bb55b663ea7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "materials_mat_oxide_layer",
       "asset_id": "materials_mat_oxide_layer",
       "label": "氧化层",
-      "label_en": "Mat oxide layer",
+      "label_en": "Oxide layer",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -749,19 +807,21 @@
         "氧化层",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "731443b09c4a53e27c7d9360424b48e7bb9b4fe5a32ef2192af18614f8c385b1"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_composites.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
     },
     {
       "id": "materials_mat_coating",
       "asset_id": "materials_mat_coating",
       "label": "涂层",
-      "label_en": "Mat coating",
+      "label_en": "Coating",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -774,19 +834,21 @@
         "涂层",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "c117c8a474e42477ebea1a46793821779d4a435616fe1034f775b0b2c712f788"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_composites.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
     },
     {
       "id": "materials_mat_thin_film",
       "asset_id": "materials_mat_thin_film",
       "label": "薄膜沉积",
-      "label_en": "Mat thin film",
+      "label_en": "Thin film",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -799,19 +861,21 @@
         "薄膜沉积",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "61c2184fe09036482ac1a5ab54ef35e77636c95a99b5c10e32be149d76f84455"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/film.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "film.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/film.svg",
+      "sha256": "6c77eb5d7cda3e55caf5a379cdfa680744ed69d0150498fb5e2482d42b68f801"
     },
     {
       "id": "materials_mat_sputtering",
       "asset_id": "materials_mat_sputtering",
       "label": "磁控溅射",
-      "label_en": "Mat sputtering",
+      "label_en": "Sputtering",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -824,19 +888,21 @@
         "磁控溅射",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "b6e044966ecee9fe06b059183007cdca2a73cc110ce471121ef12d6331ffc6db"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_semiconductors.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_semiconductors.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_semiconductors.svg",
+      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176"
     },
     {
       "id": "materials_mat_cvd",
       "asset_id": "materials_mat_cvd",
       "label": "化学气相沉积",
-      "label_en": "Mat CVD",
+      "label_en": "CVD",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -849,19 +915,21 @@
         "化学气相沉积",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "9d8d7fdd268e42c2ac48380016ab9471a35b51f630a047ac726f20c085682949"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_layered.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
     },
     {
       "id": "materials_mat_lithography",
       "asset_id": "materials_mat_lithography",
       "label": "光刻",
-      "label_en": "Mat lithography",
+      "label_en": "Lithography",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -874,19 +942,21 @@
         "光刻",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "a8eb415f56cebf8bf6cdb7b00d99224a2581684cdd94cc8b1678263142d48ee8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_particles.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
     },
     {
       "id": "materials_mat_annealing",
       "asset_id": "materials_mat_annealing",
       "label": "退火",
-      "label_en": "Mat annealing",
+      "label_en": "Annealing",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -899,19 +969,21 @@
         "退火",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "08a198fb1b0066d14e3e4ffe4a9894193bdf77349b51075a215055e05a3cd918"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electron_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
       "id": "materials_mat_quenching",
       "asset_id": "materials_mat_quenching",
       "label": "淬火",
-      "label_en": "Mat quenching",
+      "label_en": "Quenching",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -924,19 +996,21 @@
         "淬火",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "f2bb63dab6623419c12f0ae7a28f81620297be35b44b15a3f8831751b5ac9499"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "materials_mat_sintering",
       "asset_id": "materials_mat_sintering",
       "label": "烧结",
-      "label_en": "Mat sintering",
+      "label_en": "Sintering",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -949,19 +1023,21 @@
         "烧结",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "d49e7c52e2d0804055cfd5bf7b37b77fd6135c6b3de790b31177227be50800ae"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "materials_mat_additive",
       "asset_id": "materials_mat_additive",
       "label": "增材制造",
-      "label_en": "Mat additive",
+      "label_en": "Additive",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -974,19 +1050,21 @@
         "增材制造",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "c53faf11e1a08fea98a365937a22fd232b033786578528485c9ca2b28d8e0548"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_polymers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
     },
     {
       "id": "materials_mat_extrusion",
       "asset_id": "materials_mat_extrusion",
       "label": "挤出成型",
-      "label_en": "Mat extrusion",
+      "label_en": "Extrusion",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -999,19 +1077,21 @@
         "挤出成型",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "690aee7af1afc3bb306f68c7eb12a8c8de53c2bccfaec29e0e737e10652a3cea"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_polymers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
     },
     {
       "id": "materials_mat_injection",
       "asset_id": "materials_mat_injection",
       "label": "注塑成型",
-      "label_en": "Mat injection",
+      "label_en": "Injection",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1024,19 +1104,21 @@
         "注塑成型",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "cc3056f8145f960b1e852172ea698357d51be9cdec3942b42f434a41170e2fa8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "materials_mat_rolling",
       "asset_id": "materials_mat_rolling",
       "label": "轧制",
-      "label_en": "Mat rolling",
+      "label_en": "Rolling",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1049,19 +1131,21 @@
         "轧制",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "461a7b02c27bd9e1df9946496d8a5a66e0b77feb4a39dc2d3fb3ea2a05520f0c"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-orbit.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "rotate-orbit.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-orbit.svg",
+      "sha256": "1ba409a43e26d14375a0eee9af5063c7fd886cb896da389192330878da253975"
     },
     {
       "id": "materials_mat_forging",
       "asset_id": "materials_mat_forging",
       "label": "锻造",
-      "label_en": "Mat forging",
+      "label_en": "Forging",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1074,19 +1158,21 @@
         "锻造",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "53a045dfbea0f9f805cb4a4afaeb7147a6dc7d6bca7b85f644284ec704ee0d03"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_particles.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
     },
     {
       "id": "materials_mat_weld",
       "asset_id": "materials_mat_weld",
       "label": "焊接",
-      "label_en": "Mat weld",
+      "label_en": "Weld",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1099,19 +1185,21 @@
         "焊接",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "ed5d0e4ddab568824f409e73f15a9844abe45f52b1d110793d4af2f717eab7b8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_porous.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
     },
     {
       "id": "materials_mat_laminate",
       "asset_id": "materials_mat_laminate",
       "label": "层合板",
-      "label_en": "Mat laminate",
+      "label_en": "Laminate",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1124,19 +1212,21 @@
         "层合板",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "5edb45150b2b1ccfc3ad9e314ab9d54cd9740ce18f3f4469f23a4f038d3b2ef0"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_particles.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
     },
     {
       "id": "materials_mat_fiber_reinf",
       "asset_id": "materials_mat_fiber_reinf",
       "label": "纤维增强",
-      "label_en": "Mat fiber reinf",
+      "label_en": "Fiber reinf",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1149,19 +1239,21 @@
         "纤维增强",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "5e3849467485efd22644257d8c9dd822ab68e0ae92a6509fa8b6d3f8496c288a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "materials_mat_foam",
       "asset_id": "materials_mat_foam",
       "label": "泡沫材料",
-      "label_en": "Mat foam",
+      "label_en": "Foam",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1174,19 +1266,21 @@
         "泡沫材料",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "10378d40ba59b3843e3a4cdacb443cbd36770e0075962b062d5c94bf79da8c88"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "materials_mat_aerogel",
       "asset_id": "materials_mat_aerogel",
       "label": "气凝胶",
-      "label_en": "Mat aerogel",
+      "label_en": "Aerogel",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1199,19 +1293,21 @@
         "气凝胶",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "320c7fdb48e8387156f3f0064a8ddca5d693701b43c9b975ac9041edf3f05644"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "materials_mat_metamaterial",
       "asset_id": "materials_mat_metamaterial",
       "label": "超材料",
-      "label_en": "Mat metamaterial",
+      "label_en": "Metamaterial",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1224,19 +1320,21 @@
         "超材料",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "fdccf82e8e708ab432fb1823b23334fc04fcc4773dc3efe2726f23e5d5c6b035"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_catalytic_interfaces.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
     },
     {
       "id": "materials_mat_shape_memory",
       "asset_id": "materials_mat_shape_memory",
       "label": "形状记忆",
-      "label_en": "Mat shape memory",
+      "label_en": "Shape memory",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1249,19 +1347,21 @@
         "形状记忆",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "dc3dc0b508ea6be80451d712c02f2ac645450481fcbfd6b7c13e0b79e402ed56"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shape.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "shape.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shape.svg",
+      "sha256": "2cc65609a7264af800b4ef718c868548d18c50ae39e14f6d0fc97078854a66ee"
     },
     {
       "id": "materials_mat_piezoelectric",
       "asset_id": "materials_mat_piezoelectric",
       "label": "压电材料",
-      "label_en": "Mat piezoelectric",
+      "label_en": "Piezoelectric",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1274,19 +1374,21 @@
         "压电材料",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "f8f23cb3d445f37d37573cf20879a02aff4a19a951af5310bd1f2fc0a1ab3a01"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "materials_mat_semiconductor",
       "asset_id": "materials_mat_semiconductor",
       "label": "半导体",
-      "label_en": "Mat semiconductor",
+      "label_en": "Semiconductor",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1299,19 +1401,21 @@
         "半导体",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "680573d1476a920b4c00f8cb3c5ce79a5654f421525b214a5691d197a876eeaa"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_catalytic_interfaces.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
     },
     {
       "id": "materials_mat_superconductor",
       "asset_id": "materials_mat_superconductor",
       "label": "超导体",
-      "label_en": "Mat superconductor",
+      "label_en": "Superconductor",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1324,19 +1428,21 @@
         "超导体",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "04bd2e0d5125e4c2963cf9e36d626759f3272b75f36f0ba7b5822c5d81610a54"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_catalytic_interfaces.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
     },
     {
       "id": "materials_mat_magnetic",
       "asset_id": "materials_mat_magnetic",
       "label": "磁畴",
-      "label_en": "Mat magnetic",
+      "label_en": "Magnetic",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1349,19 +1455,21 @@
         "磁畴",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "c9219cdf6490deae614020884fe20e07a56388d99bca4483db30ab887b0bb4fe"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "magnet.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
     },
     {
       "id": "materials_mat_battery_material",
       "asset_id": "materials_mat_battery_material",
       "label": "电池材料",
-      "label_en": "Mat battery material",
+      "label_en": "Battery material",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1374,19 +1482,21 @@
         "电池材料",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "ea80e129bf614a2b6c4ba956d7dcccadd530c2e462929c664d2fc7d4d1de408b"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "battery.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f"
     },
     {
       "id": "materials_mat_catalyst_support",
       "asset_id": "materials_mat_catalyst_support",
       "label": "催化剂载体",
-      "label_en": "Mat catalyst support",
+      "label_en": "Catalyst support",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1399,19 +1509,21 @@
         "催化剂载体",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "06cf76182b54fe65f0c4f2d2d0c1a409b0ad04ac4a579895b0d020b0e3196156"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_particles.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
     },
     {
       "id": "materials_mat_sep_membrane",
       "asset_id": "materials_mat_sep_membrane",
       "label": "分离膜",
-      "label_en": "Mat sep membrane",
+      "label_en": "Sep membrane",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1424,19 +1536,21 @@
         "分离膜",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "7681b592ed83889a16e6997fd031f54a62aefdac419ddca174d45a73bfa22032"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_semiconductors.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_semiconductors.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_semiconductors.svg",
+      "sha256": "13559ada8696ea64ca86812f02aa06e974d5d1d9210e1c46ba7f0966628f1176"
     },
     {
       "id": "materials_mat_hydrogel",
       "asset_id": "materials_mat_hydrogel",
       "label": "水凝胶",
-      "label_en": "Mat hydrogel",
+      "label_en": "Hydrogel",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1449,19 +1563,21 @@
         "水凝胶",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "d0b8cb7a52bce354e11883e4bbb845297fd63b30ab8fbafa6550104b6bda428b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_layered.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
     },
     {
       "id": "materials_mat_elastomer",
       "asset_id": "materials_mat_elastomer",
       "label": "弹性体",
-      "label_en": "Mat elastomer",
+      "label_en": "Elastomer",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1474,19 +1590,21 @@
         "弹性体",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "f8a6bb2abd831aaf9ecc2a1178aa523d81b88e8904a384ca16b5b32419686281"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "materials_mat_thermoplastic",
       "asset_id": "materials_mat_thermoplastic",
       "label": "热塑性塑料",
-      "label_en": "Mat thermoplastic",
+      "label_en": "Thermoplastic",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1499,19 +1617,21 @@
         "热塑性塑料",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "cbae2148023129b6140248a0b1fcf9dbb1b2f22b2a400930d402c16c38cbf0df"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_polymers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
     },
     {
       "id": "materials_mat_thermoset",
       "asset_id": "materials_mat_thermoset",
       "label": "热固性塑料",
-      "label_en": "Mat thermoset",
+      "label_en": "Thermoset",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1524,19 +1644,21 @@
         "热固性塑料",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "9e2b0a85e89e45a093236c569c05e1f7c00e0b55eb86c9548d719b97887c3ed7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "materials_mat_copolymer",
       "asset_id": "materials_mat_copolymer",
       "label": "共聚物",
-      "label_en": "Mat copolymer",
+      "label_en": "Copolymer",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1549,19 +1671,21 @@
         "共聚物",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "1c87306d801c5368a64ae489e8acce3860f3d7852fa3775cf01ddfa15f494559"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_polymers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_polymers.svg",
+      "sha256": "cb5f26285f0224217156a03e21a9d28a2deab139e02a2f79ae8a1d1380f62750"
     },
     {
       "id": "materials_mat_crosslink",
       "asset_id": "materials_mat_crosslink",
       "label": "交联网络",
-      "label_en": "Mat crosslink",
+      "label_en": "Crosslink",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1574,19 +1698,21 @@
         "交联网络",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "53738bc2495d9d15eb957d9049f551df706409a5159350823312020ff9cf9d67"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_layered.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
     },
     {
       "id": "materials_mat_crystallization",
       "asset_id": "materials_mat_crystallization",
       "label": "结晶",
-      "label_en": "Mat crystallization",
+      "label_en": "Crystallization",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1599,19 +1725,21 @@
         "结晶",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "7c4b0660be4f84901087e874e35bd4a5b02220205b57193d906715f7fdfc5b9a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electron_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
       "id": "materials_mat_phase_sep",
       "asset_id": "materials_mat_phase_sep",
       "label": "相分离",
-      "label_en": "Mat phase sep",
+      "label_en": "Phase sep",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1624,19 +1752,21 @@
         "相分离",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "fc0f5f3f9132f59bb0f996da247200308dda57ec3fcd15e0b9282dceaf8e99f5"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-sankey.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-sankey.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-sankey.svg",
+      "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd"
     },
     {
       "id": "materials_mat_band_structure",
       "asset_id": "materials_mat_band_structure",
       "label": "能带结构",
-      "label_en": "Mat band structure",
+      "label_en": "Band structure",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1649,19 +1779,21 @@
         "能带结构",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "5c8530e47965f1661f2b76f6c330b4ef772f7c5b926dd2a7ddaeac815dd25115"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_particles.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
     },
     {
       "id": "materials_mat_stress_strain",
       "asset_id": "materials_mat_stress_strain",
       "label": "应力应变曲线",
-      "label_en": "Mat stress strain",
+      "label_en": "Stress strain",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1674,19 +1806,21 @@
         "应力应变曲线",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "1819a63735c4ce0832037f1c33bb929c0857ac82c2b74a69d6c6d5eaf18b6770"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-line.svg",
+      "sha256": "96631f806d6c72d91ca861aef313eeaced4cee45f1f18223e734003b109f1a2e"
     },
     {
       "id": "materials_mat_nanoindentation",
       "asset_id": "materials_mat_nanoindentation",
       "label": "纳米压痕",
-      "label_en": "Mat nanoindentation",
+      "label_en": "Nanoindentation",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1699,19 +1833,21 @@
         "纳米压痕",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "fb57207343ec65b9a14df9fb31fac099137309393f3d2e797b8b73b3b7d5605f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "materials_mat_afm",
       "asset_id": "materials_mat_afm",
       "label": "原子力显微镜",
-      "label_en": "Mat AFM",
+      "label_en": "AFM",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1724,19 +1860,21 @@
         "原子力显微镜",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "1cd77c100662a4ff2504f99fc7f119dfc781c50b6640fcb242ef2a2d5ac68331"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_layered.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
     },
     {
       "id": "materials_mat_tem",
       "asset_id": "materials_mat_tem",
       "label": "透射电镜",
-      "label_en": "Mat TEM",
+      "label_en": "TEM",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1749,19 +1887,21 @@
         "透射电镜",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "3a0e31fc07b3fac62f9c0b32e453a84b566dfbf0bd1fdc5af7a740b19a5b9a67"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_layered.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_layered.svg",
+      "sha256": "91b81db35a934f0687ea68a558e15932e90428959a3d8c66121f090fcc83b341"
     },
     {
       "id": "materials_mat_sem",
       "asset_id": "materials_mat_sem",
       "label": "扫描电镜",
-      "label_en": "Mat SEM",
+      "label_en": "SEM",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1774,19 +1914,21 @@
         "扫描电镜",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "2a0905e132cde4beef6e4b20e70b1ab829521346e9bd4ce85ddedd4941e542fa"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_porous.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
     },
     {
       "id": "materials_mat_xrd",
       "asset_id": "materials_mat_xrd",
       "label": "X 射线衍射",
-      "label_en": "Mat XRD",
+      "label_en": "XRD",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1799,19 +1941,21 @@
         "X 射线衍射",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "981a90f7a14d3f8088de31cf34584b148f561c84105eebe4144f7e0dda554488"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_catalytic_interfaces.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_catalytic_interfaces.svg",
+      "sha256": "a6a67d06faee92f33ce9ff0184f33b1544a262b04af0ca007e167a7b0a4ebcc8"
     },
     {
       "id": "materials_mat_dsc",
       "asset_id": "materials_mat_dsc",
       "label": "差示扫描量热",
-      "label_en": "Mat dsc",
+      "label_en": "Dsc",
       "category": "微结构、缺陷与制造",
       "type": "symbol",
       "default_dim": [
@@ -1824,13 +1968,825 @@
         "差示扫描量热",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "68fb93395c72c683cbe22c8e8c57a439bed8514c8f0b91e762df70c82dd78c74"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_particles.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
+    },
+    {
+      "id": "materials_mat_unit_cell",
+      "asset_id": "materials_mat_unit_cell",
+      "label": "晶胞结构",
+      "label_en": "Unit cell",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_unit_cell.svg",
+      "keywords": [
+        "mat_unit_cell",
+        "晶胞结构",
+        "材料科学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_particles.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_particles.svg",
+      "sha256": "7acbd1cbfeb266b68e1d85e111af2cdfb4449687dcffe1d0a85f0e7d2b907765"
+    },
+    {
+      "id": "materials_mat_amorphous",
+      "asset_id": "materials_mat_amorphous",
+      "label": "非晶结构",
+      "label_en": "Amorphous structure",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_amorphous.svg",
+      "keywords": [
+        "mat_amorphous",
+        "非晶结构",
+        "材料科学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_composites.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
+    },
+    {
+      "id": "materials_mat_nanofiber",
+      "asset_id": "materials_mat_nanofiber",
+      "label": "纳米纤维",
+      "label_en": "Nanofiber",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_nanofiber.svg",
+      "keywords": [
+        "mat_nanofiber",
+        "纳米纤维",
+        "材料科学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_composites.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+      "sha256": "437391904358a956b8e7aeed7055e5374650ef960b70050b5e301bf62d01f4f6"
+    },
+    {
+      "id": "materials_mat_nanoplatelet",
+      "asset_id": "materials_mat_nanoplatelet",
+      "label": "纳米片",
+      "label_en": "Nanoplatelet",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_nanoplatelet.svg",
+      "keywords": [
+        "mat_nanoplatelet",
+        "纳米片",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "layers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
+    },
+    {
+      "id": "materials_mat_core_shell",
+      "asset_id": "materials_mat_core_shell",
+      "label": "核壳颗粒",
+      "label_en": "Core-shell particle",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_core_shell.svg",
+      "keywords": [
+        "mat_core_shell",
+        "核壳颗粒",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-multiple.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "circle-multiple.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-multiple.svg",
+      "sha256": "d812c9cb0ef6f75aa1eec14606a99e5d5824fc6177982b81ecefe4a7f45fb825"
+    },
+    {
+      "id": "materials_mat_micropattern",
+      "asset_id": "materials_mat_micropattern",
+      "label": "微图案",
+      "label_en": "Micropattern",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_micropattern.svg",
+      "keywords": [
+        "mat_micropattern",
+        "微图案",
+        "材料科学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_porous.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
+    },
+    {
+      "id": "materials_mat_surface_roughness",
+      "asset_id": "materials_mat_surface_roughness",
+      "label": "表面粗糙度",
+      "label_en": "Surface roughness",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_surface_roughness.svg",
+      "keywords": [
+        "mat_surface_roughness",
+        "表面粗糙度",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/texture.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "texture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/texture.svg",
+      "sha256": "397d0b875b157ea04a256884fd9d2c2d1c44f852592c136302871fb8b5860564"
+    },
+    {
+      "id": "materials_mat_contact_angle",
+      "asset_id": "materials_mat_contact_angle",
+      "label": "接触角",
+      "label_en": "Contact angle",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_contact_angle.svg",
+      "keywords": [
+        "mat_contact_angle",
+        "接触角",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/angle-acute.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "angle-acute.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/angle-acute.svg",
+      "sha256": "6235afa023fee63e6e1da1a6a7b6267baac9caed7c3bc0c5fb38a0b948e1f2f8"
+    },
+    {
+      "id": "materials_mat_wettability",
+      "asset_id": "materials_mat_wettability",
+      "label": "润湿性",
+      "label_en": "Wettability",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_wettability.svg",
+      "keywords": [
+        "mat_wettability",
+        "润湿性",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water-percent.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "water-percent.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water-percent.svg",
+      "sha256": "768bbd6908fc67ffde36f998175e02ffa0896a822e9ad910d099ad65878ec4c1"
+    },
+    {
+      "id": "materials_mat_diffusion_profile",
+      "asset_id": "materials_mat_diffusion_profile",
+      "label": "扩散剖面",
+      "label_en": "Diffusion profile",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_diffusion_profile.svg",
+      "keywords": [
+        "mat_diffusion_profile",
+        "扩散剖面",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "blur.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
+    },
+    {
+      "id": "materials_mat_phase_field",
+      "asset_id": "materials_mat_phase_field",
+      "label": "相场分布",
+      "label_en": "Phase field",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_phase_field.svg",
+      "keywords": [
+        "mat_phase_field",
+        "相场分布",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-sankey.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-sankey.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-sankey.svg",
+      "sha256": "22262c109937a5de8e1067ecc3bfee0c9562de66d294b149b27b34f795f612dd"
+    },
+    {
+      "id": "materials_mat_tga",
+      "asset_id": "materials_mat_tga",
+      "label": "热重曲线",
+      "label_en": "Thermogravimetric curve",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_tga.svg",
+      "keywords": [
+        "mat_tga",
+        "热重曲线",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+    },
+    {
+      "id": "materials_mat_dma",
+      "asset_id": "materials_mat_dma",
+      "label": "动态力学分析",
+      "label_en": "Dynamic mechanical analysis",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_dma.svg",
+      "keywords": [
+        "mat_dma",
+        "动态力学分析",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+    },
+    {
+      "id": "materials_mat_thermal_conductivity",
+      "asset_id": "materials_mat_thermal_conductivity",
+      "label": "热导率",
+      "label_en": "Thermal conductivity",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_thermal_conductivity.svg",
+      "keywords": [
+        "mat_thermal_conductivity",
+        "热导率",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "thermometer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
+    },
+    {
+      "id": "materials_mat_electrical_resistivity",
+      "asset_id": "materials_mat_electrical_resistivity",
+      "label": "电阻率",
+      "label_en": "Electrical resistivity",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_electrical_resistivity.svg",
+      "keywords": [
+        "mat_electrical_resistivity",
+        "电阻率",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "resistor.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/resistor.svg",
+      "sha256": "95470dff039032c0d2c4e1a41545b9cd3e4c912503ed6cc97a21359f6077429a"
+    },
+    {
+      "id": "materials_mat_hardness",
+      "asset_id": "materials_mat_hardness",
+      "label": "硬度测试",
+      "label_en": "Hardness test",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_hardness.svg",
+      "keywords": [
+        "mat_hardness",
+        "硬度测试",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "shield.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield.svg",
+      "sha256": "30ea8605cd87e72aaa7946781a54ca00e56b3aa926163296aada400c59f04d05"
+    },
+    {
+      "id": "materials_mat_toughness",
+      "asset_id": "materials_mat_toughness",
+      "label": "断裂韧性",
+      "label_en": "Fracture toughness",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_toughness.svg",
+      "keywords": [
+        "mat_toughness",
+        "断裂韧性",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "shield.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield.svg",
+      "sha256": "30ea8605cd87e72aaa7946781a54ca00e56b3aa926163296aada400c59f04d05"
+    },
+    {
+      "id": "materials_mat_compression",
+      "asset_id": "materials_mat_compression",
+      "label": "压缩测试",
+      "label_en": "Compression test",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_compression.svg",
+      "keywords": [
+        "mat_compression",
+        "压缩测试",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-collapse.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "arrow-collapse.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/arrow-collapse.svg",
+      "sha256": "a776a8e0482fd2dc52e84195c976e8de489b16927c311911a8771d72a5dabccc"
+    },
+    {
+      "id": "materials_mat_shear",
+      "asset_id": "materials_mat_shear",
+      "label": "剪切测试",
+      "label_en": "Shear test",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_shear.svg",
+      "keywords": [
+        "mat_shear",
+        "剪切测试",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-line.svg",
+      "sha256": "96631f806d6c72d91ca861aef313eeaced4cee45f1f18223e734003b109f1a2e"
+    },
+    {
+      "id": "materials_mat_tribology",
+      "asset_id": "materials_mat_tribology",
+      "label": "摩擦磨损",
+      "label_en": "Tribology",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_tribology.svg",
+      "keywords": [
+        "mat_tribology",
+        "摩擦磨损",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-orbit.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "rotate-orbit.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/rotate-orbit.svg",
+      "sha256": "1ba409a43e26d14375a0eee9af5063c7fd886cb896da389192330878da253975"
+    },
+    {
+      "id": "materials_mat_powder_bed",
+      "asset_id": "materials_mat_powder_bed",
+      "label": "粉末床",
+      "label_en": "Powder bed",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_powder_bed.svg",
+      "keywords": [
+        "mat_powder_bed",
+        "粉末床",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grain.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "grain.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grain.svg",
+      "sha256": "ce23893ce5437ff63da001ddece1d1bfcf6b80ef0755994ccbfd0fedfe06c841"
+    },
+    {
+      "id": "materials_mat_electrospinning",
+      "asset_id": "materials_mat_electrospinning",
+      "label": "静电纺丝",
+      "label_en": "Electrospinning",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_electrospinning.svg",
+      "keywords": [
+        "mat_electrospinning",
+        "静电纺丝",
+        "材料科学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_porous.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+      "sha256": "0df7d464139cbfe0f7669c0278d4b0e5ce9f34bc3dca1e45bd5acc2cd7bdeaa5"
+    },
+    {
+      "id": "materials_mat_solgel",
+      "asset_id": "materials_mat_solgel",
+      "label": "溶胶凝胶",
+      "label_en": "Sol-gel process",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_solgel.svg",
+      "keywords": [
+        "mat_solgel",
+        "溶胶凝胶",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "flask.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
+    },
+    {
+      "id": "materials_mat_spray_coating",
+      "asset_id": "materials_mat_spray_coating",
+      "label": "喷涂涂层",
+      "label_en": "Spray coating",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_spray_coating.svg",
+      "keywords": [
+        "mat_spray_coating",
+        "喷涂涂层",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/spray.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "spray.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/spray.svg",
+      "sha256": "291d27294c50e50cf56593d4beadfb2891c4ba70364255314a5c02e842549194"
+    },
+    {
+      "id": "materials_mat_plasma_treatment",
+      "asset_id": "materials_mat_plasma_treatment",
+      "label": "等离子处理",
+      "label_en": "Plasma treatment",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_plasma_treatment.svg",
+      "keywords": [
+        "mat_plasma_treatment",
+        "等离子处理",
+        "材料科学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
+    },
+    {
+      "id": "materials_mat_etching",
+      "asset_id": "materials_mat_etching",
+      "label": "刻蚀",
+      "label_en": "Etching",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_etching.svg",
+      "keywords": [
+        "mat_etching",
+        "刻蚀",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers-triple.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "layers-triple.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers-triple.svg",
+      "sha256": "320db2c72c4f86374b8ec872999d6bae2ef044ea2af9bf03fa8ae3ec8c2c8355"
+    },
+    {
+      "id": "materials_mat_ion_implant",
+      "asset_id": "materials_mat_ion_implant",
+      "label": "离子注入",
+      "label_en": "Ion implantation",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_ion_implant.svg",
+      "keywords": [
+        "mat_ion_implant",
+        "离子注入",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "needle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "sha256": "4f0c11a15df1a5bfbdb26343955fc1cd0d45193ad9b6768b6ebd501344d4b3f6"
+    },
+    {
+      "id": "materials_mat_laser_cladding",
+      "asset_id": "materials_mat_laser_cladding",
+      "label": "激光熔覆",
+      "label_en": "Laser cladding",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_laser_cladding.svg",
+      "keywords": [
+        "mat_laser_cladding",
+        "激光熔覆",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "laser-pointer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+      "sha256": "7d213b5f98a7db0bf8d19c75b090defa8f3219daec7822d2750dfb2831f77fd2"
+    },
+    {
+      "id": "materials_mat_melt_spinning",
+      "asset_id": "materials_mat_melt_spinning",
+      "label": "熔体纺丝",
+      "label_en": "Melt spinning",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_melt_spinning.svg",
+      "keywords": [
+        "mat_melt_spinning",
+        "熔体纺丝",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fire.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "fire.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fire.svg",
+      "sha256": "4267ba5326998a50999596bba85dd86d69b97c4edaa3a6f12e286af115c42fee"
+    },
+    {
+      "id": "materials_mat_molecular_dynamics",
+      "asset_id": "materials_mat_molecular_dynamics",
+      "label": "分子动力学",
+      "label_en": "Molecular dynamics",
+      "category": "微结构、缺陷与制造",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/mat_molecular_dynamics.svg",
+      "keywords": [
+        "mat_molecular_dynamics",
+        "分子动力学",
+        "材料科学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/molecule.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "molecule.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/molecule.svg",
+      "sha256": "d70e939fb7c63059457492fc8bd53a98cba0365702f118d156c9287bdec09098"
     },
     {
       "id": "materials_droplet",
@@ -1848,13 +2804,15 @@
         "droplet",
         "材料科学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-      "modifications": "Original vector artwork.",
-      "sha256": "427e0c1a13027b41898a57cc260cf1ec475f0feccdd25d4f40c07eb6639a0712"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     }
   ],
   "templates": [

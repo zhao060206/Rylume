@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"35\" width=\"49\" height=\"30\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"57\" cy=\"50\" r=\"13\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"70\" y1=\"50\" x2=\"96\" y2=\"50\" stroke=\"#C67F76\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"43\" x2=\"40\" y2=\"43\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"50\" x2=\"40\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"18\" y1=\"57\" x2=\"40\" y2=\"57\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 13L5 16C4 16.88 3.86 18.12 4 19C4.13 20 4.91 21.22 6 21.68C7.57 22.35 9.09 21.9 10.04 20.92L19 13C20.86 11.62 20 9 18 9H12L19.46 4.61C19.9 4.29 20.08 3.82 20.06 3.37C20 2.67 19.46 2 18.6 2H18.54C18.19 2 17.86 2.11 17.56 2.29L5 9C4.19 9.46 3.94 10.24 4 11C4.05 12.03 4.74 13 6 13M5 18.5C5 17.12 6.12 16 7.5 16S10 17.12 10 18.5 8.88 21 7.5 21 5 19.88 5 18.5Z\" /></svg>",
         "meta": {
           "asset_id": "physics_laser",
           "label": "激光器",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-          "modifications": "Original vector artwork."
+          "label_en": "Laser",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/laser-pointer.svg",
+          "source_kind": "online-open-license",
+          "source_file": "laser-pointer.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "physics_laser",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 27 L88 27 Q95 27 95 50 Q95 73 88 73 L10 73 Z\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M10 38 L76 27 M76 73 L10 62 M10 50 L65 38 L65 62 L10 50\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"10\" cy=\"38\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"10\" cy=\"62\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><path d=\"M130 197 L328 38 L347 40 L157 219 Z\" fill=\"#86b7d3\" stroke=\"none\" stroke-width=\"2\" /></g><g><path d=\"M143 190 Q249 110 365 133 Q253 160 155 232 Z\" fill=\"#d8e4e6\" stroke=\"none\" stroke-width=\"2\" /></g><g><ellipse cx=\"136\" cy=\"208\" rx=\"51\" ry=\"44\" fill=\"#86b7d3\" stroke=\"none\" stroke-width=\"0\" /><ellipse cx=\"136\" cy=\"208\" rx=\"37\" ry=\"33\" fill=\"#58a6b3\" stroke=\"none\" stroke-width=\"0\" /></g><g><path d=\"M113 198 L135 189 L153 204 L151 225 L129 229 L114 216 Z\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M119 200 L133 196 L142 204 L130 211 Z\" fill=\"#d8e4e6\" stroke=\"none\" stroke-width=\"2\" /></g><g><circle cx=\"55\" cy=\"266\" r=\"17\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"73\" y1=\"253\" x2=\"99\" y2=\"230\" stroke=\"#e8ad66\" stroke-width=\"2\" /><polygon points=\"99.0,230.0 95.9,237.4 91.3,232.2\" fill=\"#e8ad66\" stroke=\"#e8ad66\" stroke-width=\"1\" /></g></g></svg>",
         "meta": {
           "asset_id": "physics_phys_optical_fiber",
           "label": "光纤",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-          "modifications": "Original vector artwork."
+          "label_en": "Optical fiber",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/astro_small_bodies.svg",
+          "source_kind": "online-open-license",
+          "source_file": "astro_small_bodies.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "physics_phys_optical_fiber",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"29\" y=\"18\" width=\"46\" height=\"64\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"17\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"52\" cy=\"48\" r=\"8\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"75\" y1=\"50\" x2=\"94\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"52\" y1=\"82\" x2=\"52\" y2=\"94\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4.93,4.93C3.12,6.74 2,9.24 2,12C2,14.76 3.12,17.26 4.93,19.07L6.34,17.66C4.89,16.22 4,14.22 4,12C4,9.79 4.89,7.78 6.34,6.34L4.93,4.93M19.07,4.93L17.66,6.34C19.11,7.78 20,9.79 20,12C20,14.22 19.11,16.22 17.66,17.66L19.07,19.07C20.88,17.26 22,14.76 22,12C22,9.24 20.88,6.74 19.07,4.93M7.76,7.76C6.67,8.85 6,10.35 6,12C6,13.65 6.67,15.15 7.76,16.24L9.17,14.83C8.45,14.11 8,13.11 8,12C8,10.89 8.45,9.89 9.17,9.17L7.76,7.76M16.24,7.76L14.83,9.17C15.55,9.89 16,10.89 16,12C16,13.11 15.55,14.11 14.83,14.83L16.24,16.24C17.33,15.15 18,13.65 18,12C18,10.35 17.33,8.85 16.24,7.76M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z\" /></svg>",
         "meta": {
           "asset_id": "physics_detector",
           "label": "探测器",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-          "modifications": "Original vector artwork."
+          "label_en": "Detector",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+          "source_kind": "online-open-license",
+          "source_file": "access-point.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "physics_detector",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"9\" y=\"24\" width=\"82\" height=\"52\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M16 50 C28 20 40 80 52 50 S76 20 84 50\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"9\" y1=\"30\" x2=\"91\" y2=\"30\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><line x1=\"9\" y1=\"70\" x2=\"91\" y2=\"70\" stroke=\"#395B70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><line x1=\"3\" y1=\"50\" x2=\"9\" y2=\"50\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"9\" y1=\"50\" x2=\"4.495155660487904\" y2=\"52.169418695587794\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"9\" y1=\"50\" x2=\"4.495155660487904\" y2=\"47.830581304412206\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"97\" y1=\"50\" x2=\"91\" y2=\"50\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"91\" y1=\"50\" x2=\"95.50484433951209\" y2=\"47.830581304412206\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"91\" y1=\"50\" x2=\"95.50484433951209\" y2=\"52.16941869558779\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><path d=\"M77 212 A125 125 0 0 1 323 212\" fill=\"none\" stroke=\"#d8e4e6\" stroke-width=\"15\" /><path d=\"M87 214 A115 115 0 0 1 313 214\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><g transform=\"rotate(32 92 139)\"><rect x=\"51\" y=\"115\" width=\"81\" height=\"43\" rx=\"6\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"123\" y=\"125\" width=\"15\" height=\"24\" rx=\"0\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g><g><rect x=\"166\" y=\"212\" width=\"70\" height=\"12\" rx=\"3\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"184,210 198,199 214,210\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"195\" y=\"225\" width=\"13\" height=\"47\" rx=\"0\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"202\" cy=\"276\" rx=\"44\" ry=\"9\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><g transform=\"rotate(-32 307 139)\"><rect x=\"271\" y=\"111\" width=\"69\" height=\"54\" rx=\"6\" fill=\"#a99cc7\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"264\" y=\"121\" width=\"9\" height=\"34\" rx=\"0\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g><g><line x1=\"125\" y1=\"163\" x2=\"197\" y2=\"207\" stroke=\"#e8ad66\" stroke-width=\"3\" /><polygon points=\"197.0,207.0 189.0,206.2 192.7,200.3\" fill=\"#e8ad66\" stroke=\"#e8ad66\" stroke-width=\"1\" /><line x1=\"202\" y1=\"207\" x2=\"279\" y2=\"161\" stroke=\"#e8ad66\" stroke-width=\"3\" /><polygon points=\"279.0,161.0 274.6,167.7 271.0,161.7\" fill=\"#e8ad66\" stroke=\"#e8ad66\" stroke-width=\"1\" /><line x1=\"201\" y1=\"211\" x2=\"201\" y2=\"154\" stroke=\"#2b5662\" stroke-width=\"1\" /></g></g></svg>",
         "meta": {
           "asset_id": "physics_phys_waveguide",
           "label": "波导",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-          "modifications": "Original vector artwork."
+          "label_en": "Waveguide",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+          "source_kind": "online-open-license",
+          "source_file": "lab_diffraction.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "physics_phys_waveguide",
@@ -184,16 +196,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"13\" width=\"68\" height=\"63\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"76\" x2=\"50\" y2=\"91\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"31\" y1=\"91\" x2=\"69\" y2=\"91\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"34\" y1=\"25\" x2=\"34\" y2=\"65\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"48\" y1=\"25\" x2=\"48\" y2=\"65\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"62\" y1=\"25\" x2=\"62\" y2=\"65\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.5,21.5C4.25,19.94 1.91,16.76 1.55,13H0.05C0.56,19.16 5.71,24 12,24L12.66,23.97L8.85,20.16M14.83,21.19L2.81,9.17L9.17,2.81L21.19,14.83M10.23,1.75C9.64,1.16 8.69,1.16 8.11,1.75L1.75,8.11C1.16,8.7 1.16,9.65 1.75,10.23L13.77,22.25C14.36,22.84 15.31,22.84 15.89,22.25L22.25,15.89C22.84,15.3 22.84,14.35 22.25,13.77L10.23,1.75M16.5,2.5C19.75,4.07 22.09,7.24 22.45,11H23.95C23.44,4.84 18.29,0 12,0L11.34,0.03L15.15,3.84L16.5,2.5Z\" /></svg>",
         "meta": {
           "asset_id": "physics_screen",
           "label": "成像屏",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/physics",
-          "modifications": "Original vector artwork."
+          "label_en": "Screen",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/screen-rotation.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/screen-rotation.svg",
+          "source_kind": "online-open-license",
+          "source_file": "screen-rotation.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "physics_screen",

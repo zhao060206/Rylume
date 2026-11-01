@@ -19,6 +19,7 @@ venv/
 dist*/
 build*/
 out/
+_vendor/
 logs/
 *.log
 exports/

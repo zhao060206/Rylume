@@ -14,9 +14,11 @@ from scene_document import empty_scene,normalize_scene,audit_scene
 from resource_packs import safe_svg,reflow_pack_scene,SAFE_ATTRS
 from asset_language import english_asset_label
 from discipline_assets_extended import EXTRA_SYMBOLS,EXTRA_DEFINITIONS
+from discipline_assets_additional import ADDITIONAL_SYMBOLS,ADDITIONAL_DEFINITIONS,ADDITIONAL_ENGLISH
+from online_asset_sources import online_svg
 
 ROOT=Path(__file__).resolve().parents[1]
-PACK_VERSION='2.1.0'
+PACK_VERSION='2.2.0'
 INK='#395B70';BLUE='#84B7C8';PALE='#DFEDF1';TEAL='#79A99A';GOLD='#D5AA6C';RED='#C67F76'
 def tag(name,**attrs):return '<'+name+' '+ ' '.join(k.replace('_','-')+'="'+html.escape(str(v),quote=True)+'"' for k,v in attrs.items())+'/>'
 def path(d,fill='none',stroke=INK,sw=2):return tag('path',d=d,fill=fill,stroke=stroke,stroke_width=sw,stroke_linecap='round',stroke_linejoin='round')
@@ -177,6 +179,7 @@ PACKS={
 }
 
 SYMBOLS.update(EXTRA_SYMBOLS)
+SYMBOLS.update(ADDITIONAL_SYMBOLS)
 # A few late-added templates use semantic aliases so the same carefully drawn
 # glyph can be reused without duplicating geometry or IDs.
 SYMBOLS.update({
@@ -185,6 +188,9 @@ SYMBOLS.update({
     'reservoir': SYMBOLS['earth_reservoir'],
 })
 for _pid,_definitions in EXTRA_DEFINITIONS.items():
+    _title,_description,_existing=PACKS[_pid]
+    PACKS[_pid]=(_title,_description,_existing+_definitions)
+for _pid,_definitions in ADDITIONAL_DEFINITIONS.items():
     _title,_description,_existing=PACKS[_pid]
     PACKS[_pid]=(_title,_description,_existing+_definitions)
 
@@ -280,7 +286,8 @@ def make_scene(pid,title,objects,edges,assets):
     scene=empty_scene(title,title);scene['layout']='network';scene['provenance']={'method':'original-discipline-template','example':pid}
     for i,(key,name,x,y) in enumerate(objects):
         aid=pid.replace('-','_')+'_'+key;meta=assets[aid]
-        scene['objects'].append({'id':'o'+str(i),'type':'symbol','asset_id':aid,'asset_snapshot':{'svg':svg(SYMBOLS[key]),'meta':meta},'label':name,'x':x,'y':y,'w':19,'h':23,'font_size_pt':8})
+        source_content,_source_meta=online_svg(key)
+        scene['objects'].append({'id':'o'+str(i),'type':'symbol','asset_id':aid,'asset_snapshot':{'svg':source_content,'meta':meta},'label':name,'x':x,'y':y,'w':19,'h':23,'font_size_pt':8})
     for i,(a,b,name) in enumerate(edges):
         edge={'id':'r'+str(i),'source':'o'+str(a),'target':'o'+str(b),'type':'sequence','label':name}
         if any(u==b and v==a for u,v,_ in edges):
@@ -312,22 +319,21 @@ def build(output):
         assets={}
         for definition in definitions:
             key,name=definition.split(':');aid=pid.replace('-','_')+'_'+key
-            item={'id':aid,'asset_id':aid,'label':name,'label_en':english_asset_label({'asset_id':aid,'keywords':[key]}),'category':description,'type':'symbol','default_dim':[22,24],
-                'file':'assets/'+key+'.svg','keywords':[key,name,title],'author':'Rylume contributors','license':'CC0 1.0',
-                'license_url':'https://creativecommons.org/publicdomain/zero/1.0/','author_url':'https://github.com/zhao060206/Rylume',
-                'source_url':'https://github.com/zhao060206/Rylume/tree/main/resource-packs/'+pid,'modifications':'Original vector artwork.'}
-            assets[aid]=item;content=safe_svg(svg(SYMBOLS[key]));item['sha256']=hashlib.sha256(content.encode()).hexdigest();(folder/item['file']).write_text(content,encoding='utf8')
+            content,provenance=online_svg(key)
+            item={'id':aid,'asset_id':aid,'label':name,'label_en':ADDITIONAL_ENGLISH.get(key,english_asset_label({'asset_id':aid,'keywords':[key]})),'category':description,'type':'symbol','default_dim':[22,24],
+                'file':'assets/'+key+'.svg','keywords':[key,name,title],**provenance,
+                'author_url':provenance['source_url']}
+            assets[aid]=item;item['sha256']=hashlib.sha256(content.encode()).hexdigest();(folder/item['file']).write_text(content,encoding='utf8')
         templates=[]
         # Templates may use general-purpose symbols beyond the palette's starter 18.
         for tid,name,objects,edges in TEMPLATES[pid]:
             for key,_,_,_ in objects:
                 aid=pid.replace('-','_')+'_'+key
                 if aid not in assets:
-                    item={'id':aid,'asset_id':aid,'label':{'potentiostat':'恒电位仪','beam_splitter':'分束器','detector':'检测器','database':'数据库','mesh':'计算网格','server':'数据采集器','droplet':'液滴'}.get(key,key.replace('_',' ')),'label_en':english_asset_label({'asset_id':aid,'keywords':[key]}),'category':description,'type':'symbol','default_dim':[22,24],
-                        'file':'assets/'+key+'.svg','keywords':[key,title],'author':'Rylume contributors','license':'CC0 1.0',
-                        'license_url':'https://creativecommons.org/publicdomain/zero/1.0/','author_url':'https://github.com/zhao060206/Rylume',
-                        'source_url':'https://github.com/zhao060206/Rylume/tree/main/resource-packs/'+pid,'modifications':'Original vector artwork.'}
-                    assets[aid]=item;content=safe_svg(svg(SYMBOLS[key]));item['sha256']=hashlib.sha256(content.encode()).hexdigest();(folder/item['file']).write_text(content,encoding='utf8')
+                    content,provenance=online_svg(key)
+                    item={'id':aid,'asset_id':aid,'label':{'potentiostat':'恒电位仪','beam_splitter':'分束器','detector':'检测器','database':'数据库','mesh':'计算网格','server':'数据采集器','droplet':'液滴'}.get(key,key.replace('_',' ')),'label_en':ADDITIONAL_ENGLISH.get(key,english_asset_label({'asset_id':aid,'keywords':[key]})),'category':description,'type':'symbol','default_dim':[22,24],
+                        'file':'assets/'+key+'.svg','keywords':[key,title],**provenance,'author_url':provenance['source_url']}
+                    assets[aid]=item;item['sha256']=hashlib.sha256(content.encode()).hexdigest();(folder/item['file']).write_text(content,encoding='utf8')
             scene=make_scene(pid,name,objects,edges,assets);scene['id']=pid.replace('-','_')+'_template_'+tid
             assert not audit_scene(scene)['errors']
             file='templates/'+tid+'.scene.json';thumb='previews/'+tid+'.svg'
@@ -338,9 +344,9 @@ def build(output):
                 'file':file,'thumbnail':thumb,'thumbnail_single':single,'canvas_mm':[180,120],'family':'network','includes':[o[1] for o in objects],
                 'keywords':[title,name],'object_count':len(objects),'relation_count':len(edges),'object_labels':[o[1] for o in objects]})
         manifest={'schema_version':1,'id':pid,'version':PACK_VERSION,'title':title,'domain':pid,'min_app_version':'3.1.0',
-            'license':'CC0-1.0','assets':list(assets.values()),'templates':templates}
+            'license':'Mixed open licenses; see each asset attribution','assets':list(assets.values()),'templates':templates}
         (folder/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
-        (folder/'LICENSE.txt').write_text('Original artwork and template geometry: CC0 1.0 Universal.\nRylume contributors. https://creativecommons.org/publicdomain/zero/1.0/legalcode\nScientific mechanisms are schematic and should be checked against the intended research context.\n',encoding='utf8')
+        (folder/'LICENSE.txt').write_text('Asset artwork is imported from online open-license sources and attributed per manifest item.\nScanSci SVG library: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/\nMaterial Design Icons: Apache-2.0 — https://www.apache.org/licenses/LICENSE-2.0\nRylume sanitises the SVG element/attribute set for safe local editing; it does not claim authorship of source drawings.\nScientific mechanisms are schematic and should be checked against the intended research context.\n',encoding='utf8')
         filename=f'rylume-pack-{pid}-{PACK_VERSION}.zip';dest=output/filename
         with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
             for p in sorted(folder.rglob('*')):

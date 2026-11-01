@@ -22,7 +22,7 @@ SAFE_TAGS={'svg','g','path','rect','circle','ellipse','line','polyline','polygon
 SAFE_ATTRS={'viewBox','x','y','x1','y1','x2','y2','cx','cy','r','rx','ry','width','height','d','points','transform',
     'fill','stroke','stroke-width','stroke-linecap','stroke-linejoin','fill-rule','opacity','fill-opacity','stroke-opacity',
     'font-size','font-family','font-weight','text-anchor','dominant-baseline'}
-META_KEYS=('asset_id','label','author','author_url','license','license_url','source_url','modifications')
+META_KEYS=('asset_id','label','label_en','author','author_url','license','license_url','source_url','source_kind','source_file','modifications')
 _current=None;_guard=threading.RLock()
 
 @lru_cache(maxsize=512)
@@ -223,7 +223,14 @@ class ResourceManager:
             aid=item.get('id','')
             if not ID.fullmatch(aid) or not aid.startswith(expected['id'].replace('-','_')+'_') or aid in seen:raise DeliveryError('资源对象身份冲突')
             seen.add(aid);file=self.file_path(folder,item['file'])
-            if item in assets:safe_svg(file.read_text(encoding='utf8'))
+            if item in assets:
+                if not str(item.get('label','')).strip() or not str(item.get('label_en','')).strip():
+                    raise DeliveryError('素材缺少中英文双语标签')
+                if item.get('source_kind')!='online-open-license' or not str(item.get('source_url','')).startswith(('https://','http://')):
+                    raise DeliveryError('素材缺少可追溯的在线来源')
+                if not item.get('license') or not item.get('license_url'):
+                    raise DeliveryError('素材缺少许可信息')
+                safe_svg(file.read_text(encoding='utf8'))
             else:
                 scene=json.loads(file.read_text(encoding='utf8'))
                 # Scene normalization and snapshots are checked before activation, with a temporary resolver.

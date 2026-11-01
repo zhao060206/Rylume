@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"29\" y=\"22\" width=\"42\" height=\"66\" fill=\"#DFEDF1\" rx=\"8.4\" stroke=\"#395B70\" stroke-width=\"2\" /><ellipse cx=\"50.0\" cy=\"22\" rx=\"21.0\" ry=\"5.25\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><ellipse cx=\"50.0\" cy=\"88\" rx=\"21.0\" ry=\"5.25\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><ellipse cx=\"50\" cy=\"22\" rx=\"21\" ry=\"6\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"43\" y=\"7\" width=\"14\" height=\"13\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"43\" y1=\"13\" x2=\"27\" y2=\"13\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><circle cx=\"25\" cy=\"13\" r=\"4\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"35\" y=\"48\" width=\"30\" height=\"11\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"57\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"8\" font-weight=\"700\" text-anchor=\"middle\">GAS</text></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16,9V14L16,20A2,2 0 0,1 14,22H10A2,2 0 0,1 8,20V14L8,9C8,7.14 9.27,5.57 11,5.13V4H9V2H15V4H13V5.13C14.73,5.57 16,7.14 16,9Z\" /></svg>",
         "meta": {
           "asset_id": "chemistry_chem_gas_cylinder",
           "label": "气瓶",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-          "modifications": "Original vector artwork."
+          "label_en": "Gas cylinder",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+          "source_kind": "online-open-license",
+          "source_file": "gas-cylinder.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "chemistry_chem_gas_cylinder",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"39\" y=\"12\" width=\"22\" height=\"67\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"12\" x2=\"50\" y2=\"3\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"86\" x2=\"73\" y2=\"86\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><rect x=\"42\" y=\"110\" width=\"62\" height=\"93\" rx=\"12\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"73\" cy=\"156\" rx=\"17\" ry=\"31\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"65\" y1=\"147\" x2=\"82\" y2=\"165\" stroke=\"#f4f8f8\" stroke-width=\"3\" /></g><g><rect x=\"149\" y=\"106\" width=\"20\" height=\"100\" rx=\"3\" fill=\"#a99cc7\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"146\" y=\"99\" width=\"26\" height=\"9\" rx=\"0\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"146\" y=\"206\" width=\"26\" height=\"9\" rx=\"0\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"231\" y=\"100\" width=\"38\" height=\"127\" rx=\"3\" fill=\"#f4f8f8\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"234\" y=\"138\" width=\"32\" height=\"85\" rx=\"0\" fill=\"#58a6b3\" stroke=\"none\" stroke-width=\"2\" /><line x1=\"230\" y1=\"104\" x2=\"270\" y2=\"104\" stroke=\"#2b5662\" stroke-width=\"3\" /></g><g><rect x=\"311\" y=\"121\" width=\"47\" height=\"82\" rx=\"7\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"310\" y=\"138\" width=\"10\" height=\"47\" rx=\"0\" fill=\"#a99cc7\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><line x1=\"94\" y1=\"156\" x2=\"148\" y2=\"156\" stroke=\"#e8ad66\" stroke-width=\"4\" /><polygon points=\"148.0,156.0 140.8,159.5 140.8,152.5\" fill=\"#e8ad66\" stroke=\"#e8ad66\" stroke-width=\"1\" /><line x1=\"169\" y1=\"156\" x2=\"231\" y2=\"156\" stroke=\"#e8ad66\" stroke-width=\"4\" /><line x1=\"269\" y1=\"156\" x2=\"310\" y2=\"156\" stroke=\"#e8ad66\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "chemistry_electrode",
           "label": "电极",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-          "modifications": "Original vector artwork."
+          "label_en": "Electrode",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+          "source_kind": "online-open-license",
+          "source_file": "lab_spectroscopy.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "chemistry_electrode",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"24\" width=\"80\" height=\"58\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"27\" x2=\"50\" y2=\"79\" stroke=\"#79A99A\" stroke-width=\"4\" stroke-linecap=\"round\" /><rect x=\"19\" y=\"31\" width=\"20\" height=\"44\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"61\" y=\"31\" width=\"20\" height=\"44\" fill=\"#C67F76\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"29\" y=\"55\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">H₂</text><text x=\"71\" y=\"55\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">O₂</text><line x1=\"39\" y1=\"18\" x2=\"61\" y2=\"18\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"61\" y1=\"18\" x2=\"54.69321792468307\" y2=\"21.037186173822906\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"61\" y1=\"18\" x2=\"54.69321792468307\" y2=\"14.962813826177094\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"50\" y=\"13\" fill=\"#D5AA6C\" font-family=\"Arial\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">e−</text><text x=\"50\" y=\"92\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">H+</text></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3,2H6C6.28,2 6.53,2.11 6.71,2.29L8.79,4.38L9.59,3.59C10,3.2 10.5,3 11,3H17C17.5,3 18,3.2 18.41,3.59L19.41,4.59C19.8,5 20,5.5 20,6V19A2,2 0 0,1 18,21H8A2,2 0 0,1 6,19V13L6,12V8C6,7.5 6.2,7 6.59,6.59L7.38,5.79L5.59,4H3V2M11,5V7H17V5H11M11.41,11L9.41,9H8V10.41L10,12.41V15.59L8,17.59V19H9.41L11.41,17H14.59L16.59,19H18V17.59L16,15.59V12.41L18,10.41V9H16.59L14.59,11H11.41M12,13H14V15H12V13Z\" /></svg>",
         "meta": {
           "asset_id": "chemistry_chem_fuel_cell",
           "label": "燃料电池",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-          "modifications": "Original vector artwork."
+          "label_en": "Fuel cell",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fuel.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fuel.svg",
+          "source_kind": "online-open-license",
+          "source_file": "fuel.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "chemistry_chem_fuel_cell",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"39\" y=\"12\" width=\"22\" height=\"67\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"12\" x2=\"50\" y2=\"3\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"28\" y1=\"86\" x2=\"73\" y2=\"86\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><rect x=\"42\" y=\"110\" width=\"62\" height=\"93\" rx=\"12\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"73\" cy=\"156\" rx=\"17\" ry=\"31\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"65\" y1=\"147\" x2=\"82\" y2=\"165\" stroke=\"#f4f8f8\" stroke-width=\"3\" /></g><g><rect x=\"149\" y=\"106\" width=\"20\" height=\"100\" rx=\"3\" fill=\"#a99cc7\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"146\" y=\"99\" width=\"26\" height=\"9\" rx=\"0\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"146\" y=\"206\" width=\"26\" height=\"9\" rx=\"0\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"231\" y=\"100\" width=\"38\" height=\"127\" rx=\"3\" fill=\"#f4f8f8\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"234\" y=\"138\" width=\"32\" height=\"85\" rx=\"0\" fill=\"#58a6b3\" stroke=\"none\" stroke-width=\"2\" /><line x1=\"230\" y1=\"104\" x2=\"270\" y2=\"104\" stroke=\"#2b5662\" stroke-width=\"3\" /></g><g><rect x=\"311\" y=\"121\" width=\"47\" height=\"82\" rx=\"7\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"310\" y=\"138\" width=\"10\" height=\"47\" rx=\"0\" fill=\"#a99cc7\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><line x1=\"94\" y1=\"156\" x2=\"148\" y2=\"156\" stroke=\"#e8ad66\" stroke-width=\"4\" /><polygon points=\"148.0,156.0 140.8,159.5 140.8,152.5\" fill=\"#e8ad66\" stroke=\"#e8ad66\" stroke-width=\"1\" /><line x1=\"169\" y1=\"156\" x2=\"231\" y2=\"156\" stroke=\"#e8ad66\" stroke-width=\"4\" /><line x1=\"269\" y1=\"156\" x2=\"310\" y2=\"156\" stroke=\"#e8ad66\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "chemistry_electrode",
           "label": "电极",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-          "modifications": "Original vector artwork."
+          "label_en": "Electrode",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+          "source_kind": "online-open-license",
+          "source_file": "lab_spectroscopy.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "chemistry_electrode",
@@ -184,16 +196,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"24\" width=\"76\" height=\"52\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"88\" y=\"39\" width=\"7\" height=\"22\" fill=\"#D5AA6C\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"24\" y1=\"50\" x2=\"40\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"32\" y1=\"42\" x2=\"32\" y2=\"58\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"62\" y1=\"50\" x2=\"78\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><rect x=\"47\" y=\"29\" width=\"3\" height=\"42\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16.67,4H15V2H9V4H7.33A1.33,1.33 0 0,0 6,5.33V20.67C6,21.4 6.6,22 7.33,22H16.67A1.33,1.33 0 0,0 18,20.67V5.33C18,4.6 17.4,4 16.67,4Z\" /></svg>",
         "meta": {
           "asset_id": "chemistry_battery",
           "label": "电化学电池",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-          "modifications": "Original vector artwork."
+          "label_en": "Battery",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+          "source_kind": "online-open-license",
+          "source_file": "battery.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "chemistry_battery",
@@ -219,16 +234,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"54\" r=\"16\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"25\" cy=\"32\" r=\"10\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"75\" cy=\"32\" r=\"10\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"33\" y1=\"38\" x2=\"43\" y2=\"48\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"67\" y1=\"38\" x2=\"57\" y2=\"48\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"50\" y=\"59\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\">O</text><text x=\"25\" y=\"36\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">H</text><text x=\"75\" y=\"36\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">H</text></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12,20A6,6 0 0,1 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14A6,6 0 0,1 12,20Z\" /></svg>",
         "meta": {
           "asset_id": "chemistry_chem_water",
           "label": "水分子",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-          "modifications": "Original vector artwork."
+          "label_en": "Water",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+          "source_kind": "online-open-license",
+          "source_file": "water.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "chemistry_chem_water",

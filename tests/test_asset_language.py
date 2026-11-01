@@ -17,6 +17,16 @@ def test_all_bundled_assets_have_bilingual_labels():
             total+=1
     assert total>=2200
 
+def test_discipline_assets_are_bilingual_and_traceable_online_sources():
+    for path in sorted((ROOT/'resource-packs').glob('*/manifest.json')):
+        data=json.loads(path.read_text(encoding='utf8'))
+        assert data['version']=='2.2.0'
+        for item in data['assets']:
+            assert item['label'].strip() and item['label_en'].strip()
+            assert item['source_kind']=='online-open-license'
+            assert item['source_url'].startswith('https://')
+            assert item['license'] in ('CC BY 4.0','Apache-2.0')
+
 def test_semantic_fallbacks_match_asset_identity():
     assert english_asset_label({'asset_id':'chemistry_chem_catalyst'})=='Catalyst'
     assert english_asset_label({'asset_id':'medicine_med_mri'})=='MRI'

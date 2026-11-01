@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"7\" y=\"43\" width=\"58\" height=\"20\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M13 53 L23 53 L28 42 L35 64 L42 42 L49 64 L56 53 L65 53\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"78\" cy=\"53\" r=\"15\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"78\" cy=\"53\" r=\"9\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M78 44 L84 53 L78 62 L72 53 Z\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"85\" y1=\"76\" x2=\"91\" y2=\"76\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"91\" y1=\"76\" x2=\"87.39612452839032\" y2=\"77.73553495647023\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"91\" y1=\"76\" x2=\"87.39612452839032\" y2=\"74.26446504352977\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 2C7.04 2 3 6.04 3 11C3 14.91 5.5 18.24 9 19.47V22H11V19.94C11.33 20 11.66 20 12 20S12.67 20 13 19.94V22H15V19.47C18.5 18.23 21 14.9 21 11C21 6.04 16.96 2 12 2M14.25 14L11.25 17L9.75 15.5L11 14.25L9.75 13L12.75 10L14.25 11.5L13 12.75L14.25 14M16 9H8V7H16V9Z\" /></svg>",
         "meta": {
           "asset_id": "engineering_eng_flow_meter",
           "label": "流量计",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Flow meter",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/meter-electric.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/meter-electric.svg",
+          "source_kind": "online-open-license",
+          "source_file": "meter-electric.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_eng_flow_meter",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"17\" y=\"20\" width=\"66\" height=\"64\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"25\" y=\"29\" width=\"29\" height=\"23\" fill=\"#FFFFFF\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"31\" cy=\"36\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"42\" cy=\"36\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"31\" cy=\"46\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"42\" cy=\"46\" r=\"3\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"32\" cy=\"61\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"45\" cy=\"61\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"58\" cy=\"61\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"71\" cy=\"61\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"25\" y1=\"73\" x2=\"75\" y2=\"73\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><circle cx=\"75\" cy=\"35\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"75\" cy=\"46\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"75\" cy=\"57\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"58\" y=\"44\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">PLC</text></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><path d=\"M44 152 H355 V279 H44 Z\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M44 218 H355 V279 H44 Z\" fill=\"#86b7d3\" stroke=\"none\" stroke-width=\"2\" /></g><g><path d=\"M162 150 H187 V229 H326 V252 H162 Z\" fill=\"#f4f8f8\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"162\" y=\"167\" width=\"25\" height=\"84\" rx=\"0\" fill=\"#f4f8f8\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"166\" y1=\"176\" x2=\"183\" y2=\"176\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"166\" y1=\"193\" x2=\"183\" y2=\"193\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M270 166 Q290 145 313 165 L346 220 Q328 250 305 226 Z\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M145 153 L157 67 H200 L215 153 M155 105 H206 M150 135 H211 M158 70 L205 134 M196 69 L151 134\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"5\" /><circle cx=\"179\" cy=\"64\" r=\"19\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"179\" y1=\"83\" x2=\"179\" y2=\"175\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"166\" y=\"176\" width=\"20\" height=\"31\" rx=\"2\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"168\" y1=\"185\" x2=\"184\" y2=\"185\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"168\" y1=\"194\" x2=\"184\" y2=\"194\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M250 226 H294 L287 246 H255 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"262\" cy=\"249\" r=\"5\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"282\" cy=\"249\" r=\"5\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"195\" y1=\"257\" x2=\"331\" y2=\"257\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "engineering_eng_plc",
           "label": "可编程控制器",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "PLC",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_mining.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_mining.svg",
+          "source_kind": "online-open-license",
+          "source_file": "eng_mining.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_eng_plc",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"11\" y=\"16\" width=\"50\" height=\"34\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"17\" y=\"22\" width=\"38\" height=\"22\" fill=\"#FFFFFF\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M21 36 L29 30 L37 34 L45 25 L51 31\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"78\" cy=\"23\" r=\"6\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"88\" cy=\"43\" r=\"6\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"66\" cy=\"43\" r=\"6\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"58\" y1=\"30\" x2=\"72\" y2=\"26\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"58\" y1=\"38\" x2=\"60\" y2=\"41\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"74\" y1=\"27\" x2=\"84\" y2=\"39\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><rect x=\"29\" y=\"56\" width=\"42\" height=\"8\" fill=\"#395B70\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"81\" y=\"73\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">SCADA</text></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><path d=\"M200 62L84 161\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><path d=\"M200 62L200 162\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><path d=\"M200 62L316 161\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><path d=\"M84 161L57 260\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><path d=\"M84 161L143 260\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><path d=\"M200 162L143 260\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><path d=\"M200 162L257 260\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><path d=\"M316 161L257 260\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /><path d=\"M316 161L344 260\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"2.5\" /></g><g><g><ellipse cx=\"200\" cy=\"62\" rx=\"24\" ry=\"24\" fill=\"#e8ad66\" /><text x=\"200\" y=\"67\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Microsoft YaHei,Arial,sans-serif\" font-size=\"15\" text-anchor=\"middle\">1</text></g><g><ellipse cx=\"84\" cy=\"161\" rx=\"24\" ry=\"24\" fill=\"#86b7d3\" /><text x=\"84\" y=\"166\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Microsoft YaHei,Arial,sans-serif\" font-size=\"15\" text-anchor=\"middle\">2</text></g><g><ellipse cx=\"200\" cy=\"162\" rx=\"24\" ry=\"24\" fill=\"#86b7d3\" /><text x=\"200\" y=\"167\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Microsoft YaHei,Arial,sans-serif\" font-size=\"15\" text-anchor=\"middle\">3</text></g><g><ellipse cx=\"316\" cy=\"161\" rx=\"24\" ry=\"24\" fill=\"#86b7d3\" /><text x=\"316\" y=\"166\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Microsoft YaHei,Arial,sans-serif\" font-size=\"15\" text-anchor=\"middle\">4</text></g><g><ellipse cx=\"57\" cy=\"260\" rx=\"24\" ry=\"24\" fill=\"#79ad92\" /><text x=\"57\" y=\"265\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Microsoft YaHei,Arial,sans-serif\" font-size=\"15\" text-anchor=\"middle\">5</text></g><g><ellipse cx=\"143\" cy=\"260\" rx=\"24\" ry=\"24\" fill=\"#79ad92\" /><text x=\"143\" y=\"265\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Microsoft YaHei,Arial,sans-serif\" font-size=\"15\" text-anchor=\"middle\">6</text></g><g><ellipse cx=\"257\" cy=\"260\" rx=\"24\" ry=\"24\" fill=\"#79ad92\" /><text x=\"257\" y=\"265\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Microsoft YaHei,Arial,sans-serif\" font-size=\"15\" text-anchor=\"middle\">7</text></g><g><ellipse cx=\"344\" cy=\"260\" rx=\"24\" ry=\"24\" fill=\"#79ad92\" /><text x=\"344\" y=\"265\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Microsoft YaHei,Arial,sans-serif\" font-size=\"15\" text-anchor=\"middle\">8</text></g></g><g><path d=\"M103 146Q200 119 296 146\" fill=\"none\" stroke=\"#a99cc7\" stroke-width=\"3\" /></g></g></svg>",
         "meta": {
           "asset_id": "engineering_eng_scada",
           "label": "SCADA 系统",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "SCADA",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+          "source_kind": "online-open-license",
+          "source_file": "info_network.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_eng_scada",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"15\" y=\"14\" width=\"70\" height=\"51\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"23\" y=\"21\" width=\"54\" height=\"32\" fill=\"#FFFFFF\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M28 34 L37 25 L46 39 L56 28 L66 36 L72 31\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"29\" cy=\"64\" r=\"5\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"71\" cy=\"64\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"70\" x2=\"56\" y2=\"70\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"65\" x2=\"50\" y2=\"70\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"44\" y1=\"77\" x2=\"56\" y2=\"77\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><path d=\"M170 76 C113 76 76 109 76 165 C76 222 118 259 173 259 C227 259 262 223 262 172 L262 74 H299 V44 H229 V128 C214 92 192 77 170 76 Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><circle cx=\"170\" cy=\"167\" r=\"64\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><g transform=\"rotate(0 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(60 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(120 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(180 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(240 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"rotate(300 170 167)\"><path d=\"M174 159 Q181 122 220 129 Q201 130 190 168 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><circle cx=\"170\" cy=\"167\" r=\"18\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><circle cx=\"170\" cy=\"167\" r=\"10\" fill=\"#f4f8f8\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"63\" y1=\"167\" x2=\"147\" y2=\"167\" stroke=\"#2b5662\" stroke-width=\"2.5\" /><polygon points=\"147.0,167.0 139.8,170.5 139.8,163.5\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"1\" /></g><g><line x1=\"270\" y1=\"58\" x2=\"311\" y2=\"58\" stroke=\"#2b5662\" stroke-width=\"2.5\" /><polygon points=\"311.0,58.0 303.8,61.5 303.8,54.5\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"1\" /></g><g><rect x=\"101\" y=\"260\" width=\"139\" height=\"16\" rx=\"4\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "engineering_eng_hmi",
           "label": "人机界面",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "HMI",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+          "source_kind": "online-open-license",
+          "source_file": "eng_pumps_valves.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_eng_hmi",
@@ -184,16 +196,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"14\" width=\"68\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"24\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"24\" x2=\"75\" y2=\"24\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><rect x=\"16\" y=\"40\" width=\"68\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"50\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"50\" x2=\"75\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><rect x=\"16\" y=\"66\" width=\"68\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"76\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"76\" x2=\"75\" y2=\"76\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4,1H20A1,1 0 0,1 21,2V6A1,1 0 0,1 20,7H4A1,1 0 0,1 3,6V2A1,1 0 0,1 4,1M4,9H20A1,1 0 0,1 21,10V14A1,1 0 0,1 20,15H4A1,1 0 0,1 3,14V10A1,1 0 0,1 4,9M4,17H20A1,1 0 0,1 21,18V22A1,1 0 0,1 20,23H4A1,1 0 0,1 3,22V18A1,1 0 0,1 4,17M9,5H10V3H9V5M9,13H10V11H9V13M9,21H10V19H9V21M5,3V5H7V3H5M5,11V13H7V11H5M5,19V21H7V19H5Z\" /></svg>",
         "meta": {
           "asset_id": "engineering_server",
           "label": "数据采集器",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Server",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/server.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/server.svg",
+          "source_kind": "online-open-license",
+          "source_file": "server.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_server",

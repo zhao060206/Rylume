@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"30\" width=\"61\" height=\"40\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"24\" y=\"38\" width=\"12\" height=\"24\" fill=\"#84B7C8\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"36\" y1=\"50\" x2=\"94\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"5\" stroke-linecap=\"round\" /><line x1=\"94\" y1=\"31\" x2=\"94\" y2=\"69\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><ellipse cx=\"148\" cy=\"273\" rx=\"68\" ry=\"14\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"114\" y=\"240\" width=\"68\" height=\"33\" rx=\"8\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M129 238 L94 174 Q86 152 107 143 L129 133 Q144 130 151 148 L178 217 Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M119 140 L205 82 Q223 72 236 88 L242 103 L149 175 Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M237 88 L284 139 L264 161 L218 116 Z\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><circle cx=\"149\" cy=\"231\" r=\"28\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"122\" cy=\"153\" r=\"23\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"223\" cy=\"101\" r=\"19\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"275\" cy=\"150\" r=\"15\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g transform=\"translate(275 150) rotate(-35)\"><rect x=\"-24\" y=\"0\" width=\"48\" height=\"19\" rx=\"5\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><g><path d=\"M-22 16 H-12 V47 H-5 V56 H-22 Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M12 16 H22 V56 H5 V47 H12 Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><path d=\"M-8 8 H8\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /></g></g></svg>",
         "meta": {
           "asset_id": "engineering_actuator",
           "label": "执行器",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Actuator",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_robotics.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_robotics.svg",
+          "source_kind": "online-open-license",
+          "source_file": "eng_robotics.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_actuator",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 78 L50 18 L93 78 Z\" fill=\"none\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M7 78 L36 78 L50 18 L64 78 L93 78 M27 49 L73 49 M36 78 L73 49 M64 78 L27 49\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><rect x=\"76\" y=\"95\" width=\"251\" height=\"131\" rx=\"22\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"76\" cy=\"160\" rx=\"23\" ry=\"65\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"326\" cy=\"160\" rx=\"20\" ry=\"65\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><line x1=\"82\" y1=\"125\" x2=\"321\" y2=\"125\" stroke=\"#e8ad66\" stroke-width=\"9\" /><line x1=\"82\" y1=\"148\" x2=\"321\" y2=\"148\" stroke=\"#e8ad66\" stroke-width=\"9\" /><line x1=\"82\" y1=\"172\" x2=\"321\" y2=\"172\" stroke=\"#e8ad66\" stroke-width=\"9\" /><line x1=\"82\" y1=\"195\" x2=\"321\" y2=\"195\" stroke=\"#e8ad66\" stroke-width=\"9\" /></g><g><rect x=\"101\" y=\"107\" width=\"10\" height=\"106\" rx=\"0\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"290\" y=\"107\" width=\"10\" height=\"106\" rx=\"0\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"154\" y=\"95\" width=\"9\" height=\"93\" rx=\"0\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"210\" y=\"133\" width=\"9\" height=\"93\" rx=\"0\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"255\" y=\"95\" width=\"9\" height=\"93\" rx=\"0\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M119 96 V62\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"18\" /><path d=\"M280 226 V260\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"18\" /><path d=\"M53 160 H30 M346 160 H370\" fill=\"none\" stroke=\"#e8ad66\" stroke-width=\"18\" /></g><g><polygon points=\"107,226 99,271 141,271 134,226\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"257,226 249,271 291,271 284,226\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "engineering_truss",
           "label": "桁架",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Truss",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_heat_exchange.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_heat_exchange.svg",
+          "source_kind": "online-open-license",
+          "source_file": "eng_heat_exchange.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_truss",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"58\" r=\"18\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"50\" y1=\"76\" x2=\"50\" y2=\"94\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M19 41 Q50 7 81 41 M29 47 Q50 24 71 47\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><path d=\"M67 98L243 98L243 270L67 270Z\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M243 98L329 56L329 227L243 270Z\" fill=\"#b7cdd3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M67 98L152 56L329 56L243 98Z\" fill=\"#f5f7f3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"83\" y=\"118\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"83\" y=\"156\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"83\" y=\"194\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"132\" y=\"118\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"132\" y=\"156\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"132\" y=\"194\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"181\" y=\"118\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"181\" y=\"156\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /><rect x=\"181\" y=\"194\" width=\"31\" height=\"23\" rx=\"0\" fill=\"#86b7d3\" /></g><g><path d=\"M260 119L313 93L313 115L260 141Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M260 158L313 132L313 154L260 180Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M260 197L313 171L313 193L260 219Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"140\" y=\"232\" width=\"48\" height=\"38\" rx=\"0\" fill=\"#2b5662\" /><path d=\"M164 233L164 269\" fill=\"none\" stroke=\"#d8e4e6\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "engineering_sensor",
           "label": "传感器",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Sensor",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/built_building.svg",
+          "source_kind": "online-open-license",
+          "source_file": "built_building.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_sensor",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"16\" y=\"14\" width=\"68\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"24\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"24\" x2=\"75\" y2=\"24\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><rect x=\"16\" y=\"40\" width=\"68\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"50\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"50\" x2=\"75\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><rect x=\"16\" y=\"66\" width=\"68\" height=\"20\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"26\" cy=\"76\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"44\" y1=\"76\" x2=\"75\" y2=\"76\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4,1H20A1,1 0 0,1 21,2V6A1,1 0 0,1 20,7H4A1,1 0 0,1 3,6V2A1,1 0 0,1 4,1M4,9H20A1,1 0 0,1 21,10V14A1,1 0 0,1 20,15H4A1,1 0 0,1 3,14V10A1,1 0 0,1 4,9M4,17H20A1,1 0 0,1 21,18V22A1,1 0 0,1 20,23H4A1,1 0 0,1 3,22V18A1,1 0 0,1 4,17M9,5H10V3H9V5M9,13H10V11H9V13M9,21H10V19H9V21M5,3V5H7V3H5M5,11V13H7V11H5M5,19V21H7V19H5Z\" /></svg>",
         "meta": {
           "asset_id": "engineering_server",
           "label": "数据采集器",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Server",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/server.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/server.svg",
+          "source_kind": "online-open-license",
+          "source_file": "server.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_server",
@@ -184,16 +196,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"25\" width=\"50\" height=\"50\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"35\" y=\"35\" width=\"30\" height=\"30\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"34\" y1=\"12\" x2=\"34\" y2=\"25\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"34\" y1=\"75\" x2=\"34\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"12\" y1=\"34\" x2=\"25\" y2=\"34\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"75\" y1=\"34\" x2=\"88\" y2=\"34\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"12\" x2=\"50\" y2=\"25\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"75\" x2=\"50\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"12\" y1=\"50\" x2=\"25\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"75\" y1=\"50\" x2=\"88\" y2=\"50\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"66\" y1=\"12\" x2=\"66\" y2=\"25\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"66\" y1=\"75\" x2=\"66\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"12\" y1=\"66\" x2=\"25\" y2=\"66\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"75\" y1=\"66\" x2=\"88\" y2=\"66\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6,4H18V5H21V7H18V9H21V11H18V13H21V15H18V17H21V19H18V20H6V19H3V17H6V15H3V13H6V11H3V9H6V7H3V5H6V4M11,15V18H12V15H11M13,15V18H14V15H13M15,15V18H16V15H15Z\" /></svg>",
         "meta": {
           "asset_id": "engineering_chip",
           "label": "控制芯片",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/engineering",
-          "modifications": "Original vector artwork."
+          "label_en": "Chip",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chip.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chip.svg",
+          "source_kind": "online-open-license",
+          "source_file": "chip.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "engineering_chip",

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "id": "computing-math",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "title": "计算机与数学",
   "domain": "computing-math",
   "min_app_version": "3.1.0",
-  "license": "CC0-1.0",
+  "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
       "id": "computing_math_database",
@@ -24,13 +24,15 @@
         "数据库",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "3f4561e69e150b33e96d43d68180a29caec8f82a4cf4fe42b846423bf1d5bfa9"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "database.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database.svg",
+      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427"
     },
     {
       "id": "computing_math_server",
@@ -49,13 +51,15 @@
         "服务器",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "70504842c57c6e8b136224a47375c7e3d7166d515d739e648c49ef572701a8c5"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/server.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "server.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/server.svg",
+      "sha256": "7f4b9411d2da0051fdc1ca3d4fe9f815f3787c91682ed026863187b3fe96c0a8"
     },
     {
       "id": "computing_math_neuron",
@@ -74,13 +78,15 @@
         "神经元",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "f85b093dcd7aac917c97b90d119a47d8d747407cd48b7d254373d991dc8aa241"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
       "id": "computing_math_network",
@@ -99,13 +105,15 @@
         "图网络",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "a23d53a88e0157e09ff30278e03f5dc822b3af3a22bddfd1151913f64efb3d89"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/network.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/network.svg",
+      "sha256": "b27a5fb6cd9a8efd84205e78bb75d2c0616b40fd74613c03e422f3e72e0c36e9"
     },
     {
       "id": "computing_math_tree_graph",
@@ -124,13 +132,15 @@
         "树结构",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "561038049d90de36c9ca0361537339174c66c7fa6b229d63e42f13d725182b1f"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "tree.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b"
     },
     {
       "id": "computing_math_tensor",
@@ -149,13 +159,15 @@
         "张量",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "af7d5c64c75f89e0a121dfc09ad833e40876d63121ec89343387e678c101fe15"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_field_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
       "id": "computing_math_matrix",
@@ -174,13 +186,15 @@
         "矩阵",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "c5955386d6d6f359faadb2571b1f7ce138313dc34ec0ebe4cbd35e994d416ea6"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/matrix.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "matrix.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/matrix.svg",
+      "sha256": "56f24402943df7b59bb743d150fe10d8acb6af1ebd9b02ad1820eb42b2db04d9"
     },
     {
       "id": "computing_math_embedding",
@@ -199,13 +213,15 @@
         "特征嵌入",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "179a87263f449b0afd89cc80113524d962f48d0c3b7891f1e4a5c4e7a8ccdd69"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-arrange-above.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
     },
     {
       "id": "computing_math_gpu",
@@ -224,13 +240,15 @@
         "计算加速器",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "c6777f7f6cad95b8cb76e6b24359a3a8207fdb7b41ed0e87cc104535b362f431"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "computing_math_dataset",
@@ -249,13 +267,15 @@
         "数据集",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "afa065e884f9d03883ed57808de3bc82e18a7d4bfa6425be058e8b8e1e679b9c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "computing_math_loss",
@@ -274,13 +294,15 @@
         "损失函数",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "22b67c77dcd95ff998ef192c5e40840dea32d67940fdc18dc0155f3a5fa2d86c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_physical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+      "sha256": "eb33a838d8d7189c857a436c396022f9c3e70aa8d57bf3fa08b741c2e960e2d4"
     },
     {
       "id": "computing_math_optimizer",
@@ -299,13 +321,15 @@
         "优化器",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "75c73d92257ed7347e0c8a65f8c61174abda0b11c510a5760c0768e7b07a6693"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_modifier.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_modifier.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_modifier.svg",
+      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f"
     },
     {
       "id": "computing_math_decision",
@@ -324,13 +348,15 @@
         "判定节点",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "c8b14daeb6362ddda0381372e8148022e3f5249737588e1961b798c947967d9a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "computing_math_mesh",
@@ -349,13 +375,15 @@
         "计算网格",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "a58febb8c95a1bdfa0191dcd38c1175fd93abff6bf9afdee55e548292af438f5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_transport.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
     },
     {
       "id": "computing_math_field",
@@ -374,13 +402,15 @@
         "向量场",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "ff724b6afd248e29d09c807795b6e8fac9725a1175bbeee14c937f6b09e9b920"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_microfluidics.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
     },
     {
       "id": "computing_math_code",
@@ -399,13 +429,15 @@
         "计算程序",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "1ee276c02fe472366e048ccb4b363484f7113b44811df431c17184b30c288105"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/code-array.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "code-array.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/code-array.svg",
+      "sha256": "eb3ea3c399ee5aebd7b5ecd46746e647b62e9f8593719a527f3de401a8373b63"
     },
     {
       "id": "computing_math_split",
@@ -424,13 +456,15 @@
         "数据划分",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "2b675056cc34908b18825cf17c69a8e56efca6e15b873b35ff31408419dd9e02"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electrochemistry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
       "id": "computing_math_chip",
@@ -449,19 +483,21 @@
         "处理芯片",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "d95f811dcdc70976eb7396b97b8dcbebec4313b1f65b85af78a9dfba28583eff"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chip.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chip.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chip.svg",
+      "sha256": "d673ce2afa74d6f1a47afd39425f70e2a1ee931cf0cba60887a972cabf6b5607"
     },
     {
       "id": "computing_math_math_cloud",
       "asset_id": "computing_math_math_cloud",
       "label": "云计算",
-      "label_en": "Math cloud",
+      "label_en": "Cloud",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -474,19 +510,21 @@
         "云计算",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "1d093362dcfbc1e0561baa8094f7104ddc44ffb716e69ecc02975e991b12a93a"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cloud.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "cloud.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cloud.svg",
+      "sha256": "79b7da3ddabe3d10205fb8e2fc822234892d4118baaebd7cd5938aa0239bff62"
     },
     {
       "id": "computing_math_math_cluster",
       "asset_id": "computing_math_math_cluster",
       "label": "计算集群",
-      "label_en": "Math cluster",
+      "label_en": "Cluster",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -499,19 +537,21 @@
         "计算集群",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "0670c21fad3ade9a269bc3588a34268e3b0dfe978b1d15a257d3e1960f4c17ca"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/scatter-plot.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "scatter-plot.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/scatter-plot.svg",
+      "sha256": "bbd55dcedfde89b014fb31a5f28f5b65db6cc63b644e15ea6fc6873d0f6ea7d3"
     },
     {
       "id": "computing_math_math_container",
       "asset_id": "computing_math_math_container",
       "label": "容器",
-      "label_en": "Math container",
+      "label_en": "Container",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -524,19 +564,21 @@
         "容器",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "8d75974e2acab9ad8d77daed81798d108b290b78fe36cacc95d27abc879c252c"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/docker.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "docker.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/docker.svg",
+      "sha256": "ed5f24089a58ebc72012b01dbaa9a5c5309024ccddd2b5e71d40d0141cf3829a"
     },
     {
       "id": "computing_math_math_vm",
       "asset_id": "computing_math_math_vm",
       "label": "虚拟机",
-      "label_en": "Math vm",
+      "label_en": "Vm",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -549,19 +591,21 @@
         "虚拟机",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "a8a9985dc0bcb3f8be9b6fc5b998559cc4231631517e0ff3748c5e4841454abc"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_chromatography.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
     },
     {
       "id": "computing_math_math_firewall",
       "asset_id": "computing_math_math_firewall",
       "label": "防火墙",
-      "label_en": "Math firewall",
+      "label_en": "Firewall",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -574,19 +618,21 @@
         "防火墙",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "1f58fd92827e43673fe3e20939df34f166c90b4fc17df7f1d25d78809b42069b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
       "id": "computing_math_math_router",
       "asset_id": "computing_math_math_router",
       "label": "路由器",
-      "label_en": "Math router",
+      "label_en": "Router",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -599,19 +645,21 @@
         "路由器",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "05efbf2608b61fada676739990a28d013a01b82c7536debea4a439ceed875c23"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/router.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "router.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/router.svg",
+      "sha256": "fc7e0dd418a0a2e8e12dc087f99feec3c0a8ef1f6589f29703583f9bbeb7765f"
     },
     {
       "id": "computing_math_math_switch",
       "asset_id": "computing_math_math_switch",
       "label": "交换机",
-      "label_en": "Math switch",
+      "label_en": "Switch",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -624,19 +672,21 @@
         "交换机",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "ea5abb3774998effe51a906a313717eb7eac2409d4f582106adb623f5225c52e"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/switch.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "switch.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/switch.svg",
+      "sha256": "92043f8b054d899ae7d581c5276e134b6488cf7a9fb3c7116875da5a53fa40cc"
     },
     {
       "id": "computing_math_math_api",
       "asset_id": "computing_math_math_api",
       "label": "API 接口",
-      "label_en": "Math API",
+      "label_en": "API",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -649,19 +699,21 @@
         "API 接口",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "8056e294c31ae702e07873965cc05640a9df94fd0698f5e6e9e943317de1bf66"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/api.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "api.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/api.svg",
+      "sha256": "ce073ff1bc3370e99608f4a71d474472c033c6ce1c828d89085b92184538ece5"
     },
     {
       "id": "computing_math_math_microservice",
       "asset_id": "computing_math_math_microservice",
       "label": "微服务",
-      "label_en": "Math microservice",
+      "label_en": "Microservice",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -674,19 +726,21 @@
         "微服务",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "57595f4d8a26276bc5abf85cfe25e64d344c0035e5e30e375b993281e491a1e0"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_biological.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_biological.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_biological.svg",
+      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb"
     },
     {
       "id": "computing_math_math_queue",
       "asset_id": "computing_math_math_queue",
       "label": "消息队列",
-      "label_en": "Math queue",
+      "label_en": "Queue",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -699,19 +753,21 @@
         "消息队列",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "15226f59523389b1a515d81ad76d3b96fac4ff370b0fa245bbd0e5d7e72ef4eb"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/queue-first-in-last-out.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "queue-first-in-last-out.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/queue-first-in-last-out.svg",
+      "sha256": "88ca23c84962c2b92d6460ccd9836feaae24fa953af8656c8d989f37db0f0bb4"
     },
     {
       "id": "computing_math_math_cache",
       "asset_id": "computing_math_math_cache",
       "label": "缓存",
-      "label_en": "Math cache",
+      "label_en": "Cache",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -724,19 +780,21 @@
         "缓存",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "a7d9e6b4454ac895684f11b37208f3468b6f418987f8f08a233f48dd8b85a4ad"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
       "id": "computing_math_math_load_balancer",
       "asset_id": "computing_math_math_load_balancer",
       "label": "负载均衡",
-      "label_en": "Math load balancer",
+      "label_en": "Load balancer",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -749,19 +807,21 @@
         "负载均衡",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "1405a36d56e7ca214454ef55e76c1d4e6e219ab74ed3bd61af6b7cb4d0605c06"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_chemical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
     },
     {
       "id": "computing_math_math_consensus",
       "asset_id": "computing_math_math_consensus",
       "label": "共识机制",
-      "label_en": "Math consensus",
+      "label_en": "Consensus",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -774,19 +834,21 @@
         "共识机制",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "c4b671e94ef14f7e2283b6a8ecad9ac9febb56af584db14c7d3dc7700380dd6b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "computing_math_math_blockchain",
       "asset_id": "computing_math_math_blockchain",
       "label": "区块链",
-      "label_en": "Math blockchain",
+      "label_en": "Blockchain",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -799,19 +861,21 @@
         "区块链",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "b8bc09adfd33ab20a4e1f4695c87649e162a80a610aebee2150c227743aac1ea"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_microfluidics.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
     },
     {
       "id": "computing_math_math_hash",
       "asset_id": "computing_math_math_hash",
       "label": "哈希函数",
-      "label_en": "Math hash",
+      "label_en": "Hash",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -824,19 +888,21 @@
         "哈希函数",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "14cca4ded50afb4ef78b3cf0a5649905e2897dd12e7810d221b3c76d6359cb21"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_multiscale.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_multiscale.svg",
+      "sha256": "96333ad0608fa1ab620a8f914a718ad97da0a1e49d9220823dc275d13c0bc53d"
     },
     {
       "id": "computing_math_math_encryption",
       "asset_id": "computing_math_math_encryption",
       "label": "加密",
-      "label_en": "Math encryption",
+      "label_en": "Encryption",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -849,19 +915,21 @@
         "加密",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "6d421b1dd70f075b18ecc001b953817df9df229d399576b401f62301817c8a9e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_vessels.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_vessels.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_vessels.svg",
+      "sha256": "34b59a242bcb4c1b9833fdfe09c663bb77b34d3e04fba966bd41a9d280b6eb91"
     },
     {
       "id": "computing_math_math_graph",
       "asset_id": "computing_math_math_graph",
       "label": "图结构",
-      "label_en": "Math graph",
+      "label_en": "Graph",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -874,19 +942,21 @@
         "图结构",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "968c74bc0fafe10d0669ca8700f5ebef0301827f0232d395d561d0955b035c17"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "graph.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph.svg",
+      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e"
     },
     {
       "id": "computing_math_math_heap",
       "asset_id": "computing_math_math_heap",
       "label": "堆",
-      "label_en": "Math heap",
+      "label_en": "Heap",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -899,19 +969,21 @@
         "堆",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "7d39706e997c182a10668e37c19f7a4b3ea4bd8a5a3a5d3e975a1552acf1e6a6"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_diffraction.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
       "id": "computing_math_math_stack",
       "asset_id": "computing_math_math_stack",
       "label": "栈",
-      "label_en": "Math stack",
+      "label_en": "Stack",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -924,19 +996,21 @@
         "栈",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "ca8e0b79390ceb51ff6403048a1bb0b5e0a9670f5c0f3e23d1ddf9a28ea7f3b0"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stack-exchange.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "stack-exchange.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stack-exchange.svg",
+      "sha256": "c61ad2472d51f7e47e6b6606accc348e5da7bd510588912b78f9487249782e64"
     },
     {
       "id": "computing_math_math_linked_list",
       "asset_id": "computing_math_math_linked_list",
       "label": "链表",
-      "label_en": "Math linked list",
+      "label_en": "Linked list",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -949,19 +1023,21 @@
         "链表",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "148736fd9effe4bff987c8875f75b43cca1dea4490753a37ef9f60af1cb6a12a"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/list-box.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "list-box.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/list-box.svg",
+      "sha256": "79a16b0f993c78af8861bd815a2fc9a25ee50bdcf74244bd69349891c1da863a"
     },
     {
       "id": "computing_math_math_hash_table",
       "asset_id": "computing_math_math_hash_table",
       "label": "哈希表",
-      "label_en": "Math hash table",
+      "label_en": "Hash table",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -974,19 +1050,21 @@
         "哈希表",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "d01fe936635d7da1f761781a0f1b9507de349d2feebc851f52bbea92e9082322"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/table.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "table.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/table.svg",
+      "sha256": "65c30acc086a8790a0d8f647ad3701d9c74499ee2d86489e9a0af6c9d6ea4968"
     },
     {
       "id": "computing_math_math_binary_search",
       "asset_id": "computing_math_math_binary_search",
       "label": "二分查找",
-      "label_en": "Math binary search",
+      "label_en": "Binary search",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -999,19 +1077,21 @@
         "二分查找",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "26b0d04a8ac9b04ac89f195cb942adfb8134b8ac8fd722b6d97f5927aca4a222"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_field_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
       "id": "computing_math_math_sorting",
       "asset_id": "computing_math_math_sorting",
       "label": "排序",
-      "label_en": "Math sorting",
+      "label_en": "Sorting",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1024,19 +1104,21 @@
         "排序",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "8a5446f282530b8319e5af0957c1990289b55a17041f0b85bd7b00475e708986"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_workflow.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_workflow.svg",
+      "sha256": "8c3e56eb6f280e7860ce6dfa86da00858b05a62b7d5fde1d1fb75803e814c823"
     },
     {
       "id": "computing_math_math_recursion",
       "asset_id": "computing_math_math_recursion",
       "label": "递归",
-      "label_en": "Math recursion",
+      "label_en": "Recursion",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1049,19 +1131,21 @@
         "递归",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "6a29bcdb710b7b3d8178462195d5ab087790cb8af73e5d061c3487e0ad673760"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_biological.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_biological.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_biological.svg",
+      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb"
     },
     {
       "id": "computing_math_math_dp",
       "asset_id": "computing_math_math_dp",
       "label": "动态规划",
-      "label_en": "Math dp",
+      "label_en": "Dp",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1074,19 +1158,21 @@
         "动态规划",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "8db9cbf2dcbeadebb11c3680b8b92add1cfbdd3e57ce3f780fa554dd1bf56213"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
       "id": "computing_math_math_gradient",
       "asset_id": "computing_math_math_gradient",
       "label": "梯度下降",
-      "label_en": "Math gradient",
+      "label_en": "Gradient",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1099,19 +1185,21 @@
         "梯度下降",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "cab40fbe7c4e55bd2cb16e64df306b2c18b08e97a95af7dd3c0a3f69f7bb3c33"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gradient-horizontal.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "gradient-horizontal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gradient-horizontal.svg",
+      "sha256": "557a22838ca737c60b2ad84933bb13fb3b72c63049ed582101c46651f947dd93"
     },
     {
       "id": "computing_math_math_cnn",
       "asset_id": "computing_math_math_cnn",
       "label": "卷积网络",
-      "label_en": "Math CNN",
+      "label_en": "CNN",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1124,19 +1212,21 @@
         "卷积网络",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "1ce9588381da2fc25c58d7034344e925c8898e8316394db59433fe3f88a95b80"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "computing_math_math_transformer",
       "asset_id": "computing_math_math_transformer",
       "label": "变换器",
-      "label_en": "Math transformer",
+      "label_en": "Transformer",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1149,19 +1239,21 @@
         "变换器",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "cdfdcb59dadd33a7f5fbca6e2316c880e14ce04741a251056eaa212d25b1dd1b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_vessels.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_vessels.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_vessels.svg",
+      "sha256": "34b59a242bcb4c1b9833fdfe09c663bb77b34d3e04fba966bd41a9d280b6eb91"
     },
     {
       "id": "computing_math_math_attention",
       "asset_id": "computing_math_math_attention",
       "label": "注意力机制",
-      "label_en": "Math attention",
+      "label_en": "Attention",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1174,19 +1266,21 @@
         "注意力机制",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "67906a21d13f971bf58624f82167b845e8756089a1630af683000bb35f9c265b"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "eye.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3"
     },
     {
       "id": "computing_math_math_autoencoder",
       "asset_id": "computing_math_math_autoencoder",
       "label": "自编码器",
-      "label_en": "Math autoencoder",
+      "label_en": "Autoencoder",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1199,19 +1293,21 @@
         "自编码器",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "859dd9dd6055027947ccf88922e9ac8873ea07b9787cd6a6cd29506c1a84b87b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_biological.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_biological.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_biological.svg",
+      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb"
     },
     {
       "id": "computing_math_math_gan",
       "asset_id": "computing_math_math_gan",
       "label": "生成对抗网络",
-      "label_en": "Math GAN",
+      "label_en": "GAN",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1224,19 +1320,21 @@
         "生成对抗网络",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "266a20c365b7ac2bf2dbdeeea204d4733f6b4331f5971b8dc1ac1b51b7c4b4f3"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_biological.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_biological.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_biological.svg",
+      "sha256": "875d3b3e06b2578f2e84088f303cae547b74a1964681eb4b77ff8ee05e442adb"
     },
     {
       "id": "computing_math_math_diffusion",
       "asset_id": "computing_math_math_diffusion",
       "label": "扩散模型",
-      "label_en": "Math diffusion",
+      "label_en": "Diffusion",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1249,19 +1347,21 @@
         "扩散模型",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "5994d68e1f1e72367e3236da50ddc86a4e714d7a12c2ceaa40867e6f71307dbd"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "blur.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
     },
     {
       "id": "computing_math_math_rl",
       "asset_id": "computing_math_math_rl",
       "label": "强化学习",
-      "label_en": "Math RL",
+      "label_en": "RL",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1274,19 +1374,21 @@
         "强化学习",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "0bb66b8b389c6aafcc40dca6333991cd346ac37427076e3d15d63ffd0bd2b326"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_network.svg",
+      "sha256": "a0b7aa13e52f9f85b1cb2d708c91067ba43a8ea02bd4e7a536fbb540eb4a8f7f"
     },
     {
       "id": "computing_math_math_agent",
       "asset_id": "computing_math_math_agent",
       "label": "智能体",
-      "label_en": "Math agent",
+      "label_en": "Agent",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1299,19 +1401,21 @@
         "智能体",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "a7e7b9ec9b2fd90de50de26a1febf4a66fd3b5cd277a51d65d3ab8a9f8144cda"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "info_architecture.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/info_architecture.svg",
+      "sha256": "cba9c35a47b5343afda4d03f4228cb724986664e867f1e4048baf38915b17001"
     },
     {
       "id": "computing_math_math_bayes",
       "asset_id": "computing_math_math_bayes",
       "label": "贝叶斯网络",
-      "label_en": "Math bayes",
+      "label_en": "Bayes",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1324,19 +1428,21 @@
         "贝叶斯网络",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "423a1110a66b34e52bae61323f3f046d3bdd7b82bc8ef4784bf0229aecd06152"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_microfluidics.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
     },
     {
       "id": "computing_math_math_hmm",
       "asset_id": "computing_math_math_hmm",
       "label": "隐马尔可夫",
-      "label_en": "Math hmm",
+      "label_en": "Hmm",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1349,19 +1455,21 @@
         "隐马尔可夫",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "98b475c1c43792fd3e9134a3e319d2809d39de39d2361a431666e061b688334c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_modifier.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_modifier.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_modifier.svg",
+      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f"
     },
     {
       "id": "computing_math_math_pca",
       "asset_id": "computing_math_math_pca",
       "label": "主成分分析",
-      "label_en": "Math pca",
+      "label_en": "Pca",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1374,19 +1482,21 @@
         "主成分分析",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "e1c8ed1e087b8757ac9a682ff74dcbd930f589f4ffbc1045138b2b8de1c8cd29"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_vessels.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_vessels.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_vessels.svg",
+      "sha256": "34b59a242bcb4c1b9833fdfe09c663bb77b34d3e04fba966bd41a9d280b6eb91"
     },
     {
       "id": "computing_math_math_svm",
       "asset_id": "computing_math_math_svm",
       "label": "支持向量机",
-      "label_en": "Math SVM",
+      "label_en": "SVM",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1399,19 +1509,21 @@
         "支持向量机",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "d62b27e38e1d6d95dd66466aa830b00b9ec2cab22ea7f43421ed417f6eedd087"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_transport.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
     },
     {
       "id": "computing_math_math_decision_tree",
       "asset_id": "computing_math_math_decision_tree",
       "label": "决策树",
-      "label_en": "Math decision tree",
+      "label_en": "Decision tree",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1424,19 +1536,21 @@
         "决策树",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "6fc27e1dd0a294c7f1dc7b559883073241f65128f0681b542fc5d939783e1113"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "tree.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b"
     },
     {
       "id": "computing_math_math_random_forest",
       "asset_id": "computing_math_math_random_forest",
       "label": "随机森林",
-      "label_en": "Math random forest",
+      "label_en": "Random forest",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1449,19 +1563,21 @@
         "随机森林",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "5fe61b42871d0dda93a30a27db934092d2a1ff18cc30fc9381ae314fe5cd6351"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shuffle.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "shuffle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shuffle.svg",
+      "sha256": "ff652bcf706f9c5315f650c77bbd035683ef51f1846eead387555d70dcd7ecae"
     },
     {
       "id": "computing_math_math_clustering",
       "asset_id": "computing_math_math_clustering",
       "label": "聚类",
-      "label_en": "Math clustering",
+      "label_en": "Clustering",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1474,19 +1590,21 @@
         "聚类",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "1e684687d4749c16dd91cbd55a4bed3a27cdc563dedbd1e7faebcad4d357d0e7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_microfluidics.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
     },
     {
       "id": "computing_math_math_manifold",
       "asset_id": "computing_math_math_manifold",
       "label": "流形",
-      "label_en": "Math manifold",
+      "label_en": "Manifold",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1499,19 +1617,21 @@
         "流形",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "a81ce8f445b102f7a33103bda264d1886bfd5f794b404ef4e7d744f21cbad32b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electrochemistry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
       "id": "computing_math_math_topology",
       "asset_id": "computing_math_math_topology",
       "label": "拓扑",
-      "label_en": "Math topology",
+      "label_en": "Topology",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1524,19 +1644,21 @@
         "拓扑",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "0d76685248a10e68298148289e6520d187d49f548ba0f762009637cffab1f64e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_field_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
       "id": "computing_math_math_vector_space",
       "asset_id": "computing_math_math_vector_space",
       "label": "向量空间",
-      "label_en": "Math vector space",
+      "label_en": "Vector space",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1549,19 +1671,21 @@
         "向量空间",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "e3e78cfdebc30b1d02ee9aa9e0bb3b312db49e43290394bb9b47c4c35e48ea88"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-arrange-above.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
     },
     {
       "id": "computing_math_math_probability",
       "asset_id": "computing_math_math_probability",
       "label": "概率分布",
-      "label_en": "Math probability",
+      "label_en": "Probability",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1574,19 +1698,21 @@
         "概率分布",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "4619293e3becc270e2ac9b223f8c130dcc7607d56c9a803096d1993b0ea10afb"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-bell-curve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
     },
     {
       "id": "computing_math_math_monte_carlo",
       "asset_id": "computing_math_math_monte_carlo",
       "label": "蒙特卡洛",
-      "label_en": "Math monte carlo",
+      "label_en": "Monte carlo",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1599,19 +1725,21 @@
         "蒙特卡洛",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "17dc04920583082fec7b99a9a2c3909993879e85e4241ee875b92180e3974fb9"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electrochemistry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
       "id": "computing_math_math_optimization",
       "asset_id": "computing_math_math_optimization",
       "label": "优化曲面",
-      "label_en": "Math optimization",
+      "label_en": "Optimization",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1624,19 +1752,21 @@
         "优化曲面",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "a218ba87f439e646d897f9c014b8c79a9db5b305474cab5f2e55d49cbd293f20"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_transport.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
     },
     {
       "id": "computing_math_math_sparse",
       "asset_id": "computing_math_math_sparse",
       "label": "稀疏矩阵",
-      "label_en": "Math sparse",
+      "label_en": "Sparse",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1649,19 +1779,21 @@
         "稀疏矩阵",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "3017e9b42aaeb8655a4bb5dfc83cf6f439918c8703aad0954a86691e4d978d39"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_modifier.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_modifier.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_modifier.svg",
+      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f"
     },
     {
       "id": "computing_math_math_fem",
       "asset_id": "computing_math_math_fem",
       "label": "有限元网格",
-      "label_en": "Math FEM",
+      "label_en": "FEM",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1674,19 +1806,21 @@
         "有限元网格",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "a7157f5a046dd436859d970ac6b763ade8d703109645234f454dd2a261175830"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_modifier.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_modifier.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_modifier.svg",
+      "sha256": "70b86835b5f861f7390a9a90680b3ad8c8a7f5590c97094b9ade017f4e9a1a3f"
     },
     {
       "id": "computing_math_math_ode",
       "asset_id": "computing_math_math_ode",
       "label": "微分方程",
-      "label_en": "Math ODE",
+      "label_en": "ODE",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1699,19 +1833,21 @@
         "微分方程",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "677ce08df0f2cf804c87f41a157e8b3975f1dc1003d6553f09042fbe2700bda6"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "computing_math_math_fft",
       "asset_id": "computing_math_math_fft",
       "label": "傅里叶变换",
-      "label_en": "Math FFT",
+      "label_en": "FFT",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1724,19 +1860,21 @@
         "傅里叶变换",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "9de9aab72c7d26b10a9ab19e46029f8861b0c0868c4237f8868507382524f2bd"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electron_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
       "id": "computing_math_math_convolution",
       "asset_id": "computing_math_math_convolution",
       "label": "卷积",
-      "label_en": "Math convolution",
+      "label_en": "Convolution",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1749,19 +1887,21 @@
         "卷积",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "6e759d5d7c6fe899601a0ff463b22a6e7d0b2bc79182b2dd9cd14622727cccc2"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_microfluidics.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
     },
     {
       "id": "computing_math_math_filter",
       "asset_id": "computing_math_math_filter",
       "label": "滤波",
-      "label_en": "Math filter",
+      "label_en": "Filter",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1774,19 +1914,21 @@
         "滤波",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "42eaf48f31d58b22462d18aa01488000ac933e6a7931d4d7078beca041574a8e"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/filter.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "filter.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/filter.svg",
+      "sha256": "49addd47f9fe63951fb2ecba09e4b1bb36cbbc312deb82215c634990d60b8193"
     },
     {
       "id": "computing_math_math_signal",
       "asset_id": "computing_math_math_signal",
       "label": "信号",
-      "label_en": "Math signal",
+      "label_en": "Signal",
       "category": "数据、算法与数值计算",
       "type": "symbol",
       "default_dim": [
@@ -1799,13 +1941,825 @@
         "信号",
         "计算机与数学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/computing-math",
-      "modifications": "Original vector artwork.",
-      "sha256": "94d5824f6784c997c96a8a82c83762e6fbb5d2d9d3dd39c089400582cc3cd16f"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/signal.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "signal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/signal.svg",
+      "sha256": "785a3dcf861d637eafa606ae4b88464ad4acfc59114085a712dc0f8bb1e17990"
+    },
+    {
+      "id": "computing_math_math_data_frame",
+      "asset_id": "computing_math_math_data_frame",
+      "label": "数据框",
+      "label_en": "Data frame",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_data_frame.svg",
+      "keywords": [
+        "math_data_frame",
+        "数据框",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "database.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database.svg",
+      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427"
+    },
+    {
+      "id": "computing_math_math_table",
+      "asset_id": "computing_math_math_table",
+      "label": "数据表",
+      "label_en": "Data table",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_table.svg",
+      "keywords": [
+        "math_table",
+        "数据表",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/table.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "table.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/table.svg",
+      "sha256": "65c30acc086a8790a0d8f647ad3701d9c74499ee2d86489e9a0af6c9d6ea4968"
+    },
+    {
+      "id": "computing_math_math_feature_vector",
+      "asset_id": "computing_math_math_feature_vector",
+      "label": "特征向量",
+      "label_en": "Feature vector",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_feature_vector.svg",
+      "keywords": [
+        "math_feature_vector",
+        "特征向量",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-square.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-square.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-square.svg",
+      "sha256": "11709cb2b4448a7a00aa90deded8e510eab841627e74bca7a9c29fac824744db"
+    },
+    {
+      "id": "computing_math_math_kernel",
+      "asset_id": "computing_math_math_kernel",
+      "label": "核函数",
+      "label_en": "Kernel function",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_kernel.svg",
+      "keywords": [
+        "math_kernel",
+        "核函数",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/function.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "function.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/function.svg",
+      "sha256": "aeabc7201d680b7dd263aa92eadbaf643e59106a9195981bdf0e9f0ad0d8c056"
+    },
+    {
+      "id": "computing_math_math_regression",
+      "asset_id": "computing_math_math_regression",
+      "label": "回归模型",
+      "label_en": "Regression model",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_regression.svg",
+      "keywords": [
+        "math_regression",
+        "回归模型",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+    },
+    {
+      "id": "computing_math_math_confusion_matrix",
+      "asset_id": "computing_math_math_confusion_matrix",
+      "label": "混淆矩阵",
+      "label_en": "Confusion matrix",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_confusion_matrix.svg",
+      "keywords": [
+        "math_confusion_matrix",
+        "混淆矩阵",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "grid.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/grid.svg",
+      "sha256": "bc4dab76a76f0cfbcfaf51d2e4a808ceb8fc992590c96d31891d939314cf471e"
+    },
+    {
+      "id": "computing_math_math_roc",
+      "asset_id": "computing_math_math_roc",
+      "label": "ROC 曲线",
+      "label_en": "ROC curve",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_roc.svg",
+      "keywords": [
+        "math_roc",
+        "ROC 曲线",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+    },
+    {
+      "id": "computing_math_math_pr_curve",
+      "asset_id": "computing_math_math_pr_curve",
+      "label": "PR 曲线",
+      "label_en": "PR curve",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_pr_curve.svg",
+      "keywords": [
+        "math_pr_curve",
+        "PR 曲线",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-bell-curve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
+    },
+    {
+      "id": "computing_math_math_clustering_map",
+      "asset_id": "computing_math_math_clustering_map",
+      "label": "聚类映射",
+      "label_en": "Clustering map",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_clustering_map.svg",
+      "keywords": [
+        "math_clustering_map",
+        "聚类映射",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/map.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "map.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/map.svg",
+      "sha256": "85c1489b55e3095d851aa549e3d4da176dbce6caff38718d6ab96a7cc2dbefab"
+    },
+    {
+      "id": "computing_math_math_embedding_space",
+      "asset_id": "computing_math_math_embedding_space",
+      "label": "嵌入空间",
+      "label_en": "Embedding space",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_embedding_space.svg",
+      "keywords": [
+        "math_embedding_space",
+        "嵌入空间",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-arrange-above.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
+    },
+    {
+      "id": "computing_math_math_attention_map",
+      "asset_id": "computing_math_math_attention_map",
+      "label": "注意力图",
+      "label_en": "Attention map",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_attention_map.svg",
+      "keywords": [
+        "math_attention_map",
+        "注意力图",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "eye.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3"
+    },
+    {
+      "id": "computing_math_math_tokenizer",
+      "asset_id": "computing_math_math_tokenizer",
+      "label": "分词器",
+      "label_en": "Tokenizer",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_tokenizer.svg",
+      "keywords": [
+        "math_tokenizer",
+        "分词器",
+        "计算机与数学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_transport.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
+    },
+    {
+      "id": "computing_math_math_language_model",
+      "asset_id": "computing_math_math_language_model",
+      "label": "语言模型",
+      "label_en": "Language model",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_language_model.svg",
+      "keywords": [
+        "math_language_model",
+        "语言模型",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/translate.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "translate.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/translate.svg",
+      "sha256": "db84ab5ec9b706715a118f117405f616e04ac10337e24ff8f527b84e0abb8111"
+    },
+    {
+      "id": "computing_math_math_prompt",
+      "asset_id": "computing_math_math_prompt",
+      "label": "提示词",
+      "label_en": "Prompt",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_prompt.svg",
+      "keywords": [
+        "math_prompt",
+        "提示词",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/message-text.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "message-text.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/message-text.svg",
+      "sha256": "2458aa772099ec386055735f8e8319ee3f7db15755be0c0df7f91d37e8df1626"
+    },
+    {
+      "id": "computing_math_math_rag",
+      "asset_id": "computing_math_math_rag",
+      "label": "检索增强生成",
+      "label_en": "Retrieval augmented generation",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_rag.svg",
+      "keywords": [
+        "math_rag",
+        "检索增强生成",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database-search.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "database-search.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database-search.svg",
+      "sha256": "4a843e2d8394d5ca729ce8b37d8009e2ea2c9992775dbf50cae62b0445ad0246"
+    },
+    {
+      "id": "computing_math_math_vector_db",
+      "asset_id": "computing_math_math_vector_db",
+      "label": "向量数据库",
+      "label_en": "Vector database",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_vector_db.svg",
+      "keywords": [
+        "math_vector_db",
+        "向量数据库",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-arrange-above.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-arrange-above.svg",
+      "sha256": "56ed7420601963e2fd7748e13f6b048b204d04fe29a8d5492d666c48e4293be0"
+    },
+    {
+      "id": "computing_math_math_api_call",
+      "asset_id": "computing_math_math_api_call",
+      "label": "API 调用",
+      "label_en": "API call",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_api_call.svg",
+      "keywords": [
+        "math_api_call",
+        "API 调用",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/api.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "api.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/api.svg",
+      "sha256": "ce073ff1bc3370e99608f4a71d474472c033c6ce1c828d89085b92184538ece5"
+    },
+    {
+      "id": "computing_math_math_pipeline",
+      "asset_id": "computing_math_math_pipeline",
+      "label": "数据管线",
+      "label_en": "Data pipeline",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_pipeline.svg",
+      "keywords": [
+        "math_pipeline",
+        "数据管线",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pipe.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
+    },
+    {
+      "id": "computing_math_math_container_image",
+      "asset_id": "computing_math_math_container_image",
+      "label": "容器镜像",
+      "label_en": "Container image",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_container_image.svg",
+      "keywords": [
+        "math_container_image",
+        "容器镜像",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/docker.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "docker.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/docker.svg",
+      "sha256": "ed5f24089a58ebc72012b01dbaa9a5c5309024ccddd2b5e71d40d0141cf3829a"
+    },
+    {
+      "id": "computing_math_math_kubernetes",
+      "asset_id": "computing_math_math_kubernetes",
+      "label": "容器编排",
+      "label_en": "Kubernetes",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_kubernetes.svg",
+      "keywords": [
+        "math_kubernetes",
+        "容器编排",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/kubernetes.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "kubernetes.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/kubernetes.svg",
+      "sha256": "811861dbca28070a75c4d229cb13f24a37720fe5fb4382bc5824ae052c76a3ee"
+    },
+    {
+      "id": "computing_math_math_monitor",
+      "asset_id": "computing_math_math_monitor",
+      "label": "监控面板",
+      "label_en": "Monitoring dashboard",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_monitor.svg",
+      "keywords": [
+        "math_monitor",
+        "监控面板",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/monitor-dashboard.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "monitor-dashboard.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/monitor-dashboard.svg",
+      "sha256": "39c44376cb9cd327095c8e1b430308d64775b9d210a9079d1979ee9262558dfd"
+    },
+    {
+      "id": "computing_math_math_log",
+      "asset_id": "computing_math_math_log",
+      "label": "运行日志",
+      "label_en": "Run log",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_log.svg",
+      "keywords": [
+        "math_log",
+        "运行日志",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/text-box.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "text-box.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/text-box.svg",
+      "sha256": "e1c5e644955c32ba402f9b55bd94770d918aa04a0f6248b740232337eabe1c60"
+    },
+    {
+      "id": "computing_math_math_unit_test",
+      "asset_id": "computing_math_math_unit_test",
+      "label": "单元测试",
+      "label_en": "Unit test",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_unit_test.svg",
+      "keywords": [
+        "math_unit_test",
+        "单元测试",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "test-tube.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
+    },
+    {
+      "id": "computing_math_math_version_control",
+      "asset_id": "computing_math_math_version_control",
+      "label": "版本控制",
+      "label_en": "Version control",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_version_control.svg",
+      "keywords": [
+        "math_version_control",
+        "版本控制",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/source-branch.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "source-branch.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/source-branch.svg",
+      "sha256": "a8b8760a1983eada391a52150e04475841f3fd8681d3d6a8b18f994299d05652"
+    },
+    {
+      "id": "computing_math_math_branch",
+      "asset_id": "computing_math_math_branch",
+      "label": "代码分支",
+      "label_en": "Code branch",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_branch.svg",
+      "keywords": [
+        "math_branch",
+        "代码分支",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/source-branch.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "source-branch.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/source-branch.svg",
+      "sha256": "a8b8760a1983eada391a52150e04475841f3fd8681d3d6a8b18f994299d05652"
+    },
+    {
+      "id": "computing_math_math_ci",
+      "asset_id": "computing_math_math_ci",
+      "label": "持续集成",
+      "label_en": "Continuous integration",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_ci.svg",
+      "keywords": [
+        "math_ci",
+        "持续集成",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/source-branch-check.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "source-branch-check.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/source-branch-check.svg",
+      "sha256": "ce9a97dfa5206372130a57520849f349f3bd89a21c658debf7bc75e4863e42a0"
+    },
+    {
+      "id": "computing_math_math_graph_search",
+      "asset_id": "computing_math_math_graph_search",
+      "label": "图搜索",
+      "label_en": "Graph search",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_graph_search.svg",
+      "keywords": [
+        "math_graph_search",
+        "图搜索",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "graph.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph.svg",
+      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e"
+    },
+    {
+      "id": "computing_math_math_shortest_path",
+      "asset_id": "computing_math_math_shortest_path",
+      "label": "最短路径",
+      "label_en": "Shortest path",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_shortest_path.svg",
+      "keywords": [
+        "math_shortest_path",
+        "最短路径",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/transit-connection.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "transit-connection.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/transit-connection.svg",
+      "sha256": "1ad921c8e404e2dc222b5f93aa084bde8e8b7192832d3b169e143631ad289f20"
+    },
+    {
+      "id": "computing_math_math_integral",
+      "asset_id": "computing_math_math_integral",
+      "label": "积分曲线",
+      "label_en": "Integral curve",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_integral.svg",
+      "keywords": [
+        "math_integral",
+        "积分曲线",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sigma.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sigma.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sigma.svg",
+      "sha256": "17a6e6f6d54679f0cb0da5c1f5b079c7bb2d0ca84f6b2acf11277e8975eb7a57"
+    },
+    {
+      "id": "computing_math_math_probability_dist",
+      "asset_id": "computing_math_math_probability_dist",
+      "label": "概率分布",
+      "label_en": "Probability distribution",
+      "category": "数据、算法与数值计算",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/math_probability_dist.svg",
+      "keywords": [
+        "math_probability_dist",
+        "概率分布",
+        "计算机与数学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-bell-curve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
     }
   ],
   "templates": [

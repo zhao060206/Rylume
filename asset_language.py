@@ -33,6 +33,20 @@ def _humanize(value: str) -> str:
     if words and not words[0].isupper():words[0]=words[0].capitalize()
     return ' '.join(words)
 
+def _strip_domain_prefix(value: str) -> str:
+    """Remove internal discipline prefixes before exposing an English label."""
+    value=str(value)
+    prefixes=('biology_','chemistry_','physics_','materials_','engineering_',
+              'earth_environment_','computing_math_','medicine_',
+              'chem_','phys_','mat_','eng_','earth_','math_','med_','bio_')
+    changed=True
+    while changed:
+        changed=False
+        for prefix in prefixes:
+            if value.lower().startswith(prefix):
+                value=value[len(prefix):];changed=True;break
+    return value
+
 def english_asset_label(asset: dict) -> str:
     explicit=str(asset.get('label_en') or '').strip()
     if explicit:return explicit
@@ -45,8 +59,8 @@ def english_asset_label(asset: dict) -> str:
             if aid.startswith(prefix):aid=aid[len(prefix):];changed=True;break
     keywords=asset.get('keywords') or []
     if isinstance(keywords,str):keywords=[keywords]
-    candidates=[str(x) for x in keywords if re.search(r'[A-Za-z]',str(x))]
-    value=candidates[0] if candidates else aid
+    candidates=[_strip_domain_prefix(str(x)) for x in keywords if re.search(r'[A-Za-z]',str(x))]
+    value=candidates[0] if candidates else _strip_domain_prefix(aid)
     return _humanize(value)
 
 def ensure_bilingual(asset: dict) -> dict:

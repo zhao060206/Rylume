@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"24\" y=\"22\" width=\"28\" height=\"57\" fill=\"#DFEDF1\" rx=\"3\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"30\" y=\"14\" width=\"16\" height=\"8\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M30 44 Q38 36 46 44 L46 66 L30 66 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><text x=\"38\" y=\"60\" fill=\"#FFFFFF\" font-family=\"Arial\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">V</text><line x1=\"56\" y1=\"53\" x2=\"87\" y2=\"53\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><polygon points=\"86,48 96,53 86,58\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><rect x=\"58\" y=\"47\" width=\"10\" height=\"12\" fill=\"#79A99A\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"58\" y1=\"38\" x2=\"76\" y2=\"38\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"76\" y1=\"38\" x2=\"71.49515566048791\" y2=\"40.169418695587794\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"76\" y1=\"38\" x2=\"71.49515566048791\" y2=\"35.830581304412206\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"50\" y=\"92\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">疫苗</text></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(115 180) scale(1.25)\"><g><ellipse cx=\"0\" cy=\"-60\" rx=\"10\" ry=\"10\" fill=\"#e8ad66\" /></g><g><path d=\"M-12 -45Q0 -51 12 -45L16 -13L-15 -13Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M-12 -41L-25 -20L-35 -24M12 -41L28 -27L42 -34\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"7\" /></g><g><path d=\"M-7 -13L-9 20L-20 21M7 -13L16 19L28 19\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"7\" /></g></g><g transform=\"translate(285 180) scale(1.25)\"><g><ellipse cx=\"0\" cy=\"-60\" rx=\"10\" ry=\"10\" fill=\"#e8ad66\" /></g><g><path d=\"M-12 -45Q0 -51 12 -45L16 -13L-15 -13Z\" fill=\"#79ad92\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M-12 -41L-25 -20L-35 -24M12 -41L28 -27L42 -34\" fill=\"none\" stroke=\"#79ad92\" stroke-width=\"7\" /></g><g><path d=\"M-7 -13L-9 20L-20 21M7 -13L16 19L28 19\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"7\" /></g></g><g><rect x=\"150\" y=\"150\" width=\"98\" height=\"72\" rx=\"5\" fill=\"#e8ad66\" /><rect x=\"173\" y=\"171\" width=\"52\" height=\"28\" rx=\"0\" fill=\"#f5f7f3\" /><text x=\"199\" y=\"191\" fill=\"#2b5662\" stroke=\"none\" font-family=\"Microsoft YaHei,Arial,sans-serif\" font-size=\"11\" text-anchor=\"middle\">SAMPLE</text></g><g><path d=\"M147 161L157 170\" fill=\"none\" stroke=\"#e8ad66\" stroke-width=\"8\" /><path d=\"M244 168L257 159\" fill=\"none\" stroke=\"#e8ad66\" stroke-width=\"8\" /></g><g><path d=\"M57 215L341 215\" fill=\"none\" stroke=\"#a5bbbd\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "medicine_med_vaccine",
           "label": "疫苗",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-          "modifications": "Original vector artwork."
+          "label_en": "Vaccine",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+          "source_kind": "online-open-license",
+          "source_file": "people_actions.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "medicine_med_vaccine",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"35\" cy=\"48\" r=\"20\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M20 48 L12 38 M24 31 L18 21 M39 28 L42 16 M48 37 L59 29\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><polygon points=\"55,58 72,51 77,68 60,75\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><circle cx=\"66\" cy=\"63\" r=\"5\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"79\" y1=\"64\" x2=\"91\" y2=\"64\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"91\" y1=\"64\" x2=\"86.49515566048791\" y2=\"66.1694186955878\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"91\" y1=\"64\" x2=\"86.49515566048791\" y2=\"61.830581304412206\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><text x=\"50\" y=\"94\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">抗原</text></svg>",
+        "svg": "<svg width=\"800\" height=\"640\" viewBox=\"0 0 400 320\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><path d=\"M60 159C65 83 167 70 223 104C265 130 333 92 346 154C360 220 262 241 208 216C143 190 48 239 60 159Z\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M73 159C80 101 155 89 208 113L199 144Q186 164 200 167Q218 170 226 126L253 126L246 174Q244 188 255 187Q271 182 272 127Q323 112 332 158C343 207 276 224 223 204L235 184Q238 172 227 172Q212 171 208 198L177 193L178 160Q179 146 170 148Q159 149 160 193L130 195L136 159Q137 147 127 148Q116 148 114 197Q65 201 73 159Z\" fill=\"#f3d5a8\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M86 145Q104 128 120 139Q136 153 111 158Q86 161 86 145Z\" fill=\"none\" stroke=\"#a99cc7\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><ellipse cx=\"151\" cy=\"123\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /><ellipse cx=\"287\" cy=\"160\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /><ellipse cx=\"303\" cy=\"177\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /><ellipse cx=\"187\" cy=\"187\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /><ellipse cx=\"300\" cy=\"140\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "medicine_med_antigen",
           "label": "抗原",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-          "modifications": "Original vector artwork."
+          "label_en": "Antigen",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+          "source_kind": "online-open-license",
+          "source_file": "cell_organelle.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "medicine_med_antigen",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"29\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"50\" r=\"17\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"50\" r=\"7\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"67.0\" y1=\"50.0\" x2=\"79.0\" y2=\"50.0\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"64.72243186433546\" y1=\"58.5\" x2=\"75.11473670974873\" y2=\"64.5\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"58.5\" y1=\"64.72243186433546\" x2=\"64.5\" y2=\"75.11473670974871\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"50.0\" y1=\"67.0\" x2=\"50.0\" y2=\"79.0\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"41.5\" y1=\"64.72243186433546\" x2=\"35.50000000000001\" y2=\"75.11473670974873\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"35.27756813566454\" y1=\"58.5\" x2=\"24.885263290251277\" y2=\"64.5\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"33.0\" y1=\"50.0\" x2=\"21.0\" y2=\"50.0\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"35.27756813566454\" y1=\"41.50000000000001\" x2=\"24.885263290251274\" y2=\"35.50000000000001\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"41.49999999999999\" y1=\"35.277568135664545\" x2=\"35.499999999999986\" y2=\"24.885263290251284\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"50.0\" y1=\"33.0\" x2=\"49.99999999999999\" y2=\"21.0\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"58.5\" y1=\"35.277568135664545\" x2=\"64.5\" y2=\"24.88526329025128\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><line x1=\"64.72243186433545\" y1=\"41.49999999999999\" x2=\"75.11473670974871\" y2=\"35.499999999999986\" stroke=\"#395B70\" stroke-width=\"3\" stroke-linecap=\"round\" /><circle cx=\"81.0\" cy=\"50.0\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"76.84678751731761\" cy=\"65.5\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"65.5\" cy=\"76.8467875173176\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50.0\" cy=\"81.0\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"34.50000000000001\" cy=\"76.84678751731761\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"23.1532124826824\" cy=\"65.5\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"19.0\" cy=\"50.00000000000001\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"23.153212482682395\" cy=\"34.50000000000001\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"34.499999999999986\" cy=\"23.153212482682406\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"49.99999999999999\" cy=\"19.0\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"65.5\" cy=\"23.153212482682402\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"76.8467875173176\" cy=\"34.499999999999986\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"94\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">免疫</text></svg>",
+        "svg": "<svg width=\"800\" height=\"640\" viewBox=\"0 0 400 320\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><path d=\"M60 159C65 83 167 70 223 104C265 130 333 92 346 154C360 220 262 241 208 216C143 190 48 239 60 159Z\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M73 159C80 101 155 89 208 113L199 144Q186 164 200 167Q218 170 226 126L253 126L246 174Q244 188 255 187Q271 182 272 127Q323 112 332 158C343 207 276 224 223 204L235 184Q238 172 227 172Q212 171 208 198L177 193L178 160Q179 146 170 148Q159 149 160 193L130 195L136 159Q137 147 127 148Q116 148 114 197Q65 201 73 159Z\" fill=\"#f3d5a8\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M86 145Q104 128 120 139Q136 153 111 158Q86 161 86 145Z\" fill=\"none\" stroke=\"#a99cc7\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><ellipse cx=\"151\" cy=\"123\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /><ellipse cx=\"287\" cy=\"160\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /><ellipse cx=\"303\" cy=\"177\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /><ellipse cx=\"187\" cy=\"187\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /><ellipse cx=\"300\" cy=\"140\" rx=\"2.5\" ry=\"2.5\" fill=\"#2b5662\" stroke=\"none\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "medicine_med_immune",
           "label": "免疫细胞",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-          "modifications": "Original vector artwork."
+          "label_en": "Immune",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+          "source_kind": "online-open-license",
+          "source_file": "cell_organelle.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "medicine_med_immune",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20 12 L37 35 L50 20 L63 35 L80 12\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"43\" stroke=\"#395B70\" stroke-width=\"5\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"43\" x2=\"34\" y2=\"81\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><line x1=\"50\" y1=\"43\" x2=\"66\" y2=\"81\" stroke=\"#395B70\" stroke-width=\"4\" stroke-linecap=\"round\" /><circle cx=\"34\" cy=\"84\" r=\"5\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"66\" cy=\"84\" r=\"5\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"20\" r=\"4\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"84\" y=\"32\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\">Y</text></svg>",
+        "svg": "<svg width=\"800\" height=\"640\" viewBox=\"0 0 400 320\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><path d=\"M47 88Q76 77 105 88T163 88T221 88T279 88T353 88L353 116Q322 108 294 119T235 119T177 119T118 119T47 116Z\" fill=\"#d4a47e\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M353 116Q322 108 294 119T235 119T177 119T118 119T47 116L47 235L353 235Z\" fill=\"#efc3a8\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><rect x=\"47\" y=\"235\" width=\"306\" height=\"49\" rx=\"0\" fill=\"#eed8a3\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"62\" cy=\"260\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"90\" cy=\"267\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"118\" cy=\"260\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"146\" cy=\"267\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"174\" cy=\"260\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"202\" cy=\"267\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"230\" cy=\"260\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"258\" cy=\"267\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"286\" cy=\"260\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"314\" cy=\"267\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /><ellipse cx=\"342\" cy=\"260\" rx=\"14\" ry=\"15\" fill=\"#f4dfaa\" stroke=\"#c2aa77\" stroke-width=\"1.2\" /></g><g><path d=\"M131 106L168 213Q172 237 188 231Q204 225 193 206L147 98Z\" fill=\"#ad8980\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M181 220Q154 139 131 47\" fill=\"none\" stroke=\"#746458\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M153 153Q173 131 183 151Q197 149 195 166Q183 182 160 170Z\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M287 93L287 196C317 188 320 220 293 215C264 210 274 235 294 229C327 224 316 246 291 241\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M287 93L287 196C317 188 320 220 293 215C264 210 274 235 294 229C327 224 316 246 291 241\" fill=\"none\" stroke=\"#a99cc7\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M63 224L138 224M210 224L249 224L249 176M249 208L265 194\" fill=\"none\" stroke=\"#d98582\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M63 234L133 234M211 234L257 234L270 208\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g></g></svg>",
         "meta": {
           "asset_id": "medicine_med_antibody",
           "label": "抗体",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-          "modifications": "Original vector artwork."
+          "label_en": "Antibody",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+          "source_kind": "online-open-license",
+          "source_file": "anatomy_skin_tissue.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "medicine_med_antibody",
@@ -184,16 +196,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M50 14 Q18 26 20 52 Q22 80 50 87 Q78 80 80 52 Q82 26 50 14 Z\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M26 24 L13 12 M74 24 L87 12 M23 74 L11 86 M77 74 L89 86\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"31\" cy=\"37\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"48\" cy=\"29\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"66\" cy=\"38\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"35\" cy=\"54\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"58\" cy=\"55\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"48\" cy=\"73\" r=\"5\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"50\" y=\"96\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"7\" font-weight=\"700\" text-anchor=\"middle\">淋巴结</text></svg>",
+        "svg": "<svg width=\"800\" height=\"640\" viewBox=\"0 0 400 320\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><path d=\"M200 45L200 275\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"40\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M200 45L200 275\" fill=\"none\" stroke=\"#c3dce9\" stroke-width=\"36\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 59Q200 65 214 59\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 74Q200 80 214 74\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 89Q200 95 214 89\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 104Q200 110 214 104\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 119Q200 125 214 119\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 134Q200 140 214 134\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 149Q200 155 214 149\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 164Q200 170 214 164\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 179Q200 185 214 179\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 194Q200 200 214 194\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 209Q200 215 214 209\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 224Q200 230 214 224\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 239Q200 245 214 239\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M186 254Q200 260 214 254\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M167 92C137 80 119 112 125 164C129 199 152 218 175 193L181 142Z\" fill=\"#d98582\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M142 110Q127 149 151 187\" fill=\"none\" stroke=\"#eeb4a8\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M233 92C263 80 281 112 275 164C271 199 248 218 225 193L219 142Z\" fill=\"#d98582\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M257 110Q273 149 249 188\" fill=\"none\" stroke=\"#eeb4a8\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M170 150Q200 164 230 150L230 174Q200 185 170 174Z\" fill=\"#d98582\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g><g><path d=\"M172 40L228 40L225 76L200 91L175 76Z\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></g></g></svg>",
         "meta": {
           "asset_id": "medicine_med_lymph",
           "label": "淋巴结",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-          "modifications": "Original vector artwork."
+          "label_en": "Lymph",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+          "source_kind": "online-open-license",
+          "source_file": "anatomy_endocrine.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "medicine_med_lymph",

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "id": "earth-environment",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "title": "地球与环境",
   "domain": "earth-environment",
   "min_app_version": "3.1.0",
-  "license": "CC0-1.0",
+  "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
       "id": "earth_environment_mountain",
@@ -24,13 +24,15 @@
         "山地",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "1f429aa3755fadab4a5db3be87444c8024ffcbe9b6be72c8cbde5b5710977f25"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "atm_cloud.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+      "sha256": "9d3cdda2c57ed65330f786d54e491b1aa656c78b290fb6d9c591d4a424ed7e42"
     },
     {
       "id": "earth_environment_river",
@@ -49,13 +51,15 @@
         "河流",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "d24e62c628ea6290a3791e20f729245abfa12ecc1ce6c9e4a22457c5b398330d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "hazard_fire.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+      "sha256": "a2d33e494714d913adcb98430dfa9c5f47113b579f03d6f8f06ed6219b2374f4"
     },
     {
       "id": "earth_environment_aquifer",
@@ -74,13 +78,15 @@
         "含水层",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "a90ac3618c345df2f435cdf87e9880e1679dcc55278c8386d17cbbe89e961d2a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_reef.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+      "sha256": "b353283bc88fc6ebfe51cccd31d3c6e1ba3b9cbc272ef41217af73424f965432"
     },
     {
       "id": "earth_environment_soil",
@@ -99,13 +105,15 @@
         "土壤剖面",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "d8b3befcec18c7a8b9d3e7117dcfc1bcbb0afa3f6d363c68eb50049cc2d3ad8c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_mineral.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_mineral.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_mineral.svg",
+      "sha256": "571b7a6cf185d34fa1bb695f27fcaee211c3d5954c9f134402b5768a149c23cb"
     },
     {
       "id": "earth_environment_cloud",
@@ -124,13 +132,15 @@
         "云",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "3e922d1c60c9efafe3c552fd734cc7f895971ef1c5b9f46f36aff0b243a85c0b"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cloud.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "cloud.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cloud.svg",
+      "sha256": "79b7da3ddabe3d10205fb8e2fc822234892d4118baaebd7cd5938aa0239bff62"
     },
     {
       "id": "earth_environment_rain",
@@ -149,13 +159,15 @@
         "降水",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "41a84020fd2d552dc7b3240a51f108fc24504b2321e668f6af8e38938ab88c0b"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-rainy.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "weather-rainy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-rainy.svg",
+      "sha256": "c30741be3c4e71287d303ae950595757483b62e1d31e960b9350839dfdc8518a"
     },
     {
       "id": "earth_environment_sun",
@@ -174,13 +186,15 @@
         "太阳",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "8e6b2f5e11944618d4566938ece15a9372b662e0f64f95f5d83fb08f82ecdc73"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sun-angle.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sun-angle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sun-angle.svg",
+      "sha256": "d2a03c9260aed3dc97a43a8aafa18dd706858edd2b2773fdeb5bd384bdc4a6b5"
     },
     {
       "id": "earth_environment_volcano",
@@ -199,13 +213,15 @@
         "火山",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "7938203db5ba4be0ae1bb7f767a12042c318776c0304594b9a3329e614e5e533"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "volcano.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1"
     },
     {
       "id": "earth_environment_tree",
@@ -224,13 +240,15 @@
         "树木",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "48c7eb3dbc7c3d6eb9ede9642d1dcf479e1b72ceaf3d1a0037dba166928576d2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "tree.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b"
     },
     {
       "id": "earth_environment_leaf",
@@ -249,13 +267,15 @@
         "叶片",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "71b3d5704604bb2491e04fb5bc144413979738ae8c17ba458ce48c0d720d5ad2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/leaf.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "leaf.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/leaf.svg",
+      "sha256": "5c9ca60ab8fe75126f4108b04635085b1486b7b6f73569a6449be1d465fdc698"
     },
     {
       "id": "earth_environment_wetland",
@@ -274,13 +294,15 @@
         "人工湿地",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "66c6edce2f5ce9341ba89fdd9b430569f38b95724b3610f1fad1dc70fe4fb8f7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_volcano.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc"
     },
     {
       "id": "earth_environment_ocean",
@@ -299,13 +321,15 @@
         "海洋",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "7511ab2490a3ab6d311036833b500128f20078c451fec881f9649733ed58616e"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "waves.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
     },
     {
       "id": "earth_environment_sediment",
@@ -324,13 +348,15 @@
         "沉积层",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "0392c5cf8f1858c59cd499a00b21af42756889a1927ffd5da2825bb6102d8161"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_profile.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_soil_profile.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_profile.svg",
+      "sha256": "57e96e45a926df7cb988bebfaf21722980d4cc91bb8e787c19cefa9653919837"
     },
     {
       "id": "earth_environment_glacier",
@@ -349,13 +375,15 @@
         "冰川",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "76727353edad68b3e3495742ec80adf4c6fe8eda953282e47f7b6049a80a0349"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "atm_cloud.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_cloud.svg",
+      "sha256": "9d3cdda2c57ed65330f786d54e491b1aa656c78b290fb6d9c591d4a424ed7e42"
     },
     {
       "id": "earth_environment_watershed",
@@ -374,13 +402,15 @@
         "流域",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "adb18054777996089a20c718f28ab7605b06b6f3da878f5d1dded31202f0346a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_glacier.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
     },
     {
       "id": "earth_environment_pollutant",
@@ -399,13 +429,15 @@
         "污染物",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "4dbc97dd710050e0a78198e1303cbd51b059b1cef3c86f9e8fc82bbe206f0999"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_strata.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_strata.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_strata.svg",
+      "sha256": "2dac77f70241b53229a88ece95575f6dce19a6dde9c08afb8fdbbba885db36d0"
     },
     {
       "id": "earth_environment_station",
@@ -424,13 +456,15 @@
         "环境监测站",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "87a506d6a68304fac2ff94ba5bb1f3e8e8be5d3511320d621db6a343935d6ef5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_glacier.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
     },
     {
       "id": "earth_environment_satellite",
@@ -449,19 +483,21 @@
         "遥感卫星",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "44605ae2345418ceee079b9f771c9c8ef82c1867253048cb88c80f248842cfc6"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/satellite.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "satellite.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/satellite.svg",
+      "sha256": "5be68123d12cbb2c8d8f9078d5b2066dedf8b28f45d09438f1ce7bd9ad14a93d"
     },
     {
       "id": "earth_environment_earth_layers",
       "asset_id": "earth_environment_earth_layers",
       "label": "地球圈层",
-      "label_en": "Earth layers",
+      "label_en": "Layers",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -474,19 +510,21 @@
         "地球圈层",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "099d1437438c5666cc915e861264f4b4e9161c7a55ef512e8e5110752830e706"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "layers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
     },
     {
       "id": "earth_environment_earth_plate",
       "asset_id": "earth_environment_earth_plate",
       "label": "板块运动",
-      "label_en": "Earth plate",
+      "label_en": "Plate",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -499,19 +537,21 @@
         "板块运动",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "a80f0a7305202d601de12876b7e5ec67c4b6a94cdd87b9d059c8bae363606ae2"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_pollution.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "atm_pollution.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_pollution.svg",
+      "sha256": "43a3c48f0ebe5ba835dbb1b650d15216ffc36326b883da40492d748a23a92524"
     },
     {
       "id": "earth_environment_earth_subduction",
       "asset_id": "earth_environment_earth_subduction",
       "label": "俯冲带",
-      "label_en": "Earth subduction",
+      "label_en": "Subduction",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -524,19 +564,21 @@
         "俯冲带",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "3c4f0d9e4d6f83d5c149e95b6b7f3d49dee9746dec77c483fabd5a5a83c73770"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_coast.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_coast.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_coast.svg",
+      "sha256": "79fb17a67f0c63d614b5de5080802fda013c5a6183bdc7317caa008fff31dc80"
     },
     {
       "id": "earth_environment_earth_ridge",
       "asset_id": "earth_environment_earth_ridge",
       "label": "洋中脊",
-      "label_en": "Earth ridge",
+      "label_en": "Ridge",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -549,19 +591,21 @@
         "洋中脊",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "d0007635532aeccdd28cd21c32584b99431e09c78cf5a339fe66c6c2efb9e471"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "water_membrane.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f"
     },
     {
       "id": "earth_environment_earth_fault",
       "asset_id": "earth_environment_earth_fault",
       "label": "断层",
-      "label_en": "Earth fault",
+      "label_en": "Fault",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -574,19 +618,21 @@
         "断层",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "458ff507dae56d1e8aa2d4fd489f8257853e28f9da0ecf8c3eb766690703e765"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-tree.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "file-tree.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-tree.svg",
+      "sha256": "8efa7e48fa316fa851fa1bc46edcdcc116100043f22864453d7a0e5e9ff5cec9"
     },
     {
       "id": "earth_environment_earth_fold",
       "asset_id": "earth_environment_earth_fold",
       "label": "褶皱",
-      "label_en": "Earth fold",
+      "label_en": "Fold",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -599,19 +645,21 @@
         "褶皱",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "ce06f24cb3ebe4309977b8e12a26b3c65edc715414aca1bf5a0e2bbab9932765"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_aggregate.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_soil_aggregate.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_aggregate.svg",
+      "sha256": "29fecb068d2c77b07cfa1a72f662764ac0f3112a445e4df43c30c23827f64676"
     },
     {
       "id": "earth_environment_earth_erosion",
       "asset_id": "earth_environment_earth_erosion",
       "label": "侵蚀",
-      "label_en": "Earth erosion",
+      "label_en": "Erosion",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -624,19 +672,21 @@
         "侵蚀",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "eab58ac612892988604313c46b42fb3b820f81849f78e1135be66cfe1e54e6fd"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "map_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522"
     },
     {
       "id": "earth_environment_earth_weathering",
       "asset_id": "earth_environment_earth_weathering",
       "label": "风化",
-      "label_en": "Earth weathering",
+      "label_en": "Weathering",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -649,19 +699,21 @@
         "风化",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "537067be55783fba9514f25a489c9ddc1090f65fdd84733f68eab9134e7ff61f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_strata.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_strata.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_strata.svg",
+      "sha256": "2dac77f70241b53229a88ece95575f6dce19a6dde9c08afb8fdbbba885db36d0"
     },
     {
       "id": "earth_environment_earth_landslide",
       "asset_id": "earth_environment_earth_landslide",
       "label": "滑坡",
-      "label_en": "Earth landslide",
+      "label_en": "Landslide",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -674,19 +726,21 @@
         "滑坡",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "7c4547d4c8978052a1a7ea9851a88ea30e08f0ee71faebf0e2399f35a0c18a14"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/landslide.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "landslide.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/landslide.svg",
+      "sha256": "cbd984d8d85721c6a3df921988fdf456607df44778fa4ff449399805caa1b7ca"
     },
     {
       "id": "earth_environment_earth_debris_flow",
       "asset_id": "earth_environment_earth_debris_flow",
       "label": "泥石流",
-      "label_en": "Earth debris flow",
+      "label_en": "Debris flow",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -699,19 +753,21 @@
         "泥石流",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "2d7b2365ab5bce84ab65901eff4d4c62976f8fc780a81e03cc92de363888895e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_lake.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_lake.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_lake.svg",
+      "sha256": "6049df2084b795ea145ac32b2fe237449ee2e934f5a5889bae6321303c27e2fd"
     },
     {
       "id": "earth_environment_earth_flood",
       "asset_id": "earth_environment_earth_flood",
       "label": "洪水",
-      "label_en": "Earth flood",
+      "label_en": "Flood",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -724,19 +780,21 @@
         "洪水",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "efecc27faf1a47407d232be7c1cfcaa528aca1fbd0bc6276c2e37ea84c93555e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_stormwater.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "water_stormwater.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_stormwater.svg",
+      "sha256": "f9208cf59502d8c85f09d74534158d456d1771cef3c4c882d80644588268acb9"
     },
     {
       "id": "earth_environment_earth_drought",
       "asset_id": "earth_environment_earth_drought",
       "label": "干旱",
-      "label_en": "Earth drought",
+      "label_en": "Drought",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -749,19 +807,21 @@
         "干旱",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "5d9e650e075fe2e445513013090d04a4bae28c113388440a3204810e8a5c4415"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_storm.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "hazard_storm.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_storm.svg",
+      "sha256": "885bab56a31f1a9b9592c5ecfb0ac47bbad422e4ddc0caeba96dc49a86817698"
     },
     {
       "id": "earth_environment_earth_wildfire",
       "asset_id": "earth_environment_earth_wildfire",
       "label": "野火",
-      "label_en": "Earth wildfire",
+      "label_en": "Wildfire",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -774,19 +834,21 @@
         "野火",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "1f4db9b8a2f330b5bb30f236779482200fa41dc61f9f4dd5bdcc7eb8a00231af"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_stormwater.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "water_stormwater.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_stormwater.svg",
+      "sha256": "f9208cf59502d8c85f09d74534158d456d1771cef3c4c882d80644588268acb9"
     },
     {
       "id": "earth_environment_earth_desertification",
       "asset_id": "earth_environment_earth_desertification",
       "label": "荒漠化",
-      "label_en": "Earth desertification",
+      "label_en": "Desertification",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -799,19 +861,21 @@
         "荒漠化",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "c69d34e4719383f14b88d53718512adecac0b7c0cb5415faf75e0266183ef015"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_volcano.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc"
     },
     {
       "id": "earth_environment_earth_coast",
       "asset_id": "earth_environment_earth_coast",
       "label": "海岸带",
-      "label_en": "Earth coast",
+      "label_en": "Coast",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -824,19 +888,21 @@
         "海岸带",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "62c9a1794ae3550f9eb5b618c7372b7a47f9472dabdc31db0e6438e97e325176"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_glacier.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
     },
     {
       "id": "earth_environment_earth_delta",
       "asset_id": "earth_environment_earth_delta",
       "label": "河口三角洲",
-      "label_en": "Earth delta",
+      "label_en": "Delta",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -849,19 +915,21 @@
         "河口三角洲",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "56496869f5a4a3603a39c8ed8d77dce2e5ddcb8b3c3a204ecf36dd541c5dd439"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delta.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "delta.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delta.svg",
+      "sha256": "5f9471de8919ad646105b27fc2654c62730d2d7ffae3fd946a4ac2077dc31e89"
     },
     {
       "id": "earth_environment_earth_coral",
       "asset_id": "earth_environment_earth_coral",
       "label": "珊瑚礁",
-      "label_en": "Earth coral",
+      "label_en": "Coral",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -874,19 +942,21 @@
         "珊瑚礁",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "e3a6800a96112b54a23316ddd2995560b54715ab74b5c31ae4d417d41fb29b25"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_desert.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_desert.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_desert.svg",
+      "sha256": "4d423ceb8f1cfdaa1b7b9704f8315d1582ec7b0bf10a76542bdb0b4b07a7a23e"
     },
     {
       "id": "earth_environment_earth_mangrove",
       "asset_id": "earth_environment_earth_mangrove",
       "label": "红树林",
-      "label_en": "Earth mangrove",
+      "label_en": "Mangrove",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -899,19 +969,21 @@
         "红树林",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "f4c343fb4f47c9e6deb91ebf61a5c1771a37659df198b7b0797dec38376a814a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_radiation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "atm_radiation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/atm_radiation.svg",
+      "sha256": "ba3be599ad92ae98cf11740ab478edfeb5a60a9c4cb8e7179639c07c354aab39"
     },
     {
       "id": "earth_environment_earth_grassland",
       "asset_id": "earth_environment_earth_grassland",
       "label": "草地",
-      "label_en": "Earth grassland",
+      "label_en": "Grassland",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -924,19 +996,21 @@
         "草地",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "b20492f128bda637a5f59f10bea1b1a7cc8dc9cf6da0fc4017d61d4c48c91e9d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "hazard_slope.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5"
     },
     {
       "id": "earth_environment_earth_forest",
       "asset_id": "earth_environment_earth_forest",
       "label": "森林",
-      "label_en": "Earth forest",
+      "label_en": "Forest",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -949,19 +1023,21 @@
         "森林",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "51e31f5447556dd9348dd9031bf67b8ad6dffa7fe0cd98fcae0d0b9000be6110"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/forest.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "forest.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/forest.svg",
+      "sha256": "581ed871c2b3d06f61c94239bc69edb40aa4b24de6892109a67197cb8d3e29c7"
     },
     {
       "id": "earth_environment_earth_peatland",
       "asset_id": "earth_environment_earth_peatland",
       "label": "泥炭地",
-      "label_en": "Earth peatland",
+      "label_en": "Peatland",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -974,19 +1050,21 @@
         "泥炭地",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "dda798a98ea065aa6731722e57faffb6c246505fb4204e6f15ff669663a3b1fa"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_river.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_river.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_river.svg",
+      "sha256": "0eed15c43138ada1b724bfc2e2166e4c2e103d7ca51dc6baa1349f9eca2d2063"
     },
     {
       "id": "earth_environment_earth_permafrost",
       "asset_id": "earth_environment_earth_permafrost",
       "label": "多年冻土",
-      "label_en": "Earth permafrost",
+      "label_en": "Permafrost",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -999,19 +1077,21 @@
         "多年冻土",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "00c769d04a85bd4ec41baee48163d0f81e24e50dd7a002d169e6f0eda1ba52b1"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_grassland.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_grassland.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_grassland.svg",
+      "sha256": "05ff1e69539a7f6951f3f41d76562e7c3879e44f19fa536c4b5a7a28d3780838"
     },
     {
       "id": "earth_environment_earth_atmosphere",
       "asset_id": "earth_environment_earth_atmosphere",
       "label": "大气层",
-      "label_en": "Earth atmosphere",
+      "label_en": "Atmosphere",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1024,19 +1104,21 @@
         "大气层",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "ebce460f62e2acdcd4daeaaeffa6a4f283912fe924599c2f23cd44a5cff69aec"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "map_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522"
     },
     {
       "id": "earth_environment_earth_greenhouse",
       "asset_id": "earth_environment_earth_greenhouse",
       "label": "温室效应",
-      "label_en": "Earth greenhouse",
+      "label_en": "Greenhouse",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1049,19 +1131,21 @@
         "温室效应",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "94cb42c1efd5fcc60a80d38b91e7ccd22a5cc3286f82f8e94c4745e160a7bcb6"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/greenhouse.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "greenhouse.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/greenhouse.svg",
+      "sha256": "129a95e711dd1686615ac069e78abf837cff23b3696d24418a623734536bccca"
     },
     {
       "id": "earth_environment_earth_carbon_cycle",
       "asset_id": "earth_environment_earth_carbon_cycle",
       "label": "碳循环",
-      "label_en": "Earth carbon cycle",
+      "label_en": "Carbon cycle",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1074,19 +1158,21 @@
         "碳循环",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "48c3b5111a38dd65c1a42b0c708d0a626cd5b88ee57c1d9f10d28b8f064c0640"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_reef.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_reef.svg",
+      "sha256": "b353283bc88fc6ebfe51cccd31d3c6e1ba3b9cbc272ef41217af73424f965432"
     },
     {
       "id": "earth_environment_earth_nitrogen_cycle",
       "asset_id": "earth_environment_earth_nitrogen_cycle",
       "label": "氮循环",
-      "label_en": "Earth nitrogen cycle",
+      "label_en": "Nitrogen cycle",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1099,19 +1185,21 @@
         "氮循环",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "acf95ffa706762e2a74bf1d60ef8ec0974f42c96a9574c4711d01dbce57d2d34"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "hazard_fire.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_fire.svg",
+      "sha256": "a2d33e494714d913adcb98430dfa9c5f47113b579f03d6f8f06ed6219b2374f4"
     },
     {
       "id": "earth_environment_earth_water_cycle",
       "asset_id": "earth_environment_earth_water_cycle",
       "label": "水循环",
-      "label_en": "Earth water cycle",
+      "label_en": "Water cycle",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1124,19 +1212,21 @@
         "水循环",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "8b8d6d0e8ec8b3608fc32b5d5b49fee62ee54a050f9a84b842773c8833bd313e"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "water.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
     },
     {
       "id": "earth_environment_earth_groundwater",
       "asset_id": "earth_environment_earth_groundwater",
       "label": "地下水",
-      "label_en": "Earth groundwater",
+      "label_en": "Groundwater",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1149,19 +1239,21 @@
         "地下水",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "803f67b72431316e6663dcd9aa657aa8a56123c416c6e4d9a82901516252dd77"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_urban_habitat.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74"
     },
     {
       "id": "earth_environment_earth_infiltration",
       "asset_id": "earth_environment_earth_infiltration",
       "label": "下渗",
-      "label_en": "Earth infiltration",
+      "label_en": "Infiltration",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1174,19 +1266,21 @@
         "下渗",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "c377fc273db238c8848aa714bdb41e9f7f34380f83a90b726d525c425b28989e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_landforms.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_landforms.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_landforms.svg",
+      "sha256": "9c3d345d101aec4ecf6e0d0e2376d937a33fb80431ebe2b549fb6c9337e583f3"
     },
     {
       "id": "earth_environment_earth_evapotranspiration",
       "asset_id": "earth_environment_earth_evapotranspiration",
       "label": "蒸散",
-      "label_en": "Earth evapotranspiration",
+      "label_en": "Evapotranspiration",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1199,19 +1293,21 @@
         "蒸散",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "ea3c80fd6058814e23de1983aac9b43f7903eed539f6d8260fdfdd072efdcfac"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_storm.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "hazard_storm.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_storm.svg",
+      "sha256": "885bab56a31f1a9b9592c5ecfb0ac47bbad422e4ddc0caeba96dc49a86817698"
     },
     {
       "id": "earth_environment_earth_runoff",
       "asset_id": "earth_environment_earth_runoff",
       "label": "地表径流",
-      "label_en": "Earth runoff",
+      "label_en": "Runoff",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1224,19 +1320,21 @@
         "地表径流",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "f53ab63b3b4b3fd81e516065f91b70caa45593303a3d7a09428839848eee3c48"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_profile.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_soil_profile.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_soil_profile.svg",
+      "sha256": "57e96e45a926df7cb988bebfaf21722980d4cc91bb8e787c19cefa9653919837"
     },
     {
       "id": "earth_environment_earth_river_network",
       "asset_id": "earth_environment_earth_river_network",
       "label": "河网",
-      "label_en": "Earth river network",
+      "label_en": "River network",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1249,19 +1347,21 @@
         "河网",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "01cbde8dec4dc6d762ba9f9b601c29eb061cc272c30a4e8ebc4105c117d45d1c"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/network.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "network.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/network.svg",
+      "sha256": "b27a5fb6cd9a8efd84205e78bb75d2c0616b40fd74613c03e422f3e72e0c36e9"
     },
     {
       "id": "earth_environment_earth_lake",
       "asset_id": "earth_environment_earth_lake",
       "label": "湖泊",
-      "label_en": "Earth lake",
+      "label_en": "Lake",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1274,19 +1374,21 @@
         "湖泊",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "43ab3e6f93bfac3d798692a1d66dd1d9491719c405bc33b47a9d2e241c424c09"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_wetland.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_wetland.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_wetland.svg",
+      "sha256": "e545d073df1ae26377cecc400e727c7b757a7cc48e422ddf7e8b8fb30d0ce36b"
     },
     {
       "id": "earth_environment_earth_reservoir",
       "asset_id": "earth_environment_earth_reservoir",
       "label": "水库",
-      "label_en": "Earth reservoir",
+      "label_en": "Reservoir",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1299,19 +1401,21 @@
         "水库",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "1cbfc86c5269f1f1c05647b842d3f09a6ba6ae9a0b330d37c8d30036952e547f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "hazard_slope.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5"
     },
     {
       "id": "earth_environment_earth_dam",
       "asset_id": "earth_environment_earth_dam",
       "label": "大坝",
-      "label_en": "Earth dam",
+      "label_en": "Dam",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1324,19 +1428,21 @@
         "大坝",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "73eadbc74a969ef629795e83311826f7c297b97870a88a1de07ab4fcf0785eba"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "hazard_slope.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/hazard_slope.svg",
+      "sha256": "10431de5d35232cf1078978145b3b4119e1cd1524bf37e12c1747d203c81d4f5"
     },
     {
       "id": "earth_environment_earth_irrigation",
       "asset_id": "earth_environment_earth_irrigation",
       "label": "灌溉",
-      "label_en": "Earth irrigation",
+      "label_en": "Irrigation",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1349,19 +1455,21 @@
         "灌溉",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "12a59ae0ab119a44324c3224ada97a119d2423e38c8014954207187a7cfb86b6"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_urban_habitat.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74"
     },
     {
       "id": "earth_environment_earth_cropland",
       "asset_id": "earth_environment_earth_cropland",
       "label": "农田",
-      "label_en": "Earth cropland",
+      "label_en": "Cropland",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1374,19 +1482,21 @@
         "农田",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "a2f35720805a61f42de5659830d0f0649a99b9096ffff6b30d6ca997b37d3edc"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_monitoring.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+      "sha256": "12e957ce7adff0159fff6c579d82258544b86f68697fb718e817d0a990dbc3cc"
     },
     {
       "id": "earth_environment_earth_urban_heat",
       "asset_id": "earth_environment_earth_urban_heat",
       "label": "城市热岛",
-      "label_en": "Earth urban heat",
+      "label_en": "Urban heat",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1399,19 +1509,21 @@
         "城市热岛",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "a6765eb9c1dd58a7dc85d407f28ca6f5179b07a62109e65ccf921ccaad922cad"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/city.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "city.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/city.svg",
+      "sha256": "e5b1c48b73c4725dbefc2875f05d40c58bec2386f33fa6b1e3660e99dbec6c79"
     },
     {
       "id": "earth_environment_earth_air_quality",
       "asset_id": "earth_environment_earth_air_quality",
       "label": "空气质量",
-      "label_en": "Earth air quality",
+      "label_en": "Air quality",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1424,19 +1536,21 @@
         "空气质量",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "c86004cb491ceedf9d3e91b3f3ac90feb381d194a679a4b363d14b75327954c4"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-conditioner.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "air-conditioner.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-conditioner.svg",
+      "sha256": "f04f32d505a8c047ff69bc50e65d26fc35d3143ddc90ddbd0340112ced86f916"
     },
     {
       "id": "earth_environment_earth_wind_field",
       "asset_id": "earth_environment_earth_wind_field",
       "label": "风场",
-      "label_en": "Earth wind field",
+      "label_en": "Wind field",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1449,19 +1563,21 @@
         "风场",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "84f7b8c1524bba0005a6d3d4e74e30ba7683800f4fc6c715da10b3862e8ec931"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wind-turbine.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "wind-turbine.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/wind-turbine.svg",
+      "sha256": "7aae8b28a84ababea1aec113b2f8018309dc5c5869df0d3deeb93ac611ad7f8f"
     },
     {
       "id": "earth_environment_earth_lightning",
       "asset_id": "earth_environment_earth_lightning",
       "label": "雷电",
-      "label_en": "Earth lightning",
+      "label_en": "Lightning",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1474,19 +1590,21 @@
         "雷电",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "1a57957eee4ff21807295aad5ffe9a01a87397be1808949d5212124acd4fe6e7"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/lightning-bolt.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "lightning-bolt.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/lightning-bolt.svg",
+      "sha256": "aab85cfe2bc37c7fb81a6955a275b6fb299c908867812482d1fe08df43258392"
     },
     {
       "id": "earth_environment_earth_cyclone",
       "asset_id": "earth_environment_earth_cyclone",
       "label": "气旋",
-      "label_en": "Earth cyclone",
+      "label_en": "Cyclone",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1499,19 +1617,21 @@
         "气旋",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "98dbf03c1dd0ad3eb08634839dafc80632ab454ff29abd6115e5b1bdc878e87b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "water_membrane.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f"
     },
     {
       "id": "earth_environment_earth_monsoon",
       "asset_id": "earth_environment_earth_monsoon",
       "label": "季风",
-      "label_en": "Earth monsoon",
+      "label_en": "Monsoon",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1524,19 +1644,21 @@
         "季风",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "97e59b7e6e390d9b67506a118396ab5819f9a5b7a651ade7c07d6b3b81c92ba8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "water_membrane.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_membrane.svg",
+      "sha256": "ce99a72c8ac44cdf48b73ca037e6a3e56b50d89d2d895992e6967cc8af2ba47f"
     },
     {
       "id": "earth_environment_earth_el_nino",
       "asset_id": "earth_environment_earth_el_nino",
       "label": "厄尔尼诺",
-      "label_en": "Earth el nino",
+      "label_en": "El nino",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1549,19 +1671,21 @@
         "厄尔尼诺",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "867338d84e4fc694cdee70d1dd3ac2909357f2225b558a7dcbc5df60e428f59c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_urban_habitat.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_urban_habitat.svg",
+      "sha256": "82872554d573cadedfc9d17f3e834c8dd941ef4221babf257cfd51ca69277f74"
     },
     {
       "id": "earth_environment_earth_sea_ice",
       "asset_id": "earth_environment_earth_sea_ice",
       "label": "海冰",
-      "label_en": "Earth sea ice",
+      "label_en": "Sea ice",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1574,19 +1698,21 @@
         "海冰",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "7feba83eabd9b0367fd89850341c583b3414287d7264c50f4d3a5a1223d14eb7"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ice-cream.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "ice-cream.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ice-cream.svg",
+      "sha256": "a0f875f0315c6f22dde0baedcdd4be86efd91fd0b9444bed5934a33e675273dc"
     },
     {
       "id": "earth_environment_earth_ocean_current",
       "asset_id": "earth_environment_earth_ocean_current",
       "label": "洋流",
-      "label_en": "Earth ocean current",
+      "label_en": "Ocean current",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1599,19 +1725,21 @@
         "洋流",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "16d0541b59c52bdb1888df9b69b1e468c02003831c494294457741852c8b409a"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "waves.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
     },
     {
       "id": "earth_environment_earth_plastic",
       "asset_id": "earth_environment_earth_plastic",
       "label": "塑料污染",
-      "label_en": "Earth plastic",
+      "label_en": "Plastic",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1624,19 +1752,21 @@
         "塑料污染",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "12074c8c53ebc1b192ee07cfbf369a4bec87f3b6200aea01565e0636212811b6"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_supply.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "water_supply.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_supply.svg",
+      "sha256": "c8930b405146618a6ff4d6b50ab7271dacefbc82f3ddb1a07283bb739b8637b3"
     },
     {
       "id": "earth_environment_earth_oil_spill",
       "asset_id": "earth_environment_earth_oil_spill",
       "label": "溢油",
-      "label_en": "Earth oil spill",
+      "label_en": "Oil spill",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1649,19 +1779,21 @@
         "溢油",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "4e7849cf97016b5ac233e8e73613bc5003e9b5f673711b45dd9da89960895102"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/oil.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "oil.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/oil.svg",
+      "sha256": "996556c2dbfd51c2771df1f3185bf45e1ba723bdc039d78566c68262e46e959b"
     },
     {
       "id": "earth_environment_earth_eutrophication",
       "asset_id": "earth_environment_earth_eutrophication",
       "label": "富营养化",
-      "label_en": "Earth eutrophication",
+      "label_en": "Eutrophication",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1674,19 +1806,21 @@
         "富营养化",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "7080ec685ac8adf3612a8a7422d59be15f63770f9cc59ef5b629f37b2e5e5ec2"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_geography.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "map_geography.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_geography.svg",
+      "sha256": "af235d101fed944272d60fd8e04f5262aac86a622026a3a61e0df1a5ee339be7"
     },
     {
       "id": "earth_environment_earth_biodiversity",
       "asset_id": "earth_environment_earth_biodiversity",
       "label": "生物多样性",
-      "label_en": "Earth biodiversity",
+      "label_en": "Biodiversity",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1699,19 +1833,21 @@
         "生物多样性",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "ae1ef701c004835aebb2604afbea5423b090442222ca63a54c9645ca3344fae2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/earth.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "earth.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/earth.svg",
+      "sha256": "0062e447258806dbbc4e0d768399518f9853059c0e39b782b3ea5b912190efe7"
     },
     {
       "id": "earth_environment_earth_remote_sensing",
       "asset_id": "earth_environment_earth_remote_sensing",
       "label": "遥感",
-      "label_en": "Earth remote sensing",
+      "label_en": "Remote sensing",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1724,19 +1860,21 @@
         "遥感",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "009d0e64cb001280af4dd2051e97f362d2db9416110f44a59d5ddcd7aeca9818"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/remote.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "remote.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/remote.svg",
+      "sha256": "5c9b1bdcca995868ab60176050f18292d149c424ea05f97f57ccf9e626b3cd3f"
     },
     {
       "id": "earth_environment_earth_gis",
       "asset_id": "earth_environment_earth_gis",
       "label": "GIS 图层",
-      "label_en": "Earth GIS",
+      "label_en": "GIS",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1749,19 +1887,21 @@
         "GIS 图层",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "4564302d4cc476beefb996043c275d4aab3849bd98722fc3e47d445e7db7895c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_monitoring.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_monitoring.svg",
+      "sha256": "12e957ce7adff0159fff6c579d82258544b86f68697fb718e817d0a990dbc3cc"
     },
     {
       "id": "earth_environment_earth_buoy",
       "asset_id": "earth_environment_earth_buoy",
       "label": "浮标",
-      "label_en": "Earth buoy",
+      "label_en": "Buoy",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1774,19 +1914,21 @@
         "浮标",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "d1d2c9d2697c0eb0128795f0cb15b2df06db937b6d1d6f772450a71ba75ec362"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_river.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_river.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_river.svg",
+      "sha256": "0eed15c43138ada1b724bfc2e2166e4c2e103d7ca51dc6baa1349f9eca2d2063"
     },
     {
       "id": "earth_environment_earth_ice_core",
       "asset_id": "earth_environment_earth_ice_core",
       "label": "冰芯",
-      "label_en": "Earth ice core",
+      "label_en": "Ice core",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1799,19 +1941,21 @@
         "冰芯",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "972bedfd8a16c0f63ff3e64a6659f23b562fbbff0f79a22f899a93a106b7994d"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ice-cream.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "ice-cream.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ice-cream.svg",
+      "sha256": "a0f875f0315c6f22dde0baedcdd4be86efd91fd0b9444bed5934a33e675273dc"
     },
     {
       "id": "earth_environment_earth_sediment_core",
       "asset_id": "earth_environment_earth_sediment_core",
       "label": "沉积柱",
-      "label_en": "Earth sediment core",
+      "label_en": "Sediment core",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1824,19 +1968,21 @@
         "沉积柱",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "b23a6df14ccd45e50a31fa44fd4298e8021e0ecf498d9206b88bb880c610adc2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-multiple.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "circle-multiple.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/circle-multiple.svg",
+      "sha256": "d812c9cb0ef6f75aa1eec14606a99e5d5824fc6177982b81ecefe4a7f45fb825"
     },
     {
       "id": "earth_environment_earth_water_treatment",
       "asset_id": "earth_environment_earth_water_treatment",
       "label": "水处理",
-      "label_en": "Earth water treatment",
+      "label_en": "Water treatment",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1849,19 +1995,21 @@
         "水处理",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "9451492f3fbb0df8867364dcb641678475cef1a6b70257c76fbfb8c966a658f1"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "water.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
     },
     {
       "id": "earth_environment_earth_carbon_capture",
       "asset_id": "earth_environment_earth_carbon_capture",
       "label": "碳捕集",
-      "label_en": "Earth carbon capture",
+      "label_en": "Carbon capture",
       "category": "地质、水循环与生态",
       "type": "symbol",
       "default_dim": [
@@ -1874,13 +2022,825 @@
         "碳捕集",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "2ba34448b9f2e1e6ff60aa27e5348098f039c475691850121d831c903828360d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_volcano.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_volcano.svg",
+      "sha256": "fd304427567c9bef7f702c3cc78dadcf013f92f547ab0079d0a0fe9a6c2973bc"
+    },
+    {
+      "id": "earth_environment_earth_geology_column",
+      "asset_id": "earth_environment_earth_geology_column",
+      "label": "地层柱状图",
+      "label_en": "Geology column",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_geology_column.svg",
+      "keywords": [
+        "earth_geology_column",
+        "地层柱状图",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "layers.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/layers.svg",
+      "sha256": "145db6dad4e024ce2d9624670b5b5db5ad621d642962d3849f21d5f978db1fa7"
+    },
+    {
+      "id": "earth_environment_earth_magma",
+      "asset_id": "earth_environment_earth_magma",
+      "label": "岩浆房",
+      "label_en": "Magma chamber",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_magma.svg",
+      "keywords": [
+        "earth_magma",
+        "岩浆房",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "volcano.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1"
+    },
+    {
+      "id": "earth_environment_earth_volcanic_arc",
+      "asset_id": "earth_environment_earth_volcanic_arc",
+      "label": "火山弧",
+      "label_en": "Volcanic arc",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_volcanic_arc.svg",
+      "keywords": [
+        "earth_volcanic_arc",
+        "火山弧",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "volcano.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/volcano.svg",
+      "sha256": "0e2c4551abfea2dba5b5569a026ed70cd1b5895c358957d2d78be2b9460cccc1"
+    },
+    {
+      "id": "earth_environment_earth_seismic_wave",
+      "asset_id": "earth_environment_earth_seismic_wave",
+      "label": "地震波",
+      "label_en": "Seismic wave",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_seismic_wave.svg",
+      "keywords": [
+        "earth_seismic_wave",
+        "地震波",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sine-wave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sine-wave.svg",
+      "sha256": "11402fcf775649edc5482c2a1926f4fb154fbf30acde46c18448bbde33ed10b7"
+    },
+    {
+      "id": "earth_environment_earth_seismometer",
+      "asset_id": "earth_environment_earth_seismometer",
+      "label": "地震仪",
+      "label_en": "Seismometer",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_seismometer.svg",
+      "keywords": [
+        "earth_seismometer",
+        "地震仪",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/signal.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "signal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/signal.svg",
+      "sha256": "785a3dcf861d637eafa606ae4b88464ad4acfc59114085a712dc0f8bb1e17990"
+    },
+    {
+      "id": "earth_environment_earth_gully",
+      "asset_id": "earth_environment_earth_gully",
+      "label": "沟蚀",
+      "label_en": "Gully erosion",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_gully.svg",
+      "keywords": [
+        "earth_gully",
+        "沟蚀",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/terrain.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "terrain.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/terrain.svg",
+      "sha256": "12f453c32d27b0989a5e852249fc353a17f597a77328215b0e9878377d5764b5"
+    },
+    {
+      "id": "earth_environment_earth_sand_dune",
+      "asset_id": "earth_environment_earth_sand_dune",
+      "label": "沙丘",
+      "label_en": "Sand dune",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_sand_dune.svg",
+      "keywords": [
+        "earth_sand_dune",
+        "沙丘",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/terrain.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "terrain.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/terrain.svg",
+      "sha256": "12f453c32d27b0989a5e852249fc353a17f597a77328215b0e9878377d5764b5"
+    },
+    {
+      "id": "earth_environment_earth_hurricane",
+      "asset_id": "earth_environment_earth_hurricane",
+      "label": "飓风",
+      "label_en": "Hurricane",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_hurricane.svg",
+      "keywords": [
+        "earth_hurricane",
+        "飓风",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-hurricane.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "weather-hurricane.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-hurricane.svg",
+      "sha256": "76ec534ad41f6e6edd308b96a2bf862de73d6ddcd7467ab1e131b3d8de303dee"
+    },
+    {
+      "id": "earth_environment_earth_rain_gauge",
+      "asset_id": "earth_environment_earth_rain_gauge",
+      "label": "雨量计",
+      "label_en": "Rain gauge",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_rain_gauge.svg",
+      "keywords": [
+        "earth_rain_gauge",
+        "雨量计",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-rainy.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "weather-rainy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-rainy.svg",
+      "sha256": "c30741be3c4e71287d303ae950595757483b62e1d31e960b9350839dfdc8518a"
+    },
+    {
+      "id": "earth_environment_earth_weather_radar",
+      "asset_id": "earth_environment_earth_weather_radar",
+      "label": "天气雷达",
+      "label_en": "Weather radar",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_weather_radar.svg",
+      "keywords": [
+        "earth_weather_radar",
+        "天气雷达",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-cloudy.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "weather-cloudy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-cloudy.svg",
+      "sha256": "bcebc42f24b483f905ea4cca17b2e9e7a96158c09a5468fd60c9d1fe3ee33f90"
+    },
+    {
+      "id": "earth_environment_earth_solar_radiation",
+      "asset_id": "earth_environment_earth_solar_radiation",
+      "label": "太阳辐射",
+      "label_en": "Solar radiation",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_solar_radiation.svg",
+      "keywords": [
+        "earth_solar_radiation",
+        "太阳辐射",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solar-panel.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "solar-panel.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solar-panel.svg",
+      "sha256": "849b12caa802259405a52fb569f3c6dac46fab237d8ff2c5178dc46ee0d927c5"
+    },
+    {
+      "id": "earth_environment_earth_ozone",
+      "asset_id": "earth_environment_earth_ozone",
+      "label": "臭氧层",
+      "label_en": "Ozone layer",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_ozone.svg",
+      "keywords": [
+        "earth_ozone",
+        "臭氧层",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield-sun.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "shield-sun.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield-sun.svg",
+      "sha256": "2f526ef5a991c3050851808b77188b9967131275e7657045284d92249e27ec63"
+    },
+    {
+      "id": "earth_environment_earth_aerosol",
+      "asset_id": "earth_environment_earth_aerosol",
+      "label": "气溶胶",
+      "label_en": "Aerosol",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_aerosol.svg",
+      "keywords": [
+        "earth_aerosol",
+        "气溶胶",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "blur.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blur.svg",
+      "sha256": "7d4cfd7a0f4fc9359df0922babb5852767757a95b76a5e27052dd6780d932b01"
+    },
+    {
+      "id": "earth_environment_earth_pm25",
+      "asset_id": "earth_environment_earth_pm25",
+      "label": "PM2.5 颗粒",
+      "label_en": "PM2.5 particles",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_pm25.svg",
+      "keywords": [
+        "earth_pm25",
+        "PM2.5 颗粒",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-filter.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "air-filter.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-filter.svg",
+      "sha256": "cd247932b4681069740e21ed78e7f55dce499f9a24e48641ce294437f5dc31bf"
+    },
+    {
+      "id": "earth_environment_earth_wastewater",
+      "asset_id": "earth_environment_earth_wastewater",
+      "label": "废水处理",
+      "label_en": "Wastewater treatment",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_wastewater.svg",
+      "keywords": [
+        "earth_wastewater",
+        "废水处理",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water-pump.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "water-pump.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water-pump.svg",
+      "sha256": "7f6ab2db230d9398e8f3ecfd4ebb2d5d42e21c1b95b6b0c27e4570a9ee6c3781"
+    },
+    {
+      "id": "earth_environment_earth_bioremediation",
+      "asset_id": "earth_environment_earth_bioremediation",
+      "label": "生物修复",
+      "label_en": "Bioremediation",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_bioremediation.svg",
+      "keywords": [
+        "earth_bioremediation",
+        "生物修复",
+        "地球与环境"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_wastewater.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "water_wastewater.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/water_wastewater.svg",
+      "sha256": "f397085bce941f36cff57cc7576a704449ff868893acb7f4dfc5eb7846df08d5"
+    },
+    {
+      "id": "earth_environment_earth_compost",
+      "asset_id": "earth_environment_earth_compost",
+      "label": "堆肥",
+      "label_en": "Compost",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_compost.svg",
+      "keywords": [
+        "earth_compost",
+        "堆肥",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/compost.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "compost.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/compost.svg",
+      "sha256": "3642fadf9ce439427fed47f719feba534bb1d80d408254a3b76ea6f7548d4a5d"
+    },
+    {
+      "id": "earth_environment_earth_landfill",
+      "asset_id": "earth_environment_earth_landfill",
+      "label": "填埋场",
+      "label_en": "Landfill",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_landfill.svg",
+      "keywords": [
+        "earth_landfill",
+        "填埋场",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delete.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "delete.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/delete.svg",
+      "sha256": "773406386de6d1060b497194723844fdc30f456cee6c0da4bdbe12d2feeed8d6"
+    },
+    {
+      "id": "earth_environment_earth_recycling",
+      "asset_id": "earth_environment_earth_recycling",
+      "label": "资源回收",
+      "label_en": "Recycling",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_recycling.svg",
+      "keywords": [
+        "earth_recycling",
+        "资源回收",
+        "地球与环境"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_glacier.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_glacier.svg",
+      "sha256": "08a238b8a65cd70941006c0cde3137a11ac4f16c3366b24c122a4f0ea5e2eeab"
+    },
+    {
+      "id": "earth_environment_earth_forest_carbon",
+      "asset_id": "earth_environment_earth_forest_carbon",
+      "label": "森林碳汇",
+      "label_en": "Forest carbon sink",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_forest_carbon.svg",
+      "keywords": [
+        "earth_forest_carbon",
+        "森林碳汇",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/forest.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "forest.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/forest.svg",
+      "sha256": "581ed871c2b3d06f61c94239bc69edb40aa4b24de6892109a67197cb8d3e29c7"
+    },
+    {
+      "id": "earth_environment_earth_species_network",
+      "asset_id": "earth_environment_earth_species_network",
+      "label": "物种网络",
+      "label_en": "Species network",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_species_network.svg",
+      "keywords": [
+        "earth_species_network",
+        "物种网络",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "graph.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/graph.svg",
+      "sha256": "12f617c0e146ef04fd034cf497d126de58b287588b3722e32ddc48bb7c4f129e"
+    },
+    {
+      "id": "earth_environment_earth_food_web",
+      "asset_id": "earth_environment_earth_food_web",
+      "label": "食物网",
+      "label_en": "Food web",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_food_web.svg",
+      "keywords": [
+        "earth_food_web",
+        "食物网",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/food-apple.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "food-apple.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/food-apple.svg",
+      "sha256": "36bf040e46e139068ea917878befd59d348ae139538613a3b57b2009628eebd8"
+    },
+    {
+      "id": "earth_environment_earth_phytoplankton",
+      "asset_id": "earth_environment_earth_phytoplankton",
+      "label": "浮游植物",
+      "label_en": "Phytoplankton",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_phytoplankton.svg",
+      "keywords": [
+        "earth_phytoplankton",
+        "浮游植物",
+        "地球与环境"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_wetland.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "env_wetland.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/env_wetland.svg",
+      "sha256": "e545d073df1ae26377cecc400e727c7b757a7cc48e422ddf7e8b8fb30d0ce36b"
+    },
+    {
+      "id": "earth_environment_earth_ocean_acidification",
+      "asset_id": "earth_environment_earth_ocean_acidification",
+      "label": "海洋酸化",
+      "label_en": "Ocean acidification",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_ocean_acidification.svg",
+      "keywords": [
+        "earth_ocean_acidification",
+        "海洋酸化",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "waves.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
+    },
+    {
+      "id": "earth_environment_earth_thermal_front",
+      "asset_id": "earth_environment_earth_thermal_front",
+      "label": "海洋锋面",
+      "label_en": "Ocean thermal front",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_thermal_front.svg",
+      "keywords": [
+        "earth_thermal_front",
+        "海洋锋面",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "thermometer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
+    },
+    {
+      "id": "earth_environment_earth_tide",
+      "asset_id": "earth_environment_earth_tide",
+      "label": "潮汐",
+      "label_en": "Tide",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_tide.svg",
+      "keywords": [
+        "earth_tide",
+        "潮汐",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "waves.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/waves.svg",
+      "sha256": "e5ee3216366ae1e84647ae24d057796b4a8eb3d1faa8c08c6df0789facdab82b"
+    },
+    {
+      "id": "earth_environment_earth_soil_moisture",
+      "asset_id": "earth_environment_earth_soil_moisture",
+      "label": "土壤水分",
+      "label_en": "Soil moisture",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_soil_moisture.svg",
+      "keywords": [
+        "earth_soil_moisture",
+        "土壤水分",
+        "地球与环境"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "map_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/map_sampling.svg",
+      "sha256": "c9d02c3ba1f15a3d1979777edab95373c44382b06349d6e4b39111d01f9f6522"
+    },
+    {
+      "id": "earth_environment_earth_erosion_control",
+      "asset_id": "earth_environment_earth_erosion_control",
+      "label": "水土保持",
+      "label_en": "Erosion control",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_erosion_control.svg",
+      "keywords": [
+        "earth_erosion_control",
+        "水土保持",
+        "地球与环境"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_landforms.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "geo_landforms.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/geo_landforms.svg",
+      "sha256": "9c3d345d101aec4ecf6e0d0e2376d937a33fb80431ebe2b549fb6c9337e583f3"
+    },
+    {
+      "id": "earth_environment_earth_urban_growth",
+      "asset_id": "earth_environment_earth_urban_growth",
+      "label": "城市扩张",
+      "label_en": "Urban growth",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_urban_growth.svg",
+      "keywords": [
+        "earth_urban_growth",
+        "城市扩张",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/city.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "city.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/city.svg",
+      "sha256": "e5b1c48b73c4725dbefc2875f05d40c58bec2386f33fa6b1e3660e99dbec6c79"
+    },
+    {
+      "id": "earth_environment_earth_biodiversity_index",
+      "asset_id": "earth_environment_earth_biodiversity_index",
+      "label": "生物多样性指数",
+      "label_en": "Biodiversity index",
+      "category": "地质、水循环与生态",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/earth_biodiversity_index.svg",
+      "keywords": [
+        "earth_biodiversity_index",
+        "生物多样性指数",
+        "地球与环境"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/earth.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "earth.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/earth.svg",
+      "sha256": "0062e447258806dbbc4e0d768399518f9853059c0e39b782b3ea5b912190efe7"
     },
     {
       "id": "earth_environment_database",
@@ -1898,13 +2858,15 @@
         "database",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "3f4561e69e150b33e96d43d68180a29caec8f82a4cf4fe42b846423bf1d5bfa9"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "database.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/database.svg",
+      "sha256": "624eaedb1f4dbde632c682fd7f6b992e494b4853e983db3acd27bede7b895427"
     },
     {
       "id": "earth_environment_mesh",
@@ -1922,13 +2884,15 @@
         "mesh",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "a58febb8c95a1bdfa0191dcd38c1175fd93abff6bf9afdee55e548292af438f5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_transport.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_transport.svg",
+      "sha256": "d2138b48cd40ea963407ad45dffbaa74688b50ccac54f603a64e5483baad0e99"
     },
     {
       "id": "earth_environment_pipe",
@@ -1946,13 +2910,15 @@
         "pipe",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "1f8f81e69cf82b9b4d18d139d416528d93e4b68ae48e3f098e2486bad9c6389e"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pipe.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pipe.svg",
+      "sha256": "cb51c69ccb3086f3b0c82918897c003df87bb03625ed9c006aa02b1b8e67970b"
     },
     {
       "id": "earth_environment_earth_land_cover",
@@ -1970,13 +2936,15 @@
         "earth_land_cover",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "a2f35720805a61f42de5659830d0f0649a99b9096ffff6b30d6ca997b37d3edc"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/land-fields.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "land-fields.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/land-fields.svg",
+      "sha256": "33762996ed882e55f5f4a9036f81c97ff5833abcd5d58cd56fd514c1014e8fc2"
     },
     {
       "id": "earth_environment_reservoir",
@@ -1994,13 +2962,15 @@
         "reservoir",
         "地球与环境"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/earth-environment",
-      "modifications": "Original vector artwork.",
-      "sha256": "1cbfc86c5269f1f1c05647b842d3f09a6ba6ae9a0b330d37c8d30036952e547f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_thermal_power.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_thermal_power.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_thermal_power.svg",
+      "sha256": "978ab2369eb8d40ee625396787f996f05774310f022fd795da81fc4f291398d1"
     }
   ],
   "templates": [

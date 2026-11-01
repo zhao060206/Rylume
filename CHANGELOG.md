@@ -1,3 +1,9 @@
+# Resource packs 2.2.0 — 2026-11-01
+
+- Expanded all seven discipline packs to 101–110 assets (729 total), with 30 additional entries per discipline covering laboratory methods, physics, materials, engineering, earth and environment, computing and mathematics, and medicine.
+- Replaced pack artwork generation with imported online SVG sources. Each item now records its source URL, author, license, original filename, and `source_kind`; the builder uses ScanSci SVG (CC BY 4.0) and Material Design Icons (Apache-2.0), sanitising only unsafe SVG constructs.
+- Enforced bilingual metadata and online provenance during resource-pack validation. Assets without both Chinese and English labels or a traceable source cannot be installed.
+
 # 4.7.0 — 2026-11-01
 
 - 视觉模型改为可选配置：视觉模型地址或名称留空时，视觉审查、参考图分析和连接测试自动复用文本模型；设置页明确显示回退关系。

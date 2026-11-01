@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "id": "chemistry",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "title": "化学",
   "domain": "chemistry",
   "min_app_version": "3.1.0",
-  "license": "CC0-1.0",
+  "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
       "id": "chemistry_beaker",
@@ -24,13 +24,15 @@
         "烧杯",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "9bb11d34fc6c0a3dee0dbe88cc2dabfb92d112d69388458f6cd846f2af7cbd68"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/beaker.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "beaker.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/beaker.svg",
+      "sha256": "6e1e2818cbb0792ec1c669ad77b93ad7526d1159d42f802509684b1f05c74915"
     },
     {
       "id": "chemistry_flask",
@@ -49,13 +51,15 @@
         "锥形瓶",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "ad10970ebb703e67346be516ff8023de99c0117b9cb221f2e3dfa538ed2e2905"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "flask.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
     },
     {
       "id": "chemistry_tube",
@@ -74,13 +78,15 @@
         "试管",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "79ba15ed0852cb95353afce217c7259dc148c529b6457153aab0ae6f8d192393"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "chemistry_burette",
@@ -99,13 +105,15 @@
         "滴定管",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "118fc97d63432e2f4d650620aee05bfaffe5f97f872151389f261528bd849417"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "chemistry_condenser",
@@ -124,13 +132,15 @@
         "冷凝管",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "941635370e363c9db24bc7e5174a2efb2d28cbacbe9274250d82eda6e70377f2"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electrochemistry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
       "id": "chemistry_funnel",
@@ -149,13 +159,15 @@
         "漏斗",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "eaf4c0742e6ded4e1696db598ece6af0b4279c7e1db789d73537365ccb0f9a45"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "chemistry_round_flask",
@@ -174,13 +186,15 @@
         "圆底烧瓶",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "c8d3717eb28afe46bd035c1899ff3e2bdb559375cc963f97b06dc38236ef9064"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "flask.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
     },
     {
       "id": "chemistry_molecule",
@@ -199,13 +213,15 @@
         "球棍分子",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "af92ec7a86d629296c053179bc588713c9569630b06b718fd0b5deddc4117779"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/molecule.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "molecule.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/molecule.svg",
+      "sha256": "d70e939fb7c63059457492fc8bd53a98cba0365702f118d156c9287bdec09098"
     },
     {
       "id": "chemistry_benzene",
@@ -224,13 +240,15 @@
         "苯环",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "ed009ac9cd3ad05c1f98c7a90dff3ce6098fe3b5f1fdf7e0af6a815a20398322"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "chemistry_catalyst",
@@ -249,13 +267,15 @@
         "催化位点",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "3bed1d81d176c47d3746e05df224dcb6f4f932114925803604ea58d1aa4596c2"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "chemistry_electrode",
@@ -274,13 +294,15 @@
         "电极",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "1d1c3239fc4fb95916d7b39fd833f5cc2571d00e8001559fda39c5bfa071e138"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_spectroscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
       "id": "chemistry_battery",
@@ -299,13 +321,15 @@
         "电化学电池",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "de8ceb086c78245c27047f78bfada1e7c386e311179ae8d43780f85d004286ab"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "battery.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/battery.svg",
+      "sha256": "7d6fd84f11b984b99b4229e813ce39e017eb5f702871655148fba312928c6a3f"
     },
     {
       "id": "chemistry_chromatogram",
@@ -324,13 +348,15 @@
         "色谱峰",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "22454b7c8f6761c30b4c488391d849138d4ad6628e476dca834baa5241704ba0"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_chromatography.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
     },
     {
       "id": "chemistry_stirrer",
@@ -349,13 +375,15 @@
         "磁力搅拌器",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "3e83d2d95713880dd95af2e3d7b908afda89fe9f26d3f97746a77946810d336d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electrochemistry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
       "id": "chemistry_balance",
@@ -374,13 +402,15 @@
         "天平",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "8c9475ce5b326cd123206a6f7c74b68de843488c96c14d185627e9fd464c9606"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_chemical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
     },
     {
       "id": "chemistry_droplet",
@@ -399,13 +429,15 @@
         "液滴",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "427e0c1a13027b41898a57cc260cf1ec475f0feccdd25d4f40c07eb6639a0712"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
       "id": "chemistry_crystal",
@@ -424,13 +456,15 @@
         "晶体",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "ba82bf7cab38cef850429efbca9cce6fbc73a88ab565c6184d7863fce3c85110"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/crystal-ball.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "crystal-ball.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/crystal-ball.svg",
+      "sha256": "426a7a35b938fe1f08175b28519faac4b2dd55ce2ed9253725c6c53dd578c436"
     },
     {
       "id": "chemistry_column",
@@ -449,19 +483,21 @@
         "色谱柱",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "6f97253df539dc99a5cb085401c11a0488d1ff8d1ad607d4fca4c7a446dffb59"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_mass_spectrometry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "sha256": "e66875b17191a136a1519809f3e999f55a1fb1a133ab681cad8a02dfe20e4e97"
     },
     {
       "id": "chemistry_chem_volumetric_flask",
       "asset_id": "chemistry_chem_volumetric_flask",
       "label": "容量瓶",
-      "label_en": "Chem volumetric flask",
+      "label_en": "Volumetric flask",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -474,19 +510,21 @@
         "容量瓶",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "2f66ac43df73d533fcc32ca29bc673bdacba6ace0efc57ec5e2f3a5565cbd331"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "flask.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
     },
     {
       "id": "chemistry_chem_graduated_cylinder",
       "asset_id": "chemistry_chem_graduated_cylinder",
       "label": "量筒",
-      "label_en": "Chem graduated cylinder",
+      "label_en": "Graduated cylinder",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -499,19 +537,21 @@
         "量筒",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "a40ccf1e16546d4a925824ade45734518780ed70d1f13d1eb22bf18575adbbf7"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cylinder.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "cylinder.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/cylinder.svg",
+      "sha256": "b11087e88cea5c965dbbb240b93d7ccb6e27576879e7aa21f1b85550f40da9f9"
     },
     {
       "id": "chemistry_chem_pipette",
       "asset_id": "chemistry_chem_pipette",
       "label": "移液器",
-      "label_en": "Chem pipette",
+      "label_en": "Pipette",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -524,19 +564,21 @@
         "移液器",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "38b2b80bbcfac8760252165cf450c8688449858aa852606eacd35ab7b75e296e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electron_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
       "id": "chemistry_chem_microplate",
       "asset_id": "chemistry_chem_microplate",
       "label": "多孔板",
-      "label_en": "Chem microplate",
+      "label_en": "Microplate",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -549,19 +591,21 @@
         "多孔板",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "48ca9eced5321d88ac5f5283bcb86e0e4002fb3d30918a540b0448f6eaeae986"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electron_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+      "sha256": "1f915d4d54c94dbd350dcb58334d395526a183f9ddcd482ef5e1850a265d552b"
     },
     {
       "id": "chemistry_chem_crucible",
       "asset_id": "chemistry_chem_crucible",
       "label": "坩埚",
-      "label_en": "Chem crucible",
+      "label_en": "Crucible",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -574,19 +618,21 @@
         "坩埚",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "6cfc97c99abc24df2c20000c9a7a3d50c23c6c3f752d61f1751d46a9494b8656"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
       "id": "chemistry_chem_mortar",
       "asset_id": "chemistry_chem_mortar",
       "label": "研钵",
-      "label_en": "Chem mortar",
+      "label_en": "Mortar",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -599,19 +645,21 @@
         "研钵",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "26a851289695e04e06c1a0b7a1ae1946852a08f6238b30727bfe5ace8af47fe9"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mortar-pestle.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "mortar-pestle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/mortar-pestle.svg",
+      "sha256": "b66510a302b639849a8ecdd76da39f250899ef586d33295d3d7775833b43b91c"
     },
     {
       "id": "chemistry_chem_desiccator",
       "asset_id": "chemistry_chem_desiccator",
       "label": "干燥器",
-      "label_en": "Chem desiccator",
+      "label_en": "Desiccator",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -624,19 +672,21 @@
         "干燥器",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "125b72ad798e605dde7d4ed8c5d3009cd7efd4d54405e23f2dcab7c66d5445df"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_field_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
       "id": "chemistry_chem_rotary_evap",
       "asset_id": "chemistry_chem_rotary_evap",
       "label": "旋转蒸发仪",
-      "label_en": "Chem rotary evap",
+      "label_en": "Rotary evap",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -649,19 +699,21 @@
         "旋转蒸发仪",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "a97f05f3ad4d18db04722239a0376298000993139268545ee60096d02f22442c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
       "id": "chemistry_chem_distillation",
       "asset_id": "chemistry_chem_distillation",
       "label": "蒸馏装置",
-      "label_en": "Chem distillation",
+      "label_en": "Distillation",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -674,19 +726,21 @@
         "蒸馏装置",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "da9a6351d9f432af66fd99a4f25b9d51922c251dc1fa1a29321f90b490e1cab0"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "chemistry_chem_reflux",
       "asset_id": "chemistry_chem_reflux",
       "label": "回流装置",
-      "label_en": "Chem reflux",
+      "label_en": "Reflux",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -699,19 +753,21 @@
         "回流装置",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "bff4b1874aae5151fd344beee07188ecbbbdf5058a223e57229b5f35561173ee"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electrochemistry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
       "id": "chemistry_chem_separatory",
       "asset_id": "chemistry_chem_separatory",
       "label": "分液漏斗",
-      "label_en": "Chem separatory",
+      "label_en": "Separatory",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -724,19 +780,21 @@
         "分液漏斗",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "278efb5a41f5b8846bd7ac94f77435355b2c8451ad924b8f7d02ab8e30cc3ce1"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_field_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
       "id": "chemistry_chem_ph_meter",
       "asset_id": "chemistry_chem_ph_meter",
       "label": "pH 计",
-      "label_en": "Chem ph meter",
+      "label_en": "Ph meter",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -749,19 +807,21 @@
         "pH 计",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "b8ddfbbaf5b97d7c49732185ebd8a0543ed1c2272505af7885ea0f9c5d7d598d"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ph.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "ph.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ph.svg",
+      "sha256": "ee22edbcc708a61cda5feb3fac1663203ea229105fadf4f3785c61aa55d34d25"
     },
     {
       "id": "chemistry_chem_spectrometer",
       "asset_id": "chemistry_chem_spectrometer",
       "label": "光谱仪",
-      "label_en": "Chem spectrometer",
+      "label_en": "Spectrometer",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -774,19 +834,21 @@
         "光谱仪",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "ecbfcb8d90ac1707bba0c470e6d40e8308a659dc6e9eb48fd62514d68a2a5c3f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
       "id": "chemistry_chem_nmr_tube",
       "asset_id": "chemistry_chem_nmr_tube",
       "label": "核磁管",
-      "label_en": "Chem NMR tube",
+      "label_en": "NMR tube",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -799,19 +861,21 @@
         "核磁管",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "8b8bb864cdd86dc2f2a377b0071313a06e3660959a871b19fb909fe4dd70c992"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_chromatography.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
     },
     {
       "id": "chemistry_chem_mass_spec",
       "asset_id": "chemistry_chem_mass_spec",
       "label": "质谱仪",
-      "label_en": "Chem mass spec",
+      "label_en": "Mass spec",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -824,19 +888,21 @@
         "质谱仪",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "781ff910e3b0289f4e2ecd15039973983b3c563a5c3d4acc0938d859bed95bfe"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_crystals.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
     },
     {
       "id": "chemistry_chem_hplc",
       "asset_id": "chemistry_chem_hplc",
       "label": "液相色谱仪",
-      "label_en": "Chem HPLC",
+      "label_en": "HPLC",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -849,19 +915,21 @@
         "液相色谱仪",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "269e6e4cdf79b5f9a872c825cf8e04773cd0ead85d84ed607ef8facd9d4311d5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "chemistry_chem_gc",
       "asset_id": "chemistry_chem_gc",
       "label": "气相色谱仪",
-      "label_en": "Chem GC",
+      "label_en": "GC",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -874,19 +942,21 @@
         "气相色谱仪",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "496f6e02a3a19f0ac58ac776c40d68dc6d38b96f10d4ccd525664a6287b3637d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electrochemistry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
       "id": "chemistry_chem_centrifuge",
       "asset_id": "chemistry_chem_centrifuge",
       "label": "离心机",
-      "label_en": "Chem centrifuge",
+      "label_en": "Centrifuge",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -899,19 +969,21 @@
         "离心机",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "b72a41f1d07177cebd0a9808b56569df71321bdb4a09a8dde281d41b241d6c5e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_microfluidics.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
     },
     {
       "id": "chemistry_chem_incubator",
       "asset_id": "chemistry_chem_incubator",
       "label": "恒温培养箱",
-      "label_en": "Chem incubator",
+      "label_en": "Incubator",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -924,19 +996,21 @@
         "恒温培养箱",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "70ccede5d517193089f6691977fabfd449b8a89a94a56f21e55f4ac314ba1603"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_mass_spectrometry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "sha256": "e66875b17191a136a1519809f3e999f55a1fb1a133ab681cad8a02dfe20e4e97"
     },
     {
       "id": "chemistry_chem_autoclave",
       "asset_id": "chemistry_chem_autoclave",
       "label": "高压灭菌锅",
-      "label_en": "Chem autoclave",
+      "label_en": "Autoclave",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -949,19 +1023,21 @@
         "高压灭菌锅",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "cbc9cf3082a100018169c3c6468e63b37a4db847b504612efbd2106677101d55"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_diffraction.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
       "id": "chemistry_chem_vacuum_pump",
       "asset_id": "chemistry_chem_vacuum_pump",
       "label": "真空泵",
-      "label_en": "Chem vacuum pump",
+      "label_en": "Vacuum pump",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -974,19 +1050,21 @@
         "真空泵",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "76d8f3e332752a395d8bdbe2ff63a8224543d610ca4aa372f7f9a8d3cdf150ae"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vacuum.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vacuum.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vacuum.svg",
+      "sha256": "d9ed4b144c5ce5cfa2b0bc304b021ffdbb8fb215f4c2d0e5c45ee0e16982ed59"
     },
     {
       "id": "chemistry_chem_gas_cylinder",
       "asset_id": "chemistry_chem_gas_cylinder",
       "label": "气瓶",
-      "label_en": "Chem gas cylinder",
+      "label_en": "Gas cylinder",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -999,19 +1077,21 @@
         "气瓶",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "402d65d6954c45bc0f22cd1bd38bcc6ab8bf2c73e8bda869f7137a92db328d0e"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "gas-cylinder.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "sha256": "95455eb65ffac0e12f242ebb1430e27de4f4bc9db68370f62e4b17130cc0d349"
     },
     {
       "id": "chemistry_chem_water",
       "asset_id": "chemistry_chem_water",
       "label": "水分子",
-      "label_en": "Chem water",
+      "label_en": "Water",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1024,19 +1104,21 @@
         "水分子",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "691f1f23b8091060b25092cd9e777ea0e6e138d7d487f9084aeb7e54ddc99131"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "water.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/water.svg",
+      "sha256": "76cacd2669ed61f7f69d09a0384c4556a40005dd20b565cb9f07fefb375d085f"
     },
     {
       "id": "chemistry_chem_peptide",
       "asset_id": "chemistry_chem_peptide",
       "label": "肽链",
-      "label_en": "Chem peptide",
+      "label_en": "Peptide",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1049,19 +1131,21 @@
         "肽链",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "f969c177984d2e6e2c97465b91c97549d8c50504d0c978566cd0886a436fa67c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "chemistry_chem_protein",
       "asset_id": "chemistry_chem_protein",
       "label": "蛋白结构",
-      "label_en": "Chem protein",
+      "label_en": "Protein",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1074,19 +1158,21 @@
         "蛋白结构",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "21b303e279e75f2da8fca2fe2deafaebecc53cbf5c3d85ecf80b56e239a11be8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_chromatography.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
     },
     {
       "id": "chemistry_chem_enzyme",
       "asset_id": "chemistry_chem_enzyme",
       "label": "酶活性口袋",
-      "label_en": "Chem enzyme",
+      "label_en": "Enzyme",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1099,19 +1185,21 @@
         "酶活性口袋",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "c98668553373bfc89033de1ae28fd5dc4a317f40b1512f1924d24b165f2fe0c7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electrochemistry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
       "id": "chemistry_chem_ligand",
       "asset_id": "chemistry_chem_ligand",
       "label": "配体",
-      "label_en": "Chem ligand",
+      "label_en": "Ligand",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1124,19 +1212,21 @@
         "配体",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "e4d55288780064f0571416ff2583ba661ef70653b64b894fa8bcad9530b8202e"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_field_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
       "id": "chemistry_chem_micelle",
       "asset_id": "chemistry_chem_micelle",
       "label": "胶束",
-      "label_en": "Chem micelle",
+      "label_en": "Micelle",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1149,19 +1239,21 @@
         "胶束",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "1c20f9f889dd0de63a7b0b371272ac3e9f097ad60bb3966c3e742d0c46bed3e7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_mass_spectrometry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_mass_spectrometry.svg",
+      "sha256": "e66875b17191a136a1519809f3e999f55a1fb1a133ab681cad8a02dfe20e4e97"
     },
     {
       "id": "chemistry_chem_liposome",
       "asset_id": "chemistry_chem_liposome",
       "label": "脂质体",
-      "label_en": "Chem liposome",
+      "label_en": "Liposome",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1174,19 +1266,21 @@
         "脂质体",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "5771ce2e77e73c990eed292b4155b089e50727a830a21a2c833b8379e785350b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
       "id": "chemistry_chem_nanoparticle",
       "asset_id": "chemistry_chem_nanoparticle",
       "label": "纳米颗粒",
-      "label_en": "Chem nanoparticle",
+      "label_en": "Nanoparticle",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1199,19 +1293,21 @@
         "纳米颗粒",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "ab79a299e543323ed329d10016493b3a83cc84679ee6273582fb208b8983d2a5"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_spectroscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
       "id": "chemistry_chem_unit_cell",
       "asset_id": "chemistry_chem_unit_cell",
       "label": "晶胞",
-      "label_en": "Chem unit cell",
+      "label_en": "Unit cell",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1224,19 +1320,21 @@
         "晶胞",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "0963dc0416907519aeb44971b452f1ea92a69877e69a30545a978b3dec9a3db4"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "chemistry_chem_hbond",
       "asset_id": "chemistry_chem_hbond",
       "label": "氢键",
-      "label_en": "Chem hbond",
+      "label_en": "Hbond",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1249,19 +1347,21 @@
         "氢键",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "b7838257195d243b38855a03dc8750dba2aea907182d166ca7bd98304f1a5d22"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_diffraction.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
       "id": "chemistry_chem_chelate",
       "asset_id": "chemistry_chem_chelate",
       "label": "螯合物",
-      "label_en": "Chem chelate",
+      "label_en": "Chelate",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1274,19 +1374,21 @@
         "螯合物",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "2f1e68e3044dca239177d6bc27f2a5413ae4cced608f5efc02fbf10abe82e8c3"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "chemistry_chem_alkene",
       "asset_id": "chemistry_chem_alkene",
       "label": "烯烃",
-      "label_en": "Chem alkene",
+      "label_en": "Alkene",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1299,19 +1401,21 @@
         "烯烃",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "941217c934551d643d1af447cd4a4a829e8e8fc90232aadf207b349d0f1116f3"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_small_molecules.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_small_molecules.svg",
+      "sha256": "9a232b4afe9ea67bfffb941d010cbd5c00d0183939910d6b708f33a71128830d"
     },
     {
       "id": "chemistry_chem_alkyne",
       "asset_id": "chemistry_chem_alkyne",
       "label": "炔烃",
-      "label_en": "Chem alkyne",
+      "label_en": "Alkyne",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1324,19 +1428,21 @@
         "炔烃",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "bb43a62b1a1dc435ccdb31740b6fab7fbf6f60ed47d77104542931aecee3c35c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_chemical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
     },
     {
       "id": "chemistry_chem_carbonyl",
       "asset_id": "chemistry_chem_carbonyl",
       "label": "羰基",
-      "label_en": "Chem carbonyl",
+      "label_en": "Carbonyl",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1349,19 +1455,21 @@
         "羰基",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "60bf180ea81a86b25e758674e4b540ff9783e7c6bf8fef5ef6261167c70eeb85"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
       "id": "chemistry_chem_amine",
       "asset_id": "chemistry_chem_amine",
       "label": "氨基",
-      "label_en": "Chem amine",
+      "label_en": "Amine",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1374,19 +1482,21 @@
         "氨基",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "5473933efff092b9300a8dbe8a8ce266f1e7bae8327ac0592aa53a15de1e30ce"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_electrochemistry.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electrochemistry.svg",
+      "sha256": "deaeaeb0133975451712d552872d84b78d237712b1b2d9e116983fbeb0c3e6e0"
     },
     {
       "id": "chemistry_chem_carboxyl",
       "asset_id": "chemistry_chem_carboxyl",
       "label": "羧基",
-      "label_en": "Chem carboxyl",
+      "label_en": "Carboxyl",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1399,19 +1509,21 @@
         "羧基",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "bc6d42282c0edf43a0240cad092fe25213efa8437dce3add0f922992502d8f35"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
     },
     {
       "id": "chemistry_chem_reaction_coordinate",
       "asset_id": "chemistry_chem_reaction_coordinate",
       "label": "反应坐标",
-      "label_en": "Chem reaction coordinate",
+      "label_en": "Reaction coordinate",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1424,19 +1536,21 @@
         "反应坐标",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "632a593fee515af94066018a5622864b362679bc2a986807e80dfa882f07b412"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sitemap.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "sha256": "4ca10e40b22e7721463aeee6f715dae3950090815417dee6fc309d9f2bf596f4"
     },
     {
       "id": "chemistry_chem_activation_energy",
       "asset_id": "chemistry_chem_activation_energy",
       "label": "活化能",
-      "label_en": "Chem activation energy",
+      "label_en": "Activation energy",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1449,19 +1563,21 @@
         "活化能",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "f3c8c97aad5f219de2902817f93bdf210e91af44e13753a076041679738d3a66"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
     },
     {
       "id": "chemistry_chem_redox",
       "asset_id": "chemistry_chem_redox",
       "label": "氧化还原",
-      "label_en": "Chem redox",
+      "label_en": "Redox",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1474,19 +1590,21 @@
         "氧化还原",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "66534b504fbcc3b9ded54f80ff0f36bfc17bcae50cf28b8fc3953603919c6f97"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_molecular_assays.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
       "id": "chemistry_chem_fuel_cell",
       "asset_id": "chemistry_chem_fuel_cell",
       "label": "燃料电池",
-      "label_en": "Chem fuel cell",
+      "label_en": "Fuel cell",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1499,19 +1617,21 @@
         "燃料电池",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "580be10758bfaafbc0a5968997ba8035d128b398bfdca7496e5eea5ac14e350e"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fuel.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "fuel.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/fuel.svg",
+      "sha256": "00324a28d825d9b63e212250ef306ad88fa79005ff0e6547ab26fefa79af911e"
     },
     {
       "id": "chemistry_chem_catalytic_surface",
       "asset_id": "chemistry_chem_catalytic_surface",
       "label": "催化表面",
-      "label_en": "Chem catalytic surface",
+      "label_en": "Catalytic surface",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1524,19 +1644,21 @@
         "催化表面",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "7df42ded6f7991700cd5c73aae527dd3d0f5812d4f6b87f01d605a3eb6b4e22c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_diffraction.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_diffraction.svg",
+      "sha256": "44a3618ebca7cc86740a173f7c55c9b7e78f17e2442d86218b83106b7cad8ab4"
     },
     {
       "id": "chemistry_chem_flow_reactor",
       "asset_id": "chemistry_chem_flow_reactor",
       "label": "连续流反应器",
-      "label_en": "Chem flow reactor",
+      "label_en": "Flow reactor",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1549,19 +1671,21 @@
         "连续流反应器",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "f169ada78940c897d2b178ea813c1e82da3da22a38e164912e8574d1b7134bc8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_microfluidics.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_microfluidics.svg",
+      "sha256": "13fb8ad6e5841aaf0bf572b7efe55896d8a4d503322165f8a1cde8197dc0cbf8"
     },
     {
       "id": "chemistry_chem_calorimeter",
       "asset_id": "chemistry_chem_calorimeter",
       "label": "量热仪",
-      "label_en": "Chem calorimeter",
+      "label_en": "Calorimeter",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1574,19 +1698,21 @@
         "量热仪",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "714e2bc91e8ba8735596e16c9c0ce91076c5a35e4d26341f21ce861657463008"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_field_sampling.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_field_sampling.svg",
+      "sha256": "000079801935d566b0848a4f0f63e5fc6980a82fae34f9447edfbd9b31ca0065"
     },
     {
       "id": "chemistry_chem_periodic",
       "asset_id": "chemistry_chem_periodic",
       "label": "元素周期表",
-      "label_en": "Chem periodic",
+      "label_en": "Periodic",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1599,19 +1725,21 @@
         "元素周期表",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "771e7e2b1c3af20a81dd2d9c9ee1abd1ccda52ace8bab84ad4d478e241c5025c"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/periodic-table.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "periodic-table.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/periodic-table.svg",
+      "sha256": "60f5a0ce8cb739cb2fdd0796db3fc0c21604d03dfb3c61d0662a0ca597a86824"
     },
     {
       "id": "chemistry_chem_orbital",
       "asset_id": "chemistry_chem_orbital",
       "label": "电子轨道",
-      "label_en": "Chem orbital",
+      "label_en": "Orbital",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1624,19 +1752,21 @@
         "电子轨道",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "7a189b323243e0e338a43ac32f2c75fa060947c2cce57fbe9e40b1fba688463c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_crystals.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
     },
     {
       "id": "chemistry_chem_crystal_polymorph",
       "asset_id": "chemistry_chem_crystal_polymorph",
       "label": "晶型转变",
-      "label_en": "Chem crystal polymorph",
+      "label_en": "Crystal polymorph",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1649,19 +1779,21 @@
         "晶型转变",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "835dd0beb01768643a38141ad5d11f06035c80619e615e9d153369323d7d2dd9"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/crystal-ball.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "crystal-ball.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/crystal-ball.svg",
+      "sha256": "426a7a35b938fe1f08175b28519faac4b2dd55ce2ed9253725c6c53dd578c436"
     },
     {
       "id": "chemistry_chem_solubility",
       "asset_id": "chemistry_chem_solubility",
       "label": "溶解度",
-      "label_en": "Chem solubility",
+      "label_en": "Solubility",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1674,19 +1806,21 @@
         "溶解度",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "5cf05b65e1d616deadb348ea4a8ecaf880aa71dc2e3f30834dd6854876667fb7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_spectroscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
     },
     {
       "id": "chemistry_chem_titration_curve",
       "asset_id": "chemistry_chem_titration_curve",
       "label": "滴定曲线",
-      "label_en": "Chem titration curve",
+      "label_en": "Titration curve",
       "category": "实验器材、分子与反应",
       "type": "symbol",
       "default_dim": [
@@ -1699,13 +1833,825 @@
         "滴定曲线",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "c9a044f130d1c7beb52ce6bd893ca9647ab4e91ab474078c3cbb16105c5330d2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-bell-curve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
+    },
+    {
+      "id": "chemistry_chem_thermometer",
+      "asset_id": "chemistry_chem_thermometer",
+      "label": "温度计",
+      "label_en": "Thermometer",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_thermometer.svg",
+      "keywords": [
+        "chem_thermometer",
+        "温度计",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "thermometer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/thermometer.svg",
+      "sha256": "60944916054d2c1fbf8a66d5a9ee2ebe175be096ac6a71a375f79c8f3bcb499b"
+    },
+    {
+      "id": "chemistry_chem_solid_phase",
+      "asset_id": "chemistry_chem_solid_phase",
+      "label": "固相反应",
+      "label_en": "Solid-phase reaction",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_solid_phase.svg",
+      "keywords": [
+        "chem_solid_phase",
+        "固相反应",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solid.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "solid.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/solid.svg",
+      "sha256": "84408899012b8954bab9bbbbbb72be2594226241e2973bbf25b01638ea04b819"
+    },
+    {
+      "id": "chemistry_chem_liquid_liquid",
+      "asset_id": "chemistry_chem_liquid_liquid",
+      "label": "液液萃取",
+      "label_en": "Liquid-liquid extraction",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_liquid_liquid.svg",
+      "keywords": [
+        "chem_liquid_liquid",
+        "液液萃取",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/liquid-spot.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "liquid-spot.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/liquid-spot.svg",
+      "sha256": "0b0cef5fe09b2c31e7dfb573f4d3f4492a1ebc74d1573ada0a33ff89d1194d15"
+    },
+    {
+      "id": "chemistry_chem_pcr_tube",
+      "asset_id": "chemistry_chem_pcr_tube",
+      "label": "PCR 反应管",
+      "label_en": "PCR tube",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_pcr_tube.svg",
+      "keywords": [
+        "chem_pcr_tube",
+        "PCR 反应管",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "test-tube.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
+    },
+    {
+      "id": "chemistry_chem_pcr_cycle",
+      "asset_id": "chemistry_chem_pcr_cycle",
+      "label": "PCR 循环",
+      "label_en": "PCR cycle",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_pcr_cycle.svg",
+      "keywords": [
+        "chem_pcr_cycle",
+        "PCR 循环",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "test-tube.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
+    },
+    {
+      "id": "chemistry_chem_dna",
+      "asset_id": "chemistry_chem_dna",
+      "label": "DNA 双螺旋",
+      "label_en": "DNA double helix",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_dna.svg",
+      "keywords": [
+        "chem_dna",
+        "DNA 双螺旋",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "dna.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "sha256": "2edf4c8a7cc5ec0454d94baa37f976aba8f27f2436485f3a6fd96f589aee6cdb"
+    },
+    {
+      "id": "chemistry_chem_rna",
+      "asset_id": "chemistry_chem_rna",
+      "label": "RNA 链",
+      "label_en": "RNA strand",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_rna.svg",
+      "keywords": [
+        "chem_rna",
+        "RNA 链",
+        "化学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_centrifugation.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_centrifugation.svg",
+      "sha256": "aa9737088454fddeb276fc6c41e9372f4d7734844ef47d595f1df0c315108797"
+    },
+    {
+      "id": "chemistry_chem_sds_page",
+      "asset_id": "chemistry_chem_sds_page",
+      "label": "SDS-PAGE",
+      "label_en": "SDS-PAGE",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_sds_page.svg",
+      "keywords": [
+        "chem_sds_page",
+        "SDS-PAGE",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-document.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "file-document.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/file-document.svg",
+      "sha256": "9371dfd39cd01692ab6a825c8517db82a672ba2e6298cb342b4052396687afa4"
+    },
+    {
+      "id": "chemistry_chem_tlc_plate",
+      "asset_id": "chemistry_chem_tlc_plate",
+      "label": "薄层色谱板",
+      "label_en": "TLC plate",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_tlc_plate.svg",
+      "keywords": [
+        "chem_tlc_plate",
+        "薄层色谱板",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+    },
+    {
+      "id": "chemistry_chem_uv_vis",
+      "asset_id": "chemistry_chem_uv_vis",
+      "label": "紫外可见光谱",
+      "label_en": "UV-visible spectrum",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_uv_vis.svg",
+      "keywords": [
+        "chem_uv_vis",
+        "紫外可见光谱",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-sunny.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "weather-sunny.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/weather-sunny.svg",
+      "sha256": "eaa4c2cf9d7a8e41181e193da123591644b46791736d694d281decd2fafb2f2a"
+    },
+    {
+      "id": "chemistry_chem_ir_spectrum",
+      "asset_id": "chemistry_chem_ir_spectrum",
+      "label": "红外光谱",
+      "label_en": "IR spectrum",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_ir_spectrum.svg",
+      "keywords": [
+        "chem_ir_spectrum",
+        "红外光谱",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+    },
+    {
+      "id": "chemistry_chem_fume_hood",
+      "asset_id": "chemistry_chem_fume_hood",
+      "label": "通风橱",
+      "label_en": "Fume hood",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_fume_hood.svg",
+      "keywords": [
+        "chem_fume_hood",
+        "通风橱",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-filter.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "air-filter.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/air-filter.svg",
+      "sha256": "cd247932b4681069740e21ed78e7f55dce499f9a24e48641ce294437f5dc31bf"
+    },
+    {
+      "id": "chemistry_chem_glovebox",
+      "asset_id": "chemistry_chem_glovebox",
+      "label": "手套箱",
+      "label_en": "Glovebox",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_glovebox.svg",
+      "keywords": [
+        "chem_glovebox",
+        "手套箱",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hand-back-right.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "hand-back-right.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hand-back-right.svg",
+      "sha256": "cee64dea0dd7acbb9440e9584ef14d14e22b9517711f5baa5c97e02f52636d60"
+    },
+    {
+      "id": "chemistry_chem_gas_flow",
+      "asset_id": "chemistry_chem_gas_flow",
+      "label": "气体流量",
+      "label_en": "Gas flow",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_gas_flow.svg",
+      "keywords": [
+        "chem_gas_flow",
+        "气体流量",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "gas-cylinder.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gas-cylinder.svg",
+      "sha256": "95455eb65ffac0e12f242ebb1430e27de4f4bc9db68370f62e4b17130cc0d349"
+    },
+    {
+      "id": "chemistry_chem_pressure_reactor",
+      "asset_id": "chemistry_chem_pressure_reactor",
+      "label": "压力反应器",
+      "label_en": "Pressure reactor",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_pressure_reactor.svg",
+      "keywords": [
+        "chem_pressure_reactor",
+        "压力反应器",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "gauge.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gauge.svg",
+      "sha256": "fb31613d7a44b32eb9b627d98cf0bea7b79c93e435593e44d3b43967d51b06c7"
+    },
+    {
+      "id": "chemistry_chem_photoreactor",
+      "asset_id": "chemistry_chem_photoreactor",
+      "label": "光反应器",
+      "label_en": "Photoreactor",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_photoreactor.svg",
+      "keywords": [
+        "chem_photoreactor",
+        "光反应器",
+        "化学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_light_microscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+      "sha256": "0327d802e8b6a032c958b7c2d21883cd0a05f27aae511d92a058fb72a45121c7"
+    },
+    {
+      "id": "chemistry_chem_microwave",
+      "asset_id": "chemistry_chem_microwave",
+      "label": "微波反应器",
+      "label_en": "Microwave reactor",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_microwave.svg",
+      "keywords": [
+        "chem_microwave",
+        "微波反应器",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microwave.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "microwave.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microwave.svg",
+      "sha256": "4b4d7188a4b99b970582c1fc4eef795ded9e830e3c1f260c3253c7b90dc4192b"
+    },
+    {
+      "id": "chemistry_chem_magnetic_sep",
+      "asset_id": "chemistry_chem_magnetic_sep",
+      "label": "磁分离",
+      "label_en": "Magnetic separation",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_magnetic_sep.svg",
+      "keywords": [
+        "chem_magnetic_sep",
+        "磁分离",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "magnet.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/magnet.svg",
+      "sha256": "070eb61b7e22ee8c84b59665e1f587cbd6fe845f7d8d4adf699b33bf543a8c7a"
+    },
+    {
+      "id": "chemistry_chem_filter_paper",
+      "asset_id": "chemistry_chem_filter_paper",
+      "label": "滤纸",
+      "label_en": "Filter paper",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_filter_paper.svg",
+      "keywords": [
+        "chem_filter_paper",
+        "滤纸",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/filter.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "filter.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/filter.svg",
+      "sha256": "49addd47f9fe63951fb2ecba09e4b1bb36cbbc312deb82215c634990d60b8193"
+    },
+    {
+      "id": "chemistry_chem_crystallization",
+      "asset_id": "chemistry_chem_crystallization",
+      "label": "结晶过程",
+      "label_en": "Crystallization",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_crystallization.svg",
+      "keywords": [
+        "chem_crystallization",
+        "结晶过程",
+        "化学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_spectroscopy.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_spectroscopy.svg",
+      "sha256": "57e75bcfb248aa7615526539e64f5d41d1803669932fefa2789c6782c0384651"
+    },
+    {
+      "id": "chemistry_chem_buffer",
+      "asset_id": "chemistry_chem_buffer",
+      "label": "缓冲溶液",
+      "label_en": "Buffer solution",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_buffer.svg",
+      "keywords": [
+        "chem_buffer",
+        "缓冲溶液",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gate-buffer.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "gate-buffer.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/gate-buffer.svg",
+      "sha256": "f1148a2475ef50d5ff39530cca29d68e663996295c7b85de30a499dce39e8510"
+    },
+    {
+      "id": "chemistry_chem_osmometer",
+      "asset_id": "chemistry_chem_osmometer",
+      "label": "渗透压计",
+      "label_en": "Osmometer",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_osmometer.svg",
+      "keywords": [
+        "chem_osmometer",
+        "渗透压计",
+        "化学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_chemical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
+    },
+    {
+      "id": "chemistry_chem_kinetics",
+      "asset_id": "chemistry_chem_kinetics",
+      "label": "反应动力学",
+      "label_en": "Reaction kinetics",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_kinetics.svg",
+      "keywords": [
+        "chem_kinetics",
+        "反应动力学",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-bell-curve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
+    },
+    {
+      "id": "chemistry_chem_arrhenius",
+      "asset_id": "chemistry_chem_arrhenius",
+      "label": "阿伦尼乌斯图",
+      "label_en": "Arrhenius plot",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_arrhenius.svg",
+      "keywords": [
+        "chem_arrhenius",
+        "阿伦尼乌斯图",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-bell-curve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
+    },
+    {
+      "id": "chemistry_chem_electrophoresis",
+      "asset_id": "chemistry_chem_electrophoresis",
+      "label": "电泳",
+      "label_en": "Electrophoresis",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_electrophoresis.svg",
+      "keywords": [
+        "chem_electrophoresis",
+        "电泳",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "dna.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "sha256": "2edf4c8a7cc5ec0454d94baa37f976aba8f27f2436485f3a6fd96f589aee6cdb"
+    },
+    {
+      "id": "chemistry_chem_binding_curve",
+      "asset_id": "chemistry_chem_binding_curve",
+      "label": "结合曲线",
+      "label_en": "Binding curve",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_binding_curve.svg",
+      "keywords": [
+        "chem_binding_curve",
+        "结合曲线",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-curve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "vector-curve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-curve.svg",
+      "sha256": "42d1b51e33adba87020d64a449701767d569ada7b1eaff3e06467abb4390993d"
+    },
+    {
+      "id": "chemistry_chem_isotherm",
+      "asset_id": "chemistry_chem_isotherm",
+      "label": "吸附等温线",
+      "label_en": "Adsorption isotherm",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_isotherm.svg",
+      "keywords": [
+        "chem_isotherm",
+        "吸附等温线",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-bell-curve.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-bell-curve.svg",
+      "sha256": "6c4b677f27d7d3a2f1141d281fac5df0972da8fed8ebf101522c23bd323fcd8c"
+    },
+    {
+      "id": "chemistry_chem_molarity",
+      "asset_id": "chemistry_chem_molarity",
+      "label": "摩尔浓度",
+      "label_en": "Molarity",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_molarity.svg",
+      "keywords": [
+        "chem_molarity",
+        "摩尔浓度",
+        "化学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "mat_crystals.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+      "sha256": "b014201cae627918e6c7d07af7b5f575e28d9b64458a69133df9ed6d7ef460c7"
+    },
+    {
+      "id": "chemistry_chem_stoichiometry",
+      "asset_id": "chemistry_chem_stoichiometry",
+      "label": "化学计量",
+      "label_en": "Stoichiometry",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_stoichiometry.svg",
+      "keywords": [
+        "chem_stoichiometry",
+        "化学计量",
+        "化学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_chromatography.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_chromatography.svg",
+      "sha256": "04a8b6245eafdef1bfb6c10acdd1cf789d0f216a632415bf4a42c98f004ece1b"
+    },
+    {
+      "id": "chemistry_chem_reaction_network",
+      "asset_id": "chemistry_chem_reaction_network",
+      "label": "反应网络",
+      "label_en": "Reaction network",
+      "category": "实验器材、分子与反应",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/chem_reaction_network.svg",
+      "keywords": [
+        "chem_reaction_network",
+        "反应网络",
+        "化学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sitemap.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sitemap.svg",
+      "sha256": "4ca10e40b22e7721463aeee6f715dae3950090815417dee6fc309d9f2bf596f4"
     },
     {
       "id": "chemistry_detector",
@@ -1723,13 +2669,15 @@
         "detector",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "d5a69d6af216c12d26af2bf9d9ee478d7a13e776bd4cee5750af875585875b90"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "access-point.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/access-point.svg",
+      "sha256": "df6f9b9868db653365bef5f319277e1e3a7375b52bd3c7f32387cad8edbb372b"
     },
     {
       "id": "chemistry_potentiostat",
@@ -1747,13 +2695,15 @@
         "potentiostat",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "e4214d89b6134f8f3096af0f531df30d6e2bedc2abc9013bba75874a4838b575"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "eng_pumps_valves.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/eng_pumps_valves.svg",
+      "sha256": "f4053ea30d264a77c28eb4d646db3aac7f184007284317cc5640276a6a540c8a"
     },
     {
       "id": "chemistry_chem_catalyst",
@@ -1771,13 +2721,15 @@
         "chem_catalyst",
         "化学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/chemistry",
-      "modifications": "Original vector artwork.",
-      "sha256": "3bed1d81d176c47d3746e05df224dcb6f4f932114925803604ea58d1aa4596c2"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "process_chemical.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_chemical.svg",
+      "sha256": "7c55867ea378fcd686e7b3fdf2e343b28245238e5dea8138a6c7332dd9fc5000"
     }
   ],
   "templates": [

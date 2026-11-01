@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"29\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"40\" cy=\"39\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"61\" cy=\"49\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"45\" cy=\"65\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><polygon points=\"64,107 302,107 344,148 106,148\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"106,148 344,148 344,227 106,227\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"64,107 106,148 106,227 64,186\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><line x1=\"85\" y1=\"120\" x2=\"113\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"113\" y1=\"120\" x2=\"141\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"141\" y1=\"120\" x2=\"169\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"169\" y1=\"120\" x2=\"197\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"197\" y1=\"120\" x2=\"225\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"225\" y1=\"120\" x2=\"253\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"253\" y1=\"120\" x2=\"281\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /></g><g><ellipse cx=\"126\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"154\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"182\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"210\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"238\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"266\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"294\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "materials_particle",
           "label": "纳米颗粒",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-          "modifications": "Original vector artwork."
+          "label_en": "Particle",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+          "source_kind": "online-open-license",
+          "source_file": "mat_composites.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "materials_particle",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"37\" y=\"8\" width=\"26\" height=\"84\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"21\" r=\"6\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"40\" r=\"6\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"59\" r=\"6\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"50\" cy=\"78\" r=\"6\" fill=\"#FFFFFF\" stroke=\"#395B70\" stroke-width=\"2\" /><line x1=\"8\" y1=\"30\" x2=\"33\" y2=\"30\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"8\" y1=\"66\" x2=\"33\" y2=\"66\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"67\" y1=\"30\" x2=\"91\" y2=\"30\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"67\" y1=\"66\" x2=\"91\" y2=\"66\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><path d=\"M60 76 H340 V251 H60 Z M92 122 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M152 122 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M212 122 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M272 122 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M92 188 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M152 188 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M212 188 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M272 188 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" fill-rule=\"evenodd\" /></g><g><path d=\"M95 131 Q110 111 125 131\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M155 131 Q170 111 185 131\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M215 131 Q230 111 245 131\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M275 131 Q290 111 305 131\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M95 197 Q110 177 125 197\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M155 197 Q170 177 185 197\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M215 197 Q230 177 245 197\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M275 197 Q290 177 305 197\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /></g><g><circle cx=\"106\" cy=\"129\" r=\"5\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"226\" cy=\"129\" r=\"5\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"106\" cy=\"195\" r=\"5\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"226\" cy=\"195\" r=\"5\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "materials_membrane",
           "label": "多孔膜",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-          "modifications": "Original vector artwork."
+          "label_en": "Membrane",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+          "source_kind": "online-open-license",
+          "source_file": "mat_porous.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "materials_membrane",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"29\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"40\" cy=\"39\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"61\" cy=\"49\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"45\" cy=\"65\" r=\"5\" fill=\"#DFEDF1\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><polygon points=\"64,107 302,107 344,148 106,148\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"106,148 344,148 344,227 106,227\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"64,107 106,148 106,227 64,186\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><line x1=\"85\" y1=\"120\" x2=\"113\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"113\" y1=\"120\" x2=\"141\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"141\" y1=\"120\" x2=\"169\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"169\" y1=\"120\" x2=\"197\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"197\" y1=\"120\" x2=\"225\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"225\" y1=\"120\" x2=\"253\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /><line x1=\"253\" y1=\"120\" x2=\"281\" y2=\"147\" stroke=\"#e8ad66\" stroke-width=\"6\" /></g><g><ellipse cx=\"126\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"154\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"182\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"210\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"238\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"266\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"294\" cy=\"187\" rx=\"6\" ry=\"10\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "materials_particle",
           "label": "纳米颗粒",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-          "modifications": "Original vector artwork."
+          "label_en": "Particle",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_composites.svg",
+          "source_kind": "online-open-license",
+          "source_file": "mat_composites.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "materials_particle",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M50 6 C43 27 20 46 20 66 A30 29 0 0 0 80 66 C80 46 57 27 50 6 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M34 63 Q28 77 45 82\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><path d=\"M82 266 Q82 255 100 253 H293 Q310 253 310 277 H82 Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"163\" y=\"238\" width=\"76\" height=\"20\" rx=\"7\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M240 253 V124 Q237 106 211 103 L220 76 Q280 83 282 124 V253 Z\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><polygon points=\"148,67 165,35 202,57 182,93\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"171,76 204,61 239,106 209,127\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><ellipse cx=\"207\" cy=\"130\" rx=\"36\" ry=\"10\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"182,131 196,136 186,168 173,163\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"207\" y=\"137\" width=\"12\" height=\"32\" rx=\"3\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"118\" y=\"184\" width=\"134\" height=\"12\" rx=\"3\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"153\" y=\"177\" width=\"55\" height=\"7\" rx=\"0\" fill=\"#f4f8f8\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"166\" y1=\"198\" x2=\"166\" y2=\"240\" stroke=\"#2b5662\" stroke-width=\"5\" /></g><g><circle cx=\"266\" cy=\"181\" r=\"21\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"266\" cy=\"181\" r=\"11\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><ellipse cx=\"192\" cy=\"241\" rx=\"21\" ry=\"7\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M188 231 L174 202 H208 L196 231 Z\" fill=\"#e8ad66\" stroke=\"none\" stroke-width=\"0\" opacity=\"0.4\" /></g></g></svg>",
         "meta": {
           "asset_id": "materials_droplet",
           "label": "液滴",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-          "modifications": "Original vector artwork."
+          "label_en": "Droplet",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_light_microscopy.svg",
+          "source_kind": "online-open-license",
+          "source_file": "lab_light_microscopy.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "materials_droplet",

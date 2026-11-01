@@ -44,16 +44,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"25\" width=\"25\" height=\"50\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"65\" y=\"25\" width=\"25\" height=\"50\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M35 37 L45 45 L55 45 L65 37 L65 63 L55 55 L45 55 L35 63 Z\" fill=\"#84B7C8\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"3\" y1=\"50\" x2=\"22\" y2=\"50\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"78\" y1=\"50\" x2=\"97\" y2=\"50\" stroke=\"#C67F76\" stroke-width=\"2\" stroke-linecap=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><line x1=\"106\" y1=\"123\" x2=\"157\" y2=\"73\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"240\" y1=\"123\" x2=\"291\" y2=\"73\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"240\" y1=\"257\" x2=\"291\" y2=\"207\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"106\" y1=\"257\" x2=\"157\" y2=\"207\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"157.00,73.00 291.00,73.00 291.00,207.00 157.00,207.00\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"106.00,123.00 240.00,123.00 240.00,257.00 106.00,257.00\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><circle cx=\"157\" cy=\"73\" r=\"13\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"291\" cy=\"73\" r=\"13\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"291\" cy=\"207\" r=\"13\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"157\" cy=\"207\" r=\"13\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><circle cx=\"106\" cy=\"123\" r=\"15\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"240\" cy=\"123\" r=\"15\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"240\" cy=\"257\" r=\"15\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"106\" cy=\"257\" r=\"15\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "materials_tensile",
           "label": "拉伸试样",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-          "modifications": "Original vector artwork."
+          "label_en": "Tensile",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_crystals.svg",
+          "source_kind": "online-open-license",
+          "source_file": "mat_crystals.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "materials_tensile",
@@ -79,16 +82,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"11\" y=\"15\" width=\"78\" height=\"71\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M12 70 L38 53 L49 55 L57 62 L68 51 L87 48\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M48 55 L44 35 M49 55 L65 77 M57 62 L75 71\" fill=\"none\" stroke=\"#79A99A\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"49\" cy=\"55\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#2b5662\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g><rect x=\"85\" y=\"43\" width=\"230\" height=\"223\" rx=\"10\" fill=\"#e0edf0\" /><path d=\"M85 229Q190 218 315 229V266H85Z\" fill=\"#b49179\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M88 69Q137 57 189 68T313 68\" fill=\"none\" stroke=\"#86b7d3\" stroke-width=\"3\" /></g><g><ellipse cx=\"114\" cy=\"95\" rx=\"6\" ry=\"6\" fill=\"#e8ad66\" /><ellipse cx=\"187\" cy=\"102\" rx=\"9\" ry=\"9\" fill=\"#e8ad66\" /><ellipse cx=\"265\" cy=\"90\" rx=\"5\" ry=\"5\" fill=\"#e8ad66\" /><ellipse cx=\"145\" cy=\"152\" rx=\"8\" ry=\"8\" fill=\"#e8ad66\" /><ellipse cx=\"243\" cy=\"150\" rx=\"10\" ry=\"10\" fill=\"#e8ad66\" /><ellipse cx=\"177\" cy=\"210\" rx=\"8\" ry=\"8\" fill=\"#e8ad66\" /><ellipse cx=\"289\" cy=\"205\" rx=\"6\" ry=\"6\" fill=\"#e8ad66\" /></g><g><path d=\"M186 127L186 181\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M186 181L190.0 173.0L182.0 173.0Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M258 110L258 129\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M258 129L262.0 121.0L254.0 121.0Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M117 113L117 160\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M117 160L121.0 152.0L113.0 152.0Z\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><ellipse cx=\"106\" cy=\"248\" rx=\"10\" ry=\"5\" fill=\"#e8ad66\" /><ellipse cx=\"133\" cy=\"256\" rx=\"10\" ry=\"5\" fill=\"#e8ad66\" /><ellipse cx=\"160\" cy=\"248\" rx=\"10\" ry=\"5\" fill=\"#e8ad66\" /><ellipse cx=\"187\" cy=\"256\" rx=\"10\" ry=\"5\" fill=\"#e8ad66\" /><ellipse cx=\"214\" cy=\"248\" rx=\"10\" ry=\"5\" fill=\"#e8ad66\" /><ellipse cx=\"241\" cy=\"256\" rx=\"10\" ry=\"5\" fill=\"#e8ad66\" /><ellipse cx=\"268\" cy=\"248\" rx=\"10\" ry=\"5\" fill=\"#e8ad66\" /><ellipse cx=\"295\" cy=\"256\" rx=\"10\" ry=\"5\" fill=\"#e8ad66\" /></g></g></svg>",
         "meta": {
           "asset_id": "materials_mat_crack_tip",
           "label": "裂纹尖端",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-          "modifications": "Original vector artwork."
+          "label_en": "Crack tip",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/process_physical.svg",
+          "source_kind": "online-open-license",
+          "source_file": "process_physical.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "materials_mat_crack_tip",
@@ -114,16 +120,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"14\" width=\"76\" height=\"72\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><path d=\"M52 14 L43 35 L59 44 L40 64 L52 86\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><rect x=\"156\" y=\"41\" width=\"62\" height=\"109\" rx=\"8\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"165\" y=\"31\" width=\"44\" height=\"24\" rx=\"6\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><path d=\"M187 64 L171 94 L187 124 L202 94 Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"187\" y1=\"58\" x2=\"187\" y2=\"171\" stroke=\"#e8ad66\" stroke-width=\"2\" /><rect x=\"156\" y=\"89\" width=\"62\" height=\"15\" rx=\"0\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"94\" y=\"151\" width=\"186\" height=\"121\" rx=\"11\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"111\" y=\"167\" width=\"151\" height=\"85\" rx=\"5\" fill=\"#f4f8f8\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"163\" y=\"214\" width=\"53\" height=\"14\" rx=\"0\" fill=\"#58a6b3\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"186\" y=\"228\" width=\"10\" height=\"23\" rx=\"0\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /><polygon points=\"175,213 201,213 196,204 180,204\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><polygon points=\"225,177 248,189 242,204 220,192\" fill=\"#a99cc7\" stroke=\"#2b5662\" stroke-width=\"2\" /><path d=\"M220 192 L199 206\" fill=\"none\" stroke=\"#a99cc7\" stroke-width=\"2\" /></g><g><path d=\"M279 231 H308 V210\" fill=\"none\" stroke=\"#2b5662\" stroke-width=\"7\" /><rect x=\"291\" y=\"178\" width=\"58\" height=\"39\" rx=\"8\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"297\" y=\"217\" width=\"49\" height=\"9\" rx=\"2\" fill=\"#d8e4e6\" stroke=\"#2b5662\" stroke-width=\"2\" /></g><g><rect x=\"45\" y=\"187\" width=\"37\" height=\"48\" rx=\"4\" fill=\"#2b5662\" stroke=\"#2b5662\" stroke-width=\"2\" /><rect x=\"49\" y=\"192\" width=\"29\" height=\"29\" rx=\"2\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" /><line x1=\"62\" y1=\"236\" x2=\"62\" y2=\"259\" stroke=\"#2b5662\" stroke-width=\"5\" /></g></g></svg>",
         "meta": {
           "asset_id": "materials_fracture",
           "label": "裂纹扩展",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-          "modifications": "Original vector artwork."
+          "label_en": "Fracture",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_electron_microscopy.svg",
+          "source_kind": "online-open-license",
+          "source_file": "lab_electron_microscopy.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "materials_fracture",
@@ -149,16 +158,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"10\" x2=\"12\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><line x1=\"12\" y1=\"88\" x2=\"93\" y2=\"88\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M16 83 L36 47 L49 35 L67 23 L78 27 L88 52\" fill=\"none\" stroke=\"#C67F76\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"36\" cy=\"47\" r=\"3\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"67\" cy=\"23\" r=\"3\" fill=\"#D5AA6C\" stroke=\"#395B70\" stroke-width=\"2\" /><circle cx=\"85\" cy=\"44\" r=\"3\" fill=\"#C67F76\" stroke=\"#395B70\" stroke-width=\"2\" /><text x=\"18\" y=\"18\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">σ</text><text x=\"87\" y=\"98\" fill=\"#395B70\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">ε</text></svg>",
+        "svg": "<svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15,3V7.59L7.59,15H3V21H9V16.42L16.42,9H21V3M17,5H19V7H17M5,17H7V19H5\" /></svg>",
         "meta": {
           "asset_id": "materials_mat_stress_strain",
           "label": "应力应变曲线",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-          "modifications": "Original vector artwork."
+          "label_en": "Stress strain",
+          "author": "Pictogrammers / Material Design Icons",
+          "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-line.svg",
+          "license": "Apache-2.0",
+          "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/vector-line.svg",
+          "source_kind": "online-open-license",
+          "source_file": "vector-line.svg",
+          "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing."
         }
       },
       "asset_id": "materials_mat_stress_strain",
@@ -184,16 +196,19 @@
       "label_dy": 0.0,
       "evidence": "",
       "asset_snapshot": {
-        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"35\" y=\"8\" width=\"30\" height=\"18\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><rect x=\"29\" y=\"26\" width=\"42\" height=\"28\" fill=\"#DFEDF1\" rx=\"2\" stroke=\"#395B70\" stroke-width=\"2\" /><polygon points=\"39,54 61,54 66,66 34,66\" fill=\"#79A99A\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linejoin=\"round\" /><line x1=\"50\" y1=\"18\" x2=\"50\" y2=\"54\" stroke=\"#395B70\" stroke-width=\"2\" stroke-linecap=\"round\" /><path d=\"M34 66 L23 84 M50 66 L50 88 M66 66 L77 84\" fill=\"none\" stroke=\"#84B7C8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M18 82 L36 78 M64 78 L82 82\" fill=\"none\" stroke=\"#D5AA6C\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><text x=\"83\" y=\"26\" fill=\"#79A99A\" font-family=\"Arial\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\">SEM</text></svg>",
+        "svg": "<svg viewBox=\"0 0 400 320\" width=\"800\" height=\"640\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\"><g><path d=\"M60 76 H340 V251 H60 Z M92 122 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M152 122 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M212 122 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M272 122 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M92 188 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M152 188 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M212 188 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z M272 188 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 Z\" fill=\"#86b7d3\" stroke=\"#2b5662\" stroke-width=\"2\" fill-rule=\"evenodd\" /></g><g><path d=\"M95 131 Q110 111 125 131\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M155 131 Q170 111 185 131\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M215 131 Q230 111 245 131\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M275 131 Q290 111 305 131\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M95 197 Q110 177 125 197\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M155 197 Q170 177 185 197\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M215 197 Q230 177 245 197\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /><path d=\"M275 197 Q290 177 305 197\" fill=\"none\" stroke=\"#58a6b3\" stroke-width=\"3\" /></g><g><circle cx=\"106\" cy=\"129\" r=\"5\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"226\" cy=\"129\" r=\"5\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"106\" cy=\"195\" r=\"5\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /><circle cx=\"226\" cy=\"195\" r=\"5\" fill=\"#e8ad66\" stroke=\"#2b5662\" stroke-width=\"2\" /></g></g></svg>",
         "meta": {
           "asset_id": "materials_mat_sem",
           "label": "扫描电镜",
-          "author": "Rylume contributors",
-          "author_url": "https://github.com/zhao060206/Rylume",
-          "license": "CC0 1.0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-          "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/materials",
-          "modifications": "Original vector artwork."
+          "label_en": "SEM",
+          "author": "ScanSci contributors",
+          "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/mat_porous.svg",
+          "source_kind": "online-open-license",
+          "source_file": "mat_porous.svg",
+          "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing."
         }
       },
       "asset_id": "materials_mat_sem",

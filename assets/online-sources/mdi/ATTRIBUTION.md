@@ -1,0 +1,1 @@
+Material Design Icons by Pictogrammers\nLicense: Apache-2.0\nSource: https://github.com/Templarian/MaterialDesign\n

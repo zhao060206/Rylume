@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "id": "medicine",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "title": "医学",
   "domain": "medicine",
   "min_app_version": "3.1.0",
-  "license": "CC0-1.0",
+  "license": "Mixed open licenses; see each asset attribution",
   "assets": [
     {
       "id": "medicine_heart",
@@ -24,13 +24,15 @@
         "心脏",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "0233316f6b8f387e73e761cd27f0a661b7fc023d82d9ba535525c9cef5272b72"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heart.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "heart.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/heart.svg",
+      "sha256": "9d63cd842c043c59995b5c1a5b1f8b45d1bfd9ce7bd8f95b4978e81464ec74b2"
     },
     {
       "id": "medicine_lung",
@@ -49,13 +51,15 @@
         "肺",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "98f6ede48d4d0767610e58a4b5ce03a0e1112acd3b91f48c02c396b587d261b3"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_eukaryotic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
     },
     {
       "id": "medicine_brain",
@@ -74,13 +78,15 @@
         "脑",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "16efc988a6fb0dfcc7ac1955ef72ee691a802009e4a1663be926690488aefab5"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "brain.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "sha256": "08f604915b1e6ab6187a109f1efa443a9d12d76484b3e4bc9e23badee1126dec"
     },
     {
       "id": "medicine_kidney",
@@ -99,13 +105,15 @@
         "肾脏",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "59dd045245923df4f398370f73ea01e2486b0cfad234cf68018147292f15a259"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_musculoskeletal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
       "id": "medicine_liver",
@@ -124,13 +132,15 @@
         "肝脏",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "fec7badd5488647192b10e46611e4d6a069c94066736767abc02d6eee80b58c7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_respiratory.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_respiratory.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_respiratory.svg",
+      "sha256": "8159eff82ba20dcc3f2eb48410427898545cb45c0fbb04551f906508b17252eb"
     },
     {
       "id": "medicine_vessel",
@@ -149,13 +159,15 @@
         "血管",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "c5e590b85bda839e7ad9d227c7a8fd637d6f9964bee572edd94d2f8523e4bbd6"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_urogenital.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "sha256": "0e215860d09dc1c52051f652c124f17873e6bb57d6a4dcf647421efe0f66408f"
     },
     {
       "id": "medicine_capillary",
@@ -174,13 +186,15 @@
         "毛细血管",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "e4d9ecf2c9a565ec8260238f106d6e70cde54efe2e90e8f7ba8bbd6fc880de4c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_molecular_assays.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
       "id": "medicine_syringe",
@@ -199,13 +213,15 @@
         "注射器",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "0c12118e6bb0cd5241a746cdd5eac718ab5d13760824b89ef65805d1a4fbc5ce"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_digestive.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
       "id": "medicine_tablet",
@@ -224,13 +240,15 @@
         "药片",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "37edcd4a6cd7d0edf186ff4ed1d9a581635e6fbb9025ab5db212da4e6b4cd5c2"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tablet.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "tablet.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tablet.svg",
+      "sha256": "663fbc51db92fe5738a0c128fd4a1e98ec96a2efe1e82fccd4cdec7a65a74d3e"
     },
     {
       "id": "medicine_ultrasound",
@@ -249,13 +267,15 @@
         "超声设备",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "2958d00ca2f4753d2277b17cff4268aa5f9eea5e2c360720cbb18f76854a7bd3"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_microalga.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
       "id": "medicine_mri",
@@ -274,13 +294,15 @@
         "磁共振设备",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "4f23ef6bf7991efea30aafda83968d36992c59a62d1bf3a9e8e0a58a3f5129ce"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_digestive.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
       "id": "medicine_ecg",
@@ -299,13 +321,15 @@
         "心电图示意",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "dfe6840063aa89905787e047250a1107d3d21ae1912c5b8b6e4705fedf345a33"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_skin_tissue.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
       "id": "medicine_patient",
@@ -324,13 +348,15 @@
         "患者",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "6552ca096ba32b3705ab491ef034d83d94dbb117634c64404ac0cd2387074af0"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "people_actions.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "sha256": "29df23cc3fb9dfd137603a4e35453f3f411250b7730088d3044ff5894008aaf5"
     },
     {
       "id": "medicine_hospital",
@@ -349,13 +375,15 @@
         "医院",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "dcf8bd684ed1ccaaaad840b288e120537d354cad8bc1bd6c0ba3f243d07f267e"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hospital.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "hospital.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/hospital.svg",
+      "sha256": "18b5d51cf9db3424298b8788be7b72d18927d55f8c949c0156bcaccdba50553f"
     },
     {
       "id": "medicine_stethoscope",
@@ -374,13 +402,15 @@
         "听诊器",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "fa15245439641d4602025c0ba19bf40cf787c84ba6bc522ee7c07526563bc3bd"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stethoscope.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "stethoscope.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stethoscope.svg",
+      "sha256": "4c3fe6dfc58ecd76800e9977530b50089d6937ce448efd3c2819f27aa0a59c37"
     },
     {
       "id": "medicine_biomarker",
@@ -399,13 +429,15 @@
         "生物标志物",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "7dacf93a94016369260151542b01f2f6ff5cc11c3f8e47b609d285d0bedfb56a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_eukaryotic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
     },
     {
       "id": "medicine_cohort",
@@ -424,13 +456,15 @@
         "研究队列",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "c07b72ba0814b18b14a47713b152770db8b8e17fba86d8b5b2647391b751ef19"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_protist.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "sha256": "5b9651d2b76985091189b6d21ce482b0ace84b335df671825612adc563aab99e"
     },
     {
       "id": "medicine_iv",
@@ -449,19 +483,21 @@
         "输液装置",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "feb5934e8398b0d5d273fe4a832f2cfb50ec7a179d5f6f9b5aaa112dd3406862"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/iv-bag.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "iv-bag.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/iv-bag.svg",
+      "sha256": "de0ab070d47aa7fd5d0ab70d4dce8d79793d23e6559860e6fa6b5fa3edac7ea3"
     },
     {
       "id": "medicine_med_synapse",
       "asset_id": "medicine_med_synapse",
       "label": "突触",
-      "label_en": "Med synapse",
+      "label_en": "Synapse",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -474,19 +510,21 @@
         "突触",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "df4163069f6c4c69f1708e7e11d5807fc2c063f002d439c850fb23b06963fcdc"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_molecular_assays.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
       "id": "medicine_med_axon",
       "asset_id": "medicine_med_axon",
       "label": "轴突",
-      "label_en": "Med axon",
+      "label_en": "Axon",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -499,19 +537,21 @@
         "轴突",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "1fa06d0725d11bb66315f667167b9ac2ad80d2e2d0117d30ae7f961a37a33ddd"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "people_actions.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "sha256": "29df23cc3fb9dfd137603a4e35453f3f411250b7730088d3044ff5894008aaf5"
     },
     {
       "id": "medicine_med_spine",
       "asset_id": "medicine_med_spine",
       "label": "脊柱",
-      "label_en": "Med spine",
+      "label_en": "Spine",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -524,19 +564,21 @@
         "脊柱",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "34d6e451a0988b88192ac46ac14fe70e40dfb4c166e026c5f033f42741bfe29b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_microalga.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
       "id": "medicine_med_skeleton",
       "asset_id": "medicine_med_skeleton",
       "label": "骨骼",
-      "label_en": "Med skeleton",
+      "label_en": "Skeleton",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -549,19 +591,21 @@
         "骨骼",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "a5fbcfe1e98b32c2bb646f59eb028d447db58f630a54df66a8706e1da229046c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_organelle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
       "id": "medicine_med_muscle",
       "asset_id": "medicine_med_muscle",
       "label": "肌肉",
-      "label_en": "Med muscle",
+      "label_en": "Muscle",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -574,19 +618,21 @@
         "肌肉",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "6669157e308bfb955ae0c2ee2d6748d70873bb1c87515a10d3d15d2f7786d14f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_skin_tissue.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
       "id": "medicine_med_skin",
       "asset_id": "medicine_med_skin",
       "label": "皮肤分层",
-      "label_en": "Med skin",
+      "label_en": "Skin",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -599,19 +645,21 @@
         "皮肤分层",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "79952064d2f5b27fd4da5803d3e3c09e293af4c1bed7dc6ed5ad17a7c371ff47"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_musculoskeletal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
       "id": "medicine_med_stomach",
       "asset_id": "medicine_med_stomach",
       "label": "胃",
-      "label_en": "Med stomach",
+      "label_en": "Stomach",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -624,19 +672,21 @@
         "胃",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "f7fc65c7dc6148cf520a7436c87cf2191c7635f25b0fdffb5b70b0bec42d493d"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stomach.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "stomach.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/stomach.svg",
+      "sha256": "c6fff53d28049673b259c0d840c8ea24dfaea33122213960acfc29a2844a9115"
     },
     {
       "id": "medicine_med_intestine",
       "asset_id": "medicine_med_intestine",
       "label": "肠道",
-      "label_en": "Med intestine",
+      "label_en": "Intestine",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -649,19 +699,21 @@
         "肠道",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "5eb5e28ee45673624ec533ca3a413b3ea7ba83a5d8ec9cdd550f39e95de46072"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_urogenital.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "sha256": "0e215860d09dc1c52051f652c124f17873e6bb57d6a4dcf647421efe0f66408f"
     },
     {
       "id": "medicine_med_pancreas",
       "asset_id": "medicine_med_pancreas",
       "label": "胰腺",
-      "label_en": "Med pancreas",
+      "label_en": "Pancreas",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -674,19 +726,21 @@
         "胰腺",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "c153b154106cf9ed63a1ad6ac5650db13281c5eb499c4b30ee611daec3475ef3"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_molecular_assays.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
       "id": "medicine_med_spleen",
       "asset_id": "medicine_med_spleen",
       "label": "脾",
-      "label_en": "Med spleen",
+      "label_en": "Spleen",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -699,19 +753,21 @@
         "脾",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "2897e18b823cfbb719d66a017c4e3b246eab3f57ab3bbcf3a2249d8d2c610a62"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_archaeon.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_archaeon.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_archaeon.svg",
+      "sha256": "d38b061d52455541f2b451c0349c702eebfa6853076c6ea8e7616b5e71ec0c62"
     },
     {
       "id": "medicine_med_bladder",
       "asset_id": "medicine_med_bladder",
       "label": "膀胱",
-      "label_en": "Med bladder",
+      "label_en": "Bladder",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -724,19 +780,21 @@
         "膀胱",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "5027ff0635769f23c73ea43b67bd9e5baa7a3063619d3530b63f6da3e105911c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_organelle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
       "id": "medicine_med_uterus",
       "asset_id": "medicine_med_uterus",
       "label": "子宫",
-      "label_en": "Med uterus",
+      "label_en": "Uterus",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -749,19 +807,21 @@
         "子宫",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "7eaa738703f6d2d1e28eb1cde26801a3e953770a4dfec155fe68ca5c33515186"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_digestive.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
       "id": "medicine_med_ovary",
       "asset_id": "medicine_med_ovary",
       "label": "卵巢",
-      "label_en": "Med ovary",
+      "label_en": "Ovary",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -774,19 +834,21 @@
         "卵巢",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "542e6efb04c911e2e1217daa96e46cdc3f1829cb6e378aa07c88473726fffc69"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "people_actions.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "sha256": "29df23cc3fb9dfd137603a4e35453f3f411250b7730088d3044ff5894008aaf5"
     },
     {
       "id": "medicine_med_eye",
       "asset_id": "medicine_med_eye",
       "label": "眼",
-      "label_en": "Med eye",
+      "label_en": "Eye",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -799,19 +861,21 @@
         "眼",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "0b3dd12879d4e3716bdd0e46535ea1c31e08a506b1a9a5800a62f4ff9d199715"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "eye.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye.svg",
+      "sha256": "6f337720073911f7e5703e3463161d027d9e8f389f7d3ddf592c0529524caac3"
     },
     {
       "id": "medicine_med_ear",
       "asset_id": "medicine_med_ear",
       "label": "耳",
-      "label_en": "Med ear",
+      "label_en": "Ear",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -824,19 +888,21 @@
         "耳",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "925d6be737450cbbd3e24327b61b6d3e71a4d283a712a4e64152d0c16c9ebb01"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ear-hearing.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "ear-hearing.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/ear-hearing.svg",
+      "sha256": "845ac2b813ca7b5c41483aede90c9f9dd25b557d1e9908de138b654d9a957542"
     },
     {
       "id": "medicine_med_tooth",
       "asset_id": "medicine_med_tooth",
       "label": "牙",
-      "label_en": "Med tooth",
+      "label_en": "Tooth",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -849,19 +915,21 @@
         "牙",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "ef4f1ae26942a2b20d6d03735a8a88c59ecc455558d6885d059aa01a8542984d"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tooth.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "tooth.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tooth.svg",
+      "sha256": "2c658a8837eefab3bb18787d5fffb5f563e84d144a5c255f9ed018c03dbbb168"
     },
     {
       "id": "medicine_med_bone",
       "asset_id": "medicine_med_bone",
       "label": "骨",
-      "label_en": "Med bone",
+      "label_en": "Bone",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -874,19 +942,21 @@
         "骨",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "0406a1ca05cd6a95e7db333431f763817951f23fadda0f43b4489f5991d80aab"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bone.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "bone.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bone.svg",
+      "sha256": "ede545a130c013bbe34f6cd0082cf264d3937444cbf3ecd75ca967b1e62e90bf"
     },
     {
       "id": "medicine_med_joint",
       "asset_id": "medicine_med_joint",
       "label": "关节",
-      "label_en": "Med joint",
+      "label_en": "Joint",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -899,19 +969,21 @@
         "关节",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "00a44d50944eafa34bf1fdf9c7fbd465da8e9a9425c287c4879ca8aee45d4fa0"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_virus.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_virus.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_virus.svg",
+      "sha256": "a294f89dd572c6b585c87a23840049e570fde1a093b554e554cf8fb86e44e2b6"
     },
     {
       "id": "medicine_med_artery",
       "asset_id": "medicine_med_artery",
       "label": "动脉",
-      "label_en": "Med artery",
+      "label_en": "Artery",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -924,19 +996,21 @@
         "动脉",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "dc064cb51ea280f7ad25f4521cdf091e0680c04b0f12241484d0211b60214da6"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_endocrine.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "sha256": "d6f1d359c1d5cac88ed976040db7a5dc4d864f4b86420fecc9aa9bb0686b0b87"
     },
     {
       "id": "medicine_med_vein",
       "asset_id": "medicine_med_vein",
       "label": "静脉",
-      "label_en": "Med vein",
+      "label_en": "Vein",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -949,19 +1023,21 @@
         "静脉",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "6348c0a8c94e27fa05d669b740adc2aeeecf114d3a67a28d56aa58efa040d423"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_skin_tissue.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
       "id": "medicine_med_lymph",
       "asset_id": "medicine_med_lymph",
       "label": "淋巴结",
-      "label_en": "Med lymph",
+      "label_en": "Lymph",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -974,19 +1050,21 @@
         "淋巴结",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "5cbd7272e512c5bbef83cfa06c3884ce73d0b1af893f1c8487fc7a5a9e4ffd0c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_endocrine.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "sha256": "d6f1d359c1d5cac88ed976040db7a5dc4d864f4b86420fecc9aa9bb0686b0b87"
     },
     {
       "id": "medicine_med_immune",
       "asset_id": "medicine_med_immune",
       "label": "免疫细胞",
-      "label_en": "Med immune",
+      "label_en": "Immune",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -999,19 +1077,21 @@
         "免疫细胞",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "5ed0a0d82c25f713d16da8baf06a3dea1807def93e9c0b5e1b4227116dc0580c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_organelle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
       "id": "medicine_med_rbc",
       "asset_id": "medicine_med_rbc",
       "label": "红细胞",
-      "label_en": "Med rbc",
+      "label_en": "Rbc",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1024,19 +1104,21 @@
         "红细胞",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "7e502e7e6779f727106341abca223e7226ec54ae0686e3c52b8b0932b8e48633"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_archaeon.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_archaeon.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_archaeon.svg",
+      "sha256": "d38b061d52455541f2b451c0349c702eebfa6853076c6ea8e7616b5e71ec0c62"
     },
     {
       "id": "medicine_med_platelet",
       "asset_id": "medicine_med_platelet",
       "label": "血小板",
-      "label_en": "Med platelet",
+      "label_en": "Platelet",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1049,19 +1131,21 @@
         "血小板",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "6e9dab527c5c61e0cdd0cd39f90ea93c4a5fcf1bd41f2eedc082635438cda720"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_musculoskeletal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
       "id": "medicine_med_antibody",
       "asset_id": "medicine_med_antibody",
       "label": "抗体",
-      "label_en": "Med antibody",
+      "label_en": "Antibody",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1074,19 +1158,21 @@
         "抗体",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "e8fbf7c327f6686b4f68beba39fbf6733d9f75a70b595570ecd3cb204d378bd8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_skin_tissue.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
       "id": "medicine_med_antigen",
       "asset_id": "medicine_med_antigen",
       "label": "抗原",
-      "label_en": "Med antigen",
+      "label_en": "Antigen",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1099,19 +1185,21 @@
         "抗原",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "1610d13612c19681bf85c03a18435db82db64f12756c4507e0c64dbc09e60129"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_organelle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
       "id": "medicine_med_dna",
       "asset_id": "medicine_med_dna",
       "label": "DNA 双螺旋",
-      "label_en": "Med DNA",
+      "label_en": "DNA",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1124,19 +1212,21 @@
         "DNA 双螺旋",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "14441b5658bba882d14c859b4fb4a71764bdbbfaeb447be60e9defabf6d6cc02"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "dna.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "sha256": "2edf4c8a7cc5ec0454d94baa37f976aba8f27f2436485f3a6fd96f589aee6cdb"
     },
     {
       "id": "medicine_med_chromosome",
       "asset_id": "medicine_med_chromosome",
       "label": "染色体",
-      "label_en": "Med chromosome",
+      "label_en": "Chromosome",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1149,19 +1239,21 @@
         "染色体",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "90b349233c2bb40614097c3573da1c5d9acae3cd05c93f795c09b04504a8f2f3"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_musculoskeletal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
       "id": "medicine_med_gene",
       "asset_id": "medicine_med_gene",
       "label": "基因结构",
-      "label_en": "Med gene",
+      "label_en": "Gene",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1174,19 +1266,21 @@
         "基因结构",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "e4dc832868e5372e0da919a6051de3a7cd0305ce23b0d86d8d3ac98901a19072"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_musculoskeletal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
       "id": "medicine_med_membrane",
       "asset_id": "medicine_med_membrane",
       "label": "细胞膜",
-      "label_en": "Med membrane",
+      "label_en": "Membrane",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1199,19 +1293,21 @@
         "细胞膜",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "c633c73c6331470248aaa928431cfee86851d1e78cb1d3b24300038d7cfb5700"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_cardiovascular_lymph.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_cardiovascular_lymph.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_cardiovascular_lymph.svg",
+      "sha256": "a40718549ed80e37d0e7346b934919d45d23d61dc3680a2798cdb7c770576019"
     },
     {
       "id": "medicine_med_mitochondria",
       "asset_id": "medicine_med_mitochondria",
       "label": "线粒体",
-      "label_en": "Med mitochondria",
+      "label_en": "Mitochondria",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1224,19 +1320,21 @@
         "线粒体",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "d321aaa6d6e5c0656fc7e72a68a4d5fe488ce8abbb1b3e3d8eac2a453e46ca02"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_microalga.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
       "id": "medicine_med_nucleus",
       "asset_id": "medicine_med_nucleus",
       "label": "细胞核",
-      "label_en": "Med nucleus",
+      "label_en": "Nucleus",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1249,19 +1347,21 @@
         "细胞核",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "93c995d1037bd5bc8fd933430db94ac9108b8f829f3ecb9513cfb85f03d3338f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_eukaryotic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
     },
     {
       "id": "medicine_med_ribosome",
       "asset_id": "medicine_med_ribosome",
       "label": "核糖体",
-      "label_en": "Med ribosome",
+      "label_en": "Ribosome",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1274,19 +1374,21 @@
         "核糖体",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "c9700c4f550b4c93db7966d1f9df3f4c11953c8ee3802aa4e24c097766ab5d45"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_organelle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
       "id": "medicine_med_protein",
       "asset_id": "medicine_med_protein",
       "label": "蛋白质",
-      "label_en": "Med protein",
+      "label_en": "Protein",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1299,19 +1401,21 @@
         "蛋白质",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "c6b2e0b4595f3a162b7749dcc0da6282da7c5b9d7350db9998ab52dea67b8a46"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_eukaryotic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
     },
     {
       "id": "medicine_med_enzyme",
       "asset_id": "medicine_med_enzyme",
       "label": "酶",
-      "label_en": "Med enzyme",
+      "label_en": "Enzyme",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1324,19 +1428,21 @@
         "酶",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "cef9481cda53481da9bad49637673979565399ece038d5b78e6a3219f304bda4"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_digestive.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
       "id": "medicine_med_receptor",
       "asset_id": "medicine_med_receptor",
       "label": "受体",
-      "label_en": "Med receptor",
+      "label_en": "Receptor",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1349,19 +1455,21 @@
         "受体",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "3d32d1773c94cbf57a7e7905422386e6c98bbd92b61491d2aa9c44f9f73a712c"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_organelle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
     },
     {
       "id": "medicine_med_cytokine",
       "asset_id": "medicine_med_cytokine",
       "label": "细胞因子",
-      "label_en": "Med cytokine",
+      "label_en": "Cytokine",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1374,19 +1482,21 @@
         "细胞因子",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "e6b0ce19e1edc537f99f29a53bee0111bf0ccad226db1723f57f4e4ce351fbaf"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_musculoskeletal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
       "id": "medicine_med_inflammation",
       "asset_id": "medicine_med_inflammation",
       "label": "炎症",
-      "label_en": "Med inflammation",
+      "label_en": "Inflammation",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1399,19 +1509,21 @@
         "炎症",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "28a2919fe50df1f5c40442cda8dc9600dc400b0e9b00963212fbbc17b9077963"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_molecular_assays.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
       "id": "medicine_med_infection",
       "asset_id": "medicine_med_infection",
       "label": "感染",
-      "label_en": "Med infection",
+      "label_en": "Infection",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1424,19 +1536,21 @@
         "感染",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "d6640e76598bcc6f9a58183e29ae46ca3d3439fa2b438ecd5cd700a118de71e6"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_bacterium.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_bacterium.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_bacterium.svg",
+      "sha256": "25cc33e6830329fe53dc3b079a125c1af9b040acdda2e4a488d292f608aa373d"
     },
     {
       "id": "medicine_med_bacteria",
       "asset_id": "medicine_med_bacteria",
       "label": "细菌",
-      "label_en": "Med bacteria",
+      "label_en": "Bacteria",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1449,19 +1563,21 @@
         "细菌",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "ef617278fe1d17884cdcce12870aad5feabe0cc80e7c584e77478a1718bc2e54"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "bacteria.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "sha256": "050e48d40bf051f812e9f21ec901851d0cbb666f74407e782e702b8e55579626"
     },
     {
       "id": "medicine_med_virus",
       "asset_id": "medicine_med_virus",
       "label": "病毒",
-      "label_en": "Med virus",
+      "label_en": "Virus",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1474,19 +1590,21 @@
         "病毒",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "17d101ce645b46e06e46b62dcc14425aaf6e26652ed8f4033e3950cbac5f57ad"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/virus.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "virus.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/virus.svg",
+      "sha256": "0fb365ba87cff538f267ab0c8e4b44dc0911a649f1e365a01bbc4c7d096be6cf"
     },
     {
       "id": "medicine_med_fungus",
       "asset_id": "medicine_med_fungus",
       "label": "真菌",
-      "label_en": "Med fungus",
+      "label_en": "Fungus",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1499,19 +1617,21 @@
         "真菌",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "7ffa460772f44685f645061c7172bb07c18a0a6683237231c69953c89a1d8777"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_skin_tissue.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
     },
     {
       "id": "medicine_med_parasite",
       "asset_id": "medicine_med_parasite",
       "label": "寄生虫",
-      "label_en": "Med parasite",
+      "label_en": "Parasite",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1524,19 +1644,21 @@
         "寄生虫",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "7cc11e74be3ec3f768783b0a43788486046e0a5b9e6d0f28b6901483c7053aa8"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_urogenital.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "sha256": "0e215860d09dc1c52051f652c124f17873e6bb57d6a4dcf647421efe0f66408f"
     },
     {
       "id": "medicine_med_tumor",
       "asset_id": "medicine_med_tumor",
       "label": "肿瘤",
-      "label_en": "Med tumor",
+      "label_en": "Tumor",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1549,19 +1671,21 @@
         "肿瘤",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "eacb39bdeba9b3fb97b894a63596d428f982d714003c41ad104c3ecccacbe5d7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_microalga.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
       "id": "medicine_med_metastasis",
       "asset_id": "medicine_med_metastasis",
       "label": "肿瘤转移",
-      "label_en": "Med metastasis",
+      "label_en": "Metastasis",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1574,19 +1698,21 @@
         "肿瘤转移",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "6303c877b941a99b38278217542679e56812f907b51a561832544793b98db15b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_digestive.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_digestive.svg",
+      "sha256": "fface293d5393a89695a4900919835916cac0cd457101dc5f5527fc2b584b778"
     },
     {
       "id": "medicine_med_surgery",
       "asset_id": "medicine_med_surgery",
       "label": "手术",
-      "label_en": "Med surgery",
+      "label_en": "Surgery",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1599,19 +1725,21 @@
         "手术",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "df90e8511026dbe49aea163a1521a77995c00d950a3df072eda1530a40f393a7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "lab_molecular_assays.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/lab_molecular_assays.svg",
+      "sha256": "5a8f1719c9a11554fc9856912e82e6277b0a5441f7af6ce9c81923c1485d2278"
     },
     {
       "id": "medicine_med_scalpel",
       "asset_id": "medicine_med_scalpel",
       "label": "手术刀",
-      "label_en": "Med scalpel",
+      "label_en": "Scalpel",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1624,19 +1752,21 @@
         "手术刀",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "c17903e9d697c06bea38c61e30908742dd53fe65efbdc088d095c5c77d61444a"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_endocrine.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "sha256": "d6f1d359c1d5cac88ed976040db7a5dc4d864f4b86420fecc9aa9bb0686b0b87"
     },
     {
       "id": "medicine_med_forceps",
       "asset_id": "medicine_med_forceps",
       "label": "手术镊",
-      "label_en": "Med forceps",
+      "label_en": "Forceps",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1649,19 +1779,21 @@
         "手术镊",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "c1126b139e5ef41be0bd6e799e1507c750722daef2c360b7bb56717d0c65902d"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_musculoskeletal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
       "id": "medicine_med_endoscope",
       "asset_id": "medicine_med_endoscope",
       "label": "内窥镜",
-      "label_en": "Med endoscope",
+      "label_en": "Endoscope",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1674,19 +1806,21 @@
         "内窥镜",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "866030af8326a08a2109e09ab8a40934d26f8e3c851eafa6b6147468aeea3ada"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_microalga.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_microalga.svg",
+      "sha256": "6b5134909382630658ab8d65eb457326197fce0dbd57fdcac9bd440283ad9bc5"
     },
     {
       "id": "medicine_med_ventilator",
       "asset_id": "medicine_med_ventilator",
       "label": "呼吸机",
-      "label_en": "Med ventilator",
+      "label_en": "Ventilator",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1699,19 +1833,21 @@
         "呼吸机",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "d2c985884902059abfe82026158ec0043b80e8fd0bf142b361dcf3d0380140d7"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_endocrine.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_endocrine.svg",
+      "sha256": "d6f1d359c1d5cac88ed976040db7a5dc4d864f4b86420fecc9aa9bb0686b0b87"
     },
     {
       "id": "medicine_med_defibrillator",
       "asset_id": "medicine_med_defibrillator",
       "label": "除颤器",
-      "label_en": "Med defibrillator",
+      "label_en": "Defibrillator",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1724,19 +1860,21 @@
         "除颤器",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "90ef61e7a8c159061f237b0e7fa3df96a0f9f8d254fc697dee0b0cbc14ce37f9"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_urogenital.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_urogenital.svg",
+      "sha256": "0e215860d09dc1c52051f652c124f17873e6bb57d6a4dcf647421efe0f66408f"
     },
     {
       "id": "medicine_med_pacemaker",
       "asset_id": "medicine_med_pacemaker",
       "label": "心脏起搏器",
-      "label_en": "Med pacemaker",
+      "label_en": "Pacemaker",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1749,19 +1887,21 @@
         "心脏起搏器",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "8348e0c7ad36c4530be65a1466c4055651ba9ba5f9650546c75bd825fa5b66ff"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_musculoskeletal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
     },
     {
       "id": "medicine_med_dialysis",
       "asset_id": "medicine_med_dialysis",
       "label": "透析",
-      "label_en": "Med dialysis",
+      "label_en": "Dialysis",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1774,19 +1914,21 @@
         "透析",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "055144d9cbf2757b014681d641ac6fb79bb11161aa6ac463da18dc7679441adb"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_neural_sensory.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "sha256": "be1ba8cf16a227f4c3fda354c4cd10cc3d939bfd37d56706491a9ae37dd4d812"
     },
     {
       "id": "medicine_med_ct",
       "asset_id": "medicine_med_ct",
       "label": "CT 扫描",
-      "label_en": "Med CT",
+      "label_en": "CT",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1799,19 +1941,21 @@
         "CT 扫描",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "20c77a4e3d0d031b3b8113037703ead2bbccde1e111a06cc9c4670ac5e44e28b"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_protist.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "sha256": "5b9651d2b76985091189b6d21ce482b0ace84b335df671825612adc563aab99e"
     },
     {
       "id": "medicine_med_xray",
       "asset_id": "medicine_med_xray",
       "label": "X 射线",
-      "label_en": "Med xray",
+      "label_en": "Xray",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1824,19 +1968,21 @@
         "X 射线",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "ebe2ffa7b339253c2f9c76945fafdecb00a5ff5e1f25fb39294bdb5a011ddb5f"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_cardiovascular_lymph.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_cardiovascular_lymph.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_cardiovascular_lymph.svg",
+      "sha256": "a40718549ed80e37d0e7346b934919d45d23d61dc3680a2798cdb7c770576019"
     },
     {
       "id": "medicine_med_pet",
       "asset_id": "medicine_med_pet",
       "label": "PET 扫描",
-      "label_en": "Med PET",
+      "label_en": "PET",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1849,19 +1995,21 @@
         "PET 扫描",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "8dac1034620d548d06cf00549ad61229cf6656c7ef2bd431f6e4d8b3a4dded27"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_neural_sensory.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "sha256": "be1ba8cf16a227f4c3fda354c4cd10cc3d939bfd37d56706491a9ae37dd4d812"
     },
     {
       "id": "medicine_med_lab_test",
       "asset_id": "medicine_med_lab_test",
       "label": "临床检验",
-      "label_en": "Med lab test",
+      "label_en": "Lab test",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1874,19 +2022,21 @@
         "临床检验",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "fbcceef21e1fd3a9175572689c0231fd01306b066f6b6f5c6e41f022842f9415"
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "test-tube.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
     },
     {
       "id": "medicine_med_vaccine",
       "asset_id": "medicine_med_vaccine",
       "label": "疫苗",
-      "label_en": "Med vaccine",
+      "label_en": "Vaccine",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1899,19 +2049,21 @@
         "疫苗",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "de817b6f53131c05be2877288fbfdc4e46c9a156723b89fee4b5c497ecfe7c90"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "people_actions.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/people_actions.svg",
+      "sha256": "29df23cc3fb9dfd137603a4e35453f3f411250b7730088d3044ff5894008aaf5"
     },
     {
       "id": "medicine_med_capsule",
       "asset_id": "medicine_med_capsule",
       "label": "胶囊",
-      "label_en": "Med capsule",
+      "label_en": "Capsule",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1924,19 +2076,21 @@
         "胶囊",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "a19236665bd183f2ad10edc25e5ce2b1224fc433bd6f0b132bfe3e9900f36e18"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_virus.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_virus.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_virus.svg",
+      "sha256": "a294f89dd572c6b585c87a23840049e570fde1a093b554e554cf8fb86e44e2b6"
     },
     {
       "id": "medicine_med_inhaler",
       "asset_id": "medicine_med_inhaler",
       "label": "吸入器",
-      "label_en": "Med inhaler",
+      "label_en": "Inhaler",
       "category": "器官、诊疗与研究流程",
       "type": "symbol",
       "default_dim": [
@@ -1949,13 +2103,825 @@
         "吸入器",
         "医学"
       ],
-      "author": "Rylume contributors",
-      "license": "CC0 1.0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "author_url": "https://github.com/zhao060206/Rylume",
-      "source_url": "https://github.com/zhao060206/Rylume/tree/main/resource-packs/medicine",
-      "modifications": "Original vector artwork.",
-      "sha256": "8bee4837c55d58950408a9184c290c61b997a9aaf27ea943ec04a12a7369f992"
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_skin_tissue.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_skin_tissue.svg",
+      "sha256": "24aa9165a72b2eef85b540d5a8b540395f46a5010a23978e9bc7654870a32099"
+    },
+    {
+      "id": "medicine_med_cell",
+      "asset_id": "medicine_med_cell",
+      "label": "细胞",
+      "label_en": "Cell",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_cell.svg",
+      "keywords": [
+        "med_cell",
+        "细胞",
+        "医学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_organelle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_organelle.svg",
+      "sha256": "12a455a04050aad98fd409aad964f2481e81afae00df168038f92479b2587f3e"
+    },
+    {
+      "id": "medicine_med_tissue",
+      "asset_id": "medicine_med_tissue",
+      "label": "组织切片",
+      "label_en": "Tissue section",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_tissue.svg",
+      "keywords": [
+        "med_tissue",
+        "组织切片",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microscope.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "microscope.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/microscope.svg",
+      "sha256": "436386fdc11b200be10f4b8bf709c8c914c3a675f94d0b8f122f4dbc24cb4235"
+    },
+    {
+      "id": "medicine_med_organoid",
+      "asset_id": "medicine_med_organoid",
+      "label": "类器官",
+      "label_en": "Organoid",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_organoid.svg",
+      "keywords": [
+        "med_organoid",
+        "类器官",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shape.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "shape.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shape.svg",
+      "sha256": "2cc65609a7264af800b4ef718c868548d18c50ae39e14f6d0fc97078854a66ee"
+    },
+    {
+      "id": "medicine_med_stem_cell",
+      "asset_id": "medicine_med_stem_cell",
+      "label": "干细胞",
+      "label_en": "Stem cell",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_stem_cell.svg",
+      "keywords": [
+        "med_stem_cell",
+        "干细胞",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sprout.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "sprout.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/sprout.svg",
+      "sha256": "ac0a3c198bb422d6790df66941669d4227782b958e36651ec964f339142d1635"
+    },
+    {
+      "id": "medicine_med_tcell",
+      "asset_id": "medicine_med_tcell",
+      "label": "T 细胞",
+      "label_en": "T cell",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_tcell.svg",
+      "keywords": [
+        "med_tcell",
+        "T 细胞",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/account-group.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "account-group.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/account-group.svg",
+      "sha256": "751971707efb7bf4f6a27e8d138aa13bcb67d7dfff4d829748d49f3e6467284d"
+    },
+    {
+      "id": "medicine_med_bcell",
+      "asset_id": "medicine_med_bcell",
+      "label": "B 细胞",
+      "label_en": "B cell",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_bcell.svg",
+      "keywords": [
+        "med_bcell",
+        "B 细胞",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/account-group.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "account-group.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/account-group.svg",
+      "sha256": "751971707efb7bf4f6a27e8d138aa13bcb67d7dfff4d829748d49f3e6467284d"
+    },
+    {
+      "id": "medicine_med_macrophage",
+      "asset_id": "medicine_med_macrophage",
+      "label": "巨噬细胞",
+      "label_en": "Macrophage",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_macrophage.svg",
+      "keywords": [
+        "med_macrophage",
+        "巨噬细胞",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "bacteria.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "sha256": "050e48d40bf051f812e9f21ec901851d0cbb666f74407e782e702b8e55579626"
+    },
+    {
+      "id": "medicine_med_neutrophil",
+      "asset_id": "medicine_med_neutrophil",
+      "label": "中性粒细胞",
+      "label_en": "Neutrophil",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_neutrophil.svg",
+      "keywords": [
+        "med_neutrophil",
+        "中性粒细胞",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "bacteria.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/bacteria.svg",
+      "sha256": "050e48d40bf051f812e9f21ec901851d0cbb666f74407e782e702b8e55579626"
+    },
+    {
+      "id": "medicine_med_dendritic",
+      "asset_id": "medicine_med_dendritic",
+      "label": "树突状细胞",
+      "label_en": "Dendritic cell",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_dendritic.svg",
+      "keywords": [
+        "med_dendritic",
+        "树突状细胞",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "tree.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/tree.svg",
+      "sha256": "f7935b431ca24b100b28f93bc0e30b2835c37d872eb08424b7506abc477ea73b"
+    },
+    {
+      "id": "medicine_med_complement",
+      "asset_id": "medicine_med_complement",
+      "label": "补体系统",
+      "label_en": "Complement system",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_complement.svg",
+      "keywords": [
+        "med_complement",
+        "补体系统",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "shield.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/shield.svg",
+      "sha256": "30ea8605cd87e72aaa7946781a54ca00e56b3aa926163296aada400c59f04d05"
+    },
+    {
+      "id": "medicine_med_blood_brain_barrier",
+      "asset_id": "medicine_med_blood_brain_barrier",
+      "label": "血脑屏障",
+      "label_en": "Blood-brain barrier",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_blood_brain_barrier.svg",
+      "keywords": [
+        "med_blood_brain_barrier",
+        "血脑屏障",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blood-bag.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "blood-bag.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/blood-bag.svg",
+      "sha256": "3e16cbae751b3d449536ad7f3ee505ae92ea019cdd3160672d78f0d0554b37ca"
+    },
+    {
+      "id": "medicine_med_synaptic",
+      "asset_id": "medicine_med_synaptic",
+      "label": "突触结构",
+      "label_en": "Synapse",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_synaptic.svg",
+      "keywords": [
+        "med_synaptic",
+        "突触结构",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "brain.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "sha256": "08f604915b1e6ab6187a109f1efa443a9d12d76484b3e4bc9e23badee1126dec"
+    },
+    {
+      "id": "medicine_med_eeg",
+      "asset_id": "medicine_med_eeg",
+      "label": "脑电图",
+      "label_en": "EEG",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_eeg.svg",
+      "keywords": [
+        "med_eeg",
+        "脑电图",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "brain.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/brain.svg",
+      "sha256": "08f604915b1e6ab6187a109f1efa443a9d12d76484b3e4bc9e23badee1126dec"
+    },
+    {
+      "id": "medicine_med_ophthalmoscope",
+      "asset_id": "medicine_med_ophthalmoscope",
+      "label": "检眼镜",
+      "label_en": "Ophthalmoscope",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_ophthalmoscope.svg",
+      "keywords": [
+        "med_ophthalmoscope",
+        "检眼镜",
+        "医学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_neural_sensory.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_neural_sensory.svg",
+      "sha256": "be1ba8cf16a227f4c3fda354c4cd10cc3d939bfd37d56706491a9ae37dd4d812"
+    },
+    {
+      "id": "medicine_med_dermatoscope",
+      "asset_id": "medicine_med_dermatoscope",
+      "label": "皮肤镜",
+      "label_en": "Dermatoscope",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_dermatoscope.svg",
+      "keywords": [
+        "med_dermatoscope",
+        "皮肤镜",
+        "医学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "cell_eukaryotic.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/cell_eukaryotic.svg",
+      "sha256": "0ea616730fe30db92e62a979f133f6cdf2e19c83eb12648a3b3038f4a36a44d4"
+    },
+    {
+      "id": "medicine_med_biopsy",
+      "asset_id": "medicine_med_biopsy",
+      "label": "活检",
+      "label_en": "Biopsy",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_biopsy.svg",
+      "keywords": [
+        "med_biopsy",
+        "活检",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "needle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "sha256": "4f0c11a15df1a5bfbdb26343955fc1cd0d45193ad9b6768b6ebd501344d4b3f6"
+    },
+    {
+      "id": "medicine_med_histology",
+      "asset_id": "medicine_med_histology",
+      "label": "组织学",
+      "label_en": "Histology",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_histology.svg",
+      "keywords": [
+        "med_histology",
+        "组织学",
+        "医学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_protist.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "sha256": "5b9651d2b76985091189b6d21ce482b0ace84b335df671825612adc563aab99e"
+    },
+    {
+      "id": "medicine_med_culture_plate",
+      "asset_id": "medicine_med_culture_plate",
+      "label": "细胞培养板",
+      "label_en": "Cell culture plate",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_culture_plate.svg",
+      "keywords": [
+        "med_culture_plate",
+        "细胞培养板",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "flask.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/flask.svg",
+      "sha256": "43d090ef364e3bde78ec4b3d95a880e7071176206e1204a3a2a3238821c97ff9"
+    },
+    {
+      "id": "medicine_med_flow_cytometry",
+      "asset_id": "medicine_med_flow_cytometry",
+      "label": "流式细胞术",
+      "label_en": "Flow cytometry",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_flow_cytometry.svg",
+      "keywords": [
+        "med_flow_cytometry",
+        "流式细胞术",
+        "医学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "anatomy_musculoskeletal.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/anatomy_musculoskeletal.svg",
+      "sha256": "cf5776f7ed06de0f8f234493078f94dc997b9d5dbb1cae040dfe019fe788a755"
+    },
+    {
+      "id": "medicine_med_pcr",
+      "asset_id": "medicine_med_pcr",
+      "label": "PCR 检测",
+      "label_en": "PCR assay",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_pcr.svg",
+      "keywords": [
+        "med_pcr",
+        "PCR 检测",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "test-tube.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/test-tube.svg",
+      "sha256": "5aad7126ae7bdf7fa318829376604bf96d7e454c8ce51bc8d3bd1e02fbecf1ae"
+    },
+    {
+      "id": "medicine_med_sequencer",
+      "asset_id": "medicine_med_sequencer",
+      "label": "测序仪",
+      "label_en": "Sequencer",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_sequencer.svg",
+      "keywords": [
+        "med_sequencer",
+        "测序仪",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "dna.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/dna.svg",
+      "sha256": "2edf4c8a7cc5ec0454d94baa37f976aba8f27f2436485f3a6fd96f589aee6cdb"
+    },
+    {
+      "id": "medicine_med_drug_target",
+      "asset_id": "medicine_med_drug_target",
+      "label": "药物靶点",
+      "label_en": "Drug target",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_drug_target.svg",
+      "keywords": [
+        "med_drug_target",
+        "药物靶点",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pill.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pill.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pill.svg",
+      "sha256": "2467d232a3e27eb8f3e11112f8b667e145db5aaec851c784d9fc4c096cb2b02b"
+    },
+    {
+      "id": "medicine_med_pk_curve",
+      "asset_id": "medicine_med_pk_curve",
+      "label": "药代动力学曲线",
+      "label_en": "Pharmacokinetic curve",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_pk_curve.svg",
+      "keywords": [
+        "med_pk_curve",
+        "药代动力学曲线",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-line.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-line.svg",
+      "sha256": "f99dc8c69610a73dd11f13bacc73ba0a68ead0045ce0f4c2ad4cd5b53c11a404"
+    },
+    {
+      "id": "medicine_med_dose_response",
+      "asset_id": "medicine_med_dose_response",
+      "label": "剂量反应",
+      "label_en": "Dose-response",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_dose_response.svg",
+      "keywords": [
+        "med_dose_response",
+        "剂量反应",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "needle.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/needle.svg",
+      "sha256": "4f0c11a15df1a5bfbdb26343955fc1cd0d45193ad9b6768b6ebd501344d4b3f6"
+    },
+    {
+      "id": "medicine_med_placebo",
+      "asset_id": "medicine_med_placebo",
+      "label": "安慰剂对照",
+      "label_en": "Placebo control",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_placebo.svg",
+      "keywords": [
+        "med_placebo",
+        "安慰剂对照",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pill.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "pill.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/pill.svg",
+      "sha256": "2467d232a3e27eb8f3e11112f8b667e145db5aaec851c784d9fc4c096cb2b02b"
+    },
+    {
+      "id": "medicine_med_blind_trial",
+      "asset_id": "medicine_med_blind_trial",
+      "label": "盲法试验",
+      "label_en": "Blinded trial",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_blind_trial.svg",
+      "keywords": [
+        "med_blind_trial",
+        "盲法试验",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye-off.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "eye-off.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/eye-off.svg",
+      "sha256": "72a905d6b2cd78bfe7284319d16d9b0de9c623fc0836ff6204acc551ae9c036c"
+    },
+    {
+      "id": "medicine_med_randomization",
+      "asset_id": "medicine_med_randomization",
+      "label": "随机分组",
+      "label_en": "Randomization",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_randomization.svg",
+      "keywords": [
+        "med_randomization",
+        "随机分组",
+        "医学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_protist.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_protist.svg",
+      "sha256": "5b9651d2b76985091189b6d21ce482b0ace84b335df671825612adc563aab99e"
+    },
+    {
+      "id": "medicine_med_survival_curve",
+      "asset_id": "medicine_med_survival_curve",
+      "label": "生存曲线",
+      "label_en": "Survival curve",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_survival_curve.svg",
+      "keywords": [
+        "med_survival_curve",
+        "生存曲线",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-timeline.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "chart-timeline.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/chart-timeline.svg",
+      "sha256": "b66bacf4a703245c025571443565d00b039be5df58f21642d2d1de2d0ad29392"
+    },
+    {
+      "id": "medicine_med_cohort_flow",
+      "asset_id": "medicine_med_cohort_flow",
+      "label": "队列流程",
+      "label_en": "Cohort flow",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_cohort_flow.svg",
+      "keywords": [
+        "med_cohort_flow",
+        "队列流程",
+        "医学"
+      ],
+      "author": "ScanSci contributors",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_bacterium.svg",
+      "modifications": "Imported from the online ScanSci SVG library and sanitised for safe local editing.",
+      "source_file": "microbe_bacterium.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Rimagination/scansci-svg/blob/main/skill/assets/library/microbe_bacterium.svg",
+      "sha256": "25cc33e6830329fe53dc3b079a125c1af9b040acdda2e4a488d292f608aa373d"
+    },
+    {
+      "id": "medicine_med_risk_score",
+      "asset_id": "medicine_med_risk_score",
+      "label": "风险评分",
+      "label_en": "Risk score",
+      "category": "器官、诊疗与研究流程",
+      "type": "symbol",
+      "default_dim": [
+        22,
+        24
+      ],
+      "file": "assets/med_risk_score.svg",
+      "keywords": [
+        "med_risk_score",
+        "风险评分",
+        "医学"
+      ],
+      "author": "Pictogrammers / Material Design Icons",
+      "license": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/alert.svg",
+      "modifications": "Imported from the online Material Design Icons library and sanitised for safe local editing.",
+      "source_file": "alert.svg",
+      "source_kind": "online-open-license",
+      "author_url": "https://github.com/Templarian/MaterialDesign/blob/master/svg/alert.svg",
+      "sha256": "1a493483019cab176761450460542cd32c5b02f49eca200d63abfb5bfe792b85"
     }
   ],
   "templates": [
