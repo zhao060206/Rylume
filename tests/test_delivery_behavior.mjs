@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {byteSize,packAction,busyUpdate,showUpdateNotice,updateStatusText} from '../ui/delivery-ui.js';
+import {byteSize,packAction,busyUpdate,showUpdateNotice,updateStatusText,saveBeforeDestructiveAction} from '../ui/delivery-ui.js';
 assert.equal(byteSize(2048),'2 KB');assert.equal(byteSize(1024*1024),'1.0 MB');
 assert.equal(packAction({compatible:true}),'install');assert.equal(packAction({compatible:false}),'upgrade');
 assert.equal(packAction({compatible:true,installed_version:'1.0.0'}),'use');
@@ -15,4 +15,7 @@ assert.equal(showUpdateNotice({state:'available',current_version:'4.4.1',latest_
 assert.equal(showUpdateNotice({state:'failed'},''),false);
 assert.equal(updateStatusText({last_update_message:'仍在使用旧版',message:'正在检查更新'}),'仍在使用旧版\n正在检查更新');
 assert.equal(updateStatusText({state:'downloading',downloaded:2048,total:4096,message:'正在下载'}),'正在下载 · 2 KB / 4 KB');
+let flushes=0;assert.equal(await saveBeforeDestructiveAction({id:null},async()=>{flushes++;return false;}),true,'The home screen has no document to save');
+assert.equal(flushes,0);assert.equal(await saveBeforeDestructiveAction({id:'job-1'},async()=>{flushes++;return false;}),false,'An open document still blocks restart when saving fails');
+assert.equal(flushes,1);
 console.log('Delivery states, installed package actions, sizes and update safety checks passed');

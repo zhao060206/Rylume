@@ -6,6 +6,12 @@ export function packAction(p){const s=p.task?.state;if(['queued','downloading','
 export const busyUpdate=s=>['checking','downloading','validating','installing'].includes(s);
 export const showUpdateNotice=u=>newerRelease(u);
 export function updateStatusText(u){return [u.last_update_message,u.error||[u.message,u.state==='downloading'?`${byteSize(u.downloaded||0)} / ${byteSize(u.total||0)}`:''].filter(Boolean).join(' · ')].filter(Boolean).join('\n');}
+/** A blank home screen has nothing to flush. Only an open document needs the
+ * save gate before a resource uninstall or software restart. */
+export async function saveBeforeDestructiveAction(state,flush){
+  if(!state?.id)return true;
+  return !!(await flush());
+}
 export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,openTemplates}){
   const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;};
   const dialog=el('dialog','delivery-dialog');dialog.id='delivery-dialog';dialog.setAttribute('aria-labelledby','delivery-title');
@@ -61,7 +67,7 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
         h.append(el('span','pack-installed','已安装 v'+p.installed_version));
         const use=el('button','button','素材'),templates=el('button','button','模板'),remove=el('button','text-button','卸载');
         use.onclick=()=>{dialog.close();openAssets(p.id);};templates.onclick=()=>{dialog.close();openTemplates(p.id);};
-        remove.onclick=async()=>{if(!confirm(`卸载「${p.title}」资源包？已保存图版中的素材快照会保留。`))return;if(!await flush())return toast('当前图版尚未保存，已停止卸载素材包',true);await perform('/api/resources/uninstall',{id:p.id});await syncCatalog();};buttons.append(use,templates,remove);
+        remove.onclick=async()=>{if(!confirm(`卸载「${p.title}」资源包？已保存图版中的素材快照会保留。`))return;if(!await saveBeforeDestructiveAction(state,flush))return toast('当前图版尚未保存，已停止卸载素材包',true);await perform('/api/resources/uninstall',{id:p.id});await syncCatalog();};buttons.append(use,templates,remove);
       }else{
         const b=el('button','button'+(focused===p.id?' primary':''),action==='upgrade'?'先更新软件':action==='update'?'更新资源包':p.task?.state==='failed'?'重新下载':'下载');
         b.onclick=()=>action==='upgrade'?(showView('updates'),loadUpdate()):perform('/api/resources/install',{id:p.id});buttons.append(b);
@@ -101,7 +107,7 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   apply.onclick=async()=>{
     if(state.active)return toast('请先等待生成任务完成',true);
     apply.disabled=true;
-    try{if(!await flush())return toast('图版尚未保存，已停止重启更新',true);await updateAction('/api/updates/apply');}finally{apply.disabled=false;}
+    try{if(!await saveBeforeDestructiveAction(state,flush))return toast('图版尚未保存，已停止重启更新',true);await updateAction('/api/updates/apply');}finally{apply.disabled=false;}
   };
   function schedule(){clearTimeout(timer);timer=setTimeout(async()=>{await Promise.all([loadPacks(),loadUpdate()]);if(dialog.open||data?.packs.some(p=>packAction(p)==='cancel')||busyUpdate(update?.state))schedule();},1100);}
   async function openResources(pid=''){focused=pid;showView('resources');showFloatingWindow(dialog);await loadPacks();schedule();if(pid)rows.querySelector(`[data-pack="${pid}"]`)?.scrollIntoView({block:'nearest'});}
