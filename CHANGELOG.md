@@ -1,3 +1,12 @@
+# 4.7.1 — 2026-11-01
+
+- 顶部增加常驻「保存」按钮，文件菜单和 Ctrl+S 使用同一保存逻辑；保存到本机、保存中、失败与版本冲突均有明确状态，窄窗口也能看到保存入口。
+- 点击更新后先打开「保存并重启」弹窗，一键完成保存和重启。首页、空白图版和原图预览不会因不存在的未保存修改被拦住。
+- 保存会等待所有编辑批次完成，包含保存途中新增的修改；并发保存共享同一请求，失败的修改保留原顺序，禁止在未完全保存时重启。
+- 修复自动保存返回时关闭正在输入的文字框的问题；原位改字时按 Ctrl+S 会先完成改字再保存。
+- 保存失败与后台任务阻止重启时，在弹窗持续显示原因、重试与继续编辑；版本冲突可以「另存副本并重启」，保留服务器原图。
+- 上次更新失败记录独立收起展示，不再把当前已下载且校验通过的状态染成错误；保存服务异常与超时改为可操作的中文提示。
+
 # Resource packs 2.2.0 — 2026-11-01
 
 - Expanded all seven discipline packs to 101–110 assets (729 total), with 30 additional entries per discipline covering laboratory methods, physics, materials, engineering, earth and environment, computing and mathematics, and medicine.

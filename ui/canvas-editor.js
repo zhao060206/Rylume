@@ -1113,6 +1113,8 @@ export class SceneEditor {
     const finish = save => {
       if (done) return;
       done = true;
+      this.finishEditing=null;
+      this.host.dispatchEvent?.(new CustomEvent('editor-inline-edit',{bubbles:true,detail:{dirty:false}}));
       const value = input.value;
       input.remove();
       actions.remove();
@@ -1123,6 +1125,8 @@ export class SceneEditor {
       }
       this.host.focus({preventScroll:true});
     };
+    this.finishEditing=()=>finish(true);
+    input.oninput=()=>this.host.dispatchEvent?.(new CustomEvent('editor-inline-edit',{bubbles:true,detail:{dirty:input.value!==originalText}}));
     actions.onpointerdown=actions.onmousedown=e=>e.stopPropagation();
     save.onpointerdown=cancel.onpointerdown=e=>{e.preventDefault();e.stopPropagation();};
     save.onmousedown=cancel.onmousedown=e=>{e.preventDefault();e.stopPropagation();};
@@ -1132,6 +1136,7 @@ export class SceneEditor {
     actions.onfocusout=e=>{if(e.relatedTarget!==input&&!actions.contains(e.relatedTarget))finish(true);};
     input.onkeydown = e => {
       e.stopPropagation();
+      if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();finish(true);document.getElementById('save-document')?.click();return;}
       if (e.key === 'Enter') { e.preventDefault(); finish(true); }
       if (e.key === 'Escape') { e.preventDefault(); finish(false); }
     };

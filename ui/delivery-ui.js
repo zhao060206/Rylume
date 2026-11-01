@@ -1,5 +1,8 @@
 import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
 import {setupUpdateDock,newerRelease} from './update-dock.js';
+import {setupRestartDialog} from './save-ui.js';
+import {saveBeforeDestructiveAction} from './save-state.js';
+export {saveBeforeDestructiveAction} from './save-state.js';
 /** Deliberate downloads; a restart is requested only after saving the current work. */
 export function byteSize(n){if(!Number.isFinite(n)||n<0)return '—';return n<1024*1024?`${Math.max(1,Math.round(n/1024))} KB`:`${(n/1024/1024).toFixed(1)} MB`;}
 export function packAction(p){const s=p.task?.state;if(['queued','downloading','validating','installing'].includes(s))return 'cancel';if(!p.compatible)return 'upgrade';if(p.update_available)return 'update';if(p.installed_version)return 'use';return 'install';}
@@ -8,11 +11,7 @@ export const showUpdateNotice=u=>newerRelease(u);
 export function updateStatusText(u){return [u.last_update_message,u.error||[u.message,u.state==='downloading'?`${byteSize(u.downloaded||0)} / ${byteSize(u.total||0)}`:''].filter(Boolean).join(' · ')].filter(Boolean).join('\n');}
 /** A blank home screen has nothing to flush. Only an open document needs the
  * save gate before a resource uninstall or software restart. */
-export async function saveBeforeDestructiveAction(state,flush){
-  if(!state?.id)return true;
-  return !!(await flush());
-}
-export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,openTemplates}){
+export function setupDelivery({api,toast,flush,state,saveCopy,documentTitle,reloadCatalog,openAssets,openTemplates}){
   const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;};
   const dialog=el('dialog','delivery-dialog');dialog.id='delivery-dialog';dialog.setAttribute('aria-labelledby','delivery-title');
   const head=el('div','dialog-heading'),title=el('h2','','资源与更新');title.id='delivery-title';const close=el('button','icon-button','×');close.type='button';close.setAttribute('aria-label','关闭资源与更新');close.onclick=()=>dialog.close();head.append(title,close);
@@ -30,7 +29,8 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   const check=el('button','button','检查更新'),download=el('button','button primary','下载新版'),apply=el('button','button primary','保存并重启更新'),cancel=el('button','button','取消下载'),releaseLink=el('a','button','打开发布页');
   releaseLink.target='_blank';releaseLink.rel='noreferrer';updateActions.append(check,download,cancel,apply,releaseLink);
   const reminder=el('p','muted small','自动检查只查询公开版本信息。下载由你发起；文件校验通过后才能替换程序。任务与模型配置保存在本机数据目录。');
-  updatePage.append(versionTitle,versionNote,updateProgress,updateStatus,updateActions,notes,reminder);
+  const priorAttempt=el('details','update-prior-attempt'),priorText=el('p','small');priorAttempt.append(el('summary','','上次更新尝试记录'),priorText);priorAttempt.hidden=true;
+  updatePage.append(versionTitle,versionNote,updateProgress,updateStatus,updateActions,priorAttempt,notes,reminder);
   dialog.append(head,tabs,resourcePage,updatePage);document.body.append(dialog);setupFloatingWindows(dialog);
   const updateDock=setupUpdateDock({openUpdate(){
     showView('updates');showFloatingWindow(dialog);notes.open=true;
@@ -45,6 +45,9 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   const assetOpen=el('button','button full secondary','下载其他学科素材与模板');document.getElementById('panel-assets')?.append(assetOpen);
   const templateOpen=el('button','text-button full','管理学科资源包');document.getElementById('panel-templates')?.append(templateOpen);
   let view='resources',focused='',timer=null,data=null,update=null,revisionSignature='',manualCheck=false,lastState='',renderedPacks='';
+  const restart=setupRestartDialog({state,flush,saveCopy,documentTitle,async apply(){
+    const result=await api('/api/updates/apply',{});update=result;renderUpdate();schedule();return result;
+  }});
   function showView(name){view=name;resourcePage.hidden=name!=='resources';updatePage.hidden=name!=='updates';resourceTab.setAttribute('aria-selected',String(name==='resources'));updateTab.setAttribute('aria-selected',String(name==='updates'));}
   resourceTab.onclick=()=>showView('resources');updateTab.onclick=()=>{showView('updates');loadUpdate();};
   function renderPacks(){
@@ -90,8 +93,9 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   function renderUpdate(){
     if(!update)return;const s=update.state;versionTitle.textContent=`当前版本 ${update.current_version}`;
     versionNote.textContent=s==='available'?`发现新版本 ${update.latest_version}`:s==='up_to_date'?'已是最新正式版本':s==='ready'?'新版已下载并通过校验':s==='installing'?'正在重启更新…':s==='cancelled'?'已取消下载，当前软件可继续使用':s==='failed'?'本次检查或下载未完成':s==='checking'?'正在检查 GitHub 最新版本…':s==='downloading'?`正在下载 ${update.latest_version}`:s==='validating'?'正在核对并解压安装包':'从 GitHub 检查最新正式版本';
-    updateStatus.textContent=updateStatusText(update);
-    updateStatus.classList.toggle('delivery-error',s==='failed'||Boolean(update.last_update_message));updateProgress.hidden=!['downloading','validating','ready'].includes(s);updateProgress.value=update.progress||0;
+    updateStatus.textContent=updateStatusText({...update,last_update_message:null});
+    priorAttempt.hidden=!update.last_update_message;priorText.textContent=update.last_update_message||'';
+    updateStatus.classList.toggle('delivery-error',s==='failed');updateProgress.hidden=!['downloading','validating','ready'].includes(s);updateProgress.value=update.progress||0;
     check.disabled=busyUpdate(s)||s==='ready';download.hidden=!update.latest_version||!['available','cancelled','failed'].includes(s);download.disabled=busyUpdate(s);
     cancel.hidden=!['downloading','validating','ready'].includes(s);cancel.textContent=s==='ready'?'放弃本次安装':'取消下载';apply.hidden=s!=='ready'||!update.can_apply;
     releaseLink.hidden=!update.release_url;releaseLink.href=update.release_url||'https://github.com/zhao060206/Rylume/releases';
@@ -104,11 +108,7 @@ export function setupDelivery({api,toast,flush,state,reloadCatalog,openAssets,op
   async function loadUpdate(){try{update=await api('/api/updates');renderUpdate();}catch(e){updateStatus.textContent=e.message;}}
   async function updateAction(path){try{update=await api(path,{});renderUpdate();schedule();}catch(e){toast(e.message,true);}}
   check.onclick=()=>{manualCheck=true;updateAction('/api/updates/check');};download.onclick=()=>updateAction('/api/updates/download');cancel.onclick=()=>updateAction('/api/updates/cancel');
-  apply.onclick=async()=>{
-    if(state.active)return toast('请先等待生成任务完成',true);
-    apply.disabled=true;
-    try{if(!await saveBeforeDestructiveAction(state,flush))return toast('图版尚未保存，已停止重启更新',true);await updateAction('/api/updates/apply');}finally{apply.disabled=false;}
-  };
+  apply.id='open-save-restart';apply.onclick=()=>restart.open(update?.latest_version);
   function schedule(){clearTimeout(timer);timer=setTimeout(async()=>{await Promise.all([loadPacks(),loadUpdate()]);if(dialog.open||data?.packs.some(p=>packAction(p)==='cancel')||busyUpdate(update?.state))schedule();},1100);}
   async function openResources(pid=''){focused=pid;showView('resources');showFloatingWindow(dialog);await loadPacks();schedule();if(pid)rows.querySelector(`[data-pack="${pid}"]`)?.scrollIntoView({block:'nearest'});}
   top.onclick=()=>{openResources();};assetOpen.onclick=()=>openResources();templateOpen.onclick=()=>openResources();

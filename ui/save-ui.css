@@ -1,0 +1,22 @@
+/* Save and restart remain explicit at every supported desktop width. */
+.topbar .save-document{flex-shrink:0;min-width:60px;min-height:32px;color:var(--ui-text,#294039);border-color:#cbd5cf;background:var(--ui-surface,#fff)}
+.topbar .save-document[data-save-state=dirty],.topbar .save-document[data-save-state=error],.topbar .save-document[data-save-state=conflict]{border-color:#ae7a34;color:#79501f;background:#fff8e9}
+.topbar #save-status{display:inline;font-size:11px;color:#586e61}
+.topbar #save-status[data-save-state=error],.topbar #save-status[data-save-state=conflict]{color:#9c3f31}
+.topbar #save-status[data-save-state=dirty]{color:#8b662c}
+.topbar .project-heading{min-width:0}.topbar #project-title{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.restart-dialog{width:min(500px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;border:1px solid #d4ded7;border-radius:12px;padding:26px;background:#fff;color:#293d34;box-shadow:0 20px 80px #142a3a33}
+.restart-dialog::backdrop{background:#172a344d}
+.restart-dialog h2{margin:0 0 10px;font-size:20px;font-weight:600;line-height:1.5}
+.restart-target{font-size:13px;color:#42745b;margin:0 0 16px}
+.restart-description{font-size:14px;line-height:1.8;overflow-wrap:anywhere;margin:0 0 18px}
+.restart-steps{margin:0;padding:16px 18px 16px 38px;border:1px solid #e1e7e2;border-radius:7px;background:#f7f9f7;font-size:13px;line-height:2.1}
+.restart-steps .complete{color:#2c7151;font-weight:600}
+.restart-error{border-left:3px solid #ad5947;background:#fff4f0;padding:12px 14px;color:#903b2f;font-size:13px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere}
+.restart-progress{font-size:13px;min-height:20px;line-height:1.7;color:#576c61}
+.restart-dialog .dialog-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;margin:18px 0 0}
+.restart-dialog .button{min-height:40px;font-size:13px}
+.restart-dialog button:focus-visible{outline:2px solid #32785f;outline-offset:3px}
+.update-prior-attempt{font-size:12px;color:#7d6b51;border-top:1px solid #e2e4df;padding-top:12px;margin:12px 0}
+.update-prior-attempt p{line-height:1.8;margin:10px 0;white-space:pre-wrap}
+@media(max-width:1199px){.topbar #save-status{max-width:110px;overflow:hidden;text-overflow:ellipsis;margin-left:7px}.topbar .project-heading{flex:1;gap:0}.topbar .save-document{min-width:52px;padding-inline:8px}}

@@ -13,9 +13,15 @@ export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,ref
   function changed(){if(!state.id||!editor.scene)return;store.write({id:state.id,base_revision:state.revision,scene:clone(editor.scene)}).catch(()=>{state.backupError=true;toast('本机恢复副本暂存失败，请用“文件 → 保存可编辑文件”保留图版',true);});}
   function saved(){if(!state.pending.length&&!state.saving){state.saveError=null;state.saveFailures=0;store.clear(state.id).catch(()=>{});}else if(state.pending.length)changed();}
   async function independentCopy(scene,clearCurrent=false){
-    const source=state.id,result=await api('/api/scene/import',{scene});
-    if(clearCurrent){state.pending=[];state.conflict=false;state.saveError=null;await store.clear(source).catch(()=>{});}
-    await refreshJobs();await openJob(result.job_id);toast('已保存为独立图版，原图保留');
+    const source=state.id,epoch=state.dirty,result=await api('/api/scene/import',{scene});
+    await refreshJobs();
+    if(clearCurrent&&(state.id!==source||state.dirty!==epoch))throw Error('另存期间图版又有修改。副本已保留，请再次保存最新修改。');
+    const pending=state.pending,conflict=state.conflict,saveError=state.saveError;
+    if(clearCurrent){state.pending=[];state.conflict=false;state.saveError=null;}
+    try{await openJob(result.job_id);if(state.id!==result.job_id)throw Error('副本尚未成功打开');}
+    catch(error){if(clearCurrent&&state.id===source){state.pending=pending;state.conflict=conflict;state.saveError=saveError;changed();}throw Error('副本已保存，但尚未成功打开。当前修改仍保留，请重试。');}
+    if(clearCurrent)await store.clear(source).catch(()=>{});
+    toast('已保存为独立图版，原图保留');return true;
   }
   const recover=dialog('发现尚未保存的图版'),recoveryText=el('p','muted'),recoveryActions=el('div','dialog-actions');recover.append(recoveryText,recoveryActions);
   recover.querySelector('.dialog-heading button').remove();recover.addEventListener('cancel',e=>e.preventDefault());
@@ -28,7 +34,7 @@ export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,ref
     restore.disabled=state.revision!==cached.base_revision;restore.title=restore.disabled?'服务器有更新，请恢复为独立副本':'';
     recoveryActions.replaceChildren(button('保留服务器版本',async()=>{await store.clear(id);recover.close();}),button('恢复为独立副本',async()=>{await independentCopy(cached.scene,true);recover.close();}),restore);recover.showModal();
   }
-  const retry=button('重试保存',async()=>{state.conflict=false;state.saveError=null;await flush();});retry.id='retry-scene-save';
+  const retry=button('重试保存',async()=>{if(state.conflict)return toast('存在版本冲突，请点击“另存为独立图版”保留修改。',true);await flush();});retry.id='retry-scene-save';
   const rescue=button('另存为独立图版',()=>independentCopy(clone(editor.scene),true));
   $('error-banner').append(retry,rescue);
   $('download-draft').textContent='保存可编辑文件';
@@ -37,6 +43,7 @@ export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,ref
   const file=el('input');file.type='file';file.accept='.json,.scene.json,application/json';file.hidden=true;file.id='import-scene-file';document.body.append(file);
   file.onchange=async()=>{try{const selected=file.files[0];if(!selected)return;if(selected.size>24*1024*1024)throw Error('可编辑文件请小于 24 MB');const value=JSON.parse(await selected.text());if(!await flush()&&state.revision)throw Error('请先保存当前图版，或另存未保存的修改');await independentCopy(value.scene||value);}catch(e){toast('导入未完成：'+e.message,true);}finally{file.value='';}};
   const menu=$('file-menu-items')||document.querySelector('.app-menu .menu-items');
+  const saveToApp=button('保存图版  Ctrl+S',()=>document.getElementById('save-document').click());saveToApp.id='file-save-document-action';menu.prepend(saveToApp);
   const info=dialog('图版名称与分类'),name=el('input'),collection=el('input');name.maxLength=120;collection.maxLength=60;name.setAttribute('aria-label','图版名称');collection.setAttribute('aria-label','图版分类');
   const labelName=el('label','settings-field','图版名称'),labelCollection=el('label','settings-field','分类（可选）');labelName.append(name);labelCollection.append(collection);info.append(labelName,labelCollection);
   info.append(button('保存图版信息',async()=>{if(!await flush())return;const id=state.id;await api('/api/jobs/'+id+'/document-info',{base_revision:state.revision,title:name.value,collection:collection.value});info.close();await refreshJobs();await openJob(id);},true));
@@ -88,5 +95,5 @@ export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,ref
   $('toggle-export').addEventListener('click',()=>{if($('export-menu').open)prepareExport().catch(e=>toast(e.message,true));});$('export-dpi').onchange=renderExport;
   const ready=dialog('开始生成前'),readyText=el('p'),readyActions=el('div','dialog-actions');ready.append(readyText,readyActions);
   async function checkModels(mode){const config=(await api('/api/state')).config||{},missing=['text',...(mode==='image'?['image']:[])].filter(k=>!config[k]?.base_url||!config[k]?.model);if(!missing.length)return true;readyText.textContent='当前方式需要配置'+missing.map(k=>k==='text'?'文本模型':'生图模型').join('和')+'。内置模板、素材和直接编辑可以离线使用；视觉模型用于可选的审阅。';readyActions.replaceChildren(button('使用离线模板',()=>{ready.close();$('welcome-gallery').click();}),button('前往模型设置',()=>{ready.close();$('open-settings').click();},true));ready.showModal();return false;}
-  return {changed,saved,opened,renderHistory,checkModels,prepareExport,history,editInfo};
+  return {changed,saved,opened,renderHistory,checkModels,prepareExport,history,editInfo,saveCopy:()=>independentCopy(clone(editor.scene),true)};
 }

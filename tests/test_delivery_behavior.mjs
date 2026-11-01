@@ -16,6 +16,6 @@ assert.equal(showUpdateNotice({state:'failed'},''),false);
 assert.equal(updateStatusText({last_update_message:'仍在使用旧版',message:'正在检查更新'}),'仍在使用旧版\n正在检查更新');
 assert.equal(updateStatusText({state:'downloading',downloaded:2048,total:4096,message:'正在下载'}),'正在下载 · 2 KB / 4 KB');
 let flushes=0;assert.equal(await saveBeforeDestructiveAction({id:null},async()=>{flushes++;return false;}),true,'The home screen has no document to save');
-assert.equal(flushes,0);assert.equal(await saveBeforeDestructiveAction({id:'job-1'},async()=>{flushes++;return false;}),false,'An open document still blocks restart when saving fails');
+assert.equal(flushes,0);assert.equal(await saveBeforeDestructiveAction({id:'job-1',pending:[{op:'update'}]},async()=>{flushes++;return false;}),false,'A dirty document still blocks restart when saving fails');
 assert.equal(flushes,1);
 console.log('Delivery states, installed package actions, sizes and update safety checks passed');
