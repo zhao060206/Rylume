@@ -4,7 +4,7 @@ Rylume's original code is distributed under AGPL-3.0-only. The following compone
 
 ## Scientific artwork
 
-Optional discipline packs under `resource-packs/` contain original Rylume vector artwork and template geometry released under CC0-1.0. Each pack has its own LICENSE and manifest. Application and generator code retain the project's AGPL license.
+Optional discipline packs under `resource-packs/` record per-asset source and license information in their manifests. The 2.2.0 artwork imports use ScanSci SVG (CC BY 4.0) and Material Design Icons (Apache-2.0); source revisions and modification notes are retained per asset. Cached upstream artwork under `assets/online-sources/` retains its original authorship and license. Application and generator code retain the project's AGPL license.
 
 Curated Bioicons artwork has per-asset author, source URL, original digest, license and modification notes in `assets/bioicons/manifest.json` and `assets/bioicons/ATTRIBUTION.md`. Original SVG files are retained as `assets/bioicons/*.original.svg`; editable conversions are under `ui/library`. Licenses include CC BY 3.0, CC BY 4.0 and CC0 as specified per entry. Attribution must be retained where required; exported figures include credit sidecars.
 

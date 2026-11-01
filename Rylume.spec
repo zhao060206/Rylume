@@ -1,5 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 from PyInstaller.utils.hooks import collect_all, collect_data_files, copy_metadata
+from importlib.metadata import PackageNotFoundError
 
 from pathlib import Path
 import sys
@@ -27,10 +28,19 @@ hiddenimports += ['personal_assets', 'release_notes']
 datas += [('CHANGELOG.md', '.')]
 # MarkItDown detects local files with Magika's ONNX data. PDFMiner requires CMaps.
 # Keep optional online/audio converters inactive; legacy Office uses local LibreOffice.
+# The source build also supports the documented local fallback parser. PyInstaller
+# must therefore skip absent optional distributions instead of aborting the whole
+# Windows release when a developer environment has not installed MarkItDown.
+def optional_metadata(distribution):
+    try:
+        return copy_metadata(distribution)
+    except PackageNotFoundError:
+        return []
+
 for package in ('markitdown', 'magika', 'pdfminer', 'mammoth', 'markdownify', 'openpyxl', 'docx', 'pptx'):
     datas += collect_data_files(package)
 for distribution in ('markitdown', 'magika', 'pdfminer.six', 'mammoth', 'markdownify', 'openpyxl', 'beautifulsoup4', 'defusedxml', 'cobble', 'python-docx', 'python-pptx'):
-    datas += copy_metadata(distribution)
+    datas += optional_metadata(distribution)
 datas += [('packaging/update-helper.ps1','packaging')]
 tmp_ret = collect_all('vtracer')
 datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]

@@ -1,4 +1,4 @@
-理象 · Rylume 3.6.0
+理象 · Rylume
 
 1. 解压整个压缩包，双击 Rylume.exe 或“启动理象.cmd”。请保留 _internal 文件夹。
 2. 支持 Windows 10/11 x64。需要 Microsoft Edge WebView2 Runtime。
