@@ -30,6 +30,9 @@ def test_svg_pdf_png_and_pptx_share_revision_and_physical_size(tmp_path):
         root = ET.fromstring(archive.read("ppt/slides/slide1.xml"))
         assert not root.findall(".//p:pic",ns)
         texts=[n.text for n in root.findall(".//a:t",ns)]
+        ids=[n.get('id') for n in root.findall('.//p:cNvPr',ns)]
+        assert len(ids)==len(set(ids)), 'Each native shape needs a distinct PowerPoint ID'
+        assert root.findall('.//a:cubicBezTo',ns), 'Bezier curves must survive as editable curves'
         assert any("STAT" in t for t in texts)
         sizes=[int(n.get("sz")) for n in root.findall(".//a:rPr",ns) if n.get("sz")]
         assert sizes and min(sizes)>=699

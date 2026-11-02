@@ -1,6 +1,7 @@
 import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
 import {setupPersonalAssets} from './personal-assets.js';
 import {setupFigureImport} from './figure-import.js';
+import {setupVectorDetails} from './vector-details.js';
 import {setupWorkspaceExperience} from './workspace-experience.js';
 import {setupReleaseNotes} from './release-notes.js';
 import {setupDocumentAssistant} from './document-assistant.js';
@@ -282,6 +283,7 @@ documentsUI=setupDocumentAssistant({state:S,editor,api,toast,composer:composerUI
 onboardingUI=setupOnboarding({state:S,editor,api,flush,canLeave,openJob,refreshJobs,tab,toast});
 const personalUI=setupPersonalAssets({api,toast,library:libraryUI,state:S});
 const figureImportUI=setupFigureImport({state:S,editor,api,flush,canLeave,openJob,refreshJobs,toast});
+const vectorDetails=setupVectorDetails({state:S,editor,flush,toast});
 const experienceUI=setupWorkspaceExperience({imports:figureImportUI,composer:composerUI,blank});
 const releaseUI=setupReleaseNotes({api,toast});
 // Keep command names and visible targets in sync as modules are added. A

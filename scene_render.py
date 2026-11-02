@@ -154,15 +154,17 @@ def _measure(text,fs):
 
 def _label_lines(o):
     text=o.get('label','');fs=max(7,o.get('font_size_pt',8))*PT_MM
+    if o.get('state')=='import_text':return str(text).split('\n'),fs
     limit=max(5,o['w']) if o.get('type')=='text' else max(5,o['w']-(10 if o.get('state')=='flow_decision' else 5)) if o.get('state','').startswith('flow_') else max(24,min(42,o['w']+12))
-    lines=[];current=''
-    words=text.split(' ') if ' ' in text else list(text)
-    spacer=' ' if ' ' in text else ''
-    for word in words:
-        candidate=current+spacer+word if current else word
-        if current and _measure(candidate,fs)>limit+.001:lines.append(current);current=word
-        else:current=candidate
-    if current:lines.append(current)
+    lines=[]
+    for explicit in str(text).split('\n'):
+        current='';words=explicit.split(' ') if ' ' in explicit else list(explicit)
+        spacer=' ' if ' ' in explicit else ''
+        for word in words:
+            candidate=current+spacer+word if current else word
+            if current and _measure(candidate,fs)>limit+.001:lines.append(current);current=word
+            else:current=candidate
+        if current:lines.append(current)
     return lines or [''],fs
 
 
@@ -345,6 +347,11 @@ def _compartment(c,primary,organic=False):
     return ''.join(p)
 
 
+def uses_text_appearance(o):
+    a=o.get('text_appearance')
+    return bool(a and o.get('asset_snapshot') and all(o.get(k)==a[k] for k in ('label','font_size_pt','fill')))
+
+
 def _object(o,palette,stroke_pt=.8,glyph_tint=.8):
     oid=o['id'];kind=o['type'];x,y,w,h=(o[k] for k in ('x','y','w','h'))
     family=palette['accent'] if kind=='ligand' else palette['secondary'] if kind in ('tf','dna','mrna','complex','domain','fibroblast','collagen','tissue') else palette['primary']
@@ -353,21 +360,26 @@ def _object(o,palette,stroke_pt=.8,glyph_tint=.8):
     if o.get('illustration'):
         artwork = ('<image href="' + _escape(o['illustration']['data'])
                    + '" x="0" y="0" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>')
+    elif o.get('text_appearance') and not uses_text_appearance(o):
+        artwork=''
     elif o.get('asset_id'):
         from scientific_library import glyph
         if o.get('asset_snapshot'):
             from scientific_library import portable_glyph
-            artwork=portable_glyph(o['asset_snapshot']['svg'],o.get('fill'),o.get('stroke'))
+            artwork=portable_glyph(o['asset_snapshot']['svg'],None if uses_text_appearance(o) else o.get('fill'),o.get('stroke'))
         else:artwork=glyph(o['asset_id'],o.get('fill'),o.get('stroke'))
     else:artwork=symbol(kind,color,o.get('state') or (o.get('label','') if kind in ('cell','stem_cell') else ''),line,o.get('stroke_pt',stroke_pt)/.8,glyph_tint)
-    p=[f'<g data-object-id="{oid}" data-type="{kind}" id="obj-{oid}">',f'<g data-glyph="{oid}" transform="rotate({angle} {x+w/2} {y+h/2})"><g transform="translate({x} {y}) scale({w/100} {h/100})">',artwork,'</g>']
+    aria=f' aria-label="{_escape(o.get("label", ""))}"' if uses_text_appearance(o) else ''
+    p=[f'<g data-object-id="{oid}" data-type="{kind}"{aria} id="obj-{oid}">',f'<g data-glyph="{oid}" transform="rotate({angle} {x+w/2} {y+h/2})"><g transform="translate({x} {y}) scale({w/100} {h/100})">',artwork,'</g>']
     if o.get('state') == 'phosphorylated' and kind in ('kinase','protein','receptor','receptor_dimer'):
         bx,by=x+w-1,y+1
         p.append(f'<circle cx="{bx}" cy="{by}" r="1.65" fill="{tint(palette["accent"],.4)}" stroke="#FFFFFF" stroke-width=".3"/>')
         p.append(_text(bx,by+.86,'P',7,anchor='middle',fill='#7D5B26'))
     p.append('</g>')
+    if uses_text_appearance(o):
+        p.append('</g>');return ''.join(p)
     lines,fs=_label_lines(o)
-    for i,text in enumerate(lines):p.append(_text(x+w/2+(5 if o.get('state','').startswith('legend_') else 0)+o.get('label_dx',0),label_baseline(o,lines,fs)+i*fs*1.23,text,o.get('font_size_pt',8),fill=o.get('fill','#2F4552') if kind=='text' else '#2F4552',anchor='middle',data_label_for=oid))
+    for i,text in enumerate(lines):p.append(_text(x+w/2+(5 if o.get('state','').startswith('legend_') else 0)+o.get('label_dx',0),label_baseline(o,lines,fs)+i*fs*1.23,text,o.get('font_size_pt',8),fill=o.get('fill','#2F4552') if kind=='text' else '#2F4552',anchor='middle',bold=o.get('font_weight',400)>=600,data_label_for=oid))
     p.append('</g>');return ''.join(p)
 
 

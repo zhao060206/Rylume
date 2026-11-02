@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {vectorEditOperations,pathTranslation} from '../ui/vector-details.js';
+import {usesTextAppearance} from '../ui/canvas-editor.js';
+const outline={label:'STAT3',font_size_pt:8,fill:'#222222',asset_snapshot:{svg:'<svg/>',meta:{author:'Original author'}},text_appearance:{label:'STAT3',font_size_pt:8,fill:'#222222'}};
+assert.equal(usesTextAppearance(outline),true);
+assert.equal(usesTextAppearance({...outline,label:'STAT1'}),false);
+assert.equal(usesTextAppearance({...outline,font_size_pt:9}),false);
+assert.equal(usesTextAppearance({...outline,x:50,y:80}),true);
+const objects=[{id:'a',...outline},{id:'b',asset_snapshot:{svg:'unchanged'}}];
+const operations=vectorEditOperations(objects,new Map([['a','edited'],['b','unchanged']]));
+assert.equal(operations.length,1);assert.equal(operations[0].id,'a');
+assert.equal(operations[0].changes.asset_snapshot.meta.author,'Original author');
+assert.equal(objects[0].asset_snapshot.svg,'<svg/>');
+assert.equal(pathTranslation('rotate(45)',2,3),'translate(2 3) rotate(45)');
+assert.throws(()=>pathTranslation('',NaN,0));
+console.log('Original glyph fidelity, replacement text and localized vector editing checks passed.');

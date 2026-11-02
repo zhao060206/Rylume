@@ -1,4 +1,5 @@
 import {sanitizedSvg} from './canvas-editor.js';
+import {setupFigureCompare} from './figure-compare.js';
 import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
 
 export const importBusy = state => ['queued','recognizing','verifying'].includes(state);
@@ -8,6 +9,7 @@ export function importFileError(file) {
  return '';
 }
 export function importSummary(report={}) {
+ if(report.vector_paths)return `${report.texts||0} 个可改字标签 · ${report.vector_groups||0} 组 / ${report.vector_paths} 条矢量路径 · 0 个位图`;
  return `${report.texts||0} 处文字 · ${Math.max(0,(report.objects||0)-(report.texts||0)-(report.image_blocks||0))} 个矢量图形 · ${report.connections||0} 条绑定连线 · ${report.image_blocks||0} 个图片块`;
 }
 const $=id=>document.getElementById(id);
@@ -18,14 +20,15 @@ const readFile=file=>new Promise((resolve,reject)=>{const reader=new FileReader(
 export function setupFigureImport({state,editor,api,flush,canLeave,openJob,refreshJobs,toast}) {
  let selected=null,rows=[],candidate=null,epoch=0,timer=null,mutation=false,selectedFile=null;
  const dialog=make('dialog','figure-import-dialog');dialog.id='figure-import-dialog';dialog.setAttribute('aria-labelledby','figure-import-title');
- dialog.innerHTML=`<header class="dialog-heading"><div><h2 id="figure-import-title">导入科研图</h2><p>把已有图版拆成可编辑对象，核对后再继续创作。</p></div><button type="button" class="icon-button" id="close-figure-import" aria-label="关闭导入科研图">×</button></header>
+ dialog.innerHTML=`<header class="dialog-heading"><div><h2 id="figure-import-title">导入科研图</h2><p>保持原图外观，转换为可编辑对象，核对后再继续创作。</p></div><button type="button" class="icon-button" id="close-figure-import" aria-label="关闭导入科研图">×</button></header>
  <div class="figure-import-layout"><aside class="figure-import-sidebar"><button type="button" class="button primary" id="figure-choose">选择科研图</button><input type="file" hidden id="figure-import-file" accept=".png,.jpg,.jpeg,.webp,.svg,.pdf"><p class="small muted">PNG / JPG / WebP / SVG / PDF<br>每个文件最大 10 MB</p><div class="figure-page-picker" id="figure-page-picker" hidden><label>PDF 页码<input type="number" min="1" max="10000" value="1" id="figure-page"></label><button type="button" class="button" id="figure-upload-page">导入此页</button></div><h3>最近导入</h3><div id="figure-import-list"></div></aside>
- <section class="figure-import-detail"><div id="figure-import-empty" class="figure-drop-zone" tabindex="0" role="button" aria-label="选择或拖入科研图"><svg class="icon"><use href="#download"></use></svg><h3>已有一张好图？从这里继续。</h3><p>选择文件，或把文件拖到这里。</p><p class="small muted">文字可以改，图形可以移，识别出的连线跟着对象走。<br>复杂插画会保留为独立图片块，不等同于可修改内部细节的矢量。</p></div>
+ <section class="figure-import-detail"><div id="figure-import-empty" class="figure-drop-zone" tabindex="0" role="button" aria-label="选择或拖入科研图"><svg class="icon"><use href="#download"></use></svg><h3>已有一张好图？从这里继续。</h3><p>选择文件，或把文件拖到这里。</p><p class="small muted">高保真模式把位图科研图转换为可编辑文字和贝塞尔路径。<br>原图始终保留用于对照，不会在候选中嵌入位图。</p></div>
  <div id="figure-import-content" hidden><div class="figure-import-document"><strong id="figure-import-name"></strong><span id="figure-import-badge"></span></div><ol class="figure-import-steps" aria-label="导入步骤"><li>1 选择文件</li><li>2 拆分与核对</li><li>3 打开编辑</li></ol>
  <div class="figure-import-comparison"><figure><figcaption>原图<span>原文件保留在本机</span></figcaption><img id="figure-import-source" alt="导入科研图的原图"></figure><figure><figcaption>可编辑候选<span id="figure-import-count"></span></figcaption><div id="figure-import-preview"><p>开始转换后在这里对照结果</p></div></figure></div>
  <p id="figure-import-status" role="status" aria-live="polite"></p><div id="figure-import-report"></div></div></section></div>
- <footer class="figure-import-footer"><div><label>转换方式 <select id="figure-import-mode"><option value="ai">AI 拆解文字、图形与连线</option><option value="native">本机拆分 SVG 元素</option></select></label><p id="figure-import-privacy">AI 拆解会将当前页图片发送到你配置的视觉模型；留空时复用文本模型。</p></div><div class="figure-import-buttons"><button type="button" class="button" id="figure-import-cancel" hidden>取消转换</button><button type="button" class="button" id="figure-import-retry-poll" hidden>重新连接</button><button type="button" class="button" id="figure-import-convert" disabled>开始转换</button><button type="button" class="button primary" id="figure-import-accept" hidden>打开为可编辑图版</button></div></footer>`;
+ <footer class="figure-import-footer"><div><label>转换方式 <select id="figure-import-mode"><option value="vector">高保真矢量重建 · 无位图</option><option value="ai">AI 语义拆分 · 保留图片块</option><option value="native">本机拆分 SVG 元素</option></select></label><p id="figure-import-privacy">高保真模式在本机描摹；未配置模型时使用本机 OCR。</p></div><div class="figure-import-buttons"><button type="button" class="button" id="figure-import-cancel" hidden>取消转换</button><button type="button" class="button" id="figure-import-retry-poll" hidden>重新连接</button><button type="button" class="button" id="figure-import-convert" disabled>开始转换</button><button type="button" class="button primary" id="figure-import-accept" hidden>打开为可编辑图版</button></div></footer>`;
  document.body.append(dialog);setupFloatingWindows(dialog);
+ const compareFigure=setupFigureCompare(),compareButton=button('放大 / 叠加对照',()=>{if(candidate&&current())compareFigure(current().source_url,candidate.svg);});compareButton.id='figure-import-compare';compareButton.hidden=true;$('figure-import-status').before(compareButton);
  const states={uploaded:'已上传',queued:'等待中',recognizing:'识别中',verifying:'检查中',ready:'待核对',failed:'可重试',cancelled:'已取消',interrupted:'已中断'};
  function current(){return rows.find(r=>r.id===selected);}
  function list(){const target=$('figure-import-list');target.replaceChildren();for(const row of rows){const b=button('',()=>select(row.id),'figure-import-row');b.setAttribute('aria-pressed',String(row.id===selected));b.append(make('strong','',row.name),make('small','',`${states[row.state]||row.state}${row.pages>1?' · 第 '+row.page+' 页':''}`));target.append(b);}}
@@ -34,7 +37,7 @@ export function setupFigureImport({state,editor,api,flush,canLeave,openJob,refre
   list();const row=current(),busy=importBusy(row?.state);$('figure-import-content').hidden=!row;$('figure-import-empty').hidden=!!row;
   $('figure-import-convert').disabled=!row||busy||mutation;$('figure-import-mode').disabled=!row||busy||mutation;
   $('figure-import-cancel').hidden=!busy;$('figure-import-cancel').disabled=mutation;
-  $('figure-import-accept').hidden=!candidate||busy;$('figure-import-accept').disabled=mutation;
+  $('figure-import-accept').hidden=!candidate||busy;$('figure-import-accept').disabled=mutation||!!(candidate?.report.vector_paths&&candidate.report.fidelity?.target_met!==true);
   $('figure-import-mode').querySelector('[value=native]').disabled=!row?.name.toLowerCase().endsWith('.svg');
   if(!row)return;
   $('figure-import-name').textContent=row.name+(row.pages>1?` · 第 ${row.page} / ${row.pages} 页`:'');
@@ -42,23 +45,26 @@ export function setupFigureImport({state,editor,api,flush,canLeave,openJob,refre
   $('figure-import-status').textContent=row.message;$('figure-import-status').classList.toggle('is-busy',busy);
   $('figure-import-convert').textContent=row.state==='uploaded'?'开始转换':'重新转换';
   $('figure-import-count').textContent=candidate?importSummary(candidate.report):'';
+  compareButton.hidden=!candidate;
   const report=$('figure-import-report');report.replaceChildren();
   if(candidate){
-   report.append(make('p','',candidate.report.image_blocks?'含独立图片块：可以移动、缩放和替换；内部细节与像素中的文字不能直接编辑。':'文字与图形已拆分，可在画布中独立选中。'));
+   report.append(make('p','',candidate.report.vector_paths?'候选不含位图：文字和全部插画均已转换为可编辑矢量对象。':candidate.report.image_blocks?'含独立图片块：可以移动、缩放和替换；内部细节与像素中的文字不能直接编辑。':'文字与图形已拆分，可在画布中独立选中。'));
+   if(candidate.report.fidelity?.available)report.append(make('p','',`原始分辨率前景像素接近度 ${candidate.report.fidelity.foreground_similarity}%；${candidate.report.fidelity.target_met===false?'未达到 99% 验收目标，请重新转换或使用更清晰的原图。':'仍需放大核对文字与布局；此分数不代表内容已经核验。'}`));
+   if(candidate.report.outline_labels)report.append(make('p','',`${candidate.report.outline_labels} 个标签保留原字形轮廓，避免字体替换；在本软件中改字后切换为文字。PPTX 中原字形以路径保留，已改写标签为文本框。`));
    const details=make('details');details.append(make('summary','','需要核对的内容'));
    const ul=make('ul');for(const note of [...candidate.report.warnings,'请检查遗漏、错字、箭头端点和科学含义。自动检查不代表科学内容已核实。'])ul.append(make('li','',note));details.append(ul);report.append(details);
   }
  }
  async function select(id){
   selected=id;candidate=null;const token=++epoch;clearTimeout(timer);$('figure-import-preview').replaceChildren(make('p','','转换结果会显示在这里'));
-  const row=current();$('figure-import-mode').value=row?.mode||(row?.name.toLowerCase().endsWith('.svg')?'native':'ai');privacy();render();
+  const row=current();$('figure-import-mode').value=row?.mode||(row?.name.toLowerCase().endsWith('.svg')?'native':'vector');privacy();render();
   if(row?.state==='ready'){try{const result=await api(`/api/figure-imports/${id}/candidate`);if(token!==epoch)return;candidate=result;$('figure-import-preview').replaceChildren(sanitizedSvg(result.svg));render();}catch(e){if(token===epoch)toast(e.message,true);}}
   schedule();
  }
  function schedule(){clearTimeout(timer);if(dialog.open&&importBusy(current()?.state))timer=setTimeout(poll,1100);}
  async function poll(){const id=selected,token=epoch;try{const row=await api('/api/figure-imports/'+id);if(token!==epoch)return;update(row);$('figure-import-retry-poll').hidden=true;if(row.state==='ready'){await select(id);return;}render();schedule();}catch{if(token!==epoch)return;$('figure-import-status').textContent='暂时连接不上本机服务，原文件已保留。请重新连接查看进度。';$('figure-import-retry-poll').hidden=false;}}
  async function open(){showFloatingWindow(dialog);try{rows=(await api('/api/figure-imports')).imports;await select(selected&&rows.some(r=>r.id===selected)?selected:rows[0]?.id||null);}catch(e){toast(e.message,true);}}
- function privacy(){$('figure-import-privacy').textContent=$('figure-import-mode').value==='native'?'本机处理，不上传图片。复杂 SVG 请切换 AI 拆解；路径型箭头不会自动绑定对象。':'AI 拆解会将当前页图片发送到你配置的视觉模型；留空时复用文本模型。';}
+ function privacy(){const mode=$('figure-import-mode').value;$('figure-import-privacy').textContent=mode==='native'?'本机处理，不上传图片。复杂 SVG 可切换高保真重建；路径型箭头不会自动绑定对象。':mode==='vector'?'优先使用本机 OCR 与矢量描摹；本机未识别出文字时，才会将当前页发送到已配置的可读图模型。候选不嵌入位图。':'AI 拆解会将当前页图片发送到你配置的视觉模型；留空时复用文本模型。复杂插画保留图片块。';}
  $('figure-import-mode').onchange=privacy;
  async function upload(file,page=1){
   if(mutation)return;const error=importFileError(file);if(error)return toast(error,true);

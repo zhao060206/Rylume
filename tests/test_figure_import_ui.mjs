@@ -6,6 +6,7 @@ assert.match(importFileError({name:'paper.pdf',size:11*1024*1024}),/10 MB/);
 assert.match(importFileError({name:'run.exe',size:10}),/PNG/);
 assert.equal(importBusy('recognizing'),true);assert.equal(importBusy('failed'),false);
 assert.equal(importSummary({objects:8,texts:3,connections:2,image_blocks:1}),'3 处文字 · 4 个矢量图形 · 2 条绑定连线 · 1 个图片块');
+assert.equal(importSummary({texts:12,vector_groups:80,vector_paths:2400,image_blocks:0}),'12 个可改字标签 · 80 组 / 2400 条矢量路径 · 0 个位图');
 assert.deepEqual(creationProject('/api/figure-imports/imp_'+'a'.repeat(24)+'/accept',{activeProject:'project_a'}),{projectId:'project_a'});
 assert.deepEqual(creationProject('/api/personal-templates/tpl_'+'b'.repeat(24)+'/use',{activeProject:'project_b'}),{projectId:'project_b'});
 console.log('Import validation, progress, truthful editability and project membership checks passed.');

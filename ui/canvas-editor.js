@@ -1,6 +1,9 @@
 /** Native SVG object editor. Coordinates are millimetres; exports use no overlays. */
 const NS = 'http://www.w3.org/2000/svg', PXMM = 96 / 25.4;
-const copy = x => JSON.parse(JSON.stringify(x));
+// Scene values are JSON data. Reuse immutable SVG strings across undo states
+// instead of re-encoding tens of megabytes for every small text edit.
+const copy = x => Array.isArray(x)?x.map(copy):x&&typeof x==='object'?Object.fromEntries(Object.entries(x).map(([k,v])=>[k,copy(v)])):x;
+export const usesTextAppearance=o=>!!(o?.text_appearance&&o.asset_snapshot&&['label','font_size_pt','fill'].every(k=>o[k]===o.text_appearance[k]));
 const node = (tag, attrs = {}, text) => {
   const n = document.createElementNS(NS, tag);
   for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
@@ -222,6 +225,7 @@ function labelBaseline(o,lines,fs){
 }
 function labelLines(o) {
   const text = o.label || '', fs = Math.max(7, o.font_size_pt || 8) * 25.4 / 72;
+  if(o.state==='import_text')return {lines:text.split('\n'),fs};
   const limit = o.type==='text'?Math.max(5,o.w||18):(o.state||'').startsWith('flow_')?Math.max(5,o.w-(o.state==='flow_decision'?10:5)):Math.max(24, Math.min(42, (o.w || 18) + 12));
   const hasSpace = text.includes(' ');
   const words = hasSpace ? text.split(' ') : [...text];
@@ -286,6 +290,7 @@ export class SceneEditor {
   get hasRedo() { return this.redoStack.length > 0; }
 
   setDocument(scene, svg) {
+    this.contextDrawCache=null;
     this.activeLabel=null;
     this.relationType=scene.provenance?.method==='original-editable-workflow'?'sequence':'associates';
     this.doc = copy(scene);
@@ -297,6 +302,7 @@ export class SceneEditor {
     this.draw();
     this.fit();
     this.onSelection([]);
+    this.host.dispatchEvent?.(new CustomEvent('editor-document-loaded'));
   }
 
   updateDocument(scene, svg) {
@@ -307,14 +313,17 @@ export class SceneEditor {
     this.selected = new Set([...this.selected].filter(id => ids.has(id)));
     this.draw();
     this.onSelection(this.selectedIds);
+    this.host.dispatchEvent?.(new CustomEvent('editor-document-loaded'));
   }
 
   clear() {
+    this.contextDrawCache=null;
     this.doc = null;
     this.base = null;
     this.baseSvg = null;
     this.selected.clear();
     this.host.replaceChildren();
+    this.host.dispatchEvent?.(new CustomEvent('editor-document-loaded'));
   }
 
   setSelection(ids) {
@@ -464,7 +473,15 @@ export class SceneEditor {
 
   draw() {
     if (!this.baseSvg || !this.doc) return;
-    const svg = this.baseSvg.cloneNode(true);
+    // Keep traced artwork mounted across text edits. Cloning every path several
+    // times made a small label change freeze large imported figures.
+    const svg = this.baseSvg.cloneNode(false);
+    for(const child of this.baseSvg.children){
+      const editable=['layer-objects','layer-context','layer-relations'].includes(child.id);
+      svg.append(child.cloneNode(!editable));
+    }
+    const previousContexts=this.contextDrawCache||new Map(),contextCache=new Map();
+    const contextStyle=JSON.stringify(this.doc.style);
     svg.setAttribute('viewBox', `0 0 ${this.doc.canvas.width_mm} ${this.doc.canvas.height_mm}`);
     svg.setAttribute('data-revision', this.doc.revision);
 
@@ -473,7 +490,7 @@ export class SceneEditor {
       objects = node('g', { id: 'layer-objects' });
       svg.append(objects);
     }
-    const original = new Map([...svg.querySelectorAll('[data-object-id]')].map(n => [n.getAttribute('data-object-id'), n.cloneNode(true)]));
+    const original = new Map([...this.baseSvg.querySelectorAll('[data-object-id]')].map(n => [n.getAttribute('data-object-id'), n]));
     objects.replaceChildren();
     let contexts=svg.querySelector('#layer-context');
     if(!contexts){contexts=node('g',{id:'layer-context'});svg.insertBefore(contexts,objects);}
@@ -481,11 +498,15 @@ export class SceneEditor {
 
     for (const o of this.doc.objects) {
       if (!o.visible) continue;
+      const signature=o.role==='context'?JSON.stringify(o)+contextStyle:null;
+      const cached=previousContexts.get(o.id);
+      if(signature&&cached?.signature===signature){contexts.append(cached.group);contextCache.set(o.id,cached);continue;}
       const group = node('g', {
         'data-object-id': o.id,
         'data-type': o.type,
-        tabindex: '0',
-        role: 'button',
+        tabindex: o.role==='context'?'-1':'0',
+        role: o.role==='context'?'presentation':'button',
+        ...(o.role==='context'?{'aria-hidden':'true'}:{}),
         'aria-label': o.label || o.id
       });
       group.style.pointerEvents=o.locked||o.role==='context'?'none':'bounding-box';
@@ -493,7 +514,8 @@ export class SceneEditor {
       const source = original.get(o.id);
       let body = node('g');
 
-      if (source && old && old.type === o.type && old.state === o.state && old.asset_id === o.asset_id && old.illustration?.sha256 === o.illustration?.sha256) {
+      const sameSnapshot=old?.asset_snapshot?.svg===o.asset_snapshot?.svg;
+      if (source && old && sameSnapshot && usesTextAppearance(old)===usesTextAppearance(o) && old.type === o.type && old.state === o.state && old.asset_id === o.asset_id && old.illustration?.sha256 === o.illustration?.sha256) {
         for (const child of [...source.children]) {
           if (child.hasAttribute('data-label-for')) continue;
           const c = child.cloneNode(true);
@@ -521,8 +543,14 @@ export class SceneEditor {
           x: o.x, y: o.y, width: o.w, height: o.h, rx: Math.min(o.w, o.h) / 3,
           fill: o.fill || '#deebef', stroke: o.stroke || '#527f92', 'stroke-width': .28
         };
-        if(o.illustration?.data){
+        if(o.text_appearance&&!usesTextAppearance(o)){
+          // Editing the label switches its preserved outline to live text.
+        } else if(o.illustration?.data){
           body.append(node('image',{href:o.illustration.data,x:o.x,y:o.y,width:o.w,height:o.h,preserveAspectRatio:'xMidYMid meet'}));
+        } else if(o.asset_snapshot?.svg){
+          const art=sanitizedSvg(o.asset_snapshot.svg),box=art.getAttribute('viewBox').split(/[ ,]+/).map(Number);
+          const g=node('g',{transform:`translate(${o.x} ${o.y}) scale(${o.w/box[2]} ${o.h/box[3]}) translate(${-box[0]} ${-box[1]})`});
+          g.append(...art.children);body.append(g);
         } else if(this.artwork?.has(o.asset_id || o.type)){
           const art=this.artwork.get(o.asset_id || o.type).cloneNode(true),box=art.getAttribute('viewBox').split(/[ ,]+/).map(Number);
           const g=node('g',{transform:`translate(${o.x} ${o.y}) scale(${o.w/box[2]} ${o.h/box[3]}) translate(${-box[0]} ${-box[1]})`});
@@ -536,11 +564,11 @@ export class SceneEditor {
       group.append(body);
 
       const canonicalLabels=source?[...source.querySelectorAll('[data-label-for]')]:[];
-      const preserveLabels=old&&canonicalLabels.length&&old.label===o.label&&old.w===o.w&&old.h===o.h&&old.font_size_pt===o.font_size_pt&&(o.type!=='text'||old.fill===o.fill);
+      const preserveLabels=old&&canonicalLabels.length&&old.label===o.label&&old.w===o.w&&old.h===o.h&&old.font_size_pt===o.font_size_pt&&old.font_weight===o.font_weight&&(o.type!=='text'||old.fill===o.fill);
       if(preserveLabels){for(const original of canonicalLabels){const label=original.cloneNode(true);
         label.setAttribute('x',Number(label.getAttribute('x'))+o.x+o.w/2-old.x-old.w/2+(o.label_dx||0)-(old.label_dx||0));
         label.setAttribute('y',Number(label.getAttribute('y'))+o.y+o.h-old.y-old.h+(o.label_dy||0)-(old.label_dy||0));group.append(label);}}
-      else {const { lines, fs } = labelLines(o);
+      else if(!usesTextAppearance(o)){const { lines, fs } = labelLines(o);
       lines.forEach((lineText, i) => {
         const label = node('text', {
           'data-label-for': o.id,
@@ -549,6 +577,7 @@ export class SceneEditor {
           'text-anchor': 'middle',
           'font-family': 'Arial, Microsoft YaHei, sans-serif',
           'font-size': fs,
+          'font-weight': o.font_weight||400,
           fill: o.type==='text'?(o.fill||'#253844'):'#253844'
         }, lineText);
         group.append(label);
@@ -557,7 +586,9 @@ export class SceneEditor {
 
       group.querySelectorAll('[data-label-for]').forEach(n=>{n.setAttribute('cursor',o.type==='text'?'move':'grab');n.setAttribute('pointer-events','all');});
       (o.role==='context'?contexts:objects).append(group);
+      if(signature)contextCache.set(o.id,{signature,group});
     }
+    this.contextDrawCache=contextCache;
 
     let edges = svg.querySelector('#layer-relations');
     if (!edges) {

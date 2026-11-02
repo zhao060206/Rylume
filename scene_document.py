@@ -172,9 +172,16 @@ def normalize_scene(value):
                "font_size_pt": _number(o.get("font_size_pt", style["font_size_pt"]), "字号", style["min_font_size_pt"], 48),
                "label_dx": _number(o.get("label_dx", 0), "label_dx"),
                "label_dy": _number(o.get("label_dy", 0), "label_dy"),
+               "font_weight": int(_number(o.get("font_weight", 400), "字重", 100, 900)),
                "evidence": _text(o.get("evidence", ""), 1000)}
         if o.get('visual_description'):
             out['visual_description']=_text(o['visual_description'],1000)
+        if o.get('text_appearance') is not None:
+            original=o['text_appearance']
+            if kind!='text' or not isinstance(original,dict):raise SceneError('原始字形信息无效')
+            out['text_appearance']={'label':_text(original.get('label','')),
+                'font_size_pt':_number(original.get('font_size_pt'), '原始字号',7,48),
+                'fill':_color(original.get('fill','#000000'))}
         if o.get('reference_object_id'):
             out['reference_object_id']=_id(o['reference_object_id'])
         if o.get('evidence_source') in ('user_text','reference_image','canvas_sketch','knowledge'):

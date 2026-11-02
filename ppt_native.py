@@ -25,6 +25,23 @@ from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.dml import MSO_LINE_DASH_STYLE
 from pptx.enum.shapes import MSO_CONNECTOR, MSO_SHAPE
+from pptx.shapes.freeform import FreeformBuilder
+from pptx.oxml.shapes.autoshape import CT_Shape
+from pptx.oxml.shapes.groupshape import CT_GroupShape
+
+
+class _NativeFreeform(FreeformBuilder):
+    """Use the collection's cached ID; upstream freeforms bypass turbo mode."""
+    def _add_freeform_sp(self, origin_x, origin_y):
+        ident=self._shapes._next_shape_id
+        sp=CT_Shape.new_freeform_sp(ident,f'Freeform {ident}',origin_x+self._left,
+                                   origin_y+self._top,self._width,self._height)
+        self._shapes._spTree.insert_element_before(sp,'p:extLst')
+        return sp
+
+
+def _freeform(shapes,x,y,scale=1.0):
+    return _NativeFreeform.new(shapes,x,y,scale,scale)
 from pptx.enum.text import MSO_ANCHOR, MSO_AUTO_SIZE, PP_ALIGN
 from pptx.util import Emu, Pt
 from svgpathtools import parse_path
@@ -209,6 +226,8 @@ class Builder:
         except Exception as exc:
             self.warnings.append(f"path parse skipped: {exc}")
             return
+        if not node.get('marker-end') and node.get('fill-rule')!='evenodd' and self._bezier_path(slide,path,node,m):
+            return
         contours = []
         for sub in path.continuous_subpaths():
             pts = []
@@ -233,12 +252,49 @@ class Builder:
         for group in groups:
             self._compound(slide, group, color, stroke, width, closed, marker=has_marker)
 
+    def _bezier_path(self, slide, path, node, m):
+        """Preserve cubic/quadratic geometry instead of sampling into polygons."""
+        from pptx.oxml.xmlchemy import OxmlElement
+        from pptx.oxml.ns import qn
+        if not path or any(type(s).__name__ not in ('Line','CubicBezier','QuadraticBezier') for s in path):
+            return False
+        contours=[]; points=[]
+        def transform(z):
+            p=self.pt(z.real,z.imag,m);points.append(p);return p
+        for sub in path.continuous_subpaths():
+            commands=[('moveTo',[transform(sub[0].start)])]
+            for seg in sub:
+                kind=type(seg).__name__
+                if kind=='Line':commands.append(('lnTo',[transform(seg.end)]))
+                elif kind=='CubicBezier':commands.append(('cubicBezTo',[transform(seg.control1),transform(seg.control2),transform(seg.end)]))
+                else:commands.append(('quadBezTo',[transform(seg.control),transform(seg.end)]))
+            if sub.isclosed():commands.append(('close',[]))
+            contours.append(commands)
+        left=min(p[0] for p in points);top=min(p[1] for p in points)
+        right=max(p[0] for p in points);bottom=max(p[1] for p in points)
+        builder=_freeform(slide.shapes,left,top,scale=1)
+        builder.add_line_segments([(right,top),(right,bottom),(left,bottom)],close=True)
+        shape=builder.convert_to_shape();_drop_style(shape)
+        path_list=shape._element.spPr.find(qn('a:custGeom')).find(qn('a:pathLst'))
+        for child in list(path_list):path_list.remove(child)
+        native=OxmlElement('a:path');native.set('w',str(max(1,int(shape.width))));native.set('h',str(max(1,int(shape.height))))
+        shape_left,shape_top=int(shape.left),int(shape.top)
+        for commands in contours:
+            for command,vertices in commands:
+                step=OxmlElement('a:'+command)
+                for x,y in vertices:
+                    point=OxmlElement('a:pt');point.set('x',str(round(x)-shape_left));point.set('y',str(round(y)-shape_top));step.append(point)
+                native.append(step)
+        path_list.append(native);shape.name=f'path {self.paths+1}'
+        self._paint(shape,node,_m_scale(m));self.paths+=1;self.shapes+=1
+        return True
+
     def _compound(self, slide, group, color, stroke, width, closed, marker=False):
         outer = group["outer"]
         # If there is no fill (e.g. stroke path/connector), keep it open
         should_close = closed and (color is not None)
         try:
-            builder = slide.shapes.build_freeform(outer[0][0], outer[0][1], scale=1.0)
+            builder = _freeform(slide.shapes,outer[0][0], outer[0][1], scale=1.0)
             builder.add_line_segments(outer[1:], close=should_close)
             shape = builder.convert_to_shape()
         except Exception as exc:
@@ -298,7 +354,7 @@ class Builder:
                 self.pt(x, y + h, m)
             ]
             try:
-                builder = slide.shapes.build_freeform(corners[0][0], corners[0][1], scale=1.0)
+                builder = _freeform(slide.shapes,corners[0][0], corners[0][1], scale=1.0)
                 builder.add_line_segments(corners[1:], close=True)
                 shape = builder.convert_to_shape()
                 _drop_style(shape)
@@ -381,7 +437,7 @@ class Builder:
         left = (x2 + size * math.cos(wing), y2 + size * math.sin(wing))
         wing = angle - math.pi * 0.82
         right = (x2 + size * math.cos(wing), y2 + size * math.sin(wing))
-        builder = slide.shapes.build_freeform(x2, y2, scale=1.0)
+        builder = _freeform(slide.shapes,x2, y2, scale=1.0)
         builder.add_line_segments([left, right], close=True)
         shape = builder.convert_to_shape()
         shape.fill.solid()
@@ -507,9 +563,20 @@ class Builder:
                     # A scientific object is one selectable group in PowerPoint;
                     # its paths and live labels remain individually editable.
                     from types import SimpleNamespace
-                    group = slide.shapes.add_group_shape()
+                    ident=slide.shapes._next_shape_id
+                    element=CT_GroupShape.new_grpSp(ident,scientific_id)
+                    slide.shapes._spTree.insert_element_before(element,'p:extLst')
+                    group=slide.shapes._shape_factory(element)
                     group.name = scientific_id
+                    # All collections on one slide must share an ID counter.
+                    # Without turbo mode, python-pptx scans the entire slide for
+                    # every path, which is quadratic on imported illustrations.
+                    if slide.shapes._cached_max_shape_id is not None:
+                        group.shapes._cached_max_shape_id=slide.shapes._cached_max_shape_id
                     self.walk(SimpleNamespace(shapes=group.shapes), node, combined)
+                    group.shapes._recalculate_extents()
+                    if group.shapes._cached_max_shape_id is not None:
+                        slide.shapes._cached_max_shape_id=group.shapes._cached_max_shape_id
                 else:
                     self.walk(slide, node, combined)
             elif tag == "rect":
@@ -523,7 +590,7 @@ class Builder:
                 pts = [(self.pt(float(points[i]), float(points[i + 1]), combined))
                        for i in range(0, len(points) - 1, 2)]
                 if len(pts) >= 2:
-                    builder = slide.shapes.build_freeform(pts[0][0], pts[0][1], scale=1.0)
+                    builder = _freeform(slide.shapes,pts[0][0], pts[0][1], scale=1.0)
                     builder.add_line_segments(pts[1:], close=(tag == "polygon"))
                     shape = builder.convert_to_shape()
                     self._paint(shape, node, _m_scale(m))
@@ -636,6 +703,7 @@ def build(svg_path, out_dir, *, font="Times New Roman", progress=None, preview=T
     presentation.slide_width = Emu(int(width * EMU_PX))
     presentation.slide_height = Emu(int(height * EMU_PX))
     slide = presentation.slides.add_slide(presentation.slide_layouts[6])
+    slide.shapes.turbo_add_enabled=True
 
     total = _drawable_count(root)
     state = {"done": 0, "last": 0.0}

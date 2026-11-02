@@ -337,7 +337,7 @@ class ImportStore:
 
     def start(self, ident, body, config):
         mode=body.get('mode','ai')
-        if mode not in ('ai','native'): raise SceneError('请选择有效转换方式')
+        if mode not in ('ai','native','vector'): raise SceneError('请选择有效转换方式')
         with self.lock:
             meta=self.read(ident)
             if ident in self.active: return self.public(meta)
@@ -354,21 +354,29 @@ class ImportStore:
         def work():
             try:
                 folder=self.folder(ident)
-                state('recognizing','正在拆分文字、图形和连接；可以关闭窗口，稍后继续。')
+                state('recognizing','正在描摹原图并转换可编辑文字与矢量路径。' if mode=='vector' else '正在拆分文字、图形和连接；可以关闭窗口，稍后继续。')
+                vector_report={}
                 if mode=='native': scene=native_svg((folder/'original.bin').read_bytes(),meta['name'])
+                elif mode=='vector':
+                    from figure_vectorize import reconstruct as vector_reconstruct
+                    scene,vector_report=vector_reconstruct((folder/'source.png').read_bytes(),meta['name'],config,
+                        checkpoint=lambda message:state('recognizing',message))
                 else: scene=reconstruct(observe((folder/'source.png').read_bytes(),config),(folder/'source.png').read_bytes(),meta['name'])
                 state('verifying','正在检查对象、端点与可编辑性')
                 scene['provenance'].update(reference_id=ident,reference_summary=meta['name'],reference_rights='用户导入；请遵守原图授权')
                 from scene_render import render_scene
                 from scene_document import audit_scene
                 scene=normalize_scene(scene);svg=render_scene(scene)
+                if mode=='vector':
+                    from figure_vectorize import fidelity_report
+                    vector_report['fidelity']=fidelity_report((folder/'source.png').read_bytes(),svg)
                 report={'objects':len(scene['objects']),'texts':sum(o['type']=='text' for o in scene['objects']),
                         'connections':len(scene['relations']),'image_blocks':sum(bool(o.get('illustration')) for o in scene['objects']),
-                        'warnings':scene['unresolved'],'audit':audit_scene(scene),'author_confirmed':False}
+                        'warnings':scene['unresolved'],'audit':audit_scene(scene),'author_confirmed':False,**vector_report}
                 with self.lock:
                     if event.is_set(): raise InterruptedError()
                     _write(folder/(run+'.json'),scene);(folder/(run+'.svg')).write_text(svg,encoding='utf8')
-                    current=self.read(ident);current.update(state='ready',message='拆分完成，请对照原图核对后打开编辑。',report=report)
+                    current=self.read(ident);current.update(state='ready',message='矢量重建完成，请对照原图核对后打开编辑。' if mode=='vector' else '拆分完成，请对照原图核对后打开编辑。',report=report)
                     _write(folder/'meta.json',current)
             except InterruptedError:
                 with self.lock:
@@ -400,6 +408,8 @@ class ImportStore:
             meta=self.read(ident)
             if meta.get('run')!=run or meta['state']!='ready':raise RevisionConflict('转换结果已变化，请重新预览')
             if meta.get('job_id'):return {'ok':True,'job_id':meta['job_id']}
+            if meta.get('mode')=='vector' and meta.get('report',{}).get('fidelity',{}).get('target_met') is not True:
+                raise SceneError('该候选未达到 99% 原始分辨率像素接近度，请重新转换或使用更清晰的原图；原文件已保留')
             result=_create(app,self.candidate(ident)['scene'])
             meta['job_id']=result['job_id'];_write(self.folder(ident)/'meta.json',meta)
             return result
