@@ -56,6 +56,7 @@ def credits(scene):
     ids = sorted({o.get('asset_id') for o in scene['objects'] if o.get('asset_id')})
     snapshots={o['asset_id']:o['asset_snapshot']['meta'] for o in scene['objects'] if o.get('asset_snapshot')}
     result=[{k:(snapshots.get(aid) or library()[aid]).get(k,'') for k in ('asset_id','label','author','author_url','license','license_url','source_url','modifications')} for aid in ids]
+    recoloured={o.get('asset_id') for o in scene['objects'] if o.get('fill') or o.get('stroke')}
     for item in result:
-        if any(o.get('asset_id')==item['asset_id'] and (o.get('fill') or o.get('stroke')) for o in scene['objects']):item['modifications']+=' Recoloured by the figure author.'
+        if item['asset_id'] in recoloured:item['modifications']+=' Recoloured by the figure author.'
     return result

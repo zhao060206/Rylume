@@ -291,8 +291,8 @@ export class SceneEditor {
     this.relationType='associates';
 
     host.addEventListener('pointerdown', e => this.down(e));
-    host.addEventListener('pointermove', e => this.move(e));
-    host.addEventListener('pointerup', e => this.up(e));
+    host.addEventListener('pointermove', e => this.queueMove(e));
+    host.addEventListener('pointerup', e => {this.flushMove(e);this.up(e);});
     host.addEventListener('pointercancel', () => this.cancelGesture());
     host.addEventListener('dblclick', e => this.editLabel(e));
     host.addEventListener('wheel', e => {
@@ -314,7 +314,10 @@ export class SceneEditor {
   get hasRedo() { return this.redoStack.length > 0; }
 
   setDocument(scene, svg) {
-    this.contextDrawCache=null;
+    this.cancelQueuedMove();
+    this.renderBase=null;
+    this.renderSvg=null;
+    this.objectDrawCache=null;
     this.activeLabel=null;
     this.relationType=scene.provenance?.method==='original-editable-workflow'?'sequence':'associates';
     this.doc = copy(scene);
@@ -329,10 +332,12 @@ export class SceneEditor {
     this.host.dispatchEvent?.(new CustomEvent('editor-document-loaded'));
   }
 
-  updateDocument(scene, svg) {
+  updateDocument(scene, svg, baseScene=scene) {
     this.doc = copy(scene);
-    this.base = copy(scene);
+    if(svg!==undefined){
+    this.base = copy(baseScene);
     this.baseSvg = sanitizedSvg(svg);
+    }
     const ids = new Set([...scene.objects, ...scene.relations].map(o => o.id));
     this.selected = new Set([...this.selected].filter(id => ids.has(id)));
     this.draw();
@@ -341,7 +346,8 @@ export class SceneEditor {
   }
 
   clear() {
-    this.contextDrawCache=null;
+    this.cancelQueuedMove();
+    this.renderBase=null;this.renderSvg=null;this.renderSources=null;this.renderObjects=null;this.objectDrawCache=null;
     this.doc = null;
     this.base = null;
     this.baseSvg = null;
@@ -499,13 +505,19 @@ export class SceneEditor {
     if (!this.baseSvg || !this.doc) return;
     // Keep traced artwork mounted across text edits. Cloning every path several
     // times made a small label change freeze large imported figures.
-    const svg = this.baseSvg.cloneNode(false);
+    const fresh=this.renderBase!==this.baseSvg;
+    const svg = fresh?this.baseSvg.cloneNode(false):this.renderSvg;
+    if(fresh){
     for(const child of this.baseSvg.children){
       const editable=['layer-objects','layer-context','layer-relations'].includes(child.id);
       svg.append(child.cloneNode(!editable));
     }
-    const previousContexts=this.contextDrawCache||new Map(),contextCache=new Map();
-    const contextStyle=JSON.stringify(this.doc.style);
+    this.renderBase=this.baseSvg;this.renderSvg=svg;this.objectDrawCache=new Map();
+    this.renderSources=new Map([...this.baseSvg.querySelectorAll('[data-object-id]')].map(n=>[n.getAttribute('data-object-id'),n]));
+    this.renderObjects=new Map(this.base.objects.map(o=>[o.id,o]));
+    }
+    const previousObjects=this.objectDrawCache||new Map(),objectCache=new Map();
+    const sameStyle=equal(this.renderStyle,this.doc.style);
     svg.setAttribute('viewBox', `0 0 ${this.doc.canvas.width_mm} ${this.doc.canvas.height_mm}`);
     svg.setAttribute('data-revision', this.doc.revision);
 
@@ -514,17 +526,15 @@ export class SceneEditor {
       objects = node('g', { id: 'layer-objects' });
       svg.append(objects);
     }
-    const original = new Map([...this.baseSvg.querySelectorAll('[data-object-id]')].map(n => [n.getAttribute('data-object-id'), n]));
-    objects.replaceChildren();
+    const original = this.renderSources;
     let contexts=svg.querySelector('#layer-context');
     if(!contexts){contexts=node('g',{id:'layer-context'});svg.insertBefore(contexts,objects);}
-    contexts.replaceChildren();
+    const objectNodes=[],contextNodes=[];
 
     for (const o of this.doc.objects) {
       if (!o.visible) continue;
-      const signature=o.role==='context'?JSON.stringify(o)+contextStyle:null;
-      const cached=previousContexts.get(o.id);
-      if(signature&&cached?.signature===signature){contexts.append(cached.group);contextCache.set(o.id,cached);continue;}
+      const cached=previousObjects.get(o.id),target=o.role==='context'?contextNodes:objectNodes;
+      if(sameStyle&&cached&&equal(cached.object,o)){target.push(cached.group);objectCache.set(o.id,cached);continue;}
       const group = node('g', {
         'data-object-id': o.id,
         'data-type': o.type,
@@ -534,7 +544,7 @@ export class SceneEditor {
         'aria-label': o.label || o.id
       });
       group.style.pointerEvents=o.locked||o.role==='context'?'none':'bounding-box';
-      const old = this.base.objects.find(x => x.id === o.id);
+      const old = this.renderObjects.get(o.id);
       const source = original.get(o.id);
       let body = node('g');
 
@@ -585,6 +595,7 @@ export class SceneEditor {
           body.append(node('rect', attrs));
         }
       }
+      if(usesTextAppearance(o))body.setAttribute('data-label-for',o.id);
       group.append(body);
 
       const canonicalLabels=source?[...source.querySelectorAll('[data-label-for]')]:[];
@@ -609,10 +620,16 @@ export class SceneEditor {
       }
 
       group.querySelectorAll('[data-label-for]').forEach(n=>{n.setAttribute('cursor',o.type==='text'?'move':'grab');n.setAttribute('pointer-events','all');});
-      (o.role==='context'?contexts:objects).append(group);
-      if(signature)contextCache.set(o.id,{signature,group});
+      target.push(group);
+      objectCache.set(o.id,{object:copy(o),group});
     }
-    this.contextDrawCache=contextCache;
+    // Leave unchanged paths mounted; reattaching layers invalidates painting.
+    const reconcile=(layer,nodes)=>{
+      const keep=new Set(nodes);for(const child of [...layer.children])if(!keep.has(child))child.remove();
+      nodes.forEach((child,index)=>{if(layer.children[index]!==child)layer.insertBefore(child,layer.children[index]||null);});
+    };
+    reconcile(contexts,contextNodes);reconcile(objects,objectNodes);
+    this.objectDrawCache=objectCache;this.renderStyle=copy(this.doc.style);
 
     let edges = svg.querySelector('#layer-relations');
     if (!edges) {
@@ -646,10 +663,10 @@ export class SceneEditor {
       edges.append(group);
     }
 
-    this.host.querySelector('svg')?.remove();
-    this.host.prepend(svg);
+    if(fresh){this.host.querySelector('svg')?.remove();this.host.prepend(svg);}
     this.position();
     this.drawOverlay();
+    this.host.dispatchEvent?.(new Event('editor-scene-rendered'));
   }
 
   drawOverlay() {
@@ -837,6 +854,22 @@ export class SceneEditor {
     this.gesture = { kind: 'marquee', start: point, before, baseSelection: this.selectedIds };
   }
 
+  queueMove(e) {
+    if(!this.gesture&&this.tool!=='connect')return;
+    this.pendingMove=e;
+    if(this.moveFrame==null)this.moveFrame=requestAnimationFrame(()=>{this.moveFrame=null;const latest=this.pendingMove;this.pendingMove=null;if(latest)this.move(latest);});
+  }
+
+  cancelQueuedMove(){
+    if(this.moveFrame!=null)cancelAnimationFrame(this.moveFrame);
+    this.moveFrame=null;this.pendingMove=null;
+  }
+
+  flushMove(e){
+    const pending=this.pendingMove;this.cancelQueuedMove();
+    if(pending)this.move(e||pending);
+  }
+
   move(e) {
     if(!this.doc)return;
     this.connectionFree=!!e.altKey;
@@ -954,6 +987,7 @@ export class SceneEditor {
   }
 
   cancelGesture() {
+    this.cancelQueuedMove();
     this.guides=[];
     this.host.querySelector('#editor-marquee')?.remove();
     const before=this.gesture?.before;

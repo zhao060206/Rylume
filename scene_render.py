@@ -30,7 +30,7 @@ def _put(obj,x,y,w,h,force):
 
 
 def layout_scene(scene,force=False):
-    scene=normalize_scene(copy.deepcopy(scene))
+    scene=normalize_scene(scene)
     cw,ch=scene['canvas']['width_mm'],scene['canvas']['height_mm']
     if not force and all(all(k in o for k in ('x','y','w','h')) for o in scene['objects']) and all(all(k in c for k in ('x','y','w','h')) for c in scene['compartments']):return scene
     if scene['style'].get('template'):
@@ -399,8 +399,9 @@ def _relation(scene,r,palette):
     return ''.join(p)+'</g>'
 
 
-def render_scene(scene):
-    scene=layout_scene(scene)
+def render_scene(scene, *, _laid_out=False):
+    if not _laid_out:
+        scene=layout_scene(scene)
     cw,ch=scene['canvas']['width_mm'],scene['canvas']['height_mm'];palette=scene['style']['palette']
     p=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{cw}mm" height="{ch}mm" viewBox="0 0 {cw} {ch}" data-version="2" data-revision="{scene["revision"]}">',f'<title>{_escape(scene["title"])}</title>',f'<rect width="{cw}" height="{ch}" fill="#FFFFFF"/>','<g id="layer-compartments">']
     from scientific_library import credits

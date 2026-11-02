@@ -381,9 +381,10 @@ def apply_operations(scene, operations, *, allowed_ids=None):
     return normalize_scene(draft)
 
 
-def audit_scene(scene):
+def audit_scene(scene, *, _normalized=False):
     """Evidence-linked structural checks; VLM opinions are a separate channel."""
-    scene = normalize_scene(scene)
+    if not _normalized:
+        scene = normalize_scene(scene)
     findings = []
 
     def add(code, message, ids=(), severity="warning", **evidence):
@@ -504,21 +505,21 @@ class SceneRepository:
         revision = int(_number(revision, "revision", 1, 10**9))
         return normalize_scene(json.loads((self.root / "revisions" / str(revision) / "scene.json").read_text(encoding="utf-8")))
 
-    def commit(self, scene, base_revision=None):
+    def commit(self, scene, base_revision=None, *, _current=None):
         import os
         import uuid
         from scene_render import render_scene, layout_scene
         with self.lock:
             head_path = self.root / "scene-head.json"
-            current = self.read() if head_path.exists() else None
+            current = _current if _current is not None else self.read() if head_path.exists() else None
             if current is not None and base_revision != current["revision"]:
                 raise RevisionConflict("图版已被其他操作更新，请保留当前草稿并重新载入")
             if current is None and base_revision not in (None, 0):
                 raise RevisionConflict("场景尚未创建")
-            scene = layout_scene(normalize_scene(scene))
+            scene = layout_scene(scene)
             scene["revision"] = (current["revision"] + 1) if current else 1
-            svg = render_scene(scene)
-            audit = audit_scene(scene)
+            svg = render_scene(scene, _laid_out=True)
+            audit = audit_scene(scene, _normalized=True)
             folder = self.root / "revisions" / str(scene["revision"])
             folder.mkdir(parents=True, exist_ok=True)
             # A process interrupted before HEAD is published leaves an orphan,
@@ -543,9 +544,44 @@ class SceneRepository:
             _safe_replace(temp, head_path)
             return {"scene": scene, "revision": scene["revision"], "svg": svg, "audit": audit}
 
-    def patch(self, base_revision, operations):
+    def patch(self, base_revision, operations, *, delta=False):
         with self.lock:
             current = self.read()
             if current["revision"] != base_revision:
                 raise RevisionConflict("图版修订号已变化，当前修改没有覆盖已保存内容")
-            return self.commit(apply_operations(current, operations), base_revision)
+            result = self.commit(apply_operations(current, operations), base_revision, _current=current)
+            if delta:
+                changes = scene_delta(current, result['scene'])
+                # The editor can render local text/geometry changes directly.
+                # New glyph types and compartment/template changes need the
+                # canonical SVG to avoid leaving a temporary placeholder visible.
+                shell = set(changes['fields']) & {'canvas','style','compartments','layout','title'}
+                glyph = any((set(item['changes']) | set(item['unset'])) & {'type','state','asset_id','illustration','text_appearance'}
+                            for item in changes['objects']['updated'])
+                native_added = any(o['type'] != 'text' and not o.get('asset_snapshot') and not o.get('illustration')
+                                   for o in changes['objects']['added'])
+                if not (shell or glyph or native_added):
+                    result['scene_delta'] = changes
+            return result
+
+
+def scene_delta(before, after):
+    """Canonical save acknowledgment; unchanged SVG strings stay on the client."""
+    delta = {'fields': {k: v for k, v in after.items()
+                        if k not in ('objects', 'relations') and before.get(k) != v}}
+    for field in ('objects', 'relations'):
+        old = {item['id']: item for item in before[field]}
+        new = {item['id']: item for item in after[field]}
+        updates = []
+        for oid, item in new.items():
+            if oid not in old:
+                continue
+            changes = {k: v for k, v in item.items() if k not in old[oid] or old[oid][k] != v}
+            unset = [k for k in old[oid] if k not in item]
+            if changes or unset:
+                updates.append({'id': oid, 'changes': changes, 'unset': unset})
+        delta[field] = {'added': [v for k, v in new.items() if k not in old],
+                        'removed': [k for k in old if k not in new], 'updated': updates}
+        if list(old) != list(new):
+            delta[field]['order'] = list(new)
+    return delta

@@ -124,7 +124,7 @@ export function setupAnnotations({state,editor,api,flush,toast,workspace,onAppli
   async function showComparison(run){
     const id=job,base=await api('/api/jobs/'+id+'/revisions?revision='+run.base_revision);if(job!==id)return;
     const {setupComparison}=await import('./candidate-comparison.js');
-    compare.querySelector('#annotation-before').replaceChildren(sanitizedSvg(run.before_svg||state.svg));compare.querySelector('#annotation-after').replaceChildren(sanitizedSvg(run.candidate.preview_svg));const checks=compare.querySelector('.annotation-verification');checks.replaceChildren();checkList(checks,run);
+    compare.querySelector('#annotation-before').replaceChildren(sanitizedSvg(run.before_svg||base.svg));compare.querySelector('#annotation-after').replaceChildren(sanitizedSvg(run.candidate.preview_svg));const checks=compare.querySelector('.annotation-verification');checks.replaceChildren();checkList(checks,run);
     const actions=compare.querySelector('.annotation-dialog-actions'),keep=el('button','button','保留当前图版'),apply=el('button','button primary','应用修改版'),authorCheck=el('input');authorCheck.type='checkbox';
     const authorLabel=el('label','annotation-author-visual');authorLabel.append(authorCheck,document.createTextNode('我已对照原图和批注核对插画，确认画面细节符合要求'));authorLabel.hidden=!run.candidate.manual_visual_review_allowed;
     const updateApply=()=>{apply.disabled=!canApplyAnnotationCandidate(run.candidate,authorCheck.checked)||!!run.applied_revision;};authorCheck.onchange=updateApply;keep.onclick=()=>compare.close();updateApply();

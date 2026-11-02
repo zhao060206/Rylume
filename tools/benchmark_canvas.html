@@ -1,0 +1,57 @@
+<!doctype html><meta charset="utf-8"><title>Rylume canvas performance fixture</title>
+<style>body{font:14px Arial;margin:16px}#host{height:65vh;position:relative;overflow:hidden;background:#e9edef}#host>svg{position:absolute;left:0;top:0}button{padding:10px;margin:8px 0}pre{white-space:pre-wrap}</style>
+<h1>Real scientific figure — edit and drag benchmark</h1>
+<p>Runs the production editor against a supplied figure. No model, export or user data is changed.</p>
+<button id="run" disabled>Run edit / drag / undo / recovery benchmark</button><button id="recovery-run" disabled>Measure recovery only</button><output id="status">Loading…</output><pre id="recovery-results"></pre>
+<pre id="results"></pre><div id="host" tabindex="0"></div>
+<script type="module">
+const before=new URLSearchParams(location.search).has('baseline'),prefix=before?'/before/':'/ui/';
+const {SceneEditor}=await import(prefix+'canvas-editor.js');
+const {DraftStore}=await import(prefix+'draft-store.js');
+const loadStart=performance.now();
+const [scene,svg]=await Promise.all([fetch('/scene.json').then(r=>r.json()),fetch('/figure.svg').then(r=>r.text())]);
+const times={},editor=new SceneEditor({host:document.getElementById('host')});
+let started=performance.now();editor.setDocument(scene,svg);times.initial_draw_ms=performance.now()-started;
+let paintTimeouts=0;
+const painted=()=>new Promise(resolve=>{let done=false;const finish=()=>{if(done)return;done=true;clearTimeout(timer);resolve();};const timer=setTimeout(()=>{paintTimeouts++;finish();},150);requestAnimationFrame(()=>requestAnimationFrame(finish));});
+await painted();times.load_and_paint_ms=performance.now()-loadStart;
+const status=document.getElementById('status'),results=document.getElementById('results'),run=document.getElementById('run');
+status.textContent='Ready';run.disabled=false;
+const recoveryRun=document.getElementById('recovery-run');recoveryRun.disabled=false;
+recoveryRun.onclick=async()=>{
+ recoveryRun.disabled=true;const store=new DraftStore(),id='performance-recovery-'+Date.now(),started=performance.now();
+ const pending=store.write({id,base_revision:1,scene:editor.scene}),enqueue=performance.now()-started;
+ await pending;const total=performance.now()-started;await store.clear(id);
+ document.getElementById('recovery-results').textContent=JSON.stringify({enqueue_ms:enqueue,total_ms:total});recoveryRun.disabled=false;
+};
+run.onclick=async()=>{
+ run.disabled=true;status.textContent='Measuring…';
+ try{
+ const target=editor.scene.objects.find(o=>o.text_appearance),original=target.label;
+ editor.setSelection([target.id]);
+ const art=editor.host.querySelector('#layer-context')?.firstElementChild,root=editor.host.querySelector('svg');
+ const edits=[],frames=[];
+ for(let i=0;i<8;i++){
+   status.textContent='Editing '+(i+1)+'/8';
+   started=performance.now();editor.changeSelection({label:original+(i%2?'':' · test')});edits.push(performance.now()-started);
+   await painted();frames.push(performance.now()-started);
+ }
+ // The real gesture handler moves from the initial pointer position each time.
+ const snapshot=structuredClone(editor.scene),point={x:target.x,y:target.y};
+ editor.world=e=>({x:e.clientX,y:e.clientY});editor.snap=false;
+ editor.gesture={kind:'move',start:point,before:snapshot,px:point.x,py:point.y,ids:[target.id]};
+ const drag=[];
+ for(let i=1;i<=30;i++){
+   status.textContent='Dragging '+i+'/30';
+   started=performance.now();editor.move({clientX:point.x+i/3,clientY:point.y+i/4});drag.push(performance.now()-started);await painted();
+ }
+ editor.up({pointerId:1,clientX:point.x+10,clientY:point.y+7.5});editor.undo();editor.redo();editor.undo();
+ const store=new DraftStore(),recoveryId='performance-fixture-'+Date.now();
+ started=performance.now();await store.write({id:recoveryId,base_revision:1,scene:editor.scene});times.recovery_write_ms=performance.now()-started;
+ const recovered=await store.read(recoveryId);if(recovered.scene.objects.length!==scene.objects.length)throw Error('Recovery lost objects');await store.clear(recoveryId);
+ const summary=values=>({min:Math.min(...values),median:[...values].sort((a,b)=>a-b)[Math.floor(values.length/2)],max:Math.max(...values)});
+ results.textContent=JSON.stringify({variant:before?'before':'after',...times,edit_js_ms:summary(edits),edit_paint_ms:summary(frames),drag_js_ms:summary(drag),paint_timeouts:paintTimeouts,root_retained:root===editor.host.querySelector('svg'),art_retained:art===editor.host.querySelector('#layer-context')?.firstElementChild,paths:editor.host.querySelectorAll('path').length,objects:editor.scene.objects.length,heap_bytes:performance.memory?.usedJSHeapSize},null,2);
+ status.textContent='Complete';
+ }catch(error){results.textContent=error.stack;status.textContent='Failed';}finally{run.disabled=false;}
+};
+</script>

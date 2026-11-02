@@ -12,13 +12,19 @@ export function pathTranslation(before,dx,dy){
  if(!Number.isFinite(dx)||!Number.isFinite(dy))throw Error('路径位置必须为有效数值');
  return `translate(${dx} ${dy})${before?' '+before:''}`;
 }
+export function vectorDetailSources(scene,selectedIds=[]){
+ const selected=new Set(selectedIds);
+ const imported=(scene?.objects||[]).filter(o=>o.asset_snapshot?.svg&&(!o.text_appearance||usesTextAppearance(o)));
+ const focused=imported.filter(o=>selected.has(o.id));
+ return focused.length?focused:imported;
+}
 export function setupVectorDetails({state,editor,flush,toast}){
- const openButton=document.createElement('button');openButton.type='button';openButton.className='tool text-tool';openButton.id='edit-vector-details';openButton.textContent='矢量细节';openButton.hidden=true;
+ const openButton=document.createElement('button');openButton.type='button';openButton.className='tool text-tool';openButton.id='edit-vector-details';openButton.textContent='逐元素编辑';openButton.title='点击图中的任意箭头、图标或路径，拖动、改色、删除';openButton.hidden=true;
  document.getElementById('open-annotations').before(openButton);
  const dialog=document.createElement('dialog');dialog.className='vector-detail-dialog';dialog.setAttribute('aria-labelledby','vector-detail-title');
  dialog.innerHTML=`<header class="dialog-heading"><div><h2 id="vector-detail-title">编辑矢量细节</h2><p>点选路径，拖动或改色。按住 Shift 多选；滚轮缩放，空格或中键平移。</p></div><button type="button" class="icon-button" data-vector-close aria-label="关闭矢量细节">×</button></header>
  <div class="vector-detail-tools"><button type="button" data-vector-undo>撤销</button><button type="button" data-vector-redo>重做</button><button type="button" data-vector-fit>适合窗口</button><label>快速选择路径<input type="search" placeholder="输入路径编号" data-vector-search></label><span data-vector-count></span></div>
- <div class="vector-detail-layout"><div class="vector-detail-viewport" tabindex="0" aria-label="矢量细节画布"></div><aside><h3>所选路径</h3><p data-vector-selection>在图中点击一个轮廓或颜色区域。</p><div class="vector-detail-fields"><label>填充颜色<input type="color" data-vector-fill disabled></label><label>轮廓颜色<input type="color" data-vector-stroke disabled></label><label>水平移动 · mm<input type="number" step="0.1" value="0" data-vector-dx disabled></label><label>垂直移动 · mm<input type="number" step="0.1" value="0" data-vector-dy disabled></label></div><button type="button" data-vector-delete disabled>删除所选路径</button><p class="muted small">这里修改插画和原图箭头的路径。文字在主画布中直接点选修改；箭头的原始轮廓会保留。</p><p role="status" data-vector-status></p></aside></div>
+ <div class="vector-detail-layout"><div class="vector-detail-viewport" tabindex="0" aria-label="逐元素矢量画布"></div><aside><h3>所选路径</h3><p data-vector-selection>点击任意箭头、图标或轮廓；拖动即可移动。</p><div class="vector-detail-fields"><label>填充颜色<input type="color" data-vector-fill disabled></label><label>轮廓颜色<input type="color" data-vector-stroke disabled></label><label>水平移动 · mm<input type="number" step="0.1" value="0" data-vector-dx disabled></label><label>垂直移动 · mm<input type="number" step="0.1" value="0" data-vector-dy disabled></label></div><button type="button" data-vector-delete disabled>删除所选路径</button><p class="muted small">主画布双击改文字；这里的每条箭头、图标、边框和曲线均可单独移动、改色或删除。修改会作为主画布的一次撤销步骤。</p><p role="status" data-vector-status></p></aside></div>
  <div class="vector-detail-discard" hidden>有尚未应用的细节修改。<button type="button" data-vector-discard>放弃并关闭</button><button type="button" data-vector-continue>继续编辑</button></div>
  <footer class="dialog-actions"><span data-vector-save-status>修改仅在应用后写入图版，可在主画布撤销。</span><button type="button" class="button" data-vector-close>取消</button><button type="button" class="button primary" data-vector-apply disabled>应用并保存</button></footer>`;
  document.body.append(dialog);
@@ -70,14 +76,14 @@ export function setupVectorDetails({state,editor,flush,toast}){
    const value=pathTranslation(origins.get(item.index)||'',x,y);item.element.setAttribute('transform',value);item.display.setAttribute('transform',value);serialized.delete(item.owner);
   }drawSelection();
  }
- async function open(){
+ async function open(options={}){
   if(loading||!editor.scene)return;openButton.disabled=true;
   try{
-   if(!await flush())return;source=clone(editor.scene.objects.filter(o=>o.asset_snapshot?.svg&&(!o.text_appearance||usesTextAppearance(o))));if(!source.length)return;
+   if(!await flush())return;source=clone(vectorDetailSources(editor.scene,options.objectIds||editor.selectedIds));if(!source.length)return;
    loading=true;dirty=false;const epoch=++loadEpoch;selected.clear();undo=[];redo=[];baseJob=state.id;baseRevision=state.revision;
    baseSnapshots=new Map(source.map(o=>[o.id,o.asset_snapshot.svg]));roots.clear();serialized.clear();
    view={x:0,y:0,w:editor.scene.canvas.width_mm,h:editor.scene.canvas.height_mm};viewport.replaceChildren(document.createTextNode('正在准备矢量细节…'));
-   $('.vector-detail-discard').hidden=true;$('[data-vector-status]').textContent='正在读取矢量组，原图版保持不变。';
+   $('.vector-detail-discard').hidden=true;$('[data-vector-status]').textContent=`正在读取 ${source.length} 个图元；图标、箭头和轮廓都可单独拖动。`;
    dialog.querySelectorAll('button,input').forEach(b=>{if(!b.hasAttribute('data-vector-close'))b.disabled=true;});dialog.showModal();await paint();
    let count=0;for(const o of source){const root=sanitizedSvg(o.asset_snapshot.svg);roots.set(o.id,root);serialized.set(o.id,new XMLSerializer().serializeToString(root));
     if(++count%16===0){await paint();if(epoch!==loadEpoch||!dialog.open)return;}}
@@ -131,8 +137,8 @@ export function setupVectorDetails({state,editor,flush,toast}){
    const saved=await flush();dialog.close();toast(saved?'矢量细节已保存；Ctrl+Z 可撤销。':'细节已放入画布，保存尚未完成，请点击顶部“保存”。',!saved);
   }catch(e){$('[data-vector-status]').textContent=e.message;button.disabled=false;}
  };
- function refreshAvailable(){openButton.hidden=!editor.scene?.objects.some(o=>o.asset_snapshot?.svg&&/^import_/.test(o.asset_id||''));}
+ function refreshAvailable(){const imported=vectorDetailSources(editor.scene||{},[]);openButton.hidden=!imported.length;openButton.textContent=editor.selectedIds?.some(id=>imported.some(o=>o.id===id))?'编辑所选内部元素':'逐元素编辑';}
  editor.host.addEventListener('editor-document-loaded',refreshAvailable);
- new MutationObserver(refreshAvailable).observe(document.getElementById('document-title')||editor.host,{subtree:true,childList:true});
+ document.addEventListener('document-save-state',refreshAvailable);
  return {refresh:refreshAvailable,open};
 }

@@ -53,6 +53,7 @@ def _finding_fingerprint(scene, finding):
 
 def _apply_layout_decisions(scene, audit, job):
     decisions=job.get('layout_decisions',{})
+    if not decisions:return audit
     for f in audit['findings']:
         decision=decisions.get(_finding_fingerprint(scene,f))
         if decision:f.update(status='acknowledged',resolution=decision['reason'])
@@ -73,6 +74,21 @@ def payload(app, job, revision=None):
         if visual.get("revision") == scene["revision"]:
             result["audit"]["vision"] = visual
         return result
+
+
+def audit_payload(app, job):
+    """Poll checks without reading or transferring the figure's artwork."""
+    repo=repository(app,job['id'])
+    with repo.lock:
+        from studio_storage import recover_pending_replacements
+        recover_pending_replacements(repo.root,recursive=False)
+        revision=json.loads((repo.root/'scene-head.json').read_text(encoding='utf8'))['revision']
+        audit=json.loads((repo.root/'revisions'/str(revision)/'audit.json').read_text(encoding='utf8'))
+        audit['author_confirmed']=job.get('author_confirmed_revision')==revision
+        if job.get('layout_decisions'):_apply_layout_decisions(repo.read(revision),audit,job)
+        visual=job.get('scene_vision') or {}
+        if visual.get('revision')==revision:audit['vision']=visual
+        return {'ok':True,'revision':revision,'audit':audit}
 
 
 def _publish(app, job, result):
@@ -386,7 +402,7 @@ def dispatch(handler, method, path, app):
             job = create_job(app,text,config,request_id=body.get('request_id'))
             handler._json(200,{"ok":True,"job_id":job["id"]})
             return True
-        match = re.fullmatch(r"/api/jobs/([A-Za-z0-9_-]+)/(scene|editable-copy|redraw|revise|auto-fix|preview-fix|layout-decision|recheck|review-finding|confirm|ppt|ppt-status|save-as|download|pdf|retry|cancel)",path)
+        match = re.fullmatch(r"/api/jobs/([A-Za-z0-9_-]+)/(scene|audit|editable-copy|redraw|revise|auto-fix|preview-fix|layout-decision|recheck|review-finding|confirm|ppt|ppt-status|save-as|download|pdf|retry|cancel)",path)
         if not match:
             return False
         job_id, action = match.groups()
@@ -443,14 +459,19 @@ def dispatch(handler, method, path, app):
         if not job.get("scene_revision"):
             handler._json(409,{"ok":False,"error":"场景尚未生成完成"})
             return True
+        if action == 'audit' and method == 'GET':
+            handler._json(200,audit_payload(app,job))
+            return True
         if action == "scene":
             if method == "GET":
                 handler._json(200,payload(app,job))
             elif method == "PATCH":
                 repo=repository(app,job_id)
                 with repo.lock:
-                    result = repo.patch(_revision(body),body.get("operations"))
+                    result = repo.patch(_revision(body),body.get("operations"), delta=body.get('response')=='delta')
                     _publish(app,job,result)
+                if 'scene_delta' in result:
+                    result={k:v for k,v in result.items() if k not in ('scene','svg')}
                 handler._json(200,{"ok":True,**result})
             else:
                 handler._json(405,{"ok":False,"error":"method not allowed"})

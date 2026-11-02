@@ -20,6 +20,7 @@ import tempfile
 import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from lxml.etree import SubElement
 
 from pptx import Presentation
 from pptx.dml.color import RGBColor
@@ -28,6 +29,9 @@ from pptx.enum.shapes import MSO_CONNECTOR, MSO_SHAPE
 from pptx.shapes.freeform import FreeformBuilder
 from pptx.oxml.shapes.autoshape import CT_Shape
 from pptx.oxml.shapes.groupshape import CT_GroupShape
+from pptx.oxml.ns import qn
+
+_DRAWING_TAGS={name:qn('a:'+name) for name in ('moveTo','lnTo','cubicBezTo','quadBezTo','close','pt')}
 
 
 class _NativeFreeform(FreeformBuilder):
@@ -281,10 +285,11 @@ class Builder:
         shape_left,shape_top=int(shape.left),int(shape.top)
         for commands in contours:
             for command,vertices in commands:
-                step=OxmlElement('a:'+command)
+                # All children inherit the DrawingML namespace already declared
+                # on native. Avoid rebuilding a namespace map for every point.
+                step=SubElement(native,_DRAWING_TAGS[command])
                 for x,y in vertices:
-                    point=OxmlElement('a:pt');point.set('x',str(round(x)-shape_left));point.set('y',str(round(y)-shape_top));step.append(point)
-                native.append(step)
+                    SubElement(step,_DRAWING_TAGS['pt'],x=str(round(x)-shape_left),y=str(round(y)-shape_top))
         path_list.append(native);shape.name=f'path {self.paths+1}'
         self._paint(shape,node,_m_scale(m));self.paths+=1;self.shapes+=1
         return True
@@ -691,6 +696,17 @@ def _drawable_count(root) -> int:
 
 
 def build(svg_path, out_dir, *, font="Times New Roman", progress=None, preview=True) -> dict:
+    report = _build(svg_path, out_dir, font=font, progress=progress, preview=preview)
+    if report['shapes'] > 5000:
+        # Presentation parts and shape proxies contain cycles. Release them
+        # after the builder frame ends instead of retaining a huge XML tree
+        # in the desktop server until some later edit triggers collection.
+        import gc
+        gc.collect()
+    return report
+
+
+def _build(svg_path, out_dir, *, font="Times New Roman", progress=None, preview=True) -> dict:
     svg_path = Path(svg_path).resolve()
     out_dir = Path(out_dir).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)

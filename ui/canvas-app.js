@@ -1,3 +1,5 @@
+import {copySceneData,SceneSaveCache} from './scene-data.js';
+import {setupElementEditing} from './element-editor.js';
 import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
 import {setupPersonalAssets} from './personal-assets.js';
 import {setupFigureImport} from './figure-import.js';
@@ -26,9 +28,9 @@ import {setupReview} from './review-ui.js';
 import {setupWorkspace,historyMatches,canApplySavedScene} from './workspace-ui.js';
 import {setupWorkbench} from './editor-workbench.js';
 import {setupLibrary} from './library-ui.js';
-import {SceneEditor,sanitizedSvg} from './canvas-editor.js';
+import {SceneEditor,sanitizedSvg,usesTextAppearance} from './canvas-editor.js';
 import {installUiContract} from './ui-contract.js';
-const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));
+const $=id=>document.getElementById(id),clone=copySceneData;
 const S={id:null,revision:0,jobs:[],assets:[],examples:[],audit:null,svg:'',pending:[],saving:false,dirty:0,inlineEditing:false,conflict:false,timer:null,reference:null,candidate:null,active:null};
 let startupNavigationCancelled=false;
 const ws=$('workspace');
@@ -51,9 +53,15 @@ async function api(path,body,method){
 function saveStatus(text,dirty=false){$('save-status').title=text;$('save-status').textContent=text;$('save-status').classList.toggle('dirty',dirty);document.dispatchEvent(new Event('document-save-state'));}
 function showError(error){S.saveError=error.message==='Failed to fetch'?'暂时连接不上本机服务。修改已留在恢复副本中，可以重试或另存图版。':error.message;S.saveFailures=(S.saveFailures||0)+1;documentUI?.changed();$('error-banner').hidden=false;$('error-text').textContent=S.saveError;S.conflict=error.status===409;saveStatus(S.conflict?'版本冲突 · 恢复副本保留':'保存未完成 · 恢复副本保留',true);}
 const editor=new SceneEditor({host:$('canvas-host'),onChange(operations){S.pending.push(...clone(operations));S.dirty++;documentUI?.changed();saveStatus('正在编辑 · 待保存',true);clearTimeout(S.timer);S.timer=setTimeout(()=>saver.flush(),500);renderTools();renderLayers();renderProperties();onboardingUI?.refresh();},onSelection(){noviceUI?.selection();renderProperties();renderLayers();workspaceUI?.selection();if(editor.selectedIds.length)editor.fitMode=false;renderTools();onboardingUI?.refresh();},onZoom(value){$('zoom-100').textContent=Math.round(value*100)+'%';},onStatus:toast});
+const savedScenes=new SceneSaveCache();
 const saver=createDocumentSaver({state:S,status:saveStatus,
- write:(id,revision,operations)=>api('/api/jobs/'+id+'/scene',{base_revision:revision,operations},'PATCH'),
- applied(data,epoch){if(canApplySavedScene({epoch,dirty:S.dirty,pending:S.pending.length,gesture:editor.gesture||editor.finishEditing}))editor.updateDocument(data.scene,data.svg);$('error-banner').hidden=true;renderAudit();workspaceUI?.refresh();},
+ async write(id,revision,operations){
+  const baseline=savedScenes.scene?.revision===revision?savedScenes.scene:(await api('/api/jobs/'+id+'/scene')).scene;
+  const data=await api('/api/jobs/'+id+'/scene',{base_revision:revision,operations,response:'delta'},'PATCH');
+  if(S.id===id)savedScenes.accept(data,baseline);
+  return data;
+ },
+ applied(data,epoch){if(canApplySavedScene({epoch,dirty:S.dirty,pending:S.pending.length,gesture:editor.gesture||editor.finishEditing}))editor.updateDocument(...savedScenes.consumePreview(data));$('error-banner').hidden=true;renderAudit();workspaceUI?.refresh();},
  failed:showError,settled(){documentUI?.saved();},changed(){workspaceUI?.refresh();document.dispatchEvent(new Event('document-save-state'));}
 });
 async function flush(){editor.finishEditing?.();return saver.flush();}
@@ -68,7 +76,7 @@ const loadDocument=latestDocumentLoader({canLeave,readVersion:()=>S.id+':'+S.rev
  return {id,data,job,legacy,svg};
 },async apply({id,data,job,legacy,svg},current){
  if(legacy)return openLegacy(job,svg);
- S.id=id;S.currentJob=job;S.revision=data.revision;S.svg=data.svg;S.audit=data.audit;S.pending=[];S.conflict=false;S.saveError=null;S.saveFailures=0;S.dirty=0;
+ S.id=id;savedScenes.reset(data.scene);S.currentJob=job;S.revision=data.revision;S.svg=data.svg;S.audit=data.audit;S.pending=[];S.conflict=false;S.saveError=null;S.saveFailures=0;S.dirty=0;
  $('error-banner').hidden=true;$('canvas-host').classList.remove('legacy-preview');$('canvas-hint').textContent='V 选择 · H 平移 · C 连线 · 双击改字';editor.setDocument(data.scene,data.svg);
  $('welcome').hidden=true;$('toggle-export').disabled=false;$('project-title').textContent=data.scene.title;$('brief-input').value=data.scene.source_text;authorBrief(S,data.scene.source_text);updateCount();
  $('canvas-size').textContent=`${data.scene.canvas.width_mm} × ${data.scene.canvas.height_mm} mm · ${data.scene.objects.some(o=>o.illustration)?'对象插画':'矢量对象'}`;saveStatus(`已保存 · r${S.revision}`);history.replaceState(null,'',`/#${id}`);
@@ -120,10 +128,11 @@ function tab(name, toggle=false){
   document.querySelectorAll('.left-tab').forEach(n=>n.hidden=n.id!==`panel-${name}`);
   ws.classList.toggle('left-collapsed',collapse);
  });floatingWindows.restorePanel();floatingWindows.constrainPanel();syncPanelButtons(ws);
+ if(name==='layers')renderLayers();
 }
 function renderExamples(){const list=$('example-list');list.replaceChildren();(S.templates||[]).filter(t=>t.recommended&&t.library_group==='science').forEach(item=>{const b=el('button','example-card');const img=el('img','example-thumb');img.src=item.thumbnail;img.alt='';b.append(img);const text=el('span');text.append(el('span','example-name',item.title),el('span','example-description',item.usage));b.append(text);b.onclick=()=>libraryUI.showTemplate(item);list.append(b);});}
 function renderAssets(){libraryUI.renderAssets();}
-function renderLayers(){const list=$('layer-list');list.replaceChildren();if(!S.revision||!editor.scene)return;const selected=new Set(editor.selectedIds);for(const o of [...editor.scene.objects].reverse()){const row=el('div','layer-row'+(selected.has(o.id)?' selected':'')),name=el('button','layer-name',o.label||o.id);name.onclick=e=>editor.setSelection(e.shiftKey?[...selected,o.id]:[o.id]);row.append(name);for(const [key,title,active,inactive]of [['visible','可见性','◉','○'],['locked','锁定','L','·']]){const b=el('button','layer-toggle'+(o[key]?' on':''),o[key]?active:inactive);b.setAttribute('aria-label',`${title} ${o.label}`);b.onclick=()=>editor.applyOperations([{op:'update',id:o.id,changes:{[key]:!o[key]}}],title);row.append(b);}list.append(row);}}
+function renderLayers(){const list=$('layer-list');if($('panel-layers').hidden)return;list.replaceChildren();if(!S.revision||!editor.scene)return;const selected=new Set(editor.selectedIds);for(const o of [...editor.scene.objects].reverse()){const row=el('div','layer-row'+(selected.has(o.id)?' selected':'')),name=el('button','layer-name',o.label||o.id);name.onclick=e=>editor.setSelection(e.shiftKey?[...selected,o.id]:[o.id]);row.append(name);for(const [key,title,active,inactive]of [['visible','可见性','◉','○'],['locked','锁定','L','·']]){const b=el('button','layer-toggle'+(o[key]?' on':''),o[key]?active:inactive);b.setAttribute('aria-label',`${title} ${o.label}`);b.onclick=()=>editor.applyOperations([{op:'update',id:o.id,changes:{[key]:!o[key]}}],title);row.append(b);}list.append(row);}}
 function input(parent,label,value,type,change,options){const wrapper=el('label','',label),n=el(type==='select'?'select':'input');if(type==='select'){for(const [v,t]of options){const opt=el('option','',t);opt.value=v;n.append(opt);}n.value=value;}else{n.type=type||'text';n.value=value??'';if(type==='number')n.step='.1';if(type==='color')n.className='color-input';}n.setAttribute('aria-label',label);const commit=()=>{const v=type==='number'?Number(n.value):n.value;if(type==='number'&&!Number.isFinite(v))return;change(v);};n.onchange=commit;n.onkeydown=e=>{if(e.key==='Enter'){commit();n.blur();}};wrapper.append(n);parent.append(wrapper);return n;}
 function section(parent,title){const n=el('div','property-section');n.append(el('h3','',title));parent.append(n);const grid=el('div','property-grid');n.append(grid);return grid;}
 function renderProperties(){
@@ -147,6 +156,8 @@ function renderProperties(){
   const detail=advanced('精确位置、尺寸与文字偏移'),dims=section(detail,'位置与尺寸 · mm');
   for(const[key,label]of [['x','X'],['y','Y'],['w','宽度'],['h','高度'],['rotation','旋转角度'],['stroke_pt','线宽 · pt'],['label_dx','文字左右偏移'],['label_dy','文字上下偏移']])input(dims,label,Number(o[key]??(key==='stroke_pt'?scene.style.stroke_pt:0)).toFixed(1),'number',v=>editor.changeSelection({[key]:v}));
   const actions=el('div','property-actions');for(const[label,fn]of [['移到最前',()=>order(true)],['移到最后',()=>order(false)]]){const b=el('button','button',label);b.onclick=fn;actions.append(b);}detail.append(actions);
+  const vectorObjects=objects.filter(o=>o.asset_snapshot?.svg&&(!o.text_appearance||usesTextAppearance(o)));
+  if(vectorObjects.length){const detail=el('button','button full','编辑内部箭头、图标和路径');detail.title='进入逐元素编辑：点击任意路径即可拖动、改色或删除';detail.onclick=()=>vectorDetails?.open({objectIds:vectorObjects.map(o=>o.id)});parent.append(detail,el('p','muted small','普通拖动移动整个图元；进入逐元素编辑后，图标、箭头和每条矢量路径都能单独调整。'));}
   const ai=el('button','button full','用 AI 修改所选对象');ai.onclick=openAI;parent.append(ai);
   const redraw=el('button','button full','重绘所选插画');redraw.disabled=objects.some(o=>o.locked)||!!S.active;redraw.onclick=()=>generationUI?.redraw();parent.append(redraw);
  }else if(relations.length){
@@ -241,10 +252,10 @@ $('align').onchange=e=>{if(e.target.value.startsWith('distribute-'))editor.distr
 // generate handled by generationUI
 $('cancel-job').onclick=()=>{if(S.active)api(`/api/jobs/${S.active}/cancel`,{}).then(()=>$('generation-text').textContent='正在取消…').catch(e=>toast(e.message,true));};$('open-history').onclick=async()=>{await refreshJobs();$('history-dialog').showModal();};$('toggle-export').onclick=()=>{const dialog=$('export-menu');if(dialog.open){dialog.close();return;}dialog.hidden=false;dialog.showModal();$('export-status').replaceChildren();if(S.exporting)$('export-status').textContent='上一份文件还在保存，请稍候。';$('export-revision').textContent='导出当前图版，原图仍可继续编辑。';};
 $('close-export').onclick=$('continue-editing').onclick=()=>$('export-menu').close();$('export-menu').addEventListener('close',()=>$('export-menu').hidden=true);document.querySelectorAll('[data-export]').forEach(b=>b.onclick=()=>exportFile(b.dataset.export));$('open-audit').onclick=()=>workspaceUI?.showRight('review');
-$('repair-geometry').onclick=async()=>{if(!S.revision||!await flush())return;try{const data=await api(`/api/jobs/${S.id}/auto-fix`,{});S.revision=data.revision;S.svg=data.svg;S.audit=data.audit;editor.updateDocument(data.scene,data.svg);saveStatus(`已保存 · r${S.revision}`);renderAudit();toast(data.changed?'已修复可确认的几何问题':data.message||'没有可自动修复的问题');}catch(e){toast(e.message,true);}};
-$('vision-review').onclick=async()=>{if(!S.revision||!await flush())return;try{await api(`/api/jobs/${S.id}/recheck`,{vision:true});S.audit.vision={status:'running',findings:[]};renderAudit();const id=S.id;for(let i=0;i<90;i++){await new Promise(r=>setTimeout(r,1500));if(S.id!==id)return;S.audit=(await api(`/api/jobs/${id}/scene`)).audit;renderAudit();if(S.audit.vision?.status!=='running')break;}}catch(e){toast(e.message,true);}};
+$('repair-geometry').onclick=async()=>{if(!S.revision||!await flush())return;try{const data=await api(`/api/jobs/${S.id}/auto-fix`,{});S.revision=data.revision;S.svg=data.svg;S.audit=data.audit;savedScenes.reset(data.scene);editor.updateDocument(data.scene,data.svg);saveStatus(`已保存 · r${S.revision}`);renderAudit();toast(data.changed?'已修复可确认的几何问题':data.message||'没有可自动修复的问题');}catch(e){toast(e.message,true);}};
+$('vision-review').onclick=async()=>{if(!S.revision||!await flush())return;try{await api(`/api/jobs/${S.id}/recheck`,{vision:true});S.audit.vision={status:'running',findings:[]};renderAudit();const id=S.id;for(let i=0;i<90;i++){await new Promise(r=>setTimeout(r,1500));if(S.id!==id)return;const data=await api(`/api/jobs/${id}/audit`);if(S.id!==id)return;if(data.revision!==S.revision)break;S.audit=data.audit;renderAudit();if(S.audit.vision?.status!=='running')break;}}catch(e){toast(e.message,true);}};
 $('confirm-author').onclick=async()=>{if(!S.revision||!await flush())return;await api(`/api/jobs/${S.id}/confirm`,{revision:S.revision});S.audit.author_confirmed=true;renderAudit();toast('已记录当前修订的作者核对');};
-$('download-draft').onclick=()=>{if(!editor.scene)return;const url=URL.createObjectURL(new Blob([JSON.stringify(editor.scene,null,2)],{type:'application/json'})),a=el('a');a.href=url;a.download=(S.id||'figure')+'-draft.scene.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};$('reload-scene').onclick=()=>{if(!confirm('请先保存本地草稿。重新载入将显示服务器上已保存的修订。'))return;S.pending=[];S.conflict=false;openJob(S.id);};
+$('reload-scene').onclick=()=>{if(!confirm('请先保存本地草稿。重新载入将显示服务器上已保存的修订。'))return;S.pending=[];S.conflict=false;openJob(S.id);};
 // reference handled by generationUI
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();saveControls.run();}if(e.key==='Escape'&&$('export-menu').open)$('export-menu').close();});window.addEventListener('beforeunload',e=>{if(S.pending.length||S.saving||S.inlineEditing){e.preventDefault();e.returnValue='';}});
 async function boot(){ws.classList.add('left-collapsed','properties-hidden');syncPanelButtons(ws);renderProperties();try{try{if(!location.hash)$('brief-input').value=localStorage.getItem('rylume-research-brief')||'';}catch{}updateCount();const data=await api('/api/scene/catalog');S.assets=data.assets||[];S.examples=data.examples||[];libraryUI.init(data);renderExamples();renderTools();await refreshJobs();const id=location.hash.slice(1);if(!startupNavigationCancelled&&/^[A-Za-z0-9_-]+$/.test(id))await openJob(id);return true;}catch(e){toast('连接本地服务失败：'+e.message,true);return false;}}
@@ -262,7 +273,7 @@ annotationUI=setupAnnotations({state:S,editor,api,flush,toast,workspace:ws,canSu
   if(data.scene?.id!==S.id)return;
   const before=clone(editor.scene);
   editor.undoStack.push(before);if(editor.undoStack.length>100)editor.undoStack.shift();editor.redoStack=[];
-  S.revision=data.revision;S.audit=data.audit;S.svg=data.svg;S.pending=[];S.dirty++;S.conflict=false;
+  S.revision=data.revision;savedScenes.reset(data.scene);S.audit=data.audit;S.svg=data.svg;S.pending=[];S.dirty++;S.conflict=false;
   editor.updateDocument(data.scene,data.svg);saveStatus(`已保存 · r${S.revision}`);
   renderAudit();renderProperties();renderLayers();renderTools();workspaceUI?.refresh();await refreshJobs();
 }});
@@ -284,6 +295,7 @@ onboardingUI=setupOnboarding({state:S,editor,api,flush,canLeave,openJob,refreshJ
 const personalUI=setupPersonalAssets({api,toast,library:libraryUI,state:S});
 const figureImportUI=setupFigureImport({state:S,editor,api,flush,canLeave,openJob,refreshJobs,toast});
 const vectorDetails=setupVectorDetails({state:S,editor,flush,toast});
+const elementEditing=setupElementEditing({editor,toast});
 const experienceUI=setupWorkspaceExperience({imports:figureImportUI,composer:composerUI,blank});
 const releaseUI=setupReleaseNotes({api,toast});
 // Keep command names and visible targets in sync as modules are added. A

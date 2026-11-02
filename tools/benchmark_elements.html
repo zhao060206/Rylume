@@ -1,0 +1,41 @@
+<!doctype html><meta charset="utf-8"><title>Rylume internal element integration</title>
+<link rel="stylesheet" href="/ui/element-editor.css"><style>body{font:14px Arial}#host{height:500px;width:800px;position:relative;overflow:hidden;background:#eee}#host>svg{position:absolute}button{padding:8px;margin:5px}</style>
+<button id="open-annotations" hidden></button><button id="run">Run real pointer / undo / save-operation checks</button><pre id="result">Ready</pre><div id="host" tabindex="0"></div>
+<script type="module">
+import {SceneEditor} from '/ui/canvas-editor.js';import {setupElementEditing} from '/ui/element-editor.js';
+const art='<svg viewBox="0 0 100 100"><path d="M10 10 L40 10 L40 30 L10 30Z" fill="#287b68"/><path d="M50 60 L80 60 L75 55 M80 60 L75 65" fill="none" stroke="#142823"/></svg>';
+const object={id:'art',type:'symbol',role:'context',asset_id:'import_art',asset_snapshot:{svg:art,meta:{}},x:10,y:10,w:100,h:100,rotation:0,visible:true,locked:false,label:'',state:'',font_size_pt:8};
+const label={id:'label',type:'text',x:120,y:20,w:30,h:10,label:'Label',visible:true,locked:false,font_size_pt:8};
+const scene={revision:1,canvas:{width_mm:180,height_mm:120},style:{stroke_pt:.8,palette:{primary:'#287b68'}},objects:[object,label],relations:[],compartments:[]};
+const svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120"><g id="layer-context"><g data-object-id="art"><g transform="translate(10 10)">'+art.replace(/^<svg[^>]*>|<\/svg>$/g,'')+'</g></g></g><g id="layer-objects"/><g id="layer-relations"/></svg>';
+const host=document.getElementById('host'),changes=[],editor=new SceneEditor({host,onChange:ops=>changes.push(ops)});editor.setDocument(scene,svg);const mode=setupElementEditing({editor,toast(){}});
+host.setPointerCapture=()=>{};host.hasPointerCapture=()=>false;
+function check(value,message){if(!value)throw Error(message);}
+function pointer(type,target,x,y,shiftKey=false){target.dispatchEvent(new PointerEvent(type,{bubbles:true,button:0,clientX:x,clientY:y,pointerId:17,shiftKey}));}
+document.getElementById('run').onclick=()=>{try{
+ mode.open();let path=host.querySelector('#layer-context path'),r=path.getBoundingClientRect(),x=r.x+r.width/2,y=r.y+r.height/2;
+ pointer('pointerdown',path,x,y);pointer('pointermove',host,x+24,y+16);pointer('pointerup',host,x+30,y+20);
+ check(changes.length===1,'One drag is exactly one saved operation batch');check(changes[0][0].id==='art','Only touched owner is saved');check(editor.scene.objects[0].asset_snapshot.svg.includes('translate('),'Path transform is stored');
+ let root=new DOMParser().parseFromString(editor.scene.objects[0].asset_snapshot.svg,'image/svg+xml');check(root.querySelectorAll('path').length===2,'Every path survives');check(!root.querySelectorAll('path')[1].hasAttribute('transform'),'Unselected arrow stays put');
+ const delta=Number(root.querySelector('path').getAttribute('transform').match(/translate\(([^ ]+)/)[1]),expected=30/host.querySelector('svg').getScreenCTM().a;check(Math.abs(delta-expected)<1e-6,'Final pointerup position wins over the last pointermove');
+ editor.undo();check(editor.scene.objects[0].asset_snapshot.svg===art,'Undo restores exact original artwork');editor.redo();check(editor.scene.objects[0].asset_snapshot.svg!==art,'Redo restores movement');editor.undo();
+ path=host.querySelector('#layer-context path');r=path.getBoundingClientRect();x=r.x+r.width/2;y=r.y+r.height/2;pointer('pointerdown',path,x,y);pointer('pointermove',host,x+30,y+20);pointer('pointercancel',host,x+30,y+20);check(editor.scene.objects[0].asset_snapshot.svg===art,'Cancelled drag never persists');
+ // Explicit marquee works even when its start lies on a painted background.
+ document.querySelector('[data-element-marquee]').click();
+ let a=new DOMPoint(5,5).matrixTransform(host.querySelector('svg').getScreenCTM()),b=new DOMPoint(95,85).matrixTransform(host.querySelector('svg').getScreenCTM());
+ pointer('pointerdown',path,a.x,a.y);pointer('pointerup',host,b.x,b.y);
+ check(document.querySelector('[data-element-count]').textContent.includes('2 条路径'),'Marquee selects both complete shapes');
+ const saved=structuredClone(editor.scene);editor.updateDocument(saved);
+ check(document.querySelector('[data-element-count]').textContent.includes('2 条路径'),'Save acknowledgement preserves selection');
+ document.querySelector('[data-element-delete]').click();check(new DOMParser().parseFromString(editor.scene.objects[0].asset_snapshot.svg,'image/svg+xml').querySelectorAll('path').length===0,'Delete removes every selected path');editor.undo();
+ mode.close();mode.open();let arrow=host.querySelectorAll('#layer-context path')[1];r=arrow.getBoundingClientRect();pointer('pointerdown',arrow,r.x,r.y);pointer('pointerup',host,r.x,r.y);
+ document.querySelector('input[type=color]').value='#ff0000';document.querySelector('[data-element-paint]').click();root=new DOMParser().parseFromString(editor.scene.objects[0].asset_snapshot.svg,'image/svg+xml');check(root.querySelectorAll('path')[1].getAttribute('stroke')==='#ff0000','Outline arrows change stroke colour');check(root.querySelectorAll('path')[1].getAttribute('fill')==='none','Outline arrows remain unfilled');editor.undo();check(editor.scene.objects[0].asset_snapshot.svg===art,'All edits undo to exact original');
+ // Switching from a path to text must clear the path keyboard selection.
+ const text=host.querySelector('[data-object-id=label] [data-label-for]');r=text.getBoundingClientRect();pointer('pointerdown',text,r.x+r.width/2,r.y+r.height/2);pointer('pointerup',host,r.x+r.width/2,r.y+r.height/2);
+ check(editor.selectedIds.includes('label'),'Text remains directly selectable in internal mode');
+ host.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'ArrowRight'}));check(editor.scene.objects.find(o=>o.id==='label').x===120.5,'Arrow key now moves selected text');check(editor.scene.objects[0].asset_snapshot.svg===art,'Text nudge leaves paths untouched');editor.undo();
+ // Holding space must still reach the main editor pan gesture.
+ editor.space=true;path=host.querySelector('#layer-context path');r=path.getBoundingClientRect();pointer('pointerdown',path,r.x,r.y);check(editor.gesture?.kind==='pan','Space-drag reaches native panning');pointer('pointerup',host,r.x,r.y);editor.space=false;
+ document.getElementById('result').textContent=JSON.stringify({passed:true,checks:['real pointer drag','final pointer position','one undo step','untouched arrow','save operations','undo / redo','cancel','multi-path marquee','selection after save','delete and restore','stroke-only arrow colour','text selection and nudge','space panning'],paths:2},null,2);
+ }catch(error){document.getElementById('result').textContent=error.stack;}};
+</script>

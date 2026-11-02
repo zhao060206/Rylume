@@ -51,3 +51,25 @@ def test_600dpi_export_uses_correct_pixel_dimensions(tmp_path):
     export_scene(scene,"png",tmp_path/"figure.png",dpi=600)
     with Image.open(tmp_path/"figure.png") as image:
         assert image.size==(2126,2126)
+
+
+def test_large_native_export_releases_presentation_graph(tmp_path, monkeypatch):
+    import weakref
+    import ppt_native
+    references=[]
+    factory=ppt_native.Presentation
+    def tracked_presentation():
+        presentation=factory()
+        references.append(weakref.ref(presentation))
+        return presentation
+    monkeypatch.setattr(ppt_native,'Presentation',tracked_presentation)
+    source=tmp_path/'many-paths.svg'
+    source.write_text('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">'+
+        '<path d="M 10 10 C 12 8 18 8 20 10 L 20 20 Z" fill="#326c82"/>'*5001+'</svg>')
+    result=ppt_native.build(source,tmp_path/'native',preview=False)
+    assert result['paths']==5001 and result['shapes']==5001
+    assert references[0]() is None, 'A finished export must release its cyclic presentation graph'
+    with zipfile.ZipFile(result['pptx']) as archive:
+        root=ET.fromstring(archive.read('ppt/slides/slide1.xml'))
+        ns={'a':'http://schemas.openxmlformats.org/drawingml/2006/main'}
+        assert len(root.findall('.//a:cubicBezTo',ns))==5001

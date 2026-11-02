@@ -36,7 +36,8 @@ export function setupReview({state,editor,api,flush,toast,showRight,showLayers})
       const result=await api(`/api/jobs/${state.id}/preview-fix`,{base_revision:state.revision,code:f.code,object_ids:f.object_ids});
       if(!result.changed){toast(result.message);locate(f);return;}
       const {sanitizedSvg}=await import('./canvas-editor.js');pending={...result,jobId:state.id,dirty:state.dirty};
-      $('fix-before').replaceChildren(sanitizedSvg(state.svg));$('fix-after').replaceChildren(sanitizedSvg(result.svg));
+      const before=state.svg||(await api(`/api/jobs/${state.id}/revisions?revision=${state.revision}`)).svg;
+      $('fix-before').replaceChildren(sanitizedSvg(before));$('fix-after').replaceChildren(sanitizedSvg(result.svg));
       $('fix-description').textContent=findingPresentation(f,editor.scene).detail;
       $('fix-summary').textContent=`仅调整 ${result.operations.length} 个相关对象的排版；应用后可以撤销。`;
       $('apply-fix-preview').disabled=false;$('fix-preview-dialog').showModal();

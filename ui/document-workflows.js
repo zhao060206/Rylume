@@ -1,7 +1,8 @@
 import {DraftStore} from './draft-store.js';
+import {copySceneData} from './scene-data.js';
 import {sanitizedSvg,legendOperations,usesTextAppearance} from './canvas-editor.js';
 
-const clone=x=>structuredClone(x),$=id=>document.getElementById(id);
+const clone=copySceneData,$=id=>document.getElementById(id);
 const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;};
 const button=(text,run,primary=false)=>{const b=el('button','button'+(primary?' primary':''),text);b.type='button';b.onclick=async()=>{b.disabled=true;try{await run();}catch(e){document.dispatchEvent(new CustomEvent('workflow-error',{detail:e.message}));}finally{b.disabled=false;}};return b;};
 function dialog(title){const d=el('dialog','document-dialog'),head=el('div','dialog-heading');head.append(el('h2','',title),button('关闭',()=>d.close()));d.append(head);document.body.append(d);return d;}
@@ -10,7 +11,7 @@ export function sameDocument(a,b){return JSON.stringify({...a,revision:0})===JSO
 export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,refreshJobs,follow}){
   const store=new DraftStore();let recovery=null,exportMeta=null,exportEpoch=0;
   document.addEventListener('workflow-error',e=>toast(e.detail,true));
-  function changed(){if(!state.id||!editor.scene)return;store.write({id:state.id,base_revision:state.revision,scene:clone(editor.scene)}).catch(()=>{state.backupError=true;toast('本机恢复副本暂存失败，请用“文件 → 保存可编辑文件”保留图版',true);});}
+  function changed(){if(!state.id||!editor.scene)return;store.write({id:state.id,base_revision:state.revision,scene:editor.scene}).catch(()=>{state.backupError=true;toast('本机恢复副本暂存失败，请用“文件 → 保存可编辑文件”保留图版',true);});}
   function saved(){if(!state.pending.length&&!state.saving){state.saveError=null;state.saveFailures=0;store.clear(state.id).catch(()=>{});}else if(state.pending.length)changed();}
   async function independentCopy(scene,clearCurrent=false){
     const source=state.id,epoch=state.dirty,result=await api('/api/scene/import',{scene});
