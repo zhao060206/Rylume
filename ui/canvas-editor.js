@@ -4,6 +4,30 @@ const NS = 'http://www.w3.org/2000/svg', PXMM = 96 / 25.4;
 // instead of re-encoding tens of megabytes for every small text edit.
 const copy = x => Array.isArray(x)?x.map(copy):x&&typeof x==='object'?Object.fromEntries(Object.entries(x).map(([k,v])=>[k,copy(v)])):x;
 export const usesTextAppearance=o=>!!(o?.text_appearance&&o.asset_snapshot&&['label','font_size_pt','fill'].every(k=>o[k]===o.text_appearance[k]));
+const equal=(a,b)=>a===b||!!(a&&b&&typeof a==='object'&&typeof b==='object'&&Array.isArray(a)===Array.isArray(b)&&Object.keys(a).length===Object.keys(b).length&&Object.keys(a).every(k=>Object.hasOwn(b,k)&&equal(a[k],b[k])));
+/** Save gestures and undo as small object patches, retaining the scene's art. */
+export function sceneDelta(before,after){
+ const patch=[],handled=new Set(['objects','relations','revision','canvas','style','annotations']);
+ if([...new Set([...Object.keys(before),...Object.keys(after)])].some(k=>!handled.has(k)&&!equal(before[k],after[k])))return [{op:'replace',scene:copy(after)}];
+ for(const field of ['canvas','style','annotations'])if(!equal(before[field],after[field])){
+  if(field==='canvas')patch.push({op:'canvas',...copy(after.canvas)});
+  else if(field==='style')patch.push({op:'style',changes:copy(after.style)});
+  else patch.push({op:'set_annotations',annotations:copy(after.annotations)});
+ }
+ for(const [field,remove]of [['relations','remove_relation'],['objects','remove']]){
+  const ids=new Set((after[field]||[]).map(o=>o.id));for(const o of before[field]||[])if(!ids.has(o.id))patch.push({op:remove,id:o.id});
+ }
+ for(const [field,add,update,key]of [['objects','add','update','object'],['relations','add_relation','update_relation','relation']]){
+  const old=new Map((before[field]||[]).map(o=>[o.id,o]));
+  (after[field]||[]).forEach((o,index)=>{const previous=old.get(o.id);if(!previous){patch.push({op:add,[key]:copy(o),index});return;}
+   const changes={};for(const name of new Set([...Object.keys(previous),...Object.keys(o)]))if(name!=='id'&&!equal(previous[name],o[name]))changes[name]=Object.hasOwn(o,name)?copy(o[name]):null;
+   if(Object.keys(changes).length)patch.push({op:update,id:o.id,changes});
+  });
+ }
+ const oldIds=(before.objects||[]).map(o=>o.id),newIds=(after.objects||[]).map(o=>o.id);
+ if(!equal(oldIds,newIds))patch.push({op:'reorder',ids:newIds});
+ return patch.length<=1000?patch:[{op:'replace',scene:copy(after)}];
+}
 const node = (tag, attrs = {}, text) => {
   const n = document.createElementNS(NS, tag);
   for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
@@ -944,11 +968,11 @@ export class SceneEditor {
   }
 
   commit(before, label = '编辑图元') {
-    if (JSON.stringify(before) === JSON.stringify(this.doc)) return;
+    const operations=sceneDelta(before,this.doc);if(!operations.length)return;
     this.undoStack.push(copy(before));
     if (this.undoStack.length > 100) this.undoStack.shift();
     this.redoStack = [];
-    this.onChange([{ op: 'replace', scene: copy(this.doc) }], copy(this.doc), label);
+    this.onChange(operations, copy(this.doc), label);
     this.draw();
     this.onSelection(this.selectedIds);
   }
@@ -982,8 +1006,8 @@ export class SceneEditor {
     if (!this.undoStack.length) return;
     const previous = this.undoStack.pop();
     this.redoStack.push(copy(this.doc));
-    this.doc = previous;
-    this.onChange([{ op: 'replace', scene: copy(this.doc) }], copy(this.doc), '撤销');
+    const operations=sceneDelta(this.doc,previous);this.doc = previous;
+    this.onChange(operations, copy(this.doc), '撤销');
     this.draw();
     this.onSelection(this.selectedIds);
   }
@@ -992,8 +1016,8 @@ export class SceneEditor {
     if (!this.redoStack.length) return;
     const next = this.redoStack.pop();
     this.undoStack.push(copy(this.doc));
-    this.doc = next;
-    this.onChange([{ op: 'replace', scene: copy(this.doc) }], copy(this.doc), '重做');
+    const operations=sceneDelta(this.doc,next);this.doc = next;
+    this.onChange(operations, copy(this.doc), '重做');
     this.draw();
     this.onSelection(this.selectedIds);
   }

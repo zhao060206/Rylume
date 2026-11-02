@@ -15,7 +15,8 @@ Object.assign(editor,{doc:{objects:[object('a',10,20)],relations:[]},selected:ne
 const before=structuredClone(editor.doc);editor.doc.objects[0].x=30;editor.commit(before,'drag');
 assert.equal(editor.undoStack.length,1,'A completed drag is one undo step');
 editor.undo();assert.equal(editor.doc.objects[0].x,10);editor.redo();assert.equal(editor.doc.objects[0].x,30);
-assert.equal(editor.events.length,3);assert.ok(editor.events.every(e=>e.ops[0].op==='replace'));
+assert.equal(editor.events.length,3);assert.ok(editor.events.every(e=>e.ops[0].op==='update'));
+assert.deepEqual(editor.events.map(e=>e.ops[0].changes),[{x:30},{x:10},{x:30}]);
 console.log('4 editor behavior checks passed');
 
 // Library insertion respects drop coordinates and avoids existing artwork on click.

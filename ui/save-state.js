@@ -20,6 +20,11 @@ export async function saveBeforeDestructiveAction(state,flush){
   return !!ok&&state.id===id&&!state.saving&&!state.inlineEditing&&!state.pending.length;
 }
 
+export function compactSaveBatch(operations){
+  const last=operations.findLastIndex(op=>op.op==='replace');
+  return last<0?operations:operations.slice(last);
+}
+
 /** Drain all edits, including edits made while a PATCH is in flight. Concurrent
  * save callers share a promise; an earlier successful batch is never mistaken
  * for a fully saved document. Failed batches remain in order for recovery. */
@@ -37,7 +42,7 @@ export function createDocumentSaver({state,write,status=()=>{},applied=()=>{},fa
       try{
         while(state.pending.length){
           if(state.id!==id||state.conflict)return false;
-          const batch=state.pending.splice(0),epoch=state.dirty;
+          const batch=compactSaveBatch(state.pending.splice(0)),epoch=state.dirty;
           let data;
           try{
             data=await write(id,state.revision,batch);

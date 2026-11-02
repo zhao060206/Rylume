@@ -1,5 +1,5 @@
 import {DraftStore} from './draft-store.js';
-import {sanitizedSvg,legendOperations} from './canvas-editor.js';
+import {sanitizedSvg,legendOperations,usesTextAppearance} from './canvas-editor.js';
 
 const clone=x=>structuredClone(x),$=id=>document.getElementById(id);
 const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;};
@@ -87,7 +87,9 @@ export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,ref
   }
   function renderExport(){
     if(!exportMeta)return;const m=exportMeta,dpi=Number($('export-dpi').value);$('export-revision').textContent='当前修改已保存，选择一种格式即可导出。';$('export-revision').title='版本 r'+m.revision;exportSummary.replaceChildren(el('p','','纸张 '+m.width_mm+' × '+m.height_mm+' mm · 最小文字 '+m.min_font_pt+' pt'),el('p','','PNG '+Math.round(m.width_mm*dpi/25.4)+' × '+Math.round(m.height_mm*dpi/25.4)+' px · '+dpi+' DPI'),el('p','',m.vector?'主体为矢量；PPTX 保留图形与文字编辑。':'包含位图，请留意放大后的清晰度。'));
-    $('export-menu').querySelector('[data-export=pptx] span').textContent=m.vector?'图形和文字可以分别修改 · PPTX':'放入幻灯片；位图对象不能拆分编辑 · PPTX';
+    const outlines=editor.scene?.objects.filter(usesTextAppearance).length||0;
+    if(outlines)exportSummary.append(el('p','',`${outlines} 个标签保留原字形轮廓；PPTX 中以路径保留，已改写的标签是文本框。`));
+    $('export-menu').querySelector('[data-export=pptx] span').textContent=outlines?'原生矢量形状；原字形标签保留为轮廓 · PPTX':m.vector?'图形和文字可以分别修改 · PPTX':'放入幻灯片；位图对象不能拆分编辑 · PPTX';
     const warning=$('export-warning');warning.hidden=!m.audit.errors;warning.replaceChildren();if(m.audit.errors){warning.append(el('p','','有 '+m.audit.errors+' 处可能影响输出，建议先看一眼；也可以直接导出。'),button('在图上查看',()=>{$('export-menu').close();$('open-check-toolbar').click();}));}
     const help=el('p','muted','论文矢量：PDF / SVG；投稿图片：PNG；继续排版：PPTX。');exportSummary.append(help);
     if(m.attribution){const details=el('details');details.append(el('summary','','素材来源与图注'),el('p','credit-copy',m.attribution),button('复制素材来源',async()=>{await navigator.clipboard.writeText(m.attribution);toast('已复制，请按素材要求保留署名');}));exportSummary.append(details);}

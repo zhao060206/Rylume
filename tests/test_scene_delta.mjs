@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {sceneDelta} from '../ui/canvas-editor.js';
+import {compactSaveBatch} from '../ui/save-state.js';
+const art='<svg>'+('large-vector-data'.repeat(1800000))+'</svg>';
+const before={revision:1,canvas:{width_mm:180,height_mm:120},style:{font_size_pt:8},annotations:[],objects:[{id:'art',asset_snapshot:{svg:art}},{id:'label',label:'Original',x:10}],relations:[]};
+const after={...before,objects:[before.objects[0],{...before.objects[1],label:'Edited',x:12}]};
+const ops=sceneDelta(before,after);
+assert.deepEqual(ops,[{op:'update',id:'label',changes:{label:'Edited',x:12}}]);
+assert.ok(JSON.stringify(ops).length<200,'A label change in a >24 MB figure stays a small patch');
+assert.deepEqual(sceneDelta(after,before),[{op:'update',id:'label',changes:{label:'Original',x:10}}]);
+const replaced=[{op:'update',id:'label',changes:{x:20}},{op:'replace',scene:before},{op:'replace',scene:after},{op:'update',id:'label',changes:{x:13}}];
+assert.deepEqual(compactSaveBatch(replaced),replaced.slice(2),'Only the last whole-scene state and following edits need saving');
+const removed={...before,objects:[before.objects[1]]};
+assert.equal(sceneDelta(before,removed)[0].op,'remove');
+assert.equal(sceneDelta(removed,before).find(op=>op.op==='add').index,0);
+const canvas={...before,canvas:{width_mm:90,height_mm:120}};
+assert.deepEqual(sceneDelta(before,canvas),[{op:'canvas',width_mm:90,height_mm:120}]);
+console.log('Large figure save, undo/redo, order, canvas and superseded snapshot checks passed.');
