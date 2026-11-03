@@ -1,4 +1,3 @@
-import {sanitizedSvg} from './canvas-editor.js';
 import {setupFigureCompare} from './figure-compare.js';
 import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
 
@@ -58,7 +57,7 @@ export function setupFigureImport({state,editor,api,flush,canLeave,openJob,refre
  async function select(id){
   selected=id;candidate=null;const token=++epoch;clearTimeout(timer);$('figure-import-preview').replaceChildren(make('p','','转换结果会显示在这里'));
   const row=current();$('figure-import-mode').value=row?.mode||(row?.name.toLowerCase().endsWith('.svg')?'native':'vector');privacy();render();
-  if(row?.state==='ready'){try{const result=await api(`/api/figure-imports/${id}/candidate`);if(token!==epoch)return;candidate=result;$('figure-import-preview').replaceChildren(sanitizedSvg(result.svg));render();}catch(e){if(token===epoch)toast(e.message,true);}}
+  if(row?.state==='ready'){try{const result=await api(`/api/figure-imports/${id}/candidate`);if(token!==epoch)return;candidate=result;const image=new Image();image.alt='高保真矢量候选预览';image.decoding='async';image.src=URL.createObjectURL(new Blob([result.svg],{type:'image/svg+xml'}));image.onload=()=>URL.revokeObjectURL(image.src);$('figure-import-preview').replaceChildren(image);render();}catch(e){if(token===epoch)toast(e.message,true);}}
   schedule();
  }
  function schedule(){clearTimeout(timer);if(dialog.open&&importBusy(current()?.state))timer=setTimeout(poll,1100);}
