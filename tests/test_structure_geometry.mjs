@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {rectangleFragments,containsBounds,inferStructureRegion} from '../ui/structure-groups.js';
+import {unionBounds,matrixBounds,intersects} from '../ui/traced-surface.js';
+assert.equal(rectangleFragments('M0 0h2v3h-2Z M10 0h2v3h-2Z').length,2);
+assert.equal(rectangleFragments('M0 0C1 2 3 4 5 6Z M1 2h3v4h-3Z'),null,'Contours with holes or curves are never split as rectangles');
+assert.equal(containsBounds({x:0,y:0,w:10,h:10},{x:2,y:2,w:4,h:4}),true);
+assert.deepEqual(matrixBounds({x:1,y:2,w:3,h:4},{a:0,b:2,c:-2,d:0,e:10,f:0}),{x:-2,y:2,w:8,h:6});
+assert.deepEqual(unionBounds({x:0,y:0,w:2,h:2},{x:3,y:2,w:1,h:1}),{x:0,y:0,w:4,h:3});
+assert.ok(intersects({x:0,y:0,w:2,h:2},{x:1,y:1,w:2,h:2}));
+const body={fill:'#fff',box:{x:20,y:20,w:15,h:10}},detail={fill:'#aaa',box:{x:22,y:22,w:2,h:2}},background={fill:'#eee',box:{x:0,y:0,w:180,h:120}};
+assert.equal(inferStructureRegion(detail,[detail,body,background],{width_mm:180,height_mm:120},()=>true),body.box,'Select a complete organelle, excluding the huge background');
+console.log('Structure grouping preserves contours and selects complete visual bodies.');

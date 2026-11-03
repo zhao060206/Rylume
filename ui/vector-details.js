@@ -20,7 +20,7 @@ export function vectorDetailSources(scene,selectedIds=[]){
 }
 export function setupVectorDetails({state,editor,flush,toast}){
  const openButton=document.createElement('button');openButton.type='button';openButton.className='tool text-tool';openButton.id='edit-vector-details';openButton.textContent='逐元素编辑';openButton.title='点击图中的任意箭头、图标或路径，拖动、改色、删除';openButton.hidden=true;
- document.getElementById('open-annotations').before(openButton);
+ (document.querySelector('[aria-label="更多绘图工具"]')?.parentElement.querySelector('.menu-items')||document.getElementById('open-annotations').parentNode).append(openButton);
  const dialog=document.createElement('dialog');dialog.className='vector-detail-dialog';dialog.setAttribute('aria-labelledby','vector-detail-title');
  dialog.innerHTML=`<header class="dialog-heading"><div><h2 id="vector-detail-title">编辑矢量细节</h2><p>点选路径，拖动或改色。按住 Shift 多选；滚轮缩放，空格或中键平移。</p></div><button type="button" class="icon-button" data-vector-close aria-label="关闭矢量细节">×</button></header>
  <div class="vector-detail-tools"><button type="button" data-vector-undo>撤销</button><button type="button" data-vector-redo>重做</button><button type="button" data-vector-fit>适合窗口</button><label>快速选择路径<input type="search" placeholder="输入路径编号" data-vector-search></label><span data-vector-count></span></div>
@@ -137,7 +137,7 @@ export function setupVectorDetails({state,editor,flush,toast}){
    const saved=await flush();dialog.close();toast(saved?'矢量细节已保存；Ctrl+Z 可撤销。':'细节已放入画布，保存尚未完成，请点击顶部“保存”。',!saved);
   }catch(e){$('[data-vector-status]').textContent=e.message;button.disabled=false;}
  };
- function refreshAvailable(){const imported=vectorDetailSources(editor.scene||{},[]);openButton.hidden=!imported.length;openButton.textContent=editor.selectedIds?.some(id=>imported.some(o=>o.id===id))?'编辑所选内部元素':'逐元素编辑';}
+ function refreshAvailable(){const imported=vectorDetailSources(editor.scene||{},[]);openButton.hidden=!imported.length;openButton.textContent=editor.selectedIds?.some(id=>imported.some(o=>o.id===id))?'高级路径：所选图元':'高级路径工作区';}
  editor.host.addEventListener('editor-document-loaded',refreshAvailable);
  document.addEventListener('document-save-state',refreshAvailable);
  return {refresh:refreshAvailable,open};

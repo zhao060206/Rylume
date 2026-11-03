@@ -29,7 +29,7 @@ def test_frontend_and_export_geometry_match_for_all_rotated_edges():
         for side in ('n','e','s','w'):
             s=scene();s['objects'][0]['rotation']=angle;s['objects'][1]['rotation']=-angle
             s['relations'][0].update(source_anchor=dict(side=side,t=.131),target_anchor=dict(side=side,t=.827));samples.append(s)
-    js="""const fs=require('fs');(async()=>{const m=await import('data:text/javascript;base64,'+Buffer.from(fs.readFileSync('ui/canvas-editor.js','utf8')).toString('base64'));let input=JSON.parse(fs.readFileSync(0,'utf8'));console.log(JSON.stringify(input.map(s=>m.edgeGeometry(s,s.relations[0]))));})();"""
+    js="""const fs=require('fs');(async()=>{const m=await import(require('url').pathToFileURL(require('path').resolve('ui/canvas-editor.js')).href);let input=JSON.parse(fs.readFileSync(0,'utf8'));console.log(JSON.stringify(input.map(s=>m.edgeGeometry(s,s.relations[0]))));})();"""
     actual=json.loads(subprocess.check_output(['node','-e',js],input=json.dumps(samples),text=True,encoding='utf8',cwd=Path(__file__).resolve().parents[1]))
     for s,a in zip(samples,actual):
         b=connection_geometry(s,s['relations'][0]);assert (b['x1'],b['y1'],b['x2'],b['y2'],b['label_x'],b['label_y'])==pytest.approx((a['start']['x'],a['start']['y'],a['end']['x'],a['end']['y'],a['label']['x'],a['label']['y']))

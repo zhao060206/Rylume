@@ -403,6 +403,8 @@ def render_scene(scene, *, _laid_out=False):
     if not _laid_out:
         scene=layout_scene(scene)
     cw,ch=scene['canvas']['width_mm'],scene['canvas']['height_mm'];palette=scene['style']['palette']
+    from structure_render import composite_layer
+    def draw_object(o):return _object(o,palette,scene['style']['stroke_pt'],scene['style']['glyph_tint'])
     p=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{cw}mm" height="{ch}mm" viewBox="0 0 {cw} {ch}" data-version="2" data-revision="{scene["revision"]}">',f'<title>{_escape(scene["title"])}</title>',f'<rect width="{cw}" height="{ch}" fill="#FFFFFF"/>','<g id="layer-compartments">']
     from scientific_library import credits
     import json
@@ -416,11 +418,11 @@ def render_scene(scene, *, _laid_out=False):
         p.append(f'<path d="M 5 {ch*.82} Q {cw*.25} {ch*.77} {cw*.5} {ch*.82} T {cw-5} {ch*.82} L {cw-5} {ch-6} H 5 Z" fill="{tint(palette["secondary"],.93)}"/>')
         for i in range(7):p.append(f'<path d="M {cw*(.06+i*.13)} {ch*.87} q 7 -2 15 0" fill="none" stroke="{tint(palette["secondary"],.55)}" stroke-width=".3"/>')
     p.extend(_compartment(c,palette['primary'],tid=='signal_cell') for c in scene['compartments']);p.append('</g><g id="layer-context">')
-    p.extend(_object(o,palette,scene['style']['stroke_pt'],scene['style']['glyph_tint']) for o in scene['objects'] if o['visible'] and o.get('role')=='context')
+    p.append(composite_layer([o for o in scene['objects'] if o['visible'] and o.get('role')=='context'],scene.get('structures',[]),draw_object))
     p.append('</g><g id="layer-relations">')
     objects={o['id']:o for o in scene['objects']}
     p.extend(_relation(scene,r,palette) for r in scene['relations'] if objects[r['source']]['visible'] and objects[r['target']]['visible'])
-    p.append('</g><g id="layer-objects">');p.extend(_object(o,palette,scene['style']['stroke_pt'],scene['style']['glyph_tint']) for o in scene['objects'] if o['visible'] and o.get('role')!='context');p.append('</g>')
+    p.append('</g><g id="layer-objects">');p.append(composite_layer([o for o in scene['objects'] if o['visible'] and o.get('role')!='context'],scene.get('structures',[]),draw_object));p.append('</g>')
     if scene['style'].get('show_title'):p.append(_text(cw/2,4,scene['title'],10,anchor='middle',bold=True))
     if any(r.get('indirect') for r in scene['relations']):p.append(_text(cw-8,ch-2.5,'Dashed: indirect effect',7,anchor='end',fill='#82919A'))
     p.append('</svg>');return ''.join(p)

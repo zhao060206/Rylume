@@ -82,7 +82,7 @@ def empty_scene(title="未命名图版", source_text="", width_mm=180, height_mm
         "layout": "pathway",
         "canvas": {"width_mm": width_mm, "height_mm": height_mm},
         "style": copy.deepcopy(DEFAULT_STYLE), "compartments": [], "objects": [],
-        "relations": [], "annotations": [], "unresolved": [],
+        "relations": [], "structures": [], "annotations": [], "unresolved": [],
         "requirements": {"objects": [], "relations": []}, "provenance": {}, "generation_contract": {},
     }
 
@@ -218,6 +218,44 @@ def normalize_scene(value):
             out["stroke_pt"] = _number(o["stroke_pt"], "线宽", 0.2, 6)
         clean_objects.append(out)
     scene["objects"] = clean_objects
+    structures=value.get('structures',[])
+    if not isinstance(structures,list) or len(structures)>250:raise SceneError('结构分组格式无效')
+    owners={o['id'] for o in clean_objects if o.get('asset_snapshot') and o['type']!='text'}
+    memberships=set();group_ids=set();clean_structures=[]
+    for group in structures:
+        if not isinstance(group,dict):raise SceneError('结构分组格式无效')
+        gid=_id(group.get('id'))
+        if gid in group_ids:raise SceneError('结构分组 ID 重复')
+        group_ids.add(gid);parts=group.get('parts')
+        if not isinstance(parts,list) or len(parts)>500:raise SceneError('结构成员格式无效')
+        clean=[]
+        for part in parts:
+            if not isinstance(part,dict) or part.get('owner') not in owners:raise SceneError('结构引用了不存在的图元')
+            indices=part.get('indices')
+            if not isinstance(indices,list) or not indices or len(indices)>2500:raise SceneError('结构路径数量无效')
+            for index in indices:
+                if type(index) is not int or not 0<=index<2500 or (part['owner'],index) in memberships:raise SceneError('结构路径重复或无效')
+                memberships.add((part['owner'],index))
+            clean.append({'owner':part['owner'],'indices':indices[:]})
+        if clean:
+            structure={'id':gid,'label':_text(group.get('label','独立结构'),100),'parts':clean,'dx':_number(group.get('dx',0),'结构水平偏移',-4000,4000),'dy':_number(group.get('dy',0),'结构垂直偏移',-4000,4000)}
+            if 'visible' in group:
+                if type(group['visible']) is not bool:raise SceneError('结构可见性格式无效')
+                structure['visible']=group['visible']
+            background=group.get('background')
+            if background is not None:
+                if not isinstance(background,dict) or not isinstance(background.get('colors'),list) or len(background['colors'])!=4:raise SceneError('结构背景格式无效')
+                structure['background']={key:_number(background.get(key), '结构背景 '+key, .001 if key in ('w','h') else -4000,4000) for key in ('x','y','w','h')}
+                structure['background']['colors']=[_color(c) for c in background['colors']]
+            if 'foreground' in group:
+                if not isinstance(group['foreground'],list) or len(group['foreground'])>500:raise SceneError('结构前景格式无效')
+                foreground=[]
+                for part in group['foreground']:
+                    if not isinstance(part,dict) or part.get('owner') not in owners or not isinstance(part.get('indices'),list) or len(part['indices'])>2500 or any(type(i) is not int or not 0<=i<2500 for i in part['indices']):raise SceneError('结构前景引用无效')
+                    foreground.append({'owner':part['owner'],'indices':list(dict.fromkeys(part['indices']))})
+                structure['foreground']=foreground
+            clean_structures.append(structure)
+    scene['structures']=clean_structures
     if sum(len(o.get('illustration',{}).get('data','')) for o in clean_objects)>21_600_000:
         raise SceneError('插画总量过大，请减少对象数量或缩小单个插画后再保存')
     object_ids = {o["id"] for o in clean_objects}
@@ -337,6 +375,10 @@ def apply_operations(scene, operations, *, allowed_ids=None):
             draft[key] = [o for o in draft[key] if o["id"] != oid]
             if name == "remove":
                 draft["relations"] = [r for r in draft["relations"] if oid not in (r["source"], r["target"])]
+                for group in draft.get('structures',[]):
+                    group['parts']=[p for p in group['parts'] if p['owner']!=oid]
+                    if 'foreground' in group:group['foreground']=[p for p in group['foreground'] if p['owner']!=oid]
+                draft['structures']=[g for g in draft.get('structures',[]) if g['parts']]
         elif name == "canvas":
             old_width = draft["canvas"]["width_mm"]
             old_height = draft['canvas']['height_mm']
@@ -370,6 +412,8 @@ def apply_operations(scene, operations, *, allowed_ids=None):
             if not isinstance(annotations, list):
                 raise SceneError("批注列表格式无效")
             draft["annotations"] = copy.deepcopy(annotations)
+        elif name == 'set_structures':
+            draft['structures']=copy.deepcopy(op.get('structures'))
         elif name == "reorder":
             ids = op.get("ids")
             if not isinstance(ids, list) or len(set(ids)) != len(ids) or set(ids) != {o["id"] for o in draft["objects"]}:

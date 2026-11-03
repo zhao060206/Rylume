@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const source=await readFile(new URL('../ui/canvas-editor.js',import.meta.url),'utf8');
-const {edgeGeometry,SceneEditor,resizedObject,hitObjects}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const {edgeGeometry,SceneEditor,resizedObject,hitObjects}=await import(new URL('../ui/canvas-editor.js',import.meta.url).href);
 const object=(id,x,y,w=10,h=10,type='protein')=>({id,x,y,w,h,type,visible:true,rotation:0,label:'',font_size_pt:8});
 const scene={canvas:{width_mm:180,height_mm:120},objects:[object('a',10,20),object('b',70,20),object('block',40,20)]};
 let g=edgeGeometry(scene,{source:'a',target:'b',source_port:'auto',target_port:'auto'});

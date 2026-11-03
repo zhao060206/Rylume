@@ -132,13 +132,21 @@ function tab(name, toggle=false){
 }
 function renderExamples(){const list=$('example-list');list.replaceChildren();(S.templates||[]).filter(t=>t.recommended&&t.library_group==='science').forEach(item=>{const b=el('button','example-card');const img=el('img','example-thumb');img.src=item.thumbnail;img.alt='';b.append(img);const text=el('span');text.append(el('span','example-name',item.title),el('span','example-description',item.usage));b.append(text);b.onclick=()=>libraryUI.showTemplate(item);list.append(b);});}
 function renderAssets(){libraryUI.renderAssets();}
-function renderLayers(){const list=$('layer-list');if($('panel-layers').hidden)return;list.replaceChildren();if(!S.revision||!editor.scene)return;const selected=new Set(editor.selectedIds);for(const o of [...editor.scene.objects].reverse()){const row=el('div','layer-row'+(selected.has(o.id)?' selected':'')),name=el('button','layer-name',o.label||o.id);name.onclick=e=>editor.setSelection(e.shiftKey?[...selected,o.id]:[o.id]);row.append(name);for(const [key,title,active,inactive]of [['visible','可见性','◉','○'],['locked','锁定','L','·']]){const b=el('button','layer-toggle'+(o[key]?' on':''),o[key]?active:inactive);b.setAttribute('aria-label',`${title} ${o.label}`);b.onclick=()=>editor.applyOperations([{op:'update',id:o.id,changes:{[key]:!o[key]}}],title);row.append(b);}list.append(row);}}
+function renderLayers(){const list=$('layer-list');if($('panel-layers').hidden)return;list.replaceChildren();if(!S.revision||!editor.scene)return;const selected=new Set(editor.selectedIds),traced=editor.scene.provenance?.method==='import-raster-high-fidelity-vector';if(traced)for(const g of [...(editor.scene.structures||[])].filter(g=>g.visible!==false).reverse()){const row=el('div','layer-row'+(S.structureSelection?.ids.includes(g.id)?' selected':'')),name=el('button','layer-name',g.label);name.onclick=()=>elementEditing.selectStructure(g.id);row.append(name);list.append(row);}for(const o of [...editor.scene.objects].reverse()){if(traced&&o.role==='context')continue;const row=el('div','layer-row'+(selected.has(o.id)?' selected':'')),name=el('button','layer-name',o.label||o.id);name.onclick=e=>editor.setSelection(e.shiftKey?[...selected,o.id]:[o.id]);row.append(name);for(const [key,title,active,inactive]of [['visible','可见性','◉','○'],['locked','锁定','L','·']]){const b=el('button','layer-toggle'+(o[key]?' on':''),o[key]?active:inactive);b.setAttribute('aria-label',`${title} ${o.label}`);b.onclick=()=>editor.applyOperations([{op:'update',id:o.id,changes:{[key]:!o[key]}}],title);row.append(b);}list.append(row);}}
 function input(parent,label,value,type,change,options){const wrapper=el('label','',label),n=el(type==='select'?'select':'input');if(type==='select'){for(const [v,t]of options){const opt=el('option','',t);opt.value=v;n.append(opt);}n.value=value;}else{n.type=type||'text';n.value=value??'';if(type==='number')n.step='.1';if(type==='color')n.className='color-input';}n.setAttribute('aria-label',label);const commit=()=>{const v=type==='number'?Number(n.value):n.value;if(type==='number'&&!Number.isFinite(v))return;change(v);};n.onchange=commit;n.onkeydown=e=>{if(e.key==='Enter'){commit();n.blur();}};wrapper.append(n);parent.append(wrapper);return n;}
 function section(parent,title){const n=el('div','property-section');n.append(el('h3','',title));parent.append(n);const grid=el('div','property-grid');n.append(grid);return grid;}
 function renderProperties(){
  const parent=$('property-content');parent.replaceChildren();
  if(!S.revision||!editor.scene){parent.append(el('p','empty-properties','先打开样板或创建空白图版。添加素材后，单击选中即可编辑。'));return;}
  const scene=editor.scene,ids=editor.selectedIds,objects=scene.objects.filter(o=>ids.includes(o.id)),relations=scene.relations.filter(r=>ids.includes(r.id));
+ if(S.structureSelection&&!(objects.length||relations.length)){
+  const selection=elementEditing.selection,groups=(scene.structures||[]).filter(g=>selection?.ids.includes(g.id));
+  if(groups.length){const g=groups[0];parent.append(el('p','property-description','已选完整结构。内部填色、轮廓和纹理会一起移动；画面中的文字仍可独立编辑。'));const grid=section(parent,groups.length===1?'结构属性':`已选 ${groups.length} 个结构`);
+   if(groups.length===1)input(grid,'结构名称',g.label,'text',label=>editor.applyOperations([{op:'set_structures',structures:scene.structures.map(x=>x.id===g.id?{...x,label}:x)}],'修改结构名称'));
+   if(selection.box){input(grid,'X · mm',selection.box.x.toFixed(1),'number',v=>elementEditing.nudge(v-selection.box.x,0));input(grid,'Y · mm',selection.box.y.toFixed(1),'number',v=>elementEditing.nudge(0,v-selection.box.y));}
+   const reset=el('button','button full','恢复结构原位');reset.onclick=()=>editor.applyOperations([{op:'set_structures',structures:scene.structures.map(x=>selection.ids.includes(x.id)?{...x,dx:0,dy:0}:x)}],'恢复结构原位');parent.append(reset);const remove=el('button','text-button','删除结构');remove.onclick=()=>elementEditing.remove();parent.append(remove);return;
+  }
+ }
  function advanced(title){const details=el('details','property-advanced');details.append(el('summary','',title));parent.append(details);return details;}
  if(objects.length){
   const o=objects[0];parent.append(el('p','property-description',objects.length>1?`已选 ${objects.length} 个对象。颜色和字号会同时应用到这些对象。`:o.locked?'此对象已锁定。可以在图层中解锁后编辑。':'在这里修改文字、颜色和状态；拖动图形调整位置。'));
@@ -295,7 +303,7 @@ onboardingUI=setupOnboarding({state:S,editor,api,flush,canLeave,openJob,refreshJ
 const personalUI=setupPersonalAssets({api,toast,library:libraryUI,state:S});
 const figureImportUI=setupFigureImport({state:S,editor,api,flush,canLeave,openJob,refreshJobs,toast});
 const vectorDetails=setupVectorDetails({state:S,editor,flush,toast});
-const elementEditing=setupElementEditing({editor,toast});
+const elementEditing=setupElementEditing({editor,toast,onSelection(selection){S.structureSelection=selection;renderProperties();renderLayers();}});
 const experienceUI=setupWorkspaceExperience({imports:figureImportUI,composer:composerUI,blank});
 const releaseUI=setupReleaseNotes({api,toast});
 // Keep command names and visible targets in sync as modules are added. A

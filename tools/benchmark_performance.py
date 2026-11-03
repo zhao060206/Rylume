@@ -40,10 +40,27 @@ def main():
             def log_message(self, *_args):
                 pass
 
+            def do_POST(self):
+                # Only known synthetic/CC-BY fixture snapshots, on loopback.
+                name=urlsplit(self.path).path
+                if name not in ('/snapshot/grouped','/snapshot/moved','/snapshot/display'):
+                    self.send_error(404);return
+                length=int(self.headers.get('Content-Length','0'))
+                if not 0<length<32_000_000:
+                    self.send_error(413);return
+                value=json.loads(self.rfile.read(length))
+                if name=='/snapshot/display':
+                    import base64
+                    (args.output/'moved-display.png').write_bytes(base64.b64decode(value['png'].split(',',1)[1]))
+                else:(args.output/(name.rsplit('/',1)[-1]+'-scene.json')).write_text(json.dumps(value),encoding='utf8')
+                self.send_response(204);self.end_headers()
+
             def do_GET(self):
                 path = urlsplit(self.path).path
                 file, mime = None, 'text/javascript'
-                if path == '/elements':
+                if path == '/structures':
+                    file, mime = ROOT/'tools/benchmark_structures.html', 'text/html'
+                elif path == '/elements':
                     file, mime = ROOT/'tools/benchmark_elements.html', 'text/html'
                 elif path == '/':
                     file, mime = ROOT/'tools/benchmark_canvas.html', 'text/html'

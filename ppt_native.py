@@ -563,7 +563,7 @@ class Builder:
                 m[1] * local[4] + m[3] * local[5] + m[5],
             )
             if tag == "g" or tag == "svg":
-                scientific_id = node.get("data-object-id") or node.get("data-relation-id")
+                scientific_id = node.get("data-structure-id") or node.get("data-object-id") or node.get("data-relation-id")
                 if scientific_id:
                     # A scientific object is one selectable group in PowerPoint;
                     # its paths and live labels remain individually editable.

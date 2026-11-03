@@ -176,7 +176,7 @@ def make_example(example_id, *, width_mm=180, height_mm=120, layout=True):
             scene["objects"] = [_object(oid, "process", label) for oid,label in (
                 ("sample", "Sample collection"), ("rna", "RNA extraction"), ("library", "Library preparation"),
                 ("sequencing", "Sequencing"), ("analysis", "Data analysis"))]
-            scene["relations"] = [_edge(f"e{i}", a["id"], b["id"], "transports") for i,(a,b) in enumerate(zip(scene["objects"],scene["objects"][1:]),1)]
+            scene["relations"] = [_edge(f"e{i}", a["id"], b["id"], "sequence") for i,(a,b) in enumerate(zip(scene["objects"],scene["objects"][1:]),1)]
     scene["requirements"] = {"objects": [o["id"] for o in scene["objects"]],
                              "relations": [r["id"] for r in scene["relations"]]}
     for item in scene["objects"] + scene["relations"]:

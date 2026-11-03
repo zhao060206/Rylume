@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const source=await readFile(new URL('../ui/canvas-editor.js',import.meta.url),'utf8');
-const{legendOperations,SceneEditor,relationLabel}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const{legendOperations,SceneEditor,relationLabel}=await import(new URL('../ui/canvas-editor.js',import.meta.url).href);
 const scene={canvas:{width_mm:90,height_mm:120},style:{palette:{}},objects:[{id:'a',visible:true,x:10,y:100,w:10,h:10},{id:'b',visible:true,x:40,y:100,w:10,h:10}],relations:[{id:'r1',source:'a',target:'b',type:'inhibits',label:'Custom',uncertain:true}]};
 let count=0;const safeOps=legendOperations(scene,()=>`safe_${++count}`);assert.ok(!safeOps.some(o=>o.op==='canvas'));
 const ops=legendOperations(scene,()=>`legend_${++count}`,{expand:true});

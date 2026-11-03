@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-async function module(path){const s=await readFile(new URL(path,import.meta.url),'utf8');return import('data:text/javascript;base64,'+Buffer.from(s).toString('base64'));}
+async function module(path){const s=await readFile(new URL(path,import.meta.url),'utf8');return import(new URL(path,import.meta.url).href);}
 const {SceneEditor,wheelIntent,clampView}=await module('../ui/canvas-editor.js');
 assert.equal(wheelIntent({}), 'pan');assert.equal(wheelIntent({ctrlKey:true}),'zoom');assert.equal(wheelIntent({metaKey:true}),'zoom');assert.equal(wheelIntent({shiftKey:true}),'horizontal');
 const editor=Object.create(SceneEditor.prototype);let ops=[],tool='connect';

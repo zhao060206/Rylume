@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const source=await readFile(new URL('../ui/canvas-editor.js',import.meta.url),'utf8');
-const {SceneEditor,boundaryPoint,nearestBoundary,connectionTarget,edgeGeometry,relationParts}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const {SceneEditor,boundaryPoint,nearestBoundary,connectionTarget,edgeGeometry,relationParts}=await import(new URL('../ui/canvas-editor.js',import.meta.url).href);
 const object=(id,x,y,w=20,h=12)=>({id,x,y,w,h,label:id,type:'protein',visible:true,rotation:0,font_size_pt:8});
 const scene={canvas:{width_mm:180,height_mm:120},style:{},objects:[object('a',10,20),object('b',100,30)],relations:[{id:'r',source:'a',target:'b',type:'activates',label:'Activation'}]};
 for(const rotation of [0,31,90,180,289])for(const side of ['n','e','s','w'])for(const t of [.031,.29,.77,.984]){

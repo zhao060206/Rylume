@@ -43,7 +43,7 @@ def test_indirectness_uncertainty_and_custom_text_remain_independent():
 def test_live_and_export_renderers_share_the_same_physical_symbols():
     # Compare actual primitives from both runtimes, including curved/dashed paths.
     js="""const fs=require('fs');const s=fs.readFileSync('ui/canvas-editor.js','utf8');
-    (async()=>{const m=await import('data:text/javascript;base64,'+Buffer.from(s).toString('base64'));
+    (async()=>{const m=await import(require('url').pathToFileURL(require('path').resolve('ui/canvas-editor.js')).href);
     console.log(JSON.stringify({definitions:m.RELATION_DEFINITIONS,parts:m.RELATION_DEFINITIONS.map(t=>m.relationParts(t.id,{x:1,y:2},{x:31,y:25},{x:14,y:3},'#333333',1.2,true))}));})();"""
     data=json.loads(subprocess.check_output(['node','-e',js],cwd=ROOT,text=True,encoding='utf8'))
     assert data['definitions']==RELATION_DEFINITIONS

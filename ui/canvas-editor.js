@@ -1,4 +1,5 @@
 /** Native SVG object editor. Coordinates are millimetres; exports use no overlays. */
+import {TracedSurface} from './traced-surface.js';
 const NS = 'http://www.w3.org/2000/svg', PXMM = 96 / 25.4;
 // Scene values are JSON data. Reuse immutable SVG strings across undo states
 // instead of re-encoding tens of megabytes for every small text edit.
@@ -7,11 +8,12 @@ export const usesTextAppearance=o=>!!(o?.text_appearance&&o.asset_snapshot&&['la
 const equal=(a,b)=>a===b||!!(a&&b&&typeof a==='object'&&typeof b==='object'&&Array.isArray(a)===Array.isArray(b)&&Object.keys(a).length===Object.keys(b).length&&Object.keys(a).every(k=>Object.hasOwn(b,k)&&equal(a[k],b[k])));
 /** Save gestures and undo as small object patches, retaining the scene's art. */
 export function sceneDelta(before,after){
- const patch=[],handled=new Set(['objects','relations','revision','canvas','style','annotations']);
+ const patch=[],handled=new Set(['objects','relations','revision','canvas','style','annotations','structures']);
  if([...new Set([...Object.keys(before),...Object.keys(after)])].some(k=>!handled.has(k)&&!equal(before[k],after[k])))return [{op:'replace',scene:copy(after)}];
- for(const field of ['canvas','style','annotations'])if(!equal(before[field],after[field])){
+ for(const field of ['canvas','style','annotations','structures'])if(!equal(before[field],after[field])){
   if(field==='canvas')patch.push({op:'canvas',...copy(after.canvas)});
   else if(field==='style')patch.push({op:'style',changes:copy(after.style)});
+  else if(field==='structures')patch.push({op:'set_structures',structures:copy(after.structures||[])});
   else patch.push({op:'set_annotations',annotations:copy(after.annotations)});
  }
  for(const [field,remove]of [['relations','remove_relation'],['objects','remove']]){
@@ -314,6 +316,7 @@ export class SceneEditor {
   get hasRedo() { return this.redoStack.length > 0; }
 
   setDocument(scene, svg) {
+    this.traceSurface=null;
     this.cancelQueuedMove();
     this.renderBase=null;
     this.renderSvg=null;
@@ -346,6 +349,7 @@ export class SceneEditor {
   }
 
   clear() {
+    this.traceSurface=null;
     this.cancelQueuedMove();
     this.renderBase=null;this.renderSvg=null;this.renderSources=null;this.renderObjects=null;this.objectDrawCache=null;
     this.doc = null;
@@ -513,6 +517,7 @@ export class SceneEditor {
       svg.append(child.cloneNode(!editable));
     }
     this.renderBase=this.baseSvg;this.renderSvg=svg;this.objectDrawCache=new Map();
+    this.textTextures=new Map();
     this.renderSources=new Map([...this.baseSvg.querySelectorAll('[data-object-id]')].map(n=>[n.getAttribute('data-object-id'),n]));
     this.renderObjects=new Map(this.base.objects.map(o=>[o.id,o]));
     }
@@ -549,7 +554,7 @@ export class SceneEditor {
       let body = node('g');
 
       const sameSnapshot=old?.asset_snapshot?.svg===o.asset_snapshot?.svg;
-      if (source && old && sameSnapshot && usesTextAppearance(old)===usesTextAppearance(o) && old.type === o.type && old.state === o.state && old.asset_id === o.asset_id && old.illustration?.sha256 === o.illustration?.sha256) {
+      if (this.doc.provenance?.method!=='import-raster-high-fidelity-vector' && source && old && sameSnapshot && usesTextAppearance(old)===usesTextAppearance(o) && old.type === o.type && old.state === o.state && old.asset_id === o.asset_id && old.illustration?.sha256 ===o.illustration?.sha256) {
         for (const child of [...source.children]) {
           if (child.hasAttribute('data-label-for')) continue;
           const c = child.cloneNode(true);
@@ -595,7 +600,15 @@ export class SceneEditor {
           body.append(node('rect', attrs));
         }
       }
-      if(usesTextAppearance(o))body.setAttribute('data-label-for',o.id);
+      if(usesTextAppearance(o)){
+        body.setAttribute('data-label-for',o.id);
+        if(this.doc.provenance?.method==='import-raster-high-fidelity-vector'&&typeof Path2D!=='undefined'){
+          let texture=this.textTextures.get(o.id);
+          if(!texture||texture.snapshot!==o.asset_snapshot.svg){const holder=node('g',{'data-object-id':o.id});holder.append(...body.children);const layer=node('g'),surface=new TracedSurface(this,true);surface.reconcile(layer,[holder]);texture={snapshot:o.asset_snapshot.svg,foreign:surface.foreign,origin:{x:o.x,y:o.y,w:o.w,h:o.h}};this.textTextures.set(o.id,texture);}
+          const origin=texture.origin;body.setAttribute('transform',`translate(${o.x+o.w/2} ${o.y+o.h/2}) rotate(${o.rotation||0}) scale(${o.w/origin.w} ${o.h/origin.h}) translate(${-origin.x-origin.w/2} ${-origin.y-origin.h/2})`);
+          body.replaceChildren(texture.foreign);
+        }
+      }
       group.append(body);
 
       const canonicalLabels=source?[...source.querySelectorAll('[data-label-for]')]:[];
@@ -628,7 +641,11 @@ export class SceneEditor {
       const keep=new Set(nodes);for(const child of [...layer.children])if(!keep.has(child))child.remove();
       nodes.forEach((child,index)=>{if(layer.children[index]!==child)layer.insertBefore(child,layer.children[index]||null);});
     };
-    reconcile(contexts,contextNodes);reconcile(objects,objectNodes);
+    if(this.doc.provenance?.method==='import-raster-high-fidelity-vector'&&typeof Path2D!=='undefined'&&contextNodes.length){
+      this.traceSurface ||= new TracedSurface(this);
+      this.traceSurface.reconcile(contexts,contextNodes);
+    }else{this.traceSurface=null;reconcile(contexts,contextNodes);}
+    reconcile(objects,objectNodes);
     this.objectDrawCache=objectCache;this.renderStyle=copy(this.doc.style);
 
     let edges = svg.querySelector('#layer-relations');
@@ -1025,6 +1042,7 @@ export class SceneEditor {
       else if (op.op === 'remove') {
         this.doc.objects = this.doc.objects.filter(o => o.id !== op.id);
         this.doc.relations = this.doc.relations.filter(r => r.source !== op.id && r.target !== op.id);
+        if(this.doc.structures)this.doc.structures=this.doc.structures.map(g=>({...g,parts:g.parts.filter(p=>p.owner!==op.id),foreground:(g.foreground||[]).filter(p=>p.owner!==op.id)})).filter(g=>g.parts.length);
         this.selected.delete(op.id);
       } else if (op.op === 'remove_relation') {
         this.doc.relations = this.doc.relations.filter(r => r.id !== op.id);
@@ -1032,6 +1050,7 @@ export class SceneEditor {
       } else if(op.op==='canvas')this.doc.canvas={width_mm:op.width_mm??this.doc.canvas.width_mm,height_mm:op.height_mm??this.doc.canvas.height_mm};
       else if(op.op==='style')this.doc.style={...this.doc.style,...copy(op.changes),palette:{...this.doc.style.palette,...op.changes.palette}};
       else if(op.op==='reorder'){const items=new Map(this.doc.objects.map(o=>[o.id,o]));this.doc.objects=op.ids.map(id=>items.get(id));}
+      else if(op.op==='set_structures')this.doc.structures=copy(op.structures);
     }
     this.commit(before, label);
   }

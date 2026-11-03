@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const source=await readFile(new URL('../ui/canvas-editor.js',import.meta.url),'utf8');
-const {SceneEditor,boundaryPoint,connectionKeypoints,connectionTarget,edgeGeometry}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const {SceneEditor,boundaryPoint,connectionKeypoints,connectionTarget,edgeGeometry}=await import(new URL('../ui/canvas-editor.js',import.meta.url).href);
 const a={id:'a',x:20,y:20,w:30,h:20,type:'process',state:'flow_process',visible:true,rotation:0,label:'A'};
 const b={...a,id:'b',x:100,y:70,label:'B'};
 const scene={canvas:{width_mm:180,height_mm:120},style:{},objects:[a,b],relations:[{id:'r',source:'a',target:'b',type:'sequence',label:''}]};

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const editor=await readFile(new URL('../ui/canvas-editor.js',import.meta.url),'utf8');
-const source=(await readFile(new URL('../ui/relation-ui.js',import.meta.url),'utf8')).replace("'./canvas-editor.js'",JSON.stringify('data:text/javascript;base64,'+Buffer.from(editor).toString('base64')));
+const source=(await readFile(new URL('../ui/relation-ui.js',import.meta.url),'utf8')).replace("'./canvas-editor.js'",JSON.stringify(new URL('../ui/canvas-editor.js',import.meta.url).href));
 const {pendingRelationDefinitions,confirmedDefinition}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
 const r={id:'r',type:'activates',label:'old',uncertain:true,indirect:true,evidence:'Author evidence',source_anchor:{side:'n',t:0}};
 const scene={relations:[r,{id:'r2',type:'sequence',uncertain:false}]};

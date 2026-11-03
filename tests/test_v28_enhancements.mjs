@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const source = await readFile(new URL('../ui/canvas-editor.js', import.meta.url), 'utf8');
-const { SceneEditor, legendOperations, hitObjects } = await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'));
+const { SceneEditor, legendOperations, hitObjects } = await import(new URL('../ui/canvas-editor.js',import.meta.url).href);
 
 // 1. Verify SceneEditor prototype has bringToFront, sendToBack, openContextMenu
 assert.equal(typeof SceneEditor.prototype.bringToFront, 'function', 'bringToFront must be a function');
