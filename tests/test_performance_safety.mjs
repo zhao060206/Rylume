@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {applySceneDelta,SceneSaveCache} from '../ui/scene-data.js';
 import {DraftStore} from '../ui/draft-store.js';
-import {SceneEditor} from '../ui/canvas-editor.js';
+import {SceneEditor,objectLabelBoxes} from '../ui/canvas-editor.js';
 
 test('A canonical save acknowledgment preserves artwork, removes stale fields and respects server ordering',()=>{
  const art='vector'.repeat(1000000),scene={revision:2,objects:[{id:'a',label:'A',asset_snapshot:{svg:art},stroke:'red'},{id:'b',label:'B'}],relations:[]};
@@ -57,4 +57,26 @@ test('Fast pointer input renders once per frame, releases at the final location 
   editor.queueMove({clientX:101});editor.flushMove({clientX:110});assert.deepEqual(moves,[100,110]);assert.equal(callbacks.size,0);
   editor.queueMove({clientX:120});editor.cancelQueuedMove();assert.equal(callbacks.size,0);assert.equal(editor.pendingMove,null);
  }finally{globalThis.requestAnimationFrame=raf;globalThis.cancelAnimationFrame=caf;}
+});
+
+test('Rewritten imported text is hit by its live glyph range, including beyond the old OCR box',()=>{
+ const editor=Object.create(SceneEditor.prototype),text={id:'label',type:'text',label:'Golgi complex',visible:true,x:20,y:20,w:5,h:3,font_size_pt:8,asset_snapshot:{svg:'<svg/>'},text_appearance:{label:'Golgi',font_size_pt:8,fill:'#333333'},fill:'#333333'};
+ editor.doc={objects:[{id:'cell',type:'process',label:'',visible:true,x:0,y:0,w:100,h:100},text]};
+ editor.textTextures=new Map([['label',{foreign:{querySelector(){throw Error('Old OCR alpha texture cannot be used after rewriting text');}}}]]);
+ const b=objectLabelBoxes(editor.doc).find(b=>b.id==='label');
+ assert.ok(b.x+b.w>text.x+text.w);
+ assert.equal(editor.semanticHit({x:b.x+b.w-.1,y:b.y+b.h/2}).id,'label');
+});
+
+test('Dragging a panel snaps once and preserves every child offset and line spacing',()=>{
+ const objects=[{id:'panel',x:161.91,y:99.54,w:20,h:22},{id:'line1',parent_id:'panel',x:162.81,y:106.11,w:10,h:2},{id:'line2',parent_id:'panel',x:164.7,y:114.75,w:10,h:2}],editor=Object.create(SceneEditor.prototype);
+ editor.doc={objects:structuredClone(objects)};editor.snap=false;editor.zoom=1;editor.world=()=>({x:5.38,y:7.49});editor.draw=()=>{};
+ editor.gesture={kind:'move',start:{x:10,y:10},before:{objects},px:0,py:0,ids:['panel','line1','line2']};
+ editor.move({clientX:20,clientY:20,shiftKey:false,altKey:false});
+ const [panel,line1,line2]=editor.doc.objects;
+ assert.equal(panel.x,157.3);assert.equal(panel.y,97);
+ for(const [index,child] of [[1,line1],[2,line2]]){
+  assert.ok(Math.abs((child.x-panel.x)-(objects[index].x-objects[0].x))<1e-10);
+  assert.ok(Math.abs((child.y-panel.y)-(objects[index].y-objects[0].y))<1e-10);
+ }
 });

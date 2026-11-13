@@ -97,7 +97,13 @@ export function assetMatch(asset,query,{fuzzy=true}={}){
  const kind=parts.some(p=>p.kind==='fuzzy')?'fuzzy':parts.some(p=>p.kind==='alias')?'alias':'exact';
  return {score:Math.min(...parts.map(p=>p.score)),kind};
 }
-export const assetKey=a=>a.asset_id||a.type;
+export const assetKey=a=>a.asset_id||`native:${a.type}:${a.state||'default'}`;
+/** Old native preferences referred to a type; map only its original default. */
+export function migrateAssetPreferences(keys,assets){
+ const available=new Set(assets.map(assetKey)),defaults=new Map();
+ for(const a of assets)if(!a.asset_id&&!a.state&&!defaults.has(a.type))defaults.set(a.type,assetKey(a));
+ return [...new Set((Array.isArray(keys)?keys:[]).map(k=>available.has(k)?k:defaults.get(k)||k))];
+}
 export function assetStyle(a){return !a.asset_id?'native':/servier/i.test((a.author||'')+' '+(a.source_url||''))?'detailed':'flat';}
 export function assetDisplayName(a,locale='zh'){
   if(locale==='en'){
@@ -118,6 +124,7 @@ export function rankAssets(assets,{domain='biology',category='',query='',style='
   const favorite=new Set(favorites),recency=new Map(recent.map((id,i)=>[id,recent.length-i]));
   return assets.map((a,index)=>{
     if(a.catalog_status==='quarantined')return null;
+    if(a.default_recommended===false&&style!=='native'&&!query&&view==='all')return null;
     const key=assetKey(a);
     const kit=view==='signaling'?['ligand','receptor','receptor_dimer','gpcr','kinase','protein','lipid','tf','dna','mrna','membrane','nucleus','nuclear_pore']:view==='trafficking'?['cell','membrane','nucleus','vesicle','mvb','vesicle_fusion','mitochondrion','golgi','er']:null;
     if((domain!=='all'&&(a.domain||'biology')!==domain)||(category&&a.category!==category)||(style&&assetStyle(a)!==style)||(view==='favorites'&&!favorite.has(key))||(view==='recent'&&!recency.has(key))||(kit&&(a.asset_id||!kit.includes(a.type))))return null;

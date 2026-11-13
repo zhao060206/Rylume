@@ -1,4 +1,5 @@
 import {copySceneData,SceneSaveCache} from './scene-data.js';
+import {setupProductShell} from './product-shell.js';
 import {setupElementEditing} from './element-editor.js';
 import {setupFloatingWindows,showFloatingWindow} from './floating-windows.js';
 import {setupPersonalAssets} from './personal-assets.js';
@@ -17,6 +18,7 @@ import {setupGenerationWorkflow} from './generation-workflow.js';
 import {latestDocumentLoader} from './document-loader.js';
 import {setupWorkspaceModes} from './workspace-modes.js';
 import {preserveCanvasView,syncPanelButtons} from './panel-layout.js';
+import {preservePropertyState} from './property-state.js';
 import {setupDocumentWorkflows} from './document-workflows.js';
 import {setupDelivery} from './delivery-ui.js';
 import {createDocumentSaver} from './save-state.js';
@@ -46,13 +48,13 @@ async function api(path,body,method){
  try{response=await fetch(path,{method:method||(body?'POST':'GET'),headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined,signal:controller.signal});
   try{data=await response.json();}catch{throw Error(`本机服务返回异常（HTTP ${response.status}），修改已保留，请重试保存。`);}
  }catch(error){if(error.name==='AbortError')throw Error('连接本机服务超时，修改已保留。请重试保存或另存副本。');throw error;}finally{clearTimeout(timer);}
- if(!response.ok||data.ok===false){const error=new Error(data.error||'请求未完成');error.status=response.status;error.data=data;throw error;}
+ if(!response.ok||data.ok===false){const error=new Error(data.error||data.message||(data.configured===false?'尚未配置此模型，请填写服务地址和模型名称。':'请求未完成'));error.status=response.status;error.data=data;throw error;}
  if(data.job_id&&creation?.projectId&&data.job_id!==creation.parentId&&navigationUI){try{await navigationUI.attachNew(data.job_id,creation.projectId);}catch(error){toast('图版已创建，但归入项目未成功：'+error.message,true);}}
  return data;
 }
 function saveStatus(text,dirty=false){$('save-status').title=text;$('save-status').textContent=text;$('save-status').classList.toggle('dirty',dirty);document.dispatchEvent(new Event('document-save-state'));}
 function showError(error){S.saveError=error.message==='Failed to fetch'?'暂时连接不上本机服务。修改已留在恢复副本中，可以重试或另存图版。':error.message;S.saveFailures=(S.saveFailures||0)+1;documentUI?.changed();$('error-banner').hidden=false;$('error-text').textContent=S.saveError;S.conflict=error.status===409;saveStatus(S.conflict?'版本冲突 · 恢复副本保留':'保存未完成 · 恢复副本保留',true);}
-const editor=new SceneEditor({host:$('canvas-host'),onChange(operations){S.pending.push(...clone(operations));S.dirty++;documentUI?.changed();saveStatus('正在编辑 · 待保存',true);clearTimeout(S.timer);S.timer=setTimeout(()=>saver.flush(),500);renderTools();renderLayers();renderProperties();onboardingUI?.refresh();},onSelection(){noviceUI?.selection();renderProperties();renderLayers();workspaceUI?.selection();if(editor.selectedIds.length)editor.fitMode=false;renderTools();onboardingUI?.refresh();},onZoom(value){$('zoom-100').textContent=Math.round(value*100)+'%';},onStatus:toast});
+const editor=new SceneEditor({host:$('canvas-host'),onChange(operations){S.pending.push(...clone(operations));S.dirty++;documentUI?.changed();saveStatus('正在编辑 · 待保存',true);clearTimeout(S.timer);S.timer=setTimeout(()=>saver.flush(),500);renderTools();renderLayers();renderProperties();onboardingUI?.refresh();},onSelection(){noviceUI?.selection();renderProperties();renderLayers();if(editor.selectedIds.length)editor.fitMode=false;if(!editor.gesture)workspaceUI?.selection();renderTools();onboardingUI?.refresh();},onZoom(value){$('zoom-100').textContent=Math.round(value*100)+'%';},onStatus:toast});
 const savedScenes=new SceneSaveCache();
 const saver=createDocumentSaver({state:S,status:saveStatus,
  async write(id,revision,operations){
@@ -114,7 +116,7 @@ async function trackGeneration(id){
  finally{S.active=null;workspaceUI?.refresh();$('generation-status').hidden=true;generationUI?.refresh();}
 }
 async function sample(id){if(S.active)return toast('已有生成任务，请等待完成或先取消');if(!await canLeave())return;try{const dims=$('new-size').value.split('x').map(Number);await follow((await api('/api/scene/example',{example:id,template:({egfr:'signal_lipid',jak_stat:'signal_relay',tgf_smad:'signal_nucleus',exosome:'process_strip',wound:'process_grid',tme:'network_orbit',nlrp3:'assembly_tiers',workflow:'workflow_strip'}[id]),canvas_mm:dims})).job_id);}catch(e){toast(e.message,true);}}
-async function blank(){if(S.active)return toast('已有生成任务，请等待完成或先取消');if(!await canLeave())return;try{const result=await api('/api/scene/blank',{});await refreshJobs();await openJob(result.job_id);tab('assets');editor.fit();}catch(e){toast(e.message,true);}}
+async function blank(){if(S.active)return toast('已有生成任务，请等待完成或先取消');if(!await canLeave())return;try{const result=await api('/api/scene/blank',{});await refreshJobs();await openJob(result.job_id);editor.fit();}catch(e){toast(e.message,true);}}
 function tab(name, toggle=false){
  if(name==='generate'&&composerUI){composerUI.open();return;}
  ws.dispatchEvent(new Event('workspace-panel-request'));
@@ -132,10 +134,14 @@ function tab(name, toggle=false){
 }
 function renderExamples(){const list=$('example-list');list.replaceChildren();(S.templates||[]).filter(t=>t.recommended&&t.library_group==='science').forEach(item=>{const b=el('button','example-card');const img=el('img','example-thumb');img.src=item.thumbnail;img.alt='';b.append(img);const text=el('span');text.append(el('span','example-name',item.title),el('span','example-description',item.usage));b.append(text);b.onclick=()=>libraryUI.showTemplate(item);list.append(b);});}
 function renderAssets(){libraryUI.renderAssets();}
-function renderLayers(){const list=$('layer-list');if($('panel-layers').hidden)return;list.replaceChildren();if(!S.revision||!editor.scene)return;const selected=new Set(editor.selectedIds),traced=editor.scene.provenance?.method==='import-raster-high-fidelity-vector';if(traced)for(const g of [...(editor.scene.structures||[])].filter(g=>g.visible!==false).reverse()){const row=el('div','layer-row'+(S.structureSelection?.ids.includes(g.id)?' selected':'')),name=el('button','layer-name',g.label);name.onclick=()=>elementEditing.selectStructure(g.id);row.append(name);list.append(row);}for(const o of [...editor.scene.objects].reverse()){if(traced&&o.role==='context')continue;const row=el('div','layer-row'+(selected.has(o.id)?' selected':'')),name=el('button','layer-name',o.label||o.id);name.onclick=e=>editor.setSelection(e.shiftKey?[...selected,o.id]:[o.id]);row.append(name);for(const [key,title,active,inactive]of [['visible','可见性','◉','○'],['locked','锁定','L','·']]){const b=el('button','layer-toggle'+(o[key]?' on':''),o[key]?active:inactive);b.setAttribute('aria-label',`${title} ${o.label}`);b.onclick=()=>editor.applyOperations([{op:'update',id:o.id,changes:{[key]:!o[key]}}],title);row.append(b);}list.append(row);}}
+function renderLayers(){const list=$('layer-list');if($('panel-layers').hidden)return;list.replaceChildren();if(!S.revision||!editor.scene)return;const selected=new Set(editor.selectedIds),traced=editor.scene.provenance?.method==='import-raster-high-fidelity-vector';if(traced)for(const g of [...(editor.scene.structures||[])].filter(g=>g.visible!==false).reverse()){const row=el('div','layer-row'+(S.structureSelection?.ids.includes(g.id)?' selected':'')),name=el('button','layer-name',g.label);name.onclick=()=>elementEditing.selectStructure(g.id);row.append(name);list.append(row);}for(const o of [...editor.scene.objects].reverse()){if(traced&&o.role==='context')continue;const row=el('div','layer-row'+(selected.has(o.id)?' selected':'')),name=el('button','layer-name',o.display_name||o.label||o.id);name.onclick=e=>editor.setSelection(e.shiftKey?[...selected,o.id]:[o.id]);row.append(name);for(const [key,title,active,inactive]of [['visible','可见性','◉','○'],['locked','锁定','L','·']]){const b=el('button','layer-toggle'+(o[key]?' on':''),o[key]?active:inactive);b.setAttribute('aria-label',`${title} ${o.label}`);b.onclick=()=>editor.applyOperations([{op:'update',id:o.id,changes:{[key]:!o[key]}}],title);row.append(b);}list.append(row);}}
 function input(parent,label,value,type,change,options){const wrapper=el('label','',label),n=el(type==='select'?'select':'input');if(type==='select'){for(const [v,t]of options){const opt=el('option','',t);opt.value=v;n.append(opt);}n.value=value;}else{n.type=type||'text';n.value=value??'';if(type==='number')n.step='.1';if(type==='color')n.className='color-input';}n.setAttribute('aria-label',label);const commit=()=>{const v=type==='number'?Number(n.value):n.value;if(type==='number'&&!Number.isFinite(v))return;change(v);};n.onchange=commit;n.onkeydown=e=>{if(e.key==='Enter'){commit();n.blur();}};wrapper.append(n);parent.append(wrapper);return n;}
 function section(parent,title){const n=el('div','property-section');n.append(el('h3','',title));parent.append(n);const grid=el('div','property-grid');n.append(grid);return grid;}
 function renderProperties(){
+ const key=S.id+':'+editor.selectedIds.join(',');
+ preservePropertyState($('property-content'),key,renderPropertyContents);
+}
+function renderPropertyContents(){
  const parent=$('property-content');parent.replaceChildren();
  if(!S.revision||!editor.scene){parent.append(el('p','empty-properties','先打开样板或创建空白图版。添加素材后，单击选中即可编辑。'));return;}
  const scene=editor.scene,ids=editor.selectedIds,objects=scene.objects.filter(o=>ids.includes(o.id)),relations=scene.relations.filter(r=>ids.includes(r.id));
@@ -194,7 +200,7 @@ function renderProperties(){
 }
 function canvas(w,h){if(w<40||h<40||w>1000||h>1000)return toast('画布尺寸范围为 40–1000 mm');editor.setCanvasSize(w,h);$('canvas-size').textContent=`${w} × ${h} mm · ${editor.scene.objects.some(o=>o.illustration)?'对象插画':'矢量对象'}`;}
 function order(front){const a=editor.scene.objects.filter(o=>editor.selectedIds.includes(o.id)).map(o=>o.id),b=editor.scene.objects.filter(o=>!editor.selectedIds.includes(o.id)).map(o=>o.id);editor.applyOperations([{op:'reorder',ids:front?[...b,...a]:[...a,...b]}]);}
-function renderTools(){ws.classList.toggle('has-document',!!S.id);const count=editor.selectedIds.length,objects=editor.scene?.objects.filter(o=>editor.selectedIds.includes(o.id))||[];if(editor.scene)$('canvas-size').textContent=`${editor.scene.canvas.width_mm} × ${editor.scene.canvas.height_mm} mm · ${editor.scene.objects.some(o=>o.illustration)?'对象插画':'矢量对象'}`;$('duplicate').disabled=!objects.length;$('delete').disabled=!count;$('quick-connect').disabled=!objects.length||objects.length>2;$('undo').disabled=!S.revision||!editor.hasUndo;$('redo').disabled=!S.revision||!editor.hasRedo;$('group').disabled=objects.length<2;$('ungroup').disabled=!objects.some(o=>o.group_id);$('align').disabled=objects.length<2;$('add-text').disabled=!S.revision;workbenchUI?.refresh();relationsUI?.refresh();noviceUI?.refresh();generationUI?.refresh();}
+function renderTools(){annotationUI?.refresh();ws.classList.toggle('has-document',!!S.id);const count=editor.selectedIds.length,objects=editor.scene?.objects.filter(o=>editor.selectedIds.includes(o.id))||[];if(editor.scene)$('canvas-size').textContent=`${editor.scene.canvas.width_mm} × ${editor.scene.canvas.height_mm} mm · ${editor.scene.objects.some(o=>o.illustration)?'对象插画':'矢量对象'}`;$('duplicate').disabled=!objects.length;$('delete').disabled=!count;$('quick-connect').disabled=!objects.length||objects.length>2;$('undo').disabled=!S.revision||!editor.hasUndo;$('redo').disabled=!S.revision||!editor.hasRedo;$('group').disabled=objects.length<2;$('ungroup').disabled=!objects.some(o=>o.group_id);$('align').disabled=objects.length<2;$('add-text').disabled=!S.revision;workbenchUI?.refresh();relationsUI?.refresh();noviceUI?.refresh();generationUI?.refresh();}
 function renderHistory(){noviceUI?.refresh();return documentUI?documentUI.renderHistory():renderLegacyHistory();}
 function renderLegacyHistory(){
  const list=$('history-list');list.replaceChildren();const q=$('history-search').value,filter=$('history-filter')?.value||'all';
@@ -209,7 +215,7 @@ function renderLegacyHistory(){
 }
 function renderAudit(){
  const a=S.audit,content=$('audit-content');content.replaceChildren();
- const findings=a?.findings||[],pending=findings.filter(f=>f.status!=='acknowledged').length;
+ const findings=a?.findings||[],pending=findings.filter(f=>f.status!=='acknowledged').length+(a?.vision?.findings||[]).filter(f=>f.status!=='dismissed').length;
  $('open-audit').textContent=pending?`排版与内容建议 · ${pending}`:'查看排版建议';
  $('open-audit').classList.toggle('warning',!!pending);
  const repairable=findings.some(f=>f.object_ids?.length&&['error','warning'].includes(f.severity));
@@ -241,7 +247,7 @@ async function exportFile(format){
  try{
   if(S.revision&&!await flush())return;
   if(S.id!==jobId)return;
-  const result=await api(`/api/jobs/${jobId}/save-as`,{format,dpi:Number($('export-dpi').value),...(S.revision?{revision:S.revision}:{})});
+  const result=await api(`/api/jobs/${jobId}/save-as`,{format,dpi:Number($('export-dpi').value),...(S.revision?{revision:S.revision,text_mode:$('export-text-mode')?.value||'preserve'}:{})});
   if(S.id!==jobId){toast(result.path?'上一个图版的文件已保存。':'上一个图版的保存已结束。');return;}
   if(result.cancelled){status.textContent='已取消保存。图版仍保留在软件里。';return;}
   if(!result.path)throw Error('没有返回保存位置，请重试。');
@@ -305,10 +311,14 @@ const figureImportUI=setupFigureImport({state:S,editor,api,flush,canLeave,openJo
 const vectorDetails=setupVectorDetails({state:S,editor,flush,toast});
 const elementEditing=setupElementEditing({editor,toast,onSelection(selection){S.structureSelection=selection;renderProperties();renderLayers();}});
 const experienceUI=setupWorkspaceExperience({imports:figureImportUI,composer:composerUI,blank});
+const productShell=setupProductShell({state:S,editor,composer:composerUI,imports:figureImportUI,library:libraryUI,blank,tab,rename:()=>documentUI.editInfo(),toast});
 const releaseUI=setupReleaseNotes({api,toast});
 // Keep command names and visible targets in sync as modules are added. A
 // broken target is reported for diagnostics but never blocks the editor.
 const uiContract=installUiContract({onIssue:issue=>console.warn('[Rylume UI contract]',issue.message)});
 window.__RYLUME_UI_CONTRACT__=uiContract;
 document.addEventListener('ui-action-error',event=>toast(event.detail?.message||'当前操作暂不可用',true));
-boot().then(async ok=>{if(ok){await onboardingUI.ready();deliveryUI.ready();releaseUI.ready();}});
+boot().then(async ok=>{
+ document.body.classList.remove('app-loading');
+ if(ok){productShell.refresh();await onboardingUI.ready();deliveryUI.ready();releaseUI.ready();}
+});

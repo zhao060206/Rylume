@@ -88,7 +88,8 @@ def apply_template(scene,template_id,colorway=None):
         scene['style']['palette']=copy.deepcopy(color['palette']);scene['style']['colorway']=colorway
     if item.get('new_scene_only'):return normalize_scene(scene)
     for r in scene['relations']:r.pop('control',None)
-    return place_template(scene)
+    from scene_routing import repair_connection_routes
+    return repair_connection_routes(place_template(scene))
 
 def place_template(scene):
     from scene_render import DEFAULT_DIMS, layout_scene
@@ -266,8 +267,9 @@ def prepare_gallery():
     (root/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')
     for c in ASSET_CATEGORIES:
         for a in c['items']:
-            (root/('native_'+a['type']+'.svg')).write_text(
-                '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 108 108">'+symbol(a['type'],'#3D8297','','#3D8297',1)+'</svg>',
+            suffix='_'+a['state'] if a.get('state') else ''
+            (root/('native_'+a['type']+suffix+'.svg')).write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 108 108">'+symbol(a['type'],'#3D8297',a.get('state',''),'#3D8297',1)+'</svg>',
                 encoding='utf8')
     print(f'Gallery prepared: {len(TEMPLATES)} templates rendered to {root}')
 

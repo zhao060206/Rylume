@@ -123,11 +123,12 @@ class AssetStore:
         return self.root / ident
 
     def read(self, ident):
-        try: return json.loads((self.folder(ident)/'meta.json').read_text(encoding='utf8'))
-        except FileNotFoundError: raise SceneError('素材不存在') from None
+        with self.lock:
+            try: return json.loads((self.folder(ident)/'meta.json').read_text(encoding='utf8'))
+            except FileNotFoundError: raise SceneError('素材不存在') from None
 
     def save(self, meta):
-        _write(self.folder(meta['id'])/'meta.json', meta)
+        with self.lock:_write(self.folder(meta['id'])/'meta.json', meta)
 
     def public(self, meta):
         result = copy.deepcopy(meta)

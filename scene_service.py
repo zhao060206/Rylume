@@ -68,6 +68,8 @@ def payload(app, job, revision=None):
         result = {"ok": True, "scene": scene, "revision": scene["revision"],
                   "svg": (folder / "result.svg").read_text(encoding="utf-8"),
                   "audit": json.loads((folder / "audit.json").read_text(encoding="utf-8"))}
+        if result['audit'].get('audit_version')!=3:
+            result['audit']=audit_scene(scene)
         result["audit"]["author_confirmed"] = job.get("author_confirmed_revision") == scene["revision"]
         _apply_layout_decisions(scene,result['audit'],job)
         visual = job.get("scene_vision") or {}
@@ -201,11 +203,16 @@ def create_job(app, text, config, *, example=None, revision_of=None, request_id=
                 scene, job['illustration_result'] = illustrate(scene,config,
                     on_stage=lambda n,d: app._set_stage(job,n,d),
                     cancelled=lambda: bool(job.get('cancel_requested')), checkpoint=checkpoint)
+                from scene_presentation import locate_callouts
+                try:locate_callouts(scene,config)
+                except SceneError as exc:
+                    scene['unresolved'].append(str(exc));checkpoint(scene)
+                    raise
                 # Include failures/partial status in the saved draft, too.
                 checkpoint(scene)
                 enforce_content_audit(scene)
             app._set_stage(job, "qa", "核对原始需求、对象、连接与物理尺寸")
-            if not example and (config.get('vision') or {}).get('base_url') and (config.get('vision') or {}).get('model'):
+            if not example and ((config.get('vision') or {}).get('base_url') or (config.get('text') or {}).get('base_url')):
                 from scene_planner import review_scene_visual
                 review_snapshot=repository(app,job['id']).read()
                 job['scene_vision']={**review_scene_visual(review_snapshot,config),'revision':review_snapshot['revision']}
@@ -241,12 +248,15 @@ def _export(app, job, body):
     dpi = int(body.get("dpi") or 300)
     if dpi not in (120, 150, 300, 600):
         raise SceneError("导出 DPI 请选择 300 或 600")
-    default = app.EXPORT_DIR / job["id"] / f"r{scene['revision']}" / app._safe_filename(scene["title"] or "Figure", fmt)
+    text_mode=body.get('text_mode','preserve')
+    if text_mode not in ('preserve','editable'):raise SceneError('导出文字方式无效')
+    title=(scene['title'] or 'Figure')+(' - 可编辑文字' if text_mode=='editable' else '')
+    default = app.EXPORT_DIR / job["id"] / f"r{scene['revision']}" / app._safe_filename(title, fmt)
     requested = str(body.get("path") or "").strip()
     destination = Path(requested).resolve() if requested else default
     # Pin before queueing: an edit while export is running cannot change content.
     result = queues().submit_export(export_scene, copy.deepcopy(scene), fmt, destination,
-                                    dpi=dpi, config=app.load_config()).result(timeout=300)
+                                    dpi=dpi, config=app.load_config(),text_mode=text_mode).result(timeout=300)
     app.SAVED_PATHS.add(str(destination.resolve()))
     record = {"format": fmt, "revision": scene["revision"], "path": str(destination), "created": time.time()}
     job.setdefault("scene_exports", []).append(record)
@@ -482,7 +492,7 @@ def dispatch(handler, method, path, app):
                 scene=repo.read()
                 if _revision(body)!=scene['revision']:raise RevisionConflict('图版已变化，请先查看最新建议')
                 finding=next((f for f in audit_scene(scene)['findings'] if f['code']==body.get('code') and f['object_ids']==body.get('object_ids')),None)
-                if finding is None or finding['severity']!='warning' or finding['code'] not in ('overlap','label-overlap','label-object-overlap','empty-label'):raise SceneError('此项需要实际调整或核对科学内容，不能作为排版选择忽略')
+                if finding is None or finding['severity']!='warning' or finding['code'] not in ('overlap','label-overlap','label-object-overlap','label-detached','line-label-overlap','empty-label'):raise SceneError('此项需要实际调整或核对科学内容，不能作为排版选择忽略')
                 decisions=job.setdefault('layout_decisions',{});fingerprint=_finding_fingerprint(scene,finding)
                 if body.get('restore'):decisions.pop(fingerprint,None)
                 else:decisions[fingerprint]={'reason':'作者确认保留当前排版','created':time.time(),'revision':scene['revision']}
@@ -624,7 +634,7 @@ def dispatch(handler, method, path, app):
     except FileNotFoundError:
         handler._json(404,{"ok":False,"error":"场景修订不存在"})
     except (SceneError,ValueError,TypeError,KeyError,IndexError) as exc:
-        handler._json(400,{"ok":False,"error":str(exc)[:500]})
+        handler._json(400,{"ok":False,"error":app._friendly_error(exc)})
     except TimeoutError:
         handler._json(504,{"ok":False,"error":"请求超时；已有场景和导出版本保持可用"})
     except Exception as exc:

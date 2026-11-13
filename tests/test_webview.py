@@ -7,6 +7,7 @@ def closer(win):
     time.sleep(1)
     win.destroy()
 
+@pytest.mark.native
 @pytest.mark.skipif(os.environ.get("RUN_WEBVIEW_SMOKE") != "1", reason="Native window smoke test separated from regular automated test suite")
 def test_native_window():
     import webview

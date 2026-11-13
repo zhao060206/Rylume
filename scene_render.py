@@ -37,9 +37,12 @@ def layout_scene(scene,force=False):
         from scene_templates import place_template
         return place_template(scene)
     pad=7 if cw<110 else 8
-    objects=scene['objects']
+    objects=[o for o in scene['objects'] if not o.get('parent_id')]
     mode=scene.get('layout','pathway')
-    if scene['compartments']:
+    from scene_topology import rank_layout
+    ranked=not scene['compartments'] and mode in ('process','pathway') and rank_layout(scene,objects,force,_put,DEFAULT_DIMS)
+    if ranked:pass
+    elif scene['compartments']:
         narrow=cw<110
         nuclear=any(c['kind']=='nucleus' or c['id']=='nucleus' for c in scene['compartments'])
         membrane_y=25 if narrow else 31
@@ -135,7 +138,21 @@ def layout_scene(scene,force=False):
                 _put(o,cx-w/2,cy-h/2,w,h,force)
                 if cw<110 and centre and o['x']+o['w']/2>cw/2+4:o['label_dx']=8
                 elif cw<110 and centre and o['x']+o['w']/2<cw/2-4:o['label_dx']=-8
-    # Explicitly placed user objects remain where the author put them.
+    # Contained objects participate in their parent's layout, not in a second
+    # unrelated grid. Explicitly placed user objects remain where put.
+    by_id={o['id']:o for o in scene['objects']}
+    def place_children(parent):
+        children=[o for o in scene['objects'] if o.get('parent_id')==parent['id']]
+        for index,o in enumerate(children):
+            w,h=DEFAULT_DIMS[o['type']];w=min(w,parent['w']*.65);h=min(h,parent['h']*.4)
+            if o.get('placement')=='outside':
+                x=parent['x']+(parent['w']-w)/2;y=parent['y']-h-5
+            elif o.get('placement')=='boundary':
+                x=parent['x']+parent['w']*(index+1)/(len(children)+1)-w/2;y=parent['y']-h/2
+            else:
+                x=parent['x']+(parent['w']-w)/2;y=parent['y']+(parent['h']-h)*(index+1)/(len(children)+1)
+            _put(o,x,y,w,h,force);place_children(o)
+    for o in objects:place_children(o)
     return normalize_scene(scene)
 
 
@@ -180,6 +197,8 @@ def _object_label_boxes(scene):
     boxes=[]
     for o in scene['objects']:
         if not o.get('visible',True) or not o.get('label') or not all(k in o for k in ('x','y','w','h')):continue
+        if uses_text_appearance(o):
+            boxes.append({k:o[k] for k in ('id','x','y','w','h')});continue
         lines,fs=_label_lines(o);width=max(_measure(t,fs) for t in lines)
         cx=o['x']+o['w']/2+(5 if o.get('state','').startswith('legend_') else 0)+o.get('label_dx',0)
         baseline=label_baseline(o,lines,fs)
@@ -238,10 +257,24 @@ def preview_finding_fix(scene, finding):
     for o in editable:
         if code=='outside-canvas' and o['w']<=cw and o['h']<=ch:
             candidates.append([{'op':'update','id':o['id'],'changes':{'x':min(max(0,o['x']),cw-o['w']),'y':min(max(0,o['y']),ch-o['h'])}}])
-        elif code in ('label-overlap','label-object-overlap','label-outside'):
+        elif code=='label-detached':
+            candidates.append([{'op':'update','id':o['id'],'changes':{'label_dx':0,'label_dy':0}}])
+        elif code in ('label-overlap','label-object-overlap','label-outside','line-label-overlap'):
             # Only move the affected label, never nearby molecules or arrows.
             for dx,dy in [(0,0)]+[(dx,dy) for radius in (3,6,10,16,24) for dx,dy in ((0,radius),(0,-radius),(radius,0),(-radius,0),(radius,radius),(-radius,-radius))]:
                 candidates.append([{'op':'update','id':o['id'],'changes':{'label_dx':o['label_dx']+dx,'label_dy':o['label_dy']+dy}}])
+    if code=='line-label-overlap':
+        for r in original['relations']:
+            if r['id'] not in ids:continue
+            g=connection_geometry(original,r);mx,my=(g['x1']+g['x2'])/2,(g['y1']+g['y2'])/2
+            candidates=[ [{'op':'update_relation','id':r['id'],'changes':{'control':{'x':mx+dx,'y':my+dy}}}] for dx,dy in ((0,-18),(0,18),(-24,0),(24,0),(-48,0),(48,0),(0,-36),(0,36))]+candidates
+    if code in ('label-object-overlap','label-overlap','line-label-overlap'):
+        for r in original['relations']:
+            if r['id'] not in ids or not r.get('label'):continue
+            g=connection_geometry(original,r)
+            for radius in (3,6,10,16,24):
+                for dx,dy in ((0,radius),(0,-radius),(radius,0),(-radius,0),(radius,radius),(-radius,-radius)):
+                    candidates.append([{'op':'update_relation','id':r['id'],'changes':{'label_position':{'x':g['label_x']+dx,'y':g['label_y']+dy}}}])
     for operations in candidates:
         proposed=apply_operations(original,operations);audit=audit_scene(proposed)
         remaining={key(f) for f in audit['findings']}
@@ -283,15 +316,17 @@ def connection_geometry(scene,r):
     x1,y1=point(a,sp,r.get('source_anchor'));x2,y2=point(b,tp,r.get('target_anchor'))
     control=r.get('control') or {'x':(x1+x2)/2,'y':(y1+y2)/2}
     if not r.get('control') and not (r.get('source_anchor') or r.get('target_anchor')) and sp==tp:control={'x':max(x1,x2)+12,'y':(y1+y2)/2}
-    if not r.get('control'):
+    if not r.get('control') and not r.get('callout'):
         obstacles=[(o['x']-1,o['y']-1,o['w']+2,o['h']+2) for o in scene['objects']
                    if o.get('visible', True) and o.get('role') != 'context' and o['id'] not in (a['id'],b['id'])]
+        labels=[(b['x']-.5,b['y']-.5,b['w']+1,b['h']+1) for b in _object_label_boxes(scene)]
         def cost(c):
             hit=0
-            for i in range(1,30):
-                t=i/30;u=1-t
+            for i in range(1,80):
+                t=i/80;u=1-t
                 x=u*u*x1+2*u*t*c['x']+t*t*x2;y=u*u*y1+2*u*t*c['y']+t*t*y2
                 hit+=sum(1 for ox,oy,ow,oh in obstacles if ox<x<ox+ow and oy<y<oy+oh)
+                hit+=8*sum(1 for ox,oy,ow,oh in labels if ox<x<ox+ow and oy<y<oy+oh)
                 if x<1 or y<1 or x>scene['canvas']['width_mm']-1 or y>scene['canvas']['height_mm']-1:hit+=4
             return hit
         if cost(control):
@@ -357,9 +392,18 @@ def _object(o,palette,stroke_pt=.8,glyph_tint=.8):
     family=palette['accent'] if kind=='ligand' else palette['secondary'] if kind in ('tf','dna','mrna','complex','domain','fibroblast','collagen','tissue') else palette['primary']
     color=o.get('fill') or family;line=o.get('stroke') or family
     angle=o.get('rotation',0)
-    if o.get('illustration'):
+    if o.get('depiction')=='anchor':
+        artwork=''
+    elif o.get('illustration'):
+        import base64,io
+        from PIL import Image
+        with Image.open(io.BytesIO(base64.b64decode(o['illustration']['data'].split(',')[1]))) as image:iw,ih=image.size
+        scale=min(w/iw,h/ih);fw,fh=iw*scale,ih*scale
+        # Meet inside the physical frame BEFORE the outer non-uniform transform.
+        # Fitting into a 100x100 square first distorts illustrations and causes
+        # callout anchors to land outside the actual rendered structure.
         artwork = ('<image href="' + _escape(o['illustration']['data'])
-                   + '" x="0" y="0" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>')
+                   + f'" x="{(w-fw)/w*50}" y="{(h-fh)/h*50}" width="{fw/w*100}" height="{fh/h*100}" preserveAspectRatio="none"/>')
     elif o.get('text_appearance') and not uses_text_appearance(o):
         artwork=''
     elif o.get('asset_id'):
@@ -399,16 +443,24 @@ def _relation(scene,r,palette):
     return ''.join(p)+'</g>'
 
 
-def render_scene(scene, *, _laid_out=False):
+def render_scene(scene, *, _laid_out=False, embed_scene=False):
     if not _laid_out:
         scene=layout_scene(scene)
     cw,ch=scene['canvas']['width_mm'],scene['canvas']['height_mm'];palette=scene['style']['palette']
     from structure_render import composite_layer
     def draw_object(o):return _object(o,palette,scene['style']['stroke_pt'],scene['style']['glyph_tint'])
-    p=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{cw}mm" height="{ch}mm" viewBox="0 0 {cw} {ch}" data-version="2" data-revision="{scene["revision"]}">',f'<title>{_escape(scene["title"])}</title>',f'<rect width="{cw}" height="{ch}" fill="#FFFFFF"/>','<g id="layer-compartments">']
+    p=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{cw}mm" height="{ch}mm" viewBox="0 0 {cw} {ch}" data-version="{scene["schema_version"]}" data-revision="{scene["revision"]}">',f'<title>{_escape(scene["title"])}</title>',f'<rect width="{cw}" height="{ch}" fill="#FFFFFF"/>','<g id="layer-compartments">']
     from scientific_library import credits
     import json
     p.insert(2,'<metadata>'+_escape(json.dumps({'artwork_credits':credits(scene)},ensure_ascii=False))+'</metadata>')
+    if embed_scene:
+        from scene_document import normalize_scene
+        payload={'format':'rylume-scene','scene':normalize_scene(scene)}
+        data=json.dumps(payload['scene'],ensure_ascii=False,separators=(',',':')).encode('utf8')
+        if len(data)>512*1024:
+            import zlib,base64
+            payload={'format':'rylume-scene','scene_zlib':base64.b64encode(zlib.compress(data)).decode('ascii')}
+        p.insert(2,'<metadata id="rylume-scene">'+_escape(json.dumps(payload,ensure_ascii=False,separators=(',',':')))+'</metadata>')
     tid=scene['style'].get('template','')
     if tid=='process_cell':
         p.append(f'<g transform="scale({cw/180} {ch/120})"><path d="M 10 31 C 14 6 89 6 115 25 C 140 43 139 62 130 82 C 111 91 35 93 13 76 C 3 62 1 44 10 31 Z" fill="{tint(palette["primary"],.92)}" stroke="{tint(palette["primary"],.3)}" stroke-width=".45"/><path d="M 13 33 C 19 10 87 11 112 28" fill="none" stroke="{tint(palette["primary"],.55)}" stroke-width=".3"/></g>')
@@ -421,8 +473,9 @@ def render_scene(scene, *, _laid_out=False):
     p.append(composite_layer([o for o in scene['objects'] if o['visible'] and o.get('role')=='context'],scene.get('structures',[]),draw_object))
     p.append('</g><g id="layer-relations">')
     objects={o['id']:o for o in scene['objects']}
-    p.extend(_relation(scene,r,palette) for r in scene['relations'] if objects[r['source']]['visible'] and objects[r['target']]['visible'])
+    p.extend(_relation(scene,r,palette) for r in scene['relations'] if not r.get('callout') and objects[r['source']]['visible'] and objects[r['target']]['visible'])
     p.append('</g><g id="layer-objects">');p.append(composite_layer([o for o in scene['objects'] if o['visible'] and o.get('role')!='context'],scene.get('structures',[]),draw_object));p.append('</g>')
+    p.append('<g id="layer-callouts">'+''.join(_relation(scene,r,palette) for r in scene['relations'] if r.get('callout') and objects[r['source']]['visible'] and objects[r['target']]['visible'])+'</g>')
     if scene['style'].get('show_title'):p.append(_text(cw/2,4,scene['title'],10,anchor='middle',bold=True))
     if any(r.get('indirect') for r in scene['relations']):p.append(_text(cw-8,ch-2.5,'Dashed: indirect effect',7,anchor='end',fill='#82919A'))
     p.append('</svg>');return ''.join(p)

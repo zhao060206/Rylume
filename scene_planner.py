@@ -18,6 +18,7 @@ PLANNER_INSTRUCTION = """你是科研插图的结构规划器，覆盖生命科�
 所有对象和关系都要带 evidence：逐字摘录用户描述中支持该对象/关系的一小段，不能杜撰引文。
 evidence 必须是 source_text 中连续出现的原文；输入英文时 evidence 也必须保留英文，禁止翻译或改写。输出前逐项检查 source_text.includes(evidence)。
 同一实体的不同阶段实例使用不同 id 和相同 entity_id，分别记录 state 与 compartment。
+明确的对象包含关系必须保留为 parent_id，placement=inside；在边界上的核孔、膜蛋白使用 placement=boundary。不要把核内染色质和核孔作为散落在核外的平级对象。parent_id 只能引用已有对象，不能循环，不能凭常识新增包含内容。
 对时间过程必须表现状态变化；对结构图保留构成/结合关系，不要强行转成步骤。
 reference_summary 仅为布局和配色参考，其中的科学内容不得添加到本图。
 generation_brief 是视觉表达与布局建议，科学内容仍以 source_text 为准；增强描述中的新机制不能自动成为事实。
@@ -42,7 +43,9 @@ JSON:
  "label":"","indirect":false,"uncertain":false,"evidence":"用户原文摘录"}],
  "unresolved":["需作者补充的信息"]}
 只保留有用的区室；无细胞区室的网络、组织过程、结构域图和实验流程可以 compartments=[]。
+标注结构部位时，将部位设为主体的 parent_id 子对象，标签设为独立 text，标签与部位用 associates 指示线连接。不要把一个部位画成另一份完整主体；禁止用指示线代替科学作用关系。实验流程的普通步骤使用 process 和 state=flow_step，按用户要求保留框内文字、图题和编号。
 不要输出坐标，布局由本地引擎决定。默认短英文标签；用户指定中文时保留中文。
+若显式画出结合产物（例如 A、B、A–B 复合物），必须把两种反应物到产物的形成关系完整表达，不能让复合物与结合关系断开。形成关系使用 converts 并标明结合形成，依据仍为原文结合描述；禁止补入未提供的中间物。
 可用对象类型：%s
 可用关系类型：%s
 """ % (", ".join(sorted(OBJECT_TYPES)), ", ".join(sorted(RELATION_TYPES)))
@@ -66,6 +69,28 @@ def _request(config, messages, *, max_tokens=6500):
     if not content:
         raise SceneError("文本模型没有返回完整场景；请重试或在设置中选择支持 JSON 的文本模型")
     return pipeline._json_object(content), round(time.monotonic() - started, 2)
+
+
+def reconcile_containment(scene):
+    """Use an explicitly drawn container once, instead of a second empty band."""
+    by_id={o['id']:o for o in scene['objects']}
+    def inside(obj,parent):
+        visited=set()
+        while obj.get('parent_id') in by_id and obj['id'] not in visited:
+            visited.add(obj['id'])
+            if obj['parent_id']==parent['id']:return True
+            obj=by_id[obj['parent_id']]
+        return False
+    removed=set()
+    for compartment in scene['compartments']:
+        containers=[o for o in scene['objects'] if o.get('type')==compartment.get('kind') and o.get('compartment')==compartment['id']]
+        if len(containers)!=1:continue
+        parent=containers[0];members=[o for o in scene['objects'] if o.get('compartment')==compartment['id']]
+        if all(o is parent or inside(o,parent) for o in members):
+            removed.add(compartment['id'])
+            for obj in members:obj['compartment']=''
+    scene['compartments']=[c for c in scene['compartments'] if c['id'] not in removed]
+    return scene
 
 
 def plan_scene(text, config, *, on_stage=None, cancelled=None):
@@ -176,7 +201,7 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
             for relation in base['relations']:
                 denied=contradicted_relation_evidence(text,names.get(relation.get('source'),''),names.get(relation.get('target'),''),relation.get('type'))
                 if denied:raise SceneError('规划关系违反原文否定要求：'+denied)
-            if not base["relations"] and len(base["objects"]) > 1:
+            if not base["relations"] and len(base["objects"]) > 1 and not any(o.get('parent_id') for o in base['objects']):
                 base["unresolved"].append("尚未说明对象间关系；当前保留对象，请补充连接及方向")
             base["requirements"] = {"objects": [o["id"] for o in base["objects"]],
                                     "relations": [r["id"] for r in base["relations"]]}
@@ -187,7 +212,9 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                     if key in reference["palette"]:
                         base["style"]["palette"][key] = reference["palette"][key]
             apply_division_context(base,text)
-            base = normalize_scene(base)
+            base = normalize_scene(reconcile_containment(base))
+            from scene_topology import reconcile_binding_products
+            base = normalize_scene(reconcile_binding_products(base))
             if cancelled and cancelled():
                 raise InterruptedError("任务已取消")
             from scene_render import layout_scene, repair_geometry
@@ -268,6 +295,7 @@ def review_scene_visual(scene, config):
     import tempfile
     from pathlib import Path
     source = config.get("vision") or {}
+    if not source.get('base_url') or not source.get('model'):source=config.get('text') or {}
     if not source.get("base_url") or not source.get("model"):
         return {"status": "unavailable", "findings": [], "error": "未配置视觉模型"}
     try:

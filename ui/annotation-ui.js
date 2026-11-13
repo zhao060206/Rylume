@@ -8,10 +8,13 @@ export function regionFromPoints(a,b,canvas){
 }
 export function canApplyAnnotationCandidate(candidate,authorVisualConfirmed=false){return !!candidate&&(candidate.can_apply===true||(candidate.manual_visual_review_allowed===true&&authorVisualConfirmed===true));}
 export function pendingRedrawNoteIds(candidate){return [...new Set((candidate?.pending_image_requests||[]).flatMap(r=>r.note_ids||[]))];}
+export function isCurrentAnnotationRun(run,{sceneRevision,annotationRevision,hasUnsavedNotes=false,hasPendingScene=false}){
+ return !!run&&run.base_revision===sceneRevision&&run.annotation_revision===annotationRevision&&!hasUnsavedNotes&&!hasPendingScene;
+}
 export function setupAnnotations({state,editor,api,flush,toast,workspace,onApplied,canSubmit=async()=>true}){
   let job=null,notes=[],revision=0,epoch=0,savedEpoch=0,timer=null,saving=null,conflict=false,mode=null,drag=null,replaceId=null,selected=null,visible=true,currentRun=null,runs=[],recovery=null,polling=false,pollJob=null,panels=null,requestId=null,posting=false;
   const host=editor.host,button=el('button','tool text-tool','批注修改');button.id='open-annotations';
-  document.getElementById('open-check-toolbar').before(button);
+  document.querySelector('.canvas-actions').append(button);
   const panel=el('aside','annotation-panel');panel.hidden=true;panel.setAttribute('aria-label','图版批注');
   const head=el('div','annotation-head'),title=el('h2','','图版批注'),close=el('button','icon-button','×');close.setAttribute('aria-label','关闭批注面板');head.append(title,close);
   const help=el('p','annotation-help','圈出位置，分别写清要求。明确要求重绘插画时，可调用你配置的生图模型；意图不清楚会先询问。文字和箭头单独保留。');
@@ -31,7 +34,7 @@ export function setupAnnotations({state,editor,api,flush,toast,workspace,onAppli
   const drafts=new Map();
   function cacheDraft(){if(job){const record={notes:clone(notes),revision,epoch};drafts.set(job,record);try{localStorage.setItem('cfs-annotation-draft-'+job,JSON.stringify(record));}catch{}}}
   function clearDraft(id){drafts.delete(id);try{localStorage.removeItem('cfs-annotation-draft-'+id);}catch{}}
-  function dirty(){epoch++;requestId=null;cacheDraft();clearTimeout(timer);timer=setTimeout(()=>save().catch(()=>{}),500);saveState.textContent=conflict?'批注版本冲突，本地草稿保留':'批注待保存';renderOverlay();}
+  function dirty(){epoch++;requestId=null;cacheDraft();clearTimeout(timer);timer=setTimeout(()=>save().catch(()=>{}),500);saveState.textContent=conflict?'批注版本冲突，本地草稿保留':'批注待保存';renderOverlay();renderResult();}
   function setMode(next,id=null){mode=next;replaceId=id;drag=null;editor.cancelGesture();editor.setTool('select');host.style.cursor=next?'crosshair':'default';cancelFrame.hidden=!next;rect.setAttribute('aria-pressed',String(next==='rect'));ellipse.setAttribute('aria-pressed',String(next==='ellipse'));hint.textContent=next?'在图纸上按住并拖动，松开后填写要求；可点“取消圈框”。':'可以继续添加批注，也可以提交全部要求。';renderOverlay();}
   function open(){
     if(!state.revision||!editor.scene)return toast('请先打开可编辑图版；旧插画可先创建可编辑副本');
@@ -93,7 +96,7 @@ export function setupAnnotations({state,editor,api,flush,toast,workspace,onAppli
   async function poll(){if(polling&&pollJob===job)return;polling=true;const id=job;pollJob=id;try{while(job===id&&currentRun&&['queued','running'].includes(currentRun.status)){await new Promise(r=>setTimeout(r,900));if(job!==id)break;await fetchRun(currentRun.id);}}catch(e){if(job===id)status.textContent='进度读取暂时失败，任务与原图保留。重新打开面板可恢复查看。';}finally{if(pollJob===id)polling=false;}}
   async function submitAll(){if(posting)return;if(!notes.length)return toast('先添加批注');if(notes.some(n=>!n.instruction.trim()))return toast('请为每处批注填写要求');if(state.active)return toast('已有生成任务，请先完成或取消');const id=job;posting=true;submit.disabled=true;try{if(!await canSubmit()||!await flush()||!await save()||job!==id)return;requestId ||= crypto.randomUUID();const res=await api(`/api/jobs/${id}/annotation-runs`,{base_revision:state.revision,annotation_revision:revision,request_id:requestId});if(job!==id)return;currentRun=res.run;runs=[currentRun,...runs.filter(r=>r.id!==currentRun.id)];setMode(null);renderResult();poll();}catch(e){toast(e.message,true);}finally{posting=false;renderResult();}}
   submit.onclick=submitAll;
-  function runIsCurrent(run){return run?.base_revision===state.revision&&run.annotation_revision===revision&&epoch===savedEpoch&&!state.pending?.length;}
+  function runIsCurrent(run){return isCurrentAnnotationRun(run,{sceneRevision:state.revision,annotationRevision:revision,hasUnsavedNotes:epoch!==savedEpoch,hasPendingScene:!!state.pending?.length});}
   function askImagePermission(run){
     if(!runIsCurrent(run))return toast('图版或批注已经变化，请先保存并重新提交要求。',true);
     const id=job,runId=run.id,noteRevision=revision,at=epoch,pending=run.candidate.pending_image_requests,ids=pendingRedrawNoteIds(run.candidate);
@@ -107,10 +110,16 @@ export function setupAnnotations({state,editor,api,flush,toast,workspace,onAppli
     const candidate=run.candidate||{};for(const c of candidate.checks||run.checks||[]){const number=(run.notes||notes).findIndex(n=>n.id===c.note_id)+1;const card=el('div','annotation-check '+c.status);card.append(el('strong','',`批注 ${number||c.note_id} · ${{verified:'已核验',needs_review:'仍需核对',unfulfilled:'未满足'}[c.status]||'待核对'}`),el('p','',c.message));if(c.evidence)card.append(el('p','annotation-evidence',c.evidence));parent.append(card);}
   }
   function renderResult(){
-    const busy=currentRun&&['queued','running'].includes(currentRun.status);submit.disabled=posting||!!busy||!job||!notes.length||notes.some(n=>!n.instruction.trim());for(const [i,n]of [...steps.children].entries())n.classList.toggle('active',i===(busy?1:currentRun?.candidate?2:0));cancel.hidden=!busy;
+    const busy=currentRun&&['queued','running'].includes(currentRun.status),current=runIsCurrent(currentRun);submit.disabled=posting||!!busy||!job||!notes.length||notes.some(n=>!n.instruction.trim());for(const [i,n]of [...steps.children].entries())n.classList.toggle('active',i===(busy?1:current&&currentRun?.candidate?2:0));cancel.hidden=!busy;
     if(currentRun&&!busy&&['failed','cancelled','interrupted','completed'].includes(currentRun.status))requestId=null;
-    status.textContent=currentRun?`${currentRun.round?`第 ${currentRun.round}/3 轮 · `:''}${currentRun.message||currentRun.status}${currentRun.error?'：'+currentRun.error:''}`:'';result.replaceChildren();
-    if(currentRun?.candidate){const c=currentRun.candidate;result.append(el('h3','','候选与核验'));result.append(el('p','annotation-help',c.verification?.mode==='vision_and_structure'?'已进行图像与结构核验；仍请作者对比确认。':c.verification?.mode==='structure_and_text'?'已核对结构与文字；插画细节请对照画面确认。':c.pending_image_requests?.length?'本轮等待重绘确认，尚未调用生图服务。':'核验服务未完整返回，当前图版保持原样。'));
+    status.textContent=currentRun?(current||busy?`${currentRun.round?`第 ${currentRun.round}/3 轮 · `:''}${currentRun.message||currentRun.status}${currentRun.error?'：'+currentRun.error:''}`:'要求或图版已变化，请按当前批注重新生成候选。'):'';result.replaceChildren();
+    if(currentRun?.candidate&&!current){
+      result.append(el('p','annotation-stale','上一轮核验不适用于当前要求或图版。原图保持当前版本。'));
+      const old=el('details','annotation-old-candidate');old.append(el('summary','',`查看历史候选 · 图版 r${currentRun.base_revision} / 批注 r${currentRun.annotation_revision}${currentRun.applied_revision?' · 曾应用 r'+currentRun.applied_revision:''}`));
+      for(const n of currentRun.notes||[])old.append(el('p','annotation-help',n.instruction));
+      checkList(old,currentRun);const preview=el('button','button','查看历史对比');preview.onclick=()=>showComparison(currentRun).catch(e=>toast(e.message,true));old.append(preview);result.append(old);
+    }
+    if(currentRun?.candidate&&current){const c=currentRun.candidate;result.append(el('h3','','候选与核验'));result.append(el('p','annotation-help',c.verification?.mode==='vision_and_structure'?'已进行图像与结构核验；仍请作者对比确认。':c.verification?.mode==='structure_and_text'?'已核对结构与文字；插画细节请对照画面确认。':c.pending_image_requests?.length?'本轮等待重绘确认，尚未调用生图服务。':'核验服务未完整返回，当前图版保持原样。'));
       if(c.pending_image_requests?.length){const box=el('section','annotation-image-request');box.append(el('strong','','需要局部重绘插画'),el('p','',c.pending_image_requests.map(r=>r.object_label).join('、')));const approve=el('button','button','确认是否调用生图');approve.disabled=!runIsCurrent(currentRun);approve.onclick=()=>askImagePermission(currentRun);box.append(approve);result.append(box);}
       if(c.image_results?.length)result.append(el('p','annotation-image-ready',`已局部重绘 ${c.image_results.length} 个主体。文字与连线仍是独立对象。`));
       if(c.image_error){result.append(el('p','annotation-image-error',c.image_error));const settings=el('button','text-button','查看模型设置');settings.onclick=()=>document.getElementById('open-settings').click();result.append(settings);}
@@ -127,7 +136,7 @@ export function setupAnnotations({state,editor,api,flush,toast,workspace,onAppli
     compare.querySelector('#annotation-before').replaceChildren(sanitizedSvg(run.before_svg||base.svg));compare.querySelector('#annotation-after').replaceChildren(sanitizedSvg(run.candidate.preview_svg));const checks=compare.querySelector('.annotation-verification');checks.replaceChildren();checkList(checks,run);
     const actions=compare.querySelector('.annotation-dialog-actions'),keep=el('button','button','保留当前图版'),apply=el('button','button primary','应用修改版'),authorCheck=el('input');authorCheck.type='checkbox';
     const authorLabel=el('label','annotation-author-visual');authorLabel.append(authorCheck,document.createTextNode('我已对照原图和批注核对插画，确认画面细节符合要求'));authorLabel.hidden=!run.candidate.manual_visual_review_allowed;
-    const updateApply=()=>{apply.disabled=!canApplyAnnotationCandidate(run.candidate,authorCheck.checked)||!!run.applied_revision;};authorCheck.onchange=updateApply;keep.onclick=()=>compare.close();updateApply();
+    const updateApply=()=>{apply.disabled=!runIsCurrent(run)||!canApplyAnnotationCandidate(run.candidate,authorCheck.checked)||!!run.applied_revision;apply.title=!runIsCurrent(run)?'图版或批注已变化，请重新生成候选':'';};authorCheck.onchange=updateApply;keep.onclick=()=>compare.close();updateApply();
     apply.onclick=async()=>{apply.disabled=true;try{if(!await flush()||!await save()||job!==id)return;const data=await api(`/api/jobs/${id}/annotation-apply`,{run_id:run.id,base_revision:state.revision,author_visual_confirmed:authorCheck.checked});if(state.id!==id)return;await onApplied(data);recovery=data.recovery;compare.close();await load(id);toast('修改版已保存，可随时恢复修改前版本');}catch(e){toast(e.message,true);}finally{updateApply();}};
     actions.replaceChildren(authorLabel,keep,apply);setupComparison(compare,{beforeScene:base.scene,afterScene:run.candidate.preview_scene,operations:run.candidate.operations,notes:run.notes||notes});compare.showModal();
   }
@@ -141,5 +150,5 @@ export function setupAnnotations({state,editor,api,flush,toast,workspace,onAppli
     add({shape:'rect',x,y,w:Math.max(1,right-x),h:Math.max(1,bottom-y),target_ids:ids});
     toast('已添加所选对象要求；提交时会处理面板中的全部批注');
   }
-  return {open,load,forSelection,refresh:()=>{button.disabled=!state.revision;renderOverlay();}};
+  return {open,load,forSelection,refresh:()=>{button.disabled=!state.revision;renderOverlay();if(job===state.id)renderResult();}};
 }

@@ -137,7 +137,7 @@ export function setupVectorDetails({state,editor,flush,toast}){
    const saved=await flush();dialog.close();toast(saved?'矢量细节已保存；Ctrl+Z 可撤销。':'细节已放入画布，保存尚未完成，请点击顶部“保存”。',!saved);
   }catch(e){$('[data-vector-status]').textContent=e.message;button.disabled=false;}
  };
- function refreshAvailable(){const imported=vectorDetailSources(editor.scene||{},[]);openButton.hidden=!imported.length;openButton.textContent=editor.selectedIds?.some(id=>imported.some(o=>o.id===id))?'高级路径：所选图元':'高级路径工作区';}
+ function refreshAvailable(){const imported=vectorDetailSources(editor.scene||{},[]);openButton.hidden=!imported.length||editor.scene?.provenance?.method==='import-semantic-vector';openButton.textContent=editor.selectedIds?.some(id=>imported.some(o=>o.id===id))?'高级路径：所选图元':'高级路径工作区';}
  editor.host.addEventListener('editor-document-loaded',refreshAvailable);
  document.addEventListener('document-save-state',refreshAvailable);
  return {refresh:refreshAvailable,open};

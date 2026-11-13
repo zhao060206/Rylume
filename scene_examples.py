@@ -185,4 +185,8 @@ def make_example(example_id, *, width_mm=180, height_mm=120, layout=True):
     if layout:
         from scene_render import layout_scene
         scene = normalize_scene(layout_scene(scene))
+        for o in scene['objects']:
+            if o['type']=='ligand':o['label_dx']=0;o['label_dy']=-o['h']-4
+        from scene_routing import repair_connection_routes
+        scene=repair_connection_routes(scene)
     return scene

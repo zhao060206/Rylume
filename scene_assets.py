@@ -211,6 +211,8 @@ def asset_catalog():
             item_copy.setdefault("license", "原生矢量")
             item_copy.setdefault("category", cname)
             item_copy['domain'] = 'biology'
+            item_copy['default_recommended'] = False
+            item_copy['source_kind'] = 'native-component'
             native_items.append(item_copy)
         matching_bio = [b for b in bio_items if b["category"] == cname and b['domain']=='biology']
         items = native_items + matching_bio

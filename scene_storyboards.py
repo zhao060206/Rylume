@@ -133,7 +133,8 @@ class Board:
         scene=normalize_scene(self.scene)
         # Labels are measured at their final physical 8pt size, never shrunk.
         from scene_render import repair_geometry
-        return repair_geometry(scene,passes=2)
+        from scene_routing import repair_connection_routes
+        return repair_connection_routes(repair_geometry(scene,passes=2))
 
 def _steps(b,items,links=True):
     """A large artwork row with a second narrative row, or a portrait column."""

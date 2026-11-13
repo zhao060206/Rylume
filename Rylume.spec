@@ -4,7 +4,11 @@ from importlib.metadata import PackageNotFoundError
 
 from pathlib import Path
 import sys
+import runpy
 sys.path.insert(0,str(Path.cwd()))
+ui_builder = runpy.run_path('scripts/build_ui.py')
+if Path('ui/workbench-ui.css').read_text('utf-8') != ui_builder['build']():
+    raise ValueError('UI stylesheet is stale. Run python scripts/build_ui.py before packaging.')
 from release_notes import history
 from product_identity import PRODUCT_VERSION
 if not any(r['version'] == PRODUCT_VERSION and r['items'] for r in history()):
@@ -26,9 +30,11 @@ hiddenimports += ['document_conversion', 'document_advisor', 'document_assistant
 hiddenimports += ['annotation_redraw']
 hiddenimports += ['personal_assets', 'release_notes']
 hiddenimports += ['figure_imports']
-hiddenimports += ['figure_vectorize']
+hiddenimports += ['figure_vectorize', 'semantic_vector', 'scene_routing']
+hiddenimports += ['scene_presentation', 'discipline_workflows']
+hiddenimports += ['scene_topology', 'ppt_connections']
 hiddenimports += ['structure_render']
-datas += [('CHANGELOG.md', '.')]
+datas += [('CHANGELOG.md', '.'), ('THIRD_PARTY_UI.md', '.')]
 # MarkItDown detects local files with Magika's ONNX data. PDFMiner requires CMaps.
 # Keep optional online/audio converters inactive; legacy Office uses local LibreOffice.
 # The source build also supports the documented local fallback parser. PyInstaller

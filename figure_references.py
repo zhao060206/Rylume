@@ -168,10 +168,11 @@ def create(data_dir, data_url, config, *, purpose="layout", analyze_image=True):
             url = "data:image/png;base64," + base64.b64encode(pixels).decode("ascii")
             meta["reference_contract"], meta["style_dna"] = analyze(url, config, purpose)
             meta["analysis_status"] = "ready"
-        except Exception:
+        except Exception as exc:
             # Do not lose a user's sketch because a remote model is offline.
+            from app_server import _friendly_error
             meta["analysis_status"] = "unavailable"
-            meta["analysis_message"] = "原图已保留，暂时无法识别布局；生成时仍会提供原图"
+            meta["analysis_message"] = "原图已保留；"+_friendly_error(exc)+"。可稍后重新上传识别，生成时仍会提供原图"
     (directory / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     return {"ok": True, **meta, "preview_url": f"/api/references/{ident}/preview.png"}
 

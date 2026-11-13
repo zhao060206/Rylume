@@ -244,7 +244,7 @@
     "object_count": 5,
     "relation_count": 4,
     "relation_types": [
-      "transports"
+      "sequence"
     ]
   },
   "workflow_vertical": {
@@ -258,7 +258,7 @@
     "object_count": 5,
     "relation_count": 4,
     "relation_types": [
-      "transports"
+      "sequence"
     ]
   },
   "signal_cell": {
@@ -1143,6 +1143,209 @@
       "sequence"
     ]
   },
+  "flow_reaction_screen": {
+    "object_labels": [
+      "底物与条件",
+      "条件 A",
+      "条件 B",
+      "产物分析 A",
+      "产物分析 B",
+      "条件复核"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_spectrum_assignment": {
+    "object_labels": [
+      "样品制备",
+      "光谱采集",
+      "背景校正",
+      "峰归属",
+      "结构核对"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_sensor_calibration": {
+    "object_labels": [
+      "参考输入",
+      "采集响应",
+      "标定拟合",
+      "误差合格？",
+      "独立检验",
+      "调整设置"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_optical_measurement": {
+    "object_labels": [
+      "光源设置",
+      "样品准备",
+      "探测器校准",
+      "测量",
+      "模型拟合"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_materials_cycle": {
+    "object_labels": [
+      "设计成分",
+      "制备样品",
+      "结构表征",
+      "性能评价"
+    ],
+    "object_count": 4,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_materials_compare": {
+    "object_labels": [
+      "制备条件",
+      "批次 A",
+      "批次 B",
+      "结构表征 A",
+      "结构表征 B",
+      "性能比较"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_engineering_verification": {
+    "object_labels": [
+      "设计参数",
+      "试验条件",
+      "仿真结果",
+      "台架结果",
+      "误差分析",
+      "设计复核"
+    ],
+    "object_count": 6,
+    "relation_count": 5,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_failure_analysis": {
+    "object_labels": [
+      "异常记录",
+      "故障假设",
+      "隔离试验",
+      "定位成功？",
+      "修复复测",
+      "修订假设"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_environment_sources": {
+    "object_labels": [
+      "现场采样",
+      "遥感观测",
+      "历史记录",
+      "时空匹配",
+      "不确定性评估"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_water_monitoring": {
+    "object_labels": [
+      "采样设计",
+      "现场采样",
+      "样品分析",
+      "质控合格？",
+      "结果解释",
+      "复采或复测"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_model_evaluation": {
+    "object_labels": [
+      "数据划分",
+      "训练集拟合",
+      "验证集调参",
+      "冻结模型",
+      "独立测试"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_algorithm_benchmark": {
+    "object_labels": [
+      "统一数据",
+      "基线算法",
+      "候选算法",
+      "基线指标",
+      "候选指标",
+      "误差分析"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_cohort_followup": {
+    "object_labels": [
+      "纳排标准",
+      "知情同意",
+      "基线资料",
+      "随访记录",
+      "结局分析"
+    ],
+    "object_count": 5,
+    "relation_count": 4,
+    "relation_types": [
+      "sequence"
+    ]
+  },
+  "flow_diagnostic_validation": {
+    "object_labels": [
+      "待评价样本",
+      "参考标准",
+      "待评价方法",
+      "参考结果",
+      "方法结果",
+      "一致性分析"
+    ],
+    "object_count": 6,
+    "relation_count": 6,
+    "relation_types": [
+      "sequence"
+    ]
+  },
   "layout_ranks_lr": {
     "object_labels": [
       "Sample collection",
@@ -1154,7 +1357,7 @@
     "object_count": 5,
     "relation_count": 4,
     "relation_types": [
-      "transports"
+      "sequence"
     ]
   },
   "layout_ranks_tb": {
@@ -1168,7 +1371,7 @@
     "object_count": 5,
     "relation_count": 4,
     "relation_types": [
-      "transports"
+      "sequence"
     ]
   },
   "layout_snake": {
@@ -1182,7 +1385,7 @@
     "object_count": 5,
     "relation_count": 4,
     "relation_types": [
-      "transports"
+      "sequence"
     ]
   },
   "layout_columns": {
@@ -1196,7 +1399,7 @@
     "object_count": 5,
     "relation_count": 4,
     "relation_types": [
-      "transports"
+      "sequence"
     ]
   },
   "layout_orbit": {
@@ -1210,7 +1413,7 @@
     "object_count": 5,
     "relation_count": 4,
     "relation_types": [
-      "transports"
+      "sequence"
     ]
   },
   "layout_lanes": {
@@ -1224,7 +1427,7 @@
     "object_count": 5,
     "relation_count": 4,
     "relation_types": [
-      "transports"
+      "sequence"
     ]
   }
 }

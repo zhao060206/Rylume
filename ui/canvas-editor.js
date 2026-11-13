@@ -1,3 +1,4 @@
+import {assetKey} from './asset-search.js';
 /** Native SVG object editor. Coordinates are millimetres; exports use no overlays. */
 import {TracedSurface} from './traced-surface.js';
 const NS = 'http://www.w3.org/2000/svg', PXMM = 96 / 25.4;
@@ -217,10 +218,12 @@ export function edgeGeometry(scene, r, preview=null) {
   const start = preview?.start || (r.source_anchor?boundaryPoint(a,r.source_anchor):point(a, sp)), end = preview?.end || (r.target_anchor?boundaryPoint(b,r.target_anchor):point(b, tp));
   let control = r.control || { x: (start.x + end.x) / 2, y: (start.y + end.y) / 2 };
   if (!r.control && !r.source_anchor && !r.target_anchor && sp === tp) control = { x: Math.max(start.x, end.x) + 12, y: (start.y + end.y) / 2 };
-  if(!r.control){
+  if(!r.control&&!r.callout){
     const obstacles=scene.objects.filter(o=>o.visible&&o.role!=='context'&&o.id!==a.id&&o.id!==b.id);
-    const cost=c=>{let hit=0;for(let i=1;i<30;i++){const t=i/30,u=1-t,x=u*u*start.x+2*u*t*c.x+t*t*end.x,y=u*u*start.y+2*u*t*c.y+t*t*end.y;
+    const labels=objectLabelBoxes(scene);
+    const cost=c=>{let hit=0;for(let i=1;i<80;i++){const t=i/80,u=1-t,x=u*u*start.x+2*u*t*c.x+t*t*end.x,y=u*u*start.y+2*u*t*c.y+t*t*end.y;
       hit+=obstacles.filter(o=>o.x-1<x&&x<o.x+o.w+1&&o.y-1<y&&y<o.y+o.h+1).length;
+      hit+=8*labels.filter(b=>b.x-.5<x&&x<b.x+b.w+.5&&b.y-.5<y&&y<b.y+b.h+.5).length;
       if(x<1||y<1||x>scene.canvas.width_mm-1||y>scene.canvas.height_mm-1)hit+=4;}return hit;};
     if(cost(control)){const mx=(start.x+end.x)/2,my=(start.y+end.y)/2,candidates=[control,...[[0,-18],[0,18],[0,-36],[0,36],[-24,0],[24,0],[0,-60],[0,60]].map(([dx,dy])=>({x:mx+dx,y:my+dy}))];
       candidates.sort((a,b)=>cost(a)-cost(b)||Math.hypot(a.x-mx,a.y-my)-Math.hypot(b.x-mx,b.y-my));control=candidates[0];}
@@ -265,6 +268,26 @@ function labelLines(o) {
   }
   if (current) lines.push(current);
   return { lines: lines.length ? lines : [''], fs };
+}
+
+export function objectLabelBoxes(scene){
+ return scene.objects.filter(o=>o.visible!==false&&o.label&&['x','y','w','h'].every(k=>Number.isFinite(o[k]))).map(o=>{
+  if(usesTextAppearance(o))return {id:o.id,x:o.x,y:o.y,w:o.w,h:o.h};
+  const {lines,fs}=labelLines(o),w=Math.max(...lines.map(t=>measureMM(t,fs))),cx=o.x+o.w/2+((o.state||'').startsWith('legend_')?5:0)+(o.label_dx||0);
+  return{id:o.id,x:cx-w/2,y:labelBaseline(o,lines,fs)-fs*.8,w,h:fs*(1.23*(lines.length-1)+1)};
+ });
+}
+
+export function containedIds(scene,ids){
+ const all=new Set(ids);let changed=true;
+ while(changed){changed=false;for(const o of scene.objects)if(o.parent_id&&all.has(o.parent_id)&&!all.has(o.id)&&!o.locked){all.add(o.id);changed=true;}}
+ return [...all];
+}
+export function expandContainedMoves(scene,operations){
+ const explicit=new Map(operations.filter(o=>o.op==='update').map(o=>[o.id,o.changes||{}])),byId=new Map(scene.objects.map(o=>[o.id,o])),cache=new Map();
+ function delta(o){if(cache.has(o.id))return cache.get(o.id);const changes=explicit.get(o.id)||{},parent=byId.get(o.parent_id),inherited=parent?delta(parent):{x:0,y:0};const d={x:Number.isFinite(changes.x)?changes.x-o.x:inherited.x,y:Number.isFinite(changes.y)?changes.y-o.y:inherited.y};cache.set(o.id,d);return d;}
+ const added=[];for(const o of scene.objects){if(!o.parent_id||o.locked)continue;const d=delta(o),changes=explicit.get(o.id)||{},move={};for(const k of ['x','y'])if(d[k]&&!Object.hasOwn(changes,k))move[k]=o[k]+d[k];if(Object.keys(move).length)added.push({op:'update',id:o.id,changes:move});}
+ return [...operations,...added];
 }
 
 export class SceneEditor {
@@ -341,7 +364,7 @@ export class SceneEditor {
     this.base = copy(baseScene);
     this.baseSvg = sanitizedSvg(svg);
     }
-    const ids = new Set([...scene.objects, ...scene.relations].map(o => o.id));
+    const ids = new Set([...scene.objects.filter(o=>o.visible!==false), ...scene.relations].map(o => o.id));
     this.selected = new Set([...this.selected].filter(id => ids.has(id)));
     this.draw();
     this.onSelection(this.selectedIds);
@@ -368,6 +391,7 @@ export class SceneEditor {
   }
 
   setTool(tool) {
+    if(tool!=='connect')this.replacingArrow=null;
     this.tool = tool;
     this.connectStart = null;
     this.connectAnchor = null;
@@ -385,7 +409,9 @@ export class SceneEditor {
   finishConnection(source,target,sourcePort='auto',targetAnchor=null,sourceAnchor=null){
     if(source===target||!this.doc?.objects.some(o=>o.id===target))return false;
     const id=uid('r');
-    this.applyOperations([{op:'add_relation',relation:{id,source,target,type:this.relationType||'associates',source_port:sourcePort,target_port:'auto',...(sourceAnchor?{source_anchor:sourceAnchor}:{}),...(targetAnchor?{target_anchor:targetAnchor}:{}),label:'',indirect:false,uncertain:(this.relationType||'associates')==='associates'}}],'添加连线');
+    const operations=[{op:'add_relation',relation:{id,source,target,type:this.relationType||'associates',source_port:sourcePort,target_port:'auto',...(sourceAnchor?{source_anchor:sourceAnchor}:{}),...(targetAnchor?{target_anchor:targetAnchor}:{}),label:'',indirect:false,uncertain:(this.relationType||'associates')==='associates'}}];
+    if(this.replacingArrow)operations.push({op:'update',id:this.replacingArrow,changes:{visible:false}});
+    this.applyOperations(operations,this.replacingArrow?'将原图箭头改为绑定连线':'添加连线');
     this.setTool('select');this.setSelection?.([id]);
     this.onStatus('已连好。上方可以确认连线含义，拖动图形时连线会跟随。');return true;
   }
@@ -406,6 +432,26 @@ export class SceneEditor {
   geometry(r){
     const g=this.gesture,preview=g?.kind==='edge'&&g.id===r.id&&g.handle!=='control'&&g.preview?{[g.handle]:g.preview}:null;
     return edgeGeometry(this.doc,r,preview);
+  }
+
+  semanticHit(point){
+    const liveText=new Map(objectLabelBoxes(this.doc).map(b=>[b.id,b]));
+    for(const o of [...this.doc.objects].reverse()){
+      if(!o.visible||o.locked||o.role==='context')continue;
+      if(o.type==='text'&&!usesTextAppearance(o)){
+        const b=liveText.get(o.id);if(b&&point.x>=b.x-.4&&point.x<=b.x+b.w+.4&&point.y>=b.y-.4&&point.y<=b.y+b.h+.4)return o;
+        continue;
+      }
+      const angle=-(o.rotation||0)*Math.PI/180,dx=point.x-o.x-o.w/2,dy=point.y-o.y-o.h/2;
+      const x=dx*Math.cos(angle)-dy*Math.sin(angle)+o.w/2,y=dx*Math.sin(angle)+dy*Math.cos(angle)+o.h/2;
+      if(x<0||y<0||x>o.w||y>o.h)continue;
+      const texture=this.textTextures.get(o.id),canvas=texture?.foreign.querySelector('canvas');
+      if(!canvas)return o;
+      const origin=texture.origin,left=Number(texture.foreign.getAttribute('x')),top=Number(texture.foreign.getAttribute('y'));
+      const px=Math.floor((origin.x+x*origin.w/o.w-left)*canvas.width/Number(texture.foreign.getAttribute('width'))),py=Math.floor((origin.y+y*origin.h/o.h-top)*canvas.height/Number(texture.foreign.getAttribute('height')));
+      if(px>=0&&py>=0&&px<canvas.width&&py<canvas.height&&canvas.getContext('2d').getImageData(px,py,1,1).data[3]>8)return o;
+    }
+    return null;
   }
 
   fit() {
@@ -507,13 +553,14 @@ export class SceneEditor {
 
   draw() {
     if (!this.baseSvg || !this.doc) return;
+    const renderStarted=performance.now();
     // Keep traced artwork mounted across text edits. Cloning every path several
     // times made a small label change freeze large imported figures.
     const fresh=this.renderBase!==this.baseSvg;
     const svg = fresh?this.baseSvg.cloneNode(false):this.renderSvg;
     if(fresh){
     for(const child of this.baseSvg.children){
-      const editable=['layer-objects','layer-context','layer-relations'].includes(child.id);
+      const editable=['layer-objects','layer-context','layer-relations','layer-callouts'].includes(child.id);
       svg.append(child.cloneNode(!editable));
     }
     this.renderBase=this.baseSvg;this.renderSvg=svg;this.objectDrawCache=new Map();
@@ -540,13 +587,19 @@ export class SceneEditor {
       if (!o.visible) continue;
       const cached=previousObjects.get(o.id),target=o.role==='context'?contextNodes:objectNodes;
       if(sameStyle&&cached&&equal(cached.object,o)){target.push(cached.group);objectCache.set(o.id,cached);continue;}
+      const texture=this.textTextures.get(o.id);
+      if(this.doc.provenance?.method==='import-semantic-vector'&&cached&&sameStyle&&texture&&texture.snapshot===o.asset_snapshot?.svg&&cached.object.fill===o.fill&&cached.object.stroke===o.stroke&&usesTextAppearance(cached.object)===usesTextAppearance(o)&&cached.object.label===o.label&&(o.type!=='text'||usesTextAppearance(o))){
+        const origin=texture.origin,body=cached.group.firstElementChild;
+        body.setAttribute('transform',`translate(${o.x+o.w/2} ${o.y+o.h/2}) rotate(${o.rotation||0}) scale(${o.w/origin.w} ${o.h/origin.h}) translate(${-origin.x-origin.w/2} ${-origin.y-origin.h/2})`);
+        target.push(cached.group);objectCache.set(o.id,{object:copy(o),group:cached.group});continue;
+      }
       const group = node('g', {
         'data-object-id': o.id,
         'data-type': o.type,
         tabindex: o.role==='context'?'-1':'0',
         role: o.role==='context'?'presentation':'button',
         ...(o.role==='context'?{'aria-hidden':'true'}:{}),
-        'aria-label': o.label || o.id
+        'aria-label': o.display_name || o.label || o.id
       });
       group.style.pointerEvents=o.locked||o.role==='context'?'none':'bounding-box';
       const old = this.renderObjects.get(o.id);
@@ -554,7 +607,7 @@ export class SceneEditor {
       let body = node('g');
 
       const sameSnapshot=old?.asset_snapshot?.svg===o.asset_snapshot?.svg;
-      if (this.doc.provenance?.method!=='import-raster-high-fidelity-vector' && source && old && sameSnapshot && usesTextAppearance(old)===usesTextAppearance(o) && old.type === o.type && old.state === o.state && old.asset_id === o.asset_id && old.illustration?.sha256 ===o.illustration?.sha256) {
+      if (!['import-raster-high-fidelity-vector','import-semantic-vector'].includes(this.doc.provenance?.method) && source && old && sameSnapshot && usesTextAppearance(old)===usesTextAppearance(o) && old.type === o.type && old.state === o.state && old.asset_id === o.asset_id && old.illustration?.sha256 ===o.illustration?.sha256) {
         for (const child of [...source.children]) {
           if (child.hasAttribute('data-label-for')) continue;
           const c = child.cloneNode(true);
@@ -582,16 +635,23 @@ export class SceneEditor {
           x: o.x, y: o.y, width: o.w, height: o.h, rx: Math.min(o.w, o.h) / 3,
           fill: o.fill || '#deebef', stroke: o.stroke || '#527f92', 'stroke-width': .28
         };
-        if(o.text_appearance&&!usesTextAppearance(o)){
+        if(o.depiction==='anchor'){
+          // An image feature is a connector target, not a second organelle.
+        } else if(o.text_appearance&&!usesTextAppearance(o)){
           // Editing the label switches its preserved outline to live text.
         } else if(o.illustration?.data){
           body.append(node('image',{href:o.illustration.data,x:o.x,y:o.y,width:o.w,height:o.h,preserveAspectRatio:'xMidYMid meet'}));
         } else if(o.asset_snapshot?.svg){
           const art=sanitizedSvg(o.asset_snapshot.svg),box=art.getAttribute('viewBox').split(/[ ,]+/).map(Number);
+          if(o.fill&&!usesTextAppearance(o)){
+            const value=o.fill.slice(1),base=[0,2,4].map(i=>parseInt(value.slice(i,i+2),16));
+            for(const n of art.querySelectorAll('[fill]')){const original=n.getAttribute('fill');if(!/^#[0-9a-f]{6}$/i.test(original)||original.toLowerCase()==='#ffffff')continue;const rgb=[1,3,5].map(i=>parseInt(original.slice(i,i+2),16)),light=(rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722)/255,k=.15+light*.65;n.setAttribute('fill','#'+base.map(v=>Math.round(v+(255-v)*k).toString(16).padStart(2,'0')).join(''));}
+          }
+          if(o.stroke)art.querySelectorAll('[stroke]').forEach(n=>{if(n.getAttribute('stroke')!=='none')n.setAttribute('stroke',o.stroke);});
           const g=node('g',{transform:`translate(${o.x} ${o.y}) scale(${o.w/box[2]} ${o.h/box[3]}) translate(${-box[0]} ${-box[1]})`});
           g.append(...art.children);body.append(g);
-        } else if(this.artwork?.has(o.asset_id || o.type)){
-          const art=this.artwork.get(o.asset_id || o.type).cloneNode(true),box=art.getAttribute('viewBox').split(/[ ,]+/).map(Number);
+        } else if(this.artwork?.has(assetKey(o))){
+          const art=this.artwork.get(assetKey(o)).cloneNode(true),box=art.getAttribute('viewBox').split(/[ ,]+/).map(Number);
           const g=node('g',{transform:`translate(${o.x} ${o.y}) scale(${o.w/box[2]} ${o.h/box[3]}) translate(${-box[0]} ${-box[1]})`});
           g.append(...art.children);body.append(g);
         } else if (['vesicle', 'mvb', 'ligand', 'immune_cell'].includes(o.type)) {
@@ -600,11 +660,11 @@ export class SceneEditor {
           body.append(node('rect', attrs));
         }
       }
-      if(usesTextAppearance(o)){
-        body.setAttribute('data-label-for',o.id);
-        if(this.doc.provenance?.method==='import-raster-high-fidelity-vector'&&typeof Path2D!=='undefined'){
+      if(usesTextAppearance(o)||this.doc.provenance?.method==='import-semantic-vector'&&o.role!=='context'&&o.type!=='text'&&o.asset_snapshot){
+        if(usesTextAppearance(o))body.setAttribute('data-label-for',o.id);
+        if(['import-raster-high-fidelity-vector','import-semantic-vector'].includes(this.doc.provenance?.method)&&typeof Path2D!=='undefined'){
           let texture=this.textTextures.get(o.id);
-          if(!texture||texture.snapshot!==o.asset_snapshot.svg){const holder=node('g',{'data-object-id':o.id});holder.append(...body.children);const layer=node('g'),surface=new TracedSurface(this,true);surface.reconcile(layer,[holder]);texture={snapshot:o.asset_snapshot.svg,foreign:surface.foreign,origin:{x:o.x,y:o.y,w:o.w,h:o.h}};this.textTextures.set(o.id,texture);}
+          if(!texture||texture.snapshot!==o.asset_snapshot.svg||texture.fill!==o.fill||texture.stroke!==o.stroke){const holder=node('g',{'data-object-id':o.id});holder.append(...body.children);const layer=node('g'),surface=new TracedSurface(this,true);surface.reconcile(layer,[holder]);texture={snapshot:o.asset_snapshot.svg,fill:o.fill,stroke:o.stroke,foreign:surface.foreign,origin:{x:o.x,y:o.y,w:o.w,h:o.h}};this.textTextures.set(o.id,texture);}
           const origin=texture.origin;body.setAttribute('transform',`translate(${o.x+o.w/2} ${o.y+o.h/2}) rotate(${o.rotation||0}) scale(${o.w/origin.w} ${o.h/origin.h}) translate(${-origin.x-origin.w/2} ${-origin.y-origin.h/2})`);
           body.replaceChildren(texture.foreign);
         }
@@ -641,7 +701,7 @@ export class SceneEditor {
       const keep=new Set(nodes);for(const child of [...layer.children])if(!keep.has(child))child.remove();
       nodes.forEach((child,index)=>{if(layer.children[index]!==child)layer.insertBefore(child,layer.children[index]||null);});
     };
-    if(this.doc.provenance?.method==='import-raster-high-fidelity-vector'&&typeof Path2D!=='undefined'&&contextNodes.length){
+    if(['import-raster-high-fidelity-vector','import-semantic-vector'].includes(this.doc.provenance?.method)&&typeof Path2D!=='undefined'&&contextNodes.length){
       this.traceSurface ||= new TracedSurface(this);
       this.traceSurface.reconcile(contexts,contextNodes);
     }else{this.traceSurface=null;reconcile(contexts,contextNodes);}
@@ -654,6 +714,9 @@ export class SceneEditor {
       svg.insertBefore(edges, objects);
     }
     edges.replaceChildren();
+    let callouts=svg.querySelector('#layer-callouts');
+    if(!callouts){callouts=node('g',{id:'layer-callouts'});svg.append(callouts);}
+    callouts.replaceChildren();
 
     for (const r of this.doc.relations) {
       const a = this.doc.objects.find(o => o.id === r.source), b = this.doc.objects.find(o => o.id === r.target);
@@ -668,7 +731,7 @@ export class SceneEditor {
         'aria-label': `${r.type}: ${a.label} -> ${b.label}`
       });
       group.setAttribute('data-relation-type',r.type);
-      group.setAttribute('aria-label',`${RELATION_DEFINITIONS.find(t=>t.id===r.type)?.title}: ${a.label} → ${b.label}${r.indirect?' · 间接':''}${r.uncertain?' · 含义待核对':''}`);
+      group.setAttribute('aria-label',`${r.callout?'部位指示线':RELATION_DEFINITIONS.find(t=>t.id===r.type)?.title}: ${a.label||a.display_name} → ${b.label||b.display_name}${r.indirect?' · 间接':''}${r.uncertain?' · 含义待核对':''}`);
       group.append(node('path',{d:g.path,fill:'none',stroke:'transparent','stroke-width':10,'vector-effect':'non-scaling-stroke','data-relation-hit':r.id}));
       for(const[tag,attrs]of relationParts(r.type,g.start,g.end,g.control,color,r.stroke_pt||1.05,r.indirect,{start:!!r.source_anchor,end:!!r.target_anchor}))group.append(node(tag,attrs));
       const label=relationLabel(this.doc,r);
@@ -677,12 +740,13 @@ export class SceneEditor {
         group.append(node('rect',{x:g.label.x-width/2,y:g.label.y-2,width,height:2.7,fill:'#FFFFFF',rx:.3,'data-relation-label-for':r.id,cursor:'grab'}));
         group.append(node('text',{x:g.label.x,y:g.label.y,'text-anchor':'middle','font-size':7*25.4/72,'font-family':'Arial, Microsoft YaHei, sans-serif',fill:color,'data-relation-label-for':r.id,cursor:'grab'},label));
       }
-      edges.append(group);
+      (r.callout?callouts:edges).append(group);
     }
 
     if(fresh){this.host.querySelector('svg')?.remove();this.host.prepend(svg);}
     this.position();
     this.drawOverlay();
+    this.host.dataset.renderMs=(performance.now()-renderStarted).toFixed(2);
     this.host.dispatchEvent?.(new Event('editor-scene-rendered'));
   }
 
@@ -805,8 +869,8 @@ export class SceneEditor {
     if(e.altKey&&this.tool!=='connect'&&!e.target.closest('[data-handle],[data-edge-handle]')){
       const hits=hitObjects(this.doc,point,true),current=hits.findIndex(o=>this.selected.has(o.id));
       if(hits.length){
-        const picked=hits[Math.max(0,current)];this.setSelection([picked.id]);
-        this.gesture={kind:'move',start:point,before,px:e.clientX,py:e.clientY,ids:picked.locked||picked.role==='context'?[]:[picked.id],cycleId:hits[(current+1)%hits.length].id};return;
+        const picked=hits[Math.max(0,current)];
+        this.gesture={kind:'move',start:point,before,px:e.clientX,py:e.clientY,ids:picked.locked||picked.role==='context'?[]:containedIds(this.doc,[picked.id]),cycleId:hits[(current+1)%hits.length].id};this.setSelection([picked.id]);return;
       }
     }
     const handle = e.target.closest('[data-handle]'), edgeHandle = e.target.closest('[data-edge-handle]');
@@ -824,13 +888,23 @@ export class SceneEditor {
       const kind=label.dataset.relationLabelFor?'relation':'object',id=label.dataset.relationLabelFor||label.dataset.labelFor;
       const item=(kind==='relation'?this.doc.relations:this.doc.objects).find(o=>o.id===id);
       if(item&&!item.locked&&item.type!=='text'){
-        this.activeLabel={kind,id};this.setSelection([id]);
+        this.activeLabel={kind,id};
         this.gesture={kind:'label',labelKind:kind,id,start:point,before,px:e.clientX,py:e.clientY,origin:kind==='relation'?edgeGeometry(before,item).label:null};
+        this.setSelection([id]);
         return;
       }
     }
     const object = e.target.closest('[data-object-id]'), edge = e.target.closest('[data-relation-id]');
-    const picked=object?this.doc.objects.find(x=>x.id===object.dataset.objectId):(!edge?hitObjects(this.doc,point)[0]:null);
+    const direct=object?this.doc.objects.find(x=>x.id===object.dataset.objectId):null;
+    const imported=this.doc.provenance?.method==='import-semantic-vector';
+    const natural=imported&&!edge?(direct?.type==='text'&&label?direct:this.semanticHit(point)):direct||(!edge?hitObjects(this.doc,point)[0]:null);
+    // A selected structure owns its transparent drag bounds. Modifier clicks
+    // and visible text still allow deliberate selection of another element.
+    const selectedDrag=imported&&this.tool==='select'&&!edge&&!label&&!e.shiftKey&&!e.ctrlKey&&!e.metaKey
+      ?this.doc.objects.filter(o=>this.selected.has(o.id)&&o.visible&&!o.locked&&o.role!=='context'
+        &&point.x>=o.x&&point.x<=o.x+o.w&&point.y>=o.y&&point.y<=o.y+o.h)
+        .sort((a,b)=>a.w*a.h-b.w*b.h)[0]:null;
+    const picked=selectedDrag&&(!natural||natural.id===selectedDrag.id||natural.w*natural.h>=selectedDrag.w*selectedDrag.h)?selectedDrag:natural;
     if (picked) {
       const o=picked,id=o.id;
       if (!o) return;
@@ -855,11 +929,11 @@ export class SceneEditor {
       if (o.group_id && !e.shiftKey && !e.ctrlKey && !e.metaKey) {
         this.doc.objects.filter(x => x.visible&&!x.locked&&x.group_id === o.group_id).forEach(x => this.selected.add(x.id));
       }
+      if (!o.locked) {
+        this.gesture = {kind:'move',start:point,before,px:e.clientX,py:e.clientY,ids:containedIds(this.doc,this.selectedIds.filter(id=>this.doc.objects.some(x=>x.id===id&&!x.locked)))};
+      }
       this.onSelection(this.selectedIds);
       this.drawOverlay();
-      if (!o.locked) {
-        this.gesture = {kind:'move',start:point,before,px:e.clientX,py:e.clientY,ids:this.selectedIds.filter(id=>this.doc.objects.some(x=>x.id===id&&!x.locked))};
-      }
       return;
     }
     if (edge) {
@@ -929,11 +1003,14 @@ export class SceneEditor {
           if(value!==null&&(!e.shiftKey||(axis==='x'?dx!==0:dy!==0))){if(axis==='x')sx=shift;else sy=shift;this.guides.push({axis,value});}
         }
       }
+      const anchor=g.before.objects.find(o=>g.ids.includes(o.id)&&!g.ids.includes(o.parent_id))||g.before.objects.find(o=>g.ids.includes(o.id));
+      const moveX=anchor?Math.round((anchor.x+dx+sx)*10)/10-anchor.x:dx+sx;
+      const moveY=anchor?Math.round((anchor.y+dy+sy)*10)/10-anchor.y:dy+sy;
       for (const id of g.ids) {
         const old = g.before.objects.find(o => o.id === id), o = this.doc.objects.find(o => o.id === id);
         if (!old || !o) continue;
-        o.x = Math.round((old.x + dx + sx) * 10) / 10;
-        o.y = Math.round((old.y + dy + sy) * 10) / 10;
+        o.x = old.x+moveX;
+        o.y = old.y+moveY;
       }
       this.draw();
     } else if (g.kind === 'transform') {
@@ -999,7 +1076,10 @@ export class SceneEditor {
         this.onStatus('请把端点拖到对象边缘，靠近时会显示吸附点；本次保留原连接。');
       }
     }
-    if (g.kind !== 'pan') this.commit(g.before,g.kind==='label'?'移动文字':g.kind==='edge'?'调整连线':'编辑图元');
+    if (g.kind !== 'pan') {
+      if(equal(g.before,this.doc))this.onSelection(this.selectedIds);
+      else this.commit(g.before,g.kind==='label'?'移动文字':g.kind==='edge'?'调整连线':'编辑图元');
+    }
     if(g.kind==='edge')this.draw();else this.drawOverlay();
   }
 
@@ -1030,6 +1110,7 @@ export class SceneEditor {
 
   applyOperations(operations, label = '编辑图元') {
     if (!this.doc) return;
+    operations=expandContainedMoves(this.doc,operations);
     const before = copy(this.doc);
     for (const op of operations) {
       if (op.op === 'replace') this.doc = copy(op.scene);
@@ -1042,6 +1123,7 @@ export class SceneEditor {
       else if (op.op === 'remove') {
         this.doc.objects = this.doc.objects.filter(o => o.id !== op.id);
         this.doc.relations = this.doc.relations.filter(r => r.source !== op.id && r.target !== op.id);
+        for(const child of this.doc.objects)if(child.parent_id===op.id){delete child.parent_id;delete child.placement;}
         if(this.doc.structures)this.doc.structures=this.doc.structures.map(g=>({...g,parts:g.parts.filter(p=>p.owner!==op.id),foreground:(g.foreground||[]).filter(p=>p.owner!==op.id)})).filter(g=>g.parts.length);
         this.selected.delete(op.id);
       } else if (op.op === 'remove_relation') {
@@ -1052,6 +1134,8 @@ export class SceneEditor {
       else if(op.op==='reorder'){const items=new Map(this.doc.objects.map(o=>[o.id,o]));this.doc.objects=op.ids.map(id=>items.get(id));}
       else if(op.op==='set_structures')this.doc.structures=copy(op.structures);
     }
+    const visible=new Set([...this.doc.objects.filter(o=>o.visible!==false),...this.doc.relations].map(o=>o.id));
+    this.selected=new Set([...this.selected].filter(id=>visible.has(id)));
     this.commit(before, label);
   }
 
@@ -1337,7 +1421,7 @@ export class SceneEditor {
   key(e) {
     if (!this.doc || e.defaultPrevented || isInput(e)) return;
     const mod = e.ctrlKey || e.metaKey, key = e.key.toLowerCase();
-    if(!mod&&e.target.closest('button,summary'))return;
+    if(!mod&&key!=='escape'&&e.target.closest('button,summary'))return;
     if(this.gesture&&mod&&['z','y'].includes(key)){e.preventDefault();this.cancelGesture();return;}
     if(e.shiftKey&&!mod&&e.code==='Digit1'){e.preventDefault();this.fit();return;}
     if(e.shiftKey&&!mod&&e.code==='Digit2'){e.preventDefault();this.fitSelection();return;}

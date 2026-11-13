@@ -37,6 +37,17 @@ export function setupFloatingWindows(only=null){
   };
   const visible=()=>!win.classList.contains('is-minimized')&&(isPanel?!win.parentElement.classList.contains('left-collapsed')&&!win.parentElement.classList.contains('showing-start'):win.open);
   const title=()=>((isPanel?win.querySelector('.left-tab:not([hidden]) h1'):win.querySelector('h2'))?.textContent||'窗口').trim();
+  const text=(zh,en)=>win.lang==='en'?en:zh;
+  function localize(){
+   for(const heading of headings){
+    heading.title=text('拖动标题移动窗口；方向键微调','Drag the title to move; use arrow keys to adjust');
+    for(const n of heading.querySelectorAll('.floating-minimize')){n.textContent=text('收起','Minimize');n.title=text('收起到底部，点击名称可恢复','Minimize to the bottom; click its name to restore');n.setAttribute('aria-label',text('收起','Minimize ')+title());}
+    for(const n of heading.querySelectorAll('.floating-options>summary')){n.title=text('窗口选项','Window options');n.setAttribute('aria-label',title()+text('窗口选项',' window options'));}
+    const sizes=heading.querySelectorAll('.floating-options-menu button');
+    [['紧凑窗口','Compact window'],['放大查看','Larger window'],['恢复默认位置和大小','Reset position and size']].forEach(([zh,en],i)=>{if(sizes[i])sizes[i].textContent=text(zh,en);});
+    const close=heading.querySelector('.floating-window-actions>button:last-child');if(close&&!close.classList.contains('floating-minimize')){close.title=text('关闭','Close');close.setAttribute('aria-label',text('关闭','Close ')+title());}
+   }
+  }
   const front=()=>{if(!isPanel)win.style.zIndex=String(++nextLayer);};
   function locate(rect){
    const a=area(),v=fitWindow(rect,a);
@@ -50,7 +61,7 @@ export function setupFloatingWindows(only=null){
   function focusHeading(){(isPanel?win.querySelector('.left-tab:not([hidden]) .panel-heading'):headings[0])?.focus({preventScroll:true});}
   function open(){
    const minimized=win.classList.contains('is-minimized');setMinimized(false);removePill();
-   if(!isPanel){for(const b of win.querySelectorAll('.floating-minimize'))b.setAttribute('aria-label','收起'+title());for(const summary of win.querySelectorAll('.floating-options>summary'))summary.setAttribute('aria-label',title()+'窗口选项');}
+   localize();
    if(isPanel)win.parentElement.classList.remove('left-collapsed');else if(!win.open){opener=document.activeElement;win.show();}
    if(minimized&&savedRect)locate(savedRect);else constrain();front();focusHeading();
   }
@@ -63,8 +74,8 @@ export function setupFloatingWindows(only=null){
    for(const options of win.querySelectorAll('.floating-options'))options.open=false;
    setMinimized(true);if(isPanel)win.parentElement.classList.add('left-collapsed');
    const strip=restoreStrip();pill=document.createElement('div');pill.className='window-restore-item';pill.dataset.windowKind=isPanel?'panel':'dialog';
-   const restore=document.createElement('button');restore.type='button';restore.className='window-restore-button';restore.textContent=title();restore.title='恢复 '+title();restore.setAttribute('aria-label','恢复 '+title());restore.onclick=open;
-   const dismiss=document.createElement('button');dismiss.type='button';dismiss.textContent='×';dismiss.className='window-restore-close';dismiss.setAttribute('aria-label','关闭已收起的'+title());dismiss.onclick=()=>{close();document.querySelector('[data-tab=assets]')?.focus({preventScroll:true});};
+   const restore=document.createElement('button');restore.type='button';restore.className='window-restore-button';restore.textContent=title();restore.title=text('恢复 ','Restore ')+title();restore.setAttribute('aria-label',restore.title);restore.onclick=open;
+   const dismiss=document.createElement('button');dismiss.type='button';dismiss.textContent='×';dismiss.className='window-restore-close';dismiss.setAttribute('aria-label',text('关闭已收起的','Close minimized ')+title());dismiss.onclick=()=>{close();document.querySelector('[data-tab=assets]')?.focus({preventScroll:true});};
    pill.append(restore,dismiss);strip.append(pill);arrangeStrip();restore.focus({preventScroll:true});
   }
   function reset(){
@@ -93,6 +104,7 @@ export function setupFloatingWindows(only=null){
    heading.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.id)return;locate({...drag.rect,left:drag.rect.left+e.clientX-drag.x,top:drag.rect.top+e.clientY-drag.y});});
    const end=()=>{drag=null;};for(const name of ['pointerup','pointercancel','lostpointercapture'])heading.addEventListener(name,end);
   }
+  localize();win.addEventListener('floating-language-change',localize);
   win.addEventListener('pointerdown',front);win.addEventListener('pointerup',constrain);
   win.addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Escape'&&!e.defaultPrevented){e.preventDefault();e.stopPropagation();close();}});
   if(!isPanel){

@@ -1,0 +1,72 @@
+/* BoardUI native adaptation: buttons, inputs and segmented controls.
+ * MIT © 2026 Mertcan Dundar Esmergul. Adapted for Rylume; THIRD_PARTY_UI.md. */
+@layer components {
+ :root {
+  --ui-paper:#fff; --ui-ground:#f7f7f8; --ui-sidebar:#f7f7f8; --ui-raised:#efeff1;
+  --ui-ink:#24262b; --ui-secondary:#555962; --ui-muted:#6c7079;
+  --ui-border:#e4e5e8; --ui-border-strong:#c8cbd1; --ui-hover:#ededef;
+  --ui-accent:#315c50; --ui-accent-hover:#25483e; --ui-tint:#eaf1ed;
+  --ui-radius:8px; --ui-ease:cubic-bezier(.22,1,.36,1);
+  --ui-fast:140ms; --ui-enter:200ms; --ui-shadow:0 8px 24px #17191d12,0 1px 4px #17191d08;
+  --ui-font:"Segoe UI Variable","Segoe UI","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
+  --bg:var(--ui-ground); --panel:var(--ui-paper); --text:var(--ui-ink); --muted:var(--ui-muted);
+  --line:var(--ui-border); --accent:var(--ui-accent); --accent-soft:var(--ui-tint);
+  --ui-focus:#315c50; --warning:#8c621c; --top:56px; --navigation:232px; --right:288px;
+  --left:288px; --rail:0px; --document-panel:352px;
+  color-scheme:light; font:14px/1.5 var(--ui-font); color:var(--ui-ink);
+ }
+ *,*::before,*::after {box-sizing:border-box}
+ body {font:14px/1.5 var(--ui-font);color:var(--ui-ink);background:var(--ui-ground)}
+ button,input,textarea,select {font:inherit;letter-spacing:0}
+ button,summary,a { -webkit-tap-highlight-color:transparent }
+ button {transition:color var(--ui-fast),background-color var(--ui-fast),border-color var(--ui-fast);cursor:pointer}
+ button:disabled {opacity:.42;cursor:not-allowed}
+ :is(button,summary,a,input,textarea,select):focus-visible {outline:2px solid var(--ui-focus);outline-offset:3px}
+ :where(input:not([type=checkbox]):not([type=color]):not([type=range]),textarea,select) {
+  min-height:36px;border:1px solid var(--ui-border-strong);border-radius:var(--ui-radius);
+  padding:8px 12px;background:var(--ui-paper);color:var(--ui-ink);font-size:13px;line-height:20px;
+ }
+ :where(input,textarea,select):hover {border-color:#9ea4ae}
+ :where(input,textarea,select):focus {border-color:var(--ui-accent);box-shadow:none}
+ textarea {resize:vertical} input::placeholder,textarea::placeholder {color:var(--ui-muted);opacity:1}
+ input[type=checkbox] {accent-color:var(--ui-accent)}
+ input[type=color] {width:40px;min-height:32px;padding:4px;background:white;border:1px solid var(--ui-border);border-radius:6px}
+ .button,.quiet,.primary-button {display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:8px 12px;border:1px solid var(--ui-border);border-radius:8px;background:white;color:var(--ui-ink);font-size:13px;line-height:20px;font-weight:500;box-shadow:0 1px 2px #17191d04;white-space:nowrap}
+ .button:hover:not(:disabled),.quiet:hover:not(:disabled) {background:var(--ui-ground);border-color:var(--ui-border-strong)}
+ .button.primary,.primary-button {background:var(--ui-accent);border-color:var(--ui-accent);color:white;box-shadow:none}
+ .button.primary:hover:not(:disabled),.primary-button:hover:not(:disabled) {background:var(--ui-accent-hover);border-color:var(--ui-accent-hover)}
+ .button.secondary {background:var(--ui-ground)}
+ .icon-button,.mini-button {display:inline-flex;align-items:center;justify-content:center;flex:none;width:32px;height:32px;min-height:32px;min-width:32px;border:0;border-radius:6px;background:transparent;color:var(--ui-secondary);padding:6px}
+ .icon-button:hover,.mini-button:hover {background:var(--ui-hover);color:var(--ui-ink)}
+ .text-button {min-height:32px;padding:4px 8px;border:0;border-radius:6px;color:var(--ui-secondary);background:transparent;font-size:13px;font-weight:400;white-space:nowrap}
+ .text-button:hover {background:var(--ui-hover);color:var(--ui-ink)}
+ .icon {height:18px;width:18px;stroke-width:1.5;flex-shrink:0;color:inherit}
+ .app-menu {position:relative;margin:0}
+ .app-menu>summary {list-style:none;cursor:pointer}
+ .app-menu>summary::-webkit-details-marker {display:none}
+ .menu-items {position:absolute;top:40px;min-width:216px;z-index:50;background:white;border:1px solid var(--ui-border);border-radius:8px;box-shadow:var(--ui-shadow);padding:6px;color:var(--ui-ink)}
+ .menu-items button {display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:32px;padding:6px 8px;margin:0;text-align:left;border:0;border-radius:4px;background:none;color:var(--ui-secondary);font-size:12px;font-weight:400;box-shadow:none}
+ .menu-items button:hover {background:var(--ui-hover);color:var(--ui-ink)}
+ .menu-items button .icon {display:none}
+ .quick-overflow-action {display:none}
+ [hidden] {display:none!important}
+ .muted,.small,.hint,.optional {color:var(--ui-muted);font-weight:400}
+ .small {font-size:12px;line-height:20px}
+ .field-label {display:block;color:var(--ui-secondary);font-size:13px;font-weight:500;margin-bottom:8px}
+ h1,h2,h3,h4,strong {font-weight:500}
+ kbd {display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--ui-border);border-bottom-width:2px;border-radius:4px;background:var(--ui-ground);padding:0 4px;min-height:20px;font:11px/16px "Cascadia Mono",Consolas,monospace;color:var(--ui-muted);white-space:nowrap}
+ .ui-segments {position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:4px;padding:4px;background:var(--ui-raised);border:0;border-radius:10px;box-shadow:none}
+ .ui-segments>button {position:relative;z-index:1;min-height:28px;border:0;border-radius:6px;background:transparent;box-shadow:none;padding:4px 12px;font-size:13px;font-weight:400;color:var(--ui-secondary);white-space:nowrap}
+ .ui-segments>button:is([aria-selected=true],[aria-pressed=true]) {color:var(--ui-ink);background:transparent;font-weight:500}
+ .ui-segment-indicator {position:absolute;left:0;top:4px;bottom:4px;width:1px;height:auto;z-index:0;border:0;background:#fff;box-shadow:0 1px 3px #17191d12;border-radius:6px;transform-origin:left center;transition:transform 180ms var(--ui-ease);pointer-events:none}
+ .ui-segments>button:hover {color:var(--ui-ink)}
+ .ui-segments>button:focus-visible {outline-offset:1px}
+ ::-webkit-scrollbar {width:8px;height:8px}
+ ::-webkit-scrollbar-thumb {background:#c8cbd1;border:2px solid transparent;background-clip:padding-box;border-radius:8px}
+ ::-webkit-scrollbar-track {background:transparent}
+ .toast {background:#24262b;color:#fff;border:1px solid #24262b;box-shadow:var(--ui-shadow);border-radius:10px;font-size:13px;line-height:20px;max-width:min(560px,calc(100vw - 32px));padding:12px 16px}
+ .toast.error {background:#8a332c;border-color:#8a332c}
+ @media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+ }
+}

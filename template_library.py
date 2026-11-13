@@ -47,7 +47,7 @@ def curate_catalog(items):
    t['limitations']='排版预设不增加新的通路、分支或反馈。预览中的分子只是示例。'
    t['compatibility_only']=not t['id'].startswith('layout_')
   if t['id'] in DETAILS:t['usage'],t['includes'],t['limitations']=DETAILS[t['id']]
-  t['recommended']=t['id'] in RECOMMENDED;t['featured']=t['recommended']
+  t['recommended']=t['id'] in RECOMMENDED or bool(t.get('domain'));t['featured']=t['recommended']
   t['draft']=t['library_group']=='science' and not t['recommended']
   t['variant_of']=VARIANTS.get(t['id'],'');t['search_terms']=' '.join(t.get('includes',[]))
  for t in items:t['variants']=[x['id'] for x in items if x.get('variant_of')==t['id']]

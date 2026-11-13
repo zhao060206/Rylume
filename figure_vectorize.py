@@ -78,7 +78,7 @@ def local_text_observation(png: bytes) -> tuple[dict, list[str]]:
             objects.append({"id": f"ocr_text_{index}", "kind": "text", "label": label,
                             "x": x1/image.width, "y": y1/image.height,
                             "w": (x2-x1)/image.width, "h": (y2-y1)/image.height,
-                            "fill": _text_color(image, (x1, y1, x2, y2))})
+                            "fill": _text_color(image, (x1, y1, x2, y2)), "confidence": confidence})
         except (TypeError, ValueError, IndexError):
             continue
     warnings = [f"本机 OCR 跳过了 {low_confidence} 个低置信度文字区域，请对照原图补充。"] if low_confidence else []

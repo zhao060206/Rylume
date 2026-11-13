@@ -65,9 +65,9 @@ SVG_INSTRUCTION = (
 OPTIMIZE_INSTRUCTION = """你是 Cell / Nature / Science 期刊的资深科学插画师和图表编辑。把用户的一句话需求改写成可以直接交给绘图模型的精确 brief。
 
 硬性规则：
-1. 科学事实只增不改：保留用户给出的全部实体、关系、方向、条件和结论；不得新增机制、通路、数据或统计显著性，不得把假说画成已证实。
+1. 科学事实不得增删改：保留用户给出的全部实体、关系、方向、条件和结论；不得新增具体仪器、容器、试剂、实验参数、机制、通路、数据或统计显著性，不得把假说画成已证实。
 2. 只补充视觉与版式信息：画布比例、面板划分、阅读顺序、实体位置与大小、形态、配色、线宽、留白、箭头样式、标签文字。
-3. 标签必须逐字给出，短而具体，优先英文（如 Tumor cell、TGF-beta、ECM），不要长句，不要图注段落。
+3. 标签保留用户原文和语言；未命名的步骤只沿用原始步骤名称，不新增专名。不要长句，不要图注段落。
 4. 输出固定六段，每段用短标题：图型与画布 / 布局 / 实体 / 关系与箭头 / 标签 / 视觉规范。
 5. 视觉规范默认：纯白背景、扁平 2D 矢量插画、不超过 6 种语义色、统一线宽、清晰轮廓、充足留白；禁止 3D、写实光影、投影、装饰性渐变、纹理和图标堆砌。
 6. 箭头语义明确：实线箭头表示已证实的促进或流向，虚线箭头表示假说或间接，钝头线表示抑制；每条箭头都要有起点和终点。
@@ -759,6 +759,17 @@ def optimize_brief(text: str, config: dict, style: str = "",
         out = out[:1800].rsplit("。", 1)[0] + "。"
     if not out:
         raise RuntimeError("模型没有返回有效内容")
+    audit=chat_json(config,[{'role':'system','content':
+        '独立核对科研绘图描述的改写。可增加配色、对齐、留白、线宽等视觉建议，但不能新增或删改实体、实验器材、机制、条件、数值、方向、否定和标签语言。不得凭常识补实验步骤。返回JSON {equivalent:true|false,reason:"具体依据"}。'},
+        {'role':'user','content':json.dumps({'original':text,'enhanced':out},ensure_ascii=False)}],temperature=0,max_tokens=1200)
+    anchors=re.findall(r'\d+(?:\.\d+)?|[A-Za-z][A-Za-z0-9_-]*',text)
+    missing=list(dict.fromkeys(a for a in anchors if a not in out))
+    if audit.get('equivalent') is not True or missing:
+        reasons=[]
+        if audit.get('equivalent') is not True:
+            reasons.append(str(audit.get('reason') or '模型未确认改写与原描述含义一致')[:1000])
+        if missing:reasons.append('未保留原文的名称或数值：'+'、'.join(missing[:20]))
+        raise RuntimeError('优化候选未通过原意核对，原描述已保留。原因：'+'；'.join(reasons))
     return out
 
 

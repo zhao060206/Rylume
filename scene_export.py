@@ -12,9 +12,15 @@ from pathlib import Path
 from scene_document import normalize_scene
 
 
-def export_scene(scene, format, destination, *, dpi=300, config=None):
+def export_scene(scene, format, destination, *, dpi=300, config=None, text_mode='preserve'):
     from scene_render import render_scene
     scene = normalize_scene(copy.deepcopy(scene))
+    if text_mode not in ('preserve','editable'):raise ValueError('请选择保留字形或可编辑文字')
+    outline_count=sum(bool(o.get('text_appearance') and o.get('asset_snapshot')) for o in scene['objects'])
+    if text_mode=='editable':
+        for obj in scene['objects']:
+            if obj['type']=='text' and obj.get('text_appearance'):
+                for key in ('asset_id','asset_snapshot','text_appearance'):obj.pop(key,None)
     fmt = str(format).lower()
     if fmt not in ("svg", "png", "pdf", "pptx"):
         raise ValueError("不支持的导出格式")
@@ -24,9 +30,11 @@ def export_scene(scene, format, destination, *, dpi=300, config=None):
     destination = Path(destination).resolve()
     destination.parent.mkdir(parents=True, exist_ok=True)
     width_mm, height_mm = (scene["canvas"][key] for key in ("width_mm", "height_mm"))
-    svg = render_scene(scene).encode("utf-8")
+    svg = render_scene(scene, embed_scene=fmt=='svg').encode("utf-8")
     result = {"format": fmt, "path": str(destination), "revision": scene["revision"],
               "width_mm": width_mm, "height_mm": height_mm, "raster_objects": [], "warnings": []}
+    result.update(text_mode=text_mode,outline_labels=outline_count if text_mode=='preserve' else 0)
+    if text_mode=='editable' and outline_count:result['warnings'].append('识别文字已输出为可编辑文本，请核对 OCR、换行和字体；此模式不保证与原字形逐像素一致。')
     result['raster_objects'] = [o['label'] or o['id'] for o in scene['objects'] if o.get('illustration') and o['visible']]
     if result['raster_objects']:
         result['warnings'].append('插画对象可整体移动；其内部像素不是独立矢量形状。文字和连线保持可编辑。')
@@ -69,6 +77,10 @@ def export_scene(scene, format, destination, *, dpi=300, config=None):
                 native = ppt_native.build(source,Path(folder)/"native",font=scene["style"]["font_family"],preview=False)
                 if any("skipped" in x for x in native.get("warnings",[])):
                     raise ValueError("PPTX 包含无法转换的图元："+"；".join(native["warnings"]))
+                from ppt_connections import bind_scene_connections
+                result['bound_connections']=bind_scene_connections(native['pptx'],scene) if scene['relations'] else 0
+                if any(r.get('control') for r in scene['relations']):
+                    result['warnings'].append('自定义弯曲连线使用 PowerPoint 原生路由，控制点外观可能与 SVG 略有不同；端点保持对象绑定。')
                 shutil.copyfile(native["pptx"],temp)
                 result["warnings"].extend(native.get("warnings",[]))
                 result["objects"] = len(scene["objects"])

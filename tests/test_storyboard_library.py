@@ -79,7 +79,11 @@ def test_resize_keeps_author_edits_and_bound_topology():
     resized=apply_operations(edited,[dict(op='canvas',width_mm=90,height_mm=150,reflow=True)])
     obj=next(o for o in resized['objects'] if o['id']=='free')
     assert obj['label']=='Edited RNA' and obj['fill']=='#645289' and obj['x']==60
-    assert resized['requirements']==edited['requirements'] and resized['relations']==edited['relations']
+    assert resized['requirements']==edited['requirements']
+    geometry={'control','label_position'}
+    assert [{k:v for k,v in r.items() if k not in geometry} for r in resized['relations']]==[{k:v for k,v in r.items() if k not in geometry} for r in edited['relations']]
+    for old,new in zip(edited['relations'],resized['relations']):
+        if old.get('control'):assert new['control']=={'x':old['control']['x']*.5,'y':old['control']['y']*1.25}
     assert not audit_scene(resized)['errors']
 
 @pytest.mark.parametrize('tid',['sb_lnp_delivery','sb_antigen_synapse','sb_autophagy_flux'])

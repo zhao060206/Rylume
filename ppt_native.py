@@ -31,7 +31,7 @@ from pptx.oxml.shapes.autoshape import CT_Shape
 from pptx.oxml.shapes.groupshape import CT_GroupShape
 from pptx.oxml.ns import qn
 
-_DRAWING_TAGS={name:qn('a:'+name) for name in ('moveTo','lnTo','cubicBezTo','quadBezTo','close','pt')}
+_DRAWING_TAGS={name:qn('a:'+name) for name in ('moveTo','lnTo','cubicBezTo','quadBezTo','close','pt','solidFill','srgbClr','noFill','ln','prstDash','path')}
 
 
 class _NativeFreeform(FreeformBuilder):
@@ -258,8 +258,6 @@ class Builder:
 
     def _bezier_path(self, slide, path, node, m):
         """Preserve cubic/quadratic geometry instead of sampling into polygons."""
-        from pptx.oxml.xmlchemy import OxmlElement
-        from pptx.oxml.ns import qn
         if not path or any(type(s).__name__ not in ('Line','CubicBezier','QuadraticBezier') for s in path):
             return False
         contours=[]; points=[]
@@ -274,24 +272,36 @@ class Builder:
                 else:commands.append(('quadBezTo',[transform(seg.control),transform(seg.end)]))
             if sub.isclosed():commands.append(('close',[]))
             contours.append(commands)
-        left=min(p[0] for p in points);top=min(p[1] for p in points)
-        right=max(p[0] for p in points);bottom=max(p[1] for p in points)
-        builder=_freeform(slide.shapes,left,top,scale=1)
-        builder.add_line_segments([(right,top),(right,bottom),(left,bottom)],close=True)
-        shape=builder.convert_to_shape();_drop_style(shape)
-        path_list=shape._element.spPr.find(qn('a:custGeom')).find(qn('a:pathLst'))
-        for child in list(path_list):path_list.remove(child)
-        native=OxmlElement('a:path');native.set('w',str(max(1,int(shape.width))));native.set('h',str(max(1,int(shape.height))))
-        shape_left,shape_top=int(shape.left),int(shape.top)
+        left=round(min(p[0] for p in points));top=round(min(p[1] for p in points))
+        right=round(max(p[0] for p in points));bottom=round(max(p[1] for p in points))
+        # The SVG already supplies the geometry. Building a temporary rectangle
+        # and replacing its path creates several hundred XML/proxy operations
+        # per colour contour. Write the same native freeform once instead.
+        ident=slide.shapes._next_shape_id
+        element=CT_Shape.new_freeform_sp(ident,f'path {self.paths+1}',left,top,max(1,right-left),max(1,bottom-top))
+        element.remove(element.find(qn('p:style')))
+        properties=element.spPr
+        path_list=properties.find(qn('a:custGeom')).find(qn('a:pathLst'))
+        native=SubElement(path_list,_DRAWING_TAGS['path'],w=str(max(1,right-left)),h=str(max(1,bottom-top)))
         for commands in contours:
             for command,vertices in commands:
                 # All children inherit the DrawingML namespace already declared
                 # on native. Avoid rebuilding a namespace map for every point.
                 step=SubElement(native,_DRAWING_TAGS[command])
                 for x,y in vertices:
-                    SubElement(step,_DRAWING_TAGS['pt'],x=str(round(x)-shape_left),y=str(round(y)-shape_top))
-        path_list.append(native);shape.name=f'path {self.paths+1}'
-        self._paint(shape,node,_m_scale(m));self.paths+=1;self.shapes+=1
+                    SubElement(step,_DRAWING_TAGS['pt'],x=str(round(x)-left),y=str(round(y)-top))
+        color=self.fill_of(node)
+        if color is None:SubElement(properties,_DRAWING_TAGS['noFill'])
+        else:SubElement(SubElement(properties,_DRAWING_TAGS['solidFill']),_DRAWING_TAGS['srgbClr'],val=str(color))
+        stroke=_color(node.get('stroke'));width=_num(node.get('stroke-width'),0.0)*_m_scale(m)*self.sy
+        line=SubElement(properties,_DRAWING_TAGS['ln'])
+        if stroke is None or width<=0:SubElement(line,_DRAWING_TAGS['noFill'])
+        else:
+            line.set('w',str(int(width*EMU_PX)))
+            SubElement(SubElement(line,_DRAWING_TAGS['solidFill']),_DRAWING_TAGS['srgbClr'],val=str(stroke))
+            if node.get('stroke-dasharray'):SubElement(line,_DRAWING_TAGS['prstDash'],val='dash')
+        slide.shapes._spTree.insert_element_before(element,'p:extLst')
+        self.paths+=1;self.shapes+=1
         return True
 
     def _compound(self, slide, group, color, stroke, width, closed, marker=False):

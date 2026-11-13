@@ -65,7 +65,12 @@ def test_install_uninstall_and_portable_scene_roundtrip(tmp_path):
     from scene_render import render_scene
     from scene_document import normalize_scene
     from scene_export import export_scene
-    m,_=installed(tmp_path);template=m.templates()[0];scene=m.template_scene(template['id'])
+    m,_=installed(tmp_path)
+    assert not m.templates(), 'Quarantined legacy templates must not be recommended'
+    asset=next(iter(m.assets().values()))
+    from scene_document import empty_scene
+    scene=empty_scene();scene['objects']=[dict(id='imported',type='symbol',label=asset['label'],asset_id=asset['asset_id'],x=20,y=20,w=25,h=25)]
+    scene=normalize_scene(scene)
     assert scene['objects'] and all(o['asset_snapshot'] for o in scene['objects'])
     before=render_scene(scene);m.uninstall('chemistry');assert not m.assets()
     reopened=normalize_scene(json.loads(json.dumps(scene)));assert render_scene(reopened)==before

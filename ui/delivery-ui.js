@@ -42,7 +42,7 @@ export function setupDelivery({api,toast,flush,state,saveCopy,documentTitle,relo
   const models=document.getElementById('open-settings')||document.querySelector('header button[title]');
   const settingsMenu=document.getElementById('settings-menu-items');
   if(settingsMenu)settingsMenu.prepend(top);else if(models)models.before(top);else document.querySelector('header')?.append(top);
-  const assetOpen=el('button','button full secondary','下载其他学科素材与模板');document.getElementById('panel-assets')?.append(assetOpen);
+  const assetOpen=el('button','button full secondary','下载其他学科素材与模板');assetOpen.id='download-more-disciplines';document.getElementById('panel-assets')?.append(assetOpen);
   const templateOpen=el('button','text-button full','管理学科资源包');document.getElementById('panel-templates')?.append(templateOpen);
   let view='resources',focused='',timer=null,data=null,update=null,revisionSignature='',manualCheck=false,lastState='',renderedPacks='';
   const restart=setupRestartDialog({state,flush,saveCopy,documentTitle,async apply(){
@@ -62,6 +62,7 @@ export function setupDelivery({api,toast,flush,state,saveCopy,documentTitle,relo
       const count=el('span','pack-number',String(i+2).padStart(2,'0')),copy=el('div','pack-copy'),h=el('h3','',p.title);
       copy.append(h,el('p','muted small',p.description),el('p','pack-meta',`${p.available_asset_count??p.asset_count} 个可用素材 · ${p.available_template_count??p.template_count} 个可用模板 · ${byteSize(p.size)} · v${p.version}`));
       const action=packAction(p),buttons=el('div','pack-actions');
+      if(p.builtin_template_count){copy.append(el('p','pack-meta',`${p.builtin_template_count} 个学科流程模板已内置，可直接使用`));const builtinTemplates=el('button','button','内置模板');builtinTemplates.onclick=()=>{dialog.close();openTemplates(p.domain);};buttons.append(builtinTemplates);}
       if(action==='cancel'){
         const status=el('p','muted small',({queued:'等待下载',downloading:'正在下载',validating:'正在核对素材与模板',installing:'正在安装'})[p.task.state]);
         const progress=el('progress');progress.max=100;progress.value=p.task.progress||0;progress.setAttribute('aria-label',p.title+'下载进度');copy.append(progress,status);
@@ -93,7 +94,7 @@ export function setupDelivery({api,toast,flush,state,saveCopy,documentTitle,relo
   refresh.onclick=()=>perform('/api/resources/refresh',{});
   function renderUpdate(){
     if(!update)return;const s=update.state;versionTitle.textContent=`当前版本 ${update.current_version}`;
-    versionNote.textContent=s==='available'?`发现新版本 ${update.latest_version}`:s==='up_to_date'?'已是最新正式版本':s==='ready'?'新版已下载并通过校验':s==='installing'?'正在重启更新…':s==='cancelled'?'已取消下载，当前软件可继续使用':s==='failed'?'本次检查或下载未完成':s==='checking'?'正在检查 GitHub 最新版本…':s==='downloading'?`正在下载 ${update.latest_version}`:s==='validating'?'正在核对并解压安装包':'从 GitHub 检查最新正式版本';
+    versionNote.textContent=s==='available'?`发现新版本 ${update.latest_version}`:s==='up_to_date'?(update.latest_version&&update.latest_version!==update.current_version?`没有可用更新 · 最新正式版 ${update.latest_version}`:'当前没有可用更新'):s==='ready'?'新版已下载并通过校验':s==='installing'?'正在重启更新…':s==='cancelled'?'已取消下载，当前软件可继续使用':s==='failed'?'本次检查或下载未完成':s==='checking'?'正在检查 GitHub 最新版本…':s==='downloading'?`正在下载 ${update.latest_version}`:s==='validating'?'正在核对并解压安装包':'从 GitHub 检查最新正式版本';
     updateStatus.textContent=updateStatusText({...update,last_update_message:null});
     priorAttempt.hidden=!update.last_update_message;priorText.textContent=update.last_update_message||'';
     updateStatus.classList.toggle('delivery-error',s==='failed');updateProgress.hidden=!['downloading','validating','ready'].includes(s);updateProgress.value=update.progress||0;
@@ -104,7 +105,7 @@ export function setupDelivery({api,toast,flush,state,saveCopy,documentTitle,relo
     top.textContent=['available','downloading','validating','ready'].includes(s)?'发现新版本 · '+update.latest_version:'资源与更新';top.classList.toggle('has-update',['available','ready'].includes(s));
     document.querySelector('.settings-menu')?.classList.toggle('has-update',['available','ready'].includes(s));
     updateDock.render(update);
-    if(lastState!==s&&manualCheck&&s==='up_to_date')toast('当前已是最新版本');lastState=s;
+    if(lastState!==s&&manualCheck&&s==='up_to_date')toast('当前没有可用更新');lastState=s;
   }
   async function loadUpdate(){try{update=await api('/api/updates');renderUpdate();}catch(e){updateStatus.textContent=e.message;}}
   async function updateAction(path){try{update=await api(path,{});renderUpdate();schedule();}catch(e){toast(e.message,true);}}

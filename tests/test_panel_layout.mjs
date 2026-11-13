@@ -24,6 +24,9 @@ preserveCanvasView(editor,()=>{
 assert.deepEqual(contentCenter(),nestedBefore,'Nested chrome changes preserve the same world-space center');
 const empty={host:{clientWidth:800,clientHeight:600},scene:null};
 let changed=false;preserveCanvasView(empty,()=>changed=true);assert.equal(changed,true);
+let fits=0;const fitted={scene:{},fitMode:true,host:{clientWidth:800,clientHeight:600},offset:{x:0,y:0},fit(){fits++;},position(){throw Error('A fitted document must refit');}};
+preserveCanvasView(fitted,()=>{fitted.host.clientWidth-=260;});
+assert.equal(fits,1);assert.equal(fitted.fitMode,true,'Fit-to-window remains active when opening properties');
 
 const classes=new Set(['left-collapsed','properties-hidden']);
 const workspace={classList:{contains:x=>classes.has(x)}};

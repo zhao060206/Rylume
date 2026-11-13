@@ -118,14 +118,17 @@ def validate_candidate_operations(scene,notes,operations,*,image_authorizations=
     if not isinstance(operations,list) or not operations or len(operations)>1000:raise SceneError('AI 没有提供可应用的修改')
     scopes={n['id']:set(resolve_note_targets(scene,n)) for n in notes};allowed=set().union(*scopes.values())
     objects={o['id']:o for o in scene['objects']};rels={r['id']:r for r in scene['relations']}
+    # Only server-authorized image replacement can relocate its own part anchors.
+    derived={o['id'] for o in objects.values() if o.get('depiction')=='anchor' and o.get('parent_id') in (image_authorizations or {}) and not o['locked']}
     connected={r['id'] for r in rels.values() if r['source'] in allowed or r['target'] in allowed}
     for op in operations:
         if not isinstance(op,dict) or op.get('op') not in ('update','update_relation'):raise SceneError('此候选包含暂不支持的新增或删除操作，请手动调整结构后重新批注')
         oid=op.get('id');changes=op.get('changes')
         if not isinstance(changes,dict) or not changes:raise SceneError('修改属性不能为空')
         if op['op']=='update':
-            if oid not in objects or oid not in allowed or objects[oid]['locked']:raise SceneError('AI 修改超出了批注范围或涉及锁定对象')
+            if oid not in objects or oid not in allowed|derived or objects[oid]['locked']:raise SceneError('AI 修改超出了批注范围或涉及锁定对象')
             permitted=VISUAL|{'label','state','type','compartment'}
+            if oid in derived and oid not in allowed:permitted={'x','y'}
             if 'illustration' in changes:
                 from figure_assets import validate_illustration
                 asset=changes['illustration']
@@ -141,7 +144,7 @@ def validate_candidate_operations(scene,notes,operations,*,image_authorizations=
         text='\n'.join(n['instruction'] for n in notes if oid in scopes[n['id']])
         for key in changes:
             if key in ('label','state','type','compartment','indirect','uncertain') and not _explicit(text,key):raise SceneError('候选改变了未明确要求的内容：'+key)
-    proposed=apply_operations(scene,operations,allowed_ids=allowed|connected)
+    proposed=apply_operations(scene,operations,allowed_ids=allowed|connected|derived)
     before={(f['code'],tuple(f['object_ids'])) for f in audit_scene(scene)['findings']}
     errors=[f for f in audit_scene(proposed)['findings'] if f['severity']=='error' and (f['code'],tuple(f['object_ids'])) not in before]
     if errors:raise SceneError('候选增加了结构错误：'+errors[0]['message'])
@@ -228,7 +231,9 @@ def _planning_context(scene,notes,scopes,capabilities,feedback):
 
 def _review_error(exc):
     if _context_overflow(exc):return '核验内容超过模型容量；已尝试缩小预览。请缩小批注范围或更换可用模型，然后重新核验。'
-    if isinstance(exc,SceneError):return str(exc)[:500]
+    if isinstance(exc,SceneError):
+        from app_server import _friendly_error
+        return _friendly_error(exc)
     return '核验服务暂时不可用。请检查模型设置或网络，然后重新核验；已有候选和原图均保留。'
 
 
@@ -322,7 +327,9 @@ def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max
                         asset=redraw.redraw_object(original,request,config,cancelled=cancelled or (lambda:False))
                         image_cache[identity]=(asset,copy.deepcopy(request))
                     except InterruptedError:raise
-                    except Exception as exc:failed_images[identity]=str(exc)[:600]
+                    except Exception as exc:
+                        from app_server import _friendly_error
+                        failed_images[identity]=_friendly_error(exc)
                 if identity in failed_images:
                     image_errors.append(failed_images[identity]);continue
                 asset,first_request=image_cache[identity]
@@ -333,10 +340,21 @@ def propose_annotations(scene,notes,config,*,on_progress=None,cancelled=None,max
                 records.append(record);operations.append(dict(op='update',id=identity,changes={'illustration':copy.deepcopy(asset)}))
             auth=redraw.authorizations(original,notes,scopes,records)
             proposed=validate_candidate_operations(original,notes,operations,image_authorizations=auth) if operations else copy.deepcopy(original)
+            if records:
+                from scene_presentation import locate_callouts
+                located=copy.deepcopy(proposed)
+                locate_callouts(located,{**config,'redraw_ids':list(auth)})
+                current={o['id']:o for o in proposed['objects']}
+                for obj in located['objects']:
+                    if obj.get('depiction')=='anchor' and obj.get('parent_id') in auth:
+                        changes={k:obj[k] for k in ('x','y') if obj[k]!=current[obj['id']][k]}
+                        if changes:operations.append(dict(op='update',id=obj['id'],changes=changes))
+                proposed=validate_candidate_operations(original,notes,operations,image_authorizations=auth)
             if not _changed(original,proposed):raise SceneError('候选没有实际改变图版')
         except InterruptedError:raise
         except Exception as exc:
-            attempts.append(dict(round=round_no,stage='planning',error=_review_error(exc) if _context_overflow(exc) else str(exc)[:1000]));feedback=[{'error':attempts[-1]['error']}]
+            from app_server import _friendly_error
+            attempts.append(dict(round=round_no,stage='planning',error=_review_error(exc) if _context_overflow(exc) else _friendly_error(exc)));feedback=[{'error':attempts[-1]['error']}]
             if _context_overflow(exc) or isinstance(exc,SceneError) and '内容太多' in str(exc):break
             continue
         progress('verifying',f'第 {round_no}/{max_rounds} 轮：独立核对逐条要求',round_no)

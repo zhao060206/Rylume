@@ -1,4 +1,9 @@
 /** Plain-language layout advice with local, undoable preview candidates. */
+export function reviewCounts(a){
+  const local=(a?.findings||[]).filter(f=>f.status!=='acknowledged').length;
+  const visual=(a?.vision?.findings||[]).filter(f=>f.status!=='dismissed').length;
+  return {local,visual,total:local+visual};
+}
 export function findingPresentation(f,scene){
   const objects=scene?.objects||[],relations=scene?.relations||[];
   const names=(f.object_ids||[]).map(id=>objects.find(o=>o.id===id)?.label||relations.find(r=>r.id===id)?.label||'相关对象');
@@ -7,6 +12,9 @@ export function findingPresentation(f,scene){
     'label-overlap':['两处文字靠得太近',`${pair}的文字范围有重叠。可以只移动文字，保留图形和连线。`,'layout',true],
     'label-object-overlap':['文字挡住了图形',`${pair}之间可能有遮挡。预览会尝试只挪开相关文字。`,'layout',true],
     'label-outside':['文字超出了纸张',`${pair}的部分文字可能在导出时被裁掉。`,'layout',true],
+    'line-label-overlap':['连线穿过了文字',`${pair}发生交叉。可预览绕开文字的路径，或手动拖动连线中点。`,'layout',true],
+    'label-detached':['文字离所属图形太远',`${pair}的文字位置可能让读者误认归属。预览可将文字放回附近。`,'layout',true],
+    'containment':['对象离开了所属结构',`${pair}的包含位置不一致。请核对后拖回内部或边界。`,'content',false],
     'outside-canvas':['图形超出了纸张',`${pair}有一部分位于纸张外。可以预览移回纸张后的效果。`,'layout',true],
     'empty-label':['这个对象还没有名称',`${pair}尚未填写文字。如果这是装饰元素，可以保留为空。`,'layout',false],
     'overlap':['两个图形有较多重叠',`${pair}的重叠可能是有意的结合状态。请先看一下，需要时再拖开。`,'layout',false],
@@ -48,16 +56,19 @@ export function setupReview({state,editor,api,flush,toast,showRight,showLayers})
     const candidate=pending;pending=null;$('fix-preview-dialog').close();editor.applyOperations(candidate.operations,'应用局部排版建议');toast('已应用局部调整。点“撤销”可以恢复。');
   };
   async function decision(f,restore=false){
-    try{if(!await flush())return;const result=await api(`/api/jobs/${state.id}/layout-decision`,{base_revision:state.revision,code:f.code,object_ids:f.object_ids,restore});state.audit=result.audit;render();const n=result.audit.findings.filter(f=>f.status!=='acknowledged').length;$('open-audit').textContent=n?`排版与内容建议 · ${n}`:'查看排版建议';toast(restore?'已恢复这条提示':'已记住这个排版选择。相关对象发生变化时会重新检查。');}catch(e){toast(e.message,true);}
+    try{if(!await flush())return;const result=await api(`/api/jobs/${state.id}/layout-decision`,{base_revision:state.revision,code:f.code,object_ids:f.object_ids,restore});state.audit=result.audit;render();const n=reviewCounts(result.audit).total;$('open-audit').textContent=n?`排版与内容建议 · ${n}`:'查看排版建议';toast(restore?'已恢复这条提示':'已记住这个排版选择。相关对象发生变化时会重新检查。');}catch(e){toast(e.message,true);}
   }
   function render(){
     const parent=$('inspector-review');parent.replaceChildren();const a=state.audit;
     if(!a){parent.append(el('p','muted','打开可编辑图版后，这里会给出可处理的排版建议。'));return;}
     const findings=(a.findings||[]).filter(f=>f.status!=='acknowledged'),parts=findings.map(f=>({f,...findingPresentation(f,editor.scene),...(f.severity==='error'?{section:'output'}:{})}));
-    parent.append(el('div','review-status',parts.length?'有 '+parts.length+' 处值得看一眼':'当前排版没有发现需要处理的问题'));
+    const vision=a.vision||{},visualFindings=(vision.findings||[]).filter(f=>f.status!=='dismissed');
+    parent.append(el('div','review-status',parts.length||visualFindings.length
+      ?`本机检查 ${parts.length} 条建议 · 图像核对 ${visualFindings.length} 条意见待确认`
+      :vision.status==='unavailable'?'本机检查暂无建议，图像核对未完成':'本机检查暂无建议'));
     parent.append(el('p','review-intro','点「在图上查看」就能找到位置。调整前可以预览，改错后可以撤销。科学内容仍需由你核对。'));
     if(state.pending.length||state.saving)parent.append(el('p','review-updating','正在保存；下列建议对应上一次保存的图版。'));
-    if(!parts.length)parent.append(el('div','review-clear','当前没有待处理的建议。科学机制仍请对照研究资料核对。'));
+    if(!parts.length&&!visualFindings.length)parent.append(el('div','review-clear','本机结构与排版检查没有待处理的建议。科学机制仍请对照研究资料核对。'));
     for(const [section,title] of [['output','可能影响输出'],['layout','排版建议'],['content','科学内容待核对']]){
       const list=parts.filter(p=>p.section===section);if(!list.length)continue;
       const group=el('section','review-group');group.append(el('h3','',`${title} · ${list.length}`));
@@ -68,11 +79,13 @@ export function setupReview({state,editor,api,flush,toast,showRight,showLayers})
         else if(p.f.code==='empty-label'){const b=el('button','button','填写名称');b.onclick=()=>{locate(p.f);editor.ensureSelectionVisible();editor.editSelectedLabel();};actions.append(b);}
         else if(p.f.code==='uncertain-relation'){const b=el('button','button','设置连线含义');b.onclick=()=>{locate(p.f);showRight('properties',false);};actions.append(b);}
         else if(['hidden-endpoint','required-object'].includes(p.f.code)){const b=el('button','button','查看图层');b.onclick=showLayers;actions.append(b);}
-        if(p.f.severity!=='error'&&['overlap','label-overlap','label-object-overlap','empty-label'].includes(p.f.code)){const keep=el('button','text-button','保留当前排版');keep.onclick=()=>decision(p.f);actions.append(keep);}
+        if(p.f.severity!=='error'&&['overlap','label-overlap','label-object-overlap','label-detached','line-label-overlap','empty-label'].includes(p.f.code)){const keep=el('button','text-button','保留当前排版');keep.onclick=()=>decision(p.f);actions.append(keep);}
         card.append(actions);group.append(card);
       }parent.append(group);
     }
-    const vision=a.vision||{},details=el('details','review-advanced');details.append(el('summary','','更多：视觉建议与检查记录'));
+    const details=el('details','review-advanced');details.append(el('summary','','更多：视觉建议与检查记录'));
+    if(visualFindings.length){const group=el('section','review-group');group.append(el('h3','','模型发现的需求与画面问题'));for(const f of visualFindings){const card=el('article','advice-card');card.append(el('p','',f.message),el('span','review-source','图像核对 · 待作者确认'));group.append(card);}parent.append(group);}
+    else if(vision.status==='unavailable')parent.append(el('p','review-updating','图像核对未完成：'+(vision.error||'模型暂不可用')+'。当前仅有本机几何检查结果。'));
     details.append(el('p','muted small','视觉模型可补充美观和语义建议，需要联网调用已配置的服务。它的意见不会自动修改图版。'));
     const visionButton=el('button','button',vision.status==='running'?'视觉建议获取中…':'获取视觉建议');visionButton.disabled=vision.status==='running';visionButton.onclick=()=>$('vision-review').click();details.append(visionButton);
     for(const f of (vision.findings||[]).filter(f=>f.status!=='dismissed'))details.append(el('p','finding',f.message));

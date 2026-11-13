@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {rankAssets,assetMatch,editDistance} from '../ui/asset-search.js';
+import {rankAssets,assetMatch,editDistance,assetKey,migrateAssetPreferences} from '../ui/asset-search.js';
 
 const assets=[
  {asset_id:'m1',type:'mitochondrion',label:'线粒体剖面',category:'细胞器',keywords:'mitochondrion mitochondria organelle'},
@@ -15,6 +15,10 @@ const assets=[
  {asset_id:'il8',type:'protein',label:'IL-8'},
  {asset_id:'chem',type:'process',label:'受体化合物',domain:'chemistry',keywords:'receptor'},
 ];
+const native=[{type:'cell',label:'完整细胞'},{type:'cell',state:'plant_interphase',label:'植物细胞'}];
+assert.notEqual(assetKey(native[0]),assetKey(native[1]));
+assert.deepEqual(rankAssets(native,{view:'favorites',favorites:[assetKey(native[1])]}),[native[1]],'Saving a plant cell must not save a different cell');
+assert.deepEqual(migrateAssetPreferences(['cell','m1'],native),[assetKey(native[0]),'m1'],'Legacy type favorites map to the original default only; unloaded assets remain retained');
 const ids=(query,options={})=>rankAssets(assets,{query,...options}).map(a=>a.asset_id);
 assert.equal(ids('线粒体')[0],'m1');assert.equal(ids('mitochondria')[0],'m1');
 assert.equal(ids('xianliti')[0],'m1');assert.equal(ids('xlt')[0],'m1');

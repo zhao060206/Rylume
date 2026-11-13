@@ -15,6 +15,7 @@ from scientific_library import library, glyph
 def test_every_vendored_asset_is_offline_flat_vector_and_has_provenance():
     assert len(library()) >= 60
     for aid,asset in library().items():
+        if asset.get('_file'):continue  # installed/personal packs have their own SVG boundary tests
         assert asset['author'] and asset['license_url'] and asset['source_url'] and asset['sha256']
         root=ET.fromstring('<svg>'+glyph(aid)+'</svg>')
         assert all(n.tag.split('}')[-1] in ('svg','g','path') for n in root.iter())
@@ -28,7 +29,8 @@ def test_templates_preserve_science_and_fit_both_physical_sizes(template):
         source=make_example(template['example'],width_mm=width,height_mm=height)
         scene=apply_template(source,template['id'])
         assert [(o['id'],o['label'],o['entity_id'],o['state']) for o in source['objects']]==[(o['id'],o['label'],o['entity_id'],o['state']) for o in scene['objects']]
-        assert source['relations']==scene['relations']
+        geometry={'control','source_port','target_port','source_anchor','target_anchor','label_position'}
+        assert [{k:v for k,v in r.items() if k not in geometry} for r in source['relations']]==[{k:v for k,v in r.items() if k not in geometry} for r in scene['relations']], 'A layout may reroute connections, but never change their scientific meaning'
         assert scene['requirements']==source['requirements']
         assert not audit_scene(scene)['errors']
         assert all(o['font_size_pt']>=7 for o in scene['objects'])

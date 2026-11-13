@@ -6,7 +6,7 @@ export const normalizeWorkspaceMode = value => value === 'professional' ? value 
 export function defaultModeLayout(mode, width = 1280) {
   return normalizeWorkspaceMode(mode) === 'professional'
     ? {tab:'layers', inspector:'properties', leftCollapsed:width < 1100, propertiesHidden:false}
-    : {tab:'assets', inspector:'properties', leftCollapsed:true, propertiesHidden:false};
+    : {tab:'assets', inspector:'properties', leftCollapsed:true, propertiesHidden:true};
 }
 
 export function responsiveModeLayout(layout, width) {
@@ -34,7 +34,7 @@ export function setupWorkspaceModes({editor, state, tab, showRight, refresh}) {
   const $=id=>document.getElementById(id), root=document.documentElement, ws=$('workspace');
   let initial='simple';try{initial=normalizeWorkspaceMode(localStorage.getItem(MODE_KEY));}catch{}
   const layouts={simple:defaultModeLayout('simple'),professional:defaultModeLayout('professional',innerWidth)};
-  let mode=initial, applying=false, transition=null, animation=null, readyDocument=null, deferredLayout=false;
+  let mode=initial, applying=false, animation=null, readyDocument=null, deferredLayout=false;
   const buttons=[...document.querySelectorAll('.workspace-mode-switch [data-workspace-mode]')];
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const actionNodes=[$('duplicate'),$('delete'),document.querySelector('.selection-more')];
@@ -46,7 +46,7 @@ export function setupWorkspaceModes({editor, state, tab, showRight, refresh}) {
     const target=inlineActions;
     if(actionNodes[0].parentElement!==target)target.append(...actionNodes);
   }
-  const selectedTab=()=>document.querySelector('.rail [data-tab].active')?.dataset.tab||'assets';
+  const selectedTab=()=>document.querySelector('[data-tab].active')?.dataset.tab||'assets';
   function remember(){
     placeActions();
     if(deferredLayout&&!applying&&!ws.classList.contains('annotations-open')){
@@ -60,8 +60,8 @@ export function setupWorkspaceModes({editor, state, tab, showRight, refresh}) {
   function controls(){
     root.dataset.workspaceMode=mode;
     for(const b of buttons)b.setAttribute('aria-pressed',String(b.dataset.workspaceMode===mode));
-    const summary=document.querySelector('.workbench-more>summary');summary.textContent=mode==='simple'?'更多':'帮助';
-    summary.setAttribute('aria-label',mode==='simple'?'更多绘图工具':'帮助与操作说明');
+    const summary=document.querySelector('.workbench-more>summary');summary.textContent='···';
+    summary.setAttribute('aria-label','图版菜单');
     placeActions();
     document.querySelector('.toolbar').setAttribute('aria-label',mode==='simple'?'常用绘图工具':'专业绘图工具');
   }
@@ -88,31 +88,22 @@ export function setupWorkspaceModes({editor, state, tab, showRight, refresh}) {
     // Commit an active text field just as a normal click outside the field would.
     if(document.activeElement?.matches('.editor-inline-input,#quick-label,.property-grid input'))document.activeElement.blur();
     if(reduced.matches){commit(next);return;}
-    if(typeof document.startViewTransition==='function'){
-      let watchdog;
-      try{
-        root.dataset.modeMotion='snapshot';
-        transition=document.startViewTransition(()=>commit(next));
-        watchdog=setTimeout(()=>transition?.skipTransition(),1000);
-        await transition.finished;
-      }catch{if(mode!==next)commit(next);}
-      finally{clearTimeout(watchdog);transition=null;delete root.dataset.modeMotion;}
-    }else{
-      commit(next);
-      const surface=!ws.classList.contains('properties-hidden')?$('properties'):document.querySelector('.toolbar');
-      animation=surface.animate?.([{opacity:.35,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:320,easing:'cubic-bezier(.22,1,.36,1)'});
-      try{await animation?.finished;}catch{}finally{animation=null;}
-    }
+    // Only animate the changed chrome. Full-page snapshots copy large imported
+    // SVGs and can stall the canvas while switching an otherwise small panel.
+    commit(next);
+    const surface=!ws.classList.contains('properties-hidden')?$('properties'):document.querySelector('.toolbar');
+    animation=surface.animate?.([{opacity:.72,transform:'translateX(4px)'},{opacity:1,transform:'translateX(0)'}],{duration:180,easing:'cubic-bezier(.22,1,.36,1)'});
+    try{await animation?.finished;}catch(error){if(error?.name!=='AbortError')throw error;}finally{animation=null;}
   }
   const queue=modeRequestQueue(initial,change);
-  for(const b of buttons)b.onclick=()=>{transition?.skipTransition();animation?.finish();queue.request(b.dataset.workspaceMode);};
+  for(const b of buttons)b.onclick=()=>{animation?.finish();queue.request(b.dataset.workspaceMode);};
   document.querySelector('.workspace-mode-switch').addEventListener('keydown',e=>{
     e.stopPropagation();
     if(e.key==='ArrowLeft'||e.key==='ArrowRight'){
       e.preventDefault();const b=buttons[e.key==='ArrowRight'?1:0];b.focus();b.click();
     }
   });
-  reduced.addEventListener('change',()=>{if(reduced.matches){transition?.skipTransition();animation?.finish();}});
+  reduced.addEventListener('change',()=>{if(reduced.matches)animation?.finish();});
   document.querySelectorAll('[data-panel-command]').forEach(b=>b.onclick=()=>tab(b.dataset.panelCommand));
   // One template gallery, instead of a second sidebar containing gallery launchers.
   document.querySelector('.rail [data-tab=templates]').onclick=()=> $('open-gallery').click();
@@ -122,7 +113,7 @@ export function setupWorkspaceModes({editor, state, tab, showRight, refresh}) {
   // Duplicate menus remain wired for compatibility but no longer add visible choices.
   for(const id of ['open-audit','process-edit','process-check'])$(id).classList.add('consolidated-command');
   document.querySelector('[data-command=show-shortcuts]').classList.add('consolidated-command');
-  document.querySelectorAll('.tool-cluster').forEach((n,i)=>n.setAttribute('aria-label',i?'绘制':'撤销与恢复'));
+  document.querySelectorAll('.tool-cluster').forEach(n=>n.setAttribute('aria-label','绘制'));
   $('open-start').addEventListener('click',remember);
   $('return-to-document').addEventListener('click',()=>{applying=true;try{preserveCanvasView(editor,()=>{layout();refresh();});}finally{applying=false;}});
   new MutationObserver(remember).observe(ws,{attributes:true,attributeFilter:['class']});

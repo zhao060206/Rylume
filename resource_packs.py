@@ -26,13 +26,13 @@ META_KEYS=('asset_id','label','label_zh','label_en','author','author_url','licen
 _current=None;_guard=threading.RLock()
 
 @lru_cache(maxsize=512)
-def safe_svg(text):
-    if not isinstance(text,str) or len(text.encode('utf8'))>256*1024 or re.search(r'<!|<\?',text):
+def safe_svg(text, *, imported=False):
+    if not isinstance(text,str) or len(text.encode('utf8'))>(2*1024*1024 if imported else 256*1024) or re.search(r'<!|<\?',text):
         raise DeliveryError('素材 SVG 大小或格式不合法')
     try:root=ET.fromstring(text)
     except ET.ParseError:raise DeliveryError('素材 SVG 无法解析') from None
     nodes=list(root.iter())
-    if len(nodes)>2500 or root.tag.split('}')[-1]!='svg':raise DeliveryError('素材 SVG 结构无效')
+    if len(nodes)>(10000 if imported else 2500) or root.tag.split('}')[-1]!='svg':raise DeliveryError('素材 SVG 结构无效')
     try:
         box=[float(x) for x in root.get('viewBox','').split()]
         if len(box)!=4 or not all(__import__('math').isfinite(x) for x in box) or not all(0<x<=10000 for x in box[2:]):raise ValueError()
@@ -51,7 +51,7 @@ def snapshot(value,asset_id):
     if not isinstance(value,dict) or not isinstance(value.get('meta'),dict):raise DeliveryError('素材快照无效')
     meta={k:str(value['meta'].get(k,''))[:1000] for k in META_KEYS}
     if meta['asset_id']!=asset_id:raise DeliveryError('素材快照身份不匹配')
-    return {'svg':safe_svg(value.get('svg')),'meta':meta}
+    return {'svg':safe_svg(value.get('svg'),imported=asset_id.startswith('import_') and meta['source_kind']=='user-import'),'meta':meta}
 
 def _write(path,value):
     path.parent.mkdir(parents=True,exist_ok=True);tmp=path.with_name(path.name+'.tmp-'+uuid.uuid4().hex)
@@ -166,6 +166,8 @@ class ResourceManager:
                     'compatible':version_tuple(PRODUCT_VERSION)>=version_tuple(p.get('min_app_version','3.1.0')),
                     'task':copy.deepcopy(self.tasks.get(p['id']))}
                 row['update_available']=bool(old and version_tuple(p['version'])>version_tuple(old['version']))
+                from discipline_workflows import counts
+                row['builtin_template_count']=counts().get(p['domain'],0)
                 packs.append(row)
             return {'ok':True,'packs':packs,'refreshing':self.refreshing,'error':self.error,'biology_builtin':True}
     def refresh(self):
@@ -274,6 +276,7 @@ class ResourceManager:
             for pid,p in self.installed().items():
                 folder=self.root/'packs'/pid/p['version'];manifest=self._json(folder/'manifest.json',{})
                 for t in manifest.get('templates',[]):
+                    if t.get('catalog_status') not in ('source-matched','reviewed'):continue
                     result.append({**t,'_file':str(self.file_path(folder,t['file'])),'pack_id':pid,'domain':p['domain'],
                         'category':p['title'],'library_group':'science','recommended':True,'draft':False,'family':t.get('family','network'),
                         'new_scene_only':True,'example':t['id'],'includes':t.get('includes',[]),'usage':t.get('description',''),

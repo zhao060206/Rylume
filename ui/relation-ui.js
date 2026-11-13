@@ -50,7 +50,7 @@ export function setupRelations(editor,{flush=async()=>true,getDocumentId=()=>edi
   dialog.append(header,intro,relationChoices(editor),notes,option,legend);document.body.append(dialog);
   picker.onclick=()=>{const rs=editor.scene?.relations.filter(r=>editor.selectedIds.includes(r.id))||[];intro.textContent=rs.length?`选中了 ${rs.length} 条连线，点选类型即可修改。`:'先选这条线的含义，再依次点击图中的起点和终点。';check.checked=!!editor.scene?.style.relation_labels;check.disabled=!editor.scene;legend.disabled=!editor.scene;dialog.showModal();};
   const pendingButton=document.createElement('button');pendingButton.type='button';pendingButton.className='pending-relations';pendingButton.id='pending-relation-definitions';pendingButton.hidden=true;
-  document.querySelector('.topbar').insertBefore(pendingButton,$('toggle-documents'));
+  document.querySelector('.topbar').insertBefore(pendingButton,document.querySelector('.document-bar-actions'));
   const definitions=document.createElement('dialog');definitions.className='relation-definitions';definitions.setAttribute('aria-labelledby','relation-definitions-title');
   const definitionHead=document.createElement('div');definitionHead.className='dialog-heading';
   const definitionTitle=document.createElement('h2');definitionTitle.id='relation-definitions-title';definitionTitle.textContent='核对连线含义';

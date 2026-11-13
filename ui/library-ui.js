@@ -1,5 +1,5 @@
 import {showFloatingWindow} from './floating-windows.js';
-import {rankAssets,assetMatch,assetDisplayName,assetStyle,assetKey} from './asset-search.js';
+import {rankAssets,assetMatch,assetDisplayName,assetStyle,assetKey,migrateAssetPreferences} from './asset-search.js';
 /** Thumbnail-first, offline scientific library and composition gallery. */
 export function filterAssets(assets,{domain='biology',category='',query=''}={}){
   return rankAssets(assets,{domain,category,query});
@@ -30,7 +30,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   async function insert(item,position){
     if(!state.id||!state.revision){if(!creatingDocument)creatingDocument=blank().finally(()=>creatingDocument=null);await creatingDocument;}
     if(!state.revision)return;
-    const documentId=state.id,key=item.asset_id||item.type;
+    const documentId=state.id,key=assetKey(item);
     if(!editor.artwork.has(key)){
       try{
         const {sanitizedSvg}=await import('./canvas-editor.js');
@@ -52,7 +52,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
     $('asset-detail-image').src=item.thumbnail;
     const credits=$('asset-detail-credit');
     credits.replaceChildren();
-    credits.append(el('p','',`${item.author||'理象原创图元'} · ${item.license||'CC BY 3.0'}`));
+    credits.append(el('p','',`${item.author||t('理象基础图元','Rylume basic shape')} · ${item.asset_id?(item.license||''):t('原生矢量','Native vector')}`));
     if(item.source_url){
       const a=el('a','source-link',t('查看原始素材与许可 ↗','View original artwork and licence ↗'));
       a.href=item.source_url;a.target='_blank';a.rel='noreferrer';
@@ -69,6 +69,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   }
 
   function renderAssets(){
+    favorites=migrateAssetPreferences(favorites,state.assets);recent=migrateAssetPreferences(recent,state.assets);
     const list=$('asset-list');
     const q=($('asset-search')?.value||'').trim().toLowerCase();
     const category=assetCategory || ($('asset-category')?.value || '');
@@ -218,6 +219,9 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
 
   function localizeAssets(){
     $('asset-library-title').textContent=t('素材库','Asset library');
+    $('asset-library-dialog').lang=assetLocale==='en'?'en':'zh-CN';
+    $('asset-library-dialog').dispatchEvent(new Event('floating-language-change'));
+    if($('download-more-disciplines'))$('download-more-disciplines').textContent=t('下载其他学科素材与模板','Download other disciplines and templates');
     $('panel-assets').querySelector(':scope > p.muted').textContent=t('点击素材放到图上；拖动可移动，双击文字可改字。','Click an asset to insert it. Drag to move; double-click its label to edit.');
     for(const[id,zh,en]of [['asset-domain','学科','Discipline'],['asset-category','分类','Category']]){document.querySelector(`label[for="${id}"]`).textContent=t(zh,en);$(id).setAttribute('aria-label',t(zh,en));}
     $('asset-search').placeholder=t('搜索名称或近似词，例如：线粒体','Search names or approximate terms, e.g. mitochondrion');
@@ -414,7 +418,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   }
 
   function selectDomain(pid){assetDomain=pid;assetCategory='';assetLimit=60;$('asset-domain').value=pid;renderAssetChips();renderAssets();}
-  function openPackTemplates(pid){group='science';filter=state.assetDomains.find(d=>d.id===pid)?.title||'';structure='';for(const b of $('template-groups').children){b.classList.toggle('active',b.textContent==='机制示意');b.setAttribute('aria-pressed',String(b.textContent==='机制示意'));}for(const b of $('gallery-filters').querySelectorAll('button')){if(b.textContent===filter||b.textContent==='全部主题'){b.classList.toggle('active',b.textContent===filter);b.setAttribute('aria-pressed',String(b.textContent===filter));}}openGallery();}
+  function openPackTemplates(pid){group=state.templates.some(t=>t.domain===pid)?'workflow':'science';const domain=state.assetDomains.find(d=>d.id===pid);filter=domain?.title||domain?.label||'';structure='';for(const b of $('template-groups').children){const active=b.dataset.group===group||b.textContent===(group==='workflow'?'实验流程':'机制示意');b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));}openGallery();}
   return {init,renderReferences,renderAssets,renderTemplates,openGallery,showTemplate,insert,selectDomain,openPackTemplates,applyTemplate:preview};
 }
 

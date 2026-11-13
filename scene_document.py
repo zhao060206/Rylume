@@ -13,7 +13,7 @@ import re
 import threading
 from pathlib import Path
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 PT_MM = 25.4 / 72
 OBJECT_TYPES = {
     "ligand", "receptor", "receptor_dimer", "gpcr", "kinase", "protein", "tf",
@@ -89,10 +89,11 @@ def empty_scene(title="未命名图版", source_text="", width_mm=180, height_mm
 
 def normalize_scene(value):
     """Validate untrusted model/editor input and return a detached document."""
-    if not isinstance(value, dict) or value.get("schema_version") != SCHEMA_VERSION:
-        raise SceneError("需要 schema_version=2 的场景文档")
+    if not isinstance(value, dict) or value.get("schema_version") not in (2, SCHEMA_VERSION):
+        raise SceneError("需要 schema_version=2 或 3 的场景文档")
     scene = empty_scene()
     scene.update({k: copy.deepcopy(v) for k, v in value.items() if k in scene})
+    scene['schema_version'] = SCHEMA_VERSION
     scene["id"] = _id(scene["id"])
     scene["revision"] = int(_number(scene["revision"], "revision", 1, 10**9))
     scene["title"] = _text(scene["title"], 180)
@@ -176,6 +177,30 @@ def normalize_scene(value):
                "evidence": _text(o.get("evidence", ""), 1000)}
         if o.get('visual_description'):
             out['visual_description']=_text(o['visual_description'],1000)
+        if o.get('depiction')=='anchor':out['depiction']='anchor'
+        for key in ('display_name', 'source_role'):
+            if o.get(key): out[key] = _text(o[key], 240)
+        if o.get('edit_status'):
+            if o['edit_status'] not in ('verified', 'needs_review', 'outline'):
+                raise SceneError('对象核对状态无效')
+            out['edit_status'] = o['edit_status']
+        if o.get('source_region') is not None:
+            region=o['source_region']
+            if not isinstance(region,dict):raise SceneError('原图区域格式无效')
+            out['source_region']={k:_number(region.get(k), '原图区域 '+k, 0, 1) for k in ('x','y','w','h')}
+            if min(out['source_region']['w'],out['source_region']['h'])<=0 or any(out['source_region'][a]+out['source_region'][b]>1.001 for a,b in (('x','w'),('y','h'))):
+                raise SceneError('原图区域超出边界')
+        if o.get('ocr') is not None:
+            record=o['ocr']
+            if not isinstance(record,dict):raise SceneError('文字核对信息无效')
+            out['ocr']={'original':_text(record.get('original','')), 'confidence':_number(record.get('confidence',0),'文字置信度',0,1), 'confirmed':record.get('confirmed') is True}
+            if record.get('suggested'):out['ocr']['suggested']=_text(record['suggested'])
+        if o.get('parent_id'):
+            out['parent_id']=_id(o['parent_id'])
+            if o.get('placement','inside') not in ('inside','boundary','outside'):raise SceneError('包含位置无效')
+            if o.get('placement')=='outside' and (out['type']!='text' or out.get('role')!='annotation'):
+                raise SceneError('外部从属位置仅用于文字批注')
+            out['placement']=o.get('placement','inside')
         if o.get('text_appearance') is not None:
             original=o['text_appearance']
             if kind!='text' or not isinstance(original,dict):raise SceneError('原始字形信息无效')
@@ -218,6 +243,13 @@ def normalize_scene(value):
             out["stroke_pt"] = _number(o["stroke_pt"], "线宽", 0.2, 6)
         clean_objects.append(out)
     scene["objects"] = clean_objects
+    by_id={o['id']:o for o in clean_objects}
+    for o in clean_objects:
+        trail={o['id']};parent=o.get('parent_id')
+        while parent:
+            if parent not in by_id:raise SceneError('包含关系引用了不存在的对象')
+            if parent in trail:raise SceneError('对象包含关系不能循环')
+            trail.add(parent);parent=by_id[parent].get('parent_id')
     structures=value.get('structures',[])
     if not isinstance(structures,list) or len(structures)>250:raise SceneError('结构分组格式无效')
     owners={o['id'] for o in clean_objects if o.get('asset_snapshot') and o['type']!='text'}
@@ -258,6 +290,8 @@ def normalize_scene(value):
     scene['structures']=clean_structures
     if sum(len(o.get('illustration',{}).get('data','')) for o in clean_objects)>21_600_000:
         raise SceneError('插画总量过大，请减少对象数量或缩小单个插画后再保存')
+    if sum(len(o.get('asset_snapshot',{}).get('svg','').encode('utf8')) for o in clean_objects)>32*1024*1024:
+        raise SceneError('矢量结构总量超出当前画布容量，请裁切为单个图版')
     object_ids = {o["id"] for o in clean_objects}
     clean_relations = []
     for r in scene["relations"]:
@@ -275,6 +309,9 @@ def normalize_scene(value):
                "type": r.get("type", "associates"), "label": _text(r.get("label", ""), 100),
                "indirect": bool(r.get("indirect", False)), "uncertain": bool(r.get("uncertain", False)),
                "evidence": _text(r.get("evidence", ""), 1000)}
+        if r.get('callout') is True:
+            if out['type']!='associates':raise SceneError('指示线不能同时表示科学因果关系')
+            out['callout']=True
         if r.get('evidence_source') in ('user_text','reference_image','canvas_sketch','knowledge'):
             out['evidence_source'] = r['evidence_source']
             out['evidence_ref'] = _text(r.get('evidence_ref',''),240)
@@ -319,7 +356,8 @@ def normalize_scene(value):
                            if k in ("model", "created_at", "method", "example", "reference_summary", "reference_rights",
                                      "pre_annotation_revision", "rollback_from", "rollback_to", "annotation_count",
                                      "original_text", "generation_brief", "knowledge_sources", "scientific_assumptions",
-                                     "reference_id", "reference_purpose", "generation_mode", "draft_source_id", "draft_source_revision")}
+                                     "reference_id", "reference_purpose", "generation_mode", "draft_source_id", "draft_source_revision",
+                                     "ocr_source", "vector_engine", "raster_embedded", "segmentation_method")}
     contract = scene.get('generation_contract') or {}
     if not isinstance(contract, dict):
         raise SceneError('生成需求基线格式无效')
@@ -336,6 +374,22 @@ def apply_operations(scene, operations, *, allowed_ids=None):
     if not isinstance(operations, list) or not operations or len(operations) > 1000:
         raise SceneError("需要 1–1000 个修改操作")
     draft = copy.deepcopy(scene)
+    # Parent moves carry their contents. Explicit child coordinates in the same
+    # gesture override inheritance, so a saved drag is never applied twice.
+    explicit={op.get('id'):op.get('changes',{}) for op in operations if isinstance(op,dict) and op.get('op')=='update' and isinstance(op.get('changes',{}),dict)}
+    by_id={o['id']:o for o in scene['objects']};deltas={}
+    def delta(o):
+        if o['id'] in deltas:return deltas[o['id']]
+        change=explicit.get(o['id'],{});parent=by_id.get(o.get('parent_id'))
+        inherited=delta(parent) if parent else {'x':0,'y':0}
+        result={k:_number(change[k],k)-o[k] if k in change else inherited[k] for k in ('x','y') if k in o}
+        deltas[o['id']]=result;return result
+    additions=[]
+    for o in scene['objects']:
+        if not o.get('parent_id') or o['locked']:continue
+        d=delta(o);changes={k:o[k]+v for k,v in d.items() if v and k not in explicit.get(o['id'],{})}
+        if changes:additions.append({'op':'update','id':o['id'],'changes':changes})
+    operations=operations+additions
     for op in operations:
         if not isinstance(op, dict):
             raise SceneError("修改操作格式无效")
@@ -375,6 +429,9 @@ def apply_operations(scene, operations, *, allowed_ids=None):
             draft[key] = [o for o in draft[key] if o["id"] != oid]
             if name == "remove":
                 draft["relations"] = [r for r in draft["relations"] if oid not in (r["source"], r["target"])]
+                for child in draft['objects']:
+                    if child.get('parent_id')==oid:
+                        child.pop('parent_id',None);child.pop('placement',None)
                 for group in draft.get('structures',[]):
                     group['parts']=[p for p in group['parts'] if p['owner']!=oid]
                     if 'foreground' in group:group['foreground']=[p for p in group['foreground'] if p['owner']!=oid]
@@ -478,7 +535,7 @@ def audit_scene(scene, *, _normalized=False):
         if not o["visible"]:
             continue
         oid = o["id"]
-        if not o["label"].strip() and o.get('role') != 'context':
+        if not o["label"].strip() and not o.get('display_name') and o.get('role') != 'context':
             add("empty-label", "对象没有标签", [oid])
         if not all(k in o for k in ("x", "y", "w", "h")):
             add("unplaced", "对象尚未完成布局", [oid], "error")
@@ -487,6 +544,15 @@ def audit_scene(scene, *, _normalized=False):
             add("outside-canvas", "对象超出画布", [oid], "error", bounds=[o[k] for k in ("x", "y", "w", "h")])
         if o["font_size_pt"] < 7:
             add("font-floor", "最终尺寸下的字号小于 7 pt", [oid], "error")
+        parent=objects.get(o.get('parent_id'))
+        if parent and all(k in parent for k in ('x','y','w','h')):
+            if o.get('placement')=='outside':valid=True  # Annotation attachment, not scientific containment.
+            elif o.get('placement')=='boundary':
+                cx,cy=o['x']+o['w']/2,o['y']+o['h']/2
+                on_edge=min(abs(cx-parent['x']),abs(cx-parent['x']-parent['w']),abs(cy-parent['y']),abs(cy-parent['y']-parent['h']))<=max(o['w'],o['h'])/2+1
+                valid=on_edge and parent['x']-o['w']/2<=cx<=parent['x']+parent['w']+o['w']/2 and parent['y']-o['h']/2<=cy<=parent['y']+parent['h']+o['h']/2
+            else:valid=o['x']>=parent['x']-.1 and o['y']>=parent['y']-.1 and o['x']+o['w']<=parent['x']+parent['w']+.1 and o['y']+o['h']<=parent['y']+parent['h']+.1
+            if not valid:add('containment','对象的位置与标记的包含关系不一致',[oid,parent['id']],placement=o.get('placement','inside'))
         c = compartment_map.get(o.get("compartment"))
         if c and all(k in c for k in ("x", "y", "w", "h")):
             cx, cy = o["x"] + o["w"] / 2, o["y"] + o["h"] / 2
@@ -498,20 +564,38 @@ def audit_scene(scene, *, _normalized=False):
         if r["uncertain"]:
             add("uncertain-relation", "此关系的科学含义需要作者确认", [r["id"]])
     visible = [o for o in objects.values() if o["visible"] and o.get('role') != 'context' and all(k in o for k in ("x", "y", "w", "h"))]
+    def is_ancestor(parent,child):
+        while child.get('parent_id'):
+            if child['parent_id']==parent['id']:return True
+            child=objects[child['parent_id']]
+        return False
     for index, a in enumerate(visible):
         for b in visible[index + 1:]:
+            if is_ancestor(a,b) or is_ancestor(b,a):continue
             if a.get("group_id") and a.get("group_id") == b.get("group_id"):
                 continue
             overlap = max(0, min(a["x"]+a["w"], b["x"]+b["w"])-max(a["x"], b["x"])) * max(0, min(a["y"]+a["h"], b["y"]+b["h"])-max(a["y"], b["y"]))
             if overlap > 0.55 * min(a["w"]*a["h"], b["w"]*b["h"]):
                 add("overlap", "两个对象大面积重叠，请检查是否为预期的结合状态", [a["id"], b["id"]], overlap_mm2=round(overlap, 2))
     try:
-        from scene_render import label_boxes
+        from scene_render import label_boxes, connection_geometry
         boxes = label_boxes(scene)
         # Renderer supplies measured/estimated wrapped label rectangles.
         for box in boxes:
             if box["x"] < 0 or box["y"] < 0 or box["x"]+box["w"] > width+0.1 or box["y"]+box["h"] > height+0.1:
                 add("label-outside", "标签超出画布", [box["id"]], "error")
+            obj=objects.get(box['id'])
+            if obj and obj['type']!='text' and not obj.get('label_free'):
+                gap=math.hypot(max(0,obj['x']-box['x']-box['w'],box['x']-obj['x']-obj['w']),max(0,obj['y']-box['y']-box['h'],box['y']-obj['y']-obj['h']))
+                if gap>max(10,obj['font_size_pt']*PT_MM*3):add('label-detached','标签距离所属对象过远',[obj['id']],distance_mm=round(gap,2))
+        for r in relations.values():
+            if not objects[r['source']]['visible'] or not objects[r['target']]['visible']:continue
+            g=connection_geometry(scene,r);c=g['control']
+            for box in boxes:
+                if box['id']==r['id']:continue
+                # Dense samples also detect crossings through narrow glyph rows.
+                if any(box['x']-.2 < (1-t)**2*g['x1']+2*(1-t)*t*c['x']+t*t*g['x2'] < box['x']+box['w']+.2 and box['y']-.2 < (1-t)**2*g['y1']+2*(1-t)*t*c['y']+t*t*g['y2'] < box['y']+box['h']+.2 for t in (i/160 for i in range(2,159))):
+                    add('line-label-overlap','连线穿过文字，请调整路径或标签',[r['id'],box['id']])
         for i, a in enumerate(boxes):
             for b in boxes[i+1:]:
                 if min(a["x"]+a["w"],b["x"]+b["w"])-max(a["x"],b["x"]) > 0.4 and min(a["y"]+a["h"],b["y"]+b["h"])-max(a["y"],b["y"]) > 0.4:
@@ -519,6 +603,7 @@ def audit_scene(scene, *, _normalized=False):
             for o in visible:
                 if o["id"] == a["id"]:
                     continue
+                if objects.get(a['id']) and is_ancestor(o,objects[a['id']]):continue
                 overlap_w = min(a["x"]+a["w"],o["x"]+o["w"])-max(a["x"],o["x"])
                 overlap_h = min(a["y"]+a["h"],o["y"]+o["h"])-max(a["y"],o["y"])
                 if overlap_w > 0.6 and overlap_h > 0.6:
@@ -527,7 +612,7 @@ def audit_scene(scene, *, _normalized=False):
         pass
     for item in scene["unresolved"]:
         add("author-review", item)
-    return {"revision": scene["revision"], "status": "needs_attention" if findings else "passed",
+    return {"revision": scene["revision"], "audit_version": 3, "status": "needs_attention" if findings else "passed",
             "errors": sum(f["severity"] == "error" for f in findings),
             "warnings": sum(f["severity"] == "warning" for f in findings),
             "findings": findings, "vision": {"status": "not_requested", "findings": []},

@@ -70,6 +70,20 @@ def _number(value, low, high):
     return result
 
 
+def _project_payload(project):
+    if len(project.text or '')>12*1024*1024:raise SceneError('SVG 工程信息过大')
+    payload=json.loads(project.text or '')
+    if payload.get('format')!='rylume-scene':raise SceneError('SVG 工程格式无效')
+    if 'scene_zlib' in payload:
+        import zlib
+        try:
+            decoder=zlib.decompressobj();data=decoder.decompress(base64.b64decode(payload['scene_zlib'],validate=True),40*1024*1024+1)
+        except (ValueError,zlib.error):raise SceneError('SVG 工程压缩数据损坏，原文件已保留') from None
+        if len(data)>40*1024*1024 or not decoder.eof or decoder.unused_data:raise SceneError('SVG 工程解压超出容量或文件损坏')
+        payload['scene']=json.loads(data)
+    return normalize_scene(payload['scene'])
+
+
 def _svg(raw):
     """Reject active/external content before invoking any SVG rasterizer/parser."""
     import xml.etree.ElementTree as ET
@@ -79,6 +93,12 @@ def _svg(raw):
         if re.search(r'<!|<\?', text):
             raise ValueError()
         root = ET.fromstring(text)
+        project=next((n for n in root if n.tag.split('}')[-1]=='metadata' and n.get('id')=='rylume-scene'),None)
+        if project is not None:
+            # Rebuild our data-only project through the trusted renderer. Never
+            # render accompanying SVG markup, external links or scripts.
+            from scene_render import render_scene
+            return render_scene(_project_payload(project),embed_scene=True)
         if root.tag.split('}')[-1] != 'svg' or len(list(root.iter())) > 10000:
             raise ValueError()
         allowed = {'svg', 'g', 'path', 'rect', 'circle', 'ellipse', 'line', 'polyline', 'polygon',
@@ -95,7 +115,7 @@ def _svg(raw):
                     if not re.fullmatch(r'#[\w-]+', target.strip()):
                         raise ValueError()
         return text
-    except (ValueError, ET.ParseError, UnicodeError):
+    except (ValueError, KeyError, TypeError, ET.ParseError, UnicodeError):
         raise SceneError('SVG 含外部引用或不支持的内容。请在原软件导出 PNG 后导入。') from None
 
 
@@ -106,11 +126,12 @@ def decode_file(body):
     if ext not in ('.png', '.jpg', '.jpeg', '.webp', '.pdf', '.svg'):
         raise SceneError('支持 PNG、JPG、WebP、SVG 和 PDF；可编辑文件请使用文件菜单导入')
     encoded = body.get('data')
-    if not isinstance(encoded, str) or len(encoded) > 14_000_000:
+    limit=16*1024*1024 if ext=='.svg' else 10*1024*1024
+    if not isinstance(encoded, str) or len(encoded) > (limit*4//3+100):
         raise SceneError('科研图文件请小于 10 MB')
     try:
         raw = base64.b64decode(encoded.split(',', 1)[-1], validate=True)
-        if not raw or len(raw) > 10 * 1024 * 1024:
+        if not raw or len(raw) > limit:
             raise SceneError('科研图文件请小于 10 MB')
         page = int(_number(body.get('page', 1), 1, 10000))
         pages = 1
@@ -143,17 +164,21 @@ def decode_file(body):
         raise SceneError('无法读取该文件，请重新导出为 PNG、SVG 或无密码 PDF') from None
 
 
-def observe(png, config):
+def observe(png, config, *, instruction=INSTRUCTION, detail_png=None):
     import pipeline
     section = config.get('vision') or {}
     if not section.get('model') or not section.get('base_url'):
         section = config.get('text') or {}
     if not section.get('model') or not section.get('base_url'):
         raise SceneError('请先在 AI 设置中配置可读图的视觉模型；视觉项留空时复用文本模型。原文件已保留。')
+    content=[{'type':'text','text':instruction},
+             {'type':'image_url','image_url':{'url':'data:image/png;base64,'+base64.b64encode(png).decode()}}]
+    if detail_png is not None:
+        content.extend([{'type':'text','text':'Second image: already assigned regions are faded. Fully coloured regions still need an owner. Use the ORIGINAL image above for labels and complete boundaries.'},
+            {'type':'image_url','image_url':{'url':'data:image/png;base64,'+base64.b64encode(detail_png).decode()}}])
     response = pipeline._post_json(pipeline._endpoint(section['base_url'], '/chat/completions'),
         pipeline._api_key(section), {'model': section['model'], 'temperature': 0, 'max_tokens': 16000,
-        'messages': [{'role': 'user', 'content': [{'type': 'text', 'text': INSTRUCTION},
-            {'type': 'image_url', 'image_url': {'url': 'data:image/png;base64,' + base64.b64encode(png).decode()}}]}]}, timeout=180)
+        'messages': [{'role': 'user', 'content': content}]}, timeout=180)
     return pipeline._json_object(response['choices'][0]['message'].get('content') or '')
 
 
@@ -166,7 +191,7 @@ def _dimensions(width, height):
 
 
 def _snapshot(ident, markup):
-    return {'asset_id': ident, 'asset_snapshot': {'svg': safe_svg(markup), 'meta': {
+    return {'asset_id': ident, 'asset_snapshot': {'svg': safe_svg(markup,imported=True), 'meta': {
         'asset_id': ident, 'label': '导入图形', 'author': '用户导入', 'license': '原图授权由用户确认',
         'source_kind': 'user-import', 'modifications': 'Separated from a user-supplied figure.'}}}
 
@@ -249,6 +274,12 @@ def native_svg(raw, name):
     import xml.etree.ElementTree as ET
     from svgelements import SVG, Shape, Text, Path as SvgPath
     root = ET.fromstring(_svg(raw))
+    project = next((n for n in root.iter() if n.tag.split('}')[-1]=='metadata' and n.get('id')=='rylume-scene'),None)
+    if project is not None:
+        try:
+            return _project_payload(project)
+        except (ValueError,TypeError,KeyError):
+            raise SceneError('SVG 中的图版工程信息损坏，原文件保留；请重新导出或切换图像转换。') from None
     # Complex definitions/typography need image reconstruction, not an incomplete native import.
     if any(n.tag.split('}')[-1] not in ('svg','g','rect','circle','ellipse','path','line','polyline','polygon','text')
            or any(k not in ('viewBox','width','height','x','y','cx','cy','r','rx','ry','x1','x2','y1','y2','d','points',
@@ -314,7 +345,10 @@ class ImportStore:
         return self.root/ident
 
     def read(self, ident):
-        return json.loads((self.folder(ident)/'meta.json').read_text(encoding='utf8'))
+        # Windows cannot open the destination during an atomic replacement.
+        # Writers hold this same reentrant lock; polling must participate too.
+        with self.lock:
+            return json.loads((self.folder(ident)/'meta.json').read_text(encoding='utf8'))
 
     def public(self, meta):
         return {**meta, 'ok':True,'source_url':f'/api/figure-imports/{meta["id"]}/source.png'}
@@ -336,8 +370,8 @@ class ImportStore:
         _write(folder/'meta.json',meta);return self.public(meta)
 
     def start(self, ident, body, config):
-        mode=body.get('mode','ai')
-        if mode not in ('ai','native','vector'): raise SceneError('请选择有效转换方式')
+        mode=body.get('mode','semantic')
+        if mode not in ('ai','native','vector','semantic'): raise SceneError('请选择有效转换方式')
         with self.lock:
             meta=self.read(ident)
             if ident in self.active: return self.public(meta)
@@ -361,13 +395,17 @@ class ImportStore:
                     from figure_vectorize import reconstruct as vector_reconstruct
                     scene,vector_report=vector_reconstruct((folder/'source.png').read_bytes(),meta['name'],config,
                         checkpoint=lambda message:state('recognizing',message))
+                elif mode=='semantic':
+                    from semantic_vector import reconstruct as semantic_reconstruct
+                    scene,vector_report=semantic_reconstruct((folder/'source.png').read_bytes(),meta['name'],config,
+                        checkpoint=lambda message:state('recognizing',message),regions=body.get('regions'))
                 else: scene=reconstruct(observe((folder/'source.png').read_bytes(),config),(folder/'source.png').read_bytes(),meta['name'])
                 state('verifying','正在检查对象、端点与可编辑性')
                 scene['provenance'].update(reference_id=ident,reference_summary=meta['name'],reference_rights='用户导入；请遵守原图授权')
                 from scene_render import render_scene
                 from scene_document import audit_scene
                 scene=normalize_scene(scene);svg=render_scene(scene)
-                if mode=='vector':
+                if mode in ('vector','semantic'):
                     from figure_vectorize import fidelity_report
                     vector_report['fidelity']=fidelity_report((folder/'source.png').read_bytes(),svg)
                 report={'objects':len(scene['objects']),'texts':sum(o['type']=='text' for o in scene['objects']),
@@ -408,7 +446,7 @@ class ImportStore:
             meta=self.read(ident)
             if meta.get('run')!=run or meta['state']!='ready':raise RevisionConflict('转换结果已变化，请重新预览')
             if meta.get('job_id'):return {'ok':True,'job_id':meta['job_id']}
-            if meta.get('mode')=='vector' and meta.get('report',{}).get('fidelity',{}).get('target_met') is not True:
+            if meta.get('mode') in ('vector','semantic') and meta.get('report',{}).get('fidelity',{}).get('target_met') is not True:
                 raise SceneError('该候选未达到 99% 原始分辨率像素接近度，请重新转换或使用更清晰的原图；原文件已保留')
             result=_create(app,self.candidate(ident)['scene'])
             meta['job_id']=result['job_id'];_write(self.folder(ident)/'meta.json',meta)

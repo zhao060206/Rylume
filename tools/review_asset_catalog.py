@@ -233,7 +233,7 @@ def build(collections):
     counts={}
     for domain,(path,manifest) in manifests.items():
         manifest['available_asset_count']=sum(a.get('catalog_status')=='source-matched' for a in manifest['assets'])
-        manifest['available_template_count']=0
+        manifest['available_template_count']=sum(t.get('catalog_status') in ('source-matched','reviewed') for t in manifest.get('templates',[]))
         path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
         counts[domain]={'available':manifest['available_asset_count'],'quarantined':len(manifest['assets'])-manifest['available_asset_count']}
     review={a['asset_id']:{k:a[k] for k in ('label','label_zh','label_en','category_en','catalog_status','catalog_reason','review_basis','source_url') if k in a}

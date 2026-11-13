@@ -69,7 +69,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
 
   function refresh(){
     const job=state.currentJob||state.jobs.find(j=>j.id===state.id),a=state.audit;
-    $('properties').querySelector('h2').textContent=rightTab==='review'?'排版与内容建议':rightTab==='task'?'任务与来源':editor.selectedIds.length?'所选对象属性':'图版设置';
+    $('properties').querySelector('h2').textContent=rightTab==='review'?'排版与内容建议':rightTab==='task'?'任务与来源':editor.tool==='connect'?'连线含义':editor.selectedIds.length?'所选对象属性':'图版设置';
     $('document-kind').textContent=state.revision?'可编辑图版':state.id?'插画 / 历史图版':'新建图版';
     $('process-status').textContent=state.conflict?'版本冲突 · 本机恢复副本已保留':state.saveError?'保存未完成 · 等待重试，恢复副本保留':state.active?'正在生成 · 可继续查看已有图版':state.revision?(state.pending.length||state.saving?'正在自动保存…':`已自动保存 · ${editor.selectedIds.length} 个所选对象`):state.id?'原图预览 · 可导出或重建可编辑副本':'选择创作方式，或从模板开始';
     document.querySelector('.process-bar').classList.toggle('generating',!!state.active);
@@ -78,7 +78,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     const task=$('inspector-task');task.replaceChildren();
     if(!state.id){task.append(el('p','muted','生成方式、任务进度和原始描述会显示在这里。'));return;}
     task.append(el('h3','',job?.title||editor.scene?.title||'当前图版'),el('p','muted small',state.id));
-    if(job?.stages?.length){const stages=el('ol','task-stages');for(const s of job.stages){stages.append(el('li',s.state==='done'?'done':'',s.label||s.name||s.title||s.id||s.stage));}task.append(stages);}
+    if(job?.stages?.length){const stages=el('ol','task-stages');for(const s of job.stages){stages.append(el('li',s.state==='done'?'done':'',(s.state==='done'?'已完成 · ':s.state==='running'?'进行中 · ':s.state==='failed'?'未完成 · ':'等待 · ')+(s.label||s.name||s.title||s.id||s.stage||'任务步骤').replace(/^正在/,'').replace(/…$/,'')));}task.append(stages);}
     const brief=el('details','task-brief');brief.append(el('summary','','原始研究描述'),el('p','muted small',job?.original_text||job?.text||editor.scene?.source_text||'未填写'));task.append(brief);
     const folder=el('button','button full secondary','打开任务文件夹');folder.onclick=()=>api('/api/open-folder',{kind:'job',job_id:state.id}).catch(e=>toast(e.message,true));task.append(folder);
     if(!state.revision){
@@ -118,7 +118,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
         modelInputs[key]={base_url:field(section,`${title}服务地址`,item.base_url),model:field(section,`${title}名称`,item.model),api_key:field(section,`${title}密钥`,'','password')};
         modelInputs[key].api_key.placeholder=item.api_key_set?'已保存，留空保持不变':'粘贴 API Key';
         const test=el('button','button secondary','测试连接'),status=el('span','connection-result','尚未测试');
-        test.onclick=async()=>{test.disabled=true;status.textContent='测试中…';try{const r=await api('/api/test',{target:key,config:settingsPatch()});status.textContent=r.configured===false?'尚未配置':r.ok?'连接正常':r.error||'连接失败';}catch(e){status.textContent=e.message;}finally{test.disabled=false;}};
+        test.onclick=async()=>{test.disabled=true;status.textContent='测试中…';try{const r=await api('/api/test',{target:key,config:settingsPatch()});status.textContent=r.configured===false?(r.error||'尚未配置'):r.ok?'连接正常':r.error||'连接失败';}catch(e){status.textContent=e.message;}finally{test.disabled=false;}};
         section.append(test,status);body.append(section);
       }
       const advanced=el('details','advanced-model-settings');advanced.append(el('summary','','高级插画与输出设置'));
@@ -161,7 +161,10 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   $('expand-brief').onclick=()=>busy($('expand-brief'),async()=>{
     const text=$('brief-input').value.trim();if(!text){$('brief-input').focus?.();throw Error('先写一句你想画的内容，再让 AI 优化。');}
     const snapshot=briefSnapshot(state,text,briefContext()),[width,height]=$('new-size').value.split('x').map(Number),dpi=Number($('generation-dpi').value)||300;
-    const r=await api('/api/optimize',{text:snapshot.original,canvas:[Math.round(width*dpi/25.4),Math.round(height*dpi/25.4)],style_dna:state.reference||null});
+    const status=$('generation-inline-status');status.textContent='';delete status.dataset.error;
+    let r;
+    try{r=await api('/api/optimize',{text:snapshot.original,canvas:[Math.round(width*dpi/25.4),Math.round(height*dpi/25.4)],style_dna:state.reference||null});}
+    catch(e){status.textContent=e.message;status.dataset.error='true';throw e;}
     if(!sameBriefSnapshot(snapshot,state,$('brief-input').value.trim(),briefContext()))throw Error('描述、参考或图版已变化，旧的优化结果未应用，请重新优化');
     proposed={text:r.text||text,snapshot};$('review-brief-candidate').hidden=false;
     if($('creation-dialog').open||$('panel-generate').classList.contains('home-inline'))reviewBrief();
@@ -189,7 +192,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     const r=await api('/api/assist/clarify',{text:wizardSource,style_dna:state.reference||null});questions=r.data?.questions||[];
     if(!questions.length)throw Error('未返回引导选项，请直接编辑研究描述');
     answers={};for(const q of questions)answers[q.id]=((q.options||[]).find(o=>o.recommended)||q.options?.[0])?.value;
-    wizardFields();$('guide-compose').hidden=false;$('guide-status').textContent='核对下面的选项，再生成描述。';
+    wizardFields();$('guide-compose').hidden=false;$('guide-status').textContent=r.data?.message||'AI 已给出选项，核对后再生成描述。';
   });
   $('guide-compose').onclick=()=>busy($('guide-compose'),async()=>{
     const result=await api('/api/assist/compose-prompt',{text:wizardSource,answers,style_dna:state.reference||null});
@@ -207,7 +210,12 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   }
   editor.host.addEventListener('wheel',e=>{if(!state.revision&&$('legacy-art')){e.preventDefault();legacyZoom(null,e.deltaY<0?1.1:1/1.1);}},{passive:false});
   setMode('vector');refresh();
-  return {refresh,showRight,setMode,legacyZoom,getMode:()=>mode,selection(){if(editor.selectedIds.length&&$('workspace').classList.contains('properties-hidden')&&!$('workspace').classList.contains('annotations-open'))showRight('properties');else refresh();},payload(text){
+  return {refresh,showRight,setMode,legacyZoom,getMode:()=>mode,selection(){
+    if(!$('panel-layers').hidden&&!$('workspace').classList.contains('left-collapsed')){refresh();return;}
+    if(editor.selectedIds.length&&!$('workspace').classList.contains('annotations-open')){
+      if($('workspace').classList.contains('properties-hidden')||rightTab!=='properties')showRight('properties');else refresh();
+    }else refresh();
+  },payload(text){
     const enhanced=generationBrief(state,text);
     if(mode==='image'&&enhanced.length>4000)throw Error('科研插画描述请控制在 4000 字以内；当前描述已保留。');
     const [width,height]=$('new-size').value.split('x').map(Number);

@@ -47,7 +47,7 @@ export function setupOnboarding({state,editor,api,flush,canLeave,openJob,refresh
  const steps={
   select:{title:'先点选一个图形',copy:'点一下画布里的任意步骤框。出现选框后，就可以拖动它；连线会跟着移动。',action:'找到整张图'},
   edit:{title:'让文字变成你的说法',copy:'在右侧「修改文字」里改一个名称，例如把「准备样本」改为「采集样本」。按 Enter 或点击别处保存。',action:'去修改文字'},
-  asset:{title:'再添一个素材',copy:'点击顶部「添加素材」，搜索或选择一个素材。点一下就会加入练习图，再拖到合适的位置。',action:'打开素材库'},
+  asset:{title:'再添一个素材',copy:'点击画布上方「素材库」，搜索或选择一个素材。点一下加入练习图，再拖到合适的位置。',action:'打开素材库'},
   export:{title:'把图保存成文件',copy:'点击右上角「导出图片」。PNG 适合直接使用，PPTX 可以继续改字。文件保存成功后，这一步才会完成。',action:'打开导出'}
  };
  function persist(patch){
@@ -65,13 +65,16 @@ export function setupOnboarding({state,editor,api,flush,canLeave,openJob,refresh
   $('onboarding-step-title').textContent=valid?step.title:'先回到练习图';$('onboarding-step-copy').textContent=valid?step.copy:'你正在查看其他图版。练习不会改动这张图，返回练习后可以继续。';
   $('onboarding-action').textContent=valid?step.action:'返回练习图';$('onboarding-action').disabled=busy;
   const evidence=lessonEvidence(editor.scene,baseline,editor.selectedIds),done=valid&&(record.step==='export'?exported:evidence[record.step]);
+  // A completed insert should return attention to the lesson, rather than
+  // leaving its next step underneath a large modeless asset window.
+  if(valid&&record.step==='asset'&&done){const library=$('asset-library-dialog');if(library?.open)library.close();}
   $('onboarding-next').disabled=!done||busy;$('onboarding-next').textContent=record.step==='export'?'完成练习':'下一步';$('onboarding-back').disabled=index===0||busy;$('onboarding-skip-step').hidden=record.step!=='export'||!valid;
   $('onboarding-step-status').textContent=busy?'正在保存，请稍候…':!valid?'练习图已保留。':done?(record.step==='export'?'文件已经保存。':'做到了，可以继续下一步。'):'不着急，跟着上面的提示试一次。';
   const progress=coach.querySelector('ol');progress.replaceChildren();['选中','改字','添加','导出'].forEach((name,i)=>{const li=document.createElement('li');li.textContent=name;li.className=i<index?'done':i===index?'current':'';if(i===index)li.setAttribute('aria-current','step');progress.append(li);});
-  if(valid){const targets=record.step==='select'?['#canvas-host [data-object-id="practice_0"]']:record.step==='edit'?['#quick-label']:record.step==='asset'?['.toolbar [data-tab="assets"]']:['#toggle-export'];for(const selector of targets)document.querySelector(selector)?.classList.add('onboarding-focus');}
+  if(valid){const targets=record.step==='select'?['#canvas-host [data-object-id="practice_0"]']:record.step==='edit'?['#quick-label']:record.step==='asset'?['.creation-tools [data-tab=assets]']:['#toggle-export'];for(const selector of targets)document.querySelector(selector)?.classList.add('onboarding-focus');}
  }
  function hideCoach(){active=false;clearHighlights();reflow(()=>coach.hidden=true);}
- function restoreFocus(){if(previousFocus?.isConnected&&!previousFocus.closest?.('[hidden]'))previousFocus.focus({preventScroll:true});else if($('welcome').hidden)editor.host.focus({preventScroll:true});else $('home-onboarding').focus();}
+ function restoreFocus(){if(previousFocus?.isConnected&&!previousFocus.closest?.('[hidden]'))previousFocus.focus({preventScroll:true});else if($('welcome').hidden)editor.host.focus({preventScroll:true});else $('open-start').focus();}
  async function dismiss(){sessionEpoch++;welcome.close();hideCoach();await persist({status:'skipped'});restoreFocus();}
  async function pause(){sessionEpoch++;hideCoach();await persist({status:'in_progress'});toast('练习和进度已保留，在「设置 → 新手引导」可继续。');}
  function openWelcome(){

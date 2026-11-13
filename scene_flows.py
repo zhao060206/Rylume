@@ -56,6 +56,9 @@ FLOW_SPECS = [
  ('database_route','数据资源 · 汇入与发布','数据分析','资源管线',
   ['Source A|database','Source B|database','Curate','Version|database','Publish|document'],[(0,2),(1,2),(2,3),(3,4)]),
 ]
+from discipline_workflows import WORKFLOWS,domain_for
+from resource_packs import DOMAIN_TITLES
+FLOW_SPECS += [(sid,title,DOMAIN_TITLES[domain],topology,nodes,edges) for sid,domain,title,topology,nodes,edges in WORKFLOWS]
 SPEC_BY_ID={row[0]:row for row in FLOW_SPECS}
 
 FLOW_LAYOUTS=[
@@ -131,7 +134,7 @@ def flow_catalog():
     return [dict(id='flow_'+sid,title=title,category=category,family='process',example='flow_'+sid,
                  description=f'{composition}结构；文字、流程形状和连线均可编辑。示意步骤可替换为自己的方案。',
                  canvas_mm=[180,120],new_scene_only=True,featured=True,composition=composition,
-                 template_kind='workflow') for sid,title,category,composition,_,_ in FLOW_SPECS]
+                 template_kind='workflow',domain=domain_for(sid)) for sid,title,category,composition,_,_ in FLOW_SPECS]
 
 
 FLOW_DETAILS={
@@ -245,6 +248,22 @@ def make_flow(example_id,*,width_mm=180,height_mm=120):
     primary,accent=('#36576B','#A16D46') if cat=='实验流程' else ('#536A58','#95714C') if cat=='分支与筛选' else ('#5F567C','#417F83')
     scene['style']['palette'].update(primary=primary,secondary=accent,accent=accent)
     positions=_positions(kind,len(nodes),narrow)
+    if domain_for(sid):
+        if narrow:
+            narrow_positions={
+                '横向步骤':[(45,14+i*30) for i in range(len(nodes))],
+                '平行分组':[(45,12),(24,43),(66,43),(24,78),(66,78),(45,122)],
+                '分支决策':[(45,10),(45,32),(45,54),(45,78),(68,114),(22,114)],
+                '多路汇合':[(16,28),(45,28),(74,28),(45,78),(45,122)],
+                '闭环迭代':[(24,38),(66,38),(66,111),(24,111)],
+                '上下配对':[(25,30),(65,30),(25,75),(65,75),(25,120),(65,120)],
+            }
+            # These compact layouts are specified directly in millimetres.
+            positions=[(x/sx,y/sy) for x,y in narrow_positions[kind]]
+        elif kind=='分支决策':positions=[(22,30),(62,30),(102,30),(145,30),(145,85),(62,85)]
+        elif kind=='多路汇合':positions=[(25,22),(25,60),(25,98),(90,60),(145,60)]
+        elif kind=='闭环迭代':positions=[(40,30),(135,30),(135,85),(40,85)]
+        elif kind=='上下配对':positions=[(25,30),(25,90),(80,30),(80,90),(135,30),(135,90)]
     if sid=='sample_route' and not narrow:positions=[(20+i*35,55) for i in range(5)]
     if sid=='database_route':positions=[(35,23),(35,86),(90,53),(146,53),(146,98)]
     if sid=='rna_pipeline':positions=[(35,20),(35,57),(90,57),(145,57),(145,97)]
@@ -262,6 +281,8 @@ def make_flow(example_id,*,width_mm=180,height_mm=120):
             label=label[0] if label else '',evidence='Workflow sequence only, specified by this illustrative design; not a biological effect.')
         if kind=='双向切换':r.update(source_port='s' if a>b else 'n',target_port='s' if a>b else 'n',control={'x':(positions[a][0]+positions[b][0])/2*sx,'y':(83 if a>b else 25)*sy})
         if kind=='闭环迭代':r.update(source_port=('e','s','w','n')[i],target_port=('w','n','e','s')[i])
+        if domain_for(sid) and narrow and kind=='分支决策' and a==5:
+            r.update(source_port='w',target_port='w',control={'x':3*sx,'y':65*sy})
         if kind=='外围反馈' and a==5:r.update(source_port='n',target_port='w',control={'x':12*sx,'y':15*sy})
         scene['relations'].append(r)
     # Lane backgrounds are editable context objects and cannot invent relationships.
@@ -273,4 +294,5 @@ def make_flow(example_id,*,width_mm=180,height_mm=120):
             scene['objects'].insert(i,dict(id='lane'+str(i),type='process',state='flow_lane',role='context',label=names[i],
                 x=5*sx,y=y,w=170*sx,h=(104/count-3)*sy,font_size_pt=8,evidence=scene['source_text']))
     scene['requirements']={'objects':[o['id'] for o in scene['objects']],'relations':[r['id'] for r in scene['relations']]}
-    return normalize_scene(_refine_flow(scene,sid,width_mm,height_mm))
+    from scene_routing import repair_connection_routes
+    return repair_connection_routes(normalize_scene(_refine_flow(scene,sid,width_mm,height_mm)))

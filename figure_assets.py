@@ -180,6 +180,7 @@ def validate_object_count(asset,obj):
 def illustrate(scene, config, *, on_stage=None, cancelled=None, checkpoint=None):
     import pipeline
     objects = [o for o in scene['objects'] if o['type'] not in ('text', 'membrane', 'nuclear_pore')
+               and o.get('depiction')!='anchor'
                and o.get('role') == 'entity' and o.get('visible', True) and not o.get('locked')
                and (not config.get('redraw_ids') or o['id'] in config['redraw_ids'])]
     if not objects:
@@ -195,7 +196,7 @@ def illustrate(scene, config, *, on_stage=None, cancelled=None, checkpoint=None)
         if cancelled and cancelled():
             raise InterruptedError("任务已取消；已完成的草稿保留")
         if on_stage:
-            on_stage('generate', f"绘制对象 {index+1}/{len(objects)}：{obj['label'] or obj['id']}")
+            on_stage('generate', f"绘制对象 {index+1}/{len(objects)}：{obj['label'] or obj.get('display_name') or obj['id']}")
         prompt = ("Create ONE isolated scientific illustration of the object below. "
                   "White background, no labels, no text, no arrows, no panels or infographic. "
                   "Preserve the scientific state precisely. Flat clean scientific drawing, "
@@ -203,7 +204,7 @@ def illustrate(scene, config, *, on_stage=None, cancelled=None, checkpoint=None)
                   "Use precise, regular, professionally drawn contours, not a tracing of wobbly hand-drawn outlines. "
                   "All object labels and connecting arrows will be added as separate editable layers outside this image. "
                   "The attached reference, if any, provides visual guidance; draw only this object.\n"
-                  + json.dumps({k: obj.get(k) for k in ('type','label','state','visual_description')}, ensure_ascii=False)
+                  + json.dumps({**{k: obj.get(k) for k in ('type','state','visual_description')},'label':obj['label'] or obj.get('display_name','')}, ensure_ascii=False)
                   + '\nThis request is for this object alone, not the whole figure. Do not show another phase, another cell, a side-by-side comparison, or a before/after pair.'
                   + '\nVisual style: '+str((config.get('style_dna') or {}).get('visual_style_summary') or 'clear scientific illustration')[:700]
                   + '\nPalette: ' + json.dumps(scene['style']['palette']))

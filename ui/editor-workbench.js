@@ -34,6 +34,14 @@ export function setupWorkbench({editor,workspace}){
   });
   // Common editing stays visible; a normal Tab key continues to navigate fields.
   const label=$('quick-label'),font=$('quick-font'),fill=$('quick-fill');
+  const bindArrow=document.createElement('button');bindArrow.id='bind-imported-arrow';bindArrow.type='button';bindArrow.className='button full';bindArrow.textContent='改为跟随对象的连线';bindArrow.hidden=true;
+  bindArrow.onclick=()=>{const arrow=editor.selectedIds[0];editor.setSelection([]);editor.setTool('connect');editor.replacingArrow=arrow;editor.onStatus('依次点击起点与终点；新连线完成后替换原箭头。按 Esc 可取消，撤销可恢复。');};$('quick-fields').after(bindArrow);
+  const ocrPanel=document.createElement('section'),ocrStatus=document.createElement('p'),ocrUse=document.createElement('button'),ocrConfirm=document.createElement('button');
+  ocrPanel.className='quick-ocr-review';ocrPanel.hidden=true;ocrStatus.className='muted small';ocrUse.type=ocrConfirm.type='button';ocrUse.className=ocrConfirm.className='button full';ocrConfirm.textContent='已对照原图，确认当前文字';ocrPanel.append(ocrStatus,ocrUse,ocrConfirm);$('quick-fields').after(ocrPanel);
+  const importedStructureNote=document.createElement('p');importedStructureNote.className='muted small';importedStructureNote.hidden=true;importedStructureNote.textContent='这是从图片识别的独立结构；内部文字随其移动。原位置按周围颜色估计补底，无法恢复被遮挡的真实细节，请移动后对照原图。';ocrPanel.after(importedStructureNote);
+  function selectedText(){return editor.scene?.objects.find(o=>editor.selectedIds.length===1&&editor.selectedIds[0]===o.id&&o.ocr);}
+  ocrUse.onclick=()=>{const o=selectedText();if(o?.ocr.suggested)editor.changeSelection({label:o.ocr.suggested,ocr:{...o.ocr,confirmed:true}});};
+  ocrConfirm.onclick=()=>{const o=selectedText();if(o)editor.changeSelection({ocr:{...o.ocr,confirmed:true}});};
   const commitLabel=()=>{if(!label.disabled)editor.changeSelection({label:label.value});};
   label.onchange=commitLabel;label.onblur=commitLabel;
   label.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();commitLabel();label.blur();editor.host.focus({preventScroll:true});}};
@@ -58,6 +66,9 @@ export function setupWorkbench({editor,workspace}){
     $('add-text').setAttribute('aria-pressed',String(editor.tool==='text'));
     const objects=editor.scene?.objects.filter(o=>editor.selectedIds.includes(o.id))||[],relations=editor.scene?.relations.filter(o=>editor.selectedIds.includes(o.id))||[];
     const count=editor.selectedIds.length,o=objects[0]||relations[0];
+    bindArrow.hidden=!(count===1&&o?.source_role==='arrow'&&!o.locked);
+    importedStructureNote.hidden=!(count===1&&o?.source_role==='structure');
+    ocrPanel.hidden=!(count===1&&o?.ocr);if(!ocrPanel.hidden){ocrStatus.textContent=`原图文字 · ${o.ocr.confirmed?'已核对':'请对照原图核对'} · OCR ${Math.round(o.ocr.confidence*100)}%`;ocrUse.hidden=!o.ocr.suggested||o.ocr.suggested===o.label;ocrUse.textContent='采用模型建议：'+(o.ocr.suggested||'');ocrConfirm.hidden=o.ocr.confirmed||o.locked;ocrUse.disabled=!!o.locked;}
     $('quick-label-title').textContent=relations.length&&!objects.length?'线上文字':'修改文字';
     label.placeholder=relations.length&&!objects.length?'可选：给连线加说明':'在这里输入文字';
     workspace.classList.toggle('has-selection',count>0);
@@ -72,7 +83,7 @@ export function setupWorkbench({editor,workspace}){
     $('relation-context').hidden=editor.tool!=='connect'&&!relations.length;
 
     $('quick-fields').hidden=!count&&editor.tool!=='connect';$('quick-empty').hidden=true;
-    $('quick-count').textContent=count===1?(relations.length?'所选连线':'所选对象'):`已选 ${count} 项`;
+    $('quick-count').textContent=count===1?(relations.length?'所选连线':o?.display_name||'所选对象'):`已选 ${count} 项`;
     for(const [n,value] of [[label,count===1?o?.label||'':''],[font,objects[0]?.font_size_pt||8],[fill,objects[0]?.fill||'#dae8ed']])if(document.activeElement!==n)n.value=value;
     const connecting=editor.tool==='connect';
     label.closest('label').hidden=count!==1||connecting;

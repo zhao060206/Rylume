@@ -351,6 +351,8 @@ def _fallback_cards(text: str) -> dict:
 def _fallback_choices(text: str) -> dict:
     cards = _fallback_cards(text)
     _prefer_choices(cards, text)
+    cards['source']='local-options'
+    cards['message']='AI 引导未完成，当前显示本机通用排版选项；没有新增科学内容，请自行确认。'
     return cards
 
 
@@ -493,10 +495,11 @@ def generate_clarification_cards(text: str, config: dict,
             _canonicalize_palette(data)
             _prefer_archetype(data, text)
             _prefer_choices(data, text)
+            data['source']='model'
             return _attach_reference(data, dna) if dna else data
     except Exception as exc:
         import sys
-        print("clarify fallback:", type(exc).__name__, exc, file=sys.stderr)
+        print("clarify fallback:", type(exc).__name__, file=sys.stderr)
     if dna:
         return _attach_reference(_fallback_choices(text), dna)
     return _fallback_choices(text)

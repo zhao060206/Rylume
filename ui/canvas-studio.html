@@ -1,1331 +1,1269 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-workspace-mode="simple">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <title>
+
+<html data-workspace-mode="simple" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>
    理象 Rylume · 科研图形工作台
   </title>
-  <link href="/ui/rylume-mark.svg" rel="icon"/>
-  <link href="/ui/studio.css" rel="stylesheet"/>
-  <link href="/ui/annotation.css" rel="stylesheet"/>
-  <link href="/ui/relation-definition.css" rel="stylesheet"/>
-  <link href="/ui/delivery.css" rel="stylesheet"/>
-  <link href="/ui/canvas-workbench.css" rel="stylesheet"/>
-  <link href="/ui/workspace-modes.css" rel="stylesheet"/>
-  <link href="/ui/generation-workflow.css" rel="stylesheet"/>
-  <link href="/ui/creation-composer.css" rel="stylesheet"/>
-  <link href="/ui/workspace-shell.css" rel="stylesheet"/>
-  <link href="/ui/onboarding.css" rel="stylesheet"/>
-  <link href="/ui/document-assistant.css" rel="stylesheet"/>
-  <link href="/ui/floating-windows.css" rel="stylesheet"/>
-  <link href="/ui/quick-edit-toolbar.css" rel="stylesheet"/>
-  <link href="/ui/product-ui.css" rel="stylesheet"/>
-  <link href="/ui/ux-refactor.css" rel="stylesheet"/>
-  <link href="/ui/save-ui.css" rel="stylesheet"/>
-  <link href="/ui/figure-import.css" rel="stylesheet"/>
-  <link href="/ui/vector-details.css" rel="stylesheet"/>
-  <link href="/ui/element-editor.css" rel="stylesheet"/>
- </head>
- <body>
-  <svg aria-hidden="true" class="icon-defs">
-   <defs><symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></symbol>
-    <symbol id="pointer" viewBox="0 0 24 24">
-     <path d="m5 3 14 10-7 1-3 7z">
-     </path>
-    </symbol>
-    <symbol id="hand" viewBox="0 0 24 24">
-     <path d="M8 12V6a2 2 0 0 1 4 0v5-7a2 2 0 0 1 4 0v7-5a2 2 0 0 1 4 0v8c0 5-3 8-7 8-2 0-4-1-6-4l-4-5a2 2 0 0 1 3-2l2 2">
-     </path>
-    </symbol>
-    <symbol id="icon-undo" viewBox="0 0 24 24">
-     <path d="m8 5-5 5 5 5M3 10h11a6 6 0 0 1 0 12">
-     </path>
-    </symbol>
-    <symbol id="icon-redo" viewBox="0 0 24 24">
-     <path d="m16 5 5 5-5 5m5-5H10a6 6 0 0 0 0 12">
-     </path>
-    </symbol>
-    <symbol id="line" viewBox="0 0 24 24">
-     <path d="M3 19c8 0 5-14 17-14m-5-3 5 3-2 5">
-     </path>
-    </symbol>
-    <symbol id="text" viewBox="0 0 24 24">
-     <path d="M4 6V3h16v3M12 3v18m-4 0h8">
-     </path>
-    </symbol>
-    <symbol id="layers" viewBox="0 0 24 24">
-     <path d="m3 7 9-5 9 5-9 5zm0 5 9 5 9-5M3 17l9 5 9-5">
-     </path>
-    </symbol>
-    <symbol id="spark" viewBox="0 0 24 24">
-     <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z">
-     </path>
-    </symbol>
-    <symbol id="plus" viewBox="0 0 24 24">
-     <path d="M12 4v16M4 12h16">
-     </path>
-    </symbol>
-    <symbol id="menu" viewBox="0 0 24 24">
-     <path d="M4 5h16M4 12h16M4 19h16">
-     </path>
-    </symbol>
-    <symbol id="download" viewBox="0 0 24 24">
-     <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5">
-     </path>
-    </symbol>
-    <symbol id="close" viewBox="0 0 24 24">
-     <path d="m5 5 14 14M5 19 19 5">
-     </path>
-    </symbol>
-    <symbol id="settings" viewBox="0 0 24 24">
-     <path d="M4 6h16M4 12h16M4 18h16">
-     </path>
-     <circle cx="8" cy="6" r="2">
-     </circle>
-     <circle cx="16" cy="12" r="2">
-     </circle>
-     <circle cx="10" cy="18" r="2">
-     </circle>
-    </symbol>
-    <symbol id="icon-journal" viewBox="0 0 24 24">
-     <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z">
-     </path>
-     <path d="M6 6h10M6 10h10M6 14h6">
-     </path>
-    </symbol>
-   </defs>
-  </svg>
-  <aside class="app-sidebar" aria-label="图版导航">
-   <div class="sidebar-brand">   <a aria-label="理象 Rylume 首页" class="brand" href="/">
-    <span aria-hidden="true" class="brand-mark">
-     <svg viewBox="0 0 72 72">
-      <path d="M14 46V22a8 8 0 0 1 8-8h24v10H26v22H14Z">
-      </path>
-      <path d="M58 26v24a8 8 0 0 1-8 8H26V48h20V26h12Z">
-      </path>
-      <circle cx="36" cy="36" r="5">
-      </circle>
-     </svg>
-    </span>
-    <strong>
+<link href="/ui/rylume-mark.svg" rel="icon"/>
+<link href="/ui/workbench-ui.css" rel="stylesheet"/>
+</head>
+<body class="app-loading">
+<svg aria-hidden="true" class="icon-defs">
+<defs><symbol id="search" viewbox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></symbol>
+<symbol id="pointer" viewbox="0 0 24 24">
+<path d="m5 3 14 10-7 1-3 7z">
+</path>
+</symbol>
+<symbol id="hand" viewbox="0 0 24 24">
+<path d="M8 12V6a2 2 0 0 1 4 0v5-7a2 2 0 0 1 4 0v7-5a2 2 0 0 1 4 0v8c0 5-3 8-7 8-2 0-4-1-6-4l-4-5a2 2 0 0 1 3-2l2 2">
+</path>
+</symbol>
+<symbol id="icon-undo" viewbox="0 0 24 24">
+<path d="m8 5-5 5 5 5M3 10h11a6 6 0 0 1 0 12">
+</path>
+</symbol>
+<symbol id="icon-redo" viewbox="0 0 24 24">
+<path d="m16 5 5 5-5 5m5-5H10a6 6 0 0 0 0 12">
+</path>
+</symbol>
+<symbol id="line" viewbox="0 0 24 24">
+<path d="M3 19c8 0 5-14 17-14m-5-3 5 3-2 5">
+</path>
+</symbol>
+<symbol id="text" viewbox="0 0 24 24">
+<path d="M4 6V3h16v3M12 3v18m-4 0h8">
+</path>
+</symbol>
+<symbol id="layers" viewbox="0 0 24 24">
+<path d="m3 7 9-5 9 5-9 5zm0 5 9 5 9-5M3 17l9 5 9-5">
+</path>
+</symbol>
+<symbol id="spark" viewbox="0 0 24 24">
+<path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z">
+</path>
+</symbol>
+<symbol id="plus" viewbox="0 0 24 24">
+<path d="M12 4v16M4 12h16">
+</path>
+</symbol>
+<symbol id="menu" viewbox="0 0 24 24">
+<path d="M4 5h16M4 12h16M4 19h16">
+</path>
+</symbol>
+<symbol id="download" viewbox="0 0 24 24">
+<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5">
+</path>
+</symbol>
+<symbol id="close" viewbox="0 0 24 24">
+<path d="m5 5 14 14M5 19 19 5">
+</path>
+</symbol>
+<symbol id="settings" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16">
+</path>
+<circle cx="8" cy="6" r="2">
+</circle>
+<circle cx="16" cy="12" r="2">
+</circle>
+<circle cx="10" cy="18" r="2">
+</circle>
+</symbol>
+<symbol id="icon-journal" viewbox="0 0 24 24">
+<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z">
+</path>
+<path d="M6 6h10M6 10h10M6 14h6">
+</path>
+</symbol>
+<symbol id="compose" viewbox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"></path></symbol>
+<symbol id="folder-plus" viewbox="0 0 24 24"><path d="M20 20H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2Z M12 10v6m-3-3h6"></path></symbol>
+<symbol id="edit-name" viewbox="0 0 24 24"><path d="m16 3 5 5M4 20l4-1L21 6a2.1 2.1 0 0 0-3-3L5 16Z"></path></symbol>
+</defs>
+</svg>
+<aside aria-label="图版导航" class="app-sidebar">
+<div class="sidebar-brand"> <a aria-label="理象 Rylume 首页" class="brand" href="/">
+<span aria-hidden="true" class="brand-mark">
+<svg viewbox="0 0 72 72">
+<path d="M14 46V22a8 8 0 0 1 8-8h24v10H26v22H14Z">
+</path>
+<path d="M58 26v24a8 8 0 0 1-8 8H26V48h20V26h12Z">
+</path>
+<circle cx="36" cy="36" r="5">
+</circle>
+</svg>
+</span>
+<strong>
      理象
      <span>
       Rylume
      </span>
-    </strong>
-   </a><button type="button" id="collapse-navigation" class="icon-button" aria-label="收起图版导航" title="收起导航"><svg class="icon"><use href="#menu"></use></svg></button></div>
-   <div class="sidebar-new">   <button class="quiet" id="open-start" title="新建图版；当前图版会自动保留">
+</strong>
+</a><button aria-label="收起图版导航" class="icon-button" id="collapse-navigation" title="收起导航" type="button"><svg class="icon"><use href="#menu"></use></svg></button></div>
+<div class="sidebar-new"> <button class="quiet" id="open-start" title="新建图版；当前图版会自动保留">
     新建图版
    </button></div>
-   <label class="sidebar-search"><svg class="icon"><use href="#search"></use></svg><input type="search" id="navigator-search" placeholder="搜索最近图版" aria-label="搜索最近图版"/></label>
-   <section id="home-recent" class="sidebar-recents"><header><div class="recent-heading"><h2>图版</h2><select id="navigator-grouping" aria-label="历史图版分组方式" title="选择历史图版分组方式"><option value="collection">按项目</option><option value="date">按日期</option></select></div><button type="button" class="text-button" id="open-history" aria-label="打开全部图版">全部</button></header><button type="button" class="new-project-button" id="create-project">＋ 新建项目</button><div id="home-recent-list"></div><p class="sidebar-empty" id="navigator-empty">新建或生成的图版会保存在这里。</p></section>
-   <footer class="sidebar-footer">    <details class="app-menu settings-menu">
-     <summary aria-label="设置">
-      <svg class="icon"><use href="#settings"></use></svg><span class="settings-label">设置</span>
-      <span aria-hidden="true" class="update-indicator">
-      </span>
-     </summary>
-     <div class="menu-items" id="settings-menu-items">
-      <button class="" id="open-settings" title="设置文本、生图与视觉服务">
-       <svg class="icon">
-        <use href="#settings">
-        </use>
-       </svg>
+<div class="sidebar-commands">
+<button class="sidebar-action" id="open-commands" title="搜索工具和命令（Ctrl+K）" type="button"><svg aria-hidden="true" class="icon"><use href="#search"></use></svg><span>搜索操作</span><kbd>Ctrl K</kbd></button>
+
+<div class="sidebar-documents"><button aria-expanded="false" class="button" id="toggle-documents" title="上传论文与文档，规划绘图" type="button">文档助手</button></div></div>
+
+<section class="sidebar-recents" id="home-recent"><header><h2>我的图版</h2><button aria-label="新建项目" class="new-project-button" id="create-project" title="新建项目" type="button">＋ 新建项目</button><details class="navigator-options app-menu"><summary aria-label="图版列表选项" title="搜索、分组与管理图版">···</summary><div class="menu-items"><label class="sidebar-search"><svg class="icon"><use href="#search"></use></svg><input aria-label="搜索最近图版" id="navigator-search" placeholder="搜索图版" type="search"/></label><select aria-label="历史图版分组方式" id="navigator-grouping" title="选择历史图版分组方式"><option value="collection">按项目</option><option value="date">按日期</option></select><button aria-label="打开全部图版" class="text-button" id="open-history" type="button">全部</button></div></details></header><div id="home-recent-list"></div><p class="sidebar-empty" id="navigator-empty">新建或生成的图版会保存在这里。</p></section>
+<footer class="sidebar-footer"> <details class="app-menu settings-menu">
+<summary aria-label="设置">
+<svg class="icon"><use href="#settings"></use></svg><span class="settings-label">设置</span>
+<span aria-hidden="true" class="update-indicator">
+</span>
+</summary>
+<div class="menu-items" id="settings-menu-items">
+<button class="" id="open-settings" title="设置文本、生图与视觉服务">
+<svg class="icon">
+<use href="#settings">
+</use>
+</svg>
        模型设置
       </button>
-      <button data-command="beginner-help">
+<button data-command="beginner-help">
        操作说明
        <kbd>
         ?
        </kbd>
-      </button>
-      <button data-command="show-shortcuts">
+</button>
+<button data-command="show-shortcuts">
        快捷键
       </button>
-     </div>
-    </details><span>本机工作区</span></footer>
-  </aside>
-  <header class="topbar">
-   <button type="button" class="icon-button" id="expand-navigation" aria-label="展开图版导航" title="展开导航"><svg class="icon"><use href="#menu"></use></svg></button>
-
-   <span class="home-page-title">新建图版</span>
-   <nav aria-label="应用菜单" class="app-menus">
-    <details class="app-menu">
-     <summary>
-      文件
-     </summary>
-     <div class="menu-items" id="file-menu-items">
-      <button id="process-create">
+</div>
+</details><span class="workspace-local">图版保存在本机</span><div class="home-ai-note"><button class="text-button" id="empty-model-settings">设置模型</button><button class="text-button" id="home-open-documents" type="button">从文档提取绘图建议</button></div></footer>
+</aside>
+<header aria-label="图版标题与保存" class="topbar"><button aria-label="展开图版导航" class="icon-button" id="expand-navigation" title="展开导航" type="button"><svg class="icon"><use href="#menu"></use></svg></button><span class="home-page-title">新建图版</span><div class="project-heading">
+<span id="project-title">
+     未命名图版
+    </span>
+<button aria-label="修改图版名称与项目" class="icon-button" id="rename-document" title="修改名称与所属项目" type="button"><svg aria-hidden="true" class="icon"><use href="#edit-name"></use></svg></button>
+<span id="save-status" role="status">
+     本地工作台
+    </span>
+</div><div class="document-bar-actions"><button aria-label="保存图版" class="button save-document" id="save-document" title="保存图版（Ctrl+S）" type="button">保存</button><button class="button primary" disabled="" id="toggle-export">
+<svg class="icon">
+<use href="#download">
+</use>
+</svg>
+    导出图片
+   </button><nav aria-label="应用菜单" class="app-menus"><details class="app-menu workbench-more"><summary aria-label="图版菜单" title="图版菜单">···</summary><div class="menu-items document-menu"><section class="document-menu-section" id="file-menu-items"><h3>文件</h3>
+<button id="process-create">
        生成图版
       </button>
-      <button data-command="new-blank">
+<button data-command="new-blank">
        新建空白图版
       </button>
-      <button data-command="open-history">
+<button data-command="open-history">
        打开最近图版
       </button>
-      <hr/>
-      <button disabled="" id="process-export">
+<hr/>
+<button disabled="" id="process-export">
        导出…
       </button>
-     </div>
-    </details>
-    <details class="app-menu">
-     <summary>
-      编辑
-     </summary>
-     <div class="menu-items">
-      <button data-command="undo">
+</section><section class="document-menu-section"><h3>编辑</h3>
+<button data-command="undo">
        撤销
        <kbd>
         Ctrl Z
        </kbd>
-      </button>
-      <button data-command="redo">
+</button>
+<button data-command="redo">
        重做
        <kbd>
         Ctrl Y
        </kbd>
-      </button>
-      <hr/>
-      <button data-command="duplicate">
+</button>
+<hr/>
+<button data-command="duplicate">
        复制所选
        <kbd>
         Ctrl D
        </kbd>
-      </button>
-      <button data-command="group">
+</button>
+<button data-command="group">
        组合
       </button>
-      <button data-command="ungroup">
+<button data-command="ungroup">
        解组
       </button>
-      <button data-command="delete">
+<button data-command="delete">
        删除
        <kbd>
         Del
        </kbd>
-      </button>
-     </div>
-    </details>
-    <details class="app-menu">
-     <summary>
-      视图
-     </summary>
-     <div class="menu-items">
-      <button data-command="zoom-fit">
+</button>
+</section><section class="document-menu-section"><h3>视图</h3>
+<button data-command="zoom-fit">
        适合窗口
        <kbd>
         Shift 1
        </kbd>
-      </button>
-      <button id="fit-selection">
+</button>
+<button id="fit-selection">
        缩放到所选
        <kbd>
         Shift 2
        </kbd>
-      </button>
-      <button data-command="zoom-100">
+</button>
+<button data-command="zoom-100">
        实际大小 · 100%
       </button>
-      <hr/>
-      <button aria-pressed="false" id="toggle-grid">
+<hr/>
+<button aria-pressed="false" id="toggle-grid">
        显示网格
       </button>
-      <button aria-pressed="false" id="focus-canvas">
+<button aria-pressed="false" id="focus-canvas">
        专注画布
       </button>
-      <button disabled="" id="process-edit">
+<button disabled="" id="process-edit">
        对象属性
       </button>
-      <button disabled="" id="process-check">
+<button disabled="" id="process-check">
        图版检查
       </button>
-      <hr/>
-      <button id="show-shortcuts">
+<hr/>
+<button id="show-shortcuts">
        快捷键…
       </button>
-      <button class="audit-chip" id="open-audit">
+<button class="audit-chip" id="open-audit">
        排版建议
       </button>
-      <label class="snap-option">
-       <input checked="" id="toggle-snap" type="checkbox"/>
+<label class="snap-option">
+<input checked="" id="toggle-snap" type="checkbox"/>
        对齐吸附
       </label>
-      <select aria-label="缩放预设" id="zoom-presets">
-       <option value="">
+<select aria-label="缩放预设" id="zoom-presets">
+<option value="">
         缩放
        </option>
-       <option value="0.5">
+<option value="0.5">
         50%
        </option>
-       <option value="1">
+<option value="1">
         100%
        </option>
-       <option value="2">
+<option value="2">
         200%
        </option>
-       <option value="fit">
+<option value="fit">
         适合窗口
        </option>
-       <option value="selection">
+<option value="selection">
         所选对象
        </option>
-      </select>
-     </div>
-    </details>
-
-   </nav>
-
-   <div class="project-heading">
-    <span id="project-title">
-     未命名图版
-    </span>
-    <span id="save-status" role="status">
-     本地工作台
-    </span>
-   </div>
-   <button type="button" class="button save-document" id="save-document" title="保存图版（Ctrl+S）" aria-label="保存图版">保存</button>
-   <div class="workspace-mode-switch" role="group" aria-label="工作台模式">
-    <span class="workspace-mode-thumb" aria-hidden="true"></span>
-    <button type="button" data-workspace-mode="simple" aria-pressed="true" title="极简模式：常用绘图工具，更多设置按需打开">极简</button>
-    <button type="button" data-workspace-mode="professional" aria-pressed="false" title="专业模式：图层、对象属性与精细设置">专业</button>
-   </div>
-   <span class="mode-announcement" id="workspace-mode-status" role="status" aria-live="polite"></span>
-
-   <button type="button" class="button" id="toggle-documents" aria-expanded="false" title="上传论文与文档，规划绘图">文档助手</button>
-   <button class="button primary" disabled="" id="toggle-export">
-    <svg class="icon">
-     <use href="#download">
-     </use>
-    </svg>
-    导出图片
-   </button>
-  </header>
-  <main class="workspace left-collapsed properties-hidden" id="workspace">
-    <div aria-label="绘图工具" class="toolbar" role="toolbar">
-     <div class="tool-cluster">
-      <button aria-label="撤销" class="tool" disabled="" id="undo" title="撤销 Ctrl+Z">
-       <svg class="icon">
-        <use href="#icon-undo">
-        </use>
-       </svg>
-       <span class="tool-caption">
-        撤销
-       </span>
-      </button>
-      <button aria-label="重做" class="tool" disabled="" id="redo" title="重做 Ctrl+Y">
-       <svg class="icon">
-        <use href="#icon-redo">
-        </use>
-       </svg>
-       <span class="tool-caption">
-        重做
-       </span>
-      </button>
-     </div>
-     <div class="tool-cluster">
-      <button aria-label="选择工具" class="tool active" data-tool="select">
-       <svg class="icon">
-        <use href="#pointer">
-        </use>
-       </svg>
-      </button>
-      <button aria-label="平移工具" class="tool" data-tool="pan">
-       <svg class="icon">
-        <use href="#hand">
-        </use>
-       </svg>
-      </button>
-      <button aria-label="连接工具" class="tool" data-tool="connect">
-       <svg class="icon">
-        <use href="#line">
-        </use>
-       </svg>
-      </button>
-      <button aria-label="添加文本" class="tool" id="add-text">
-       <svg class="icon">
-        <use href="#text">
-        </use>
-       </svg>
-      </button>
-     </div>
-   <nav aria-label="工作区工具" class="rail top-tools">
-
-    <button aria-controls="panel-templates" aria-expanded="false" class="rail-item" data-tab="templates" title="选择模板并创建一张新图">
-     <svg class="icon">
-      <use href="#layers">
-      </use>
-     </svg>
-     <span>
-      模板
-     </span>
-    </button>
-    <button aria-controls="asset-library-dialog" aria-expanded="false" class="rail-item active" data-tab="assets" title="打开素材库，点击或搜索素材添加到图上">
-     <svg class="icon">
-      <use href="#plus">
-      </use>
-     </svg>
-     <span>
-      添加素材
-     </span>
-    </button>
-    <button aria-controls="panel-generate" aria-expanded="false" class="rail-item" data-tab="generate" title="描述研究内容，让 AI 创建初稿">
-     <svg class="icon">
-      <use href="#spark">
-      </use>
-     </svg>
-     <span>
-      AI 生成
-     </span>
-    </button>
-
-    <button aria-controls="panel-layers" aria-expanded="false" class="rail-item professional-only" data-tab="layers" title="查看、隐藏或锁定图中对象">
-     <svg class="icon">
-      <use href="#layers">
-      </use>
-     </svg>
-     <span>
+</select>
+</section><section class="document-menu-section"><h3>工作区</h3><div aria-label="工作台模式" class="workspace-mode-switch" role="group">
+<span aria-hidden="true" class="workspace-mode-thumb"></span>
+<button aria-pressed="true" data-workspace-mode="simple" title="极简模式：常用绘图工具，更多设置按需打开" type="button">极简</button>
+<button aria-pressed="false" data-workspace-mode="professional" title="专业模式：图层、对象属性与精细设置" type="button">专业</button>
+</div><span aria-live="polite" class="mode-announcement" id="workspace-mode-status" role="status"></span>
+<span class="menu-section-title simple-only">精细编辑</span>
+<button class="simple-only" data-command="toggle-properties">对象与画布设置</button>
+<button class="simple-only" data-panel-command="layers">图层与排列</button>
+<button class="simple-only" data-command="open-check-toolbar">检查图版</button>
+<button class="simple-only" data-panel-command="references">论文参考与来源</button>
+<button data-command="beginner-help">操作说明</button>
+<button class="sidebar-action" id="sidebar-assets" title="打开科研素材库" type="button"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg><span>素材库</span></button><button class="sidebar-action" id="sidebar-templates" title="打开模板库" type="button"><svg aria-hidden="true" class="icon"><use href="#layers"></use></svg><span>模板库</span></button><button class="tool text-tool professional-only" id="toggle-properties" title="打开所选对象属性或画布设置">
+       属性
+      </button><button class="tool text-tool professional-only" id="open-check-toolbar" title="查看排版与内容建议">
+       检查
+      </button><button aria-controls="panel-layers" aria-expanded="false" class="rail-item professional-only" data-tab="layers" title="查看、隐藏或锁定图中对象">
+<svg class="icon">
+<use href="#layers">
+</use>
+</svg>
+<span>
       图层
      </span>
-    </button>
-    <button aria-controls="panel-references" aria-expanded="false" class="rail-item professional-only" data-tab="references" title="查看论文原图与出处">
-     <svg class="icon">
-      <use href="#icon-journal">
-      </use>
-     </svg>
-     <span>
+</button><button aria-controls="panel-references" aria-expanded="false" class="rail-item professional-only" data-tab="references" title="查看论文原图与出处">
+<svg class="icon">
+<use href="#icon-journal">
+</use>
+</svg>
+<span>
       论文参考
      </span>
-    </button>
-    <div class="rail-spacer">
-    </div>
-    <button aria-label="展开或收起侧栏" class="rail-item" id="toggle-left" title="展开或收起侧栏">
-     <svg class="icon">
-      <use href="#menu">
-      </use>
-     </svg>
-     <span>
+</button><button aria-label="展开或收起侧栏" class="rail-item" id="toggle-left" title="展开或收起侧栏">
+<svg class="icon">
+<use href="#menu">
+</use>
+</svg>
+<span>
       面板
      </span>
-    </button>
-   </nav>
-     <div class="toolbar-spacer">
-     </div>
-     <div class="quick-edit-slot">
-      <p id="toolbar-guidance"><span id="toolbar-guidance-text">点选图形后，可在这里修改文字和外观。</span></p>
-    <div aria-label="所选对象快捷编辑" class="quick-edit">
-     <div id="quick-empty">
-      <span>
-       选中对象后，在这里直接改文字和外观。
-      </span>
-      <button class="text-button" id="beginner-help">
-       操作说明
-      </button>
-     </div>
-     <div hidden="" id="quick-fields">
-      <div class="relation-context" id="relation-context">
-       <select aria-label="新建连接类型" class="tool-select relation-select" id="connection-type" title="新建连接的关系类型">
-        <option value="sequence">
-         流程顺序
-        </option>
-        <option value="associates">
-         关联
-        </option>
-        <option value="activates">
-         激活 →
-        </option>
-        <option value="inhibits">
-         抑制 ⊣
-        </option>
-        <option value="binds">
-         结合
-        </option>
-        <option value="converts">
-         转换
-        </option>
-        <option value="transports">
-         转运
-        </option>
-       </select>
-      </div>
-      <span id="quick-count">
-       所选对象
-      </span>
-      <label class="quick-name">
-       <span id="quick-label-title">修改文字</span>
-       <input aria-label="所选对象文字" id="quick-label" placeholder="在这里输入文字"/>
-      </label>
-      <label>
-       字号
-       <input aria-label="所选对象字号" id="quick-font" max="48" min="7" step="1" type="number" value="8"/>
-      </label>
-      <label>
-       颜色
-       <input aria-label="所选对象颜色" id="quick-fill" type="color" value="#dae8ed"/>
-      </label>
-      <button class="tool text-tool" id="duplicate" title="复制所选 Ctrl+D">
-       复制
-      </button>
-      <button class="tool text-tool" id="delete" title="删除所选 Delete">
-       删除
-      </button>
-      <details class="selection-more app-menu">
-       <summary aria-label="对齐、组合与排列">
-        排列
-       </summary>
-       <div class="menu-items selection-menu">
-        <button class="tool text-tool quick-overflow-action" data-command="duplicate">复制</button>
-        <button class="tool text-tool quick-overflow-action" data-command="delete">删除</button>
-        <button class="tool text-tool" id="group">
-         组合
-        </button>
-        <button class="tool text-tool" id="ungroup">
-         解组
-        </button>
-        <select aria-label="对齐所选对象" class="tool-select" id="align">
-         <option value="">
-          对齐
-         </option>
-         <option value="left">
-          左对齐
-         </option>
-         <option value="center">
-          水平居中
-         </option>
-         <option value="right">
-          右对齐
-         </option>
-         <option value="top">
-          顶端对齐
-         </option>
-         <option value="middle">
-          垂直居中
-         </option>
-         <option value="bottom">
-          底端对齐
-         </option>
-         <option value="distribute-x">
-          水平等距
-         </option>
-         <option value="distribute-y">
-          垂直等距
-         </option>
-        </select>
-        <button class="tool text-tool" id="quick-label-focus">
-         改字
-        </button>
-        <button class="tool text-tool" id="quick-bring-front" title="将所选对象置于顶层">
-         置顶
-        </button>
-        <button class="tool text-tool" id="quick-send-back" title="将所选对象置于底层">
-         置底
-        </button>
-        <button class="tool text-tool" id="quick-connect" title="选择一个对象后，点这里，再点击目标对象">
-         连线到…
-        </button>
-        <button class="tool text-tool" id="insert-legend" title="在图版右下角插入规范科研图例">
-         插入图例
-        </button>
-       </div>
-      </details>
-     </div>
-    </div>
-      <button type="button" class="text-button" id="toolbar-cancel" hidden>完成操作</button>
-     </div>
-     <div class="canvas-actions">
-      <button class="tool text-tool professional-only" id="toggle-properties" title="打开所选对象属性或画布设置">
-       属性
-      </button>
-      <button class="tool text-tool professional-only" id="open-check-toolbar" title="查看排版与内容建议">
-       检查
-      </button>
-      <details class="app-menu workbench-more">
-       <summary aria-label="更多绘图工具">更多</summary>
-       <div class="menu-items">
-        <span class="menu-section-title simple-only">精细编辑</span>
-        <button data-command="toggle-properties" class="simple-only">对象与画布设置</button>
-        <button data-panel-command="layers" class="simple-only">图层与排列</button>
-        <button data-command="open-check-toolbar" class="simple-only">检查图版</button>
-        <button data-panel-command="references" class="simple-only">论文参考与来源</button>
-        <button data-command="beginner-help">操作说明</button>
-       </div>
-      </details>
-     </div>
-    </div>
+</button></section></div></details></nav></div></header>
+<main class="workspace left-collapsed properties-hidden" id="workspace">
+<div aria-label="绘图工具" class="toolbar" role="toolbar"><div aria-label="撤销与重做" class="tool-history"><button aria-label="撤销" class="tool" disabled="" id="undo" title="撤销 Ctrl+Z">
+<svg class="icon">
+<use href="#icon-undo">
+</use>
+</svg>
+<span class="tool-caption">
+        撤销
+       </span>
+</button><button aria-label="重做" class="tool" disabled="" id="redo" title="重做 Ctrl+Y">
+<svg class="icon">
+<use href="#icon-redo">
+</use>
+</svg>
+<span class="tool-caption">
+        重做
+       </span>
+</button></div><div class="tool-cluster">
+<button aria-label="选择工具" class="tool active" data-tool="select">
+<svg class="icon">
+<use href="#pointer">
+</use>
+</svg>
+</button>
+<button aria-label="平移工具" class="tool" data-tool="pan">
+<svg class="icon">
+<use href="#hand">
+</use>
+</svg>
+</button>
+<button aria-label="连接工具" class="tool" data-tool="connect">
+<svg class="icon">
+<use href="#line">
+</use>
+</svg>
+</button>
+<button aria-label="添加文本" class="tool" id="add-text">
+<svg class="icon">
+<use href="#text">
+</use>
+</svg>
+</button>
+</div><details class="app-menu insert-menu"><summary title="添加素材、模板或导入图片"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg><span>添加</span></summary><div class="menu-items"><nav aria-label="工作区工具" class="rail top-tools">
+<button aria-controls="panel-templates" aria-expanded="false" class="rail-item" data-tab="templates" title="选择模板并创建一张新图">
+<svg class="icon">
+<use href="#layers">
+</use>
+</svg>
+<span>
+      模板
+     </span>
+</button>
+<button aria-controls="asset-library-dialog" aria-expanded="false" class="rail-item active" data-tab="assets" title="打开素材库，点击或搜索素材添加到图上">
+<svg class="icon">
+<use href="#plus">
+</use>
+</svg>
+<span>
+      添加素材
+     </span>
+</button>
+<button aria-controls="panel-generate" aria-expanded="false" class="rail-item" data-tab="generate" title="描述研究内容，让 AI 创建初稿">
+<svg class="icon">
+<use href="#compose">
+</use>
+</svg>
+<span>
+      AI 生成
+     </span>
+</button>
 
 
-   <aside class="left-panel">
-    <section class="left-tab" hidden="" id="panel-templates">
-     <div class="panel-heading">
-      <div>
-       <h1>
+<div class="rail-spacer">
+</div>
+
+</nav></div></details><div class="canvas-actions">
+
+
+
+</div></div>
+<aside class="left-panel">
+<section class="left-tab" hidden="" id="panel-templates">
+<div class="panel-heading">
+<div>
+<h1>
         模板
        </h1>
-      </div>
-      <button aria-label="收起侧栏" class="icon-button close-library-panel" title="收起侧栏">
-       <svg class="icon">
-        <use href="#close">
-        </use>
-       </svg>
-      </button>
-     </div>
-     <p class="muted">
+</div>
+<button aria-label="收起侧栏" class="icon-button close-library-panel" title="收起侧栏">
+<svg class="icon">
+<use href="#close">
+</use>
+</svg>
+</button>
+</div>
+<p class="muted">
       选择模板后会新建一张图，已有图版会保留。
      </p>
-     <button class="button primary full" id="open-gallery">
+<button class="button primary full" id="open-gallery">
       选择模板，开始绘图
      </button>
-     <label class="field-label" for="colorway">
+<label class="field-label" for="colorway">
       配色风格 · 应用到当前图
      </label>
-     <select class="full" id="colorway">
-     </select>
-     <div class="template-list" id="template-list">
-     </div>
-     <button class="text-button full" id="toolbar-templates">
+<select class="full" id="colorway">
+</select>
+<div class="template-list" id="template-list">
+</div>
+<button class="text-button full" id="toolbar-templates">
       查看模板
      </button>
-    </section>
-
-    <section class="left-tab" hidden="" id="panel-references">
-     <div class="panel-heading">
-      <div>
-       <h1>
+</section>
+<section class="left-tab" hidden="" id="panel-references">
+<div class="panel-heading">
+<div>
+<h1>
         论文参考
        </h1>
-      </div>
-      <button aria-label="收起侧栏" class="icon-button close-library-panel" title="收起侧栏">
-       <svg class="icon">
-        <use href="#close">
-        </use>
-       </svg>
-      </button>
-     </div>
-     <p class="muted">
+</div>
+<button aria-label="收起侧栏" class="icon-button close-library-panel" title="收起侧栏">
+<svg class="icon">
+<use href="#close">
+</use>
+</svg>
+</button>
+</div>
+<p class="muted">
       查看已核对出处的 Nature 系列与 EMBO 论文原图和构图观察。图片需联网，版权与复用条件以原文为准。
      </p>
-     <div class="reference-list" id="reference-list">
-     </div>
-    </section>
-    <section class="left-tab" hidden="" id="panel-layers">
-     <div class="panel-heading">
-      <div>
-       <h1>
+<div class="reference-list" id="reference-list">
+</div>
+</section>
+<section class="left-tab" hidden="" id="panel-layers">
+<div class="panel-heading">
+<div>
+<h1>
         图层
        </h1>
-      </div>
-      <button aria-label="收起侧栏" class="icon-button close-library-panel" title="收起侧栏">
-       <svg class="icon">
-        <use href="#close">
-        </use>
-       </svg>
-      </button>
-     </div>
-     <p class="muted">
+</div>
+<button aria-label="收起侧栏" class="icon-button close-library-panel" title="收起侧栏">
+<svg class="icon">
+<use href="#close">
+</use>
+</svg>
+</button>
+</div>
+<p class="muted">
       Shift 多选。锁定对象可避免误移。
      </p>
-     <div class="layer-list" id="layer-list">
-     </div>
-    </section>
-   </aside>
-   <section aria-label="图版编辑区" class="canvas-column">
-    <div class="error-banner" hidden="" id="error-banner" role="alert">
-     <span id="error-text">
-     </span>
-     <button class="text-button" id="download-draft">
+<div class="layer-list" id="layer-list">
+</div>
+</section>
+</aside>
+<section aria-label="图版编辑区" class="canvas-column">
+<div class="error-banner" hidden="" id="error-banner" role="alert">
+<span id="error-text">
+</span>
+<button class="text-button" id="download-draft">
       保存本地草稿
      </button>
-     <button class="text-button" id="reload-scene">
+<button class="text-button" id="reload-scene">
       重新载入
      </button>
-    </div>
-    <div class="canvas-instructions">
-     <div class="canvas-hint" id="canvas-hint">
+</div>
+<div class="canvas-instructions">
+<div class="canvas-hint" id="canvas-hint">
       双击标签改字 · Shift 多选 · 空格拖动画布 · Alt 暂停吸附
      </div>
-     <button class="button" hidden="" id="cancel-canvas-tool">
+<button class="button" hidden="" id="cancel-canvas-tool">
       取消操作
      </button>
-    </div>
-    <div aria-label="科研矢量画布" class="canvas-host" id="canvas-host" tabindex="0">
-    </div>
-    <div class="welcome" id="welcome">
-     <div class="start-document">
-      <div class="home-heading"><div><span class="start-eyebrow">理象 · Rylume</span><h2>从想法，到清晰的图。</h2><p class="home-intro">写下你想画的内容，生成后可以直接拖动、改字和连线。</p></div><button class="button" hidden id="return-to-document">返回当前图版</button></div>
-      <div id="home-composer-host" class="home-composer-host"></div>
-      <div class="home-start-links"><button type="button" id="welcome-gallery"><svg class="icon"><use href="#layers"></use></svg>从模板开始</button><button type="button" id="welcome-blank"><svg class="icon"><use href="#plus"></use></svg>打开空白画布</button><button type="button" id="welcome-example"><svg class="icon"><use href="#icon-journal"></use></svg>试着编辑示例图</button><button type="button" id="welcome-ai" hidden>开始 AI 创作</button></div>
-      <div class="home-ai-note"><span>模板和手动绘图可离线使用。</span><button class="text-button" id="empty-model-settings">设置 AI 服务</button></div>
-     </div>
-    </div>
-    <div class="workflow-guide" hidden="" id="workflow-guide">
-     <div class="workflow-copy">
-      <strong id="workflow-title">
-      </strong>
-      <span id="workflow-detail">
-      </span>
-     </div>
-     <button class="button" id="workflow-next">
-     </button>
-     <button aria-label="查看操作说明" class="text-button" id="workflow-help">
+</div>
+<div aria-label="科研矢量画布" class="canvas-host" id="canvas-host" tabindex="0">
+</div>
+<div class="welcome" id="welcome">
+<div class="start-document">
+<div class="home-heading"><div><h2>把研究想法画出来</h2><p class="home-intro">写下研究内容，生成后直接拖动、改字和连线</p></div><button class="button" hidden="" id="return-to-document">返回当前图版</button></div>
+<div class="home-composer-host" id="home-composer-host"></div>
+<div aria-label="其他开始方式" class="home-start-links"><button id="home-convert-figure" type="button"><svg aria-hidden="true" class="icon"><use href="#download"></use></svg>导入科研图</button><button id="welcome-gallery" type="button"><svg aria-hidden="true" class="icon"><use href="#layers"></use></svg>使用模板</button><button id="welcome-blank" type="button"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg>空白绘图</button></div>
+
+
+<details class="home-inspiration"><summary>没有思路？先看看示例</summary><button id="welcome-example" type="button"><svg class="icon"><use href="#icon-journal"></use></svg>试着编辑示例图</button><section aria-label="科研图模板起点" class="home-template-shelf" hidden="" id="home-template-shelf">
+<header><h3>从一张模板开始</h3><button class="text-button" id="home-all-templates" type="button">查看全部模板</button></header>
+<div class="home-template-examples" id="home-template-examples"></div>
+</section><button hidden="" id="welcome-ai" type="button">开始 AI 创作</button></details></div>
+</div>
+<div class="workflow-guide" hidden="" id="workflow-guide">
+<div class="workflow-copy">
+<strong id="workflow-title">
+</strong>
+<span id="workflow-detail">
+</span>
+</div>
+<button class="button" id="workflow-next">
+</button>
+<button aria-label="查看操作说明" class="text-button" id="workflow-help">
       操作说明
      </button>
-    </div>
-    <footer class="canvas-footer">
-     <span id="canvas-size">
+</div>
+<footer class="canvas-footer">
+<p id="toolbar-guidance"><span id="toolbar-guidance-text">点选图形后，可在这里修改文字和外观。</span></p><button class="text-button" hidden="" id="toolbar-cancel" type="button">完成操作</button><span id="canvas-size">
       图版尺寸
      </span>
-     <span class="footer-spacer">
-     </span>
-     <button aria-label="缩小" class="mini-button" id="zoom-out">
+<span class="footer-spacer">
+</span>
+<button aria-label="缩小" class="mini-button" id="zoom-out">
       −
      </button>
-     <button class="zoom-value" id="zoom-100">
+<button class="zoom-value" id="zoom-100">
       100%
      </button>
-     <button aria-label="放大" class="mini-button" id="zoom-in">
+<button aria-label="放大" class="mini-button" id="zoom-in">
       ＋
      </button>
-     <button class="text-button" id="zoom-fit">
+<button class="text-button" id="zoom-fit">
       适合窗口
      </button>
-    </footer>
-    <div aria-label="文档状态" class="process-bar">
-     <span class="document-kind" id="document-kind">
+<button class="text-button" id="canvas-settings" title="纸张大小与图版配色" type="button">图版设置</button></footer>
+<div aria-label="文档状态" class="process-bar">
+<span class="document-kind" id="document-kind">
       新建图版
      </span>
-     <span id="process-status" role="status">
-     </span>
-    </div>
-    <div class="beginner-tips" hidden="" id="beginner-tips">
-     <div>
-      <strong>
+<span id="process-status" role="status">
+</span>
+</div>
+<div class="beginner-tips" hidden="" id="beginner-tips">
+<div>
+<strong>
        像 PowerPoint 一样编辑
       </strong>
-      <button aria-label="关闭操作说明" class="icon-button" id="close-beginner-tips">
+<button aria-label="关闭操作说明" class="icon-button" id="close-beginner-tips">
        ×
       </button>
-     </div>
-     <p>
+</div>
+<p>
       ① 点击素材或拖入画布。② 单击对象后直接拖动，在右侧输入框改字。③ 从对象上的蓝色圆点拖到另一个对象，连线会自动跟随。
      </p>
-     <p>
+<p>
       滚轮移动画布，Ctrl + 滚轮缩放。点“适合窗口”找回整张图。改错了就点“撤销”。
      </p>
-    </div>
-    <div class="empty-canvas-actions" hidden="" id="empty-canvas-actions">
-     <div>
-      <svg class="icon">
-       <use href="#plus">
-       </use>
-      </svg>
-      <h2>
+</div>
+<div class="empty-canvas-actions" hidden="" id="empty-canvas-actions">
+<div>
+<svg class="icon">
+<use href="#plus">
+</use>
+</svg>
+<h2>
        纸张准备好了
       </h2>
-      <p>
+<p>
        点“添加素材”，选择素材放到图上。
        <br/>
        也可以先写一段文字。
       </p>
-      <div>
-       <button class="button primary" id="empty-add-asset">
+<div>
+<button class="button primary" id="empty-add-asset">
         添加素材
        </button>
-       <button class="button" id="empty-add-text">
+<button class="button" id="empty-add-text">
         输入文字
        </button>
-      </div>
-     </div>
-    </div>
-   </section>
-   <aside class="properties" id="properties">
-    <div class="properties-heading">
-     <h2>
+</div>
+</div>
+</div>
+</section>
+<aside class="properties" id="properties">
+<div class="properties-heading">
+<h2>
       工作区
      </h2>
-     <button aria-label="关闭属性栏" class="icon-button" id="close-properties">
-      <svg class="icon">
-       <use href="#close">
-       </use>
-      </svg>
-     </button>
-    </div>
-    <div aria-label="工作区检查器" class="inspector-tabs" role="tablist">
-     <button aria-controls="property-content" aria-selected="true" data-inspector="properties" role="tab">
+<button aria-label="关闭属性栏" class="icon-button" id="close-properties">
+<svg class="icon">
+<use href="#close">
+</use>
+</svg>
+</button>
+</div>
+<div aria-label="工作区检查器" class="inspector-tabs" role="tablist">
+<button aria-controls="property-content" aria-selected="true" data-inspector="properties" role="tab">
       属性
      </button>
-     <button aria-controls="inspector-review" aria-selected="false" data-inspector="review" role="tab">
+<button aria-controls="inspector-review" aria-selected="false" data-inspector="review" role="tab">
       检查
      </button>
-     <button aria-controls="inspector-task" aria-selected="false" data-inspector="task" role="tab">
+<button aria-controls="inspector-task" aria-selected="false" data-inspector="task" role="tab">
       任务
      </button>
-    </div>
-    <div id="property-content" role="tabpanel">
-    </div>
-    <div hidden="" id="inspector-review" role="tabpanel">
-    </div>
-    <div hidden="" id="inspector-task" role="tabpanel">
-    </div>
-   </aside>
-  </main>
-  <dialog aria-labelledby="export-title" class="export-dialog" hidden="" id="export-menu">
-   <div class="dialog-heading">
-    <div>
-     <h2 id="export-title">
+</div>
+<div aria-label="所选对象快捷编辑" class="quick-edit">
+<div id="quick-empty">
+<span>
+       选中对象后，在这里直接改文字和外观。
+      </span>
+<button class="text-button" id="beginner-help">
+       操作说明
+      </button>
+</div>
+<div hidden="" id="quick-fields">
+<div class="relation-context" id="relation-context">
+<select aria-label="新建连接类型" class="tool-select relation-select" id="connection-type" title="新建连接的关系类型">
+<option value="sequence">
+         流程顺序
+        </option>
+<option value="associates">
+         关联
+        </option>
+<option value="activates">
+         激活 →
+        </option>
+<option value="inhibits">
+         抑制 ⊣
+        </option>
+<option value="binds">
+         结合
+        </option>
+<option value="converts">
+         转换
+        </option>
+<option value="transports">
+         转运
+        </option>
+</select>
+</div>
+<span id="quick-count">
+       所选对象
+      </span>
+<label class="quick-name">
+<span id="quick-label-title">修改文字</span>
+<input aria-label="所选对象文字" id="quick-label" placeholder="在这里输入文字"/>
+</label>
+<label>
+       字号
+       <input aria-label="所选对象字号" id="quick-font" max="48" min="7" step="1" type="number" value="8"/>
+</label>
+<label>
+       颜色
+       <input aria-label="所选对象颜色" id="quick-fill" type="color" value="#dae8ed"/>
+</label>
+<button class="tool text-tool" id="duplicate" title="复制所选 Ctrl+D">
+       复制
+      </button>
+<button class="tool text-tool" id="delete" title="删除所选 Delete">
+       删除
+      </button>
+<details class="selection-more app-menu">
+<summary aria-label="对齐、组合与排列">
+        排列
+       </summary>
+<div class="menu-items selection-menu">
+<button class="tool text-tool quick-overflow-action" data-command="duplicate">复制</button>
+<button class="tool text-tool quick-overflow-action" data-command="delete">删除</button>
+<button class="tool text-tool" id="group">
+         组合
+        </button>
+<button class="tool text-tool" id="ungroup">
+         解组
+        </button>
+<select aria-label="对齐所选对象" class="tool-select" id="align">
+<option value="">
+          对齐
+         </option>
+<option value="left">
+          左对齐
+         </option>
+<option value="center">
+          水平居中
+         </option>
+<option value="right">
+          右对齐
+         </option>
+<option value="top">
+          顶端对齐
+         </option>
+<option value="middle">
+          垂直居中
+         </option>
+<option value="bottom">
+          底端对齐
+         </option>
+<option value="distribute-x">
+          水平等距
+         </option>
+<option value="distribute-y">
+          垂直等距
+         </option>
+</select>
+<button class="tool text-tool" id="quick-label-focus">
+         改字
+        </button>
+<button class="tool text-tool" id="quick-bring-front" title="将所选对象置于顶层">
+         置顶
+        </button>
+<button class="tool text-tool" id="quick-send-back" title="将所选对象置于底层">
+         置底
+        </button>
+<button class="tool text-tool" id="quick-connect" title="选择一个对象后，点这里，再点击目标对象">
+         连线到…
+        </button>
+<button class="tool text-tool" id="insert-legend" title="在图版右下角插入规范科研图例">
+         插入图例
+        </button>
+</div>
+</details>
+</div>
+</div><div id="property-content" role="tabpanel">
+</div>
+<div hidden="" id="inspector-review" role="tabpanel">
+</div>
+<div hidden="" id="inspector-task" role="tabpanel">
+</div>
+</aside>
+</main>
+<dialog aria-labelledby="export-title" class="export-dialog" hidden="" id="export-menu">
+<div class="dialog-heading">
+<div>
+<h2 id="export-title">
       把图保存到电脑
      </h2>
-     <p class="muted">
+<p class="muted">
       选择用途即可保存；软件里的原图会保留。
      </p>
-    </div>
-    <button aria-label="关闭导出" class="icon-button" id="close-export">
+</div>
+<button aria-label="关闭导出" class="icon-button" id="close-export">
      ×
     </button>
-   </div>
-   <p class="muted small" id="export-revision">
-   </p>
-   <div class="export-warning" hidden="" id="export-warning">
-   </div>
-   <div class="export-formats">
-    <button class="export-choice" data-export="png">
-     <strong>
+</div>
+<p class="muted small" id="export-revision">
+</p>
+<div class="export-warning" hidden="" id="export-warning">
+</div>
+<div class="export-formats">
+<button class="export-choice" data-export="png">
+<strong>
       用于论文或汇报
      </strong>
-     <span>
+<span>
       高清图片 · PNG · 推荐
      </span>
-     <small>
+<small>
       PNG →
      </small>
-    </button>
-    <button class="export-choice" data-export="pptx">
-     <strong>
+</button>
+<button class="export-choice" data-export="pptx">
+<strong>
       放进 PowerPoint 继续编辑
      </strong>
-     <span>
+<span>
       图形和文字可以分别修改 · PPTX
      </span>
-     <small>
+<small>
       PPTX →
      </small>
-    </button>
-    <button class="export-choice" data-export="pdf">
-     <strong>
+</button>
+<button class="export-choice" data-export="pdf">
+<strong>
       投稿或打印
      </strong>
-     <span>
+<span>
       按纸张尺寸保存的矢量文件 · PDF
      </span>
-     <small>
+<small>
       PDF →
      </small>
-    </button>
-    <button class="export-choice" data-export="svg">
-     <strong>
+</button>
+<button class="export-choice" data-export="svg">
+<strong>
       在其他绘图软件里编辑
      </strong>
-     <span>
+<span>
       可缩放的矢量文件 · SVG
      </span>
-     <small>
+<small>
       SVG →
      </small>
-    </button>
-   </div>
-   <details class="export-details" id="export-details">
-    <summary>
+</button>
+</div>
+<details class="export-details" id="export-details">
+<summary>
      清晰度、纸张与素材来源
     </summary>
-    <label class="field-label" for="export-dpi">
+<label class="field-label" for="export-dpi">
      图片清晰度
     </label>
-    <select id="export-dpi">
-     <option value="300">
+<select id="export-dpi">
+<option value="300">
       清晰 · 300 DPI（通常够用）
      </option>
-     <option value="600">
+<option value="600">
       更高清 · 600 DPI（文件更大）
      </option>
-    </select>
-   </details>
-   <div class="export-status" id="export-status" role="status">
-   </div>
-   <div class="dialog-actions">
-    <button class="button" id="continue-editing">
+</select>
+</details>
+<div class="export-status" id="export-status" role="status">
+</div>
+<div class="dialog-actions">
+<button class="button" id="continue-editing">
      返回继续编辑
     </button>
-   </div>
-  </dialog>
-  <dialog class="history-dialog" id="history-dialog">
-   <div class="dialog-heading">
-    <div>
-     <h2>
+</div>
+</dialog>
+<dialog class="history-dialog" id="history-dialog">
+<div class="dialog-heading">
+<div>
+<h2>
       最近图版
      </h2>
-    </div>
-    <button aria-label="关闭最近图版" class="icon-button" data-close="history-dialog">
+</div>
+<button aria-label="关闭最近图版" class="icon-button" data-close="history-dialog">
      ×
     </button>
-   </div>
-   <input aria-label="搜索最近图版" id="history-search" placeholder="搜索图版标题" type="search"/>
-   <label class="field-label" for="history-filter">
+</div>
+<input aria-label="搜索最近图版" id="history-search" placeholder="搜索图版标题" type="search"/>
+<label class="field-label" for="history-filter">
     图版类型
    </label>
-   <select id="history-filter">
-    <option value="all">
+<select id="history-filter">
+<option value="all">
      全部图版
     </option>
-    <option value="editable">
+<option value="editable">
      可编辑机制图
     </option>
-    <option value="illustration">
+<option value="illustration">
      插画与历史图版
     </option>
-    <option value="active">
+<option value="active">
      正在生成
     </option>
-   </select>
-   <div id="history-list">
-   </div>
-  </dialog>
-  <dialog id="audit-dialog">
-   <div class="dialog-heading">
-    <div>
-     <h2>
+</select>
+<div id="history-list">
+</div>
+</dialog>
+<dialog id="audit-dialog">
+<div class="dialog-heading">
+<div>
+<h2>
       检查记录与作者确认
      </h2>
-    </div>
-    <button aria-label="关闭检查" class="icon-button" data-close="audit-dialog">
+</div>
+<button aria-label="关闭检查" class="icon-button" data-close="audit-dialog">
      ×
     </button>
-   </div>
-   <p class="muted">
+</div>
+<p class="muted">
     对象与几何由代码核对。视觉模型的意见作为待核验建议保留。
    </p>
-   <div id="audit-content">
-   </div>
-   <div class="dialog-actions">
-    <button class="button" hidden="" id="repair-geometry">
+<div id="audit-content">
+</div>
+<div class="dialog-actions">
+<button class="button" hidden="" id="repair-geometry">
      修复几何问题
     </button>
-    <button class="button" id="vision-review">
+<button class="button" id="vision-review">
      获取视觉建议
     </button>
-    <button class="button" id="confirm-author">
+<button class="button" id="confirm-author">
      标记作者已核对
     </button>
-   </div>
-  </dialog>
-  <dialog id="ai-dialog">
-   <div class="dialog-heading">
-    <div>
-     <h2>
+</div>
+</dialog>
+<dialog id="ai-dialog">
+<div class="dialog-heading">
+<div>
+<h2>
       AI 局部修改
      </h2>
-    </div>
-    <button aria-label="关闭AI修改" class="icon-button" data-close="ai-dialog">
+</div>
+<button aria-label="关闭AI修改" class="icon-button" data-close="ai-dialog">
      ×
     </button>
-   </div>
-   <p class="muted" id="ai-selection">
-   </p>
-   <label class="field-label" for="ai-instruction">
+</div>
+<p class="muted" id="ai-selection">
+</p>
+<label class="field-label" for="ai-instruction">
     修改要求
    </label>
-   <textarea id="ai-instruction" maxlength="2000" placeholder="例如：把所选蛋白标记为磷酸化，保留位置。"></textarea>
-   <button class="button primary" id="request-ai">
+<textarea id="ai-instruction" maxlength="2000" placeholder="例如：把所选蛋白标记为磷酸化，保留位置。"></textarea>
+<button class="button primary" id="request-ai">
     生成修改候选
    </button>
-   <div hidden="" id="ai-candidate">
-    <h3>
+<div hidden="" id="ai-candidate">
+<h3>
      候选变更
     </h3>
-    <ul id="ai-summary">
-    </ul>
-    <div class="ai-preview" id="ai-preview">
-    </div>
-    <div class="dialog-actions">
-     <button class="button primary" id="apply-ai">
+<ul id="ai-summary">
+</ul>
+<div class="ai-preview" id="ai-preview">
+</div>
+<div class="dialog-actions">
+<button class="button primary" id="apply-ai">
       应用候选
      </button>
-     <button class="button" id="cancel-ai">
+<button class="button" id="cancel-ai">
       保留原图
      </button>
-    </div>
-   </div>
-   <p class="muted small" id="ai-status" role="status">
-   </p>
-  </dialog>
-  <dialog aria-labelledby="asset-library-title" class="gallery-dialog asset-library-dialog" id="asset-library-dialog">
-   <div class="dialog-heading">
-    <div><h2 id="asset-library-title">素材库</h2></div>
-    <button aria-label="关闭素材库" class="icon-button" data-close="asset-library-dialog">×</button>
-   </div>
-   <section class="asset-library-body" id="panel-assets">
-     <p class="muted">
+</div>
+</div>
+<p class="muted small" id="ai-status" role="status">
+</p>
+</dialog>
+<dialog aria-labelledby="asset-library-title" class="gallery-dialog asset-library-dialog" id="asset-library-dialog">
+<div class="dialog-heading">
+<div><h2 id="asset-library-title">素材库</h2></div>
+<button aria-label="关闭素材库" class="icon-button" data-close="asset-library-dialog">×</button>
+</div>
+<section class="asset-library-body" id="panel-assets">
+<p class="muted">
       点击素材放到图上；拖动可移动，双击文字可改字。
      </p>
-     <label class="field-label" for="asset-domain">
+<label class="field-label" for="asset-domain">
       学科
      </label>
-     <select aria-label="素材学科" class="full" id="asset-domain">
-     </select>
-     <label class="field-label" for="asset-category">
+<select aria-label="素材学科" class="full" id="asset-domain">
+</select>
+<label class="field-label" for="asset-category">
       分类
      </label>
-     <select aria-label="素材分类" class="full" id="asset-category">
-      <option value="">
+<select aria-label="素材分类" class="full" id="asset-category">
+<option value="">
        全部分类
       </option>
-     </select>
-     <input aria-describedby="asset-search-hint" aria-label="搜索科研素材" id="asset-search" placeholder="搜索名称、英文或近似词，例如：线粒体 / mitochondria" type="search"/>
-     <p class="muted small asset-search-hint" id="asset-search-hint">支持中文、英文、常用缩写与模糊查找；多个词用空格分开。</p>
-     <p class="muted small" id="asset-count">
-     </p>
-     <div class="asset-list" id="asset-list">
-     </div>
-   </section>
-  </dialog>
-  <dialog class="gallery-dialog" id="gallery-dialog">
-   <div class="dialog-heading">
-    <div>
-     <h2>
+</select>
+<input aria-describedby="asset-search-hint" aria-label="搜索科研素材" id="asset-search" placeholder="搜索名称、英文或近似词，例如：线粒体 / mitochondria" type="search"/>
+<p class="muted small asset-search-hint" id="asset-search-hint">支持中文、英文、常用缩写与模糊查找；多个词用空格分开。</p>
+<p class="muted small" id="asset-count">
+</p>
+<div class="asset-list" id="asset-list">
+</div>
+</section>
+</dialog>
+<dialog class="gallery-dialog" id="gallery-dialog">
+<div class="dialog-heading">
+<div>
+<h2>
       模板库
      </h2>
-     <p class="muted small">
+<p class="muted small">
       先选用途，再看内容。机制示意、实验流程与排版分别浏览。
      </p>
-    </div>
-    <button aria-label="关闭模板画廊" class="icon-button" data-close="gallery-dialog">
+</div>
+<button aria-label="关闭模板画廊" class="icon-button" data-close="gallery-dialog">
      ×
     </button>
-   </div>
-   <div class="gallery-filters" id="gallery-filters">
-   </div>
-   <div class="gallery-grid" id="gallery-grid">
-   </div>
-   <p class="muted small">
+</div>
+<div class="gallery-filters" id="gallery-filters">
+</div>
+<div class="gallery-grid" id="gallery-grid">
+</div>
+<p class="muted small">
     原创可编辑构图。论文参考与素材出处收录在安装目录的说明文件中。
    </p>
-  </dialog>
-  <dialog aria-labelledby="template-detail-title" class="template-detail-dialog" id="template-detail-dialog">
-   <div class="dialog-heading">
-    <div>
-     <span class="template-category" id="template-detail-kind">
-     </span>
-     <h2 id="template-detail-title">
+</dialog>
+<dialog aria-labelledby="template-detail-title" class="template-detail-dialog" id="template-detail-dialog">
+<div class="dialog-heading">
+<div>
+<span class="template-category" id="template-detail-kind">
+</span>
+<h2 id="template-detail-title">
       样板预览
      </h2>
-    </div>
-    <button aria-label="关闭样板预览" class="icon-button" data-close="template-detail-dialog">
+</div>
+<button aria-label="关闭样板预览" class="icon-button" data-close="template-detail-dialog">
      ×
     </button>
-   </div>
-   <div class="template-detail-body">
-    <div class="template-detail-paper">
-     <button aria-pressed="false" class="button secondary" id="template-detail-zoom">
+</div>
+<div class="template-detail-body">
+<div class="template-detail-paper">
+<button aria-pressed="false" class="button secondary" id="template-detail-zoom">
       放大查看细节
      </button>
-     <img alt="实际图版预览" id="template-detail-image"/>
-     <p class="muted small" id="template-detail-caption">
-     </p>
-    </div>
-    <aside class="template-detail-notes">
-     <h3>
+<img alt="实际图版预览" id="template-detail-image"/>
+<p class="muted small" id="template-detail-caption">
+</p>
+</div>
+<aside class="template-detail-notes">
+<h3>
       适合表达
      </h3>
-     <p id="template-detail-usage">
-     </p>
-     <h3>
+<p id="template-detail-usage">
+</p>
+<h3>
       画面包含
      </h3>
-     <ul id="template-detail-includes">
-     </ul>
-     <div id="template-actual-objects">
-     </div>
-     <h3>
+<ul id="template-detail-includes">
+</ul>
+<div id="template-actual-objects">
+</div>
+<h3>
       使用范围
      </h3>
-     <p class="muted" id="template-detail-limit">
-     </p>
-     <label for="template-detail-size">
+<p class="muted" id="template-detail-limit">
+</p>
+<label for="template-detail-size">
       画布尺寸
      </label>
-     <select id="template-detail-size">
-      <option value="default">
+<select id="template-detail-size">
+<option value="default">
        模板推荐尺寸
       </option>
-      <option value="single">
+<option value="single">
        单栏 · 90 × 150 mm
       </option>
-     </select>
-     <div class="template-detail-actions">
-      <button class="button primary" id="template-detail-create">
+</select>
+<div class="template-detail-actions">
+<button class="button primary" id="template-detail-create">
        从此样板新建
       </button>
-      <button class="button" id="template-detail-apply">
+<button class="button" id="template-detail-apply">
        预览当前图的排版
       </button>
-     </div>
-     <p class="muted small">
+</div>
+<p class="muted small">
       创建独立图版，原图保留在最近图版中。
      </p>
-     <div id="template-detail-variants">
-     </div>
-    </aside>
-   </div>
-  </dialog>
-  <dialog class="gallery-dialog" id="template-preview-dialog">
-   <div class="dialog-heading">
-    <h2>
+<div id="template-detail-variants">
+</div>
+</aside>
+</div>
+</dialog>
+<dialog class="gallery-dialog" id="template-preview-dialog">
+<div class="dialog-heading">
+<h2>
      当前图版 · 排版预览
     </h2>
-    <button aria-label="关闭排版预览" class="icon-button" data-close="template-preview-dialog">
+<button aria-label="关闭排版预览" class="icon-button" data-close="template-preview-dialog">
      ×
     </button>
-   </div>
-   <p class="muted">
+</div>
+<p class="muted">
     保留对象、标签与科学关系，重新安排位置。应用后可 Ctrl+Z 撤销。
    </p>
-   <div class="template-preview" id="template-preview">
-   </div>
-   <p class="muted small" id="template-check">
-   </p>
-   <div class="dialog-actions">
-    <button class="button" data-close="template-preview-dialog">
+<div class="template-preview" id="template-preview">
+</div>
+<p class="muted small" id="template-check">
+</p>
+<div class="dialog-actions">
+<button class="button" data-close="template-preview-dialog">
      保留原图
     </button>
-    <button class="button primary" id="apply-template">
+<button class="button primary" id="apply-template">
      应用排版
     </button>
-   </div>
-  </dialog>
-  <dialog id="asset-dialog">
-   <div class="dialog-heading">
-    <h2 id="asset-detail-title">
+</div>
+</dialog>
+<dialog id="asset-dialog">
+<div class="dialog-heading">
+<h2 id="asset-detail-title">
      科研素材
     </h2>
-    <button aria-label="关闭素材详情" class="icon-button" data-close="asset-dialog">
+<button aria-label="关闭素材详情" class="icon-button" data-close="asset-dialog">
      ×
     </button>
-   </div>
-   <img alt="素材预览" class="asset-detail-image" id="asset-detail-image"/>
-   <div class="muted" id="asset-detail-credit">
-   </div>
-   <div class="dialog-actions">
-    <button class="button primary" id="insert-detail-asset">
+</div>
+<img alt="素材预览" class="asset-detail-image" id="asset-detail-image"/>
+<div class="muted" id="asset-detail-credit">
+</div>
+<div class="dialog-actions">
+<button class="button primary" id="insert-detail-asset">
      添加到画布
     </button>
-   </div>
-  </dialog>
-  <dialog class="gallery-dialog" id="reference-dialog">
-   <div class="dialog-heading">
-    <div>
-     <span class="eyebrow" id="reference-detail-journal">
+</div>
+</dialog>
+<dialog class="gallery-dialog" id="reference-dialog">
+<div class="dialog-heading">
+<div>
+<span class="eyebrow" id="reference-detail-journal">
       JOURNAL CASE STUDY
      </span>
-     <h2 id="reference-detail-title">
+<h2 id="reference-detail-title">
       顶刊图版解析
      </h2>
-    </div>
-    <button aria-label="关闭参考大图" class="icon-button" data-close="reference-dialog">
+</div>
+<button aria-label="关闭参考大图" class="icon-button" data-close="reference-dialog">
      ×
     </button>
-   </div>
-   <div class="reference-detail-body">
-    <div class="reference-detail-img-wrap">
-     <img alt="顶刊参考大图" id="reference-detail-img"/>
-    </div>
-    <div class="reference-detail-notes">
-     <div class="ref-badge-row">
-      <span class="ref-cat-badge" id="reference-detail-cat">
-      </span>
-     </div>
-     <h3>
+</div>
+<div class="reference-detail-body">
+<div class="reference-detail-img-wrap">
+<img alt="顶刊参考大图" id="reference-detail-img"/>
+</div>
+<div class="reference-detail-notes">
+<div class="ref-badge-row">
+<span class="ref-cat-badge" id="reference-detail-cat">
+</span>
+</div>
+<h3>
       构图与视觉法则解析
      </h3>
-     <p class="muted" id="reference-detail-desc">
-     </p>
-    </div>
-   </div>
-  </dialog>
-  <dialog class="models-dialog" id="models-dialog">
-   <div class="dialog-heading">
-    <div>
-     <h2>
+<p class="muted" id="reference-detail-desc">
+</p>
+</div>
+</div>
+</dialog>
+<dialog class="models-dialog" id="models-dialog">
+<div class="dialog-heading">
+<div>
+<h2>
       模型与服务设置
      </h2>
-    </div>
-    <button aria-label="关闭模型设置" class="icon-button" data-close="models-dialog">
+</div>
+<button aria-label="关闭模型设置" class="icon-button" data-close="models-dialog">
      ×
     </button>
-   </div>
-   <div class="model-settings" id="model-settings">
-   </div>
-   <p class="muted small" id="model-status" role="status">
-   </p>
-   <div class="dialog-actions">
-    <button class="button" data-close="models-dialog">
+</div>
+<div class="model-settings" id="model-settings">
+</div>
+<p class="muted small" id="model-status" role="status">
+</p>
+<div class="dialog-actions">
+<button class="button" data-close="models-dialog">
      取消
     </button>
-    <button class="button primary" id="save-model-settings">
+<button class="button primary" id="save-model-settings">
      保存设置
     </button>
-   </div>
-  </dialog>
-  <dialog id="brief-preview-dialog">
-   <div class="dialog-heading">
-    <h2>
+</div>
+</dialog>
+<dialog id="brief-preview-dialog">
+<div class="dialog-heading">
+<h2>
      核对优化描述
     </h2>
-    <button aria-label="关闭扩写预览" class="icon-button" data-close="brief-preview-dialog">
+<button aria-label="关闭扩写预览" class="icon-button" data-close="brief-preview-dialog">
      ×
     </button>
-   </div>
-   <p class="muted">
+</div>
+<p class="muted">
     对照原文核对对象与关系。采用优化后，你的原文会保留在输入区。
    </p>
-   <div class="brief-comparison"><label>我的原文<textarea id="brief-source-preview" readonly></textarea></label><label>优化后的描述<textarea aria-label="优化候选描述" id="brief-candidate" maxlength="8000"></textarea></label></div>
-   <div class="dialog-actions">
-    <button class="button" data-close="brief-preview-dialog">
+<div class="brief-comparison"><label>我的原文<textarea id="brief-source-preview" readonly=""></textarea></label><label>优化后的描述<textarea aria-label="优化候选描述" id="brief-candidate" maxlength="8000"></textarea></label></div>
+<div class="dialog-actions">
+<button class="button" data-close="brief-preview-dialog">
      保留原描述
     </button>
-    <button class="button primary" id="use-expanded-brief">
+<button class="button primary" id="use-expanded-brief">
      采用优化描述
     </button>
-   </div>
-  </dialog>
-  <dialog class="guide-dialog" id="guide-dialog">
-   <div class="dialog-heading">
-    <div>
-     <h2>
+</div>
+</dialog>
+<dialog class="guide-dialog" id="guide-dialog">
+<div class="dialog-heading">
+<div>
+<h2>
       AI 绘图引导
      </h2>
-    </div>
-    <button aria-label="关闭绘图引导" class="icon-button" data-close="guide-dialog">
+</div>
+<button aria-label="关闭绘图引导" class="icon-button" data-close="guide-dialog">
      ×
     </button>
-   </div>
-   <label class="field-label" for="guide-seed">
+</div>
+<label class="field-label" for="guide-seed">
     想呈现什么科学内容？
    </label>
-   <textarea id="guide-seed" maxlength="4000"></textarea>
-   <button class="button" id="guide-load">
+<textarea id="guide-seed" maxlength="4000"></textarea>
+<button class="button" id="guide-load">
     让 AI 提出绘图选项
    </button>
-   <p class="muted small" id="guide-status" role="status">
-   </p>
-   <div id="guide-questions">
-   </div>
-   <button class="button primary" hidden="" id="guide-compose">
+<p class="muted small" id="guide-status" role="status">
+</p>
+<div id="guide-questions">
+</div>
+<button class="button primary" hidden="" id="guide-compose">
     按这些选项生成描述
    </button>
-   <div hidden="" id="guide-result">
-    <label class="field-label" for="guide-output">
+<div hidden="" id="guide-result">
+<label class="field-label" for="guide-output">
      候选研究描述
     </label>
-    <textarea id="guide-output" maxlength="8000"></textarea>
-    <button class="button primary" id="guide-use">
+<textarea id="guide-output" maxlength="8000"></textarea>
+<button class="button primary" id="guide-use">
      应用描述，返回画布
     </button>
-   </div>
-  </dialog>
-  <dialog id="original-revise-dialog">
-   <div class="dialog-heading">
-    <h2>
+</div>
+</dialog>
+<dialog id="original-revise-dialog">
+<div class="dialog-heading">
+<h2>
      AI 修改原图
     </h2>
-    <button aria-label="关闭原图修改" class="icon-button" data-close="original-revise-dialog">
+<button aria-label="关闭原图修改" class="icon-button" data-close="original-revise-dialog">
      ×
     </button>
-   </div>
-   <label class="field-label" for="original-revise-text">
+</div>
+<label class="field-label" for="original-revise-text">
     修改要求
    </label>
-   <textarea id="original-revise-text" maxlength="1000"></textarea>
-   <p class="muted small">
+<textarea id="original-revise-text" maxlength="1000"></textarea>
+<p class="muted small">
     修改通过已有修订服务生成新任务，原图保留。
    </p>
-   <button class="button primary" id="original-revise-submit">
+<button class="button primary" id="original-revise-submit">
     创建修改版本
    </button>
-  </dialog>
-  <div class="toast" hidden="" id="toast" role="status">
-  </div>
-  <dialog id="generation-preview-dialog" class="generation-preview-dialog">
-   <div class="dialog-heading"><div><h2>结构与布局</h2><p class="muted small">先核对对象、顺序和整理后的排版。文字与箭头独立，生成后仍可直接拖动修改。</p></div><button class="icon-button" aria-label="关闭结构预览" data-close="generation-preview-dialog">×</button></div>
-   <p id="generation-preview-layout" class="muted small"></p><div id="generation-preview-stage" class="generation-preview-stage"></div>
-   <ul id="generation-preview-findings" class="generation-preview-findings"></ul>
-   <div class="dialog-actions"><button class="button" data-close="generation-preview-dialog">返回修改</button><button class="button primary" id="generate-from-preview">按此结构生成</button></div>
-  </dialog>
-  <dialog id="redraw-object-dialog">
-   <div class="dialog-heading"><h2>重绘所选插画</h2><button class="icon-button" aria-label="关闭重绘" data-close="redraw-object-dialog">×</button></div>
-   <p class="muted small">只替换选中的插画，位置、大小、文字和连接保留。原图版始终保留在最近图版，可随时打开。</p>
-   <label class="field-label" for="redraw-object-instruction">要怎样修改？</label><textarea id="redraw-object-instruction" maxlength="2000" placeholder="例如：把纺锤体画得更清晰，保留当前分期和配色。"></textarea>
-   <div class="dialog-actions"><button class="button" data-close="redraw-object-dialog">返回</button><button class="button primary" id="redraw-object-submit">生成修改版</button></div>
-  </dialog>
-  <dialog id="sketch-pad-dialog" class="sketch-pad-dialog">
-   <div class="dialog-heading"><div><h2>画出你的想法</h2><p class="muted small">画出大致布局、箭头并写上名称，不必画得整齐。AI 会保留顺序与连接，自动整理排版、细化形态。</p></div><button class="icon-button" aria-label="关闭草稿纸" data-close="sketch-pad-dialog">×</button></div>
-   <div class="sketch-pad-tools" role="toolbar" aria-label="草稿工具">
-    <button data-sketch-tool="pen" aria-pressed="true">画笔</button><button data-sketch-tool="rect" aria-pressed="false">方框</button><button data-sketch-tool="ellipse" aria-pressed="false">圆形</button><button data-sketch-tool="arrow" aria-pressed="false">箭头</button><button data-sketch-tool="text" aria-pressed="false">文字</button>
-    <input id="sketch-pad-label" aria-label="要添加到草稿的文字" placeholder="输入名称，再点击纸面放置"/>
-    <button id="sketch-pad-undo">撤销</button><button id="sketch-pad-clear">清空</button>
-   </div>
-   <canvas id="sketch-pad" width="1200" height="800" aria-label="草稿纸，支持鼠标或触控笔绘制"></canvas>
-   <div class="dialog-actions"><button class="button" data-close="sketch-pad-dialog">保留草稿</button><button class="button primary" id="use-drawn-sketch">使用这张草稿</button></div>
-  </dialog>
+</dialog>
+<div class="toast" hidden="" id="toast" role="status">
+</div>
+<dialog class="generation-preview-dialog" id="generation-preview-dialog">
+<div class="dialog-heading"><div><h2>结构与布局</h2><p class="muted small">先核对对象、顺序和整理后的排版。文字与箭头独立，生成后仍可直接拖动修改。</p></div><button aria-label="关闭结构预览" class="icon-button" data-close="generation-preview-dialog">×</button></div>
+<p class="muted small" id="generation-preview-layout"></p><div class="generation-preview-stage" id="generation-preview-stage"></div>
+<ul class="generation-preview-findings" id="generation-preview-findings"></ul>
+<div class="dialog-actions"><button class="button" data-close="generation-preview-dialog">返回修改</button><button class="button primary" id="generate-from-preview">按此结构生成</button></div>
+</dialog>
+<dialog id="redraw-object-dialog">
+<div class="dialog-heading"><h2>重绘所选插画</h2><button aria-label="关闭重绘" class="icon-button" data-close="redraw-object-dialog">×</button></div>
+<p class="muted small">只替换选中的插画，位置、大小、文字和连接保留。原图版始终保留在最近图版，可随时打开。</p>
+<label class="field-label" for="redraw-object-instruction">要怎样修改？</label><textarea id="redraw-object-instruction" maxlength="2000" placeholder="例如：把纺锤体画得更清晰，保留当前分期和配色。"></textarea>
+<div class="dialog-actions"><button class="button" data-close="redraw-object-dialog">返回</button><button class="button primary" id="redraw-object-submit">生成修改版</button></div>
+</dialog>
+<dialog class="sketch-pad-dialog" id="sketch-pad-dialog">
+<div class="dialog-heading"><div><h2>画出你的想法</h2><p class="muted small">画出大致布局、箭头并写上名称，不必画得整齐。AI 会保留顺序与连接，自动整理排版、细化形态。</p></div><button aria-label="关闭草稿纸" class="icon-button" data-close="sketch-pad-dialog">×</button></div>
+<div aria-label="草稿工具" class="sketch-pad-tools" role="toolbar">
+<button aria-pressed="true" data-sketch-tool="pen">画笔</button><button aria-pressed="false" data-sketch-tool="rect">方框</button><button aria-pressed="false" data-sketch-tool="ellipse">圆形</button><button aria-pressed="false" data-sketch-tool="arrow">箭头</button><button aria-pressed="false" data-sketch-tool="text">文字</button>
+<input aria-label="要添加到草稿的文字" id="sketch-pad-label" placeholder="输入名称，再点击纸面放置"/>
+<button id="sketch-pad-undo">撤销</button><button id="sketch-pad-clear">清空</button>
+</div>
+<canvas aria-label="草稿纸，支持鼠标或触控笔绘制" height="800" id="sketch-pad" width="1200"></canvas>
+<div class="dialog-actions"><button class="button" data-close="sketch-pad-dialog">保留草稿</button><button class="button primary" id="use-drawn-sketch">使用这张草稿</button></div>
+</dialog>
+<dialog aria-labelledby="creation-title" class="creation-dialog" id="creation-dialog">
+<section class="creation-composer" id="panel-generate">
+<header class="composer-header">
+<div><span class="composer-eyebrow">新建图版</span><h1 id="creation-title">把你的想法画出来</h1><p>写下要表达的内容，AI 帮你完成第一稿。</p></div>
+<button aria-label="关闭创作窗口" class="icon-button" id="close-creation" title="关闭后保留本次输入" type="button"><svg class="icon"><use href="#close"></use></svg></button>
+</header>
+<div class="composer-body">
+<div class="composer-main">
+<div class="brief-label-row"><label class="field-label" for="brief-input"><span class="step-number">1</span> 你想画什么？</label></div>
+<textarea aria-describedby="brief-help" id="brief-input" maxlength="8000" placeholder="例如：画出 JAK–STAT 信号通路，区分胞外、细胞质和细胞核，标出激活与转运。"></textarea>
+<div class="input-meta"><span id="brief-count">0 / 8000</span><span hidden="">原生矢量</span></div>
+<p class="composer-help" id="brief-help">写清主要对象、它们的关系和排列方式。不确定的地方可以留给后续核对。</p>
+<div class="prompt-assists"><button aria-expanded="false" class="button" id="composer-attach" type="button"><svg class="icon"><use href="#plus"></use></svg>参考 / 草稿</button><button class="button" id="expand-brief" type="button"><svg class="icon"><use href="#compose"></use></svg>帮我优化描述</button><button class="text-button" hidden="" id="review-brief-candidate" type="button">查看优化候选</button><button class="text-button" hidden="" id="restore-document-brief" type="button">恢复原描述</button><details class="composer-options"><summary aria-label="绘图选项">选项</summary><div class="composer-options-body"><div class="composer-output"><label class="field-label"><span class="step-number">3</span> 选择绘图方式</label><div aria-label="创作方式" class="generation-modes" role="group"><button aria-pressed="true" data-generation-mode="vector" type="button"><strong>可编辑示意图</strong><span>图形、文字、箭头都能单独修改</span></button><button aria-pressed="false" data-generation-mode="image" type="button"><strong>细节插画</strong><span>主体为图片；文字、箭头可单独修改</span></button></div><p class="muted small" id="generation-mode-note"></p></div><details class="prompt-examples"><summary>看看示例：通路、流程与循环图</summary><div class="prompt-example-list"><button data-prompt-example="signal" type="button">信号通路</button><button data-prompt-example="workflow" type="button">实验流程</button><button data-prompt-example="cycle" type="button">循环过程</button></div><p class="muted small" hidden="" id="prompt-example-copy"></p><button class="text-button" hidden="" id="use-prompt-example" type="button">使用这段示例</button></details><button class="text-button" id="open-guide" type="button">分步填写</button><button class="text-button" id="composer-documents" type="button">从文档提取</button><button class="button" id="preview-generation" type="button">预览结构</button></div></details></div>
 
-  <dialog id="creation-dialog" class="creation-dialog" aria-labelledby="creation-title">
-   <section id="panel-generate" class="creation-composer">
-    <header class="composer-header">
-     <div><span class="composer-eyebrow">新建图版</span><h1 id="creation-title">把你的想法画出来</h1><p>写下要表达的内容，AI 帮你完成第一稿。</p></div>
-     <button type="button" class="icon-button" id="close-creation" aria-label="关闭创作窗口" title="关闭后保留本次输入"><svg class="icon"><use href="#close"></use></svg></button>
-    </header>
-    <div class="composer-body">
-     <div class="composer-main">
-      <div class="brief-label-row"><label class="field-label" for="brief-input"><span class="step-number">1</span> 你想画什么？</label><span class="optional">用自己的话说就好</span></div>
-      <textarea id="brief-input" maxlength="8000" aria-describedby="brief-help" placeholder="例如：画一张 JAK–STAT 信号通路图。细胞因子结合膜上的受体，激活 JAK，再激活 STAT。STAT 进入细胞核，调控基因表达。&#10;&#10;也可以说明排版、配色，以及哪些内容不要出现。"></textarea>
-      <div class="input-meta"><span id="brief-count">0 / 8000</span><span hidden>原生矢量</span></div>
-      <p id="brief-help" class="composer-help">写清主要对象、它们的关系和排列方式。不确定的地方可以留给后续核对。</p>
-      <div class="prompt-assists"><button type="button" class="button" id="composer-attach" aria-expanded="false"><svg class="icon"><use href="#plus"></use></svg>参考 / 草稿</button><button type="button" class="button" id="expand-brief"><svg class="icon"><use href="#spark"></use></svg>帮我优化描述</button><button type="button" class="text-button" id="open-guide">分步填写</button><button type="button" class="text-button" id="review-brief-candidate" hidden>查看优化候选</button><button type="button" class="text-button" id="composer-documents">从文档提取</button><button type="button" class="text-button" id="restore-document-brief" hidden>恢复原描述</button></div>
-      <details class="prompt-examples"><summary>看看示例：通路、流程与循环图</summary><div class="prompt-example-list"><button type="button" data-prompt-example="signal">信号通路</button><button type="button" data-prompt-example="workflow">实验流程</button><button type="button" data-prompt-example="cycle">循环过程</button></div><p id="prompt-example-copy" class="muted small" hidden></p><button type="button" id="use-prompt-example" class="text-button" hidden>使用这段示例</button></details>
-      <details id="generation-origin-card" class="enhancement-card" hidden><summary>已采用优化描述 <span>原文保留，可随时停用</span></summary><label class="field-label" for="generation-enhanced-input">AI 生成时使用的补充说明</label><textarea id="generation-enhanced-input" maxlength="8000"></textarea><button type="button" id="discard-enhancement" class="text-button">停用优化，使用我的原文</button></details>
-     </div>
-     <aside class="composer-reference">
-      <h2><span class="step-number">2</span> 添加参考 <span class="optional">可选</span></h2>
-      <button type="button" class="reference-dropzone" id="upload-sketch"><svg class="icon"><use href="#plus"></use></svg><strong>点击上传参考图或草稿</strong><span>也可以把图片拖到这里</span><small>PNG / JPG / WebP · 最大 10 MB</small></button>
-      <input accept="image/png,image/jpeg,image/webp" hidden id="reference-file" type="file"/>
-      <div class="sketch-source-actions"><button type="button" class="button" id="draw-sketch">画一张草稿</button><button type="button" class="button" id="use-canvas-sketch" title="先打开图版并放置对象，再将画布作为草稿">使用当前画布</button></div>
-      <div id="generation-reference-card" class="generation-reference-card" hidden><img id="generation-reference-preview" alt="本次使用的原始参考图"/><div><label for="reference-purpose">希望 AI 参考什么？</label><select id="reference-purpose"><option value="layout">只参考排版</option><option value="sketch">按我的草稿生成</option><option value="style">只参考画风</option><option value="content">参考对象与排版</option></select><p id="generation-reference-note" class="muted small"></p><button type="button" class="text-button" id="clear-generation-reference">移除图片</button><button type="button" class="text-button" id="replace-generation-reference">更换图片</button></div></div>
-      <div id="canvas-sketch-card" class="canvas-sketch-card" hidden><span id="canvas-sketch-note"></span><button type="button" class="text-button" id="clear-canvas-sketch">移除</button></div>
-      <div id="sketch-layout-settings" class="sketch-layout-settings" hidden><label for="sketch-layout-policy">怎样处理草稿排版？</label><select id="sketch-layout-policy"><option value="regularize">智能整理 · 推荐手绘草稿使用</option><option value="preserve">严格保留位置与尺寸</option></select><p id="sketch-layout-help"></p></div><p class="reference-help" id="creation-reference-help">手绘只需表达大致位置、对象名称和连接。默认自动对齐、等距排列，细化为规范图形。</p>
-      <details class="composer-settings"><summary>尺寸与输出设置 <span id="creation-size-summary">180 × 120 mm</span></summary><label for="new-size">图版尺寸</label><select id="new-size"><option value="180x120">论文双栏 · 180 × 120 mm</option><option value="90x150">论文单栏 · 90 × 150 mm</option><option value="180x101">宽屏 · 16:9</option><option value="150x150">正方形 · 150 × 150 mm</option><option value="180x135">经典 · 4:3</option></select><label for="generation-dpi">图片分辨率</label><select id="generation-dpi"><option value="300">300 DPI</option><option value="600">600 DPI</option></select><div hidden id="image-options"><label class="checkbox-field"><input id="generation-literature" type="checkbox"/>生成时检索文献参考</label></div></details>
-     </aside>
-    </div>
-    <div class="composer-output"><label class="field-label"><span class="step-number">3</span> 选择绘图方式</label><div aria-label="创作方式" class="generation-modes" role="group"><button type="button" aria-pressed="true" data-generation-mode="vector"><strong>可编辑示意图</strong><span>图形、文字、箭头都能单独修改</span></button><button type="button" aria-pressed="false" data-generation-mode="image"><strong>细节插画</strong><span>主体为图片；文字、箭头可单独修改</span></button></div><p id="generation-mode-note" class="muted small"></p></div>
-    <footer class="creation-submit"><p id="generation-inline-status" role="status" aria-live="polite"></p><div class="composer-submit-row"><span class="composer-save-note">生成一张新图，当前图版会保留</span><button type="button" class="button" id="preview-generation">预览结构</button><button type="button" class="button primary" id="generate">生成可编辑初稿</button></div><div class="generation-status" hidden id="generation-status" role="status"><span id="generation-text"></span><button type="button" class="text-button" id="cancel-job">取消生成</button><div class="generation-stage-list" id="generation-stage-list"></div><progress id="generation-progress" max="100" value="0"></progress></div></footer>
-    <div hidden aria-hidden="true"><button id="reference-button" tabindex="-1"></button><p id="reference-status" hidden></p><button id="remove-reference" tabindex="-1" hidden></button><div id="example-list"></div><button id="show-all-templates" tabindex="-1"></button><button id="new-blank" tabindex="-1"></button></div>
-   </section>
-  </dialog>
-  <script src="/ui/canvas-app.js" type="module">
-  </script>
-  <dialog id="shortcuts-dialog">
-   <div class="dialog-heading">
-    <h2>
+<details class="enhancement-card" hidden="" id="generation-origin-card"><summary>已采用优化描述 <span>原文保留，可随时停用</span></summary><label class="field-label" for="generation-enhanced-input">AI 生成时使用的补充说明</label><textarea id="generation-enhanced-input" maxlength="8000"></textarea><button class="text-button" id="discard-enhancement" type="button">停用优化，使用我的原文</button></details>
+</div>
+<aside class="composer-reference">
+<h2><span class="step-number">2</span> 添加参考 <span class="optional">可选</span></h2>
+<button class="reference-dropzone" id="upload-sketch" type="button"><svg class="icon"><use href="#plus"></use></svg><strong>点击上传参考图或草稿</strong><span>也可以把图片拖到这里</span><small>PNG / JPG / WebP · 最大 10 MB</small></button>
+<input accept="image/png,image/jpeg,image/webp" hidden="" id="reference-file" type="file"/>
+<div class="sketch-source-actions"><button class="button" id="draw-sketch" type="button">画一张草稿</button><button class="button" id="use-canvas-sketch" title="先打开图版并放置对象，再将画布作为草稿" type="button">使用当前画布</button></div>
+<div class="generation-reference-card" hidden="" id="generation-reference-card"><img alt="本次使用的原始参考图" id="generation-reference-preview"/><div><label for="reference-purpose">希望 AI 参考什么？</label><select id="reference-purpose"><option value="layout">只参考排版</option><option value="sketch">按我的草稿生成</option><option value="style">只参考画风</option><option value="content">参考对象与排版</option></select><p class="muted small" id="generation-reference-note"></p><button class="text-button" id="clear-generation-reference" type="button">移除图片</button><button class="text-button" id="replace-generation-reference" type="button">更换图片</button></div></div>
+<div class="canvas-sketch-card" hidden="" id="canvas-sketch-card"><span id="canvas-sketch-note"></span><button class="text-button" id="clear-canvas-sketch" type="button">移除</button></div>
+<div class="sketch-layout-settings" hidden="" id="sketch-layout-settings"><label for="sketch-layout-policy">怎样处理草稿排版？</label><select id="sketch-layout-policy"><option value="regularize">智能整理 · 推荐手绘草稿使用</option><option value="preserve">严格保留位置与尺寸</option></select><p id="sketch-layout-help"></p></div><p class="reference-help" id="creation-reference-help">手绘只需表达大致位置、对象名称和连接。默认自动对齐、等距排列，细化为规范图形。</p>
+<details class="composer-settings"><summary>尺寸与输出设置 <span id="creation-size-summary">180 × 120 mm</span></summary><label for="new-size">图版尺寸</label><select id="new-size"><option value="180x120">论文双栏 · 180 × 120 mm</option><option value="90x150">论文单栏 · 90 × 150 mm</option><option value="180x101">宽屏 · 16:9</option><option value="150x150">正方形 · 150 × 150 mm</option><option value="180x135">经典 · 4:3</option></select><label for="generation-dpi">图片分辨率</label><select id="generation-dpi"><option value="300">300 DPI</option><option value="600">600 DPI</option></select><div hidden="" id="image-options"><label class="checkbox-field"><input id="generation-literature" type="checkbox"/>生成时检索文献参考</label></div></details>
+</aside>
+</div>
+
+<footer class="creation-submit"><p aria-live="polite" id="generation-inline-status" role="status"></p><div class="composer-submit-row"><span class="composer-save-note">生成一张新图，当前图版会保留</span><button class="button primary" id="generate" type="button">生成可编辑初稿</button></div><div class="generation-status" hidden="" id="generation-status" role="status"><span id="generation-text"></span><button class="text-button" id="cancel-job" type="button">取消生成</button><div class="generation-stage-list" id="generation-stage-list"></div><progress id="generation-progress" max="100" value="0"></progress></div></footer>
+<div aria-hidden="true" hidden=""><button id="reference-button" tabindex="-1"></button><p hidden="" id="reference-status"></p><button hidden="" id="remove-reference" tabindex="-1"></button><div id="example-list"></div><button id="show-all-templates" tabindex="-1"></button><button id="new-blank" tabindex="-1"></button></div>
+</section>
+</dialog>
+<script src="/ui/canvas-app.js" type="module">
+</script>
+<dialog id="shortcuts-dialog">
+<div class="dialog-heading">
+<h2>
      画板快捷键
     </h2>
-    <button aria-label="关闭快捷键" class="icon-button" data-close="shortcuts-dialog">
+<button aria-label="关闭快捷键" class="icon-button" data-close="shortcuts-dialog">
      ×
     </button>
-   </div>
-   <dl class="shortcut-list">
-    <dt>
+</div>
+<dl class="shortcut-list">
+<dt>
      选择 / 平移 / 连线
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       V
      </kbd>
      /
@@ -1336,207 +1274,215 @@
      <kbd>
       C
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      临时平移
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       空格 + 拖动
      </kbd>
      或鼠标中键
     </dd>
-    <dt>
+<dt>
      多选 / 选择组合成员
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       Shift + 单击
      </kbd>
      /
      <kbd>
       Ctrl + 单击
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      轮选重叠对象
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       Alt + 单击
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      水平或垂直移动 / 暂停吸附
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       Shift + 拖动
      </kbd>
      /
      <kbd>
       Alt + 拖动
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      旋转吸附 / 等比缩放
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       Shift + 拖动控制点
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      插画自由缩放
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       Alt + 拖动缩放点
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      改字
     </dt>
-    <dd>
+<dd>
      双击标签 /
      <kbd>
       F2
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      微调 / 快速微调
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       方向键
      </kbd>
      /
      <kbd>
       Shift + 方向键
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      复制 / 粘贴（保留内部连线）
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       Ctrl C
      </kbd>
      /
      <kbd>
       Ctrl V
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      撤销 / 重做
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       Ctrl Z
      </kbd>
      /
      <kbd>
       Ctrl Y
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      适合窗口 / 缩放到所选
     </dt>
-    <dd>
-     <kbd>
+<dd>
+<kbd>
       Shift 1
      </kbd>
      /
      <kbd>
       Shift 2
      </kbd>
-    </dd>
-    <dt>
+</dd>
+<dt>
      专注画布 / 取消操作
     </dt>
-    <dd>
+<dd>
      菜单“视图 → 专注画布” /
      <kbd>
       Esc
      </kbd>
-    </dd>
-   </dl>
-  </dialog>
-  <dialog class="fix-preview-dialog" id="fix-preview-dialog">
-   <div class="dialog-heading">
-    <h2>
+</dd>
+</dl>
+</dialog>
+<dialog class="fix-preview-dialog" id="fix-preview-dialog">
+<div class="dialog-heading">
+<h2>
      局部排版调整预览
     </h2>
-    <button aria-label="关闭调整预览" class="icon-button" data-close="fix-preview-dialog">
+<button aria-label="关闭调整预览" class="icon-button" data-close="fix-preview-dialog">
      ×
     </button>
-   </div>
-   <p class="muted" id="fix-description">
-   </p>
-   <div class="fix-comparison">
-    <section>
-     <h3>
+</div>
+<p class="muted" id="fix-description">
+</p>
+<div class="fix-comparison">
+<section>
+<h3>
       当前图版
      </h3>
-     <div id="fix-before">
-     </div>
-    </section>
-    <section>
-     <h3>
+<div id="fix-before">
+</div>
+</section>
+<section>
+<h3>
       调整后
      </h3>
-     <div id="fix-after">
-     </div>
-    </section>
-   </div>
-   <p class="muted small" id="fix-summary">
-   </p>
-   <div class="dialog-actions">
-    <button class="button" data-close="fix-preview-dialog">
+<div id="fix-after">
+</div>
+</section>
+</div>
+<p class="muted small" id="fix-summary">
+</p>
+<div class="dialog-actions">
+<button class="button" data-close="fix-preview-dialog">
      取消，保留原样
     </button>
-    <button class="button primary" id="apply-fix-preview">
+<button class="button primary" id="apply-fix-preview">
      应用此调整
     </button>
-   </div>
-  </dialog>
-  <div class="context-menu" hidden="" id="canvas-context-menu" role="menu">
-   <button class="context-menu-item" id="ctx-edit-label" role="menuitem" type="button">
+</div>
+</dialog>
+<div class="context-menu" hidden="" id="canvas-context-menu" role="menu">
+<button class="context-menu-item" id="ctx-edit-label" role="menuitem" type="button">
     原位改字
     <kbd>
      F2
     </kbd>
-   </button>
-   <button class="context-menu-item" id="ctx-duplicate" role="menuitem" type="button">
+</button>
+<button class="context-menu-item" id="ctx-duplicate" role="menuitem" type="button">
     复制对象
     <kbd>
      Ctrl+D
     </kbd>
-   </button>
-   <div class="context-menu-divider">
-   </div>
-   <button class="context-menu-item" id="ctx-bring-front" role="menuitem" type="button">
+</button>
+<div class="context-menu-divider">
+</div>
+<button class="context-menu-item" id="ctx-bring-front" role="menuitem" type="button">
     置于顶层
    </button>
-   <button class="context-menu-item" id="ctx-send-back" role="menuitem" type="button">
+<button class="context-menu-item" id="ctx-send-back" role="menuitem" type="button">
     置于底层
    </button>
-   <div class="context-menu-divider">
-   </div>
-   <button class="context-menu-item" id="ctx-connect-to" role="menuitem" type="button">
+<div class="context-menu-divider">
+</div>
+<button class="context-menu-item" id="ctx-connect-to" role="menuitem" type="button">
     连线到目标…
    </button>
-   <button class="context-menu-item" id="ctx-insert-legend" role="menuitem" type="button">
+<button class="context-menu-item" id="ctx-insert-legend" role="menuitem" type="button">
     插入连线图例
    </button>
-   <div class="context-menu-divider">
-   </div>
-   <button class="context-menu-item danger" id="ctx-delete" role="menuitem" type="button">
+<div class="context-menu-divider">
+</div>
+<button class="context-menu-item danger" id="ctx-delete" role="menuitem" type="button">
     删除所选
     <kbd>
      Del
     </kbd>
-   </button>
-  </div>
- </body>
+</button>
+</div>
+<dialog aria-label="搜索操作" class="command-dialog" id="command-dialog">
+<div class="command-search-row"><svg aria-hidden="true" class="icon"><use href="#search"></use></svg>
+<input aria-autocomplete="list" aria-controls="command-results" aria-expanded="true" aria-label="查找操作" autocomplete="off" id="command-search" placeholder="搜索素材、导出、设置…" role="combobox" type="search"/>
+<button aria-label="关闭操作搜索" class="icon-button" data-close="command-dialog" type="button">×</button>
+</div>
+<div aria-label="可用操作" id="command-results" role="listbox"></div>
+<footer class="command-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> 选择</span><span><kbd>Enter</kbd> 执行</span><span><kbd>Esc</kbd> 关闭</span><span aria-live="polite" id="command-count"></span></footer>
+</dialog>
+</body>
 </html>

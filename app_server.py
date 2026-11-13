@@ -94,16 +94,19 @@ REVIEW_VERSION = review.VERSION
 
 def _friendly_error(exc: Exception) -> str:
     text = str(exc)
+    if 'auth_unavailable' in text:
+        return '模型网关的上游授权不可用，请检查网关登录或切换可用模型；已有图版保留。'
     if "429" in text:
         return "模型服务太忙（429），请稍等一会儿，点「再试一次」"
     if "503" in text or "Service Unavailable" in text:
-        return "生图服务暂时不可用（503）。请稍后点「再试一次」；若要马上绘图，可切到「矢量可编辑」。"
+        return ("生图服务暂时不可用（503），请稍后重试；已有草稿保留。" if isinstance(exc, pipeline.ImageServiceError)
+                else "模型服务暂时不可用（503），请稍后重试；离线模板和直接编辑仍可使用。")
     if "生图服务不可用" in text or isinstance(exc, pipeline.ImageServiceError):
         return "生图服务连不上（连接被拒绝或上游报错）。请确认生图服务已启动后点「再试一次」；若要马上出图，可切到「矢量可编辑」。"
     if "timed out" in text.lower() or "timeout" in text.lower():
         return "模型响应超时，请点「再试一次」"
     if "HTTP 400" in text or "HTTP Error 400" in text:
-        return "生图请求被拒绝（400）。请稍后重试；若持续失败，请切到「矢量可编辑」。"
+        return "模型请求被拒绝（400），请检查对应模型的配置与输入；已有草稿保留。"
     return f"{type(exc).__name__}: {text}"[:300]
 
 
@@ -1981,11 +1984,11 @@ def test_target(config: dict, target: str) -> dict:
 
     section = config.get(target) if target in ("text", "image", "ocr", "vision") else None
     fallback = False
-    if target in ("ocr", "vision") and (not section or not section.get("base_url")):
+    if target in ("ocr", "vision") and (not section or not section.get("base_url") or not section.get("model")):
         section = config.get("text") or {}
         fallback = True
-    if not section or not section.get("base_url"):
-        return finish(False, "未配置（可选）", configured=False)
+    if not section or not section.get("base_url") or not section.get("model"):
+        return finish(False, {"text":"尚未配置：AI 结构规划、文档分析和修改需要文本模型；手动绘图可离线使用。", "image":"尚未配置：细节插画和重绘需要生图模型。"}.get(target,"尚未配置：留空时复用文本模型；请先配置文本模型。"), configured=False)
     configured = True
     base = section["base_url"]
     key = _key(section)
@@ -2024,15 +2027,12 @@ def test_target(config: dict, target: str) -> dict:
             return finish(True, message, status=response.status, url=base,
                           configured=configured)
     except urllib.error.HTTPError as exc:
-        if target == "image" and exc.code == 404:
-            return finish(True, "服务可达（未提供 /models）", status=404, url=base,
-                          configured=True)
         message = f"HTTP {exc.code}"
         try:
             message += " " + exc.read().decode("utf-8", "replace")[:200]
         except Exception:
             pass
-        return finish(False, message[:300])
+        return finish(False, _friendly_error(RuntimeError(message)),status=exc.code,configured=True)
     except Exception as exc:
         return finish(False, str(exc)[:300])
 

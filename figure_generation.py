@@ -233,13 +233,16 @@ def apply_constraints(scene, config):
     from scientific_intent import apply_division_context
     apply_division_context(scene,config['original_text'])
     layout_policy=config.get('layout_policy','preserve')
-    layout_summary='严格保留位置、尺寸与作者连接。'
+    layout_summary='严格保留位置、尺寸与作者连接。' if sketch or reference.get('objects') else '已按连接拓扑整理阅读顺序、分支与汇合；无作者草图位置需要保留。'
+    if not sketch and not reference.get('objects'):layout_policy='regularize'
     if layout_policy=='regularize' and (sketch or (reference.get('objects') and config.get('reference_purpose')!='style')):
         from sketch_layout import regularize_sketch
         composition=reference.get('composition','auto') if not sketch else 'auto'
         scene,report=regularize_sketch(scene,composition)
         layout_summary=('已按大致构图整理 '+str(report['adjusted'])+' 个对象：同类尺寸、对齐与间距统一，文字和箭头独立。'
                         +(' 部分位置需要核对，请查看预览提示。' if not report['fits'] else ''))
+    from scene_presentation import apply_presentation
+    scene=apply_presentation(scene,config)
     contract = {'original_text':config['original_text'], 'generation_brief':config['generation_brief'],
                 'source_kind':'canvas-sketch' if sketch else 'reference' if config.get('reference_id') else 'description',
                 'reference_id':config.get('reference_id',''), 'reference_summary':reference.get('summary',''),
@@ -253,10 +256,14 @@ def apply_constraints(scene, config):
     scene['provenance']['generation_mode'] = config.get('illustration_mode','vector')
     if not sketch and scene.get('layout')=='process':
         _route_stage_turns(scene)
+    expected=scene['objects']
+    if sketch and layout_policy=='preserve':
+        sketch_ids={o['id'] for o in sketch['objects']}
+        expected=[*sketch['objects'],*[o for o in scene['objects'] if o['id'] not in sketch_ids]]
     contract['expected_objects'] = json.dumps(
         [{'id':o['id'],'label':o['label'],'state':o.get('state',''),
           **({k:o[k] for k in ('x','y','w','h') if k in o} if sketch or config.get('reference_purpose') in ('layout','sketch','content') else {})}
-         for o in (sketch['objects'] if sketch and layout_policy=='preserve' else scene['objects'])],ensure_ascii=False)
+         for o in expected],ensure_ascii=False)
     contract['expected_relations'] = json.dumps([{k:r.get(k,'') for k in ('source','target','type')} for r in scene['relations']],ensure_ascii=False)
     return normalize_scene(scene)
 

@@ -81,7 +81,10 @@ export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,ref
   }
   editor.host.addEventListener('editor-request-legend',()=>prepareLegend().catch(e=>toast(e.message,true)));
   const exportSummary=el('div','export-summary');$('export-details').append(exportSummary);
+  const textChoice=el('label','field-label','原图文字的导出方式'),textMode=el('select');textMode.id='export-text-mode';textMode.setAttribute('aria-label','原图文字的导出方式');
+  for(const[value,title]of [['preserve','保留原字形 · 文字作为轮廓'],['editable','可编辑文本框 · 请核对识别文字与字体']]){const option=el('option','',title);option.value=value;textMode.append(option);}textChoice.append(textMode);textChoice.hidden=true;$('export-warning').after(textChoice);
   async function prepareExport(){
+    textChoice.hidden=!state.revision||!editor.scene?.objects.some(o=>o.text_appearance);
     const epoch=++exportEpoch;exportMeta=null;$('export-warning').hidden=true;
     if(!state.revision){exportSummary.textContent='这张原图会按原有内容保存。';$('export-menu').querySelector('[data-export=pptx] span').textContent='放入幻灯片；原图主体按图片保留';return;}
     if(!await flush())return;const id=state.id;exportSummary.textContent='正在核对当前修订…';const meta=await api('/api/jobs/'+id+'/export-info');if(state.id!==id||epoch!==exportEpoch)return;exportMeta=meta;renderExport();
@@ -89,13 +92,14 @@ export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,ref
   function renderExport(){
     if(!exportMeta)return;const m=exportMeta,dpi=Number($('export-dpi').value);$('export-revision').textContent='当前修改已保存，选择一种格式即可导出。';$('export-revision').title='版本 r'+m.revision;exportSummary.replaceChildren(el('p','','纸张 '+m.width_mm+' × '+m.height_mm+' mm · 最小文字 '+m.min_font_pt+' pt'),el('p','','PNG '+Math.round(m.width_mm*dpi/25.4)+' × '+Math.round(m.height_mm*dpi/25.4)+' px · '+dpi+' DPI'),el('p','',m.vector?'主体为矢量；PPTX 保留图形与文字编辑。':'包含位图，请留意放大后的清晰度。'));
     const outlines=editor.scene?.objects.filter(usesTextAppearance).length||0;
-    if(outlines)exportSummary.append(el('p','',`${outlines} 个标签保留原字形轮廓；PPTX 中以路径保留，已改写的标签是文本框。`));
-    $('export-menu').querySelector('[data-export=pptx] span').textContent=outlines?'原生矢量形状；原字形标签保留为轮廓 · PPTX':m.vector?'图形和文字可以分别修改 · PPTX':'放入幻灯片；位图对象不能拆分编辑 · PPTX';
+    if(outlines)exportSummary.append(el('p','',textMode.value==='editable'?`${outlines} 个原图标签将转换为可编辑文本框；请先核对 OCR、换行及字体。`:`${outlines} 个标签保留原字形轮廓；也可在上方选择可编辑文本框。`));
+    $('export-menu').querySelector('[data-export=pptx] span').textContent=outlines?(textMode.value==='editable'?'原生矢量形状与可编辑文本框 · PPTX':'原生矢量形状；原字形标签保留为轮廓 · PPTX'):m.vector?'图形和文字可以分别修改 · PPTX':'放入幻灯片；位图对象不能拆分编辑 · PPTX';
     const warning=$('export-warning');warning.hidden=!m.audit.errors;warning.replaceChildren();if(m.audit.errors){warning.append(el('p','','有 '+m.audit.errors+' 处可能影响输出，建议先看一眼；也可以直接导出。'),button('在图上查看',()=>{$('export-menu').close();$('open-check-toolbar').click();}));}
     const help=el('p','muted','论文矢量：PDF / SVG；投稿图片：PNG；继续排版：PPTX。');exportSummary.append(help);
     if(m.attribution){const details=el('details');details.append(el('summary','','素材来源与图注'),el('p','credit-copy',m.attribution),button('复制素材来源',async()=>{await navigator.clipboard.writeText(m.attribution);toast('已复制，请按素材要求保留署名');}));exportSummary.append(details);}
   }
   $('toggle-export').addEventListener('click',()=>{if($('export-menu').open)prepareExport().catch(e=>toast(e.message,true));});$('export-dpi').onchange=renderExport;
+  textMode.onchange=renderExport;
   const ready=dialog('开始生成前'),readyText=el('p'),readyActions=el('div','dialog-actions');ready.append(readyText,readyActions);
   async function checkModels(mode){const config=(await api('/api/state')).config||{},missing=['text',...(mode==='image'?['image']:[])].filter(k=>!config[k]?.base_url||!config[k]?.model);if(!missing.length)return true;readyText.textContent='当前方式需要配置'+missing.map(k=>k==='text'?'文本模型':'生图模型').join('和')+'。内置模板、素材和直接编辑可以离线使用；视觉模型用于可选的审阅。';readyActions.replaceChildren(button('使用离线模板',()=>{ready.close();$('welcome-gallery').click();}),button('前往模型设置',()=>{ready.close();$('open-settings').click();},true));ready.showModal();return false;}
   return {changed,saved,opened,renderHistory,checkModels,prepareExport,history,editInfo,saveCopy:()=>independentCopy(clone(editor.scene),true)};
