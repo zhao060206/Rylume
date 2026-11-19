@@ -1,13 +1,22 @@
 /** Reflow chrome without moving the document's visible center or changing its zoom. */
-export function preserveCanvasView(editor, change) {
+export function preserveCanvasView(editor, change, {keepScreenPosition=false}={}) {
   const width = editor.host.clientWidth, height = editor.host.clientHeight;
   const offset = editor.scene ? {...editor.offset} : null;
+  const origin = offset && keepScreenPosition ? editor.host.getBoundingClientRect() : null;
   const canvas=editor.scene?.canvas;
   // Dragging an object exits fit mode, even when the entire page still fits.
   // Keep that overview visible when an inspector takes part of its space.
   const fitted=!!editor.fitMode || !!(canvas && canvas.width_mm*96/25.4*editor.zoom <= width && canvas.height_mm*96/25.4*editor.zoom <= height);
   change();
-  if (!editor.scene) return;
+  if (!editor.scene || !offset) return;
+  if(origin){
+    const next=editor.host.getBoundingClientRect();
+    editor.fitMode=false;
+    editor.offset.x=offset.x+origin.left-next.left;
+    editor.offset.y=offset.y+origin.top-next.top;
+    editor.position();return;
+  }
+  if(editor.host.clientWidth===width&&editor.host.clientHeight===height)return;
   if(fitted&&editor.fit){editor.fit();return;}
   editor.fitMode=false;
   editor.offset.x = offset.x + (editor.host.clientWidth - width) / 2;

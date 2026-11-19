@@ -145,13 +145,18 @@ def layout_scene(scene,force=False):
         children=[o for o in scene['objects'] if o.get('parent_id')==parent['id']]
         for index,o in enumerate(children):
             w,h=DEFAULT_DIMS[o['type']];w=min(w,parent['w']*.65);h=min(h,parent['h']*.4)
-            if o.get('placement')=='outside':
+            note=ranked and any(r.get('callout') and r['source']==o['id'] and r['target']==parent['id'] for r in scene['relations'])
+            if note:
+                w=min(cw-8,max(parent['w'],_measure(o['label'],o.get('font_size_pt',8)*PT_MM)+2));h=3
+                x=max(4,min(cw-w-4,parent['x']+parent['w']/2-w/2));y=parent['y']+parent['h']+7+index*7
+                o['label_dy']=-2
+            elif o.get('placement')=='outside':
                 x=parent['x']+(parent['w']-w)/2;y=parent['y']-h-5
             elif o.get('placement')=='boundary':
                 x=parent['x']+parent['w']*(index+1)/(len(children)+1)-w/2;y=parent['y']-h/2
             else:
                 x=parent['x']+(parent['w']-w)/2;y=parent['y']+(parent['h']-h)*(index+1)/(len(children)+1)
-            _put(o,x,y,w,h,force);place_children(o)
+            _put(o,x,y,w,h,force if note else force and not (ranked and o.get('placement')=='outside'));place_children(o)
     for o in objects:place_children(o)
     return normalize_scene(scene)
 
@@ -175,6 +180,7 @@ def _label_lines(o):
     limit=max(5,o['w']) if o.get('type')=='text' else max(5,o['w']-(10 if o.get('state')=='flow_decision' else 5)) if o.get('state','').startswith('flow_') else max(24,min(42,o['w']+12))
     lines=[]
     for explicit in str(text).split('\n'):
+        start=len(lines)
         current='';words=explicit.split(' ') if ' ' in explicit else list(explicit)
         spacer=' ' if ' ' in explicit else ''
         for word in words:
@@ -182,6 +188,8 @@ def _label_lines(o):
             if current and _measure(candidate,fs)>limit+.001:lines.append(current);current=word
             else:current=candidate
         if current:lines.append(current)
+        if len(lines)-start>1 and len(lines[-1])==1 and len(lines[-2])>2 and any('\u4e00'<=c<='\u9fff' for c in explicit) and ' ' not in explicit:
+            joined=lines[-2]+lines[-1];cut=(len(joined)+1)//2;lines[-2:]=[joined[:cut],joined[cut:]]
     return lines or [''],fs
 
 
@@ -307,6 +315,7 @@ def connection_geometry(scene,r):
         tp = ('n' if dy > 0 else 's') if abs(dy) > abs(dx) * 1.15 else ('w' if dx >= 0 else 'e')
     def point(o,p,anchor=None):
         cx,cy=o['x']+o['w']/2,o['y']+o['h']/2
+        if o.get('depiction')=='anchor':return cx,cy
         if anchor:p=anchor['side']
         x,y={'e':(o['x']+o['w'],cy),'w':(o['x'],cy),'n':(cx,o['y']),'s':(cx,o['y']+o['h'])}.get(p,(cx,cy))
         if anchor:
@@ -431,6 +440,8 @@ def _relation(scene,r,palette):
     from relation_visuals import relation_parts, relation_label
     g=connection_geometry(scene,r);color=r.get('stroke') or ('#AD6460' if r['type']=='inhibits' else palette['primary'])
     p=[f'<g data-relation-id="{r["id"]}" data-relation-type="{r["type"]}" id="rel-{r["id"]}">']
+    if r.get('callout') and next(o for o in scene['objects'] if o['id']==r['target']).get('depiction')=='anchor':
+        p.append(f'<circle cx="{g["x2"]:.4f}" cy="{g["y2"]:.4f}" r=".7" fill="{color}" stroke="white" stroke-width=".25"/>')
     for tag,attrs in relation_parts(r['type'],(g['x1'],g['y1']),(g['x2'],g['y2']),
                                     (g['control']['x'],g['control']['y']),color,r.get('stroke_pt',1.05),r.get('indirect',False),
                                     anchored_start=bool(r.get('source_anchor')),anchored_end=bool(r.get('target_anchor'))):

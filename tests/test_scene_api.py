@@ -72,6 +72,32 @@ def test_catalog_disciplines_preserve_all_assets_and_category_provenance(studio)
     assert equipment and all(a['category']=='实验器材与流程' for a in equipment)
 
 
+def test_visual_history_survives_patch_delta_poll_and_reopen(studio):
+    job=example(studio);_,initial=studio(f'/api/jobs/{job}/scene')
+    previous={'status':'completed','revision':1,'findings':[{'message':'核对复合物'}],'raw':'original record'}
+    app_server.JOBS[job]['scene_vision']=previous
+    app_server._save_meta(app_server.JOBS[job])
+    oid=initial['scene']['objects'][0]['id']
+    status,delta=studio(f'/api/jobs/{job}/scene',{'base_revision':1,'response':'delta','operations':[{'op':'update','id':oid,'changes':{'x':initial['scene']['objects'][0]['x']+1}}]},'PATCH')
+    assert status==200 and delta['audit']['vision']['status']=='not_requested'
+    assert delta['audit']['vision_history']==[previous]
+    assert studio(f'/api/jobs/{job}/audit')[1]['audit']['vision_history']==[previous]
+    app_server.JOBS.clear();app_server._load_jobs()
+    assert studio(f'/api/jobs/{job}/scene')[1]['audit']['vision_history']==[previous]
+
+
+def test_layout_batch_is_atomic_and_rejects_scientific_advice(studio):
+    job=example(studio);_,initial=studio(f'/api/jobs/{job}/scene');a,b,c=initial['scene']['objects'][:3]
+    ops=[{'op':'update','id':o['id'],'changes':{k:a[k] for k in ('x','y','w','h')}} for o in (b,c)]
+    _,changed=studio(f'/api/jobs/{job}/scene',{'base_revision':1,'operations':ops},'PATCH')
+    chosen=[{'code':f['code'],'object_ids':f['object_ids']} for f in changed['audit']['findings'] if f['code']=='overlap']
+    assert len(chosen)>=2
+    status,_=studio(f'/api/jobs/{job}/layout-decision',{'base_revision':2,'findings':chosen+[{'code':'author-review','object_ids':[]}]})
+    assert status==400 and not app_server.JOBS[job].get('layout_decisions')
+    status,result=studio(f'/api/jobs/{job}/layout-decision',{'base_revision':2,'findings':chosen})
+    assert status==200 and all(f['status']=='acknowledged' for f in result['audit']['findings'] if f['code']=='overlap')
+
+
 def test_template_preview_is_non_mutating_then_can_be_applied_and_undone(studio):
     job_id=example(studio,'jak_stat');endpoint=f'/api/jobs/{job_id}/scene'
     _,initial=studio(endpoint)
@@ -106,6 +132,27 @@ def test_editor_http_save_conflict_reload_and_revision_pinned_export(studio):
     assert "EGF edited" not in svg
     assert saved["revision"]==1
     assert "data-object-id" in svg and "<image" not in svg
+
+
+def test_png_exports_at_different_resolutions_preserve_both_files(studio):
+    from PIL import Image
+
+    job_id = example(studio)
+    endpoint = f'/api/jobs/{job_id}/save-as'
+    status, normal = studio(endpoint, {'format': 'png', 'revision': 1, 'dpi': 300})
+    assert status == 200, normal
+    normal_path = Path(normal['path'])
+    original = normal_path.read_bytes()
+    status, high = studio(endpoint, {'format': 'png', 'revision': 1, 'dpi': 600})
+    assert status == 200, high
+    high_path = Path(high['path'])
+    assert high_path != normal_path
+    assert normal_path.read_bytes() == original
+    with Image.open(normal_path) as normal_image, Image.open(high_path) as high_image:
+        assert normal_image.size == (normal['width_px'], normal['height_px'])
+        assert high_image.size == (high['width_px'], high['height_px'])
+        assert round(normal_image.info['dpi'][0]) == 300
+        assert round(high_image.info['dpi'][0]) == 600
 
 
 def test_repeated_submission_returns_existing_job_without_second_model_call(studio,monkeypatch):

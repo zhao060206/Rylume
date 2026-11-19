@@ -15,6 +15,7 @@ export function workflowHint({scene,selectedIds=[],tool='select',connectStart=nu
   if(tool==='pan')return {title:'按住鼠标拖动，移动整张画布',detail:'需要移动单个图形时，回到「选择」工具。',action:'select',label:'回到选择'};
   if(!objects.length)return {title:'先放入第一个素材',detail:'点“添加素材”打开素材库，也可以直接输入一段文字。',action:'assets',label:'添加素材'};
   if(activeLabel&&selectedIds.length===1&&selectedIds[0]===activeLabel.id)return {title:'正在调整文字',detail:'直接拖动文字；方向键微调，Shift 加大步长。双击或点右侧按钮改字。',action:'edit',label:'修改文字'};
+  if(relation?.callout)return {title:'部位指示线',detail:'拖动末端圆点调整落点，拖动中间圆点调整弯曲。指示线不表示激活或抑制。',action:'select',label:'继续调整'};
   if(relation){const def=RELATION_DEFINITIONS.find(d=>d.id===relation.type);return {title:relation.type==='associates'?'这条连线表达什么？':'连线含义：'+(def?.title||'待确认'),detail:(def?.description||'在上方选择含义。')+' 移动图形时，连线会跟随。',action:'meaning',label:'查看连线含义'};}
   if(selected.length===1&&selected[0].locked)return {title:'这个对象已锁定',detail:'需要修改时，在图层中解除锁定。',action:'layers',label:'打开图层'};
   if(selected.length>1)return {title:`已选中 ${selected.length} 个对象`,detail:'一起拖动；在「排列」中对齐、等距分布或组合。',action:'arrange',label:'排列所选对象'};
@@ -48,7 +49,9 @@ export function setupNovice({state,editor,api,toast,flush,canLeave,openJob,refre
     savedPanels=null;refresh();
   };
   $('open-start').onclick=async()=>{
+    if(!$('welcome').hidden)return;
     if(state.id&&!await canLeave())return;
+    ws.dispatchEvent(new Event('workspace-panel-request'));
     savedPanels={left:ws.classList.contains('left-collapsed'),right:ws.classList.contains('properties-hidden')};
     preserveCanvasView(editor,()=>ws.classList.add('left-collapsed','properties-hidden'));
     $('welcome').hidden=false;refresh();

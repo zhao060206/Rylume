@@ -234,6 +234,7 @@ function renderAudit(){
  if(v.error)content.append(el('p','muted small',v.error));
  for(const [index,f]of (v.findings||[]).entries()){if(f.status==='dismissed')continue;const n=el('div','finding');n.append(el('strong','','模型意见 · 待核验'),el('div','',f.message));if(f.evidence)n.append(el('p','muted small',f.evidence));const dismiss=el('button','','核验后排除此建议');dismiss.onclick=async()=>{try{const data=await api(`/api/jobs/${S.id}/review-finding`,{base_revision:S.revision,index,reason:'作者核验后排除'});S.audit=data.audit;renderAudit();}catch(e){toast(e.message,true);}};n.append(dismiss);content.append(n);}
  if(v.raw){const details=el('details'),summary=el('summary','','审阅原文与诊断');details.append(summary,el('p','muted small',`模型：${v.model||'—'} · 修订 r${v.revision||S.revision}`),el('pre','review-raw',v.raw));for(const f of (v.findings||[]).filter(f=>f.status==='dismissed'))details.append(el('p','muted small',`已排除：${f.message}；${f.resolution||''}`));content.append(details);}
+ for(const old of (a.vision_history||[])){const details=el('details');details.append(el('summary','',`r${old.revision} 视觉记录 · 已过期，待重新核验`));for(const f of old.findings||[])details.append(el('p','',f.message+(f.status==='dismissed'?' · 已排除':'')));if(old.raw)details.append(el('pre','review-raw',old.raw));content.append(details);}
  content.append(el('p','muted small',a.author_confirmed?'作者已核对当前修订。':'当前修订尚未标记为作者核对。'));workspaceUI?.refresh();
 }
 async function openAI(){if(!S.revision||!editor.selectedIds.length)return toast('请先选择要修改的对象');if(!await flush())return;await annotationUI.forSelection([...editor.selectedIds]);}
@@ -291,7 +292,7 @@ annotationUI=setupAnnotations({state:S,editor,api,flush,toast,workspace:ws,canSu
   editor.updateDocument(data.scene,data.svg);saveStatus(`已保存 · r${S.revision}`);
   renderAudit();renderProperties();renderLayers();renderTools();workspaceUI?.refresh();await refreshJobs();
 }});
-reviewUI=setupReview({state:S,editor,api,flush,toast,showRight:workspaceUI.showRight,showLayers:()=>tab('layers')});
+reviewUI=setupReview({state:S,editor,api,flush,toast,openRelationDefinitions:relationsUI.openDefinitions,showLayers:()=>tab('layers')});
 $('open-check-toolbar').onclick=()=>workspaceUI.showRight('review',false);
 documentUI=setupDocumentWorkflows({state:S,editor,api,flush,toast,openJob,refreshJobs,follow});
 $('welcome-ai').onclick=()=>{tab('generate');$('brief-input').focus();};

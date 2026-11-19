@@ -64,7 +64,8 @@ def apply_presentation(scene, config):
         parent=by_id[parent_id];slot=(ch-24)/len(groups)
         parent['display_name']=parent.get('display_name') or parent['label']
         parent['label']=''
-        parent.update(x=cw*.10,y=14+row*slot,w=cw*.44,h=min(slot-10,cw*.34))
+        ph=min(slot-10,cw*.40)
+        parent.update(x=cw*.18,y=12+row*slot+(slot-ph)/2,w=cw*.56,h=ph)
         names=[]
         for i,(label,part,relation) in enumerate(items):
             name=part.get('display_name') or part['label'];names.append(name)
@@ -72,7 +73,7 @@ def apply_presentation(scene, config):
                         x=parent['x']+parent['w']/2,y=parent['y']+parent['h']/2)
             size=max(8,label.get('font_size_pt',8))
             text_width=sum(1 if ord(c)>127 else .55 for c in label['label'])*size*25.4/72
-            label.update(x=cw*.68,y=parent['y']+parent['h']*(i+1)/(len(items)+1)-2,w=min(cw*.24,max(8,text_width+2)),h=3,
+            label.update(x=cw*.80,y=parent['y']+parent['h']*(i+1)/(len(items)+1)-2,w=min(cw*.18,max(8,text_width+2)),h=3,
                          font_size_pt=max(8,label.get('font_size_pt',8)),role='annotation',label_dy=-3)
             relation.update(source=label['id'],target=part['id'],callout=True,source_port='w',target_port='e',stroke_pt=.7)
             if relation.get('label','').strip().lower() in ('指示线','引线','标注','关联','callout','pointer','leader line'):relation['label']=''
@@ -96,17 +97,67 @@ def locate_callouts(scene, config):
         result=pipeline.chat_json({**config,'text':source},[{'role':'user','content':[
             {'type':'text','text':'Locate these explicitly requested scientific parts in this generated illustration. Return JSON {parts:[{id,x,y,visible:true}]} with x,y normalized 0..1 in the attached image. Choose a point ON the named visible feature, not a label or empty background. If a feature is absent or ambiguous set visible=false, do not guess. Names: '+json.dumps(names,ensure_ascii=False)},
             {'type':'image_url','image_url':{'url':parent['illustration']['data']}}]}],temperature=0,max_tokens=1600,timeout=90,allow_fallback=False)
-        found={p.get('id'):p for p in result.get('parts',[]) if isinstance(p,dict)}
+        candidates={p.get('id'):p for p in result.get('parts',[]) if isinstance(p,dict)}
+        # A second pass sees numbered markers on the actual pixels rather
+        # than accepting the first coordinates as scientific evidence.
+        import base64,io
+        from PIL import Image,ImageDraw
+        with Image.open(io.BytesIO(base64.b64decode(parent['illustration']['data'].split(',')[1]))) as original:
+            pixels=original.convert('RGBA');marked=original.convert('RGB');iw,ih=marked.size
+        draw=ImageDraw.Draw(marked)
+        for index,item in enumerate(names,1):
+            p=candidates.get(item['id'],{});x,y=p.get('x'),p.get('y')
+            if type(x) in (float,int) and type(y) in (float,int) and all(math.isfinite(v) and 0<=v<=1 for v in (x,y)):
+                px,py=x*iw,y*ih;r=max(3,min(iw,ih)/160)
+                draw.ellipse((px-r,py-r,px+r,py+r),outline='red',width=2);draw.text((px+r+2,py),str(index),fill='red')
+        stream=io.BytesIO();marked.save(stream,'PNG')
+        verification=pipeline.chat_json({**config,'text':source},[{'role':'user','content':[
+            {'type':'text','text':'Verify every proposed marker against the named scientific feature in these pixels. Numbered red circles are candidates, not ground truth. Return JSON {parts:[{id,x,y,visible:true,evidence:"visible feature and why this point matches"}]}. Correct wrong coordinates (normalized 0..1). If absent or ambiguous set visible=false. Do not infer unseen anatomy. Candidates: '+json.dumps([dict(item,index=i+1,candidate=candidates.get(item['id'])) for i,item in enumerate(names)],ensure_ascii=False)},
+            {'type':'image_url','image_url':{'url':'data:image/png;base64,'+base64.b64encode(stream.getvalue()).decode()}}]}],temperature=0,max_tokens=2200,timeout=90,allow_fallback=False)
+        found={p.get('id'):p for p in verification.get('parts',[]) if isinstance(p,dict)}
         missing=[]
         for _,part,_ in items:
             point=found.get(part['id'],{});x,y=point.get('x'),point.get('y')
             if point.get('visible') is not True or type(x) not in (float,int) or type(y) not in (float,int) or not all(math.isfinite(v) and 0<=v<=1 for v in (x,y)):
                 missing.append(part.get('display_name') or part['id']);continue
+            snapped=visible_pixel_point(pixels,x,y)
+            if snapped is None:
+                missing.append(part.get('display_name') or part['id']);continue
+            x,y=snapped
             # The cropped image is fitted inside the parent's frame (SVG meet).
-            import base64,io
-            from PIL import Image
-            with Image.open(io.BytesIO(base64.b64decode(parent['illustration']['data'].split(',')[1]))) as im:iw,ih=im.size
             scale=min(parent['w']/iw,parent['h']/ih);w,h=iw*scale,ih*scale
             part.update(x=max(parent['x'],min(parent['x']+parent['w']-.5,parent['x']+(parent['w']-w)/2+x*w-.25)),y=max(parent['y'],min(parent['y']+parent['h']-.5,parent['y']+(parent['h']-h)/2+y*h-.25)),edit_status='needs_review')
+            part['localization']={'status':'model_checked','evidence':str(point.get('evidence') or '模型已二次对照像素；仍需作者核对')[:1000],'x':x,'y':y}
+        arrange_callout_labels(scene,parent,items)
         if missing:raise SceneError('插画中未能可靠定位：'+'、'.join(missing)+'。已保留草稿，请核对或重绘主体。')
     return scene
+
+
+def visible_pixel_point(image,x,y):
+    """Correct only sub-feature whitespace error; never bridge a missing part."""
+    import numpy as np
+    px=min(image.width-1,max(0,round(x*(image.width-1))));py=min(image.height-1,max(0,round(y*(image.height-1))))
+    rgb=np.asarray(image);ink=(rgb[:,:,3]>128)&(rgb[:,:,:3].min(axis=2)<245)
+    if ink[py,px]:return x,y
+    radius=max(2,round(min(image.size)*.03));left=max(0,px-radius);top=max(0,py-radius)
+    ys,xs=np.nonzero(ink[top:min(image.height,py+radius+1),left:min(image.width,px+radius+1)])
+    if not len(xs):return None
+    distances=(xs+left-px)**2+(ys+top-py)**2;index=distances.argmin()
+    if distances[index]>radius**2:return None
+    return ((xs[index]+left)/(image.width-1),(ys[index]+top)/(image.height-1))
+
+
+def arrange_callout_labels(scene,parent,items):
+    """Place leaders on the nearest side in anchor order, keeping them distinct."""
+    cw,ch=scene['canvas']['width_mm'],scene['canvas']['height_mm']
+    for side in ('left','right'):
+        group=[item for item in items if ('left' if item[1]['x']+item[1]['w']/2<parent['x']+parent['w']/2 else 'right')==side]
+        group.sort(key=lambda item:item[1]['y'])
+        if not group:continue
+        gap=max(6,min(10,(ch-16)/max(1,len(group))))
+        desired=[max(8,min(ch-8-gap*(len(group)-1-i),part['y'])) for i,(_,part,_) in enumerate(group)]
+        for i in range(1,len(desired)):desired[i]=max(desired[i],desired[i-1]+gap)
+        for y,(label,part,relation) in zip(desired,group):
+            label['y']=y;label['x']=max(2,parent['x']-label['w']-5) if side=='left' else min(cw-label['w']-2,parent['x']+parent['w']+5)
+            relation.update(source_port='e' if side=='left' else 'w',target_port='auto')
+            relation.pop('control',None)

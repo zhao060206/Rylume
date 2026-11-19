@@ -10,9 +10,11 @@ export function setupReleaseNotes({api,toast}){
  let data=null;
  const notice=el('aside','whats-new-corner');notice.hidden=true;notice.setAttribute('aria-label','本次更新说明');
  const dismiss=el('button','icon-button','×');dismiss.setAttribute('aria-label','知道了，关闭更新说明');
- const label=el('strong'),copy=el('p'),read=el('button','text-button','查看更新日志');notice.append(dismiss,label,copy,read);document.body.append(notice);
+ const read=el('button','release-note-link');read.type='button';read.setAttribute('aria-label','查看本次更新日志');
+ read.innerHTML='<svg class="icon" aria-hidden="true"><use href="#icon-journal"></use></svg><span>本次更新</span>';
+ dismiss.type='button';notice.append(read,dismiss);document.querySelector('.app-sidebar .sidebar-footer').prepend(notice);
  async function acknowledge(){if(!data)return;try{await api('/api/release-notes/acknowledge',{version:data.current_version});notice.hidden=true;}catch(e){toast(e.message,true);}}
  async function open(){try{data=await api('/api/release-notes');body.replaceChildren();for(const release of data.releases){const section=el('section','release-entry');section.append(el('h3','',`v${release.version}`),el('time','',release.date));const list=el('ul');for(const item of release.items)list.append(el('li','',item));section.append(list);body.append(section);}showFloatingWindow(dialog);await acknowledge();}catch(e){toast(e.message,true);}}
  entry.onclick=read.onclick=open;dismiss.onclick=acknowledge;
- return {open,async ready(){try{data=await api('/api/release-notes');const current=data.releases.find(r=>r.version===data.current_version);if(data.unread&&current){label.textContent=`Rylume ${data.current_version} · 本次更新`;copy.textContent=current.items.slice(0,2).map(s=>s.split('：')[0]).join(' · ');notice.hidden=false;}}catch{}}};
+ return {open,async ready(){try{data=await api('/api/release-notes');const current=data.releases.find(r=>r.version===data.current_version);if(data.unread&&current){read.title=`查看 Rylume ${data.current_version} 更新日志`;notice.hidden=false;}}catch{}}};
 }

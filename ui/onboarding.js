@@ -11,7 +11,7 @@ export function lessonEvidence(scene,baseline,selectedIds=[]){
 export function practiceScene(){
  return {schema_version:2,title:'我的第一张练习图',source_text:'操作练习：准备样本 → 进行测量 → 分析结果。此图用于学习编辑，不代表特定实验方案。',layout:'process',
   canvas:{width_mm:180,height_mm:110},style:{colorway:'lagoon',font_size_pt:10,min_font_size_pt:7},
-  objects:['准备样本','进行测量','分析结果'].map((label,i)=>({id:'practice_'+i,type:'process',label,x:16+i*54,y:34,w:40,h:25,fill:['#e4eeeb','#e5edf2','#f3ecdf'][i],stroke:'#55746c',font_size_pt:10})),
+  objects:['准备样本','进行测量','分析结果'].map((label,i)=>({id:'practice_'+i,type:'process',state:'flow_step',label,x:16+i*54,y:34,w:40,h:25,fill:['#e4eeeb','#e5edf2','#f3ecdf'][i],stroke:'#55746c',font_size_pt:10})),
   relations:[0,1].map(i=>({id:'practice_link_'+i,source:'practice_'+i,target:'practice_'+(i+1),type:'sequence'})),
   provenance:{method:'onboarding-practice'}};
 }

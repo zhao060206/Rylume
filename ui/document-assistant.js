@@ -4,6 +4,12 @@ export const DOCUMENT_API='/api/document-assistant';
 export const documentReady=d=>d.status==='ready'&&!d.archived;
 export const activeDocumentTask=value=>['queued','converting','running'].includes(value?.status);
 export const documentLength=n=>n<1000?n+' 字':(n/1000).toFixed(1)+' 千字';
+export function uploadSummary(documents,ids,errors=[]){
+ const batch=documents.filter(d=>ids.has(d.id)),waiting=batch.filter(activeDocumentTask).length;
+ const ready=batch.filter(documentReady).length,failed=batch.filter(d=>['failed','cancelled'].includes(d.status)).length;
+ if(waiting)return {text:`已保留 ${batch.length} 份文件，${waiting} 份正在转换；${ready} 份 Markdown 已就绪。`+(errors.length?' '+errors.join('；'):''),error:!!errors.length};
+ return {text:`转换已结束：${ready} 份 Markdown 已就绪`+(failed?`，${failed} 份失败或取消，请查看对应文件并重试`:'')+'。'+(errors.length?' '+errors.join('；'):''),error:!!(failed||errors.length)};
+}
 export function selectedDocumentIds(documents,selected){return documents.filter(d=>selected.has(d.id)&&!d.archived).map(d=>d.id);}
 export function canAnalyzeDocuments(documents,selected){const chosen=documents.filter(d=>selected.has(d.id)&&!d.archived);return chosen.length>0&&chosen.length<=8&&chosen.every(documentReady);}
 export function canReuseFigure(suggestion){return !!suggestion?.prompt&&suggestion.kind!=='data_chart'&&suggestion.evidence?.length>0;}
@@ -20,7 +26,7 @@ export function setupDocumentAssistant({state,editor,api,toast,composer}){
  document.body.append(pane);
  const preview=make('dialog','document-markdown-dialog');preview.setAttribute('aria-labelledby','document-preview-title');preview.innerHTML=`<div class="dialog-heading"><h2 id="document-preview-title">Markdown</h2><button type="button" class="icon-button" id="document-preview-close" aria-label="关闭 Markdown 预览">×</button></div><p id="document-preview-meta"></p><textarea id="document-markdown" readonly aria-label="转换后的 Markdown"></textarea><div class="dialog-actions"><a class="button" id="document-markdown-download">下载 Markdown</a><button type="button" class="button" id="document-markdown-copy">复制文本</button></div>`;document.body.append(preview);
  const promptDialog=make('dialog','document-prompt-dialog');promptDialog.setAttribute('aria-labelledby','document-prompt-title');promptDialog.innerHTML=`<div class="dialog-heading"><h2 id="document-prompt-title">绘图提示词</h2><button type="button" class="icon-button" id="document-prompt-close" aria-label="关闭文档提示词">×</button></div><p>可以先改写，再放入 AI 绘图描述。此操作不会立即生成图片。</p><textarea id="document-figure-prompt" maxlength="8000" aria-label="文档建议绘图提示词"></textarea><div class="dialog-actions"><button type="button" class="button" id="document-prompt-copy">复制提示词</button><button type="button" class="button primary" id="document-prompt-use">用于 AI 绘图</button></div>`;document.body.append(promptDialog);
- let opened=false,data=null,selected=new Set(),selectionInitialized=false,listSignature='',historySignature='',timer=null,loading=false,uploading=false,submitting=false,currentAnalysis=null,resultSignature='',requestEpoch=0,chosenPrompt=null;
+ let opened=false,data=null,selected=new Set(),selectionInitialized=false,listSignature='',historySignature='',timer=null,loading=false,uploading=false,submitting=false,currentAnalysis=null,resultSignature='',requestEpoch=0,chosenPrompt=null,uploadIds=new Set(),uploadErrors=[];
  const button=(label,run,cls='text-button')=>{const b=make('button',cls,label);b.type='button';b.onclick=run;return b;};
  const message=(text,error=false)=>{$('document-upload-status').textContent=text;$('document-upload-status').classList.toggle('error',error);};
  function setOpen(value,focusToggle=true){
@@ -78,6 +84,7 @@ export function setupDocumentAssistant({state,editor,api,toast,composer}){
   if(loading)return;loading=true;
   try{
    data=await api(DOCUMENT_API);const visible=data.documents.filter(d=>!d.archived);if(!selectionInitialized){selectionInitialized=true;visible.filter(documentReady).slice(0,8).forEach(d=>selected.add(d.id));}renderDocuments();
+   if(!uploading&&(uploadIds.size||uploadErrors.length)){const summary=uploadSummary(data.documents,uploadIds,uploadErrors);message(summary.text,summary.error);}
    $('document-model').textContent=data.text_model.configured?'文本模型：'+data.text_model.model:'尚未配置文本模型';
    $('document-converter-note').textContent=data.capabilities.converter+'（MIT）。'+(data.capabilities.legacy_office_available?'本机 LibreOffice 已就绪，可转换旧版 Office。':'旧版 PPT、DOC、RTF 需要本机 LibreOffice，或先另存为 PPTX / DOCX。');
    if(!$('document-method-sources').children.length)for(const source of data.capabilities.prompt_sources){const link=make('a','',source.name+' · '+source.license);link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';$('document-method-sources').append(link);}
@@ -86,11 +93,11 @@ export function setupDocumentAssistant({state,editor,api,toast,composer}){
   }catch(e){message('连接文档助手失败：'+e.message,true);}finally{loading=false;clearTimeout(timer);if(opened)timer=setTimeout(refresh,(data?.documents.some(activeDocumentTask)||data?.analyses.some(activeDocumentTask))?1000:6000);}
  }
  async function upload(files){
-  if(uploading||!files.length)return;uploading=true;controls();
+  if(uploading||!files.length)return;uploading=true;uploadIds=new Set();uploadErrors=[];controls();
   try{for(let index=0;index<files.length;index++){
-   const file=files[index];if(file.size>16*1024*1024){message(file.name+' 超过 16 MB，未上传。',true);continue;}
+   const file=files[index];if(file.size>16*1024*1024){uploadErrors.push(file.name+' 超过 16 MB，未上传');message(uploadErrors.at(-1),true);continue;}
    message('正在保存 '+(index+1)+' / '+files.length+'：'+file.name);
-   try{const content=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result.split(',',2)[1]);reader.onerror=()=>reject(Error('文件读取失败'));reader.readAsDataURL(file);});const response=await api(DOCUMENT_API+'/upload',{name:file.name,data:content});selected.add(response.document.id);listSignature='';message(response.duplicate?'此文件已在库中，已选中。':'文件已保留，正在本机转换。');}catch(e){message(file.name+'：'+e.message,true);}
+   try{const content=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result.split(',',2)[1]);reader.onerror=()=>reject(Error('文件读取失败'));reader.readAsDataURL(file);});const response=await api(DOCUMENT_API+'/upload',{name:file.name,data:content});selected.add(response.document.id);uploadIds.add(response.document.id);listSignature='';message(response.duplicate?'此文件已在库中，已选中。':'文件已保留，正在本机转换。');}catch(e){uploadErrors.push(file.name+'：'+e.message);message(uploadErrors.at(-1),true);}
   }}finally{uploading=false;$('document-files').value='';await refresh();controls();}
  }
  function usePrompt(text){

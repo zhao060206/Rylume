@@ -35,7 +35,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;};
   let modelConfig={},mode='vector',rightTab='properties',questions=[],answers={},wizardSource='',proposed=null,originalZoom=1;
 
-  function showRight(name='properties',compact=true){
+  function showRight(name='properties',keepScreenPosition=false){
     $('workspace').dispatchEvent(new Event('workspace-panel-request'));
     preserveCanvasView(editor,()=>{
     rightTab=name;$('workspace').classList.remove('properties-hidden');
@@ -44,7 +44,9 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     for(const n of document.querySelectorAll('[data-inspector]'))n.setAttribute('aria-selected',String(n.dataset.inspector===name));
     $('property-content').hidden=name!=='properties';$('inspector-review').hidden=name!=='review';$('inspector-task').hidden=name!=='task';
     $('properties').dataset.inspector=name;
-    });syncPanelButtons($('workspace'));
+    },{keepScreenPosition});
+    if(keepScreenPosition)editor.ensureSelectionVisible({onlyIfCenterHidden:true});
+    syncPanelButtons($('workspace'));
     refresh();
   }
   document.querySelectorAll('[data-inspector]').forEach(b=>b.onclick=()=>showRight(b.dataset.inspector));
@@ -213,7 +215,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   return {refresh,showRight,setMode,legacyZoom,getMode:()=>mode,selection(){
     if(!$('panel-layers').hidden&&!$('workspace').classList.contains('left-collapsed')){refresh();return;}
     if(editor.selectedIds.length&&!$('workspace').classList.contains('annotations-open')){
-      if($('workspace').classList.contains('properties-hidden')||rightTab!=='properties')showRight('properties');else refresh();
+      if($('workspace').classList.contains('properties-hidden')||rightTab!=='properties')showRight('properties',true);else refresh();
     }else refresh();
   },payload(text){
     const enhanced=generationBrief(state,text);

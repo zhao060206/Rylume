@@ -39,6 +39,7 @@ export function setupWorkbench({editor,workspace}){
   const ocrPanel=document.createElement('section'),ocrStatus=document.createElement('p'),ocrUse=document.createElement('button'),ocrConfirm=document.createElement('button');
   ocrPanel.className='quick-ocr-review';ocrPanel.hidden=true;ocrStatus.className='muted small';ocrUse.type=ocrConfirm.type='button';ocrUse.className=ocrConfirm.className='button full';ocrConfirm.textContent='已对照原图，确认当前文字';ocrPanel.append(ocrStatus,ocrUse,ocrConfirm);$('quick-fields').after(ocrPanel);
   const importedStructureNote=document.createElement('p');importedStructureNote.className='muted small';importedStructureNote.hidden=true;importedStructureNote.textContent='这是从图片识别的独立结构；内部文字随其移动。原位置按周围颜色估计补底，无法恢复被遮挡的真实细节，请移动后对照原图。';ocrPanel.after(importedStructureNote);
+  const calloutNote=document.createElement('p');calloutNote.className='muted small';calloutNote.hidden=true;calloutNote.textContent='这是文字与部位之间的指示线。拖动末端圆点调整指向位置，拖动中间圆点调整弯曲；它不表示激活或抑制。';importedStructureNote.after(calloutNote);
   function selectedText(){return editor.scene?.objects.find(o=>editor.selectedIds.length===1&&editor.selectedIds[0]===o.id&&o.ocr);}
   ocrUse.onclick=()=>{const o=selectedText();if(o?.ocr.suggested)editor.changeSelection({label:o.ocr.suggested,ocr:{...o.ocr,confirmed:true}});};
   ocrConfirm.onclick=()=>{const o=selectedText();if(o)editor.changeSelection({ocr:{...o.ocr,confirmed:true}});};
@@ -80,7 +81,8 @@ export function setupWorkbench({editor,workspace}){
       else contextual.hidden=hideContext;
     }
     document.querySelector('.quick-edit').setAttribute('aria-label',relations.length?'连线编辑':'所选对象快捷编辑');
-    $('relation-context').hidden=editor.tool!=='connect'&&!relations.length;
+    const callouts=relations.some(r=>r.callout);calloutNote.hidden=!callouts;
+    $('relation-context').hidden=callouts||editor.tool!=='connect'&&!relations.length;
 
     $('quick-fields').hidden=!count&&editor.tool!=='connect';$('quick-empty').hidden=true;
     $('quick-count').textContent=count===1?(relations.length?'所选连线':o?.display_name||'所选对象'):`已选 ${count} 项`;

@@ -13,6 +13,7 @@ export function relationChoices(editor,{compact=false,types=null}={}){
     title.textContent=def.title;description.textContent=def.description;body.append(title,description);button.append(body);
     button.onclick=()=>{
       const relations=selected();
+      if(relations.some(r=>r.callout))return editor.onStatus('部位指示线仅用于标注位置。要表示科学作用，请另建对象之间的连线。');
       if(relations.length)editor.applyOperations(relations.map(r=>({op:'update_relation',id:r.id,changes:{type:def.id,...(def.id==='associates'?{uncertain:true}:{})}})),'更改连线含义');
       editor.relationType=def.id;
       editor.host.dispatchEvent(new CustomEvent('editor-relation-change'));
@@ -24,7 +25,7 @@ export function relationChoices(editor,{compact=false,types=null}={}){
 }
 
 export function pendingRelationDefinitions(scene,unsaved=[]){
-  const ids=new Set(unsaved);return (scene?.relations||[]).filter(r=>r.uncertain||ids.has(r.id));
+  const ids=new Set(unsaved);return (scene?.relations||[]).filter(r=>!r.callout&&(r.uncertain||ids.has(r.id)));
 }
 export function confirmedDefinition(relation,type,label){
   if(!RELATION_DEFINITIONS.some(d=>d.id===type))throw Error('请选择有效的连线含义');
@@ -57,10 +58,10 @@ export function setupRelations(editor,{flush=async()=>true,getDocumentId=()=>edi
   const definitionClose=document.createElement('button');definitionClose.className='icon-button';definitionClose.textContent='×';definitionClose.setAttribute('aria-label','关闭连线定义');definitionClose.onclick=()=>definitions.close();definitionHead.append(definitionTitle,definitionClose);
   const explanation=document.createElement('p');explanation.className='muted';explanation.textContent='核对方向、类型和科学依据，再保存定义。此提醒不进入导出图片；也可以暂时保留待核对。';
   const rows=document.createElement('div');rows.className='relation-definition-list';definitions.append(definitionHead,explanation,rows);document.body.append(definitions);
-  const unsaved=new Map();let openedDocument=null;
+  const unsaved=new Map();let openedDocument=null,openedRelation=null;
   const unsavedIds=()=>unsaved.get(getDocumentId())||new Set();
   function renderDefinitions(){
-    rows.replaceChildren();const scene=editor.scene,key=getDocumentId(),pending=pendingRelationDefinitions(scene,unsavedIds());
+    rows.replaceChildren();const scene=editor.scene,key=getDocumentId(),pending=pendingRelationDefinitions(scene,unsavedIds()).filter(r=>!openedRelation||r.id===openedRelation);
     if(!pending.length){const done=document.createElement('p');done.className='relation-definitions-done';done.textContent='这些连线的定义已保存。';rows.append(done);return;}
     for(const r of pending){
       const card=document.createElement('section');card.className='relation-definition-card';
@@ -84,7 +85,14 @@ export function setupRelations(editor,{flush=async()=>true,getDocumentId=()=>edi
       actions.append(locate,save);card.append(names,typeLabel,description,textLabel,actions,message);rows.append(card);
     }
   }
-  pendingButton.onclick=()=>{openedDocument=getDocumentId();renderDefinitions();definitions.showModal();};
+  function openDefinitions(relationId=null){
+    if(relationId&&!pendingRelationDefinitions(editor.scene,unsavedIds()).some(r=>r.id===relationId))return false;
+    openedDocument=getDocumentId();openedRelation=relationId;renderDefinitions();
+    if(!definitions.open)definitions.showModal();
+    if(relationId)rows.querySelector('select')?.focus();
+    return true;
+  }
+  pendingButton.onclick=()=>openDefinitions();
   function refresh(){
     const pending=pendingRelationDefinitions(editor.scene,unsavedIds());pendingButton.hidden=!pending.length;pendingButton.textContent=pending.length+' 条连线待核对';pendingButton.title='核对类型与说明，然后保存定义（不会显示在导出图中）';
     if(definitions.open&&openedDocument!==getDocumentId())definitions.close();
@@ -94,5 +102,5 @@ export function setupRelations(editor,{flush=async()=>true,getDocumentId=()=>edi
     select.value=editor.relationType||'associates';
     for(const b of document.querySelectorAll('[data-relation-choice]'))b.setAttribute('aria-pressed',String(b.dataset.relationChoice===type));
   }
-  editor.host.addEventListener('editor-relation-change',refresh);refresh();return{refresh};
+  editor.host.addEventListener('editor-relation-change',refresh);refresh();return{refresh,openDefinitions};
 }

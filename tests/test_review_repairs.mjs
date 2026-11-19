@@ -1,6 +1,13 @@
 import assert from 'node:assert/strict';
 import {preservePropertyState} from '../ui/property-state.js';
 import {preserveCanvasView} from '../ui/panel-layout.js';
+import {findingPresentation} from '../ui/review-ui.js';
+
+const finding={code:'uncertain-relation',object_ids:['r_internal']};
+const figure={objects:[{id:'first',label:'采集样本'},{id:'second',label:'分析结果'}],relations:[{id:'r_internal',source:'first',target:'second',label:''}]};
+const advice=findingPresentation(finding,figure);
+assert.match(advice.detail,/采集样本 → 分析结果/);
+assert.doesNotMatch(advice.detail,/r_internal/);
 
 const document={activeElement:null};
 const parent={ownerDocument:document,scrollTop:40,nodes:[],contains:n=>!!n&&parent.nodes.includes(n),querySelectorAll(selector){return selector==='details[open]'?this.nodes.filter(n=>n.open):selector==='details'?this.nodes:[];}};

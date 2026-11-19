@@ -51,6 +51,5 @@ test('the desktop shell has one local stylesheet, valid targets, and no lost edi
  for(const id of [...html.matchAll(/(?:data-close|data-command|aria-controls)="([^"]+)"/g)].map(m=>m[1])) assert.ok(ids.includes(id),id);
  const css=await readFile(new URL('../ui/workbench-ui.css',import.meta.url),'utf8');
  assert.match(css,/@layer features, components, workspace, panels/);
- assert.match(css,/\.whats-new-corner \{position:fixed/);
  assert.match(css,/prefers-reduced-motion:reduce/);
 });

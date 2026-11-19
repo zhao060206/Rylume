@@ -146,7 +146,7 @@ export function connectionAnchor(o,point,zoom=1,free=false){
   return {anchor:nearestBoundary(o,point)};
 }
 export function connectionTarget(scene,point,zoom=1,exclude=null,free=false){
-  const eligible=o=>o.id!==exclude&&o.visible!==false&&!o.locked&&o.role!=='context';
+  const eligible=o=>o.id!==exclude&&o.visible!==false&&!o.locked&&o.role!=='context'&&o.source_role!=='arrow';
   const inside=hitObjects(scene,point).find(eligible);
   if(inside)return {object:inside,...connectionAnchor(inside,point,zoom,free)};
   const tolerance=10/(PXMM*zoom);
@@ -157,6 +157,20 @@ export function connectionTarget(scene,point,zoom=1,exclude=null,free=false){
   return candidates[0]||null;
 }
 let measureContext;
+export function resizeHandles(o,unit){
+  const small=Math.min(o.w,o.h)<24*unit;
+  const left=o.x-(small?7*unit:0),right=o.x+o.w+(small?7*unit:0);
+  const top=o.y-(small?7*unit:0),bottom=o.y+o.h+(small?7*unit:0);
+  const corners=[['nw',left,top,'nwse-resize'],['ne',right,top,'nesw-resize'],['se',right,bottom,'nwse-resize'],['sw',left,bottom,'nesw-resize']];
+  return small?corners:[...corners,['n',o.x+o.w/2,o.y,'ns-resize'],['e',o.x+o.w,o.y+o.h/2,'ew-resize'],['s',o.x+o.w/2,o.y+o.h,'ns-resize'],['w',o.x,o.y+o.h/2,'ew-resize']];
+}
+export function fitEditedText(o,changes,scene=null){
+  if(o.type!=='text'||typeof changes.label!=='string'||changes.w!=null||changes.label===o.label||o.state==='import_text')return changes;
+  const fs=(changes.font_size_pt||o.font_size_pt||8)*25.4/72;
+  const w=Math.max(o.w,...changes.label.split('\n').map(line=>measureMM(line,fs)+2));
+  const pinnedRight=scene?.relations.some(r=>r.callout&&r.source===o.id&&r.source_port==='e');
+  return {...changes,w,...(pinnedRight&&changes.x==null?{x:o.x+o.w-w}:{})};
+}
 function measureMM(text,fs){
   try{measureContext ||= document.createElement('canvas').getContext('2d');
     measureContext.font=[...text].some(c=>c.charCodeAt(0)>255)?'1000px "Microsoft YaHei"':'1000px Arial';
@@ -205,6 +219,7 @@ export function edgeGeometry(scene, r, preview=null) {
   }
   const point = (o, p) => {
     let x = o.x + o.w / 2, y = o.y + o.h / 2;
+    if(o.depiction==='anchor')return {x,y};
     if (p === 'e') x = o.x + o.w;
     if (p === 'w') x = o.x;
     if (p === 'n') y = o.y;
@@ -256,17 +271,18 @@ function labelLines(o) {
   const text = o.label || '', fs = Math.max(7, o.font_size_pt || 8) * 25.4 / 72;
   if(o.state==='import_text')return {lines:text.split('\n'),fs};
   const limit = o.type==='text'?Math.max(5,o.w||18):(o.state||'').startsWith('flow_')?Math.max(5,o.w-(o.state==='flow_decision'?10:5)):Math.max(24, Math.min(42, (o.w || 18) + 12));
-  const hasSpace = text.includes(' ');
-  const words = hasSpace ? text.split(' ') : [...text];
-  const spacer = hasSpace ? ' ' : '';
-  const lines = []; let current = '';
+  const lines = [];
   const measure = str => measureMM(str,fs);
-  for (const word of words) {
-    const cand = current ? current + spacer + word : word;
-    if (current && measure(cand) > limit + .001) { lines.push(current); current = word; }
-    else current = cand;
+  for(const explicit of text.split('\n')){
+    const start=lines.length,hasSpace=explicit.includes(' '),words=hasSpace?explicit.split(' '):[...explicit],spacer=hasSpace?' ':'';let current='';
+    for (const word of words) {
+      const cand = current ? current + spacer + word : word;
+      if (current && measure(cand) > limit + .001) { lines.push(current); current = word; }
+      else current = cand;
+    }
+    if(current)lines.push(current);
+    if(lines.length-start>1&&lines.at(-1).length===1&&lines.at(-2).length>2&&/[\u4e00-\u9fff]/.test(explicit)&&!hasSpace){const joined=lines.at(-2)+lines.at(-1),cut=Math.ceil(joined.length/2);lines.splice(-2,2,joined.slice(0,cut),joined.slice(cut));}
   }
-  if (current) lines.push(current);
   return { lines: lines.length ? lines : [''], fs };
 }
 
@@ -528,13 +544,24 @@ export class SceneEditor {
   }
 
   /** Newly inserted items stay visible, without centering the paper after every click. */
-  ensureSelectionVisible(){
+  ensureSelectionVisible({onlyIfCenterHidden=false}={}){
     if(!this.doc)return;
     const objects=this.doc.objects.filter(o=>this.selected.has(o.id)&&o.visible!==false);
     if(!objects.length)return;
     const x=Math.min(...objects.map(o=>o.x))-2,y=Math.min(...objects.map(o=>o.y))-2;
     const w=Math.max(...objects.map(o=>o.x+o.w))-x+2,h=Math.max(...objects.map(o=>o.y+o.h))-y+8;
     const width=this.host.clientWidth,height=this.host.clientHeight;
+    if(onlyIfCenterHidden){
+      const scale=PXMM*this.zoom,centerX=(x+w/2)*scale+this.offset.x,centerY=(y+h/2)*scale+this.offset.y;
+      const pan=(center,size,span)=>{
+        if(center>=12&&center<=size-12)return 0;
+        const inset=Math.min(size/2,span/2+16);
+        return Math.min(Math.max(center,inset),size-inset)-center;
+      };
+      const dx=pan(centerX,width,w*scale),dy=pan(centerY,height,h*scale);
+      if(dx||dy){this.offset.x+=dx;this.offset.y+=dy;this.fitMode=false;this.position();}
+      return;
+    }
     const zoom=Math.max(.1,Math.min(this.zoom,(width-80)/(w*PXMM),(height-120)/(h*PXMM)));
     let ox=this.offset.x,oy=this.offset.y;
     const left=x*PXMM*zoom+ox,top=y*PXMM*zoom+oy;
@@ -734,6 +761,7 @@ export class SceneEditor {
       group.setAttribute('aria-label',`${r.callout?'部位指示线':RELATION_DEFINITIONS.find(t=>t.id===r.type)?.title}: ${a.label||a.display_name} → ${b.label||b.display_name}${r.indirect?' · 间接':''}${r.uncertain?' · 含义待核对':''}`);
       group.append(node('path',{d:g.path,fill:'none',stroke:'transparent','stroke-width':10,'vector-effect':'non-scaling-stroke','data-relation-hit':r.id}));
       for(const[tag,attrs]of relationParts(r.type,g.start,g.end,g.control,color,r.stroke_pt||1.05,r.indirect,{start:!!r.source_anchor,end:!!r.target_anchor}))group.append(node(tag,attrs));
+      if(r.callout&&b.depiction==='anchor')group.append(node('circle',{cx:g.end.x,cy:g.end.y,r:.7,fill:color,stroke:'white','stroke-width':.25,'data-callout-point':b.id}));
       const label=relationLabel(this.doc,r);
       if(label){
         const width=measureMM(label,7*25.4/72)+1.2;
@@ -777,16 +805,7 @@ export class SceneEditor {
           fill: 'none', stroke: '#3d71c7', 'stroke-width':lineWidth, 'pointer-events': 'none'
         }));
         if (this.selected.size === 1 && !o.locked) {
-          const handles=[
-            ['nw',o.x,o.y,'nwse-resize'],
-            ['n',o.x+o.w/2,o.y,'ns-resize'],
-            ['ne',o.x+o.w,o.y,'nesw-resize'],
-            ['e',o.x+o.w,o.y+o.h/2,'ew-resize'],
-            ['se',o.x+o.w,o.y+o.h,'nwse-resize'],
-            ['s',o.x+o.w/2,o.y+o.h,'ns-resize'],
-            ['sw',o.x,o.y+o.h,'nesw-resize'],
-            ['w',o.x,o.y+o.h/2,'ew-resize']
-          ];
+          const handles=resizeHandles(o,unit);
           for (const [corner, x, y, cur] of handles) {
             selection.append(node('rect', {
               x: x-handleSize/2, y: y-handleSize/2, width:handleSize, height:handleSize,
@@ -808,11 +827,14 @@ export class SceneEditor {
       if (r) {
         const g = this.geometry(r);
         if (g) {
-          for (const [k, p] of [['start', g.start], ['end', g.end], ['control', g.control]]) {
-            overlay.append(node('circle', {
+          for (const [k, p] of [['control', g.control], ['start', g.start], ['end', g.end]]) {
+            const grip=node('g',{'data-edge-handle':k,'data-owner':r.id,cursor:'move'});
+            grip.append(node('circle',{cx:p.x,cy:p.y,r:7*unit,fill:'transparent','pointer-events':'all'}));
+            grip.append(node('circle', {
               cx:p.x,cy:p.y,r:handleSize/2,fill:k==='control'?'#dae6fc':'#fff',
-              stroke:'#3d71c7','stroke-width':lineWidth,'data-edge-handle':k,'data-owner':r.id,cursor:'move'
+              stroke:'#3d71c7','stroke-width':lineWidth,'pointer-events':'none'
             }));
+            overlay.append(grip);
           }
         }
       }
@@ -1026,6 +1048,7 @@ export class SceneEditor {
     } else if (g.kind === 'edge') {
       const r = this.doc.relations.find(r => r.id === g.id);
       if (r && g.handle === 'control') r.control = { x: point.x, y: point.y };
+      else if(r?.callout&&g.handle==='end'&&this.doc.objects.some(o=>o.id===r.target&&o.depiction==='anchor')){g.candidate=null;g.preview=point;}
       else if(r){g.candidate=connectionTarget(this.doc,point,this.zoom,r[g.handle==='start'?'target':'source'],e.altKey);g.preview=g.candidate?boundaryPoint(g.candidate.object,g.candidate.anchor):point;}
       this.draw();
     } else if (g.kind === 'marquee') {
@@ -1047,9 +1070,12 @@ export class SceneEditor {
     this.gesture = null;
     this.guides = [];
     if(g.kind==='connect'){
-      const target=connectionTarget(this.doc,this.world(e),this.zoom,g.source,e.altKey);
+      const point=this.world(e),dragged=Math.hypot(point.x-g.start.x,point.y-g.start.y)*PXMM*this.zoom>=5;
+      // A pointerup at the source is a first click, never a drop onto a
+      // different overlapping structure underneath it.
+      const target=dragged?connectionTarget(this.doc,point,this.zoom,g.source,e.altKey):null;
       if(target)this.finishConnection(g.source,target.object.id,g.port,target.anchor,g.anchor);
-      else{this.setTool('connect');this.connectStart=g.source;this.connectAnchor=g.anchor;this.connectPreview=null;this.onStatus('点击另一个对象的边缘完成连线，或点“取消连线”。');this.host.dispatchEvent?.(new Event('editor-tool-change'));}
+      else{this.setTool('connect');this.connectStart=g.source;this.connectAnchor=g.anchor;this.connectPreview=null;const source=this.doc.objects.find(o=>o.id===g.source);this.onStatus(`起点：${source?.label||source?.display_name||g.source}。再点击终点；按 Esc 取消，原箭头会保留。`);this.host.dispatchEvent?.(new Event('editor-tool-change'));}
       return;
     }
     if(g.kind==='move'&&g.cycleId&&!g.moved){this.setSelection([g.cycleId]);return;}
@@ -1065,6 +1091,14 @@ export class SceneEditor {
     if (g.kind === 'edge' && g.handle !== 'control') {
       const point = this.world(e);
       const relation=this.doc.relations.find(r=>r.id===g.id);
+      const anchor=relation?.callout&&g.handle==='end'&&this.doc.objects.find(o=>o.id===relation.target&&o.depiction==='anchor');
+      if(anchor){
+        const parent=this.doc.objects.find(o=>o.id===anchor.parent_id);
+        anchor.x=Math.max(parent?.x||0,Math.min((parent?parent.x+parent.w:this.doc.canvas.width_mm)-anchor.w,point.x-anchor.w/2));
+        anchor.y=Math.max(parent?.y||0,Math.min((parent?parent.y+parent.h:this.doc.canvas.height_mm)-anchor.h,point.y-anchor.h/2));
+        anchor.edit_status='needs_review';
+        anchor.localization=null;this.commit(g.before,'调整部位指示线落点');return;
+      }
       const target=connectionTarget(this.doc,point,this.zoom,relation?.[g.handle==='start'?'target':'source'],e.altKey);
       if (target) {
         const r = this.doc.relations.find(r => r.id === g.id);
@@ -1110,6 +1144,7 @@ export class SceneEditor {
 
   applyOperations(operations, label = '编辑图元') {
     if (!this.doc) return;
+    operations=operations.map(op=>{const o=op.op==='update'&&this.doc.objects.find(o=>o.id===op.id);return o?{...op,changes:fitEditedText(o,op.changes,this.doc)}:op;});
     operations=expandContainedMoves(this.doc,operations);
     const before = copy(this.doc);
     for (const op of operations) {

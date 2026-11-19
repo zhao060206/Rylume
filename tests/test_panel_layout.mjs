@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {preserveCanvasView,syncPanelButtons} from '../ui/panel-layout.js';
+import {SceneEditor} from '../ui/canvas-editor.js';
 
 // Collapsing a 292 px library must preserve the same scientific content at the
 // center of the viewport, including while the author is zoomed into a detail.
@@ -27,6 +28,20 @@ let changed=false;preserveCanvasView(empty,()=>changed=true);assert.equal(change
 let fits=0;const fitted={scene:{},fitMode:true,host:{clientWidth:800,clientHeight:600},offset:{x:0,y:0},fit(){fits++;},position(){throw Error('A fitted document must refit');}};
 preserveCanvasView(fitted,()=>{fitted.host.clientWidth-=260;});
 assert.equal(fits,1);assert.equal(fitted.fitMode,true,'Fit-to-window remains active when opening properties');
+let left=260;
+fitted.host.getBoundingClientRect=()=>({left,top:100});
+fitted.position=()=>{};
+preserveCanvasView(fitted,()=>{left=40;fitted.host.clientWidth+=220;},{keepScreenPosition:true});
+assert.equal(fits,1,'Automatic properties must not force a new fit');
+assert.equal(fitted.fitMode,false);
+assert.equal(left+fitted.offset.x,260,'The same canvas point remains under the pointer while the sidebar changes');
+const narrow=Object.create(SceneEditor.prototype);
+const object={id:'far-right',x:130,y:70,w:20,h:10,visible:true};
+Object.assign(narrow,{doc:{objects:[object]},selected:new Set([object.id]),host:{clientWidth:420,clientHeight:800},offset:{x:0,y:0},zoom:1,position(){}});
+narrow.ensureSelectionVisible({onlyIfCenterHidden:true});
+assert.equal(narrow.zoom,1);
+assert.ok(narrow.offset.x+(object.x+object.w)*96/25.4<narrow.host.clientWidth,'A selected box obscured by the inspector is panned into view');
+assert.equal(narrow.offset.y,0,'An already visible axis does not move');
 
 const classes=new Set(['left-collapsed','properties-hidden']);
 const workspace={classList:{contains:x=>classes.has(x)}};

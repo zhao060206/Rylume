@@ -42,13 +42,23 @@ def rank_layout(scene,objects,force,put,dims):
     ids={o['id'] for o in objects}
     edges={(r['source'],r['target']) for r in scene['relations']
            if r['source'] in ids and r['target'] in ids and r['type'] in ('sequence','activates','converts','transports')}
+    notes=[]
+    connected={x for edge in edges for x in edge}
+    for obj in objects:
+        if obj['id'] in connected:continue
+        links=[r for r in scene['relations'] if r['type']=='associates' and obj['id'] in (r['source'],r['target'])]
+        targets=[r['target'] if r['source']==obj['id'] else r['source'] for r in links]
+        if obj['type']=='text' and len(links)==1 and targets[0] in connected:
+            notes.append((obj,targets[0],links[0]))
+    main_objects=[o for o in objects if o['id'] not in {n[0]['id'] for n in notes}]
+    ids={o['id'] for o in main_objects}
     # A binding pair is a joint input, not a temporal step from one partner to
     # the other. Formation edges place both inputs before their product.
     if not edges or {x for edge in edges for x in edge}!=ids:return False
     incoming={i:set() for i in ids};outgoing={i:set() for i in ids}
     for a,b in edges:incoming[b].add(a);outgoing[a].add(b)
-    pending={i:len(incoming[i]) for i in ids};queue=[o['id'] for o in objects if not pending[o['id']]]
-    ranks={i:0 for i in queue};order={o['id']:index for index,o in enumerate(objects)}
+    pending={i:len(incoming[i]) for i in ids};queue=[o['id'] for o in main_objects if not pending[o['id']]]
+    ranks={i:0 for i in queue};order={o['id']:index for index,o in enumerate(main_objects)}
     visited=[]
     while queue:
         node=queue.pop(0);visited.append(node)
@@ -56,8 +66,15 @@ def rank_layout(scene,objects,force,put,dims):
             ranks[target]=max(ranks.get(target,0),ranks[node]+1)
             pending[target]-=1
             if pending[target]==0:queue.append(target)
-    if len(visited)!=len(objects):return False
-    columns=[[o for o in objects if ranks[o['id']]==rank] for rank in range(max(ranks.values())+1)]
+    if len(visited)!=len(main_objects):return False
+    columns=[[o for o in main_objects if ranks[o['id']]==rank] for rank in range(max(ranks.values())+1)]
+    lanes={}
+    for items in columns:
+        def lane(o):
+            parents=incoming[o['id']]
+            return sum(lanes[p] for p in parents)/len(parents) if parents else order[o['id']]
+        items.sort(key=lambda o:(lane(o),order[o['id']]))
+        for row,o in enumerate(items):lanes[o['id']]=row
     cw,ch=scene['canvas']['width_mm'],scene['canvas']['height_mm']
     vertical=cw<110 and len(columns)>3
     # Reserve room for a title and outside labels at the final physical size.
@@ -91,8 +108,19 @@ def rank_layout(scene,objects,force,put,dims):
             if len(parents)==1 and len(outgoing[next(iter(parents))])>1:
                 siblings=sorted(outgoing[next(iter(parents))],key=order.get);branches[node]=siblings.index(node)%len(colors)
             elif len(inherited)==1 and len(parents)==1:branches[node]=next(iter(inherited))
-        for o in objects:
+        for o in main_objects:
             if o['id'] in branches:o.setdefault('fill',colors[branches[o['id']]])
+    by_id={o['id']:o for o in main_objects}
+    counts={}
+    from scene_render import _measure
+    from scene_document import PT_MM
+    for note,target,relation in notes:
+        parent=by_id[target];index=counts.get(target,0);counts[target]=index+1
+        w=min(cw-8,max(parent['w'],_measure(note['label'],note.get('font_size_pt',8)*PT_MM)+2))
+        put(note,max(4,min(cw-w-4,parent['x']+parent['w']/2-w/2)),parent['y']+parent['h']+7+index*7,w,3,force)
+        note.update(role='annotation',parent_id=target,placement='outside',label_dy=-2)
+        relation.update(callout=True,uncertain=False,source=note['id'],target=target,source_port='n',target_port='s')
+    scene['provenance']['layout_method']='topology-with-notes' if notes else 'topology'
     for r in scene['relations']:
         if (r['source'],r['target']) not in edges:continue
         if force or not r.get('control'):

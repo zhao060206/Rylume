@@ -82,7 +82,23 @@ export function setupAnnotations({state,editor,api,flush,toast,workspace,onAppli
       const input=el('textarea');input.value=note.instruction;input.maxLength=2000;input.placeholder='例如：将标签改为 STAT3；或重绘这个细胞的内部纹理。';input.setAttribute('aria-label',`批注 ${index+1} 的修改要求`);input.oninput=()=>{note.instruction=input.value;note.original_instruction=input.value;note.image_generation='auto';delete note.image_target_ids;dirty();renderResult();};input.onfocus=()=>{selected=note.id;renderOverlay();};
       const actions=el('div','annotation-card-actions'),enhance=el('button','text-button','保持原意优化表达'),redraw=el('button','text-button','重新圈定');redraw.hidden=note.shape==='whole'||!!note.target_ids;redraw.onclick=()=>setMode(note.shape,note.id);
       const suggestion=el('div','annotation-enhancement');suggestion.hidden=true;
-      enhance.onclick=async()=>{if(!note.instruction.trim())return toast('先填写这处修改要求');enhance.disabled=true;const original=note.instruction,authorOriginal=note.original_instruction||original,id=job;try{const res=await api(`/api/jobs/${id}/annotation-enhance`,{instruction:original});if(job!==id||!notes.includes(note)||note.instruction!==original)return;const before=el('p','','原文：'+original),after=el('p','','建议：'+res.enhanced),adopt=el('button','button','采用建议'),keep=el('button','text-button','保留原文');suggestion.replaceChildren(before,after,el('p','muted small',(res.notes||[]).join(' ')),adopt,keep);suggestion.hidden=false;adopt.disabled=res.enhanced===original;adopt.onclick=()=>{note.original_instruction=authorOriginal;note.instruction=res.enhanced;input.value=res.enhanced;suggestion.hidden=true;dirty();};keep.onclick=()=>suggestion.hidden=true;}catch(e){toast(e.message,true);}finally{enhance.disabled=false;}};
+      enhance.onclick=async()=>{
+        if(!note.instruction.trim())return toast('先填写这处修改要求');
+        const original=note.instruction,authorOriginal=note.original_instruction||original,id=job;
+        const current=()=>job===id&&notes.includes(note)&&note.instruction===original;
+        enhance.disabled=true;suggestion.hidden=true;
+        try{
+          if(!await canSubmit()||!current())return;
+          const res=await api(`/api/jobs/${id}/annotation-enhance`,{instruction:original});
+          if(!current())return;
+          const feedback=el('p','muted small',(res.notes||[]).join(' '));
+          if(res.enhanced===res.original){suggestion.replaceChildren(feedback);suggestion.hidden=false;return;}
+          const before=el('p','','原文：'+original),after=el('p','','建议：'+res.enhanced),adopt=el('button','button','采用建议'),keep=el('button','text-button','保留原文');
+          suggestion.replaceChildren(before,after,feedback,adopt,keep);suggestion.hidden=false;
+          adopt.onclick=()=>{if(!current())return;note.original_instruction=authorOriginal;note.instruction=res.enhanced;input.value=res.enhanced;suggestion.hidden=true;dirty();};
+          keep.onclick=()=>suggestion.hidden=true;
+        }catch(e){if(current())toast(e.message,true);}finally{enhance.disabled=false;}
+      };
       const imageOptions=el('details','annotation-image-options'),imageSummary=el('summary','','插画处理 · 按要求判断'),imagePolicy=el('select');imagePolicy.setAttribute('aria-label',`批注 ${index+1} 的插画处理方式`);
       for(const[value,label]of [['auto','按原始要求判断'],['allow','允许调用生图重绘插画'],['deny','只改可编辑对象，不调用生图']]){const option=el('option','',label);option.value=value;imagePolicy.append(option);}
       imagePolicy.value=note.image_generation||'auto';const syncPolicy=()=>{imagePolicy.value=note.image_generation||'auto';imageSummary.textContent='插画处理 · '+({auto:'按要求判断',allow:'允许生图',deny:'不调用生图'}[imagePolicy.value]);};syncPolicy();

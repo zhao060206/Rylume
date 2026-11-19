@@ -9,7 +9,7 @@ import time
 import uuid
 from pathlib import Path
 
-from scene_document import SceneError, RevisionConflict, SceneRepository, audit_scene
+from scene_document import SceneError, RevisionConflict, SceneRepository, audit_scene, AUDIT_VERSION
 
 _REPOSITORIES = {}
 _REPOSITORIES_LOCK = threading.Lock()
@@ -60,6 +60,18 @@ def _apply_layout_decisions(scene, audit, job):
     return audit
 
 
+def _visual_audit(job, revision):
+    current=copy.deepcopy(job.get('scene_vision') or {})
+    records=list(job.get('scene_vision_history') or [])
+    if current.get('revision')!=revision and current.get('status') not in (None,'running'):
+        records.append(current)
+    history=[]
+    for record in reversed(records):
+        if record.get('revision')!=revision and record.get('revision') not in {v['revision'] for v in history}:
+            history.append(copy.deepcopy(record))
+    return (current if current.get('revision')==revision else {'status':'not_requested','findings':[]}),history[:10]
+
+
 def payload(app, job, revision=None):
     repo = repository(app, job["id"])
     with repo.lock:
@@ -68,13 +80,11 @@ def payload(app, job, revision=None):
         result = {"ok": True, "scene": scene, "revision": scene["revision"],
                   "svg": (folder / "result.svg").read_text(encoding="utf-8"),
                   "audit": json.loads((folder / "audit.json").read_text(encoding="utf-8"))}
-        if result['audit'].get('audit_version')!=3:
+        if result['audit'].get('audit_version')!=AUDIT_VERSION:
             result['audit']=audit_scene(scene)
         result["audit"]["author_confirmed"] = job.get("author_confirmed_revision") == scene["revision"]
         _apply_layout_decisions(scene,result['audit'],job)
-        visual = job.get("scene_vision") or {}
-        if visual.get("revision") == scene["revision"]:
-            result["audit"]["vision"] = visual
+        result['audit']['vision'],result['audit']['vision_history']=_visual_audit(job,scene['revision'])
         return result
 
 
@@ -86,16 +96,17 @@ def audit_payload(app, job):
         recover_pending_replacements(repo.root,recursive=False)
         revision=json.loads((repo.root/'scene-head.json').read_text(encoding='utf8'))['revision']
         audit=json.loads((repo.root/'revisions'/str(revision)/'audit.json').read_text(encoding='utf8'))
+        if audit.get('audit_version')!=AUDIT_VERSION:audit=audit_scene(repo.read(revision))
         audit['author_confirmed']=job.get('author_confirmed_revision')==revision
         if job.get('layout_decisions'):_apply_layout_decisions(repo.read(revision),audit,job)
-        visual=job.get('scene_vision') or {}
-        if visual.get('revision')==revision:audit['vision']=visual
+        audit['vision'],audit['vision_history']=_visual_audit(job,revision)
         return {'ok':True,'revision':revision,'audit':audit}
 
 
 def _publish(app, job, result):
     scene = result["scene"]
     _apply_layout_decisions(scene,result['audit'],job)
+    result['audit']['vision'],result['audit']['vision_history']=_visual_audit(job,scene['revision'])
     folder = repository(app, job["id"]).root / "revisions" / str(scene["revision"])
     job.update({"scene_revision": scene["revision"], "title": scene["title"],
                 "canvas_mm": [scene["canvas"]["width_mm"], scene["canvas"]["height_mm"]],
@@ -250,8 +261,10 @@ def _export(app, job, body):
         raise SceneError("导出 DPI 请选择 300 或 600")
     text_mode=body.get('text_mode','preserve')
     if text_mode not in ('preserve','editable'):raise SceneError('导出文字方式无效')
-    title=(scene['title'] or 'Figure')+(' - 可编辑文字' if text_mode=='editable' else '')
-    default = app.EXPORT_DIR / job["id"] / f"r{scene['revision']}" / app._safe_filename(title, fmt)
+    name = Path(app._safe_filename(scene['title'] or 'Figure', fmt))
+    variant = (f' - {dpi} DPI' if fmt == 'png' and dpi != 300 else '')
+    variant += ' - 可编辑文字' if text_mode == 'editable' else ''
+    default = app.EXPORT_DIR / job["id"] / f"r{scene['revision']}" / name.with_stem(name.stem + variant)
     requested = str(body.get("path") or "").strip()
     destination = Path(requested).resolve() if requested else default
     # Pin before queueing: an edit while export is running cannot change content.
@@ -491,11 +504,19 @@ def dispatch(handler, method, path, app):
             with repo.lock:
                 scene=repo.read()
                 if _revision(body)!=scene['revision']:raise RevisionConflict('图版已变化，请先查看最新建议')
-                finding=next((f for f in audit_scene(scene)['findings'] if f['code']==body.get('code') and f['object_ids']==body.get('object_ids')),None)
-                if finding is None or finding['severity']!='warning' or finding['code'] not in ('overlap','label-overlap','label-object-overlap','label-detached','line-label-overlap','empty-label'):raise SceneError('此项需要实际调整或核对科学内容，不能作为排版选择忽略')
-                decisions=job.setdefault('layout_decisions',{});fingerprint=_finding_fingerprint(scene,finding)
-                if body.get('restore'):decisions.pop(fingerprint,None)
-                else:decisions[fingerprint]={'reason':'作者确认保留当前排版','created':time.time(),'revision':scene['revision']}
+                requests=body.get('findings') if 'findings' in body else [body]
+                if not isinstance(requests,list) or not 1<=len(requests)<=500:raise SceneError('请选择 1–500 条排版建议')
+                audit=audit_scene(scene);chosen=[]
+                for request in requests:
+                    if not isinstance(request,dict):raise SceneError('排版建议格式无效')
+                    finding=next((f for f in audit['findings'] if f['code']==request.get('code') and f['object_ids']==request.get('object_ids')),None)
+                    if finding is None or finding['severity']!='warning' or finding['code'] not in ('overlap','label-overlap','label-object-overlap','label-detached','line-label-overlap','empty-label'):raise SceneError('此项需要实际调整或核对科学内容，不能作为排版选择忽略')
+                    chosen.append(finding)
+                decisions=job.setdefault('layout_decisions',{})
+                for finding in chosen:
+                    fingerprint=_finding_fingerprint(scene,finding)
+                    if body.get('restore'):decisions.pop(fingerprint,None)
+                    else:decisions[fingerprint]={'reason':'作者确认保留当前排版','created':time.time(),'revision':scene['revision']}
                 app._save_meta(job)
                 handler._json(200,payload(app,job))
             return True
@@ -561,6 +582,9 @@ def dispatch(handler, method, path, app):
             if body.get("vision"):
                 from scene_planner import review_scene_visual
                 snapshot = copy.deepcopy(result["scene"])
+                previous=job.get('scene_vision') or {}
+                if previous.get('status') not in (None,'running'):
+                    job['scene_vision_history']=(job.get('scene_vision_history',[])+[copy.deepcopy(previous)])[-10:]
                 job["scene_vision"] = {"status":"running","findings":[],"revision":snapshot["revision"]}
                 app._save_meta(job)
                 def run_review():

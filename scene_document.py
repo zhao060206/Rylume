@@ -14,6 +14,7 @@ import threading
 from pathlib import Path
 
 SCHEMA_VERSION = 3
+AUDIT_VERSION = 4
 PT_MM = 25.4 / 72
 OBJECT_TYPES = {
     "ligand", "receptor", "receptor_dimer", "gpcr", "kinase", "protein", "tf",
@@ -178,6 +179,8 @@ def normalize_scene(value):
         if o.get('visual_description'):
             out['visual_description']=_text(o['visual_description'],1000)
         if o.get('depiction')=='anchor':out['depiction']='anchor'
+        if isinstance(o.get('localization'),dict):
+            loc=o['localization'];out['localization']={'status':'model_checked','evidence':_text(loc.get('evidence',''),1000),'x':_number(loc.get('x'),'定位 x',0,1),'y':_number(loc.get('y'),'定位 y',0,1)}
         for key in ('display_name', 'source_role'):
             if o.get(key): out[key] = _text(o[key], 240)
         if o.get('edit_status'):
@@ -357,7 +360,7 @@ def normalize_scene(value):
                                      "pre_annotation_revision", "rollback_from", "rollback_to", "annotation_count",
                                      "original_text", "generation_brief", "knowledge_sources", "scientific_assumptions",
                                      "reference_id", "reference_purpose", "generation_mode", "draft_source_id", "draft_source_revision",
-                                     "ocr_source", "vector_engine", "raster_embedded", "segmentation_method")}
+                                     "ocr_source", "vector_engine", "raster_embedded", "segmentation_method", "layout_method")}
     contract = scene.get('generation_contract') or {}
     if not isinstance(contract, dict):
         raise SceneError('生成需求基线格式无效')
@@ -414,6 +417,12 @@ def apply_operations(scene, operations, *, allowed_ids=None):
                 raise SceneError("对象 ID 不可修改")
             if key=='objects' and any(k in changes and changes[k]!=target.get(k) for k in ('type','state','asset_id')) and 'illustration' not in changes:
                 target.pop('illustration',None)
+            if key=='objects' and target['type']=='text' and 'label' in changes and changes['label']!=target['label'] and 'w' not in changes and target.get('state')!='import_text':
+                from scene_render import _measure
+                size=changes.get('font_size_pt',target['font_size_pt'])*PT_MM
+                changes={**changes,'w':max(target['w'],max(_measure(line,size)+2 for line in str(changes['label']).split('\n')))}
+                if 'x' not in changes and any(r.get('callout') and r['source']==oid and r.get('source_port')=='e' for r in draft['relations']):
+                    changes['x']=target['x']+target['w']-changes['w']
             target.update(changes)
         elif name in ("add", "add_relation"):
             key, field = ("objects", "object") if name == "add" else ("relations", "relation")
@@ -495,6 +504,18 @@ def audit_scene(scene, *, _normalized=False):
     width, height = (scene["canvas"][k] for k in ("width_mm", "height_mm"))
     objects = {o["id"]: o for o in scene["objects"]}
     relations = {r["id"]: r for r in scene["relations"]}
+    source_overlaps=[]
+    def original_overlap(a,b,code):
+        if scene['provenance'].get('method')!='import-semantic-vector':return False
+        if not a.get('source_region') or not b.get('source_region'):return False
+        for o in (a,b):
+            region=o['source_region']
+            if abs(o['w']-region['w']*width)>.03 or abs(o['h']-region['h']*height)>.03 or o.get('rotation',0):return False
+            appearance=o.get('text_appearance')
+            if o['type']=='text' and (not appearance or any(o[k]!=appearance[k] for k in ('label','font_size_pt','fill')) or o.get('label_dx') or o.get('label_free')):return False
+        if any(abs((a[axis]-b[axis])-(a['source_region'][axis]-b['source_region'][axis])*size)>.03 for axis,size in (('x',width),('y',height))):return False
+        source_overlaps.append({'code':code,'object_ids':[a['id'],b['id']],'basis':'原图对应区域与相对位置保持一致；透明轮廓的包围框交叠不作为新增遮挡'})
+        return True
     if scene.get('generation_contract'):
         from scientific_intent import intent_contract,canonical_phase,labeled_cell_phase,excluded_object_evidence,contradicted_relation_evidence
         baseline=scene['generation_contract'].get('original_text') or scene['source_text']
@@ -576,10 +597,16 @@ def audit_scene(scene, *, _normalized=False):
                 continue
             overlap = max(0, min(a["x"]+a["w"], b["x"]+b["w"])-max(a["x"], b["x"])) * max(0, min(a["y"]+a["h"], b["y"]+b["h"])-max(a["y"], b["y"]))
             if overlap > 0.55 * min(a["w"]*a["h"], b["w"]*b["h"]):
+                if original_overlap(a,b,'overlap'):continue
                 add("overlap", "两个对象大面积重叠，请检查是否为预期的结合状态", [a["id"], b["id"]], overlap_mm2=round(overlap, 2))
     try:
-        from scene_render import label_boxes, connection_geometry
+        from scene_render import label_boxes, connection_geometry, _label_lines, _measure
         boxes = label_boxes(scene)
+        for obj in visible:
+            if obj['type']!='text' or obj.get('state')=='import_text' or not obj['label']:continue
+            lines,fs=_label_lines(obj)
+            if len(lines)>len(obj['label'].split('\n')) and len(obj['label'])<=16 or max(_measure(line,fs) for line in lines)>obj['w']+.5:
+                add('text-wrap','短标签被挤成多行或超出文字框，请加宽文字框',[obj['id']],line_count=len(lines),width_mm=obj['w'])
         # Renderer supplies measured/estimated wrapped label rectangles.
         for box in boxes:
             if box["x"] < 0 or box["y"] < 0 or box["x"]+box["w"] > width+0.1 or box["y"]+box["h"] > height+0.1:
@@ -599,6 +626,7 @@ def audit_scene(scene, *, _normalized=False):
         for i, a in enumerate(boxes):
             for b in boxes[i+1:]:
                 if min(a["x"]+a["w"],b["x"]+b["w"])-max(a["x"],b["x"]) > 0.4 and min(a["y"]+a["h"],b["y"]+b["h"])-max(a["y"],b["y"]) > 0.4:
+                    if a['id'] in objects and b['id'] in objects and original_overlap(objects[a['id']],objects[b['id']],'label-overlap'):continue
                     add("label-overlap", "两个标签重叠", [a["id"], b["id"]])
             for o in visible:
                 if o["id"] == a["id"]:
@@ -607,12 +635,14 @@ def audit_scene(scene, *, _normalized=False):
                 overlap_w = min(a["x"]+a["w"],o["x"]+o["w"])-max(a["x"],o["x"])
                 overlap_h = min(a["y"]+a["h"],o["y"]+o["h"])-max(a["y"],o["y"])
                 if overlap_w > 0.6 and overlap_h > 0.6:
+                    if a['id'] in objects and original_overlap(objects[a['id']],o,'label-object-overlap'):continue
                     add("label-object-overlap", "标签与另一个对象重叠", [a["id"],o["id"]])
     except ImportError:
         pass
     for item in scene["unresolved"]:
         add("author-review", item)
-    return {"revision": scene["revision"], "audit_version": 3, "status": "needs_attention" if findings else "passed",
+    return {"revision": scene["revision"], "audit_version": AUDIT_VERSION, "status": "needs_attention" if findings else "passed",
+            "source_overlaps":source_overlaps,
             "errors": sum(f["severity"] == "error" for f in findings),
             "warnings": sum(f["severity"] == "warning" for f in findings),
             "findings": findings, "vision": {"status": "not_requested", "findings": []},

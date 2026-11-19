@@ -233,7 +233,7 @@ def apply_constraints(scene, config):
     from scientific_intent import apply_division_context
     apply_division_context(scene,config['original_text'])
     layout_policy=config.get('layout_policy','preserve')
-    layout_summary='严格保留位置、尺寸与作者连接。' if sketch or reference.get('objects') else '已按连接拓扑整理阅读顺序、分支与汇合；无作者草图位置需要保留。'
+    layout_summary='严格保留位置、尺寸与作者连接。' if sketch or reference.get('objects') else ('已按连接拓扑整理分支、汇合和附注。' if scene.get('provenance',{}).get('layout_method','').startswith('topology') else '已按区室或通用布局放置对象，请核对阅读顺序和分支。')
     if not sketch and not reference.get('objects'):layout_policy='regularize'
     if layout_policy=='regularize' and (sketch or (reference.get('objects') and config.get('reference_purpose')!='style')):
         from sketch_layout import regularize_sketch
