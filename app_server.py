@@ -2578,6 +2578,14 @@ class Handler(BaseHTTPRequestHandler):
                 return self._serve_file(target)
             return self._json(404, {"ok": False, "error": "not found"})
 
+        model_list = re.fullmatch(r'/api/config/models/(text|image|vision)', path)
+        if model_list:
+            from model_catalog import model_names
+            try:
+                names = model_names(load_config().get(model_list.group(1)) or {})
+            except ValueError as exc:
+                return self._json(400, {'ok': False, 'error': str(exc)})
+            return self._json(200, {'ok': True, 'models': names})
         if path == "/api/state":
             with JOBS_LOCK:
                 jobs = sorted(JOBS.values(), key=lambda j: j.get("created", 0), reverse=True)[:30]

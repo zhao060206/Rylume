@@ -121,7 +121,23 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
         modelInputs[key].api_key.placeholder=item.api_key_set?'已保存，留空保持不变':'粘贴 API Key';
         const test=el('button','button secondary','测试连接'),status=el('span','connection-result','尚未测试');
         test.onclick=async()=>{test.disabled=true;status.textContent='测试中…';try{const r=await api('/api/test',{target:key,config:settingsPatch()});status.textContent=r.configured===false?(r.error||'尚未配置'):r.ok?'连接正常':r.error||'连接失败';}catch(e){status.textContent=e.message;}finally{test.disabled=false;}};
-        section.append(test,status);body.append(section);
+        const discover=el('button','text-button','读取可用模型'),choices=el('select');
+        choices.hidden=true;choices.setAttribute('aria-label',title+'可用名称');
+        const inputs=modelInputs[key];
+        const invalidate=()=>{choices.hidden=true;choices.replaceChildren();};
+        inputs.base_url.addEventListener('input',invalidate);inputs.api_key.addEventListener('input',invalidate);
+        discover.onclick=async()=>{
+          invalidate();
+          if(!item.base_url||inputs.base_url.value.trim()!==item.base_url||inputs.api_key.value){status.textContent='请先保存服务地址和密钥，再读取该服务的模型。';return;}
+          discover.disabled=true;status.textContent='正在读取模型列表…';
+          try{const result=await api('/api/config/models/'+key);
+            if(inputs.base_url.value.trim()!==item.base_url||inputs.api_key.value){status.textContent='服务设置已变化，请先保存。';return;}
+            choices.append(new Option('选择模型名称…',''));for(const name of result.models)choices.append(new Option(name,name));
+            choices.hidden=false;status.textContent=`服务列出 ${result.models.length} 个名称。选择后请测试连接。`;choices.focus();
+          }catch(error){status.textContent=error.message;}finally{discover.disabled=false;}
+        };
+        choices.onchange=()=>{if(choices.value){inputs.model.value=choices.value;status.textContent='名称已填入；测试成功后点击保存。';}};
+        status.setAttribute('role','status');section.append(discover,test,choices,status);body.append(section);
       }
       const advanced=el('details','advanced-model-settings');advanced.append(el('summary','','高级插画与输出设置'));
       const grid=el('div','advanced-settings-grid');advancedInputs={};
