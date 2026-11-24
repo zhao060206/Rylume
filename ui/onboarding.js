@@ -26,7 +26,7 @@ export function setupOnboarding({state,editor,api,flush,canLeave,openJob,refresh
  const welcome=document.createElement('dialog');welcome.id='onboarding-welcome';welcome.className='onboarding-welcome';welcome.setAttribute('aria-labelledby','onboarding-title');welcome.setAttribute('aria-describedby','onboarding-intro');
  welcome.innerHTML=`<button type="button" class="icon-button onboarding-close" id="onboarding-dismiss" aria-label="关闭新手引导">×</button>
  <div class="onboarding-welcome-copy"><div class="onboarding-wordmark"><img src="/ui/rylume-mark.svg" alt=""/>理象 <span>Rylume</span></div>
- <p class="onboarding-eyebrow">很高兴和你一起开始</p><h1 id="onboarding-title">让第一张图，<br>从容开始。</h1>
+ <p class="onboarding-eyebrow">首次使用 · 画布练习</p><h1 id="onboarding-title">编辑你的第一张图</h1>
  <p id="onboarding-intro">用一份练习图，试试改字、加素材和导出。<br>大约 2 分钟，不需要配置 AI。</p>
  <div class="onboarding-welcome-actions"><button type="button" class="button primary" id="onboarding-start">用示例试一试 <span aria-hidden="true">→</span></button><button type="button" class="text-button" id="onboarding-explore">先自己探索</button></div>
  <p class="onboarding-return-note">随时可以跳过。之后可在「设置 → 新手引导」重新打开。</p><p id="onboarding-welcome-status" role="status"></p></div>
@@ -81,7 +81,7 @@ export function setupOnboarding({state,editor,api,flush,canLeave,openJob,refresh
   if(busy||state.active)return toast('先完成或取消当前生成，再开始新手练习。');
   if(document.querySelector('dialog[open]'))return toast('先关闭当前窗口，再打开新手引导。');
   sessionEpoch++;previousFocus=document.activeElement;hideCoach();const resume=record.status==='in_progress'&&record.practice_job_id;
-  $('onboarding-start').textContent=resume?'继续上次的练习 →':'用示例试一试 →';$('onboarding-title').replaceChildren();$('onboarding-title').textContent=resume?'接着上次，慢慢来。':'让第一张图，从容开始。';
+  $('onboarding-start').textContent=resume?'继续上次的练习 →':'打开练习图 →';$('onboarding-title').textContent=resume?'继续编辑练习图':'编辑你的第一张图';
   $('onboarding-welcome-status').textContent='';welcome.showModal();$('onboarding-start').focus();
  }
  async function start(){

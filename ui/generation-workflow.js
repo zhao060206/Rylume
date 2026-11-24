@@ -5,7 +5,7 @@ export function generationOutcomeText(result){
  if(result?.status==='cancelled')return '已取消生成；已完成的草稿仍保留。';
  if(result&&result.status!=='completed')return result.error||result.message||'生成未完成；已保存的图版保持可用。';
  if(result?.illustration_result&&result.illustration_result.state!=='ready')return '插画尚未全部完成，已保留可编辑草稿。请核对未完成对象。';
- if(result?.opened===false)return '新图已保留在最近图版；请先处理当前图版未保存的修改。';
+ if(result?.opened===false)return result.openError?'图版已生成，但打开失败：'+result.openError+'。可从最近图版重新打开。':'新图已保留在最近图版；请先处理当前图版未保存的修改。';
  return '已保留生成版本。请在画布核对、拖动和修改。';
 }
 
@@ -81,7 +81,7 @@ export function setupGenerationWorkflow({state,editor,api,flush,follow,canLeave,
     status('正在生成可编辑对象…');$('generation-preview-dialog').close();document.dispatchEvent?.(new Event('generation-submitted'));const result=await api('/api/generate',body);const outcome=await follow(result.job_id);preview=null;status(generationOutcomeText(outcome));
     if(outcome?.status==='completed'&&outcome.opened!==false)document.dispatchEvent(new Event('generation-presented'));
    }
-  }catch(error){status(error.message);toast(error.message,true);}finally{busy=false;state.submitting=false;$('generate').disabled=false;$('preview-generation').disabled=false;refresh();}
+  }catch(error){status(error.message);if(error.message.includes('模型设置')){const settings=document.createElement('button');settings.className='text-button';settings.type='button';settings.textContent='打开模型设置';settings.onclick=()=>$('open-settings').click();$('generation-inline-status').append(settings);}toast(error.message,true);}finally{busy=false;state.submitting=false;$('generate').disabled=false;$('preview-generation').disabled=false;refresh();}
  }
  $('generate').onclick=()=>run();$('preview-generation').onclick=()=>run(true);$('generate-from-preview').onclick=()=>run(false,true);
  let redrawSnapshot=null;

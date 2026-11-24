@@ -60,7 +60,7 @@ export function setupWorkspaceNavigation({state,editor,api,openJob,follow,tab,to
    for(const section of sections){
     list.append(grouping==='collection'&&projects?projects.header(section):make('h3','recent-date',section.label));
     if(grouping==='collection'&&projects?.isCollapsed(section.id))continue;
-    if(!section.jobs.length)list.append(make('p','project-empty','还没有图版；点击“新建图版”开始。'));
+    if(!section.jobs.length)list.append(make('p','project-empty',section.id?'这个项目还没有图版。':'没有未归入项目的图版。'));
     for(const job of section.jobs){
      const status=recentStatus(job),row=make('button','recent-document');row.type='button';row.draggable=false;row.dataset.jobId=job.id;row.title=(job.title||'未命名图版')+(status.label?' · '+status.label:'')+' · 可拖动排序，Alt+↑置顶';row.setAttribute('aria-label',(job.title||'未命名图版')+'，拖动调整顺序');
      const icon=make('span','recent-document-icon');icon.innerHTML='<svg class="icon" aria-hidden="true"><use href="#icon-journal"></use></svg>';

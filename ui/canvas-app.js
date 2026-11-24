@@ -1,3 +1,4 @@
+import {plainMessage} from './dock.js';
 import {copySceneData,SceneSaveCache} from './scene-data.js';
 import {setupProductShell} from './product-shell.js';
 import {setupElementEditing} from './element-editor.js';
@@ -41,7 +42,7 @@ new MutationObserver(()=>syncPanelButtons(ws)).observe(ws,{attributes:true,attri
 new MutationObserver(()=>syncPanelButtons(ws)).observe($('asset-library-dialog'),{attributes:true,attributeFilter:['open','class']});
 let workspaceUI,workbenchUI,reviewUI,relationsUI,annotationUI,documentUI,deliveryUI,noviceUI,modesUI,generationUI,composerUI,navigationUI,onboardingUI,documentsUI;
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
-let toastTimer;function toast(message,error=false){$('toast').textContent=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
+let toastTimer;function toast(message,error=false){message=plainMessage(message);$('toast').textContent=message;$('toast').title=message;$('toast').className='toast'+(error?' error':'');$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
 async function api(path,body,method){
  const creation=body?creationProject(path,S):null;
  const controller=new AbortController(),timer=(method==='PATCH'||path==='/api/updates/apply')?setTimeout(()=>controller.abort(),30000):null;let response,data;
@@ -112,7 +113,7 @@ async function trackGeneration(id){
   if(job.status==='completed'){terminal=job;await refreshJobs();const opened=await openJob(id);if(job.illustration_result?.state==='partial')toast('插画没有全部完成，已保留可编辑草稿。请查看内容建议。',true);return {...job,opened};}
   if(['failed','cancelled','error'].includes(job.status)){terminal=job;if(job.scene_revision){await refreshJobs();await openJob(id);}throw Error(job.error||job.message||'任务未完成');}
   await new Promise(r=>setTimeout(r,800));
- }}catch(error){toast(error.message,true);return terminal||{status:'error',error:error.message};}
+ }}catch(error){toast(error.message,true);return terminal?.status==='completed'?{...terminal,opened:false,openError:error.message}:terminal||{status:'error',error:error.message};}
  finally{S.active=null;workspaceUI?.refresh();$('generation-status').hidden=true;generationUI?.refresh();}
 }
 async function sample(id){if(S.active)return toast('已有生成任务，请等待完成或先取消');if(!await canLeave())return;try{const dims=$('new-size').value.split('x').map(Number);await follow((await api('/api/scene/example',{example:id,template:({egfr:'signal_lipid',jak_stat:'signal_relay',tgf_smad:'signal_nucleus',exosome:'process_strip',wound:'process_grid',tme:'network_orbit',nlrp3:'assembly_tiers',workflow:'workflow_strip'}[id]),canvas_mm:dims})).job_id);}catch(e){toast(e.message,true);}}
@@ -246,7 +247,7 @@ async function exportFile(format){
  document.querySelectorAll('[data-export]').forEach(b=>b.disabled=true);
  status.replaceChildren(el('p','','正在准备文件，请稍候…'));status.classList.remove('export-success');
  try{
-  if(S.revision&&!await flush())return;
+  if(S.revision&&!await flush())throw Error('当前修改尚未保存。请关闭导出窗口，先处理保存提示，再重新导出。');
   if(S.id!==jobId)return;
   const result=await api(`/api/jobs/${jobId}/save-as`,{format,dpi:Number($('export-dpi').value),...(S.revision?{revision:S.revision,text_mode:$('export-text-mode')?.value||'preserve'}:{})});
   if(S.id!==jobId){toast(result.path?'上一个图版的文件已保存。':'上一个图版的保存已结束。');return;}

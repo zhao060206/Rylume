@@ -71,6 +71,7 @@ assert.equal(calls,0,'A cleared reference cannot return through a delayed FileRe
 await $('generate').onclick();
 assert.equal($('generation-inline-status').textContent,'Model disconnected; draft retained');
 assert.ok(!generationOutcomeText({status:'cancelled'}).includes('已保留生成版本'));
+assert.match(generationOutcomeText({status:'completed',opened:false,openError:'连接中断'}),/打开失败.*连接中断/);
 assert.ok(generationOutcomeText({status:'completed',illustration_result:{state:'draft'}}).includes('未全部完成'));
 delete globalThis.FileReader;delete globalThis.document;delete globalThis.innerWidth;
 console.log('Real generation controls preserve authored intent, ignore stale optimization and file reads, gate pending references, and report failure accurately');

@@ -101,14 +101,16 @@
      </span>
 </strong>
 </a><button aria-label="收起图版导航" class="icon-button" id="collapse-navigation" title="收起导航" type="button"><svg class="icon"><use href="#menu"></use></svg></button></div>
-<div class="sidebar-new"> <button class="quiet" id="open-start" title="新建图版；当前图版会自动保留">
+<div class="sidebar-new"> <button class="quiet" id="open-start" title="新建图版；当前图版会自动保留"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg>
     新建图版
    </button></div>
 <div class="sidebar-commands">
 <button class="sidebar-action" id="open-commands" title="搜索工具和命令（Ctrl+K）" type="button"><svg aria-hidden="true" class="icon"><use href="#search"></use></svg><span>搜索操作</span><kbd>Ctrl K</kbd></button>
 
-<div class="sidebar-documents"><button aria-expanded="false" class="button" id="toggle-documents" title="上传论文与文档，规划绘图" type="button">文档助手</button></div></div>
+<div class="sidebar-library-links"><button class="sidebar-action" id="sidebar-assets" title="打开科研素材库" type="button"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg><span>素材库</span></button><button class="sidebar-action" id="sidebar-templates" title="打开模板库" type="button"><svg aria-hidden="true" class="icon"><use href="#layers"></use></svg><span>模板库</span></button></div>
+<div class="sidebar-documents"><button aria-expanded="false" class="button" id="toggle-documents" title="上传论文与文档，规划绘图" type="button"><svg aria-hidden="true" class="icon"><use href="#icon-journal"></use></svg><span>文档助手</span></button></div></div>
 
+<details class="compact-projects app-menu"><summary aria-label="项目与最近图版" title="项目与最近图版"><svg aria-hidden="true" class="icon"><use href="#folder-plus"></use></svg></summary><div class="menu-items"><button data-command="open-history">打开最近图版</button><button data-command="create-project">新建项目</button></div></details>
 <section class="sidebar-recents" id="home-recent"><header><h2>我的图版</h2><button aria-label="新建项目" class="new-project-button" id="create-project" title="新建项目" type="button">＋ 新建项目</button><details class="navigator-options app-menu"><summary aria-label="图版列表选项" title="搜索、分组与管理图版">···</summary><div class="menu-items"><label class="sidebar-search"><svg class="icon"><use href="#search"></use></svg><input aria-label="搜索最近图版" id="navigator-search" placeholder="搜索图版" type="search"/></label><select aria-label="历史图版分组方式" id="navigator-grouping" title="选择历史图版分组方式"><option value="collection">按项目</option><option value="date">按日期</option></select><button aria-label="打开全部图版" class="text-button" id="open-history" type="button">全部</button></div></details></header><div id="home-recent-list"></div><p class="sidebar-empty" id="navigator-empty">新建或生成的图版会保存在这里。</p></section>
 <footer class="sidebar-footer"> <details class="app-menu settings-menu">
 <summary aria-label="设置">
@@ -136,7 +138,7 @@
 </div>
 </details><span class="workspace-local">图版保存在本机</span><div class="home-ai-note"><button class="text-button" id="empty-model-settings">设置模型</button><button class="text-button" id="home-open-documents" type="button">从文档提取绘图建议</button></div></footer>
 </aside>
-<header aria-label="图版标题与保存" class="topbar"><button aria-label="展开图版导航" class="icon-button" id="expand-navigation" title="展开导航" type="button"><svg class="icon"><use href="#menu"></use></svg></button><span class="home-page-title">新建图版</span><div class="project-heading">
+<header aria-label="图版标题与保存" class="topbar"><button aria-label="展开图版导航" class="icon-button" id="expand-navigation" title="展开导航" type="button"><svg class="icon"><use href="#menu"></use></svg></button><span class="home-page-title">科研绘图工作台</span><div class="project-heading">
 <span id="project-title">
      未命名图版
     </span>
@@ -144,12 +146,16 @@
 <span id="save-status" role="status">
      本地工作台
     </span>
-</div><div class="document-bar-actions"><button aria-label="保存图版" class="button save-document" id="save-document" title="保存图版（Ctrl+S）" type="button">保存</button><button class="button primary" disabled="" id="toggle-export">
+</div><div class="document-bar-actions"><div aria-label="工作台模式" class="workspace-mode-switch" role="group">
+<span aria-hidden="true" class="workspace-mode-thumb"></span>
+<button aria-pressed="true" data-workspace-mode="simple" title="极简模式：常用绘图工具，更多设置按需打开" type="button">极简</button>
+<button aria-pressed="false" data-workspace-mode="professional" title="专业模式：图层、对象属性与精细设置" type="button">专业</button>
+</div><button aria-label="保存图版" class="button save-document" id="save-document" title="保存图版（Ctrl+S）" type="button">保存</button><button class="button primary" disabled="" id="toggle-export">
 <svg class="icon">
 <use href="#download">
 </use>
 </svg>
-    导出图片
+    导出
    </button><nav aria-label="应用菜单" class="app-menus"><details class="app-menu workbench-more"><summary aria-label="图版菜单" title="图版菜单">···</summary><div class="menu-items document-menu"><section class="document-menu-section" id="file-menu-items"><h3>文件</h3>
 <button id="process-create">
        生成图版
@@ -256,22 +262,14 @@
         所选对象
        </option>
 </select>
-</section><section class="document-menu-section"><h3>工作区</h3><div aria-label="工作台模式" class="workspace-mode-switch" role="group">
-<span aria-hidden="true" class="workspace-mode-thumb"></span>
-<button aria-pressed="true" data-workspace-mode="simple" title="极简模式：常用绘图工具，更多设置按需打开" type="button">极简</button>
-<button aria-pressed="false" data-workspace-mode="professional" title="专业模式：图层、对象属性与精细设置" type="button">专业</button>
-</div><span aria-live="polite" class="mode-announcement" id="workspace-mode-status" role="status"></span>
+</section><section class="document-menu-section"><h3>工作区</h3><span aria-live="polite" class="mode-announcement" id="workspace-mode-status" role="status"></span>
 <span class="menu-section-title simple-only">精细编辑</span>
 <button class="simple-only" data-command="toggle-properties">对象与画布设置</button>
 <button class="simple-only" data-panel-command="layers">图层与排列</button>
 <button class="simple-only" data-command="open-check-toolbar">检查图版</button>
 <button class="simple-only" data-panel-command="references">论文参考与来源</button>
 <button data-command="beginner-help">操作说明</button>
-<button class="sidebar-action" id="sidebar-assets" title="打开科研素材库" type="button"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg><span>素材库</span></button><button class="sidebar-action" id="sidebar-templates" title="打开模板库" type="button"><svg aria-hidden="true" class="icon"><use href="#layers"></use></svg><span>模板库</span></button><button class="tool text-tool professional-only" id="toggle-properties" title="打开所选对象属性或画布设置">
-       属性
-      </button><button class="tool text-tool professional-only" id="open-check-toolbar" title="查看排版与内容建议">
-       检查
-      </button><button aria-controls="panel-layers" aria-expanded="false" class="rail-item professional-only" data-tab="layers" title="查看、隐藏或锁定图中对象">
+<button aria-controls="panel-layers" aria-expanded="false" class="rail-item professional-only" data-tab="layers" title="查看、隐藏或锁定图中对象">
 <svg class="icon">
 <use href="#layers">
 </use>
@@ -338,23 +336,23 @@
 </use>
 </svg>
 </button>
-</div><details class="app-menu insert-menu"><summary title="添加素材、模板或导入图片"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg><span>添加</span></summary><div class="menu-items"><nav aria-label="工作区工具" class="rail top-tools">
-<button aria-controls="panel-templates" aria-expanded="false" class="rail-item" data-tab="templates" title="选择模板并创建一张新图">
-<svg class="icon">
-<use href="#layers">
-</use>
-</svg>
-<span>
-      模板
-     </span>
-</button>
+</div><nav aria-label="插入与创作" class="rail top-tools creation-tools">
 <button aria-controls="asset-library-dialog" aria-expanded="false" class="rail-item active" data-tab="assets" title="打开素材库，点击或搜索素材添加到图上">
 <svg class="icon">
 <use href="#plus">
 </use>
 </svg>
 <span>
-      添加素材
+      素材库
+     </span>
+</button>
+<button aria-controls="panel-templates" aria-expanded="false" class="rail-item" data-tab="templates" title="选择模板并创建一张新图">
+<svg class="icon">
+<use href="#layers">
+</use>
+</svg>
+<span>
+      模板库
      </span>
 </button>
 <button aria-controls="panel-generate" aria-expanded="false" class="rail-item" data-tab="generate" title="描述研究内容，让 AI 创建初稿">
@@ -363,15 +361,14 @@
 </use>
 </svg>
 <span>
-      AI 生成
+      AI 绘图
      </span>
 </button>
-
-
-<div class="rail-spacer">
-</div>
-
-</nav></div></details><div class="canvas-actions">
+</nav><details class="app-menu insert-menu"><summary title="添加素材、模板或导入图片"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg><span>更多</span></summary><div class="menu-items"></div></details><div class="canvas-actions"><button class="tool text-tool" id="toggle-properties" title="打开所选对象属性或画布设置">
+       属性
+      </button><button class="tool text-tool" aria-controls="inspector-review" id="open-check-toolbar" title="查看排版与内容建议">
+       检查
+      </button>
 
 
 
@@ -472,15 +469,13 @@
 </div>
 <div class="welcome" id="welcome">
 <div class="start-document">
-<div class="home-heading"><div><h2>把研究想法画出来</h2><p class="home-intro">写下研究内容，生成后直接拖动、改字和连线</p></div><button class="button" hidden="" id="return-to-document">返回当前图版</button></div>
-<div class="home-composer-host" id="home-composer-host"></div>
-<div aria-label="其他开始方式" class="home-start-links"><button id="home-convert-figure" type="button"><svg aria-hidden="true" class="icon"><use href="#download"></use></svg>导入科研图</button><button id="welcome-gallery" type="button"><svg aria-hidden="true" class="icon"><use href="#layers"></use></svg>使用模板</button><button id="welcome-blank" type="button"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg>空白绘图</button></div>
-
-
-<details class="home-inspiration"><summary>没有思路？先看看示例</summary><button id="welcome-example" type="button"><svg class="icon"><use href="#icon-journal"></use></svg>试着编辑示例图</button><section aria-label="科研图模板起点" class="home-template-shelf" hidden="" id="home-template-shelf">
-<header><h3>从一张模板开始</h3><button class="text-button" id="home-all-templates" type="button">查看全部模板</button></header>
+<div class="home-heading"><div><h2>新建科研图</h2><p class="home-intro">从研究描述起稿，或从已有图稿开始。</p></div><button class="button" hidden="" id="return-to-document">返回当前图版</button></div>
+<div class="start-layout"><section class="brief-area" aria-labelledby="brief-heading"><h3 id="brief-heading">用 AI 起稿</h3><div class="home-composer-host" id="home-composer-host"></div></section>
+<section class="source-area" aria-labelledby="source-heading"><h3 id="source-heading">其他开始方式</h3><div class="home-start-links"><button id="home-convert-figure" type="button"><svg aria-hidden="true" class="icon"><use href="#download"></use></svg><span>导入科研图<small>转换现有图片、SVG 或 PDF</small></span></button><button id="welcome-gallery" type="button"><svg aria-hidden="true" class="icon"><use href="#layers"></use></svg><span>使用模板<small>选择图版，替换内容</small></span></button><button id="welcome-blank" type="button"><svg aria-hidden="true" class="icon"><use href="#plus"></use></svg><span>空白绘图<small>自由添加文字、素材和连线</small></span></button></div><button id="welcome-example" type="button">打开练习图 →</button></section></div>
+<section aria-label="科研图模板起点" class="home-template-shelf" hidden="" id="home-template-shelf">
+<header><h3>精选模板</h3><button class="text-button" id="home-all-templates" type="button">查看全部模板 →</button></header>
 <div class="home-template-examples" id="home-template-examples"></div>
-</section><button hidden="" id="welcome-ai" type="button">开始 AI 创作</button></details></div>
+</section><button hidden="" id="welcome-ai" type="button">开始 AI 创作</button></div>
 </div>
 <div class="workflow-guide" hidden="" id="workflow-guide">
 <div class="workflow-copy">
@@ -1219,7 +1214,7 @@
 <dialog aria-labelledby="creation-title" class="creation-dialog" id="creation-dialog">
 <section class="creation-composer" id="panel-generate">
 <header class="composer-header">
-<div><span class="composer-eyebrow">新建图版</span><h1 id="creation-title">把你的想法画出来</h1><p>写下要表达的内容，AI 帮你完成第一稿。</p></div>
+<div><span class="composer-eyebrow">新建图版</span><h1 id="creation-title">用 AI 起稿</h1><p>描述主要对象、连接和排列方式。生成后可继续编辑。</p></div>
 <button aria-label="关闭创作窗口" class="icon-button" id="close-creation" title="关闭后保留本次输入" type="button"><svg class="icon"><use href="#close"></use></svg></button>
 </header>
 <div class="composer-body">
@@ -1228,7 +1223,7 @@
 <textarea aria-describedby="brief-help" id="brief-input" maxlength="8000" placeholder="例如：画出 JAK–STAT 信号通路，区分胞外、细胞质和细胞核，标出激活与转运。"></textarea>
 <div class="input-meta"><span id="brief-count">0 / 8000</span><span hidden="">原生矢量</span></div>
 <p class="composer-help" id="brief-help">写清主要对象、它们的关系和排列方式。不确定的地方可以留给后续核对。</p>
-<div class="prompt-assists"><button aria-expanded="false" class="button" id="composer-attach" type="button"><svg class="icon"><use href="#plus"></use></svg>参考 / 草稿</button><button class="button" id="expand-brief" type="button"><svg class="icon"><use href="#compose"></use></svg>帮我优化描述</button><button class="text-button" hidden="" id="review-brief-candidate" type="button">查看优化候选</button><button class="text-button" hidden="" id="restore-document-brief" type="button">恢复原描述</button><details class="composer-options"><summary aria-label="绘图选项">选项</summary><div class="composer-options-body"><div class="composer-output"><label class="field-label"><span class="step-number">3</span> 选择绘图方式</label><div aria-label="创作方式" class="generation-modes" role="group"><button aria-pressed="true" data-generation-mode="vector" type="button"><strong>可编辑示意图</strong><span>图形、文字、箭头都能单独修改</span></button><button aria-pressed="false" data-generation-mode="image" type="button"><strong>细节插画</strong><span>主体为图片；文字、箭头可单独修改</span></button></div><p class="muted small" id="generation-mode-note"></p></div><details class="prompt-examples"><summary>看看示例：通路、流程与循环图</summary><div class="prompt-example-list"><button data-prompt-example="signal" type="button">信号通路</button><button data-prompt-example="workflow" type="button">实验流程</button><button data-prompt-example="cycle" type="button">循环过程</button></div><p class="muted small" hidden="" id="prompt-example-copy"></p><button class="text-button" hidden="" id="use-prompt-example" type="button">使用这段示例</button></details><button class="text-button" id="open-guide" type="button">分步填写</button><button class="text-button" id="composer-documents" type="button">从文档提取</button><button class="button" id="preview-generation" type="button">预览结构</button></div></details></div>
+<div class="prompt-assists"><button aria-expanded="false" class="button" id="composer-attach" type="button"><svg class="icon"><use href="#plus"></use></svg>参考 / 草稿</button><button class="button" id="draw-sketch" type="button"><svg class="icon" aria-hidden="true"><use href="#compose"></use></svg><span>手绘草图</span></button><button class="button" id="expand-brief" type="button"><svg class="icon"><use href="#compose"></use></svg>帮我优化描述</button><button class="text-button" hidden="" id="review-brief-candidate" type="button">查看优化候选</button><button class="text-button" hidden="" id="restore-document-brief" type="button">恢复原描述</button><details class="composer-options"><summary aria-label="更多绘图设置">更多设置</summary><div class="composer-options-body"><details class="prompt-examples"><summary>看看示例：通路、流程与循环图</summary><div class="prompt-example-list"><button data-prompt-example="signal" type="button">信号通路</button><button data-prompt-example="workflow" type="button">实验流程</button><button data-prompt-example="cycle" type="button">循环过程</button></div><p class="muted small" hidden="" id="prompt-example-copy"></p><button class="text-button" hidden="" id="use-prompt-example" type="button">使用这段示例</button></details><button class="text-button" id="open-guide" type="button">分步填写</button><button class="text-button" id="composer-documents" type="button">从文档提取</button><details class="composer-settings"><summary>尺寸与输出设置 <span id="creation-size-summary">180 × 120 mm</span></summary><label for="new-size">图版尺寸</label><select id="new-size"><option value="180x120">论文双栏 · 180 × 120 mm</option><option value="90x150">论文单栏 · 90 × 150 mm</option><option value="180x101">宽屏 · 16:9</option><option value="150x150">正方形 · 150 × 150 mm</option><option value="180x135">经典 · 4:3</option></select><label for="generation-dpi">图片分辨率</label><select id="generation-dpi"><option value="300">300 DPI</option><option value="600">600 DPI</option></select><div hidden="" id="image-options"><label class="checkbox-field"><input id="generation-literature" type="checkbox"/>生成时检索文献参考</label></div></details></div></details></div>
 
 <details class="enhancement-card" hidden="" id="generation-origin-card"><summary>已采用优化描述 <span>原文保留，可随时停用</span></summary><label class="field-label" for="generation-enhanced-input">AI 生成时使用的补充说明</label><textarea id="generation-enhanced-input" maxlength="8000"></textarea><button class="text-button" id="discard-enhancement" type="button">停用优化，使用我的原文</button></details>
 </div>
@@ -1236,15 +1231,17 @@
 <h2><span class="step-number">2</span> 添加参考 <span class="optional">可选</span></h2>
 <button class="reference-dropzone" id="upload-sketch" type="button"><svg class="icon"><use href="#plus"></use></svg><strong>点击上传参考图或草稿</strong><span>也可以把图片拖到这里</span><small>PNG / JPG / WebP · 最大 10 MB</small></button>
 <input accept="image/png,image/jpeg,image/webp" hidden="" id="reference-file" type="file"/>
-<div class="sketch-source-actions"><button class="button" id="draw-sketch" type="button">画一张草稿</button><button class="button" id="use-canvas-sketch" title="先打开图版并放置对象，再将画布作为草稿" type="button">使用当前画布</button></div>
+<div class="sketch-source-actions"><button class="button" id="use-canvas-sketch" title="先打开图版并放置对象，再将画布作为草稿" type="button">使用当前画布</button></div>
 <div class="generation-reference-card" hidden="" id="generation-reference-card"><img alt="本次使用的原始参考图" id="generation-reference-preview"/><div><label for="reference-purpose">希望 AI 参考什么？</label><select id="reference-purpose"><option value="layout">只参考排版</option><option value="sketch">按我的草稿生成</option><option value="style">只参考画风</option><option value="content">参考对象与排版</option></select><p class="muted small" id="generation-reference-note"></p><button class="text-button" id="clear-generation-reference" type="button">移除图片</button><button class="text-button" id="replace-generation-reference" type="button">更换图片</button></div></div>
 <div class="canvas-sketch-card" hidden="" id="canvas-sketch-card"><span id="canvas-sketch-note"></span><button class="text-button" id="clear-canvas-sketch" type="button">移除</button></div>
 <div class="sketch-layout-settings" hidden="" id="sketch-layout-settings"><label for="sketch-layout-policy">怎样处理草稿排版？</label><select id="sketch-layout-policy"><option value="regularize">智能整理 · 推荐手绘草稿使用</option><option value="preserve">严格保留位置与尺寸</option></select><p id="sketch-layout-help"></p></div><p class="reference-help" id="creation-reference-help">手绘只需表达大致位置、对象名称和连接。默认自动对齐、等距排列，细化为规范图形。</p>
-<details class="composer-settings"><summary>尺寸与输出设置 <span id="creation-size-summary">180 × 120 mm</span></summary><label for="new-size">图版尺寸</label><select id="new-size"><option value="180x120">论文双栏 · 180 × 120 mm</option><option value="90x150">论文单栏 · 90 × 150 mm</option><option value="180x101">宽屏 · 16:9</option><option value="150x150">正方形 · 150 × 150 mm</option><option value="180x135">经典 · 4:3</option></select><label for="generation-dpi">图片分辨率</label><select id="generation-dpi"><option value="300">300 DPI</option><option value="600">600 DPI</option></select><div hidden="" id="image-options"><label class="checkbox-field"><input id="generation-literature" type="checkbox"/>生成时检索文献参考</label></div></details>
+
 </aside>
 </div>
 
-<footer class="creation-submit"><p aria-live="polite" id="generation-inline-status" role="status"></p><div class="composer-submit-row"><span class="composer-save-note">生成一张新图，当前图版会保留</span><button class="button primary" id="generate" type="button">生成可编辑初稿</button></div><div class="generation-status" hidden="" id="generation-status" role="status"><span id="generation-text"></span><button class="text-button" id="cancel-job" type="button">取消生成</button><div class="generation-stage-list" id="generation-stage-list"></div><progress id="generation-progress" max="100" value="0"></progress></div></footer>
+<footer class="creation-submit">
+<div class="composer-output"><label class="field-label"><span class="step-number">3</span> 选择绘图方式</label><div aria-label="创作方式" class="generation-modes" role="group"><button aria-pressed="true" data-generation-mode="vector" type="button"><strong>可编辑示意图</strong><span>图形、文字、箭头都能单独修改</span></button><button aria-pressed="false" data-generation-mode="image" type="button"><strong>细节插画</strong><span>主体为图片；文字、箭头可单独修改</span></button></div><p class="muted small" id="generation-mode-note"></p></div>
+<p aria-live="polite" id="generation-inline-status" role="status"></p><div class="composer-submit-row"><span class="composer-key-hint">Ctrl + Enter 生成</span><span class="composer-save-note">生成一张新图，当前图版会保留</span><button class="button" id="preview-generation" type="button">预览结构</button><button class="button primary" id="generate" type="button">生成可编辑初稿</button></div><div class="generation-status" hidden="" id="generation-status" role="status"><span id="generation-text"></span><button class="text-button" id="cancel-job" type="button">取消生成</button><div class="generation-stage-list" id="generation-stage-list"></div><progress id="generation-progress" max="100" value="0"></progress></div></footer>
 <div aria-hidden="true" hidden=""><button id="reference-button" tabindex="-1"></button><p hidden="" id="reference-status"></p><button hidden="" id="remove-reference" tabindex="-1"></button><div id="example-list"></div><button id="show-all-templates" tabindex="-1"></button><button id="new-blank" tabindex="-1"></button></div>
 </section>
 </dialog>

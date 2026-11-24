@@ -41,7 +41,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     rightTab=name;$('workspace').classList.remove('properties-hidden');
     if(innerWidth<1440)$('workspace').classList.add('left-collapsed');
     
-    for(const n of document.querySelectorAll('[data-inspector]'))n.setAttribute('aria-selected',String(n.dataset.inspector===name));
+    for(const n of document.querySelectorAll('button[data-inspector]'))n.setAttribute('aria-selected',String(n.dataset.inspector===name));
     $('property-content').hidden=name!=='properties';$('inspector-review').hidden=name!=='review';$('inspector-task').hidden=name!=='task';
     $('properties').dataset.inspector=name;
     },{keepScreenPosition});
@@ -49,7 +49,7 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     syncPanelButtons($('workspace'));
     refresh();
   }
-  document.querySelectorAll('[data-inspector]').forEach(b=>b.onclick=()=>showRight(b.dataset.inspector));
+  document.querySelectorAll('button[data-inspector]').forEach(b=>b.onclick=()=>showRight(b.dataset.inspector));
   $('toggle-properties').onclick=()=>{if(rightTab==='properties'&&!$('workspace').classList.contains('properties-hidden')){preserveCanvasView(editor,()=>$('workspace').classList.add('properties-hidden'));syncPanelButtons($('workspace'));}else showRight('properties',false);};
   $('open-audit').onclick=()=>showRight('review');
   $('process-check').onclick=()=>showRight('review');

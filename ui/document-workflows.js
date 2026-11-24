@@ -87,7 +87,11 @@ export function setupDocumentWorkflows({state,editor,api,flush,toast,openJob,ref
     textChoice.hidden=!state.revision||!editor.scene?.objects.some(o=>o.text_appearance);
     const epoch=++exportEpoch;exportMeta=null;$('export-warning').hidden=true;
     if(!state.revision){exportSummary.textContent='这张原图会按原有内容保存。';$('export-menu').querySelector('[data-export=pptx] span').textContent='放入幻灯片；原图主体按图片保留';return;}
-    if(!await flush())return;const id=state.id;exportSummary.textContent='正在核对当前修订…';const meta=await api('/api/jobs/'+id+'/export-info');if(state.id!==id||epoch!==exportEpoch)return;exportMeta=meta;renderExport();
+    const id=state.id;exportSummary.textContent='正在核对当前修订…';
+    if(!await flush()){if(state.id===id&&epoch===exportEpoch)exportSummary.textContent='当前修改尚未保存。请返回画布处理保存提示。';return;}
+    if(state.id!==id||epoch!==exportEpoch)return;
+    try{const meta=await api('/api/jobs/'+id+'/export-info');if(state.id!==id||epoch!==exportEpoch)return;exportMeta=meta;renderExport();}
+    catch(error){if(state.id!==id||epoch!==exportEpoch)return;exportSummary.textContent='未能读取当前修订的导出信息：'+error.message;throw error;}
   }
   function renderExport(){
     if(!exportMeta)return;const m=exportMeta,dpi=Number($('export-dpi').value);$('export-revision').textContent='当前修改已保存，选择一种格式即可导出。';$('export-revision').title='版本 r'+m.revision;exportSummary.replaceChildren(el('p','','纸张 '+m.width_mm+' × '+m.height_mm+' mm · 最小文字 '+m.min_font_pt+' pt'),el('p','','PNG '+Math.round(m.width_mm*dpi/25.4)+' × '+Math.round(m.height_mm*dpi/25.4)+' px · '+dpi+' DPI'),el('p','',m.vector?'主体为矢量；PPTX 保留图形与文字编辑。':'包含位图，请留意放大后的清晰度。'));
