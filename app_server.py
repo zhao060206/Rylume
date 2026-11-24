@@ -291,7 +291,33 @@ def normalize_config(config: dict) -> dict:
         "vector" if str(config.get("default_illustration_mode")).lower() == "vector"
         else "image")
     config["illustration_mode"] = config["default_illustration_mode"]
+    # provider is only stored for unofficial gateways; a missing value means
+    # "custom", so configs written before this field existed load unchanged.
+    for key in ("text", "image", "vision"):
+        if config[key].get("provider") != "unofficial":
+            config[key].pop("provider", None)
+    if not isinstance(config.get("unofficial_ack"), dict):
+        config.pop("unofficial_ack", None)
     return config
+
+
+UNOFFICIAL_ACK_VERSION = 1
+
+
+def uses_unofficial_gateway(config: dict) -> bool:
+    """True when any model section points at a user-run unofficial gateway.
+
+    Rylume ships no gateway code; the user runs one separately and only its
+    address is stored here. Saving such a section requires an explicit risk
+    acknowledgement (see POST /api/config).
+    """
+    return any(isinstance(config.get(key), dict) and config[key].get("provider") == "unofficial"
+               for key in ("text", "image", "vision"))
+
+
+def unofficial_ack_valid(config: dict) -> bool:
+    ack = config.get("unofficial_ack")
+    return isinstance(ack, dict) and ack.get("version") == UNOFFICIAL_ACK_VERSION
 
 
 def public_config(config: dict) -> dict:
@@ -2782,6 +2808,24 @@ class Handler(BaseHTTPRequestHandler):
                             section["api_key"] = (stored.get(key) or {}).get("api_key", "")
                         section.pop("api_key_clear", None)
                         section.pop("api_key_set", None)
+                    if "unofficial_ack" in patch:
+                        # The client only says which notice version it showed;
+                        # the timestamp is the server's, never the client's.
+                        incoming_ack = patch.get("unofficial_ack")
+                        if (isinstance(incoming_ack, dict)
+                                and incoming_ack.get("version") == UNOFFICIAL_ACK_VERSION):
+                            merged["unofficial_ack"] = {"version": UNOFFICIAL_ACK_VERSION,
+                                                        "at": int(time.time())}
+                        elif stored.get("unofficial_ack") is not None:
+                            merged["unofficial_ack"] = stored["unofficial_ack"]
+                        else:
+                            merged.pop("unofficial_ack", None)
+                    if uses_unofficial_gateway(merged) and not unofficial_ack_valid(merged):
+                        return self._json(400, {
+                            "ok": False,
+                            "code": "unofficial_ack_required",
+                            "error": "使用非官方网关前需要先确认风险提示。",
+                        })
                     save_config(merged)
                     merged = load_config()
                 return self._json(200, {"ok": True, "config": public_config(merged)})

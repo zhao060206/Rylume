@@ -12,11 +12,19 @@ export function generationPayload({text,mode='vector',width=180,height=120,dpi=3
     ...(archetype?{archetype}:{}),...(reference?.layout_analysis?{reference_layout:reference.layout_analysis}:{})};
 }
 
+/** Version of the unofficial-gateway risk notice; must match app_server.UNOFFICIAL_ACK_VERSION. */
+export const UNOFFICIAL_ACK_VERSION=1;
+export function unofficialAcknowledged(config,pending=false){return pending||config?.unofficial_ack?.version===UNOFFICIAL_ACK_VERSION;}
+/** What a change of service type should do: apply it, or ask for the risk confirmation first. */
+export function providerChange(next,acknowledged){return next==='unofficial'&&!acknowledged?'confirm':'apply';}
+
 export function modelPatch(values){
   const patch={};
   for(const key of ['text','image','vision']){
     const v=values[key];if(!v)continue;
     patch[key]={base_url:v.base_url.trim(),model:v.model.trim()};
+    // Sent explicitly (also as 'custom') so switching back overwrites a stored gateway.
+    if(v.provider)patch[key].provider=v.provider==='unofficial'?'unofficial':'custom';
     if(v.api_key)patch[key].api_key=v.api_key;
   }
   return patch;
@@ -100,7 +108,32 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
   function field(parent,label,value,type='text'){
     const wrapper=el('label','settings-field',label),input=el('input');input.type=type;input.value=value||'';input.autocomplete='off';input.setAttribute('aria-label',label);wrapper.append(input);parent.append(wrapper);return input;
   }
-  let modelInputs={},advancedInputs={};
+  let modelInputs={},advancedInputs={},ackPending=false;
+  function confirmUnofficial(){
+    return new Promise(resolve=>{
+      const dialog=$('unofficial-gateway-dialog'),agree=$('unofficial-gateway-agree'),ok=$('unofficial-gateway-confirm');
+      let done=false;const finish=value=>{if(done)return;done=true;dialog.close();resolve(value);};
+      agree.checked=false;ok.disabled=true;agree.onchange=()=>{ok.disabled=!agree.checked;};
+      ok.onclick=()=>{if(agree.checked)finish(true);};
+      dialog.querySelectorAll('[data-unofficial-cancel]').forEach(b=>{b.onclick=()=>finish(false);});
+      dialog.oncancel=event=>{event.preventDefault();finish(false);};
+      dialog.showModal();
+    });
+  }
+  function providerField(section,title,item,badge){
+    const label=el('label','settings-field',title+'服务类型'),select=el('select');select.setAttribute('aria-label',title+'服务类型');
+    for(const [value,text] of [['custom','自定义（兼容 OpenAI 的服务）'],['unofficial','非官方网关（自行运行）']]){const o=el('option','',text);o.value=value;select.append(o);}
+    select.value=item.provider==='unofficial'?'unofficial':'custom';let last=select.value;badge.hidden=last!=='unofficial';
+    select.onchange=async()=>{
+      if(providerChange(select.value,unofficialAcknowledged(modelConfig,ackPending))==='confirm'){
+        select.disabled=true;const accepted=await confirmUnofficial();select.disabled=false;
+        if(!accepted){select.value=last;return;}
+        ackPending=true;
+      }
+      last=select.value;badge.hidden=last!=='unofficial';
+    };
+    label.append(select);section.insertBefore(label,section.children[2]||null);return select;
+  }
   function settingsValues(){return Object.fromEntries(Object.entries(modelInputs).map(([key,v])=>[key,Object.fromEntries(Object.entries(v).map(([name,n])=>[name,n.value]))]));}
   function settingsPatch(){
     const patch=modelPatch(settingsValues()),v=advancedInputs;
@@ -109,16 +142,19 @@ export function setupWorkspace({state,editor,api,toast,flush,follow,tab,openJob,
     if(v.quality)patch.quality=v.quality.value;
     if(v.font)patch.font=v.font.value.trim()||'Arial';
     if(v.ocr)patch.ocr={mode:v.ocr.value};
+    // Only the notice version is sent; the server stamps the time itself.
+    if(ackPending)patch.unofficial_ack={version:UNOFFICIAL_ACK_VERSION};
     return patch;
   }
   async function settings(){
     $('model-status').textContent='正在读取配置…';$('models-dialog').showModal();
     try{
-      modelConfig=(await api('/api/state')).config||{};const body=$('model-settings');body.replaceChildren();modelInputs={};
+      modelConfig=(await api('/api/state')).config||{};const body=$('model-settings');body.replaceChildren();modelInputs={};ackPending=false;
       for(const [key,title,role] of [['text','文本模型','机制规划与 AI 修改'],['image','生图模型','科研插画与素材生成'],['vision','视觉模型','可选；留空时复用文本模型进行参考图分析与视觉审阅']]){
-        const item=modelConfig[key]||{},section=el('section','settings-group');section.append(el('h3','',title),el('p','muted small',role));
+        const item=modelConfig[key]||{},section=el('section','settings-group'),heading=el('h3','',title),badge=el('span','unofficial-badge','非官方');badge.title='此服务通过你自行运行的非官方网关调用';heading.append(' ',badge);section.append(heading,el('p','muted small',role));
         modelInputs[key]={base_url:field(section,`${title}服务地址`,item.base_url),model:field(section,`${title}名称`,item.model),api_key:field(section,`${title}密钥`,'','password')};
         modelInputs[key].api_key.placeholder=item.api_key_set?'已保存，留空保持不变':'粘贴 API Key';
+        modelInputs[key].provider=providerField(section,title,item,badge);
         const test=el('button','button secondary','测试连接'),status=el('span','connection-result','尚未测试');
         test.onclick=async()=>{test.disabled=true;status.textContent='测试中…';try{const r=await api('/api/test',{target:key,config:settingsPatch()});status.textContent=r.configured===false?(r.error||'尚未配置'):r.ok?'连接正常':r.error||'连接失败';}catch(e){status.textContent=e.message;}finally{test.disabled=false;}};
         const discover=el('button','text-button','读取可用模型'),choices=el('select');

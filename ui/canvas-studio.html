@@ -1187,6 +1187,32 @@
     创建修改版本
    </button>
 </dialog>
+<dialog class="unofficial-gateway-dialog" id="unofficial-gateway-dialog" aria-labelledby="unofficial-gateway-title">
+<div class="dialog-heading">
+<h2 id="unofficial-gateway-title">
+     使用非官方网关前请确认
+    </h2>
+<button aria-label="取消并关闭" class="icon-button" data-unofficial-cancel="" type="button">
+     ×
+    </button>
+</div>
+<ul class="unofficial-risk-list">
+<li>这类网关通常通过网页登录凭据模拟网页端调用，<strong>不是服务商提供的官方接口</strong>。</li>
+<li>可能违反服务商的服务条款，<strong>账号存在被限制或封禁的风险</strong>。</li>
+<li>网页端改版后可能随时失效，生成结果和稳定性没有保证。</li>
+<li>网关需要你自行运行。登录凭据由网关保管，Rylume 不读取、不保存，也不内置任何网关代码。</li>
+<li>使用非官方网关产生的问题，Rylume 无法提供支持。</li>
+</ul>
+<label class="unofficial-agree"><input id="unofficial-gateway-agree" type="checkbox"/> 我已了解以上风险，并自行承担后果</label>
+<div class="dialog-actions">
+<button class="button" data-unofficial-cancel="" type="button">
+     取消
+    </button>
+<button class="button primary" disabled="" id="unofficial-gateway-confirm" type="button">
+     确认使用
+    </button>
+</div>
+</dialog>
 <div class="toast" hidden="" id="toast" role="status">
 </div>
 <dialog class="generation-preview-dialog" id="generation-preview-dialog">

@@ -290,7 +290,8 @@ def dispatch(handler, method, path, app):
         if path == PREFIX and method == 'GET':
             result = store.list()
             model = (app.load_config().get('text') or {})
-            result['text_model'] = {'configured': bool(model.get('base_url') and model.get('model')), 'model': model.get('model') or ''}
+            result['text_model'] = {'configured': bool(model.get('base_url') and model.get('model')), 'model': model.get('model') or '',
+                                    'unofficial': model.get('provider') == 'unofficial'}
             handler._json(200, dict(ok=True, **result))
         elif path == PREFIX + '/upload' and method == 'POST':
             handler._json(202, store.upload(body.get('name'), body.get('data')))
