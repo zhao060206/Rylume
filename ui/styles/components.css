@@ -2,10 +2,10 @@
  * MIT © 2026 Mertcan Dundar Esmergul. Adapted for Rylume; THIRD_PARTY_UI.md. */
 @layer components {
  :root {
-  --ui-paper:#fff; --ui-ground:#f7f7f8; --ui-sidebar:#f7f7f8; --ui-raised:#efeff1;
-  --ui-ink:#24262b; --ui-secondary:#555962; --ui-muted:#6c7079;
-  --ui-border:#e4e5e8; --ui-border-strong:#c8cbd1; --ui-hover:#ededef;
-  --ui-accent:#315c50; --ui-accent-hover:#25483e; --ui-tint:#eaf1ed;
+  --ui-paper:#fff; --ui-ground:#f5f5f1; --ui-sidebar:#f0f1eb; --ui-raised:#e9ece4;
+  --ui-ink:#202a25; --ui-secondary:#44534b; --ui-muted:#59675f;
+  --ui-border:#d9ded6; --ui-border-strong:#b3beb5; --ui-hover:#e6ebe4;
+  --ui-accent:#205742; --ui-accent-hover:#17412f; --ui-tint:#e6f0e9;
   --ui-radius:8px; --ui-ease:cubic-bezier(.22,1,.36,1);
   --ui-fast:140ms; --ui-enter:200ms; --ui-shadow:0 8px 24px #17191d12,0 1px 4px #17191d08;
   --ui-font:"Segoe UI Variable","Segoe UI","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
@@ -26,7 +26,7 @@
   min-height:36px;border:1px solid var(--ui-border-strong);border-radius:var(--ui-radius);
   padding:8px 12px;background:var(--ui-paper);color:var(--ui-ink);font-size:13px;line-height:20px;
  }
- :where(input,textarea,select):hover {border-color:#9ea4ae}
+ :where(input,textarea,select):hover {border-color:var(--slate-8)}
  :where(input,textarea,select):focus {border-color:var(--ui-accent);box-shadow:none}
  textarea {resize:vertical} input::placeholder,textarea::placeholder {color:var(--ui-muted);opacity:1}
  input[type=checkbox] {accent-color:var(--ui-accent)}
@@ -62,10 +62,10 @@
  .ui-segments>button:hover {color:var(--ui-ink)}
  .ui-segments>button:focus-visible {outline-offset:1px}
  ::-webkit-scrollbar {width:8px;height:8px}
- ::-webkit-scrollbar-thumb {background:#c8cbd1;border:2px solid transparent;background-clip:padding-box;border-radius:8px}
+ ::-webkit-scrollbar-thumb {background:var(--slate-7);border:2px solid transparent;background-clip:padding-box;border-radius:8px}
  ::-webkit-scrollbar-track {background:transparent}
  .toast {background:#24262b;color:#fff;border:1px solid #24262b;box-shadow:var(--ui-shadow);border-radius:10px;font-size:13px;line-height:20px;max-width:min(560px,calc(100vw - 32px));padding:12px 16px}
- .toast.error {background:#8a332c;border-color:#8a332c}
+ .toast.error {background:var(--n-danger);border-color:var(--n-danger)}
  @media(prefers-reduced-motion:reduce) {
   *,*::before,*::after {animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
  }

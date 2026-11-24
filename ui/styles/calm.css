@@ -1,0 +1,155 @@
+/* Calm — work dock and title-bar messages (v7). Unlayered on purpose: tool
+   windows dock beside the canvas and must win over each feature dialog's own
+   positioning. Colours, type and chrome live in styles/shell.css. An open dock
+   takes the right column; closing it brings the inspector back. */
+.topbar>#toast{position:relative!important;inset:auto!important;transform:none!important;flex:0 1 auto;min-width:0;max-width:min(440px,34vw);margin:0;padding:0 0 0 14px!important;background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;color:var(--n-ink-2)!important;font-size:12px!important;font-weight:400!important;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:auto;z-index:auto;animation:calm-status .24s var(--n-ease)}
+.topbar>#toast::before{content:'';position:absolute;left:3px;top:7px;width:6px;height:6px;border-radius:50%;background:var(--n-accent)}
+.topbar>#toast.error{color:var(--n-danger)!important}
+.topbar>#toast.error::before{background:var(--n-danger)}
+.topbar>#toast[hidden]{display:none!important}
+@keyframes calm-status{from{opacity:0;translate:0 3px}to{opacity:1;translate:none}}
+
+/* Work dock */
+body.dock-open #workspace{margin-right:var(--dock-w);grid-template-columns:0 0 minmax(0,1fr) 0}
+#workspace{transition:margin-right .22s var(--n-ease)}
+dialog.docked{position:fixed!important;top:var(--top)!important;right:0!important;bottom:0!important;left:auto!important;width:var(--dock-w)!important;height:auto!important;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;margin:0!important;padding:0 16px 20px!important;border:0!important;border-left:1px solid var(--n-line)!important;border-radius:0!important;box-shadow:-12px 0 32px -28px #1d1f1e66!important;background:var(--n-paper)!important;color:var(--n-ink);overflow:auto!important;transform:none!important;z-index:30!important;animation:dock-in .22s var(--n-ease)}
+dialog.docked:not([open]),dialog.docked.dock-behind{display:none!important}
+dialog.docked .dialog-heading{position:sticky;top:0;z-index:2;margin:0 -16px 12px;padding:14px 16px 12px;background:var(--n-paper);border-bottom:1px solid var(--n-line);cursor:default}
+dialog.docked .dialog-heading h2{font-size:15px;font-weight:600;margin:0}
+dialog.docked .floating-options{display:none!important}
+dialog.docked.is-minimized{display:none!important}
+dialog.docked :is(.gallery-grid,.asset-list){grid-template-columns:repeat(auto-fill,minmax(140px,1fr))!important}
+body.dock-multi dialog.docked{top:calc(var(--top) + 36px)!important}
+.dock-tabs{position:fixed;top:var(--top);right:0;width:var(--dock-w);height:36px;display:flex;align-items:flex-end;gap:2px;padding:0 8px;background:var(--n-ground);border-left:1px solid var(--n-line);border-bottom:1px solid var(--n-line);z-index:31;overflow-x:auto;scrollbar-width:none}
+.dock-tabs[hidden]{display:none}
+.dock-tab{display:flex;align-items:center;height:30px;border-radius:8px 8px 0 0;color:var(--n-ink-2);font-size:12px;flex:0 0 auto}
+.dock-tab.active{background:var(--n-paper);color:var(--n-ink);box-shadow:0 0 0 1px var(--n-line)}
+.dock-tab button{height:30px;border:0;background:none;color:inherit;padding:0 8px;white-space:nowrap}
+.dock-tab .dock-tab-close{padding:0 6px;color:var(--n-ink-3)}
+.dock-tab .dock-tab-close:hover{color:var(--n-ink)}
+@keyframes dock-in{from{opacity:0;translate:14px 0}to{opacity:1;translate:none}}
+body.dock-open #properties{display:none}
+@media (max-width:760px){:root{--dock-w:100vw}body.dock-open #workspace{margin-right:0}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* dock fixes */
+body.dock-open .start-layout{grid-template-columns:minmax(0,1fr)!important}
+body.dock-open .start-layout>*{max-width:none}
+dialog.docked:focus,dialog.docked .dialog-heading:focus{outline:none}
+dialog.docked .dialog-heading:focus-visible{outline:2px solid var(--n-accent);outline-offset:-2px}
+
+/* dock polish */
+dialog.docked .dialog-heading,dialog.docked .dialog-heading:focus,dialog.docked .dialog-heading:focus-within{border:0!important;border-bottom:1px solid var(--n-line)!important;border-radius:0!important;box-shadow:none!important;outline:none!important}
+body.dock-open .toolbar{flex-wrap:nowrap}
+body.dock-open .toolbar button:has(>svg)>span:not(:only-child){display:none}
+
+/* dock footer */
+dialog.docked :is(.dialog-actions,footer) .button{white-space:nowrap;padding:0 10px}
+dialog.docked :is(.dialog-actions,footer){flex-wrap:wrap;gap:6px}
+
+/* calm: dock fit fixes */
+.dock-tabs[hidden]{display:none!important}
+#workspace{container:workspace/inline-size}
+.asset-library-footer{flex-wrap:wrap;row-gap:4px}
+.asset-library-footer button{white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+@container workspace (max-width:700px){
+ #workspace>.toolbar,body.dock-open #workspace>.toolbar{flex-wrap:wrap;justify-content:flex-start;row-gap:2px;height:auto;max-width:none}
+ #workspace>.toolbar .canvas-actions{flex-basis:100%;justify-content:flex-start;border-left:0;margin-left:0;padding-left:0}
+ #workspace>.toolbar .insert-menu>summary>span{display:none}
+}
+/* the thumb is a 1px element scaled with scaleX(); its shadow is scaled too and smears left of the switch */
+.workspace-mode-switch{overflow:hidden}
+.workspace-mode-thumb{box-shadow:none!important}
+
+/* dock v8: asset library fits the dock — denser grid, no clipped controls, one quiet footer */
+dialog.docked #asset-list{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))!important;gap:8px!important;padding:4px 0 12px!important}
+dialog.docked #asset-list .asset-card img{max-height:72px}
+dialog.docked #asset-list .asset-card .asset-name{padding:4px 6px 6px;font-size:12px;line-height:1.4}
+dialog.docked .asset-search-row{flex-wrap:wrap!important;gap:8px!important;padding:0 0 8px!important}
+dialog.docked .asset-search-row #asset-search{flex:1 1 100%!important;min-width:0!important}
+dialog.docked .asset-filters{grid-template-columns:repeat(auto-fit,minmax(132px,1fr))!important}
+dialog.docked .asset-filters select{text-overflow:ellipsis}
+dialog.docked .asset-library-footer{position:sticky!important;bottom:-20px!important;display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:4px 6px!important;margin:0 -16px -20px!important;padding:10px 16px!important;background:var(--n-paper)!important;border-top:1px solid var(--n-line)!important;box-shadow:none!important}
+dialog.docked .asset-library-footer .button{height:28px!important;min-height:28px!important;font-size:12px!important}
+dialog.docked .asset-library-footer .button:last-child{margin-left:auto;border:0!important;background:none!important;color:var(--n-accent)!important;padding:0 4px!important}
+
+/* dock v8: close button sits on the title line, not centred against title + subtitle */
+dialog.docked .dialog-heading{align-items:flex-start!important}
+
+/* dock v8: a docked panel is not a floating window — no resize grip; footer groups sit on one quiet row */
+dialog.docked{resize:none!important}
+dialog.docked .personal-entry{display:flex!important;flex-wrap:wrap!important;gap:6px!important}
+dialog.docked .personal-entry .button{height:28px!important;min-height:28px!important;font-size:12px!important}
+dialog.docked .asset-library-footer .button.full{width:auto!important;flex:0 1 auto!important}
+
+/* dock v8 fix: footer sticks to the visible bottom edge; filters stack when the dock is narrow */
+dialog.docked .asset-library-footer{bottom:0!important}
+dialog.docked .asset-taxonomy{padding:0 0 12px!important;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))!important}
+
+/* dock v8: the dock already pads 16px; drop the floating window's extra 20px on these two rows */
+dialog.docked #panel-assets>.asset-filter-disclosure{margin:0 0 8px!important}
+dialog.docked #panel-assets>#asset-count{padding:4px 0 8px!important}
+
+/* toolbar v8: "更多" keeps its word in narrow toolbars, so it never reads as a second "+" next to Add */
+#workspace>.toolbar .insert-menu>summary>span{display:inline!important}
+
+/* toolbar v8 narrow: creation tools go icon-only, inspector links stay on the same row (right), wrap only if truly out of room */
+/* toolbar v10: labelled creation tools need ~805px, so go icon-only below 840px (700-840px used to wrap and make the canvas jump) */
+@container workspace (max-width:840px){
+ #workspace>.toolbar .creation-tools button:has(>svg)>span:not(:only-child){display:none!important}
+}
+@container workspace (max-width:700px){
+ #workspace>.toolbar .canvas-actions{flex-basis:auto!important;margin-left:auto!important}
+ #workspace>.toolbar>*+*{margin-left:0!important;padding-left:2px!important}
+ #workspace>.toolbar .canvas-actions .text-tool{padding:0 6px!important;min-width:0!important}
+ #workspace>.toolbar .creation-tools [data-tab=templates]{display:none!important}
+}
+
+/* dock v10 narrow: below 1100px the dock floats over the canvas, starting under the toolbar, instead of squeezing it */
+@media (max-width:1099px){
+ body.dock-open #workspace{margin-right:0!important}
+ dialog.docked{top:calc(var(--top) + 56px)!important;border-top-left-radius:12px!important;box-shadow:-16px 0 32px -16px #0f172a40!important}
+ body.dock-multi dialog.docked{top:calc(var(--top) + 92px)!important;border-top-left-radius:0!important}
+ /* the tab strip floats with the dock: under the toolbar, directly above the panel */
+ .dock-tabs{top:calc(var(--top) + 56px)!important;border-top-left-radius:12px;box-shadow:-16px 0 32px -16px #0f172a40}
+}
+
+/* assets v9 (C): borderless tiles; hover/focus reveals name and actions; quiet filters */
+dialog.docked #asset-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:4px!important}
+dialog.docked #asset-list .asset-card{border:0!important;background:transparent!important;border-radius:var(--n-r)!important;box-shadow:none!important;transition:background .12s var(--n-ease)}
+dialog.docked #asset-list .asset-card:is(:hover,:focus-within){background:var(--n-hover)!important}
+dialog.docked #asset-list .asset-insert{display:grid!important;place-items:center!important;aspect-ratio:1;width:100%;padding:8px!important;background:none!important;border:0!important;box-shadow:none!important}
+dialog.docked #asset-list .asset-card img{max-height:64px!important;transition:transform .15s var(--n-ease)}
+dialog.docked #asset-list .asset-card .asset-name{position:absolute;left:4px;right:4px;bottom:4px;padding:0!important;font-size:12px!important;line-height:15px!important;text-align:center;color:var(--n-ink-2);display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;opacity:0;transition:opacity .12s var(--n-ease)}
+dialog.docked #asset-list .asset-card:is(:hover,:focus-within) .asset-name{opacity:1}
+dialog.docked #asset-list .asset-card:is(:hover,:focus-within) img{transform:translateY(-8px) scale(.88)}
+dialog.docked #asset-list .asset-style-tag{display:none!important}
+dialog.docked #asset-list .asset-card :is(.asset-license,.asset-favorite){opacity:0;transition:opacity .12s var(--n-ease)}
+dialog.docked #asset-list .asset-card:is(:hover,:focus-within) :is(.asset-license,.asset-favorite),dialog.docked #asset-list .asset-favorite[aria-pressed=true]{opacity:1}
+dialog.docked .asset-taxonomy select{appearance:none;-webkit-appearance:none;height:30px!important;padding:0 26px 0 8px!important;border:0!important;border-radius:var(--n-r)!important;background:var(--n-hover) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b8d98' stroke-width='1.5' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 6px center/14px no-repeat!important;color:var(--n-ink)!important;font-size:13px!important;box-shadow:none!important}
+dialog.docked .asset-taxonomy select:hover{background-color:var(--n-press)!important}
+dialog.docked .asset-taxonomy label{font-size:12px!important;color:var(--n-ink-3)!important}
+dialog.docked #asset-search{border:0!important;background:var(--n-hover)!important;box-shadow:none!important}
+dialog.docked #asset-search:focus{background:var(--n-paper)!important;box-shadow:0 0 0 1px var(--slate-8),0 0 0 4px var(--n-accent-tint)!important}
+
+/* assets v9b: hidden actions float in the tile corners so they take no row height */
+dialog.docked #asset-list .asset-card{position:relative!important;padding:0!important;min-height:0!important;height:auto!important;display:block!important}
+dialog.docked #asset-list .asset-card :is(.asset-license,.asset-favorite,.asset-match-tag){position:absolute!important;top:4px;z-index:1;height:20px!important;min-height:20px!important;margin:0!important;padding:0 6px!important;border:0!important;border-radius:4px!important;background:var(--n-paper)!important;box-shadow:var(--n-shadow-1)!important;font-size:11px!important;line-height:20px!important;color:var(--n-ink-2)!important}
+dialog.docked #asset-list .asset-card .asset-license{right:4px;width:20px!important;padding:0!important;text-align:center}
+dialog.docked #asset-list .asset-card .asset-favorite{left:4px}
+dialog.docked #asset-list .asset-card .asset-favorite[aria-pressed=true]{color:var(--n-accent)!important}
+dialog.docked #asset-list .asset-card .asset-match-tag{top:auto;bottom:22px;left:4px;color:var(--n-warn)!important}
+
+/* assets v9c: measured — .asset-insert kept an old min-height:136px; tiles are square now. Favorite chip no longer stretches. */
+dialog.docked #asset-list .asset-insert{min-height:0!important;height:auto!important}
+dialog.docked #asset-list .asset-card .asset-favorite{right:auto!important;width:auto!important}
+
+/* toolbar v9 (C): stays in its grid row (canvas never jumps), but reads as a white pill floating on the canvas ground */
+#workspace{background:var(--n-canvas)}
+#workspace>.toolbar{justify-self:center;width:max-content;max-width:calc(100% - 24px);min-height:0!important;height:auto;margin:8px 0 0!important;padding:4px!important;gap:2px!important;border:0!important;border-radius:12px!important;background:var(--n-paper)!important;box-shadow:var(--n-shadow-2)!important}
+#workspace>.toolbar>*+*{margin-left:2px;padding-left:4px;border-left-color:var(--n-line)}
+#workspace>.toolbar :is(.tool,.rail-item,.insert-menu>summary){height:32px!important;min-height:32px!important;border-radius:8px!important}
+#workspace>.toolbar .text-tool{color:var(--n-ink-2)!important;font-weight:400!important}
+
+/* toolbar v9b: the narrow rule sets max-width:none!important; the pill must still fit its row and wrap inside it */
+#workspace>.toolbar,body.dock-open #workspace>.toolbar{max-width:calc(100% - 16px)!important;justify-content:center!important}
