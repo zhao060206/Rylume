@@ -94,6 +94,8 @@ REVIEW_VERSION = review.VERSION
 
 def _friendly_error(exc: Exception) -> str:
     text = str(exc)
+    if 'model_not_found' in text:
+        return '模型服务找不到已填写的模型，或当前账号无权使用。请在「设置 → 模型设置」核对模型名称并测试连接；原描述和图版已保留。'
     if 'auth_unavailable' in text:
         return '模型网关的上游授权不可用，请检查网关登录或切换可用模型；已有图版保留。'
     if "429" in text:
@@ -107,7 +109,26 @@ def _friendly_error(exc: Exception) -> str:
         return "模型响应超时，请点「再试一次」"
     if "HTTP 400" in text or "HTTP Error 400" in text:
         return "模型请求被拒绝（400），请检查对应模型的配置与输入；已有草稿保留。"
-    return f"{type(exc).__name__}: {text}"[:300]
+    return (text.strip() or '这一步没有完成，请重试；已有图版保留。')[:300]
+
+
+_COMPONENT_USES = {
+    "fitz": "PNG/PDF 导出和批注预览", "pymupdf": "PNG/PDF 导出和批注预览",
+    "svgpathtools": "PowerPoint 导出", "pptx": "PowerPoint 导出", "cairosvg": "PNG 导出",
+}
+_FORMAT_USES = {"png": "PNG 导出", "pdf": "PDF 导出", "pptx": "PowerPoint 导出", "ppt": "PowerPoint 导出"}
+
+
+def _missing_component_error(exc: Exception, fmt: str = "") -> str:
+    """Plain-language text for a missing optional component; never the raw ImportError."""
+    name = str(getattr(exc, "name", "") or "")
+    if not name:
+        match = re.search(r"No module named '([^']+)'", str(exc))
+        name = match.group(1) if match else ""
+    top = name.split(".")[0].lower()
+    use = _FORMAT_USES.get(str(fmt or "").lower()) or _COMPONENT_USES.get(top) or "这一步"
+    part = f"组件 {top} " if top else "组件"
+    return f"{use}所需的{part}没有安装或已损坏，请重新安装理象 Rylume 后再试；图版和修订已保留，SVG 导出仍可使用。"
 
 
 def _vision_unavailable(exc: Exception) -> dict:
@@ -2454,6 +2475,9 @@ def _ppt_worker(job: dict) -> None:
                 job["visual_state"] = "failed"
         state.update({"state": "done", "pct": 100.0, "stage": "导出完成",
                       "eta": 0, "elapsed": round(_now() - state["started"], 1)})
+    except ImportError as exc:
+        state.update({"state": "failed", "error": _missing_component_error(exc, "pptx"),
+                      "stage": "导出失败", "eta": None})
     except Exception as exc:
         state.update({"state": "failed", "error": f"{type(exc).__name__}: {exc}"[:600],
                       "stage": "导出失败", "eta": None})
@@ -3107,6 +3131,8 @@ class Handler(BaseHTTPRequestHandler):
                     download = "attachment" if (self.path.split("?", 1)[1] if "?" in self.path else "").find("download=1") >= 0 else "inline"
                     return self._send(200, pdf, "application/pdf",
                                       {"Content-Disposition": f'{download}; filename="{job["id"]}.pdf"'})
+                except ImportError as exc:
+                    return self._json(500, {"ok": False, "error": _missing_component_error(exc, "pdf")})
                 except Exception as exc:
                     return self._json(500, {"ok": False, "error": str(exc)[:300]})
 
@@ -3134,6 +3160,8 @@ class Handler(BaseHTTPRequestHandler):
                     return self._json(409, {"ok": False, "error": str(exc)})
                 except ValueError as exc:
                     return self._json(400, {"ok": False, "error": str(exc)})
+                except ImportError as exc:
+                    return self._json(500, {"ok": False, "error": _missing_component_error(exc, fmt)})
                 except Exception as exc:
                     return self._json(500, {"ok": False,
                                             "error": f"{type(exc).__name__}: {exc}"[:300]})

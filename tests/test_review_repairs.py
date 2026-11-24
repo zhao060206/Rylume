@@ -118,6 +118,8 @@ def test_model_service_error_does_not_blame_image_service_for_text_failure():
     import app_server,pipeline
     assert '生图' not in app_server._friendly_error(RuntimeError('HTTP 503 Service Unavailable'))
     assert '生图' in app_server._friendly_error(pipeline.ImageServiceError('HTTP 503'))
+    message = app_server._friendly_error(RuntimeError('HTTP 400: {"code":"model_not_found"}'))
+    assert '模型名称' in message and '测试连接' in message
 
 
 def test_imported_text_inside_structure_follows_it_without_grouping_external_caption():

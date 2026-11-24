@@ -634,7 +634,7 @@ def dispatch(handler, method, path, app):
                     job["ppt"] = {"pptx":result["path"],"revision":revision}
                     job["ppt_export"] = {"state":"completed","pct":100,"stage":"","revision":revision}
                 except Exception as exc:
-                    job["ppt_export"] = {"state":"failed","pct":0,"stage":"导出失败","error":str(exc)[:300],"revision":revision}
+                    job["ppt_export"] = {"state":"failed","pct":0,"stage":"导出失败","error":(app._missing_component_error(exc,"pptx") if isinstance(exc,ImportError) else str(exc)[:300]),"revision":revision}
                 app._save_meta(job)
             threading.Thread(target=run_ppt,daemon=True).start()
             handler._json(200,{"ok":True,"started":True,"status":job["ppt_export"]})
@@ -661,6 +661,8 @@ def dispatch(handler, method, path, app):
         handler._json(400,{"ok":False,"error":app._friendly_error(exc)})
     except TimeoutError:
         handler._json(504,{"ok":False,"error":"请求超时；已有场景和导出版本保持可用"})
+    except ImportError as exc:
+        handler._json(500,{"ok":False,"error":app._missing_component_error(exc)})
     except Exception as exc:
         handler._json(500,{"ok":False,"error":f"{type(exc).__name__}: {exc}"[:500]})
     return True

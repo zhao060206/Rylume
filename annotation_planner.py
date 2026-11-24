@@ -1,7 +1,6 @@
 """Scoped multi-note editing with independent verification. Never writes HEAD."""
 from __future__ import annotations
 import base64,copy,io,json,math,re
-import fitz
 from PIL import Image
 import pipeline
 import scene_planner
@@ -169,6 +168,7 @@ def _changed(before,after):
     return {o['id'] for o in after['objects']+after['relations'] if o!=old.get(o['id'])}
 
 def _image(scene,notes,max_bytes=100_000):
+    import fitz  # PyMuPDF is only needed for this preview; the module imports without it
     svg=render_scene(scene);overlay=[]
     for i,n in enumerate(notes,1):
         if n['shape']=='whole':continue
