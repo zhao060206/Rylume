@@ -510,7 +510,7 @@ def dispatch(handler, method, path, app):
                 for request in requests:
                     if not isinstance(request,dict):raise SceneError('排版建议格式无效')
                     finding=next((f for f in audit['findings'] if f['code']==request.get('code') and f['object_ids']==request.get('object_ids')),None)
-                    if finding is None or finding['severity']!='warning' or finding['code'] not in ('overlap','label-overlap','label-object-overlap','label-detached','label-wrong-compartment','line-label-overlap','empty-label'):raise SceneError('此项需要实际调整或核对科学内容，不能作为排版选择忽略')
+                    if finding is None or finding['severity']!='warning' or finding['code'] not in ('overlap','label-overlap','label-object-overlap','label-detached','label-wrong-compartment','line-label-overlap','line-label-detached','connector-hook','connector-overshoot','binds-short','connector-body-short','connector-overlap','line-through-object','connector-through-end','connector-outside-canvas','connector-symbol-on-label','empty-label'):raise SceneError('此项需要实际调整或核对科学内容，不能作为排版选择忽略')
                     chosen.append(finding)
                 decisions=job.setdefault('layout_decisions',{})
                 for finding in chosen:

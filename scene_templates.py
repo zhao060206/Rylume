@@ -192,7 +192,9 @@ def _place_template(scene):
     for c in scene['compartments']:c.update(x=7,y=7,w=cw-14,h=ch-14)
     if tid=='process_cell':
         for i,o in enumerate(objects):
-            positions=[(32,51),(75,51),(118,75),(153,97)]
+            # Narrow canvases: object widths do not shrink with x, so the first two stages
+            # overlapped; move only the transport stage, keeping fusion on the membrane.
+            positions=[(32,51),(75,51),(118,75),(153,97)] if cw>=110 else [(32,51),(100,51),(118,75),(153,97)]
             x,y=positions[i%4];put(o,x*cw/180,y*ch/120,22 if i!=2 else 29,22 if i!=2 else 26)
     elif item['family']=='network':
         if not objects:return normalize_scene(scene)
@@ -230,7 +232,10 @@ def _place_template(scene):
         for i,o in enumerate(objects):
             row,col=divmod(i,max(1,cols));w,h=DEFAULT_DIMS.get(o['type'], (18, 13))
             slot=(cw-16)/max(1,cols)
-            scale=min(1,(slot-10)/w,((ch-20)/max(1,rows)-11)/h)
+            # Stacked rows keep 10 mm between objects: the source label, the end
+            # symbol and a visible stretch of line have to fit under each object.
+            room=((ch-37)/rows-10) if rows>1 else ((ch-20)/max(1,rows)-11)
+            scale=min(1,(slot-10)/w,room/h)
             w*=scale;h*=scale
             x=8+slot*(col+.5);y=16+(ch-37)*(row+.5)/max(1,rows)
             if tid=='process_steps':y=22+(ch-51)*i/max(1,n-1)
@@ -254,6 +259,15 @@ def make_template(template_id,*,width_mm=None,height_mm=None,colorway=None):
     item=template_info(template_id)
     cw,ch=item['canvas_mm']
     scene = make_example(item['example'],width_mm=width_mm or cw,height_mm=height_mm or ch)
+    if not item.get('new_scene_only'):
+        # make_example already repaired connectors for the example's own layout; the template
+        # places objects anew, so its repair starts from the ports the example authored.
+        authored={r['id']:(r.get('source_port','auto'),r.get('target_port','auto'))
+                  for r in make_example(item['example'],width_mm=width_mm or cw,height_mm=height_mm or ch,layout=False)['relations']}
+        for r in scene['relations']:
+            if r['id'] in authored:
+                r['source_port'],r['target_port']=authored[r['id']]
+                r.pop('source_anchor',None);r.pop('target_anchor',None)
     enrich_artwork(scene, item['example'])
     return apply_template(scene,template_id,colorway)
 

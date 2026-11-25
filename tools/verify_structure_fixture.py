@@ -5,10 +5,10 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import fitz
 import numpy as np
 from PIL import Image
-from scene_render import render_scene
+from scene_render import render_scene, svg_for_mupdf
 
 def raster(svg,size):
-    doc=fitz.open(stream=svg.encode(),filetype='svg')
+    doc=fitz.open(stream=svg_for_mupdf(svg).encode(),filetype='svg')
     pdf=fitz.open(stream=doc.convert_to_pdf(),filetype='pdf')
     pix=pdf[0].get_pixmap(matrix=fitz.Matrix(size[0]/pdf[0].rect.width,size[1]/pdf[0].rect.height),alpha=False)
     im=Image.frombytes('RGB',(pix.width,pix.height),pix.samples)

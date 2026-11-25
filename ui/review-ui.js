@@ -6,7 +6,7 @@ export function reviewCounts(a){
 }
 export function groupFindings(findings){
  const groups=new Map();
- for(const f of findings){const key=['overlap','label-object-overlap','label-overlap','line-label-overlap'].includes(f.code)?[f.severity,f.code,f.object_ids?.[0]].join(':'):JSON.stringify(f);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(f);}
+ for(const f of findings){const key=['overlap','label-object-overlap','label-overlap','line-label-overlap','line-label-detached','connector-hook','connector-overshoot','binds-short','connector-body-short','connector-overlap','line-through-object','connector-through-end','connector-outside-canvas','connector-symbol-on-label'].includes(f.code)?[f.severity,f.code,f.object_ids?.[0]].join(':'):JSON.stringify(f);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(f);}
  return [...groups.values()].sort((a,b)=>(a[0].severity==='error'?0:1)-(b[0].severity==='error'?0:1));
 }
 export function findingPresentation(f,scene){
@@ -24,6 +24,16 @@ export function findingPresentation(f,scene){
     'text-wrap':['文字框太窄',`${pair}被挤成多行或超出边界。请在属性中加宽文字框。`,'layout',false],
     'label-object-overlap':['文字挡住了图形',`${pair}之间可能有遮挡。预览会尝试只挪开相关文字。`,'layout',true],
     'label-outside':['文字超出了纸张',`${pair}的部分文字可能在导出时被裁掉。`,'layout',true],
+    'line-label-detached':['连线标签离线太远',`${pair}的标签离它的连线较远，读者可能对不上是哪条线。预览可将标签移回线旁。`,'layout',true],
+    'connector-hook':['连线弯成钩形',`${pair}的连线弯得像钩子，看起来像折返。预览可重算弯曲或改走另一侧。`,'layout',true],
+    'connector-overshoot':['连线绕出太远',`${pair}的连线绕到两端之外很远。预览可重算路线。`,'layout',true],
+    'connector-through-end':['连线穿过端点对象',`${pair}的连线从自己端点的对象里穿过，看起来像从另一侧出发。预览可重算路线。`,'layout',true],
+    'connector-outside-canvas':['连线超出画布',`${pair}的连线有一段画到了画布外面，导出时会被裁掉。预览可重算路线。`,'layout',true],
+    'connector-symbol-on-label':['箭头压住标签',`${pair}的连线末端箭头或符号盖住了标签文字。预览可重算路线。`,'layout',true],
+    'binds-short':['结合线太短',`${pair}靠得太近，结合符号之间看不到连线。预览可把两者稍微拉开。`,'layout',true],
+    'connector-overlap':['连线贴在一起',`${pair}两条连线贴得太近，看起来像一条线，或者箭头像是画在另一条线上。预览可改走另一条路线。`,'layout',true],
+    'connector-body-short':['连线太短',`${pair}靠得太近，箭头后面几乎看不到连线，读者可能看不出方向。预览可把两者稍微拉开。`,'layout',true],
+    'line-through-object':['连线穿过对象',`${pair}的连线从别的对象上穿过。预览可改走旁边。`,'layout',true],
     'line-label-overlap':['连线穿过了文字',`${pair}发生交叉。可预览绕开文字的路径，或手动拖动连线中点。`,'layout',true],
     'label-wrong-compartment':['文字落在了别的区室',`${pair}的文字跑到了其它区室，读者可能误认它的位置。预览可将文字移回所属区室内、图形旁边。`,'layout',true],
     'label-detached':['文字离所属图形太远',`${pair}的文字位置可能让读者误认归属。预览可将文字放回附近。`,'layout',true],
@@ -93,7 +103,7 @@ export function setupReview({state,editor,api,flush,toast,openRelationDefinition
         else if(p.f.code==='empty-label'){const b=el('button','button','填写名称');b.onclick=()=>{locate(p.f);editor.ensureSelectionVisible();editor.editSelectedLabel();};actions.append(b);}
         else if(p.f.code==='uncertain-relation'){const b=el('button','button','设置连线含义');b.onclick=()=>{if(!openRelationDefinitions(p.f.object_ids[0]))toast('连线已变更，请查看保存后的检查结果。');};actions.append(b);}
         else if(['hidden-endpoint','required-object'].includes(p.f.code)){const b=el('button','button','查看图层');b.onclick=showLayers;actions.append(b);}
-        if(p.f.severity!=='error'&&['overlap','label-overlap','label-object-overlap','label-detached','label-wrong-compartment','line-label-overlap','empty-label'].includes(p.f.code)){const keep=el('button','text-button',p.members.length>1?`确认保留这 ${p.members.length} 处排版`:'保留当前排版');keep.onclick=()=>decision(p.members);actions.append(keep);}
+        if(p.f.severity!=='error'&&['overlap','label-overlap','label-object-overlap','label-detached','label-wrong-compartment','line-label-overlap','line-label-detached','connector-hook','connector-overshoot','binds-short','connector-body-short','connector-overlap','line-through-object','connector-through-end','connector-outside-canvas','connector-symbol-on-label','empty-label'].includes(p.f.code)){const keep=el('button','text-button',p.members.length>1?`确认保留这 ${p.members.length} 处排版`:'保留当前排版');keep.onclick=()=>decision(p.members);actions.append(keep);}
         card.append(actions);group.append(card);
       }parent.append(group);
     }

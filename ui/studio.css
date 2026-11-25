@@ -116,3 +116,4 @@
   border: 1px solid #e2e8f0;
   white-space: nowrap;
 }
+.layer-supplement{flex:none;align-self:center;font-size:10px;line-height:16px;padding:0 4px;margin:0 2px;border-radius:3px;color:#8a5a00;background:#fff1cc}.layer-delete{color:#b54a3c}

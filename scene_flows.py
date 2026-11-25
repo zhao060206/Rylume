@@ -108,7 +108,8 @@ def place_flow_layout(scene):
             items=levels[rank]
             for i,o in enumerate(items):
                 if vertical:
-                    w=min(30,(cw-16)/len(items)-4);h=min(15,(ch-25)/count-8)
+                    # 9 mm between ranks: source label, end symbol and a visible line.
+                    w=min(30,(cw-16)/len(items)-4);h=min(15,(ch-30)/count-9)
                     x=8+(cw-16)*(i+.5)/len(items);y=12+(ch-30)*(row+.5)/count
                 else:
                     w=min(27,(cw-16)/count-5);h=min(17,(ch-30)/len(items)-8)
@@ -279,11 +280,15 @@ def make_flow(example_id,*,width_mm=180,height_mm=120):
     for i,edge in enumerate(edges):
         a,b,*label=edge;r=dict(id='flowlink'+str(i),source='step'+str(a),target='step'+str(b),type='sequence',
             label=label[0] if label else '',evidence='Workflow sequence only, specified by this illustrative design; not a biological effect.')
-        if kind=='双向切换':r.update(source_port='s' if a>b else 'n',target_port='s' if a>b else 'n',control={'x':(positions[a][0]+positions[b][0])/2*sx,'y':(83 if a>b else 25)*sy})
+        if kind=='双向切换':
+            # Arc height follows the gap between the two steps so a narrow canvas
+            # does not turn the pair of arcs into hooks (review flags > 1.4).
+            bulge=min(29*sy,hh/2+.6*abs(positions[a][0]-positions[b][0])*sx)
+            r.update(source_port='s' if a>b else 'n',target_port='s' if a>b else 'n',control={'x':(positions[a][0]+positions[b][0])/2*sx,'y':54*sy+(bulge if a>b else -bulge)})
         if kind=='闭环迭代':r.update(source_port=('e','s','w','n')[i],target_port=('w','n','e','s')[i])
         if domain_for(sid) and narrow and kind=='分支决策' and a==5:
             r.update(source_port='w',target_port='w',control={'x':3*sx,'y':65*sy})
-        if kind=='外围反馈' and a==5:r.update(source_port='n',target_port='w',control={'x':12*sx,'y':15*sy})
+        if kind=='外围反馈' and a==5:r.update(source_port='n' if narrow else 'e',target_port='w')
         scene['relations'].append(r)
     # Lane backgrounds are editable context objects and cannot invent relationships.
     if kind in ('双泳道','三泳道','分阶段面板'):

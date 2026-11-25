@@ -133,15 +133,24 @@ def analyze(data_url, config, purpose):
         section = config.get("text") or {}
     if not section.get("base_url") or not section.get("model"):
         raise SceneError("请配置视觉模型或文本模型后识别参考图；原图已经保存")
-    response = pipeline._post_json(pipeline._endpoint(section["base_url"], "/chat/completions"),
-                                  pipeline._api_key(section), {
-        "model": section["model"], "temperature": 0, "max_tokens": 6000,
-        "messages": [{"role": "user", "content": [
-            {"type": "text", "text": INSTRUCTION + "\n参考用途：" + purpose},
-            {"type": "image_url", "image_url": {"url": data_url}},
-        ]}],
-    }, timeout=120)
-    parsed = pipeline._json_object(response["choices"][0]["message"].get("content") or "")
+    body = {"model": section["model"], "temperature": 0, "max_tokens": 6000,
+            "messages": [{"role": "user", "content": [
+                {"type": "text", "text": INSTRUCTION + "\n参考用途：" + purpose},
+                {"type": "image_url", "image_url": {"url": data_url}},
+            ]}]}
+    parsed, last = None, None
+    # Reasoning models may spend the budget thinking and return empty content;
+    # ask for a direct answer first, then retry plainly if the endpoint rejects it.
+    for extra in ({"thinking": {"type": "disabled"}}, {}):
+        try:
+            response = pipeline._post_json(pipeline._endpoint(section["base_url"], "/chat/completions"),
+                                           pipeline._api_key(section), {**body, **extra}, timeout=120)
+            parsed = pipeline._json_object(response["choices"][0]["message"].get("content") or "")
+            break
+        except Exception as exc:
+            last = exc
+    if parsed is None:
+        raise last
     contract = normalize_contract(parsed)
     dna = parsed.get("style_dna") if isinstance(parsed.get("style_dna"), dict) else {}
     dna["reference_summary"] = contract["summary"]

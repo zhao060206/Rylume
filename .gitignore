@@ -32,3 +32,7 @@ promo*/
 assets/references/
 ui/references/
 输出/
+
+# Local scratch work and feature-check screenshots
+tmp/
+rylume-shots/

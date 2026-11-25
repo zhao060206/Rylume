@@ -1,0 +1,61 @@
+{
+  "_source": "Trimmed from studio jobs j_4c53883883e9/r1 and j_eb6fbc67bc1c/r4 (2026-11-25 line-label-overlap trace). Used by tests/test_line_label_clearance.py and tests/test_line_label_clearance.mjs.",
+  "j_4c53": {
+    "canvas": [180.0, 120.0],
+    "objects": [
+      {"id": "egf", "type": "ligand", "label": "EGF ✓", "x": 44.5, "y": 11.0, "w": 13.0, "h": 9.0, "label_dx": -10.9012, "label_dy": -6.6167, "font_size_pt": 8.0, "role": "entity", "compartment": "extracellular", "visible": true},
+      {"id": "egfr", "type": "receptor_dimer", "label": "EGFR", "x": 40.5, "y": 23.5, "w": 17.0, "h": 21.0, "label_dx": -13.9201, "label_dy": -12.6167, "font_size_pt": 8.0, "role": "entity", "state": "active", "compartment": "membrane", "visible": true},
+      {"id": "pi3k", "type": "kinase", "label": "PI3K", "x": 43.5, "y": 49.0, "w": 17.0, "h": 12.0, "font_size_pt": 8.0, "role": "entity", "state": "active", "compartment": "cytoplasm", "visible": true},
+      {"id": "pip2", "type": "lipid", "label": "PIP2", "x": 85.5, "y": 29.5, "w": 9.0, "h": 9.0, "label_dx": -9.0593, "label_dy": -6.6167, "font_size_pt": 8.0, "role": "entity", "state": "bisphosphate", "compartment": "membrane", "visible": true},
+      {"id": "pip3", "type": "lipid", "label": "PIP3", "x": 126.5, "y": 29.5, "w": 9.0, "h": 9.0, "label_dx": -9.0593, "label_dy": -6.6167, "font_size_pt": 8.0, "role": "entity", "state": "trisphosphate", "compartment": "membrane", "visible": true},
+      {"id": "akt", "type": "kinase", "label": "AKT", "x": 119.5, "y": 49.0, "w": 17.0, "h": 12.0, "font_size_pt": 8.0, "role": "entity", "state": "phosphorylated", "compartment": "cytoplasm", "visible": true},
+      {"id": "mtor", "type": "kinase", "label": "mTOR", "x": 119.5, "y": 92.0, "w": 17.0, "h": 12.0, "font_size_pt": 8.0, "role": "entity", "state": "active", "compartment": "cytoplasm", "visible": true},
+      {"id": "synthesis", "type": "process", "label": "Protein synthesis", "x": 38.5, "y": 87.0, "w": 27.0, "h": 17.0, "font_size_pt": 8.0, "role": "entity", "compartment": "cytoplasm", "visible": true}
+    ],
+    "relations": [
+      {"id": "e1", "source": "egf", "target": "egfr", "type": "binds", "source_port": "auto", "target_port": "auto"},
+      {"id": "e2", "source": "egfr", "target": "pi3k", "type": "activates", "source_port": "auto", "target_port": "auto"},
+      {"id": "e3", "source": "pip2", "target": "pip3", "type": "converts", "label": "PI3K", "source_port": "auto", "target_port": "auto"},
+      {"id": "e4", "source": "pi3k", "target": "pip3", "type": "associates", "label": "catalysis", "control": {"x": 71.75, "y": 46.75}, "source_port": "e", "target_port": "s"},
+      {"id": "e5", "source": "pip3", "target": "akt", "type": "binds", "label": "recruitment", "source_port": "auto", "target_port": "auto"},
+      {"id": "e6", "source": "akt", "target": "mtor", "type": "activates", "control": {"x": 132.25, "y": 73.5}, "source_port": "e", "target_port": "n"},
+      {"id": "e7", "source": "mtor", "target": "synthesis", "type": "activates", "source_port": "auto", "target_port": "auto"}
+    ],
+    "compartments": [
+      {"id": "extracellular", "kind": "extracellular", "label": "Extracellular space", "x": 8.0, "y": 5.0, "w": 164.0, "h": 26.0},
+      {"id": "membrane", "kind": "membrane", "label": "Plasma membrane", "x": 8.0, "y": 31.0, "w": 164.0, "h": 6.0},
+      {"id": "cytoplasm", "kind": "cytoplasm", "label": "Cytoplasm", "x": 8.0, "y": 38.0, "w": 164.0, "h": 73.0}
+    ]
+  },
+  "j_eb6f": {
+    "canvas": [180.0, 120.0],
+    "objects": [
+      {"id": "extracellular", "type": "text", "label": "Extracellular", "x": 1.5, "y": 7.5, "w": 55.0, "h": 1.0, "font_size_pt": 8.0, "role": "annotation", "visible": true},
+      {"id": "mem", "type": "membrane", "label": "", "x": 7.0, "y": 24.5, "w": 166.0, "h": 5.0, "font_size_pt": 8.0, "role": "context", "visible": true},
+      {"id": "egf", "type": "ligand", "label": "EGF", "x": 82.0, "y": 6.5, "w": 12.0, "h": 7.0, "label_dx": -11.0, "label_dy": -4.0, "font_size_pt": 8.0, "role": "entity", "visible": true},
+      {"id": "egfr", "type": "receptor_dimer", "label": "EGFR", "x": 80.0, "y": 17.5, "w": 16.0, "h": 19.0, "font_size_pt": 8.0, "role": "entity", "visible": true},
+      {"id": "arm_mapk", "type": "text", "label": "a   RAS–MAPK", "x": 7.5, "y": 42.5, "w": 55.0, "h": 1.0, "font_size_pt": 8.0, "role": "annotation", "visible": true},
+      {"id": "arm_akt", "type": "text", "label": "b   PI3K–AKT", "x": 108.5, "y": 42.5, "w": 55.0, "h": 1.0, "font_size_pt": 8.0, "role": "annotation", "visible": true},
+      {"id": "ras", "type": "protein", "label": "RAS–GTP", "x": 23.5, "y": 53.0, "w": 17.0, "h": 10.0, "font_size_pt": 8.0, "role": "entity", "visible": true},
+      {"id": "raf", "type": "kinase", "label": "RAF", "x": 23.5, "y": 75.0, "w": 17.0, "h": 10.0, "font_size_pt": 8.0, "role": "entity", "visible": true},
+      {"id": "mek", "type": "kinase", "label": "MEK", "x": 58.5, "y": 75.0, "w": 17.0, "h": 10.0, "font_size_pt": 8.0, "role": "entity", "visible": true},
+      {"id": "erk", "type": "kinase", "label": "ERK", "x": 58.5, "y": 97.0, "w": 17.0, "h": 10.0, "font_size_pt": 8.0, "role": "entity", "visible": true},
+      {"id": "pi3k", "type": "kinase", "label": "PI3K", "x": 105.5, "y": 57.0, "w": 17.0, "h": 10.0, "font_size_pt": 8.0, "role": "entity", "visible": true},
+      {"id": "pip2", "type": "lipid", "label": "PIP2", "x": 121.0, "y": 27.5, "w": 10.0, "h": 9.0, "font_size_pt": 8.0, "role": "entity", "state": "bisphosphate", "visible": true},
+      {"id": "pip3", "type": "lipid", "label": "PIP3", "x": 153.0, "y": 27.5, "w": 10.0, "h": 9.0, "font_size_pt": 8.0, "role": "entity", "state": "trisphosphate", "visible": true},
+      {"id": "akt", "type": "kinase", "label": "AKT", "x": 145.0, "y": 77.5, "w": 18.0, "h": 11.0, "font_size_pt": 8.0, "role": "entity", "visible": true}
+    ],
+    "relations": [
+      {"id": "r1", "source": "egf", "target": "egfr", "type": "binds", "source_port": "auto", "target_port": "auto"},
+      {"id": "r2", "source": "egfr", "target": "ras", "type": "activates", "control": {"x": 32.0, "y": 30.0}, "source_port": "auto", "target_port": "auto"},
+      {"id": "r3", "source": "ras", "target": "raf", "type": "activates", "source_port": "auto", "target_port": "auto"},
+      {"id": "r4", "source": "raf", "target": "mek", "type": "activates", "source_port": "auto", "target_port": "auto"},
+      {"id": "r5", "source": "mek", "target": "erk", "type": "activates", "source_port": "auto", "target_port": "auto"},
+      {"id": "r6", "source": "egfr", "target": "pi3k", "type": "activates", "source_port": "auto", "target_port": "auto"},
+      {"id": "r7", "source": "pip2", "target": "pip3", "type": "converts", "label": "PI3K", "source_port": "auto", "target_port": "auto"},
+      {"id": "r8", "source": "pi3k", "target": "pip2", "type": "associates", "source_port": "n", "target_port": "s"},
+      {"id": "r9", "source": "pip3", "target": "akt", "type": "binds", "label": "recruitment", "control": {"x": 175.0, "y": 62.0}, "source_port": "e", "target_port": "e"}
+    ],
+    "compartments": []
+  }
+}

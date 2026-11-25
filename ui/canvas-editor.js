@@ -43,6 +43,7 @@ export const RELATION_DEFINITIONS = [{"id": "activates", "title": "激活", "eng
 export function relationLabel(scene,r){return r.label||(scene.style?.relation_labels?RELATION_DEFINITIONS.find(x=>x.id===r.type)?.english||'':'');}
 const REL_PT_MM=25.4/72,REL_HEAD_PER_WIDTH=7,REL_HEAD_MIN=1.9,REL_HEAD_MAX=3.4,REL_HEAD_ASPECT=.44;
 const REL_TIP_GAP=1,REL_BIND_GAP=.5,REL_BIND_R=1,REL_BAR_HALF=.7,REL_BAR_WEIGHT=1.6,REL_SEQ_NOTCH=.4,REL_CURVE_SAMPLES=200;
+const REL_MIN_BODY=2,REL_SHORT_GAP=.5,REL_HEAD_SHORT_MIN=1.4;
 // Mirrors relation_visuals.relation_parts operation for operation (tests/test_relation_symbols.py compares them).
 export function relationParts(kind,start,end,control,color,strokePt=1.05,indirect=false,anchored={}){
   const p0=[+start.x,+start.y],c=[+control.x,+control.y],p1=[+end.x,+end.y],N=REL_CURVE_SAMPLES;
@@ -56,12 +57,18 @@ export function relationParts(kind,start,end,control,color,strokePt=1.05,indirec
   const frame=(sTip,length)=>{const T=at(sTip),B=at(Math.max(0,sTip-length));let dx=T[0]-B[0],dy=T[1]-B[1],d=Math.sqrt(dx*dx+dy*dy);
     if(d<1e-9){dx=p1[0]-p0[0];dy=p1[1]-p0[1];d=Math.sqrt(dx*dx+dy*dy);if(d<1e-9){dx=1;dy=0;d=1;}}
     const u=[dx/d,dy/d];return[T,u,[-u[1],u[0]]];};
-  const sw=strokePt*REL_PT_MM,L=Math.min(REL_HEAD_MAX,Math.max(REL_HEAD_MIN,REL_HEAD_PER_WIDTH*sw)),W=REL_HEAD_ASPECT*L;
+  const sw=strokePt*REL_PT_MM;let L=Math.min(REL_HEAD_MAX,Math.max(REL_HEAD_MIN,REL_HEAD_PER_WIDTH*sw)),W=REL_HEAD_ASPECT*L;
   const chevron=(sTip,length,half)=>{const off=sw/2*Math.sqrt(length*length+half*half)/half,[T,u,n]=frame(sTip,length),A=pt(T,u,n,off);
     return[off,`M ${fmt(pt(A,u,n,length,half))} L ${fmt(A)} L ${fmt(pt(A,u,n,length,-half))}`];};
   const sub=(ta,tb)=>{const a=point(ta),b=point(tb),k=[(1-ta)*(1-tb)*p0[0]+((1-ta)*tb+ta*(1-tb))*c[0]+ta*tb*p1[0],(1-ta)*(1-tb)*p0[1]+((1-ta)*tb+ta*(1-tb))*c[1]+ta*tb*p1[1]];
     return`M ${fmt(a)} Q ${fmt(k)} ${fmt(b)}`;};
-  const g0=anchored.start?0:REL_TIP_GAP,g1=anchored.end?0:REL_TIP_GAP;
+  let g0=anchored.start?0:REL_TIP_GAP,g1=anchored.end?0:REL_TIP_GAP;
+  // Short connector: shrink the tip gaps, then the end symbol, to keep REL_MIN_BODY of visible line.
+  const mitreReach=sw/2*Math.sqrt(1+REL_HEAD_ASPECT*REL_HEAD_ASPECT)/REL_HEAD_ASPECT+sw/2;
+  const reach={activates:[1,mitreReach],transports:[1.4,mitreReach],converts:[1.05,0],sequence:[.95,0],inhibits:[0,REL_BAR_WEIGHT*sw]}[kind];
+  if(reach&&total-g0-g1-(reach[0]*L+reach[1])<REL_MIN_BODY){g0=Math.min(g0,REL_SHORT_GAP);g1=Math.min(g1,REL_SHORT_GAP);
+    const room=total-g0-g1-REL_MIN_BODY-reach[1];
+    if(reach[0]&&room<reach[0]*L){L=Math.max(REL_HEAD_SHORT_MIN,room/reach[0]);W=REL_HEAD_ASPECT*L;}}
   const common={fill:'none',stroke:color,'stroke-width':sw,'stroke-linecap':'round','stroke-linejoin':'round'};
   const mark={...common,'data-endpoint':RELATION_DEFINITIONS.find(x=>x.id===kind)?.symbol},mitre={'stroke-linejoin':'miter','stroke-miterlimit':8};
   const heads=[],tip=total-g1;let s0=g0,s1=tip;
@@ -223,10 +230,7 @@ export function sanitizedSvg(source) {
   return document.importNode(doc.documentElement, true);
 }
 
-export function edgeGeometry(scene, r, preview=null) {
-  r={...r,label:relationLabel(scene,r)};
-  const a = scene.objects.find(o => o.id === r.source), b = scene.objects.find(o => o.id === r.target);
-  if (!a || !b) return null;
+function resolvePorts(a, b, r) {
   const dx = (b.x + b.w / 2) - (a.x + a.w / 2), dy = (b.y + b.h / 2) - (a.y + a.h / 2);
   let sp = r.source_port || 'auto', tp = r.target_port || 'auto';
   if (a.type === 'ligand' && ['receptor', 'receptor_dimer', 'gpcr'].includes(b.type) && dy > 0) {
@@ -246,42 +250,155 @@ export function edgeGeometry(scene, r, preview=null) {
   } else if (tp === 'auto') {
     tp = (Math.abs(dy) > Math.abs(dx) * 1.15) ? (dy > 0 ? 'n' : 's') : (dx >= 0 ? 'w' : 'e');
   }
-  const point = (o, p) => {
+  return [sp, tp];
+}
+
+// Same as scene_render._spread_anchor: connectors sharing one side of one object
+// are spread along it, ordered by where their other end sits.
+function spreadT(scene, o, side, r, end) {
+  if (o.depiction === 'anchor' || !['n', 's', 'e', 'w'].includes(side)) return null;
+  const by = new Map(scene.objects.map(x => [x.id, x])), ends = [];
+  for (const q of scene.relations || []) {
+    const s = by.get(q.source), t = by.get(q.target);
+    if (!s || !t) continue;
+    const [qs, qt] = resolvePorts(s, t, q);
+    for (const [e, port, anchor, far, own] of [['s', qs, q.source_anchor, t, q.source], ['t', qt, q.target_anchor, s, q.target]]) {
+      if (own === o.id && port === side && !anchor) ends.push([side === 'n' || side === 's' ? far.x + far.w / 2 : far.y + far.h / 2, String(q.id), e]);
+    }
+  }
+  const cmp = (p, q) => p < q ? -1 : p > q ? 1 : 0;
+  ends.sort((p, q) => cmp(p[0], q[0]) || cmp(p[1], q[1]) || cmp(p[2], q[2]));
+  const k = ends.length, i = ends.findIndex(e => e[1] === String(r.id) && e[2] === end);
+  const length = side === 'n' || side === 's' ? o.w : o.h;
+  if (k < 2 || i < 0 || !(length > 0)) return null;
+  const gap = Math.min(4, .8 * length / (k - 1));
+  return .5 + (i - (k - 1) / 2) * gap / length;
+}
+
+// Same as scene_render._bend_candidates: offsets perpendicular to the chord only.
+function bendCandidates(x1, y1, x2, y2) {
+  const chord = Math.hypot(x2 - x1, y2 - y1);
+  if (chord < 1e-6) return [];
+  const nx = -(y2 - y1) / chord, ny = (x2 - x1) / chord, mx = (x1 + x2) / 2, my = (y1 + y2) / 2, reach = Math.max(6, .6 * chord), out = [];
+  for (const d of [4, 8, 16, 28, 44]) { if (d / 2 > reach) continue; for (const side of [1, -1]) out.push({x: mx + side * d * nx, y: my + side * d * ny}); }
+  return out;
+}
+
+// Same as scene_render._curve_ratio: curve length over chord (1.0 = straight).
+function curveRatio(x1, y1, c, x2, y2, n = 60) {
+  const chord = Math.hypot(x2 - x1, y2 - y1);
+  if (chord < 1e-6) return 1;
+  let len = 0, px = x1, py = y1;
+  for (let i = 1; i <= n; i++) {
+    const t = i / n, u = 1 - t, x = u * u * x1 + 2 * u * t * c.x + t * t * x2, y = u * u * y1 + 2 * u * t * c.y + t * t * y2;
+    len += Math.hypot(x - px, y - py); px = x; py = y;
+  }
+  return len / chord;
+}
+
+// 5 mm of binding discs plus 2 mm of visible line (scene_document binds-short).
+const BINDS_MIN_ENDS_MM=7;
+// Keep a port point out of its object's own label (mirrors scene_render._clear_own_label).
+// North/south: a label covering the port moves the point past the label's outer edge.
+// East/west: a label beside the port slides the point along the edge to `gap` mm past
+// the label's top or bottom, at least 0.8 mm from the corners, towards the other end.
+function clearOwnLabel(o,side,p,box,other=null,reach=1,sideReach=2,pad=.5,gap=1.5,taken=null){
+  if(!box||o.depiction==='anchor'||o.rotation)return p;
+  const x0=box.x,y0=box.y,x1=box.x+box.w,y1=box.y+box.h,{x,y}=p;
+  if(side==='s'&&x0-.2<=x&&x<=x1+.2&&y0-reach<=y&&y<y1)return {x,y:y1+pad};
+  if(side==='n'&&x0-.2<=x&&x<=x1+.2&&y0<y&&y<=y1+reach)return {x,y:y0-pad};
+  if((side==='e'||side==='w')&&y0-.2<=y&&y<=y1+.2){
+    const beside=side==='w'?(x0<x+.2&&x1>=x-sideReach):(x1>x-.2&&x0<=x+sideReach);
+    if(beside){
+      const lo=o.y+.8,hi=o.y+o.h-.8,options=[y0-gap,y1+gap].filter(v=>lo<=v&&v<=hi);
+      if(options.length){
+        const ref=other?other.y:y;
+        // Other connectors' ends on this side: keep 1.5 mm from each, stepping towards
+        // the label (not closer than pad) when the usual spot is taken; no room: keep p.
+        const ys=[...((typeof taken==='function'?taken():taken)||[])];
+        if(ys.length){
+          options.length=0;
+          for(const [edge,sign] of [[y0,-1],[y1,1]]){
+            for(let k=gap;k>=pad-1e-9;k-=.25){const v=edge+sign*k;if(lo<=v&&v<=hi&&ys.every(q=>Math.abs(v-q)>=1.5)){options.push(v);break;}}
+          }
+          if(!options.length)return p;
+        }
+        let best=options[0];
+        for(const v of options.slice(1))if(Math.abs(v-ref)<Math.abs(best-ref)||(Math.abs(v-ref)===Math.abs(best-ref)&&Math.abs(v-y)<Math.abs(best-y)))best=v;
+        return {x,y:best};
+      }
+    }
+  }
+  return p;
+}
+
+export function edgeGeometry(scene, r, preview=null) {
+  r={...r,label:relationLabel(scene,r)};
+  const a = scene.objects.find(o => o.id === r.source), b = scene.objects.find(o => o.id === r.target);
+  if (!a || !b) return null;
+  const [sp, tp] = resolvePorts(a, b, r);
+  const point = (o, p, t = null) => {
     let x = o.x + o.w / 2, y = o.y + o.h / 2;
     if(o.depiction==='anchor')return {x,y};
     if (p === 'e') x = o.x + o.w;
     if (p === 'w') x = o.x;
     if (p === 'n') y = o.y;
     if (p === 's') y = o.y + o.h;
+    if (t != null) { if (p === 'n' || p === 's') x = o.x + o.w * t; else y = o.y + o.h * t; }
     const angle = (o.rotation || 0) * Math.PI / 180, cx = o.x + o.w / 2, cy = o.y + o.h / 2;
     return {
       x: cx + (x - cx) * Math.cos(angle) - (y - cy) * Math.sin(angle),
       y: cy + (x - cx) * Math.sin(angle) + (y - cy) * Math.cos(angle)
     };
   };
-  const start = preview?.start || (r.source_anchor?boundaryPoint(a,r.source_anchor):point(a, sp)), end = preview?.end || (r.target_anchor?boundaryPoint(b,r.target_anchor):point(b, tp));
+  let start = preview?.start || (r.source_anchor?boundaryPoint(a,r.source_anchor):point(a, sp, spreadT(scene, a, sp, r, 's'))), end = preview?.end || (r.target_anchor?boundaryPoint(b,r.target_anchor):point(b, tp, spreadT(scene, b, tp, r, 't')));
+  // Automatic ports clear their own object's label, as in scene_render.connection_geometry;
+  // a binding line whose ends would then sit closer than 7 mm keeps its original ports.
+  if(!preview?.start||!preview?.end){
+    const boxes=objectLabelBoxes(scene),p1=start,p2=end;
+    // Where the other connectors on this side of o end (before any label slide).
+    const taken=(o,side)=>{const ys=[];for(const q of scene.relations||[]){if(q.id===r.id)continue;
+      const qa=scene.objects.find(x=>x.id===q.source),qb=scene.objects.find(x=>x.id===q.target);if(!qa||!qb)continue;
+      const [qs,qt]=resolvePorts(qa,qb,q);
+      for(const [e,port,anchor,own] of [['s',qs,q.source_anchor,qa],['t',qt,q.target_anchor,qb]]){if(own.id!==o.id)continue;
+        if(anchor){if(anchor.side===side)ys.push(boundaryPoint(own,anchor).y);}
+        else if(port===side)ys.push(point(own,port,spreadT(scene,own,port,q,e)).y);}}
+      return ys;};
+    if(!preview?.start&&!r.source_anchor)start=clearOwnLabel(a,sp,p1,boxes.find(q=>q.id===a.id),p2,1,2,.5,1.5,()=>taken(a,sp));
+    if(!preview?.end&&!r.target_anchor)end=clearOwnLabel(b,tp,p2,boxes.find(q=>q.id===b.id),p1,1,2,.5,1.5,()=>taken(b,tp));
+    if(r.type==='binds'&&(start!==p1||end!==p2)&&Math.hypot(end.x-start.x,end.y-start.y)<BINDS_MIN_ENDS_MM){start=p1;end=p2;}
+  }
   let control = r.control || { x: (start.x + end.x) / 2, y: (start.y + end.y) / 2 };
   if (!r.control && !r.source_anchor && !r.target_anchor && sp === tp) control = { x: Math.max(start.x, end.x) + 12, y: (start.y + end.y) / 2 };
   if(!r.control&&!r.callout){
-    const obstacles=scene.objects.filter(o=>o.visible&&o.role!=='context'&&o.id!==a.id&&o.id!==b.id);
-    const labels=objectLabelBoxes(scene);
+    const touches=o=>[a,b].some(e=>Math.max(o.x,e.x)<Math.min(o.x+o.w,e.x+e.w)&&Math.max(o.y,e.y)<Math.min(o.y+o.h,e.y+e.h));
+    const obstacles=scene.objects.filter(o=>o.visible&&o.role!=='context'&&o.id!==a.id&&o.id!==b.id&&!touches(o));
+    const labels=objectLabelBoxes(scene).filter(q=>q.id!==a.id&&q.id!==b.id);
+    const own=objectLabelBoxes(scene).filter(q=>q.id===a.id||q.id===b.id);
     const cost=c=>{let hit=0;for(let i=1;i<80;i++){const t=i/80,u=1-t,x=u*u*start.x+2*u*t*c.x+t*t*end.x,y=u*u*start.y+2*u*t*c.y+t*t*end.y;
-      hit+=obstacles.filter(o=>o.x-1<x&&x<o.x+o.w+1&&o.y-1<y&&y<o.y+o.h+1).length;
+      hit+=8*obstacles.filter(o=>o.x-1<x&&x<o.x+o.w+1&&o.y-1<y&&y<o.y+o.h+1).length;
       hit+=8*labels.filter(b=>b.x-.5<x&&x<b.x+b.w+.5&&b.y-.5<y&&y<b.y+b.h+.5).length;
-      if(x<1||y<1||x>scene.canvas.width_mm-1||y>scene.canvas.height_mm-1)hit+=4;}return hit;};
-    if(cost(control)){const mx=(start.x+end.x)/2,my=(start.y+end.y)/2,candidates=[control,...[[0,-18],[0,18],[0,-36],[0,36],[-24,0],[24,0],[0,-60],[0,60]].map(([dx,dy])=>({x:mx+dx,y:my+dy}))];
-      candidates.sort((a,b)=>cost(a)-cost(b)||Math.hypot(a.x-mx,a.y-my)-Math.hypot(b.x-mx,b.y-my));control=candidates[0];}
+      hit+=8*own.filter(b=>b.x-.5<x&&x<b.x+b.w+.5&&b.y-.5<y&&y<b.y+b.h+.5).length;
+      if(x<1||y<1||x>scene.canvas.width_mm-1||y>scene.canvas.height_mm-1)hit+=4;
+      // Past the canvas edge is worse than crossing an object: the curve is cut off.
+      if(x<0||y<0||x>scene.canvas.width_mm||y>scene.canvas.height_mm)hit+=40;}return hit;};
+    const base=cost(control);
+    if(base){const mx=(start.x+end.x)/2,my=(start.y+end.y)/2;let best=null,bc=Infinity,bd=Infinity;
+      for(const c of bendCandidates(start.x,start.y,end.x,end.y).filter(c=>curveRatio(start.x,start.y,c,end.x,end.y)<=1.3)){const k=cost(c),d=Math.hypot(c.x-mx,c.y-my);if(k<bc||(k===bc&&d<bd)){best=c;bc=k;bd=d;}}
+      if(best&&bc<base)control=best;}
   }
   const path = `M ${start.x} ${start.y} Q ${control.x} ${control.y} ${end.x} ${end.y}`;
   const vx = end.x - control.x, vy = end.y - control.y, len = Math.hypot(vx, vy) || 1;
   const label={x:.25*start.x+.5*control.x+.25*end.x,y:.25*start.y+.5*control.y+.25*end.y-1.7};
   if(r.label_position)Object.assign(label,r.label_position);
-  else if(r.label){const width=measureMM(r.label,7*25.4/72),height=7*25.4/72,boxes=scene.objects.filter(o=>o.visible&&o.role!=='context').map(o=>({x:o.x,y:o.y,w:o.w,h:o.h}));
+  else if(r.label){const width=measureMM(r.label,7*25.4/72),height=7*25.4/72,boxes=scene.objects.filter(o=>o.visible&&(o.role!=='context'||o.type==='membrane')).map(o=>({x:o.x,y:o.y,w:o.w,h:o.h}));
     for(const o of scene.objects.filter(o=>o.visible&&o.label)){const{lines,fs}=labelLines(o),w=Math.max(...lines.map(t=>measureMM(t,fs)));boxes.push({x:o.x+o.w/2+(o.label_dx||0)-w/2,y:labelBaseline(o,lines,fs)-fs*.8,w,h:fs*(1.23*(lines.length-1)+1)});}
+    const edges=scene.objects.filter(o=>o.visible&&o.role==='context'&&o.type!=='membrane');
     const cost=([dx,dy])=>{const x=label.x+dx-width/2,y=label.y+dy-height*.8;if(x<.5||y<.5||x+width>scene.canvas.width_mm-.5||y+height>scene.canvas.height_mm-.5)return 10000;
-      return boxes.reduce((sum,b)=>sum+Math.max(0,Math.min(x+width,b.x+b.w)-Math.max(x,b.x))*Math.max(0,Math.min(y+height,b.y+b.h)-Math.max(y,b.y)),0);};
-    const offsets=[[0,0],[0,-4],[0,4],[0,-8],[0,8],[-8,0],[8,0],[0,-12],[0,12],[-12,0],[12,0],[-18,0],[18,0],[-24,0],[24,0],[-18,4],[18,4]];
-    offsets.sort((a,b)=>cost(a)-cost(b)||Math.hypot(...a)-Math.hypot(...b));label.x+=offsets[0][0];label.y+=offsets[0][1];
+      const ov=b=>Math.max(0,Math.min(x+width,b.x+b.w)-Math.max(x,b.x))*Math.max(0,Math.min(y+height,b.y+b.h)-Math.max(y,b.y));
+      return boxes.reduce((s,b)=>s+ov(b),0)+edges.reduce((s,b)=>{const a=ov(b);return s+(a>.05&&a<width*height*.98?.3:0);},0);};
+    const offsets=labelOffsets(start,control,end,width,height).map((p,i)=>[p,i]);
+    offsets.sort((a,b)=>cost(a[0])-cost(b[0])||a[1]-b[1]);label.x+=offsets[0][0][0];label.y+=offsets[0][0][1];
   }
   return {
     start, end, control, path,
@@ -290,6 +407,25 @@ export function edgeGeometry(scene, r, preview=null) {
   };
 }
 
+// Candidate shifts for a connector label (mirrors scene_render._label_offsets):
+// beside the line along its normal first, then slid along it, then the old search.
+const LINE_LABEL_GAPS=[1.5,2.5,4,6];
+function labelOffsets(start,c,end,width,height){
+  const mx=.25*start.x+.5*c.x+.25*end.x,my=.25*start.y+.5*c.y+.25*end.y;
+  let tx=end.x-start.x,ty=end.y-start.y;const n=Math.hypot(tx,ty);
+  if(n>1e-9){tx/=n;ty/=n;}else{tx=1;ty=0;}
+  let nx=-ty,ny=tx;
+  if(ny>1e-9||(Math.abs(ny)<=1e-9&&nx<0)){nx=-nx;ny=-ny;}
+  const ext=Math.abs(nx)*width/2+Math.abs(ny)*height/2;
+  const at=(side,gap,slide=0)=>{const cx=mx+side*nx*(gap+ext)+tx*slide,cy=my+side*ny*(gap+ext)+ty*slide;return [cx-mx,cy+.3*height-(my-1.7)];};
+  const out=[];
+  for(const g of LINE_LABEL_GAPS)for(const s of [1,-1])out.push(at(s,g));
+  for(const d of [4,8,12])for(const k of [1,-1])for(const s of [1,-1])out.push(at(s,LINE_LABEL_GAPS[1],k*d));
+  return out.concat([[0,0],[0,-4],[0,4],[0,-8],[0,8],[-8,0],[8,0],[0,-12],[0,12],[-12,0],[12,0],[-18,0],[18,0],[-24,0],[24,0],[-18,4],[18,4]]);
+}
+
+// Same white halo as scene_render.LABEL_HALO (object labels only).
+const LABEL_HALO={stroke:'#FFFFFF','stroke-width':0.6,'stroke-linejoin':'round','stroke-opacity':0.85,'paint-order':'stroke'};
 function labelBaseline(o,lines,fs){
   if((o.state||'').startsWith('legend_'))return o.y+o.h/2+fs*.3+(o.label_dy||0);
   if(o.state==='flow_lane')return o.y+3.5+(o.label_dy||0);
@@ -742,7 +878,7 @@ export class SceneEditor {
           'font-family': 'Arial, Microsoft YaHei, sans-serif',
           'font-size': fs,
           'font-weight': o.font_weight||400,
-          fill: o.type==='text'?(o.fill||'#253844'):'#253844'
+          fill: o.type==='text'?(o.fill||'#253844'):'#253844',...(o.type==='text'?{}:LABEL_HALO)
         }, lineText);
         group.append(label);
       });

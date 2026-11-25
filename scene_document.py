@@ -177,6 +177,7 @@ def normalize_scene(value):
                "font_weight": int(_number(o.get("font_weight", 400), "字重", 100, 900)),
                "evidence": _text(o.get("evidence", ""), 1000)}
         if o.get('label_user_set') is True:out['label_user_set']=True
+        if o.get('supplement') is True:out['supplement']=True
         if o.get('visual_description'):
             out['visual_description']=_text(o['visual_description'],1000)
         if o.get('depiction')=='anchor':out['depiction']='anchor'
@@ -334,6 +335,13 @@ def normalize_scene(value):
             if not isinstance(position, dict):
                 raise SceneError("连线文字位置无效")
             out['label_position'] = {k: _number(position.get(k), '文字'+k) for k in ('x', 'y')}
+        if r.get('route_through'):
+            # Objects the author means this line to cross; deleted ids drop out quietly.
+            if not isinstance(r['route_through'], (list, tuple)):
+                raise SceneError("连线允许穿过的对象无效")
+            through = sorted({t for t in r['route_through'] if t in object_ids})
+            if through:
+                out['route_through'] = through
         if r.get("control") is not None:
             control = r["control"]
             if not isinstance(control, dict):
@@ -606,7 +614,7 @@ def audit_scene(scene, *, _normalized=False):
                 if original_overlap(a,b,'overlap'):continue
                 add("overlap", "两个对象大面积重叠，请检查是否为预期的结合状态", [a["id"], b["id"]], overlap_mm2=round(overlap, 2))
     try:
-        from scene_render import label_boxes, connection_geometry, _label_lines, _measure
+        from scene_render import label_boxes, connection_geometry, _label_lines, _measure, line_label_gap, connection_samples, connection_overshoot
         boxes = label_boxes(scene)
         for obj in visible:
             if obj['type']!='text' or obj.get('state')=='import_text' or not obj['label']:continue
@@ -635,6 +643,89 @@ def audit_scene(scene, *, _normalized=False):
                 # Dense samples also detect crossings through narrow glyph rows.
                 if any(box['x']-.2 < (1-t)**2*g['x1']+2*(1-t)*t*c['x']+t*t*g['x2'] < box['x']+box['w']+.2 and box['y']-.2 < (1-t)**2*g['y1']+2*(1-t)*t*c['y']+t*t*g['y2'] < box['y']+box['h']+.2 for t in (i/160 for i in range(2,159))):
                     add('line-label-overlap','连线穿过文字，请调整路径或标签',[r['id'],box['id']])
+        for r in relations.values():
+            # Same rule as an object label: a connector label more than 4 mm from its
+            # line reads as loose text. Labels the user placed by hand are left alone.
+            if r.get('label_position') or not objects[r['source']]['visible'] or not objects[r['target']]['visible']:continue
+            if not any(b['id']==r['id'] for b in boxes):continue
+            gap=line_label_gap(scene,r)
+            if round(gap,1)>4:add('line-label-detached','连线标签离连线过远',[r['id']],distance_mm=round(gap,2))
+        # Two connectors running together read as one line, and an end symbol lying on another
+        # connector reads as belonging to it (limits as in tmp/scan_overlap.py).
+        import numpy as _np
+        from scene_render import connection_symbol_boxes as _sym_boxes,connection_samples as _samples
+        curves={}
+        for r in relations.values():
+            if r.get('callout') or not objects[r['source']]['visible'] or not objects[r['target']]['visible']:continue
+            g=connection_geometry(scene,r);curves[r['id']]=(r,g,_np.array(_samples(g,120)))
+        def _beside(a,b):
+            k=len(a)//10;mid=a[k:len(a)-k]
+            d=_np.sqrt(((mid[:,None,:]-b[None,:,:])**2).sum(-1)).min(1)
+            step=_np.sqrt((_np.diff(mid,axis=0)**2).sum(-1))
+            return float(step[(d[:-1]<.8)&(d[1:]<.8)].sum())
+        keys=list(curves)
+        for i,a in enumerate(keys):
+            for b in keys[i+1:]:
+                (ra,ga,pa),(rb,gb,pb)=curves[a],curves[b]
+                if pa[:,0].min()>pb[:,0].max()+1 or pb[:,0].min()>pa[:,0].max()+1 or pa[:,1].min()>pb[:,1].max()+1 or pb[:,1].min()>pa[:,1].max()+1:continue
+                run=max(_beside(pa,pb),_beside(pb,pa));gap=None
+                for (rx,gx,_px),py in (((ra,ga,pa),pb),((rb,gb,pb),pa)):
+                    for x0,y0,x1,y1 in _sym_boxes(gx,rx):
+                        d=float(_np.sqrt(((py-_np.array([(x0+x1)/2,(y0+y1)/2]))**2).sum(-1)).min())
+                        if d<.6:gap=d if gap is None else min(gap,d)
+                if run>3 or gap is not None:
+                    add('connector-overlap','两条连线贴在一起，读者分不清各自的走向',[a,b],
+                        side_by_side_mm=round(run,1),symbol_gap_mm=None if gap is None else round(gap,2))
+        from scene_render import connection_symbol_boxes,_object_label_boxes,connection_visible_body
+        symbol_labels=_object_label_boxes(scene)
+        # Connector geometry: hooks, detours past the ends, binding symbols with no
+        # visible line between their discs, and lines run through other objects.
+        # Background (context) objects are not obstacles; neither are containers of an
+        # end, the membrane an end sits in, or objects listed in route_through.
+        for r in relations.values():
+            if not objects[r['source']]['visible'] or not objects[r['target']]['visible']:continue
+            g=connection_geometry(scene,r);pts=connection_samples(g)
+            chord=math.hypot(g['x2']-g['x1'],g['y2']-g['y1'])
+            length=sum(math.hypot(b[0]-a[0],b[1]-a[1]) for a,b in zip(pts,pts[1:]))
+            if chord>3 and length/chord>1.4:add('connector-hook','连线弯成钩形，请重算弯曲或改走另一侧',[r['id']],ratio=round(length/chord,2))
+            over=connection_overshoot(g,pts)
+            if over>.5:add('connector-overshoot','连线绕出两端太远',[r['id']],overshoot_mm=round(over,2))
+            if r['type']=='binds' and round(length-5,1)<2:add('binds-short','结合的两个对象太近，结合符号之间看不到连线',[r['id']],exposed_mm=round(max(0.0,length-5),2))
+            # Any other connector: at least ~2 mm of line has to show behind its end symbol
+            # (relation_visuals MIN_BODY; 0.1 mm of sampling slack). Only short ones are measured.
+            if r['type']!='binds' and not r.get('callout') and length<14:
+                body=connection_visible_body(g,r)
+                if body<1.9:add('connector-body-short','两个对象太近，箭头后面几乎看不到连线',[r['id']],exposed_mm=round(body,2))
+            ends=[objects[r['source']],objects[r['target']]]
+            centres=[(e['x']+e['w']/2,e['y']+e['h']/2) for e in ends if all(k in e for k in ('x','y','w','h'))]
+            allowed=set(r.get('route_through') or ())
+            for o in visible:
+                if o['type']=='text' or o['id'] in (r['source'],r['target']) or o['id'] in allowed:continue
+                x0,y0,x1,y1=o['x'],o['y'],o['x']+o['w'],o['y']+o['h']
+                if any(x0<=cx<=x1 and y0<=cy<=y1 for cx,cy in centres) or any(is_ancestor(o,e) for e in ends):continue
+                if o['type']=='membrane' and any(min(x1,e['x']+e['w'])>max(x0,e['x']) and min(y1,e['y']+e['h'])>max(y0,e['y']) for e in ends if 'x' in e):continue
+                if sum(x0+.4<px<x1-.4 and y0+.4<py<y1-.4 for px,py in pts)>=2:add('line-through-object','连线穿过其它对象，请改走旁边',[r['id'],o['id']])
+            # A line running through one of its own end objects (it seems to leave from
+            # the far side). Containers of the other end, anchors, rotated shapes,
+            # membranes, text and callouts are left out.
+            if not r.get('callout'):
+                for e,far in ((ends[0],ends[1]),(ends[1],ends[0])):
+                    if not all(k in q for q in (e,far) for k in ('x','y','w','h')):continue
+                    if e.get('depiction')=='anchor' or e.get('rotation',0) or e['type'] in ('text','membrane'):continue
+                    fx,fy=far['x']+far['w']/2,far['y']+far['h']/2
+                    if (e['x']<=fx<=e['x']+e['w'] and e['y']<=fy<=e['y']+e['h']) or is_ancestor(e,far):continue
+                    run=sum(math.hypot(q[0]-p[0],q[1]-p[1]) for p,q in zip(pts,pts[1:])
+                            if e['x']+.4<(p[0]+q[0])/2<e['x']+e['w']-.4 and e['y']+.4<(p[1]+q[1])/2<e['y']+e['h']-.4)
+                    if run>1.5:add('connector-through-end','连线从自己端点的对象里穿过，请改走另一侧',[r['id'],e['id']],inside_mm=round(run,2))
+            cw_,ch_=scene['canvas']['width_mm'],scene['canvas']['height_mm']
+            out=max([0.0]+[max(-px,-py,px-cw_,py-ch_) for px,py in pts])
+            if out>.2:add('connector-outside-canvas','连线超出画布',[r['id']],outside_mm=round(out,2))
+            # Arrow heads, bars and discs drawn over an object's label hide the text.
+            covered=[]
+            for sx0,sy0,sx1,sy1 in connection_symbol_boxes(g,r):
+                for q in symbol_labels:
+                    if q['id'] not in covered and min(sx1,q['x']+q['w'])-max(sx0,q['x'])>.1 and min(sy1,q['y']+q['h'])-max(sy0,q['y'])>.1:covered.append(q['id'])
+            for qid in covered:add('connector-symbol-on-label','连线末端的箭头或符号压到了标签',[r['id'],qid])
         for i, a in enumerate(boxes):
             for b in boxes[i+1:]:
                 if min(a["x"]+a["w"],b["x"]+b["w"])-max(a["x"],b["x"]) > 0.4 and min(a["y"]+a["h"],b["y"]+b["h"])-max(a["y"],b["y"]) > 0.4:

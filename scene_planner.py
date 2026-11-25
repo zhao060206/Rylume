@@ -44,7 +44,7 @@ JSON:
  "unresolved":["需作者补充的信息"]}
 只保留有用的区室；无细胞区室的网络、组织过程、结构域图和实验流程可以 compartments=[]。
 标注结构部位时，将部位设为主体的 parent_id 子对象，标签设为独立 text，标签与部位用 associates 指示线连接。不要把一个部位画成另一份完整主体；禁止用指示线代替科学作用关系。实验流程的普通步骤使用 process 和 state=flow_step，按用户要求保留框内文字、图题和编号。
-不要输出坐标，布局由本地引擎决定。默认短英文标签；用户指定中文时保留中文。
+不要输出坐标，布局由本地引擎决定。标签语言跟随用户题目的主要语言（上下文给出 label_language=zh/en 时以它为准）：对象、关系、区室标签全图统一，不要中英混用；基因/蛋白符号（如 EGFR、RAS）保持原样；关系标签 1–3 个词，不写整句。题目没有提到、只为表达结构而补出的对象（如核孔、额外的膜）设 "supplement":true。
 若显式画出结合产物（例如 A、B、A–B 复合物），必须把两种反应物到产物的形成关系完整表达，不能让复合物与结合关系断开。形成关系使用 converts 并标明结合形成，依据仍为原文结合描述；禁止补入未提供的中间物。
 可用对象类型：%s
 可用关系类型：%s
@@ -93,6 +93,57 @@ def reconcile_containment(scene):
     return scene
 
 
+SUPPLEMENT_TYPES = frozenset({'membrane', 'nuclear_pore', 'nucleus', 'nuclear_envelope', 'organelle'})
+_CJK = r'[\u3400-\u9fff]'
+
+
+def _is_symbol(token):
+    # EGFR / RAS / PI3K / mTORC1 / p53: gene or protein symbols are not English words.
+    return any(c.isdigit() for c in token) or sum(c.isupper() for c in token) >= 2 or len(token) <= 2
+
+
+def _words(value):
+    import re as _re
+    return [t for t in _re.findall(r'[A-Za-z][A-Za-z0-9]*', str(value or '')) if not _is_symbol(t)]
+
+
+def _target_label_language(text, config):
+    import re as _re
+    forced = str((config or {}).get('label_language') or '').strip().lower()
+    if forced.startswith('zh'):
+        return 'zh'
+    if forced.startswith('en'):
+        return 'en'
+    cjk = len(_re.findall(_CJK, str(text or '')))
+    latin = sum(len(t) for t in _words(text))
+    return 'zh' if cjk and cjk * 2 >= latin else 'en'
+
+
+def _label_language(value):
+    import re as _re
+    value = str(value or '')
+    if _re.search(_CJK, value):
+        return 'zh'
+    words = _words(value)
+    if len(words) >= 2 or any((t.islower() and len(t) >= 3) or (t[1:].islower() and len(t) >= 6) for t in words):
+        return 'en'
+    return None
+
+
+def label_language_note(scene, target):
+    labels = [o.get('label') for o in scene.get('objects') or [] if isinstance(o, dict)]
+    labels += [r.get('label') for r in scene.get('relations') or [] if isinstance(r, dict)]
+    labels += [c.get('label') for c in scene.get('compartments') or [] if isinstance(c, dict)]
+    other = 'en' if target == 'zh' else 'zh'
+    bad = [str(v).strip() for v in labels if v and _label_language(v) == other]
+    if not bad:
+        return ''
+    names = {'zh': '中文', 'en': '英文'}
+    unique = list(dict.fromkeys(bad))
+    sample = '、'.join(unique[:4]) + ('等' if len(unique) > 4 else '')
+    return f'标签语言不统一：题目以{names[target]}为主，有 {len(bad)} 个标签是{names[other]}（{sample}），请统一'
+
+
 def plan_scene(text, config, *, on_stage=None, cancelled=None):
     text = str(text).strip()
     if not text:
@@ -118,6 +169,8 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                "generation_brief":str(config.get('generation_brief') or text)[:8000],
                "reference_purpose":config.get('reference_purpose','layout'),
                "layout_policy":config.get('layout_policy','preserve')}
+    target_language=_target_label_language(text,config)
+    context['label_language']=target_language
     try:
         from scientific_library import library,available_for_insertion
         import re
@@ -170,13 +223,18 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
             if not base["objects"]:
                 raise SceneError("描述中未提取到可绘制对象，请补充需要展示的分子、细胞或步骤")
             # A model cannot assign its own geometry or lower the font floor.
-            missing_evidence=[]
+            missing_evidence=[];supplements=[]
             for obj in base["objects"]:
                 for key in ("x", "y", "w", "h", "rotation", "font_size_pt", "fill", "stroke"):
                     obj.pop(key, None)
                 evidence = str(obj.get("evidence") or "").strip()
                 external_evidence=(obj.get('evidence_source')=='canvas_sketch' and bool(sketch)) or (obj.get('evidence_source')=='reference_image' and bool(config.get('reference_id')) and config.get('reference_purpose') in ('sketch','content'))
-                if not evidence or (evidence not in text and not external_evidence):
+                if evidence and (evidence in text or external_evidence):
+                    obj.pop('supplement', None)
+                elif obj.get('supplement') is True or obj.get('type') in SUPPLEMENT_TYPES:
+                    obj['supplement'] = True
+                    supplements.append(str(obj.get('label') or obj.get('id')))
+                else:
                     missing_evidence.append(obj.get('id'))
                     base["unresolved"].append(f"对象 {obj.get('label') or obj.get('id')} 缺少可定位的原文依据，请确认")
                 if classical_mitosis_compatible(text) and (obj.get('type')=='cell' or (obj.get('type')=='process' and intent['domain']=='biology')):
@@ -203,6 +261,11 @@ def plan_scene(text, config, *, on_stage=None, cancelled=None):
                 if denied:raise SceneError('规划关系违反原文否定要求：'+denied)
             if not base["relations"] and len(base["objects"]) > 1 and not any(o.get('parent_id') for o in base['objects']):
                 base["unresolved"].append("尚未说明对象间关系；当前保留对象，请补充连接及方向")
+            if supplements:
+                base["unresolved"].append("补充对象（题目未提及，为表达结构补出）：" + "、".join(supplements) + "；不需要时可在图层面板删除")
+            language_note = label_language_note(base, target_language)
+            if language_note:
+                base["unresolved"].append(language_note)
             base["requirements"] = {"objects": [o["id"] for o in base["objects"]],
                                     "relations": [r["id"] for r in base["relations"]]}
             base["provenance"] = {"method": "model-semantic-extraction", "model": request_config["text"]["model"],
@@ -317,10 +380,21 @@ def review_scene_visual(scene, config):
             payload['messages'][0]['content'].extend([
                 {'type':'text','text':'下面是作者的原始参考图/草稿。按其用途核对布局或形态，不将参考图中的额外机制添加到作者要求。用途：'+str(config.get('reference_purpose','layout'))},
                 {'type':'image_url','image_url':{'url':config['reference_image_data_url']}}])
-        response = pipeline._post_json(pipeline._endpoint(source["base_url"], "/chat/completions"),
-                                       pipeline._api_key(source), payload, timeout=60)
-        raw = response["choices"][0]["message"]["content"]
-        result = pipeline._json_object(raw)
+        result, raw, last = None, "", None
+        # Reasoning models (e.g. deepseek) may spend the whole budget thinking and
+        # return empty content; ask for a direct answer first, then retry plainly
+        # in case the endpoint rejects the flag.
+        for extra in ({"thinking": {"type": "disabled"}}, {}):
+            try:
+                response = pipeline._post_json(pipeline._endpoint(source["base_url"], "/chat/completions"),
+                                               pipeline._api_key(source), {**payload, **extra}, timeout=60)
+                raw = response["choices"][0]["message"].get("content") or ""
+                result = pipeline._json_object(raw)
+                break
+            except Exception as exc:
+                last = exc
+        if result is None:
+            raise last
         ids = {o["id"] for o in scene["objects"]} | {r["id"] for r in scene["relations"]}
         findings = []
         for item in (result.get("findings") or [])[:30]:

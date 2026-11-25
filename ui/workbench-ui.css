@@ -120,6 +120,7 @@
   border: 1px solid #e2e8f0;
   white-space: nowrap;
 }
+.layer-supplement{flex:none;align-self:center;font-size:10px;line-height:16px;padding:0 4px;margin:0 2px;border-radius:3px;color:#8a5a00;background:#fff1cc}.layer-delete{color:#b54a3c}
 
 /* annotation.css */
 .annotation-panel{position:absolute;z-index:12;right:0;top:0;bottom:0;width:352px;background:#fafafb;border-left:1px solid #cdd2da;padding:15px;overflow:auto;color:#303b46;font-size:12px;box-shadow:-8px 0 18px #26324108}

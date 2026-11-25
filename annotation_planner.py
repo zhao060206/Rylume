@@ -169,13 +169,14 @@ def _changed(before,after):
 
 def _image(scene,notes,max_bytes=100_000):
     import fitz  # PyMuPDF is only needed for this preview; the module imports without it
+    from scene_render import svg_for_mupdf
     svg=render_scene(scene);overlay=[]
     for i,n in enumerate(notes,1):
         if n['shape']=='whole':continue
         tag='ellipse' if n['shape']=='ellipse' else 'rect'
         attrs=(f'cx="{n["x"]+n["w"]/2}" cy="{n["y"]+n["h"]/2}" rx="{n["w"]/2}" ry="{n["h"]/2}"' if tag=='ellipse' else f'x="{n["x"]}" y="{n["y"]}" width="{n["w"]}" height="{n["h"]}"')
         overlay.append(f'<{tag} {attrs} fill="none" stroke="#C65D37" stroke-width=".5"/><text x="{n["x"]+1}" y="{n["y"]+3}" font-family="Arial" font-size="3" fill="#A74027">{i}</text>')
-    with fitz.open(stream=svg.replace('</svg>',''.join(overlay)+'</svg>').encode(),filetype='svg') as doc:
+    with fitz.open(stream=svg_for_mupdf(svg.replace('</svg>',''.join(overlay)+'</svg>')).encode(),filetype='svg') as doc:
         with fitz.open('pdf',doc.convert_to_pdf()) as pdf:
             page=pdf[0];width,height=page.rect.width,page.rect.height
             scale=min(1.5,1400/max(width,height),math.sqrt(1_800_000/(width*height)))
@@ -260,10 +261,9 @@ def _review(before,after,notes,operations,config):
             content=[{'type':'text','text':instruction+'\n框号对应批注顺序，第一张为原图，第二张为候选。图像细节看不清时请标记需要人工核对。\n'+context},
                 {'type':'image_url','image_url':{'url':_image(before,notes,budget)}},{'type':'image_url','image_url':{'url':_image(after,notes,budget)}}]
             req={'model':vision['model'],'temperature':0,'max_tokens':3000,'messages':[{'role':'user','content':content}]}
-            if 'deepseek' in vision['model'].lower():req['thinking']={'type':'disabled'}
             try:
-                response=pipeline._post_json(pipeline._endpoint(vision['base_url'],'/chat/completions'),pipeline._api_key(vision),req,timeout=90)
-                data=pipeline._json_object(response['choices'][0]['message']['content']);mode='vision_and_structure';break
+                # Asks without reasoning first; retries plainly on an empty reply or a rejected flag.
+                data=pipeline._json_object(pipeline.chat_content_direct(vision,req,timeout=90,give_up=_context_overflow));mode='vision_and_structure';break
             except Exception as exc:
                 if not _context_overflow(exc):raise
     if data is None:

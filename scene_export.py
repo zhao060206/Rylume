@@ -13,7 +13,7 @@ from scene_document import normalize_scene
 
 
 def export_scene(scene, format, destination, *, dpi=300, config=None, text_mode='preserve'):
-    from scene_render import render_scene
+    from scene_render import render_scene, svg_for_mupdf
     scene = normalize_scene(copy.deepcopy(scene))
     if text_mode not in ('preserve','editable'):raise ValueError('请选择保留字形或可编辑文字')
     outline_count=sum(bool(o.get('text_appearance') and o.get('asset_snapshot')) for o in scene['objects'])
@@ -46,7 +46,7 @@ def export_scene(scene, format, destination, *, dpi=300, config=None, text_mode=
             temp.write_bytes(svg)
         elif fmt in ("png", "pdf"):
             import fitz
-            doc = fitz.open(stream=svg, filetype="svg")
+            doc = fitz.open(stream=svg_for_mupdf(svg.decode("utf-8")).encode("utf-8"), filetype="svg")
             pdf = fitz.open(stream=doc.convert_to_pdf(), filetype="pdf")
             expected = fitz.Rect(0,0,width_mm*72/25.4,height_mm*72/25.4)
             if abs(pdf[0].rect.width-expected.width)>0.1 or abs(pdf[0].rect.height-expected.height)>0.1:

@@ -498,8 +498,10 @@ def _analyze_one(item: dict, config: dict) -> dict | None:
         models = []
         if vision.get("model"):
             models.append(vision["model"])
-        if "cn:glm-5v-turbo" not in models:
-            models.append("cn:glm-5v-turbo")
+        import pipeline as _pipeline
+        for fallback in _pipeline.resolve_fallback_models(vision, ["cn:glm-5.3"]):
+            if fallback not in models:
+                models.append(fallback)
         for model in models:
             parsed = _analyze_with_model(vision, model, data_url)
             if parsed:
@@ -521,9 +523,16 @@ def _analyze_with_model(vision: dict, model: str, data_url: str) -> dict | None:
                 "temperature": 0,
                 "max_tokens": 1300 if attempt == 0 else 900,
             }
-            response = pipeline._post_json(
-                pipeline._endpoint(vision["base_url"], "/chat/completions"),
-                pipeline._api_key(vision), payload, timeout=120)
+            if attempt == 0:
+                # Reasoning models otherwise spend the budget thinking.
+                payload["thinking"] = {"type": "disabled"}
+            try:
+                response = pipeline._post_json(
+                    pipeline._endpoint(vision["base_url"], "/chat/completions"),
+                    pipeline._api_key(vision), payload, timeout=120)
+            except Exception:
+                # e.g. the endpoint rejects the thinking flag: still try the plain request.
+                continue
             message = response["choices"][0]["message"]
             content = message.get("content") or ""
             if not content.strip():

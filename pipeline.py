@@ -177,6 +177,18 @@ def _chat(config: dict, messages: list[dict], *, temperature: float = 0.3,
     msg = response["choices"][0]["message"]
     content = msg.get("content")
     if not content and msg.get("reasoning_content"):
+        # Reasoning models (e.g. deepseek) can spend the whole budget thinking
+        # and return no answer. Ask once more for a direct answer before
+        # giving up or falling back to the reasoning text.
+        retry_payload = {k: v for k, v in payload.items() if k != "reasoning_effort"}
+        retry_payload["thinking"] = {"type": "disabled"}
+        try:
+            retry = _post_json(_endpoint(section["base_url"], "/chat/completions"),
+                               _api_key(section), retry_payload, timeout=timeout)
+            content = retry["choices"][0]["message"].get("content") or ""
+        except Exception:
+            content = ""
+    if not content and msg.get("reasoning_content"):
         if not allow_reasoning_fallback:
             raise RuntimeError("model returned reasoning only")
         content = msg["reasoning_content"]
@@ -235,6 +247,86 @@ def _repair_json_text(text: str) -> str:
     return ''.join(out)
 
 
+_MODEL_LIST_CACHE: dict = {}
+
+
+def _listed_models(section: dict):
+    """Model ids the endpoint lists, cached for 10 minutes; None if unavailable."""
+    base = str(section.get("base_url") or "").strip()
+    if not base:
+        return None
+    key = (base, _api_key(section))
+    hit = _MODEL_LIST_CACHE.get(key)
+    if hit and time.time() - hit[0] < 600:
+        return hit[1]
+    names = None
+    try:
+        headers = {"Accept": "application/json"}
+        if key[1]:
+            headers["Authorization"] = "Bearer " + key[1]
+        req = urllib.request.Request(_endpoint(base, "/models"), headers=headers)
+        with urllib.request.urlopen(req, timeout=8) as response:
+            payload = json.loads(response.read(1024 * 1024))
+        items = payload.get("data") if isinstance(payload, dict) else None
+        if isinstance(items, list):
+            names = {str(i["id"]).strip() for i in items
+                     if isinstance(i, dict) and i.get("id")} or None
+    except Exception:
+        names = None
+    _MODEL_LIST_CACHE[key] = (time.time(), names)
+    return names
+
+
+def resolve_fallback_models(section: dict, candidates) -> list:
+    """Map built-in fallback names onto what this endpoint actually serves.
+
+    Fallbacks are written as "cn:glm-5.3", but gateways prefix names their own
+    way (e.g. "workbuddycn-glm-5.3"). Match on the part after the prefix and
+    drop candidates the endpoint does not list, so a fallback never spends a
+    request on a guaranteed model_not_found. If /models is unavailable the
+    candidates are returned unchanged.
+    """
+    names = _listed_models(section)
+    out = []
+    for cand in candidates:
+        if names is None or cand in names:
+            pick = cand
+        else:
+            tail = cand.split(":", 1)[-1]
+            hits = sorted(n for n in names if n == tail or any(
+                n.endswith(sep + tail) for sep in ("-", ":", "/")))
+            pick = hits[0] if hits else None
+        if pick and pick not in out:
+            out.append(pick)
+    return out
+
+
+def chat_content_direct(section: dict, payload: dict, *, timeout: float = 120,
+                        give_up=None) -> str:
+    """POST a chat completion and return non-empty answer content.
+
+    Reasoning models (e.g. deepseek) can spend the whole budget thinking and
+    return empty content. Ask for a direct answer first; if the endpoint
+    rejects the flag or still returns nothing, retry the original payload.
+    ``give_up(exc)`` returning true re-raises at once (e.g. context overflow,
+    which the plain retry cannot fix).
+    """
+    last: Exception = RuntimeError("model returned empty content")
+    for extra in ({"thinking": {"type": "disabled"}}, {}):
+        try:
+            response = _post_json(_endpoint(section["base_url"], "/chat/completions"),
+                                  _api_key(section), {**payload, **extra}, timeout=timeout)
+            content = response["choices"][0]["message"].get("content") or ""
+            if content.strip():
+                return content
+            last = RuntimeError("model returned empty content")
+        except Exception as exc:
+            if give_up is not None and give_up(exc):
+                raise
+            last = exc
+    raise last
+
+
 def chat_json(config: dict, messages: list[dict], *, temperature: float = 0.2,
               max_tokens: int = 2400, reasoning_effort: str | None = None,
               timeout: int = 300, allow_fallback: bool = True) -> dict:
@@ -249,7 +341,7 @@ def chat_json(config: dict, messages: list[dict], *, temperature: float = 0.2,
     models = [None]
     if allow_fallback and any(host in str(section.get("base_url") or "")
                               for host in ("127.0.0.1", "localhost")):
-        models += ["cn:mimo-v2.6-pro", "cn:glm-5.3"]
+        models += resolve_fallback_models(section, ["cn:mimo-v2.6-pro", "cn:glm-5.3"])
     last = None
     for model in models:
         active = config
@@ -463,109 +555,6 @@ def generate_raw(prompt: str, config: dict) -> bytes:
     raise RuntimeError("image model returned neither b64_json nor url")
 
 
-def _whole_figure_prompt(text: str, config: dict) -> str:
-    contract = config.get("layout_contract") or {}
-    stages = [str(s) for s in (contract.get("stages") or []) if str(s).strip()]
-    title = str(contract.get("title") or "").strip()
-    layout = contract.get("layout")
-    if layout == "horizontal_s":
-        composition = ("Horizontal left-to-right flow with a very slight S-shaped vertical offset. "
-                       "Do not stack the stages as full-width horizontal bars.")
-    else:
-        composition = ("Vertical top-to-bottom cascade on a strict two-column grid: all stage "
-                       "labels in one left column, right-aligned; all scientific illustrations in "
-                       "one right column, left-aligned; each stage shares a row and a common "
-                       "baseline. Use one clean vertical arrow spine between the columns. Fill "
-                       "about 85% of the canvas width. Do not alternate sides, do not use "
-                       "full-width empty cards or long empty strips.")
-    lines = [
-        "Create one publication-quality scientific mechanism diagram for a Cell/Nature paper.",
-        "Flat 2D vector scientific illustration, pure white background, thin dark outlines, "
-        "muted journal palette, generous but purposeful white space, clear arrows, no 3D, "
-        "no shadows, no gradients, no decorative AI gloss.",
-        composition,
-        "Fill about 85% of the canvas width and height with meaningful scientific content; "
-        "large empty margins are a failure.",
-    ]
-    if title:
-        lines.append(f'Exact main title: "{title}".')
-    if stages:
-        lines.append("Exact stage labels, spelled exactly and in this order: "
-                     + " -> ".join(stages) + ".")
-    else:
-        lines.append("Use the exact stage labels from the brief; do not invent new labels.")
-    lines.append("Every stage must have a distinct scientific illustration: extracellular vesicle, "
-                 "membrane receptor, kinase cascade, nucleus/nuclear pore, cartilage matrix. "
-                 "Do not reuse the same generic circle or icon for different stages.")
-    lines.append("Show extracellular vesicles explicitly as lipid-bilayer spheres with visible "
-                 "membrane and cargo releasing ligands; do not replace them with free dots.")
-    lines.append("Keep every stage fully inside the frame and balance the top/bottom margins; "
-                 "the final cartilage-matrix panel must be complete and not cut off.")
-    lines.append("Place each stage label on a consistent vertical grid beside its illustration; "
-                 "use clean straight arrows with even spacing.")
-    lines.append("Aim for refined high-end Cell/Nature flat-vector illustration: consistent line "
-                 "weight, layered detail and subtle flat shading, not generic clip-art.")
-    lines.append("Use only the labels above; no extra headings, no sub-labels such as "
-                 "'Kinase 1', no roman numerals, no page numbers, no gibberish, no numbers, "
-                 "no legend, no watermark.")
-    style = config.get("design_brief") or ""
-    if style:
-        lines.append("Style constraints: " + str(style)[:800])
-    return chr(10).join(lines)
-
-
-def whole_figure_svg(text: str, config: dict) -> tuple[bytes, dict]:
-    """One coherent generated illustration instead of strip/card templates."""
-    canvas = [int(v) for v in (config.get("canvas") or [1600, 1067])[:2]]
-    cw, ch = max(320, canvas[0]), max(320, canvas[1])
-    prompt = _whole_figure_prompt(text, config)
-    image_config = dict(config)
-    image_section = dict(config.get("image") or {})
-    ratio = cw / max(1, ch)
-    image_section["size"] = ("1536x1024" if ratio >= 1.25 else
-                             "1024x1536" if ratio <= 0.8 else "1024x1024")
-    image_config["image"] = image_section
-    try:
-        png = generate_raw(prompt, image_config)
-    except Exception as first_error:
-        # Size negotiation is the only reason to retry immediately; keep the
-        # original service error rather than hiding it behind a second 400.
-        image_section["size"] = "1024x1024"
-        image_config["image"] = image_section
-        try:
-            png = generate_raw(prompt, image_config)
-        except Exception as second_error:
-            raise RuntimeError(f"{type(first_error).__name__}: {first_error}；"
-                               f"备用尺寸重试失败：{type(second_error).__name__}: {second_error}") from first_error
-    data = base64.b64encode(png).decode("ascii")
-    svg = (f'<?xml version="1.0" encoding="UTF-8"?>'
-           f'<svg xmlns="http://www.w3.org/2000/svg" width="{cw}" height="{ch}" '
-           f'viewBox="0 0 {cw} {ch}">'
-           f'<rect width="{cw}" height="{ch}" fill="#FFFFFF"/>'
-           f'<image href="data:image/png;base64,{data}" x="0" y="0" width="{cw}" height="{ch}" '
-           f'preserveAspectRatio="xMidYMid meet"/></svg>').encode("utf-8")
-    import text_ocr
-    ocr_texts = text_ocr.extract_png(png)
-    contract = config.get("layout_contract") or {}
-    report = {
-        "mode": "illustration",
-        "ocr_texts": ocr_texts,
-        "whole_figure": True,
-        "raster": True,
-        "spec": {
-            "title": contract.get("title") or "",
-            "subtitle": "",
-            "layout": contract.get("layout") or "vertical",
-            "regions": contract.get("regions") or [],
-            "stages": [{"label": name, "caption": "", "prompt": "", "color": ""}
-                       for name in (contract.get("stages") or [])],
-        },
-        "layout_contract": contract,
-        "bytes": len(svg),
-    }
-    return svg, report
-
-
 def generate_image(text: str, config: dict) -> bytes:
     return generate_raw(rewrite_prompt(text, config), config)
 
@@ -710,6 +699,23 @@ def auto_render(text: str, config: dict, on_stage=None) -> tuple[bytes, dict]:
     return svg, {"mode": "placeholder", "bytes": len(svg)}
 
 
+# Reference figures carry their own science; a rewrite must take only their look.
+STYLE_REFERENCE_GUARD = ("只借鉴其中的纯视觉语言：配色、线宽与描边、圆角、字体气质、背景、留白和箭头线型。"
+                         "参考图里出现的分子、结构、区域、细胞器、修饰标记（如磷酸化）、步骤和箭头连接关系"
+                         "都属于参考图自身的内容，原文没有的一律不得写入；实体、区域、标签和箭头只能来自原文")
+
+
+# Must allow everything OPTIMIZE_INSTRUCTION rule 2 lets the rewrite add, or a
+# concrete layout gets rejected as "new entities".
+BRIEF_AUDIT_INSTRUCTION = (
+    "独立核对科研绘图描述的改写是否保持原意。改写允许补充视觉与版式信息，这些都不算新增："
+    "画布比例、面板划分、阅读顺序、实体的位置大小与形状、原文已提及结构（如细胞膜、细胞核）的绘制方式及其两侧或内部的区域名标签、"
+    "配色、线宽、留白、箭头样式，以及把原文已有的名词画成图形或标签、把原文已有的关系画成箭头。"
+    "只有以下情况判为不等价：新增原文没有的分子、实验器材、试剂、修饰（如磷酸化）、机制、通路、条件、数值或结论；"
+    "删除或替换原文实体；改变方向、因果或否定；改变标签语言；凭常识补实验步骤。"
+    '返回JSON {equivalent:true|false,reason:"具体依据"}。')
+
+
 def optimize_brief(text: str, config: dict, style: str = "",
                    canvas: list | None = None) -> str:
     text = (text or "").strip()
@@ -720,8 +726,8 @@ def optimize_brief(text: str, config: dict, style: str = "",
         raise RuntimeError("需要先在设置里配置文本模型")
     user_content = text
     if style:
-        user_content = (text + chr(10) + chr(10) + "参考图的视觉风格（必须沿用这些视觉特征，"
-                        "但不得照抄图中的具体科学内容）：" + style)
+        user_content = (text + chr(10) + chr(10) + "参考图的视觉风格（" + STYLE_REFERENCE_GUARD
+                        + "）：" + style)
     if canvas and len(canvas) >= 2:
         user_content += (chr(10) * 2 + f"当前画板为 {int(canvas[0])}×{int(canvas[1])} px。"
                          "如果原文没有明确指定其他比例，画布比例必须保持当前画板，"
@@ -733,7 +739,8 @@ def optimize_brief(text: str, config: dict, style: str = "",
         if attempt:
             # A long style DNA can make the model spend the whole budget on
             # reasoning and return no answer; retry with a shorter brief.
-            prompt = text + chr(10) * 2 + "参考图风格摘要：" + style[:600]
+            prompt = text + (chr(10) * 2 + "参考图风格摘要（" + STYLE_REFERENCE_GUARD + "）："
+                             + style[:600] if style else "")
         try:
             raw = _chat(config, [
                 {"role": "system", "content": OPTIMIZE_INSTRUCTION},
@@ -760,7 +767,7 @@ def optimize_brief(text: str, config: dict, style: str = "",
     if not out:
         raise RuntimeError("模型没有返回有效内容")
     audit=chat_json(config,[{'role':'system','content':
-        '独立核对科研绘图描述的改写。可增加配色、对齐、留白、线宽等视觉建议，但不能新增或删改实体、实验器材、机制、条件、数值、方向、否定和标签语言。不得凭常识补实验步骤。返回JSON {equivalent:true|false,reason:"具体依据"}。'},
+        BRIEF_AUDIT_INSTRUCTION},
         {'role':'user','content':json.dumps({'original':text,'enhanced':out},ensure_ascii=False)}],temperature=0,max_tokens=1200)
     anchors=re.findall(r'\d+(?:\.\d+)?|[A-Za-z][A-Za-z0-9_-]*',text)
     missing=list(dict.fromkeys(a for a in anchors if a not in out))
@@ -788,11 +795,14 @@ texture: 纹理与光影（无 / 轻度 / 写实）
 labels: 图中可见的标签文字数组
 style_brief: 120 字以内的中文风格描述，可直接作为绘图提示词
 
-判断依据只看可见的视觉特征：图形语言、配色数量与饱和度、线条粗细、文字层级、面板数量、留白、箭头与标注方式。不要臆造图中不存在的科学结论。"""
+判断依据只看可见的视觉特征：图形语言、配色数量与饱和度、线条粗细、文字层级、面板数量、留白、箭头与标注方式。不要臆造图中不存在的科学结论。
+layout、linework、typography 与 style_brief 只描述视觉组织方式和图形语言（面板、方向、留白、形状、线型），不要写图中具体的分子、结构、区域或通路名称；图中可见文字只放进 labels。"""
 
 
 def style_summary(style: dict) -> str:
-    keys = ("figure_type", "domain", "style", "layout", "palette", "linework",
+    # "domain" names the reference's subject matter, not its look; leaving it out
+    # keeps the rewrite from borrowing the reference figure's science.
+    keys = ("figure_type", "style", "layout", "palette", "linework",
             "typography", "background", "texture", "style_brief")
     parts = []
     for key in keys:
@@ -833,10 +843,20 @@ def analyze_image(data_url: str, config: dict) -> tuple[dict, str]:
         "temperature": 0,
         "max_tokens": 1500,
     }
-    response = _post_json(_endpoint(source["base_url"], "/chat/completions"),
-                          _api_key(source), payload, timeout=180)
-    raw = response["choices"][0]["message"]["content"]
-    style = _json_object(raw)
+    style, last = None, None
+    # Reasoning models (e.g. deepseek) may spend the whole budget thinking and
+    # return empty content; ask for a direct answer first, then retry plainly
+    # with room for reasoning in case the endpoint rejects the flag.
+    for extra in ({"thinking": {"type": "disabled"}}, {"max_tokens": 4000}):
+        try:
+            response = _post_json(_endpoint(source["base_url"], "/chat/completions"),
+                                  _api_key(source), {**payload, **extra}, timeout=180)
+            style = _json_object(response["choices"][0]["message"].get("content") or "")
+            break
+        except Exception as exc:
+            last = exc
+    if style is None:
+        raise last
     return style, style_summary(style)
 
 

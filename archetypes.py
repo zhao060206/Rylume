@@ -115,11 +115,7 @@ def extract_reference_style(data_url: str, config: dict) -> dict:
         "temperature": 0,
         "max_tokens": 3400,
     }
-    response = pipeline._post_json(
-        pipeline._endpoint(source["base_url"], "/chat/completions"),
-        pipeline._api_key(source), payload, timeout=180
-    )
-    raw = response["choices"][0]["message"]["content"] or ""
+    raw = pipeline.chat_content_direct(source, payload, timeout=180)
     try:
         data = pipeline._json_object(raw)
     except Exception:
@@ -148,13 +144,7 @@ def _repair_json_by_model(raw: str, source: dict) -> dict:
         "temperature": 0,
         "max_tokens": 3400,
     }
-    response = pipeline._post_json(
-        pipeline._endpoint(source["base_url"], "/chat/completions"),
-        pipeline._api_key(source), payload, timeout=120
-    )
-    message = response["choices"][0]["message"]
-    fixed = message.get("content") or message.get("reasoning_content") or ""
-    return pipeline._json_object(fixed)
+    return pipeline._json_object(pipeline.chat_content_direct(source, payload, timeout=120))
 
 def apply_style_to_prompt(brief_text: str, style_dna: dict) -> str:
     """Enhance user prompt with extracted reference style DNA without altering scientific intent."""

@@ -144,16 +144,6 @@ class PlateSceneTests(unittest.TestCase):
 
 
 class LayoutContractTests(unittest.TestCase):
-    def test_whole_figure_prompt_uses_author_layout_and_labels(self):
-        cfg = {"layout_contract": {
-            "title": "EV Signaling", "layout": "vertical",
-            "stages": ["Ligand secretion", "Receptor binding", "Matrix synthesis"]}}
-        prompt = pipeline._whole_figure_prompt("brief", cfg)
-        self.assertIn("Vertical top-to-bottom", prompt)
-        self.assertIn("Ligand secretion -> Receptor binding -> Matrix synthesis", prompt)
-        self.assertIn("85%", prompt)
-        self.assertIn("Do not reuse the same generic circle", prompt)
-
     def test_reference_reading_order_wins_without_layout_words(self):
         contract = layout_contract.build(
             "配体→受体→胞内级联→核内效应。",

@@ -17,7 +17,7 @@ import time
 import pipeline
 import qa
 
-VISION_MODEL = "cn:glm-5v-turbo"
+VISION_MODEL = "cn:glm-5.3"  # resolved against /models at call time
 
 VISION_FIX_INSTRUCTION = """你是顶刊科研插图的结构化修复器。下面给出图的 JSON 规格，以及审查发现的问题（含修改建议）。
 请只返回一个“最小修改补丁”，只列出需要改的字段，其余字段逐字保留：
@@ -832,8 +832,10 @@ def review_figure(svg_bytes: bytes, config: dict, context: dict | None = None) -
     # endpoint. The known critic is only a fallback when config fails.
     if configured:
         models.append(configured)
-    if VISION_MODEL not in models:
-        models.append(VISION_MODEL)
+    import pipeline as _pipeline
+    for fallback in _pipeline.resolve_fallback_models(vision, [VISION_MODEL]):
+        if fallback not in models:
+            models.append(fallback)
     timeout = float(vision.get("timeout") or 180)
 
     context_text = json.dumps(context or {}, ensure_ascii=False)
@@ -877,7 +879,12 @@ def review_figure(svg_bytes: bytes, config: dict, context: dict | None = None) -
         for attempt in range(2):
             try:
                 payload = {"model": model, "messages": messages,
-                           "temperature": 0, "max_tokens": 1400 if attempt == 0 else 1000}
+                           "temperature": 0, "max_tokens": 1400 if attempt == 0 else 4000}
+                if attempt == 0:
+                    # Reasoning models (e.g. deepseek) otherwise spend the whole budget
+                    # thinking and return empty content. Attempt 1 drops the flag in case
+                    # the endpoint rejects it, with room for the reasoning.
+                    payload["thinking"] = {"type": "disabled"}
                 response = pipeline._post_json(
                     pipeline._endpoint(vision["base_url"], "/chat/completions"),
                     pipeline._api_key(vision), payload, timeout=timeout)

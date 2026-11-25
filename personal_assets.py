@@ -74,10 +74,9 @@ def model_observe(pixels, config, *, candidate=None):
             '{"summary":"比较结论","warnings":["具体差异"],"needs_attention":true或false}。')
     content = [{'type': 'text', 'text': instruction}, {'type': 'image_url', 'image_url': {'url': url(pixels)}}]
     if candidate: content.append({'type': 'image_url', 'image_url': {'url': url(candidate)}})
-    result = pipeline._post_json(pipeline._endpoint(section['base_url'], '/chat/completions'),
-        pipeline._api_key(section), {'model': section['model'], 'temperature': 0, 'max_tokens': 1100,
+    raw = pipeline.chat_content_direct(section, {'model': section['model'], 'temperature': 0, 'max_tokens': 1100,
         'messages': [{'role': 'user', 'content': content}]}, timeout=90)
-    parsed = pipeline._json_object(result['choices'][0]['message'].get('content') or '')
+    parsed = pipeline._json_object(raw)
     if not isinstance(parsed, dict): raise ValueError('模型未返回有效分析')
     return {k: parsed[k] for k in ('kind', 'summary', 'warnings', 'color_precision', 'filter_speckle', 'needs_attention') if k in parsed}
 

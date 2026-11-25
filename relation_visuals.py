@@ -26,6 +26,9 @@ PT_MM = 25.4 / 72
 HEAD_PER_WIDTH, HEAD_MIN, HEAD_MAX, HEAD_ASPECT = 7.0, 1.9, 3.4, .44
 TIP_GAP, BIND_GAP, BIND_R = 1.0, .5, 1.0
 BAR_HALF, BAR_WEIGHT, SEQ_NOTCH = .7, 1.6, .4
+# A short connector keeps at least MIN_BODY of visible line: its tip gaps shrink to SHORT_GAP first,
+# then its end symbol, never below HEAD_SHORT_MIN.
+MIN_BODY, SHORT_GAP, HEAD_SHORT_MIN = 2.0, .5, 1.4
 CURVE_SAMPLES = 200
 
 
@@ -103,6 +106,16 @@ def relation_parts(kind, start, end, control, color, stroke_pt=1.05, indirect=Fa
     W = HEAD_ASPECT * L
     g0 = 0.0 if anchored_start else TIP_GAP
     g1 = 0.0 if anchored_end else TIP_GAP
+    # How far each end symbol reaches back along the line: a * L + b (b: chevron mitre plus half a stroke).
+    mitre_reach = sw / 2 * math.sqrt(1 + HEAD_ASPECT * HEAD_ASPECT) / HEAD_ASPECT + sw / 2
+    reach = {'activates': (1.0, mitre_reach), 'transports': (1.4, mitre_reach), 'converts': (1.05, 0.0),
+             'sequence': (.95, 0.0), 'inhibits': (0.0, BAR_WEIGHT * sw)}.get(kind)
+    if reach and total - g0 - g1 - (reach[0] * L + reach[1]) < MIN_BODY:
+        g0, g1 = min(g0, SHORT_GAP), min(g1, SHORT_GAP)
+        room = total - g0 - g1 - MIN_BODY - reach[1]
+        if reach[0] and room < reach[0] * L:
+            L = max(HEAD_SHORT_MIN, room / reach[0])
+            W = HEAD_ASPECT * L
     common = {'fill': 'none', 'stroke': color, 'stroke-width': sw, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'}
     mark = dict(common, **{'data-endpoint': BY_ID[kind]['symbol']})
     mitre = {'stroke-linejoin': 'miter', 'stroke-miterlimit': 8}

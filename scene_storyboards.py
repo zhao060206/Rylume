@@ -154,7 +154,7 @@ def make_storyboard(sid,*,width_mm=180,height_mm=120):
         # Explicit substrate/product: PI3K is a catalyst, not the substrate.
         H('extracellular','Extracellular',29,8)
         N('mem','membrane','',90,27,166,5,role='context',fill='#9AAAB4')
-        N('egf','ligand','EGF',88,10,12,7,label_dx=-11,label_dy=-4);N('egfr','receptor_dimer','EGFR',88,27,16,19)
+        N('egf','ligand','EGF',88,7,12,7,label_dx=-11,label_dy=-4);N('egfr','receptor_dimer','EGFR',88,27,16,19)
         H('arm_mapk','a   RAS–MAPK',35,43);H('arm_akt','b   PI3K–AKT',136,43)
         for oid,typ,label,x,y in [('ras','protein','RAS–GTP',32,58),('raf','kinase','RAF',32,80),('mek','kinase','MEK',67,80),('erk','kinase','ERK',67,102),('pi3k','kinase','PI3K',114,62)]:N(oid,typ,label,x,y,17,10)
         N('pip2','lipid','PIP2',126,32,10,9,state='bisphosphate',fill='#AD885D')
@@ -168,7 +168,7 @@ def make_storyboard(sid,*,width_mm=180,height_mm=120):
         if b.narrow:
             # Authored single-column arrangement: keep physical text size and
             # move the branches, rather than stretching a wide composition.
-            positions={'mem':(45,31,82,4),'egf':(43,12,10,7),'egfr':(43,31,13,19),
+            positions={'mem':(45,31,82,4),'egf':(43,11,10,7),'egfr':(43,31,13,19),
                 'ras':(19,75,14,10),'raf':(19,100,14,10),'mek':(19,126,14,10),'erk':(48,126,14,10),
                 'pi3k':(59,77,14,10),'pip2':(61,37,8,10),'pip3':(79,37,8,10),'akt':(76,109,14,10),
                 'extracellular':(20,7,28,1),'arm_mapk':(20,54,28,1),'arm_akt':(75,55,22,1)}
@@ -240,7 +240,7 @@ def make_storyboard(sid,*,width_mm=180,height_mm=120):
             # Fusion has two visible inputs, rather than silently turning an
             # autophagosome into a lysosome. Stage labels describe the event.
             N('lysosome','vesicle','Lysosome',142,40 if not b.narrow else 82,21,21,state='lysosome',fill='#AE7C67')
-            E('lysosome','lyso','sequence','fusion')
+            E('lysosome','lyso','sequence')  # the fusion event is labelled once, on auto->lyso
             for r in b.scene['relations']:
                 if r['target']=='lyso':r['label']='fusion' if r['source']=='auto' else r['label']
             if not b.narrow:
@@ -281,14 +281,14 @@ def make_storyboard(sid,*,width_mm=180,height_mm=120):
         H('condition_b','b   '+('Wnt present' if sid=='wnt_switch' else 'Inflammation' if sid=='inflamed_barrier' else 'Opsonisation'),135,10)
         if sid=='wnt_switch':
             for p,x in [('a',43),('b',135)]:
-                N(p+'mem','membrane','',x,30,72,6,role='context');N(p+'beta','protein','β-catenin',x,57,25,14);N(p+'effect','process','Degradation' if p=='a' else 'TCF / LEF transcription',x,96,32,17)
+                N(p+'mem','membrane','',x,36,72,6,role='context');N(p+'beta','protein','β-catenin',x,65,25,14);N(p+'effect','process','Degradation' if p=='a' else 'TCF / LEF transcription',x,96,32,17)
                 E(p+'beta',p+'effect','transports' if p=='a' else 'activates',indirect=p=='b')
-            N('wnt','ligand','Wnt',135,20,13,9);N('fzd','receptor','FZD / LRP',135,32,16,18);E('wnt','fzd','binds');E('fzd','bbeta','activates','stabilisation',indirect=True)
+            N('wnt','ligand','Wnt',135,18.5,13,7,label_dx=-11,label_dy=-4);N('fzd','receptor','FZD / LRP',135,38,16,18);E('wnt','fzd','binds');E('fzd','bbeta','activates','stabilisation',indirect=True)
             brief='Without Wnt, the destruction complex promotes β-catenin degradation. Wnt binding to Frizzled/LRP inhibits destruction-complex activity, allowing β-catenin accumulation and nuclear TCF/LEF-dependent transcription. The destruction complex and nuclear import are omitted.'
         elif sid=='inflamed_barrier':
             for p,x in [('a',43),('b',135)]:
                 N(p+'tissue','tissue','Tissue',x,90,65,26,role='context');N(p+'endo','endothelial','Continuous junctions' if p=='a' else 'Altered junctions',x,45,60,16,state='intact' if p=='a' else 'disrupted');N(p+'cargo','ligand','Circulating solute',x,22,13,9)
-            N('leak','ligand','Increased permeability',135,78,13,9);E('bcargo','leak',label='context-dependent')
+            N('leak','ligand','Increased permeability',135,78,13,9);E('bcargo','leak',label='context-dependent',route_through=['bendo'])
             brief='Conceptual endothelial barrier comparison: a continuous junctional barrier at homeostasis versus altered junctions and increased permeability under some inflammatory conditions. These are illustrative states, not quantitative measurements or a claim that every inflammatory setting has the same phenotype.'
         else:
             N('virus','pathogen','Virus',43,35,27,25);N('ab','antibody','Neutralising antibody',43,72,23,25,art='bio_antibody');N('entry','receptor','Cell entry',43,101,15,17);E('ab','virus','binds');E('ab','entry','inhibits')
@@ -300,7 +300,7 @@ def make_storyboard(sid,*,width_mm=180,height_mm=120):
             E('cytokine','receptor','binds');E('receptor','jak','activates');E('jak','stat','activates');E('stat','dna','activates',indirect=True);E('dna','socs','sequence','expression');E('socs','jak','inhibits')
             brief='Cytokine receptor signalling activates JAK and STAT. Activated STAT drives SOCS gene expression after dimerisation and nuclear import (omitted). SOCS proteins provide negative feedback on receptor-associated JAK signalling; SOCS-family mechanisms vary.'
         elif sid=='apoptosis_routes':
-            N('death','receptor','Death receptor',33,24,17,22);N('mito','mitochondrion','Mitochondrial route',144,25,33,23,art='bio_mitochondrium_1');N('c8','protein','Caspase-8',35,65,24,13);N('c9','protein','Caspase-9',143,65,24,13);N('c3','protein','Caspase-3 / 7',90,87,27,13);N('apo','process','Apoptotic execution',90,106,32,10)
+            N('death','receptor','Death receptor',33,24,17,22);N('mito','mitochondrion','Mitochondrial route',144,25,33,23,art='bio_mitochondrium_1');N('c8','protein','Caspase-8',35,65,24,13);N('c9','protein','Caspase-9',143,65,24,13);N('c3','protein','Caspase-3 / 7',90,87,27,13);N('apo','process','Apoptotic execution',90,108,32,10)
             E('death','c8','activates',indirect=True);E('mito','c9','activates',indirect=True);E('c8','c3','activates');E('c9','c3','activates');E('c3','apo','activates')
             brief='Extrinsic death-receptor signalling can activate caspase-8 through a death-inducing complex. Intrinsic mitochondrial cytochrome-c release supports apoptosome-mediated caspase-9 activation. Both routes can activate executioner caspases-3/7. Bid-mediated cross-talk and regulatory proteins are omitted.'
         elif sid=='crispr_editing':
@@ -319,7 +319,14 @@ def make_storyboard(sid,*,width_mm=180,height_mm=120):
         brief='Conceptual transcytosis route for a carrier: uptake at the luminal endothelial surface, intracellular vesicular transport and abluminal release. This template does not claim universal barrier crossing or exclude paracellular and other routes.'
     elif sid=='wound_landscape':
         for i,(title,oid,typ,label,art) in enumerate([('Inflammation','immune','immune_cell','Macrophage','bio_macrophage'),('Proliferation','fibro','fibroblast','Fibroblast','bio_fibroblast_4'),('Remodelling','matrix','collagen','Collagen',None)]):
-            x=30+i*60;H('h'+str(i),title,x,16);N('t'+str(i),'tissue','',x,81,52,29,role='context');N(oid,typ,label,x,55,31,27,art=art)
+            if b.narrow:
+                # Portrait page: stages stack, the progression arrows run down a
+                # free left lane and their labels sit beside the line (mm / scale).
+                ym=30+46*i
+                H('h'+str(i),title,45/b.sx,(ym-13)/b.sy);N('t'+str(i),'tissue','',62/b.sx,ym/b.sy,52,29,role='context')
+                N(oid,typ,label,25/b.sx,ym/b.sy,31,27,art=art)
+            else:
+                x=30+i*60;H('h'+str(i),title,x,16);N('t'+str(i),'tissue','',x,81,52,29,role='context');N(oid,typ,label,x,55,31,27,art=art)
         E('immune','fibro',label='phase progression',indirect=True);E('fibro','matrix',label='matrix remodelling',indirect=True)
         brief='Wound repair includes overlapping inflammatory, proliferative and remodelling phases. Macrophages, fibroblasts and extracellular matrix are representative features. Arrows indicate temporal progression, not exclusive one-cell causal transitions. Haemostasis and many other participants are omitted.'
     elif sid=='tumor_ecology':
