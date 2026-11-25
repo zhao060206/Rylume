@@ -276,6 +276,14 @@
     ]
   },
   {
+    "name": "pyclipper",
+    "version": "1.4.0",
+    "license": "MIT",
+    "notices": [
+      "python-packages/pyclipper-1.4.0/licenses/LICENSE"
+    ]
+  },
+  {
     "name": "pycparser",
     "version": "2.22",
     "license": "BSD-3-Clause",
@@ -418,6 +426,14 @@
     ]
   },
   {
+    "name": "six",
+    "version": "1.17.0",
+    "license": "MIT",
+    "notices": [
+      "python-packages/six-1.17.0/licenses/LICENSE"
+    ]
+  },
+  {
     "name": "soupsieve",
     "version": "2.9.2",
     "license": "MIT",
@@ -439,6 +455,14 @@
     "license": "MIT",
     "notices": [
       "python-packages/svgpathtools-1.7.2/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "svgwrite",
+    "version": "1.4.3",
+    "license": "MIT License",
+    "notices": [
+      "python-packages/svgwrite-1.4.3/licenses/LICENSE.TXT"
     ]
   },
   {

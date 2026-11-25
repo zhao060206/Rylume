@@ -36,7 +36,7 @@ WebView2 Runtime and .NET are system prerequisites, not bundled Microsoft instal
 
 The packaged Shapely 2.1.2 links dynamically to GEOS 3.13.1 (LGPL-2.1-or-later).
 certifi 2026.10.23 is under MPL-2.0; its unmodified source is included in the
-4.0.0 dependency-sources release asset. The unchanged PyMuPDF/MuPDF 1.28.2 and
+dependency-sources asset of every application release (from 4.0.0, including 5.0.0). The unchanged PyMuPDF/MuPDF 1.28.2 and
 GEOS 3.13.1 sources remain available in the [3.0.0 dependency-sources asset](https://github.com/zhao060206/Rylume/releases/download/v3.0.0/Rylume-3.0.0-dependency-sources.zip).
 The GEOS license and replacement shared
 libraries remain under `_internal/shapely.libs`; Rylume does not restrict the

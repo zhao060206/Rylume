@@ -4,6 +4,8 @@ $projectRoot=[IO.Path]::GetFullPath((Split-Path -Parent $MyInvocation.MyCommand.
 Set-Location -LiteralPath $projectRoot
 & $Python (Join-Path $projectRoot 'scripts/build_ui.py') --check
 if($LASTEXITCODE -ne 0){throw 'UI styles are stale; run python scripts/build_ui.py before packaging'}
+& $Python (Join-Path $projectRoot 'tools/build_constraints.py') --check
+if($LASTEXITCODE -ne 0){throw 'Build environment differs from licenses/python-packages.json; see docs/RELEASE.md'}
 & $Python -m PyInstaller --clean --noconfirm --distpath dist-rylume --workpath build-rylume Rylume.spec
 if($LASTEXITCODE -ne 0){throw 'Rylume build failed'}
 $numpyLibs=Join-Path $projectRoot 'dist-rylume\Rylume\_internal\numpy.libs'
