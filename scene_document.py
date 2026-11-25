@@ -593,6 +593,17 @@ def audit_scene(scene, *, _normalized=False):
             cx, cy = o["x"] + o["w"] / 2, o["y"] + o["h"] / 2
             if not (c["x"] <= cx <= c["x"] + c["w"] and c["y"] <= cy <= c["y"] + c["h"]):
                 add("compartment", "对象中心已移出其标记区室", [oid], compartment=c["id"])
+    # process_cell draws a cell outline behind the stages; each stage says where it belongs.
+    if scene['style'].get('template')=='process_cell':
+        from scene_render import CELL_STAGE_PLACE,cell_outline_polygon,cell_inside_fraction
+        outline=cell_outline_polygon(width,height)
+        for o in objects.values():
+            where=CELL_STAGE_PLACE.get(o.get('state'))
+            if not where or not o['visible'] or o.get('role')=='context' or not all(k in o for k in ('x','y','w','h')):continue
+            frac=cell_inside_fraction(o,outline)
+            if (where=='inside' and frac<.9) or (where=='outside' and frac>.1) or (where=='boundary' and not .025<frac<.975):
+                add('cell-outline-placement',{'inside':'这一步应在细胞内，对象已移出细胞轮廓','outside':'这一步应在细胞外，对象落进了细胞轮廓',
+                    'boundary':'这一步应跨在细胞膜上，对象没有压住细胞轮廓'}[where],[o['id']],expected=where,inside_fraction=round(frac,2))
     for r in relations.values():
         if not objects[r["source"]]["visible"] or not objects[r["target"]]["visible"]:
             add("hidden-endpoint", "连接的一端被隐藏", [r["id"], r["source"], r["target"]])

@@ -459,6 +459,15 @@ def preview_finding_fix(scene, finding):
                 options.append((sum(math.hypot(q[0]-p[0],q[1]-p[1]) for p,q in zip(pts,pts[1:])),r['id'],ch))
         for _,rid,ch in sorted(options,key=lambda o:o[0]):
             candidates.append([{'op':'update_relation','id':rid,'changes':ch}])
+    if code=='cell-outline-placement':
+        # Move only this stage, nearest spot first, until it sits where its stage belongs.
+        spots=sorted({(dx,dy) for d in (2,4,6,9,12,16,20,25,30,36,42,50)
+                      for dx,dy in ((d,0),(-d,0),(0,d),(0,-d),(d,d),(d,-d),(-d,d),(-d,-d))},key=lambda p:math.hypot(*p))
+        for o in editable:
+            for dx,dy in spots:
+                x,y=o['x']+dx,o['y']+dy
+                if x<0 or y<0 or x+o['w']>cw or y+o['h']>ch:continue
+                candidates.append([{'op':'update','id':o['id'],'changes':{'x':round(x,4),'y':round(y,4)}}])
     for operations in candidates:
         proposed=apply_operations(original,operations);audit=audit_scene(proposed)
         remaining={key(f) for f in audit['findings']}
@@ -557,6 +566,33 @@ def _label_offsets(x1,y1,c,x2,y2,width,height):
     out+=[at(s,LINE_LABEL_GAPS[1],k*d) for d in (4,8,12) for k in (1,-1) for s in (1,-1)]
     out+=[(0,0),(0,-4),(0,4),(0,-8),(0,8),(-8,0),(8,0),(0,-12),(0,12),(-12,0),(12,0),(-18,0),(18,0),(-24,0),(24,0),(-18,4),(18,4)]
     return out
+
+
+# process_cell draws this cell outline behind its stages (design units of a 180 x 120 mm page, scaled by
+# cw/180 and ch/120). The review checks each stage against the same curve (cell-outline-placement).
+CELL_OUTLINE=(((10,31),(14,6),(89,6),(115,25)),((115,25),(140,43),(139,62),(130,82)),
+              ((130,82),(111,91),(35,93),(13,76)),((13,76),(3,62),(1,44),(10,31)))
+CELL_OUTLINE_PATH='M 10 31 '+' '.join('C '+' '.join(f'{x} {y}' for x,y in seg[1:]) for seg in CELL_OUTLINE)+' Z'
+CELL_STAGE_PLACE={'biogenesis':'inside','transport':'inside','fusion':'boundary','released':'outside'}
+
+
+def cell_outline_polygon(cw,ch,n=40):
+    sx,sy=cw/180,ch/120;pts=[]
+    for p0,p1,p2,p3 in CELL_OUTLINE:
+        for i in range(n):
+            t=i/n;u=1-t
+            pts.append(((u**3*p0[0]+3*u*u*t*p1[0]+3*u*t*t*p2[0]+t**3*p3[0])*sx,(u**3*p0[1]+3*u*u*t*p1[1]+3*u*t*t*p2[1]+t**3*p3[1])*sy))
+    return pts
+
+
+def cell_inside_fraction(o,poly,k=9):
+    """Share of a k x k grid over the object's box that lies inside the outline polygon."""
+    def inside(px,py):
+        hit=False
+        for (x1,y1),(x2,y2) in zip(poly,poly[1:]+poly[:1]):
+            if (y1>py)!=(y2>py) and px<x1+(py-y1)*(x2-x1)/(y2-y1):hit=not hit
+        return hit
+    return sum(inside(o['x']+o['w']*(i+.5)/k,o['y']+o['h']*(j+.5)/k) for i in range(k) for j in range(k))/(k*k)
 
 
 def connection_samples(g,n=60):
@@ -973,7 +1009,7 @@ def render_scene(scene, *, _laid_out=False, embed_scene=False):
         p.insert(2,'<metadata id="rylume-scene">'+_escape(json.dumps(payload,ensure_ascii=False,separators=(',',':')))+'</metadata>')
     tid=scene['style'].get('template','')
     if tid=='process_cell':
-        p.append(f'<g transform="scale({cw/180} {ch/120})"><path d="M 10 31 C 14 6 89 6 115 25 C 140 43 139 62 130 82 C 111 91 35 93 13 76 C 3 62 1 44 10 31 Z" fill="{tint(palette["primary"],.92)}" stroke="{tint(palette["primary"],.3)}" stroke-width=".45"/><path d="M 13 33 C 19 10 87 11 112 28" fill="none" stroke="{tint(palette["primary"],.55)}" stroke-width=".3"/></g>')
+        p.append(f'<g transform="scale({cw/180} {ch/120})"><path d="{CELL_OUTLINE_PATH}" fill="{tint(palette["primary"],.92)}" stroke="{tint(palette["primary"],.3)}" stroke-width=".45"/><path d="M 13 33 C 19 10 87 11 112 28" fill="none" stroke="{tint(palette["primary"],.55)}" stroke-width=".3"/></g>')
         p.append(_text(16*cw/180,25*ch/120,'Cell interior',8,fill='#5D7683'))
         p.append(_text(155*cw/180,116*ch/120,'Extracellular',7,anchor='middle',fill='#5D7683'))
     elif tid=='network_tissue':
