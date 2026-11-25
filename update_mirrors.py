@@ -6,7 +6,8 @@ from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 from github_delivery import GitHubDelivery, DeliveryError, REPOSITORY, trusted_url
 
-PUBLIC_KEY = bytes.fromhex('2ac20a284cb949c0665d57dfd57bc92c1b731e850c81ad3be41d4b7432a5927c')
+# Rotated in 5.0.0 (the previous signing key was lost; 4.12.x clients on a mirror must install 5.0.0 once).
+PUBLIC_KEY = bytes.fromhex('0cfc5afd5563cffa14644d703e1254a106340fd6ca45ec30515b5aa550f8b910')
 MIRRORS = ('https://ghfast.top/', 'https://ghproxy.net/')
 
 def verify_manifest(data, signature):
