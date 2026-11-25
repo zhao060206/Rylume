@@ -92,6 +92,17 @@ def apply_template(scene,template_id,colorway=None):
     return repair_connection_routes(place_template(scene))
 
 def place_template(scene):
+    # Templates move objects after the base layout has placed their labels,
+    # so automatic label offsets are recomputed for the final positions.
+    # Hand-placed labels (label_user_set) are left untouched.
+    scene=_place_template(scene);tid=scene['style'].get('template','')
+    if not tid or tid.startswith('layout_') or template_info(tid).get('new_scene_only') or not scene['compartments']:return scene
+    from scene_render import _auto_object_labels
+    _auto_object_labels(scene,True)
+    return normalize_scene(scene)
+
+
+def _place_template(scene):
     from scene_render import DEFAULT_DIMS, layout_scene
     scene=copy.deepcopy(scene);tid=scene['style']['template'];item=template_info(tid)
     cw,ch=scene['canvas']['width_mm'],scene['canvas']['height_mm']

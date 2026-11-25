@@ -72,9 +72,6 @@ def layout_scene(scene,force=False):
                         siblings=by_comp.get(membrane_objects[0]['compartment'],[])
                         cx=pad+(cw-2*pad)*(siblings.index(membrane_objects[0])+1)/(len(siblings)+1)
                     _put(o,cx-w/2,11 if not narrow else 9,w,h,force)
-                    if force or not o.get('label_dx'):
-                        o['label_dx']=-w-5 if not narrow else -w-2
-                        o['label_dy']=-h-1
             elif kind in ('membrane','plasma_membrane'):
                 for i,o in enumerate(items):
                     w,h=DEFAULT_DIMS[o['type']];cx=pad+(cw-2*pad)*(i+1)/(len(items)+1)
@@ -158,6 +155,7 @@ def layout_scene(scene,force=False):
                 x=parent['x']+(parent['w']-w)/2;y=parent['y']+(parent['h']-h)*(index+1)/(len(children)+1)
             _put(o,x,y,w,h,force if note else force and not (ranked and o.get('placement')=='outside'));place_children(o)
     for o in objects:place_children(o)
+    if scene['compartments'] and not ranked:_auto_object_labels(scene,force)
     return normalize_scene(scene)
 
 
@@ -172,6 +170,66 @@ def _font(cjk=False):
 def _measure(text,fs):
     font=_font(any(ord(c)>255 for c in text))
     return (font.getlength(text)/1000 if font else sum(1 if ord(c)>255 else .53 for c in text))*fs
+
+
+LABEL_GAP_MM=1.5
+MEMBRANE_KINDS=('membrane','plasma_membrane')
+
+
+def _label_extent(o):
+    lines,fs=_label_lines(o)
+    return max(_measure(t,fs) for t in lines),fs*(1.23*(len(lines)-1)+1),fs
+
+
+def _label_box_at(o,dx,dy,width,height,fs):
+    # Same rectangle _object_label_boxes reports for a plain object label.
+    cx=o['x']+o['w']/2+dx;baseline=o['y']+o['h']+fs*1.05+dy
+    return {'id':o['id'],'x':cx-width/2,'y':baseline-fs*.8,'w':width,'h':height}
+
+
+def _boxes_touch(a,b,margin=.3):
+    return a['x']<b['x']+b['w']+margin and b['x']<a['x']+a['w']+margin and a['y']<b['y']+b['h']+margin and b['y']<a['y']+a['h']+margin
+
+
+def auto_label_offset(scene,o,placed=(),all_options=False):
+    # Offsets (dx, dy) that keep a label against its shape and inside its
+    # compartment, or None when the default below-object label is right.
+    # Extracellular ligands: left of the shape, right if there is no room.
+    # Membrane objects: beside the shape at membrane height; above it (the
+    # extracellular side) only if both sides are blocked; never below it,
+    # which would put the text in the cytoplasm.
+    if o['type']=='text' or not o.get('label') or o.get('state')=='import_text' or str(o.get('state','')).startswith(('legend_','flow_')):return None
+    if not all(k in o for k in ('x','y','w','h')):return None
+    kind={c['id']:c['kind'] for c in scene['compartments']}.get(o.get('compartment'),'')
+    if kind=='extracellular' and o['type']=='ligand':order=('left','right')
+    elif kind in MEMBRANE_KINDS:order=('left','right','above')
+    else:return None
+    width,height,fs=_label_extent(o)
+    mid=-o['h']/2-.25*fs-height/2
+    options={'left':(-o['w']/2-LABEL_GAP_MM-width/2,mid),'right':(o['w']/2+LABEL_GAP_MM+width/2,mid),
+             'above':(0,-o['h']-LABEL_GAP_MM-.25*fs-height)}
+    if all_options:return [options[s] for s in order]
+    cw,ch=scene['canvas']['width_mm'],scene['canvas']['height_mm']
+    def encloses(x):return x['x']<=o['x'] and x['y']<=o['y'] and x['x']+x['w']>=o['x']+o['w'] and x['y']+x['h']>=o['y']+o['h']
+    obstacles=[{k:x[k] for k in ('x','y','w','h')} for x in scene['objects'] if x is not o and x.get('visible',True) and all(k in x for k in ('x','y','w','h')) and not encloses(x)]+list(placed)
+    for side in order:
+        box=_label_box_at(o,*options[side],width,height,fs)
+        if box['x']<1 or box['y']<1 or box['x']+box['w']>cw-1 or box['y']+box['h']>ch-1:continue
+        if any(_boxes_touch(box,b) for b in obstacles):continue
+        return options[side]
+    return options[order[0]]
+
+
+def _auto_object_labels(scene,force):
+    # Hand-placed labels (label_user_set) are never moved.
+    placed=[]
+    for o in scene['objects']:
+        if o.get('label_user_set') or not (force or (not o.get('label_dx') and not o.get('label_dy'))):continue
+        offset=auto_label_offset(scene,o,placed)
+        if offset is None:continue
+        o['label_dx'],o['label_dy']=round(offset[0],4),round(offset[1],4)
+        width,height,fs=_label_extent(o)
+        placed.append(_label_box_at(o,o['label_dx'],o['label_dy'],width,height,fs))
 
 
 def _label_lines(o):
@@ -265,17 +323,21 @@ def preview_finding_fix(scene, finding):
     for o in editable:
         if code=='outside-canvas' and o['w']<=cw and o['h']<=ch:
             candidates.append([{'op':'update','id':o['id'],'changes':{'x':min(max(0,o['x']),cw-o['w']),'y':min(max(0,o['y']),ch-o['h'])}}])
-        elif code=='label-detached':
-            candidates.append([{'op':'update','id':o['id'],'changes':{'label_dx':0,'label_dy':0}}])
+        elif code in ('label-detached','label-wrong-compartment'):
+            # Preferred side first, then the other sides, then the default.
+            auto=auto_label_offset(original,o)
+            ordered=([auto] if auto else [])+[p for p in auto_label_offset(original,o,all_options=True) or [] if p!=auto]
+            for dx,dy in ordered+[(0,0)]:
+                candidates.append([{'op':'update','id':o['id'],'changes':{'label_dx':round(dx,4),'label_dy':round(dy,4),'label_user_set':False}}])
         elif code in ('label-overlap','label-object-overlap','label-outside','line-label-overlap'):
             # Only move the affected label, never nearby molecules or arrows.
             for dx,dy in [(0,0)]+[(dx,dy) for radius in (3,6,10,16,24) for dx,dy in ((0,radius),(0,-radius),(radius,0),(-radius,0),(radius,radius),(-radius,-radius))]:
-                candidates.append([{'op':'update','id':o['id'],'changes':{'label_dx':o['label_dx']+dx,'label_dy':o['label_dy']+dy}}])
+                candidates.append([{'op':'update','id':o['id'],'changes':{'label_dx':o['label_dx']+dx,'label_dy':o['label_dy']+dy,'label_user_set':bool(o.get('label_user_set'))}}])
     if code=='line-label-overlap':
         for r in original['relations']:
             if r['id'] not in ids:continue
             g=connection_geometry(original,r);mx,my=(g['x1']+g['x2'])/2,(g['y1']+g['y2'])/2
-            candidates=[ [{'op':'update_relation','id':r['id'],'changes':{'control':{'x':mx+dx,'y':my+dy}}}] for dx,dy in ((0,-18),(0,18),(-24,0),(24,0),(-48,0),(48,0),(0,-36),(0,36))]+candidates
+            candidates=[[{'op':'update_relation','id':r['id'],'changes':{'control':c}}] for c in _bend_candidates(g['x1'],g['y1'],g['x2'],g['y2'])]+candidates
     if code in ('label-object-overlap','label-overlap','line-label-overlap'):
         for r in original['relations']:
             if r['id'] not in ids or not r.get('label'):continue
@@ -290,6 +352,18 @@ def preview_finding_fix(scene, finding):
             return {'operations':operations,'scene':proposed,'audit':audit,'changed':True}
     return {'operations':[],'scene':original,'audit':before,'changed':False,
             'message':'没有找到只调整相关对象就能解决的方案。可以先定位，再手动调整；当前图版没有变化。'}
+
+
+def _bend_candidates(x1,y1,x2,y2):
+    """Control points offset perpendicular to the chord, nearest first.
+
+    The curve bulges by half the offset; it is kept within max(6, 0.6*chord)
+    of the endpoints so a detour never runs far past either end."""
+    chord=math.hypot(x2-x1,y2-y1)
+    if chord<1e-6:return []
+    nx,ny=-(y2-y1)/chord,(x2-x1)/chord;mx,my=(x1+x2)/2,(y1+y2)/2
+    reach=max(6,.6*chord)
+    return [{'x':mx+side*d*nx,'y':my+side*d*ny} for d in (4,8,16,28,44) if d/2<=reach for side in (1,-1)]
 
 
 def connection_geometry(scene,r):
@@ -338,10 +412,16 @@ def connection_geometry(scene,r):
                 hit+=8*sum(1 for ox,oy,ow,oh in labels if ox<x<ox+ow and oy<y<oy+oh)
                 if x<1 or y<1 or x>scene['canvas']['width_mm']-1 or y>scene['canvas']['height_mm']-1:hit+=4
             return hit
-        if cost(control):
-            midx,midy=(x1+x2)/2,(y1+y2)/2
-            candidates=[control]+[{'x':midx+dx,'y':midy+dy} for dx,dy in ((0,-18),(0,18),(0,-36),(0,36),(-24,0),(24,0),(0,-60),(0,60))]
-            control=min(candidates,key=lambda c:(cost(c),math.hypot(c['x']-midx,c['y']-midy)))
+        base=cost(control)
+        if base:
+            # Bend only perpendicular to the chord. A quadratic's bulge is half
+            # its control offset, so cap the offset to keep the curve near its
+            # own endpoints; offsets along the chord made it overshoot and fold
+            # back (an arrow that seemed to start on the membrane).
+            candidates=[c for c in _bend_candidates(x1,y1,x2,y2)]
+            if candidates:
+                best=min(candidates,key=lambda c:(cost(c),math.hypot(c['x']-(x1+x2)/2,c['y']-(y1+y2)/2)))
+                if cost(best)<base:control=best
     cx,cy=control['x'],control['y'];length=math.hypot(x2-cx,y2-cy) or 1
     lx,ly=.25*x1+.5*cx+.25*x2,.25*y1+.5*cy+.25*y2-1.7
     if r.get('label_position'):

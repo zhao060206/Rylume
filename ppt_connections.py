@@ -55,8 +55,10 @@ def bind_scene_connections(path,scene):
         if relation.get('indirect'):
             dash=line.find(qn('a:prstDash'))
             if dash is None:SubElement(line,qn('a:prstDash'),val='dash')
-        end_type={'sequence':'triangle','converts':'triangle','activates':'arrow'}.get(relation['type'])
-        if end_type:SubElement(line,qn('a:tailEnd'),type=end_type,w='sm',len='sm')
+        # Native line ends mirror the drawn symbols and the legend: open arrow, flat triangle, notched (stealth) arrow.
+        end_type={'sequence':'stealth','converts':'triangle','activates':'arrow'}.get(relation['type'])
+        # "lg" = 5x the line width, PowerPoint's closest size to the drawn heads (relation_visuals: ~7x long).
+        if end_type:SubElement(line,qn('a:tailEnd'),type=end_type,w='lg',len='lg')
         style=connector._element.find(qn('p:style'))
         if style is not None:connector._element.remove(style)
         attach(connector,relation['source'],'stCxn',g['x1'],g['y1'])

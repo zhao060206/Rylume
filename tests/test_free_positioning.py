@@ -38,7 +38,14 @@ def test_manual_label_and_touching_arrow_tip_survive_all_exports(tmp_path):
     s=scene();ns={'s':'http://www.w3.org/2000/svg'};root=ET.fromstring(render_scene(s))
     text=root.find('.//s:g[@data-relation-id="r"]/s:text',ns);assert (float(text.get('x')),float(text.get('y')))==(72,80)
     path=root.find('.//s:g[@data-relation-id="r"]/s:path[@data-line-body]',ns)
-    numbers=[float(n) for n in path.get('d').split() if n not in ('M','Q')];assert numbers[:2]==pytest.approx([30,22.04]);assert numbers[-2:]==pytest.approx([100,32.76])
+    numbers=[float(n) for n in path.get('d').split() if n not in ('M','Q')];assert numbers[:2]==pytest.approx([30,22.04])
+    # The open arrowhead's mitred point touches the target anchor; the line itself ends inside the head.
+    head=root.find('.//s:g[@data-relation-id="r"]/s:path[@data-endpoint="open-arrow"]',ns)
+    ax,ay,vx,vy,bx,by=[float(n) for n in head.get('d').split() if n not in ('M','L')]
+    mx,my=(ax+bx)/2,(ay+by)/2;length=math.hypot(vx-mx,vy-my);half=math.hypot(ax-mx,ay-my);ux,uy=(vx-mx)/length,(vy-my)/length
+    reach=float(head.get('stroke-width'))/2*math.hypot(length,half)/half
+    assert (vx+ux*reach,vy+uy*reach)==pytest.approx((100,32.76),abs=1e-6)
+    assert (numbers[-2]-vx)*ux+(numbers[-1]-vy)*uy<0
     for fmt in ('svg','png','pdf','pptx'):assert export_scene(s,fmt,tmp_path/f'custom.{fmt}')['revision']==s['revision']
     with zipfile.ZipFile(tmp_path/'custom.pptx') as z:
         slide=ET.fromstring(z.read('ppt/slides/slide1.xml'));n={'a':'http://schemas.openxmlformats.org/drawingml/2006/main','p':'http://schemas.openxmlformats.org/presentationml/2006/main'}

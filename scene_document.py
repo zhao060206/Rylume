@@ -176,6 +176,7 @@ def normalize_scene(value):
                "label_dy": _number(o.get("label_dy", 0), "label_dy"),
                "font_weight": int(_number(o.get("font_weight", 400), "字重", 100, 900)),
                "evidence": _text(o.get("evidence", ""), 1000)}
+        if o.get('label_user_set') is True:out['label_user_set']=True
         if o.get('visual_description'):
             out['visual_description']=_text(o['visual_description'],1000)
         if o.get('depiction')=='anchor':out['depiction']='anchor'
@@ -423,7 +424,12 @@ def apply_operations(scene, operations, *, allowed_ids=None):
                 changes={**changes,'w':max(target['w'],max(_measure(line,size)+2 for line in str(changes['label']).split('\n')))}
                 if 'x' not in changes and any(r.get('callout') and r['source']==oid and r.get('source_port')=='e' for r in draft['relations']):
                     changes['x']=target['x']+target['w']-changes['w']
+            # A real change to a label offset (drag, nudge, AI or annotation
+            # edit) marks the label hand-placed; repair candidates pass False.
+            if key=='objects' and 'label_user_set' not in changes and any(k in changes and changes[k]!=target.get(k,0) for k in ('label_dx','label_dy')):
+                changes={**changes,'label_user_set':True}
             target.update(changes)
+            if key=='objects' and not target.get('label_user_set',True):target.pop('label_user_set',None)
         elif name in ("add", "add_relation"):
             key, field = ("objects", "object") if name == "add" else ("relations", "relation")
             new = copy.deepcopy(op.get(field))
@@ -612,9 +618,15 @@ def audit_scene(scene, *, _normalized=False):
             if box["x"] < 0 or box["y"] < 0 or box["x"]+box["w"] > width+0.1 or box["y"]+box["h"] > height+0.1:
                 add("label-outside", "标签超出画布", [box["id"]], "error")
             obj=objects.get(box['id'])
-            if obj and obj['type']!='text' and not obj.get('label_free'):
+            if obj and obj['type']!='text' and not obj.get('label_free') and not obj.get('label_user_set'):
                 gap=math.hypot(max(0,obj['x']-box['x']-box['w'],box['x']-obj['x']-obj['w']),max(0,obj['y']-box['y']-box['h'],box['y']-obj['y']-obj['h']))
-                if gap>max(10,obj['font_size_pt']*PT_MM*3):add('label-detached','标签距离所属对象过远',[obj['id']],distance_mm=round(gap,2))
+                if gap>max(4,obj['font_size_pt']*PT_MM*1.5):add('label-detached','标签距离所属对象过远',[obj['id']],distance_mm=round(gap,2))
+                home=next((c for c in scene['compartments'] if c['id']==obj.get('compartment')),None)
+                cx,cy=box['x']+box['w']/2,box['y']+box['h']/2
+                holds=lambda c:all(k in c for k in ('x','y','w','h')) and c['x']<=cx<=c['x']+c['w'] and c['y']<=cy<=c['y']+c['h']
+                if home and all(k in home for k in ('x','y','w','h')) and not holds(home):
+                    other=next((c for c in scene['compartments'] if c is not home and holds(c)),None)
+                    if other:add('label-wrong-compartment','标签落在其它区室，请移回所属区室',[obj['id']],compartment=home['id'],label_compartment=other['id'])
         for r in relations.values():
             if not objects[r['source']]['visible'] or not objects[r['target']]['visible']:continue
             g=connection_geometry(scene,r);c=g['control']

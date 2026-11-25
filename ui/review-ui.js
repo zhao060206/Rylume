@@ -25,6 +25,7 @@ export function findingPresentation(f,scene){
     'label-object-overlap':['文字挡住了图形',`${pair}之间可能有遮挡。预览会尝试只挪开相关文字。`,'layout',true],
     'label-outside':['文字超出了纸张',`${pair}的部分文字可能在导出时被裁掉。`,'layout',true],
     'line-label-overlap':['连线穿过了文字',`${pair}发生交叉。可预览绕开文字的路径，或手动拖动连线中点。`,'layout',true],
+    'label-wrong-compartment':['文字落在了别的区室',`${pair}的文字跑到了其它区室，读者可能误认它的位置。预览可将文字移回所属区室内、图形旁边。`,'layout',true],
     'label-detached':['文字离所属图形太远',`${pair}的文字位置可能让读者误认归属。预览可将文字放回附近。`,'layout',true],
     'containment':['对象离开了所属结构',`${pair}的包含位置不一致。请核对后拖回内部或边界。`,'content',false],
     'outside-canvas':['图形超出了纸张',`${pair}有一部分位于纸张外。可以预览移回纸张后的效果。`,'layout',true],
@@ -92,7 +93,7 @@ export function setupReview({state,editor,api,flush,toast,openRelationDefinition
         else if(p.f.code==='empty-label'){const b=el('button','button','填写名称');b.onclick=()=>{locate(p.f);editor.ensureSelectionVisible();editor.editSelectedLabel();};actions.append(b);}
         else if(p.f.code==='uncertain-relation'){const b=el('button','button','设置连线含义');b.onclick=()=>{if(!openRelationDefinitions(p.f.object_ids[0]))toast('连线已变更，请查看保存后的检查结果。');};actions.append(b);}
         else if(['hidden-endpoint','required-object'].includes(p.f.code)){const b=el('button','button','查看图层');b.onclick=showLayers;actions.append(b);}
-        if(p.f.severity!=='error'&&['overlap','label-overlap','label-object-overlap','label-detached','line-label-overlap','empty-label'].includes(p.f.code)){const keep=el('button','text-button',p.members.length>1?`确认保留这 ${p.members.length} 处排版`:'保留当前排版');keep.onclick=()=>decision(p.members);actions.append(keep);}
+        if(p.f.severity!=='error'&&['overlap','label-overlap','label-object-overlap','label-detached','label-wrong-compartment','line-label-overlap','empty-label'].includes(p.f.code)){const keep=el('button','text-button',p.members.length>1?`确认保留这 ${p.members.length} 处排版`:'保留当前排版');keep.onclick=()=>decision(p.members);actions.append(keep);}
         card.append(actions);group.append(card);
       }parent.append(group);
     }

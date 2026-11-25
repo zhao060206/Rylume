@@ -41,24 +41,53 @@ const isInput = e => e.target.closest('input,textarea,select,[contenteditable=tr
 const uid = prefix => prefix + '_' + crypto.randomUUID().replaceAll('-', '').slice(0, 12);
 export const RELATION_DEFINITIONS = [{"id": "activates", "title": "激活", "english": "Activation", "symbol": "open-arrow", "description": "起点促进终点的活性或作用。", "example": "激酶 A 促进 B 的活性"}, {"id": "inhibits", "title": "抑制", "english": "Inhibition", "symbol": "bar", "description": "横杠所在的一端受到抑制。", "example": "抑制剂 A 阻断 B"}, {"id": "binds", "title": "结合", "english": "Binding", "symbol": "paired-circles", "description": "两端圆点表示结合，不表示作用方向。", "example": "配体与受体结合"}, {"id": "converts", "title": "转换", "english": "Conversion", "symbol": "filled-arrow", "description": "起点转变为终点；实心箭头指向产物。", "example": "底物 A 转变为产物 B"}, {"id": "transports", "title": "转运", "english": "Transport", "symbol": "double-chevron", "description": "双箭头表示对象在位置或区室间移动。", "example": "蛋白从胞质进入细胞核"}, {"id": "sequence", "title": "流程顺序", "english": "Next step", "symbol": "step-arrow", "description": "箭头仅表示步骤的先后，不代表生物学激活。", "example": "提取样本后进行测量"}, {"id": "associates", "title": "普通关联", "english": "Association", "symbol": "plain-line", "description": "无箭头连线，仅表示相关或流程衔接。", "example": "未明确机制时使用，需核对含义"}];
 export function relationLabel(scene,r){return r.label||(scene.style?.relation_labels?RELATION_DEFINITIONS.find(x=>x.id===r.type)?.english||'':'');}
+const REL_PT_MM=25.4/72,REL_HEAD_PER_WIDTH=7,REL_HEAD_MIN=1.9,REL_HEAD_MAX=3.4,REL_HEAD_ASPECT=.44;
+const REL_TIP_GAP=1,REL_BIND_GAP=.5,REL_BIND_R=1,REL_BAR_HALF=.7,REL_BAR_WEIGHT=1.6,REL_SEQ_NOTCH=.4,REL_CURVE_SAMPLES=200;
+// Mirrors relation_visuals.relation_parts operation for operation (tests/test_relation_symbols.py compares them).
 export function relationParts(kind,start,end,control,color,strokePt=1.05,indirect=false,anchored={}){
-  let x1=start.x,y1=start.y,x2=end.x,y2=end.y;const cx=control.x,cy=control.y;
-  let vx=cx-x1,vy=cy-y1,len=Math.hypot(vx,vy)||1,gap=anchored.start?0:1.2;x1+=vx/len*gap;y1+=vy/len*gap;
-  vx=x2-cx;vy=y2-cy;len=Math.hypot(vx,vy)||1;const ux=vx/len,uy=vy/len;gap=anchored.end?0:1.2;x2-=ux*gap;y2-=uy*gap;
-  const sw=strokePt*25.4/72,common={fill:'none',stroke:color,'stroke-width':sw,'stroke-linecap':'round','stroke-linejoin':'round'};
-  let path=`M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`;
-  if(indirect){const points=Array.from({length:121},(_,i)=>{const t=i/120,u=1-t;return{x:u*u*x1+2*u*t*cx+t*t*x2,y:u*u*y1+2*u*t*cy+t*t*y2};});let distance=0;const segments=[];
-    for(let i=1;i<points.length;i++){const a=points[i-1],b=points[i];if(distance%2.5<1.5)segments.push(`M ${a.x} ${a.y} L ${b.x} ${b.y}`);distance+=Math.hypot(a.x-b.x,a.y-b.y);}path=segments.join(' ');}
-  const parts=[['path',{...common,d:path,'data-line-body':'true','data-indirect':String(!!indirect)}]];
-  const at=(back,side=0)=>`${x2-ux*back-uy*side} ${y2-uy*back+ux*side}`;
-  const attrs={...common,'data-endpoint':RELATION_DEFINITIONS.find(x=>x.id===kind)?.symbol};
-  if(kind==='inhibits')parts.push(['path',{...attrs,d:`M ${at(0,2.8)} L ${at(0,-2.8)}`,'stroke-width':Math.max(sw,.58)}]);
-  else if(kind==='activates')parts.push(['path',{...attrs,d:`M ${at(3.0,1.45)} L ${at(0)} L ${at(3.0,-1.45)}`}]);
-  else if(kind==='sequence')parts.push(['path',{...attrs,d:`M ${at(2.2,1.1)} L ${at(0)} L ${at(2.2,-1.1)} Z`,fill:color}]);
-  else if(kind==='converts')parts.push(['path',{...attrs,d:`M ${at(3.2,1.5)} L ${at(0)} L ${at(3.2,-1.5)} Z`,fill:color}]);
-  else if(kind==='transports')parts.push(['path',{...attrs,d:[0,2.5].map(b=>`M ${at(b+2.4,1.25)} L ${at(b)} L ${at(b+2.4,-1.25)}`).join(' ')}]);
-  else if(kind==='binds')for(const [x,y] of [[x1,y1],[x2,y2]])parts.push(['circle',{...attrs,cx:x,cy:y,r:1.15,fill:'#FFFFFF'}]);
-  return parts;
+  const p0=[+start.x,+start.y],c=[+control.x,+control.y],p1=[+end.x,+end.y],N=REL_CURVE_SAMPLES;
+  const point=t=>{const u=1-t;return[u*u*p0[0]+2*u*t*c[0]+t*t*p1[0],u*u*p0[1]+2*u*t*c[1]+t*t*p1[1]];};
+  const points=[];for(let i=0;i<=N;i++)points.push(point(i/N));
+  const acc=[0];for(let i=1;i<=N;i++){const dx=points[i][0]-points[i-1][0],dy=points[i][1]-points[i-1][1];acc.push(acc[i-1]+Math.sqrt(dx*dx+dy*dy));}
+  const total=acc[N];if(total<1e-6)return[];
+  const tAt=s=>{s=Math.min(Math.max(s,0),total);for(let i=0;i<N;i++)if(acc[i+1]>=s){const seg=acc[i+1]-acc[i];return(i+(seg>0?(s-acc[i])/seg:0))/N;}return 1;};
+  const at=s=>point(tAt(s)),fmt=p=>`${p[0]} ${p[1]}`;
+  const pt=(T,u,n,back,side=0)=>[T[0]-u[0]*back+n[0]*side,T[1]-u[1]*back+n[1]*side];
+  const frame=(sTip,length)=>{const T=at(sTip),B=at(Math.max(0,sTip-length));let dx=T[0]-B[0],dy=T[1]-B[1],d=Math.sqrt(dx*dx+dy*dy);
+    if(d<1e-9){dx=p1[0]-p0[0];dy=p1[1]-p0[1];d=Math.sqrt(dx*dx+dy*dy);if(d<1e-9){dx=1;dy=0;d=1;}}
+    const u=[dx/d,dy/d];return[T,u,[-u[1],u[0]]];};
+  const sw=strokePt*REL_PT_MM,L=Math.min(REL_HEAD_MAX,Math.max(REL_HEAD_MIN,REL_HEAD_PER_WIDTH*sw)),W=REL_HEAD_ASPECT*L;
+  const chevron=(sTip,length,half)=>{const off=sw/2*Math.sqrt(length*length+half*half)/half,[T,u,n]=frame(sTip,length),A=pt(T,u,n,off);
+    return[off,`M ${fmt(pt(A,u,n,length,half))} L ${fmt(A)} L ${fmt(pt(A,u,n,length,-half))}`];};
+  const sub=(ta,tb)=>{const a=point(ta),b=point(tb),k=[(1-ta)*(1-tb)*p0[0]+((1-ta)*tb+ta*(1-tb))*c[0]+ta*tb*p1[0],(1-ta)*(1-tb)*p0[1]+((1-ta)*tb+ta*(1-tb))*c[1]+ta*tb*p1[1]];
+    return`M ${fmt(a)} Q ${fmt(k)} ${fmt(b)}`;};
+  const g0=anchored.start?0:REL_TIP_GAP,g1=anchored.end?0:REL_TIP_GAP;
+  const common={fill:'none',stroke:color,'stroke-width':sw,'stroke-linecap':'round','stroke-linejoin':'round'};
+  const mark={...common,'data-endpoint':RELATION_DEFINITIONS.find(x=>x.id===kind)?.symbol},mitre={'stroke-linejoin':'miter','stroke-miterlimit':8};
+  const heads=[],tip=total-g1;let s0=g0,s1=tip;
+  if(kind==='binds'){
+    const b0=anchored.start?0:REL_BIND_GAP,b1=anchored.end?0:REL_BIND_GAP,ring={...mark,fill:'#FFFFFF'};
+    if(total<b0+b1+4*REL_BIND_R+1){const m=at(total/2);return[['circle',{...ring,cx:m[0],cy:m[1],r:REL_BIND_R}]];}
+    for(const s of[b0+REL_BIND_R,total-b1-REL_BIND_R]){const q=at(s);heads.push(['circle',{...ring,cx:q[0],cy:q[1],r:REL_BIND_R}]);}
+    s0=b0+2*REL_BIND_R;s1=total-b1-2*REL_BIND_R;
+  }else if(kind==='activates'){const[off,d]=chevron(tip,L,W);heads.push(['path',{...mark,d,...mitre}]);s1=tip-off-sw/2;}
+  else if(kind==='transports'){const[off,front]=chevron(tip,.8*L,.8*W),[,back]=chevron(tip-.6*L,.8*L,.8*W);
+    heads.push(['path',{...mark,d:front+' '+back,...mitre}]);s1=tip-off-sw/2;}
+  else if(kind==='converts'||kind==='sequence'){const k=kind==='converts'?1.05:.95,length=L*k,half=W*k,[T,u,n]=frame(tip,length);
+    const d=kind==='sequence'
+      ?`M ${fmt(T)} L ${fmt(pt(T,u,n,length,half))} L ${fmt(pt(T,u,n,(1-REL_SEQ_NOTCH)*length))} L ${fmt(pt(T,u,n,length,-half))} Z`
+      :`M ${fmt(T)} L ${fmt(pt(T,u,n,length,half))} L ${fmt(pt(T,u,n,length,-half))} Z`;
+    heads.push(['path',{...mark,d,fill:color,stroke:'none'}]);s1=tip-.6*length;}
+  else if(kind==='inhibits'){const bw=REL_BAR_WEIGHT*sw,half=REL_BAR_HALF*L,[T,u,n]=frame(tip-bw/2,L);
+    heads.push(['path',{...mark,d:`M ${fmt(pt(T,u,n,0,half))} L ${fmt(pt(T,u,n,0,-half))}`,'stroke-width':bw,'stroke-linecap':'butt'}]);s1=tip-bw/2;}
+  // The line body always comes first (the PowerPoint export takes a relation's first vector as its line).
+  s1=Math.max(s1,s0);let d;
+  if(indirect){let dash=Math.max(1,4*sw);const gap=Math.max(.6,2.6*sw),length=s1-s0;
+    let count=Math.max(1,Math.floor((length+gap)/(dash+gap)+.5));if(count<2&&length>=gap+1)count=2;
+    dash=count===1?length:(length-(count-1)*gap)/count;
+    const pieces=[];for(let i=0;i<count;i++){const a=s0+i*(dash+gap);pieces.push(sub(tAt(a),tAt(Math.min(s1,a+dash))));}d=pieces.join(' ');}
+  else d=sub(tAt(s0),tAt(s1));
+  return[['path',{...common,d,'data-line-body':'true','data-indirect':String(!!indirect)}]].concat(heads);
 }
 export function relationPreview(type){
   const svg=node('svg',{viewBox:'0 0 36 10',width:90,height:26,'aria-hidden':'true'});
@@ -1004,7 +1033,7 @@ export class SceneEditor {
         const r=this.doc.relations.find(r=>r.id===g.id);if(r)r.label_position={x:g.origin.x+dx,y:g.origin.y+dy};
       }else{
         const old=g.before.objects.find(o=>o.id===g.id),o=this.doc.objects.find(o=>o.id===g.id);
-        if(o&&old){o.label_dx=(old.label_dx||0)+dx;o.label_dy=(old.label_dy||0)+dy;}
+        if(o&&old){o.label_dx=(old.label_dx||0)+dx;o.label_dy=(old.label_dy||0)+dy;o.label_user_set=true;}
       }
       this.draw();
     }else if (g.kind === 'move') {
@@ -1507,7 +1536,7 @@ export class SceneEditor {
       if(this.activeLabel&&this.selected.size===1&&this.selected.has(this.activeLabel.id)){
         const {kind,id}=this.activeLabel;
         if(kind==='relation'){const r=this.doc.relations.find(r=>r.id===id),p=edgeGeometry(this.doc,r).label;this.applyOperations([{op:'update_relation',id,changes:{label_position:{x:p.x+dx,y:p.y+dy}}}],'微调文字');}
-        else{const o=this.doc.objects.find(o=>o.id===id);if(o&&!o.locked)this.applyOperations([{op:'update',id,changes:{label_dx:(o.label_dx||0)+dx,label_dy:(o.label_dy||0)+dy}}],'微调文字');}
+        else{const o=this.doc.objects.find(o=>o.id===id);if(o&&!o.locked)this.applyOperations([{op:'update',id,changes:{label_dx:(o.label_dx||0)+dx,label_dy:(o.label_dy||0)+dy,label_user_set:true}}],'微调文字');}
         return;
       }
       this.applyOperations(this.doc.objects.filter(o => this.selected.has(o.id) && !o.locked).map(o => ({

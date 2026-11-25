@@ -336,3 +336,16 @@ def make_storyboard(sid,*,width_mm=180,height_mm=120):
     for o in b.scene['objects']:
         if o['type']=='mrna' and o.get('asset_id')=='bio_rna':o.pop('asset_id')
     return b.finish(brief)
+
+
+_make_storyboard_authored=make_storyboard
+
+
+def make_storyboard(sid,**kwargs):
+    # Label offsets written into a storyboard are deliberate composition
+    # (e.g. a cell title above the cell). Treat them like hand-placed labels:
+    # automatic layout keeps them and the detached-label check skips them.
+    scene=_make_storyboard_authored(sid,**kwargs)
+    for o in scene['objects']:
+        if o.get('label_dx') or o.get('label_dy'):o['label_user_set']=True
+    return scene
