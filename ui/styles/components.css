@@ -54,7 +54,7 @@
  .small {font-size:12px;line-height:20px}
  .field-label {display:block;color:var(--ui-secondary);font-size:13px;font-weight:500;margin-bottom:8px}
  h1,h2,h3,h4,strong {font-weight:500}
- kbd {display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--ui-border);border-bottom-width:2px;border-radius:4px;background:var(--ui-ground);padding:0 4px;min-height:20px;font:11px/16px "Cascadia Mono",Consolas,monospace;color:var(--ui-muted);white-space:nowrap}
+ kbd {display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--ui-border);border-bottom-width:2px;border-radius:4px;background:var(--ui-ground);padding:0 4px;min-height:20px;font:12px/16px "Cascadia Mono",Consolas,monospace;color:var(--ui-muted);white-space:nowrap}
  .ui-segments {position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:4px;padding:4px;background:var(--ui-raised);border:0;border-radius:10px;box-shadow:none}
  .ui-segments>button {position:relative;z-index:1;min-height:28px;border:0;border-radius:6px;background:transparent;box-shadow:none;padding:4px 12px;font-size:13px;font-weight:400;color:var(--ui-secondary);white-space:nowrap}
  .ui-segments>button:is([aria-selected=true],[aria-pressed=true]) {color:var(--ui-ink);background:transparent;font-weight:500}

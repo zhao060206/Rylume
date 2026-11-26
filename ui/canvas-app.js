@@ -1,4 +1,4 @@
-import {plainMessage} from './dock.js';
+import {plainMessage} from './dock.js';import {setupDialogFocus} from './dialog-focus.js';setupDialogFocus();
 import {copySceneData,SceneSaveCache} from './scene-data.js';
 import {setupProductShell} from './product-shell.js';
 import {setupElementEditing} from './element-editor.js';

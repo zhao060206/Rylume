@@ -1,18 +1,18 @@
 /* Shell — Rylume visual language v7 (neutral).
    Replaces atelier (v5) and the token half of calm (v6): one token set, one
-   slate-blue accent, 4px grid. Canvas first: chrome is white and quiet, the work
+   ink-teal accent, 4px grid. Canvas first: chrome is white and quiet, the work
    area is soft grey so the figure page reads as paper. `shell` is the last
    layer, so nothing here needs !important. Layout sizes are only set for wide
    windows; workspace.css keeps owning the narrow breakpoints. */
 @layer shell {
 :root{
- /* Radix Colors (MIT, licenses/radix-colors-MIT.txt): slate + indigo, light.
+ /* Graphite ramp and ink-teal accent (2026-11-26, after unslop tokens). Names kept from the earlier Radix slate/indigo set so every stylesheet follows.
     Steps: 1-2 backgrounds, 3-5 interactive states, 6-8 borders, 9-10 solids, 11-12 text. */
- --slate-1:#fcfcfd; --slate-2:#f9f9fb; --slate-3:#f0f0f3; --slate-4:#e8e8ec; --slate-5:#e0e1e6; --slate-6:#d9d9e0;
- --slate-7:#cdced6; --slate-8:#b9bbc6; --slate-9:#8b8d98; --slate-10:#80838d; --slate-11:#60646c; --slate-12:#1c2024;
- --indigo-3:#edf2fe; --indigo-4:#e1e9ff; --indigo-5:#d2deff; --indigo-9:#3e63dd; --indigo-10:#3358d4; --indigo-11:#3a5bc7;
+ --slate-1:#fcfcfc; --slate-2:#fafafa; --slate-3:#f4f4f5; --slate-4:#ececee; --slate-5:#e4e4e7; --slate-6:#dcdcdf;
+ --slate-7:#d4d4d8; --slate-8:#b8b8bd; --slate-9:#737373; --slate-10:#6a6a6a; --slate-11:#525252; --slate-12:#171717;
+ --indigo-3:#e8f1f0; --indigo-4:#d4e6e4; --indigo-5:#bfdad7; --indigo-9:#1d6b68; --indigo-10:#175a57; --indigo-11:#165451;
  --red-3:#feebec; --red-11:#ce2c31; --amber-11:#ab6400;
- /* v8 (C): chrome white, sidebar slate-2, canvas slate-3; indigo only for primary, selection, focus */
+ /* v8 (C): chrome white, sidebar slate-2, canvas slate-3; teal only for primary, selection, focus */
  --n-ground:var(--slate-2); --n-canvas:var(--slate-3); --n-paper:#fff; --n-sunken:var(--slate-2); --n-hover:var(--slate-3); --n-press:var(--slate-4);
  --n-ink:var(--slate-12); --n-ink-2:var(--slate-11); --n-ink-3:var(--slate-9); --n-line:var(--slate-5); --n-line-2:var(--slate-7);
  --n-accent:var(--indigo-9); --n-accent-hover:var(--indigo-10); --n-accent-tint:var(--indigo-3);
@@ -20,9 +20,9 @@
  --n-r-s:4px; --n-r:8px; --n-r-l:12px;
  --n-shadow-1:0 1px 2px rgba(28,32,36,.06);
  --n-shadow-2:0 0 0 1px var(--slate-4),0 4px 12px -2px rgba(28,32,36,.08);
- --n-shadow-3:0 0 0 1px var(--slate-4),0 16px 40px -12px rgba(28,32,36,.22);
+ --n-shadow-3:0 0 0 1px var(--slate-5),0 12px 32px rgba(0,0,0,.08);
  --n-font:'Segoe UI Variable Text','Segoe UI','Microsoft YaHei UI','PingFang SC',system-ui,sans-serif;
- --n-ease:cubic-bezier(.2,.7,.2,1);
+ --n-ease:cubic-bezier(.22,1,.36,1);
  --dock-w:clamp(320px,26vw,400px);
  --ui-paper:var(--n-paper); --ui-ground:var(--n-ground); --ui-sidebar:var(--n-sunken); --ui-raised:var(--n-sunken);
  --ui-ink:var(--n-ink); --ui-secondary:var(--n-ink-2); --ui-muted:var(--n-ink-3);
@@ -35,13 +35,13 @@
 @media (min-width:581px){:root{--top:44px}}
 @media (min-width:1051px){:root{--navigation:216px;--right:280px}}
 
-html,body{background:var(--n-ground);color:var(--n-ink);font:13px/1.5 var(--n-font);-webkit-font-smoothing:antialiased}
+html,body{background:var(--n-ground);color:var(--n-ink);font:13px/20px var(--n-font);-webkit-font-smoothing:antialiased}
 ::selection{background:var(--n-accent-tint)}
 :is(button,summary,a,input,textarea,select):focus-visible{outline:2px solid var(--n-accent);outline-offset:2px}
-kbd{font:11px/1 var(--n-font);padding:2px 5px;border:1px solid var(--n-line);border-bottom-width:2px;border-radius:var(--n-r-s);background:var(--n-sunken);color:var(--n-ink-3)}
+kbd{font:12px/1 var(--n-font);padding:2px 6px;border:1px solid var(--n-line);border-bottom-width:2px;border-radius:var(--n-r-s);background:var(--n-sunken);color:var(--n-ink-3)}
 
 /* Controls: primary, standard, quiet */
-.button,.quiet,.primary-button{height:30px;min-height:30px;padding:0 12px;gap:6px;border:1px solid var(--n-line-2);border-radius:var(--n-r);background:var(--n-paper);color:var(--n-ink);font-size:13px;font-weight:500;box-shadow:none;white-space:nowrap}
+.button,.quiet,.primary-button{height:32px;min-height:32px;padding:0 12px;gap:8px;border:1px solid var(--n-line-2);border-radius:var(--n-r);background:var(--n-paper);color:var(--n-ink);font-size:13px;font-weight:500;box-shadow:none;white-space:nowrap}
 .button:hover:not(:disabled),.quiet:hover:not(:disabled){background:var(--n-hover);border-color:var(--n-line-2)}
 .button:active:not(:disabled),.quiet:active:not(:disabled){background:var(--n-press)}
 .button.primary,.primary-button{background:var(--n-accent);border-color:var(--n-accent);color:#fff}
@@ -51,23 +51,23 @@ kbd{font:11px/1 var(--n-font);padding:2px 5px;border:1px solid var(--n-line);bor
 .icon-button:hover,.mini-button:hover{background:var(--n-hover);color:var(--n-ink)}
 .text-button{border:0;background:none;color:var(--n-ink-2)}
 .text-button:hover{color:var(--n-ink)}
-:where(input:not([type=checkbox]):not([type=radio]):not([type=color]):not([type=range]),textarea,select){min-height:30px;padding:5px 10px;border:1px solid var(--n-line-2);border-radius:var(--n-r);background:var(--n-paper);color:var(--n-ink);font-size:13px}
-:where(input,textarea,select):hover{border-color:#b7bfcb}
+:where(input:not([type=checkbox]):not([type=radio]):not([type=color]):not([type=range]),textarea,select){min-height:32px;padding:4px 12px;border:1px solid var(--n-line-2);border-radius:var(--n-r);background:var(--n-paper);color:var(--n-ink);font-size:13px}
+:where(input,textarea,select):hover{border-color:var(--slate-8)}
 :where(input,textarea,select):focus{border-color:var(--n-accent);box-shadow:0 0 0 3px var(--n-accent-tint);outline:none}
 
 /* Navigation */
 .app-sidebar{padding:0 10px;background:var(--n-sunken);border-right:1px solid var(--n-line);container:sidebar/inline-size}
-.brand strong{font-size:14px;font-weight:600;letter-spacing:-.01em;color:var(--n-ink)}
+.brand strong{font-size:14px;font-weight:600;letter-spacing:0;color:var(--n-ink)}
 .sidebar-new :is(button,.quiet){width:100%;height:32px;justify-content:flex-start;background:var(--n-paper);border:1px solid var(--n-line-2);font-weight:600;overflow:hidden}
 .sidebar-action,.sidebar-documents .button{min-height:30px;padding:5px 8px;border:0;border-radius:var(--n-r);background:transparent;color:var(--n-ink-2);font-size:13px}
 .sidebar-action:hover,.sidebar-documents .button:hover{background:var(--n-hover);color:var(--n-ink)}
 .sidebar-action kbd{margin-left:auto}
-.sidebar-recents header h2,.sidebar-recents>header h2{margin:0;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--n-ink-3)}
+.sidebar-recents header h2,.sidebar-recents>header h2{margin:0;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--n-ink-3)}
 #home-recent-list :is(button,a){border-radius:var(--n-r);color:var(--n-ink-2);font-size:13px}
 #home-recent-list :is(button,a):hover{background:var(--n-hover);color:var(--n-ink)}
 #home-recent-list [aria-current=true],#home-recent-list .active{background:var(--n-accent-tint);color:var(--n-accent)}
 .sidebar-footer{border-top:1px solid var(--n-line)}
-.workspace-local,.sidebar-empty{font-size:11px;color:var(--n-ink-3)}
+.workspace-local,.sidebar-empty{font-size:12px;color:var(--n-ink-3)}
 @container sidebar (max-width:140px){
  .sidebar-new :is(button,.quiet){width:36px;margin-inline:auto;padding:0;justify-content:center;font-size:0;gap:0}
  .sidebar-new :is(button,.quiet) svg{margin:0}
@@ -87,10 +87,10 @@ kbd{font:11px/1 var(--n-font);padding:2px 5px;border:1px solid var(--n-line);bor
 
 /* Menus */
 .menu-items{padding:4px;border:1px solid var(--n-line);border-radius:var(--n-r-l);background:var(--n-paper);box-shadow:var(--n-shadow-2)}
-.menu-items button{min-height:30px;padding:5px 10px;border:0;border-radius:var(--n-r);background:transparent;color:var(--n-ink);font-size:13px;text-align:left}
+.menu-items button{min-height:32px;padding:6px 12px;border:0;border-radius:var(--n-r);background:transparent;color:var(--n-ink);font-size:13px;text-align:left}
 .menu-items button:hover:not(:disabled){background:var(--n-hover)}
 .menu-items hr{margin:4px 0;border:0;border-top:1px solid var(--n-line)}
-.document-menu-section h3,.menu-section-title{margin:0;padding:6px 10px 2px;font-size:11px;font-weight:600;color:var(--n-ink-3)}
+.document-menu-section h3,.menu-section-title{margin:0;padding:6px 10px 2px;font-size:12px;font-weight:600;color:var(--n-ink-3)}
 
 /* Canvas: grey work area, one attached tool bar, one status bar */
 .workspace,.canvas-column{background:var(--n-canvas)}
@@ -161,7 +161,7 @@ kbd{font:11px/1 var(--n-font);padding:2px 5px;border:1px solid var(--n-line);bor
 dialog:not(.docked){padding:0;border:1px solid var(--n-line);border-radius:var(--n-r-l);background:var(--n-paper);color:var(--n-ink);box-shadow:var(--n-shadow-3)}
 dialog[open]:not(.docked){animation:n-sheet .18s var(--n-ease)}
 dialog::backdrop{background:#0f172a33;backdrop-filter:none}
-dialog :is(h1,h2){font-size:15px;font-weight:600;letter-spacing:-.005em;color:var(--n-ink)}
+dialog :is(h1,h2){font-size:14px;font-weight:600;letter-spacing:-.005em;color:var(--n-ink)}
 @keyframes n-sheet{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 /* Professional mode: denser, same language */
@@ -178,7 +178,7 @@ dialog :is(h1,h2){font-size:15px;font-weight:600;letter-spacing:-.005em;color:va
 .home-inline{border:1px solid var(--n-line-2);border-radius:12px;background:var(--n-paper);box-shadow:var(--n-shadow-2)}
 .home-inline:has(#brief-input:focus-visible){border-color:var(--n-accent);box-shadow:0 0 0 3px var(--n-accent-tint),var(--n-shadow-2)}
 .home-inline .composer-main{padding:20px 20px 0}
-.home-inline #brief-input,.home-inline #brief-input:is(:hover,:focus){min-height:96px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:15px;line-height:1.7}
+.home-inline #brief-input,.home-inline #brief-input:is(:hover,:focus){min-height:96px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:14px;line-height:1.7}
 .home-inline .prompt-assists{display:flex;flex-wrap:wrap;align-items:center;gap:2px;margin-top:12px}
 .home-inline .prompt-assists>.button{height:28px;min-height:28px;padding:0 8px;border:0;background:none;color:var(--n-ink-2);font-size:12px;font-weight:400}
 .home-inline .prompt-assists>.button:hover{background:var(--n-hover);color:var(--n-ink)}

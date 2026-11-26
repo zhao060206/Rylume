@@ -107,7 +107,7 @@ export function setupDocumentAssistant({state,editor,api,toast,composer}){
   if(composer.usePrompt(text)===true){if(innerWidth<1450)setOpen(false,false);composer.open();}
   else if(wasDialog)promptDialog.showModal();
  }
- $('toggle-documents').onclick=()=>setOpen(!opened);$('composer-documents').onclick=()=>{if($('creation-dialog').open)$('creation-dialog').close();setOpen(true);};$('close-documents').onclick=()=>setOpen(false);
+ $('toggle-documents').onclick=()=>setOpen(!opened);$('composer-documents').onclick=()=>{if($('creation-dialog').open)$('creation-dialog').close();setOpen(true);};$('close-documents').onclick=()=>setOpen(false);document.addEventListener('keydown',e=>{if(e.key!=='Escape'||!opened||e.defaultPrevented||e.isComposing||document.querySelector('dialog[open]')||e.target?.closest?.('input,textarea,select,[contenteditable=true]'))return;e.preventDefault();setOpen(false);$('toggle-documents')?.focus({preventScroll:true});});
  $('document-upload').onclick=()=>$('document-files').click();$('document-files').onchange=e=>upload([...e.target.files]);
  $('document-upload').addEventListener('dragover',e=>{e.preventDefault();$('document-upload').classList.add('drag-over');});$('document-upload').addEventListener('dragleave',()=>$('document-upload').classList.remove('drag-over'));$('document-upload').addEventListener('drop',e=>{e.preventDefault();$('document-upload').classList.remove('drag-over');upload([...e.dataTransfer.files]);});
  $('document-show-archived').onchange=()=>{listSignature='';renderDocuments();};$('document-model-settings').onclick=()=>$('open-settings').click();

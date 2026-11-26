@@ -115,6 +115,11 @@ export function setupWorkspaceNavigation({state,editor,api,openJob,follow,tab,to
  root.classList.toggle('navigation-collapsed',collapsed);
  $('collapse-navigation').setAttribute('aria-expanded',String(!collapsed));$('expand-navigation').setAttribute('aria-expanded',String(!collapsed));
  $('collapse-navigation').onclick=()=>collapse(true);$('expand-navigation').onclick=()=>collapse(false);
+ // The editor gives the canvas the room: entering a board folds the navigation without saving
+ // that as a preference; going back home restores what the user chose last.
+ const editorRoot=$('workspace');let editing=null;
+ const syncEditing=()=>{if(!editorRoot?.classList)return;const now=editorRoot.classList.contains('has-document')&&!editorRoot.classList.contains('showing-start');if(now===editing)return;editing=now;let saved=false;try{saved=localStorage.getItem('rylume-navigation-collapsed')==='true';}catch{}const value=now||saved;preserveCanvasView(editor,()=>root.classList.toggle('navigation-collapsed',value));$('collapse-navigation').setAttribute('aria-expanded',String(!value));$('expand-navigation').setAttribute('aria-expanded',String(!value));};
+ if(editorRoot&&typeof MutationObserver!=='undefined'){new MutationObserver(syncEditing).observe(editorRoot,{attributes:true,attributeFilter:['class']});syncEditing();}
  $('navigator-search').oninput=()=>{signature='';render();};
  document.querySelector('.app-sidebar .brand').onclick=e=>{e.preventDefault();$('open-start').click();};
  new MutationObserver(render).observe($('welcome'),{attributes:true,attributeFilter:['hidden']});

@@ -953,7 +953,7 @@ export class SceneEditor {
       const a=this.doc.objects.find(o=>o.id===this.connectStart);
       const target=connectionTarget(this.doc,this.connectPreview,this.zoom,this.connectStart,this.connectionFree),end=target?boundaryPoint(target.object,target.anchor):this.connectPreview;
       const start=a?boundaryPoint(a,this.connectAnchor||nearestBoundary(a,end)):null;
-      if(start)overlay.append(node('path',{d:`M ${start.x} ${start.y} L ${end.x} ${end.y}`,stroke:'#3d71c7','stroke-width':unit,'stroke-dasharray':`${4*unit} ${3*unit}`,fill:'none','pointer-events':'none'}));
+      if(start)overlay.append(node('path',{d:`M ${start.x} ${start.y} L ${end.x} ${end.y}`,stroke:'#1d6b68','stroke-width':unit,'stroke-dasharray':`${4*unit} ${3*unit}`,fill:'none','pointer-events':'none'}));
     }
     for(const guide of this.guides || [])overlay.append(node('line',{
       x1:guide.axis==='x'?guide.value:0,y1:guide.axis==='y'?guide.value:0,
@@ -964,28 +964,30 @@ export class SceneEditor {
     for (const id of this.selected) {
       const o = this.doc.objects.find(x => x.id === id);
       if (o) {
-        const selection=node('g',{transform:`rotate(${o.rotation||0} ${o.x+o.w/2} ${o.y+o.h/2})`});overlay.append(selection);
+        // A plain text object draws its words below its own box; select what the user sees.
+        const textBox=o.type==='text'&&!usesTextAppearance(o)&&o.label?objectLabelBoxes({objects:[o]})[0]:null,bx=textBox||o;
+        const selection=node('g',{transform:`rotate(${textBox?0:(o.rotation||0)} ${o.x+o.w/2} ${o.y+o.h/2})`});overlay.append(selection);
         selection.append(node('rect', {
-          x: o.x - .8, y: o.y - .8, width: o.w + 1.6, height: o.h + 1.6,
-          fill: 'none', stroke: '#3d71c7', 'stroke-width':lineWidth, 'pointer-events': 'none'
+          x: bx.x - .8, y: bx.y - .8, width: bx.w + 1.6, height: bx.h + 1.6,
+          fill: 'none', stroke: '#1d6b68', 'stroke-width':lineWidth, 'pointer-events': 'none'
         }));
         if (this.selected.size === 1 && !o.locked) {
-          const handles=resizeHandles(o,unit);
+          const handles=resizeHandles(bx,unit);
           for (const [corner, x, y, cur] of handles) {
             selection.append(node('rect', {
               x: x-handleSize/2, y: y-handleSize/2, width:handleSize, height:handleSize,
-              fill:'white',stroke:'#3d71c7','stroke-width':lineWidth,'data-handle':corner,'data-owner':o.id,
+              fill:'white',stroke:'#1d6b68','stroke-width':lineWidth,'data-handle':corner,'data-owner':o.id,
               cursor:cur
             }));
           }
-          selection.append(node('line', { x1:o.x+o.w/2,y1:o.y,x2:o.x+o.w/2,y2:o.y-22*unit,stroke:'#3d71c7','stroke-width':lineWidth }));
-          selection.append(node('circle', { cx:o.x+o.w/2,cy:o.y-22*unit,r:handleSize/2,fill:'white',stroke:'#3d71c7','stroke-width':lineWidth,'data-handle':'rotate','data-owner':o.id,cursor:'grab' }));
+          selection.append(node('line', { x1:bx.x+bx.w/2,y1:bx.y,x2:bx.x+bx.w/2,y2:bx.y-22*unit,stroke:'#1d6b68','stroke-width':lineWidth }));
+          selection.append(node('circle', { cx:bx.x+bx.w/2,cy:bx.y-22*unit,r:handleSize/2,fill:'white',stroke:'#1d6b68','stroke-width':lineWidth,'data-handle':'rotate','data-owner':o.id,cursor:'grab' }));
           // Keep connection controls outside the object: controls appearing on
           // its body between two clicks would steal the second click.
-          for(const [port,x,y] of [['e',o.x+o.w+12*unit,o.y+o.h/2],['w',o.x-12*unit,o.y+o.h/2]]){
-            const p=node('circle',{cx:x,cy:y,r:5*unit,fill:'#345fc4',stroke:'white','stroke-width':1.5*unit,'data-connect-port':port,'data-owner':o.id,cursor:'crosshair'});p.append(node('title',{},'从这里拖到另一个对象，建立连线'));selection.append(p);
+          for(const [port,x,y] of [['e',bx.x+bx.w+12*unit,bx.y+bx.h/2],['w',bx.x-12*unit,bx.y+bx.h/2]]){
+            const p=node('circle',{cx:x,cy:y,r:5*unit,fill:'#175a57',stroke:'white','stroke-width':1.5*unit,'data-connect-port':port,'data-owner':o.id,cursor:'crosshair'});p.append(node('title',{},'从这里拖到另一个对象，建立连线'));selection.append(p);
           }
-          if(this.tool==='connect')selection.append(node('rect',{x:o.x,y:o.y,width:o.w,height:o.h,fill:'none',stroke:'transparent','stroke-width':10*unit,'data-connect-boundary':o.id,cursor:'crosshair'}));
+          if(this.tool==='connect')selection.append(node('rect',{x:bx.x,y:bx.y,width:bx.w,height:bx.h,fill:'none',stroke:'transparent','stroke-width':10*unit,'data-connect-boundary':o.id,cursor:'crosshair'}));
         }
       }
       const r = this.doc.relations.find(x => x.id === id);
@@ -997,7 +999,7 @@ export class SceneEditor {
             grip.append(node('circle',{cx:p.x,cy:p.y,r:7*unit,fill:'transparent','pointer-events':'all'}));
             grip.append(node('circle', {
               cx:p.x,cy:p.y,r:handleSize/2,fill:k==='control'?'#dae6fc':'#fff',
-              stroke:'#3d71c7','stroke-width':lineWidth,'pointer-events':'none'
+              stroke:'#1d6b68','stroke-width':lineWidth,'pointer-events':'none'
             }));
             overlay.append(grip);
           }

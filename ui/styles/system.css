@@ -1,0 +1,70 @@
+/* System - structure pass of the 2026-11-26 redesign, after unslop by Damir Sokolovsky
+   (heydamir/unslop, CC BY 4.0). Tokens live in shell.css; this layer unifies the dialog
+   shell, the editor chrome and minimum sizes. It is the last layer, so nothing here needs
+   !important; the unlayered dock rules in calm.css still win where they use it. */
+@layer system {
+/* Type: no tight tracking on interface text, 12px floor */
+h1,h2,h3,h4,.brand strong,.brand span{letter-spacing:0}
+small,.onboarding-return-note,.project-count,#brief-count,.template-category,#figure-import-privacy{font-size:12px;line-height:16px}
+
+/* Hit areas: disclosure rows and text links reach 32px */
+.properties details>summary,.asset-filter-disclosure>summary{min-height:32px;padding-block:6px;line-height:20px;box-sizing:border-box}
+#welcome-example{min-height:32px;display:inline-flex;align-items:center}
+.prompt-examples>summary,.composer-settings>summary,#template-actual-objects details>summary{min-height:32px;padding-block:6px;line-height:20px;box-sizing:border-box}
+
+/* Navigation folded: the shell's wide-window width and list display must not undo the folded rail */
+html.navigation-collapsed{--navigation:64px}
+.navigation-collapsed :is(.brand strong,#collapse-navigation,.sidebar-recents,.workspace-local,.sidebar-action span,.sidebar-action kbd,.settings-label,.whats-new-corner>button>span){display:none}
+
+/* Dialog shell: one radius, one shadow, one scrim, one heading size */
+dialog:not(.docked){border:1px solid var(--n-line);border-radius:16px;box-shadow:var(--n-shadow-3);color:var(--n-ink)}
+dialog::backdrop{background:rgba(23,23,23,.24);backdrop-filter:none}
+dialog:focus,dialog:focus-visible{outline:none}
+.dialog-heading{gap:16px}
+.dialog-heading :is(h1,h2){font-size:16px;line-height:24px;font-weight:500}
+.dialog-heading p{font-size:13px;line-height:20px;color:var(--n-ink-2)}
+.dialog-actions{gap:8px}
+
+/* Dialogs whose own padding the shell reset to 0 */
+.relation-guide,.relation-definitions{padding:24px}
+dialog:not(.docked):is(.unofficial-gateway-dialog,.document-dialog,.sketch-pad-dialog,.restart-dialog,.asset-import-dialog,.document-markdown-dialog,.document-prompt-dialog,.annotation-restore){padding:24px}
+dialog:not(.docked).annotation-comparison{padding:20px 24px}
+dialog:not(.docked).delivery-dialog{padding:24px 28px}
+dialog:not(.docked).onboarding-finish{padding:36px 40px}
+/* Sectioned workspaces keep full-width dividers: the outer shell stays 0, each band carries the inset */
+:is(.vector-detail-dialog,.figure-compare-dialog){padding:0}
+:is(.vector-detail-dialog,.figure-compare-dialog)>.dialog-heading{padding:16px 24px;margin:0}
+:is(.vector-detail-dialog,.figure-compare-dialog)>.dialog-actions{padding:16px 24px;margin:0}
+.relation-guide>.button{margin-top:12px}
+
+/* Vector details: its controls are real buttons, not loose text */
+.vector-detail-dialog :is(.vector-detail-tools,.vector-detail-layout aside,.vector-detail-discard) button:not(.primary){height:32px;min-height:32px;padding:0 12px;border:1px solid var(--n-line-2);border-radius:8px;background:var(--n-paper);color:var(--n-ink);font-size:13px;font-weight:500}
+.vector-detail-dialog :is(.vector-detail-tools,.vector-detail-layout aside,.vector-detail-discard) button:not(.primary):hover:not(:disabled){background:var(--n-hover)}
+.vector-detail-fields button{width:100%;margin-top:8px}
+.vector-detail-tools{gap:8px}
+
+/* Template preview docked beside the canvas: one column (calm.css docking is unlayered, so these need !important) */
+dialog.docked.template-detail-dialog .template-detail-body{grid-template-columns:minmax(0,1fr)!important;padding:16px!important;gap:16px!important}
+
+/* Recent boards: the open button is a row, not a 32px control holding a 58px thumbnail */
+.document-row>button:first-child{height:auto;min-height:0;padding:0;border:0;border-radius:8px;background:transparent;gap:12px;justify-content:flex-start;font-weight:500}
+.document-row>button:first-child:hover{background:var(--n-hover)}
+.document-row img{width:88px;height:56px;border:1px solid var(--n-line);border-radius:4px}
+.document-row small{margin-left:100px;color:var(--n-ink-3)}
+.document-row{padding:12px 0;border-bottom-color:var(--n-line)}
+
+/* One dismiss control: a quiet 32px square */
+:is(.dialog-heading,.annotation-head,.floating-window-actions)>:is(.icon-button,[data-close],button[aria-label^="关闭"]):last-child{width:32px;height:32px;min-width:32px;min-height:32px;padding:0;border:0;border-radius:8px;background:transparent;color:var(--n-ink-3);font-size:16px;line-height:1;box-shadow:none}
+:is(.dialog-heading,.annotation-head,.floating-window-actions)>:is(.icon-button,[data-close],button[aria-label^="关闭"]):last-child:hover{background:var(--n-hover);color:var(--n-ink)}
+.floating-minimize{height:32px;padding:0 8px;border:0;border-radius:8px;background:transparent;color:var(--n-ink-3);font-size:13px}
+.floating-minimize:hover{background:var(--n-hover);color:var(--n-ink)}
+
+/* Editor: properties and review live in the inspector; the toolbar copies show only while it is not on screen */
+body:not(.dock-open) #workspace:not(.properties-hidden):not(.annotations-open) .canvas-actions>:is(#toggle-properties,#open-check-toolbar){display:none}
+
+/* Type scale: page and dialog titles on the 12/13/14/16/20/28 steps, line heights on the 4px grid */
+.home-heading h2,.showing-start .home-heading h2{font-size:28px;line-height:36px;font-weight:500;letter-spacing:0}
+@media (max-width:900px){.home-heading h2,.showing-start .home-heading h2{font-size:24px;line-height:32px}}
+.creation-dialog .composer-header h1{font-size:20px;line-height:28px;font-weight:500}
+.home-inline #brief-input,.home-inline #brief-input:is(:hover,:focus),.home-inline #brief-input::placeholder{line-height:24px}
+}

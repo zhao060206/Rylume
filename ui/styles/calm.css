@@ -15,7 +15,7 @@ body.dock-open #workspace{margin-right:var(--dock-w);grid-template-columns:0 0 m
 dialog.docked{position:fixed!important;top:var(--top)!important;right:0!important;bottom:0!important;left:auto!important;width:var(--dock-w)!important;height:auto!important;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;margin:0!important;padding:0 16px 20px!important;border:0!important;border-left:1px solid var(--n-line)!important;border-radius:0!important;box-shadow:-12px 0 32px -28px #1d1f1e66!important;background:var(--n-paper)!important;color:var(--n-ink);overflow:auto!important;transform:none!important;z-index:30!important;animation:dock-in .22s var(--n-ease)}
 dialog.docked:not([open]),dialog.docked.dock-behind{display:none!important}
 dialog.docked .dialog-heading{position:sticky;top:0;z-index:2;margin:0 -16px 12px;padding:14px 16px 12px;background:var(--n-paper);border-bottom:1px solid var(--n-line);cursor:default}
-dialog.docked .dialog-heading h2{font-size:15px;font-weight:600;margin:0}
+dialog.docked .dialog-heading h2{font-size:14px;font-weight:600;margin:0}
 dialog.docked .floating-options{display:none!important}
 dialog.docked.is-minimized{display:none!important}
 dialog.docked :is(.gallery-grid,.asset-list){grid-template-columns:repeat(auto-fill,minmax(140px,1fr))!important}
@@ -134,7 +134,7 @@ dialog.docked #asset-search:focus{background:var(--n-paper)!important;box-shadow
 
 /* assets v9b: hidden actions float in the tile corners so they take no row height */
 dialog.docked #asset-list .asset-card{position:relative!important;padding:0!important;min-height:0!important;height:auto!important;display:block!important}
-dialog.docked #asset-list .asset-card :is(.asset-license,.asset-favorite,.asset-match-tag){position:absolute!important;top:4px;z-index:1;height:20px!important;min-height:20px!important;margin:0!important;padding:0 6px!important;border:0!important;border-radius:4px!important;background:var(--n-paper)!important;box-shadow:var(--n-shadow-1)!important;font-size:11px!important;line-height:20px!important;color:var(--n-ink-2)!important}
+dialog.docked #asset-list .asset-card :is(.asset-license,.asset-favorite,.asset-match-tag){position:absolute!important;top:4px;z-index:1;height:20px!important;min-height:20px!important;margin:0!important;padding:0 6px!important;border:0!important;border-radius:4px!important;background:var(--n-paper)!important;box-shadow:var(--n-shadow-1)!important;font-size:12px!important;line-height:20px!important;color:var(--n-ink-2)!important}
 dialog.docked #asset-list .asset-card .asset-license{right:4px;width:20px!important;padding:0!important;text-align:center}
 dialog.docked #asset-list .asset-card .asset-favorite{left:4px}
 dialog.docked #asset-list .asset-card .asset-favorite[aria-pressed=true]{color:var(--n-accent)!important}

@@ -318,6 +318,7 @@ export function setupLibrary({editor,api,state,toast,blank,flush,follow,tab,requ
   });
   $('template-detail-create')?.addEventListener('click',()=>{if(selectedTemplate)create(selectedTemplate,$('template-detail-size').value==='single'?[90,150]:null);});
   $('template-detail-apply')?.addEventListener('click',()=>{if(selectedTemplate){$('template-detail-dialog').close();preview(selectedTemplate);}});
+  {const img=$('template-detail-image');if(img){const note=el('p','muted small template-detail-missing','预览图暂未加载 · 新建后可在画布中查看');note.hidden=true;img.after(note);img.addEventListener('error',()=>{img.hidden=true;note.hidden=false;});img.addEventListener('load',()=>{img.hidden=false;note.hidden=true;});}}
 
   let searchTimer;const search=$('asset-search');
   search?.addEventListener('input',event=>{if(event.isComposing)return;clearTimeout(searchTimer);searchTimer=setTimeout(()=>{assetLimit=60;renderAssets();},100);});

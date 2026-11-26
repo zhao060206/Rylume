@@ -61,7 +61,7 @@ export function setupAnnotations({state,editor,api,flush,toast,workspace,onAppli
   host.addEventListener('pointermove',e=>{if(!drag)return;e.preventDefault();e.stopImmediatePropagation();drag.end=editor.world(e);renderOverlay();},true);
   host.addEventListener('pointerup',e=>{if(!drag)return;e.preventDefault();e.stopImmediatePropagation();const region=regionFromPoints(drag.start,editor.world(e),editor.scene.canvas);drag=null;if(region.w<1||region.h<1){renderOverlay();return;}add({...region,shape:mode});},true);
   host.addEventListener('pointercancel',()=>{drag=null;renderOverlay();},true);
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&(mode||drag)){e.preventDefault();e.stopImmediatePropagation();setMode(null);}},true);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&(mode||drag)){e.preventDefault();e.stopImmediatePropagation();setMode(null);}else if(e.key==='Escape'&&!panel.hidden&&!e.isComposing&&!document.querySelector('dialog[open]')&&!e.target?.closest?.('input,textarea,select,[contenteditable=true]')){e.preventDefault();dismiss();button.focus({preventScroll:true});}},true);
   async function save(){
     clearTimeout(timer);if(!job||epoch===savedEpoch)return true;if(saving){await saving;return save();}if(conflict)throw Error('批注存在版本冲突，本地文字仍保留');
     const id=job,at=epoch,snapshot=clone(notes);saveState.textContent='正在保存批注…';
